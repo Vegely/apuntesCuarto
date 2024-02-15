@@ -2,3 +2,6 @@
 .aux
 .synctex
 .log
+*.aux
+*.gz
+*.log
