@@ -174,7 +174,7 @@ Se emplean gráficos de diferencias para mostrar la linealidad y el sesgo.
 	\[\text{Medida = lectura + corrección}\]
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\linewidth]{D:/Descargas/absolut}
+	\includegraphics[width=0.6\linewidth]{imagenesTema2/absolut}
 	\caption{Gráfica diferencias absolutas}
 	\label{fig:absolut}
 \end{figure}
@@ -185,7 +185,7 @@ Se emplean gráficos de diferencias para mostrar la linealidad y el sesgo.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\linewidth]{D:/Descargas/relativo}
+	\includegraphics[width=0.6\linewidth]{imagenesTema2/relativo}
 	\caption{Gráfica diferencias relativas}
 	\label{fig:relativo}
 \end{figure}
@@ -201,7 +201,7 @@ Se emplean gráficos de diferencias para mostrar la linealidad y el sesgo.
 \begin{itemize}
 \item $k_c$ es el factor de cobertura.
 
-	\item El factor t se obtiene de la tabla t student es necesario emplearlo si $n_c < 10$:
+	\item El factor t se obtiene de la tabla t student, si $n_c < 10$:
 \renewcommand{\arraystretch}{1.1} %
 \begin{table}[H]
 	\centering
@@ -210,7 +210,7 @@ Se emplean gráficos de diferencias para mostrar la linealidad y el sesgo.
 		\textbf{Número de medidas} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7}
 		& \textbf{8} & \textbf{9} & \textbf{10} \\
 		\hline
-		Factor "t"& 7.0 & 2.3 & 1.7 & 1.4 & 1.3 & 1.3 & 1.2
+		Factor t& 7.0 & 2.3 & 1.7 & 1.4 & 1.3 & 1.3 & 1.2
 		& 1.2 & 1.1  \\
 		\hline 
 	\end{tabular}
@@ -220,13 +220,38 @@ Se emplean gráficos de diferencias para mostrar la linealidad y el sesgo.
 
 \item $s_{ci}$ es la desviación típica del punto de la escala $i$.
 \item $\bigtriangleup_i$ es la diferencia respecto al patrón en el punto $i$.
+\item $u_p$ incertidumbre sin expandir del aparato patrón:  $u_p=\frac{\alpha_p}{\sqrt{3}}$
 
+\item $u_{RC}$ componente debida a la resolución del aparato contrastado.
+\begin{itemize}
+	\item Analógicos
+	\[u_{RC}=\frac{E}{2\sqrt{3}} \ o \ u_{RC}=\frac{E}{4\sqrt{3}}\]
+	
+	\item Digitales
+	\[u_{RC}=\frac{N dms}{2\sqrt{3}}\]
+	
+	\item $E$ es la división de una escala
+	\item $N$ es un valor proporcionado por el fabricante. Normalmente $N = 1$
+	\item $dms$ dígito menos significativo. 
+\end{itemize}
 \end{itemize}
 
 
 
-\subsection{“Clase” de un aparato verificado}
+\subsection{Clase de un aparato verificado}
+El índice de clase facilita calcular incertidumbres. Permite fijar un límite de error máximo.
 
+\[Clase=100 \frac{U_c (k=2)}{CM}\]
 
+\subsection{Incertidumbre de la medida}
+La incertidumbre al medir con el aparato calibrado será, donde el subíndice M denota de la muestra:
+
+\[U_M=k_M \ \sqrt{u_c^2+t^2\frac{s_M^2}{n_m}+ \text{términos adicionales}}\]
+
+No obstante, si se mide en condiciones similares a la de la calibración se habla de \textbf{capacidad óptima de medida (COM)} y se puede emplear la siguiente expresión:
+
+\[U_M(COM)=k_M \ \sqrt{u_c^2+\frac{s_c^2}{n_m}+ \text{términos adicionales}}\]
+
+Donde $s_c$ es la desviación típica de la contratación.
 
 
