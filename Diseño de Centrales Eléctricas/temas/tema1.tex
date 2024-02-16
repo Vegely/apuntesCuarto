@@ -194,36 +194,138 @@
 		
 			\subsubsection{Evolución de las reservas de petróleo y gas.}
 				\begin{center}
+					\renewcommand{\arraystretch}{1.4}
 					\begin{tabular}{|c|c|c|c|c|c|c|}
 							\hline
 								& \textbf{1984} & \textbf{1994} & \textbf{2004} & \textbf{2020} & \textbf{Duración Reservas} & \textbf{Evolución R/P}\\
 							\hline
 							Petróleo - $10^9$ barriles & 761 & 1017 & 1185 & 1732 & \multirow{2}{*}{42 años} & \multirow{2}{*}{31 a 42 años}\\
-							Petróleo - $\%$ & 100 & 134 & 156 & & & \\
+							Petróleo - $\%$ & 100 & 134 & 156 & - & & \\
 							\hline
 							Gas - $10^{12}$ $\textit{m}^3$	& 96 & 142 & 179 & 200 & \multirow{2}{*}{67 años} & \multirow{2}{*}{59 a 67 años}\\
-							Gas - $\%$ & 100 & 148 & 186 & & & \\
+							Gas - $\%$ & 100 & 148 & 186 & - & & \\
 							\hline
 					\end{tabular}
 				\end{center}
+				
+		\subsection{Concepto de energía primaria, final y útil.}
+			\begin{itemize}
+				\item \textit{Energía primaria:} 
+					son todas las formas de energía disponibles en la naturaleza antes de ser convertidas o transformadas. Consisten en la energía contenida en los combustibles crudos, la energía solar, la eólica, la biomasa, la hidráulica, etc.
+				\item \textit{Energía final:}
+					proviene de las energías primarias, a la que llega después de sufrir transformaciones tecnológicas.
+				\item \textit{Energía útil:}
+					la deseada por el consumidor.
+			\end{itemize}
+			
+			\begin{tikzpicture}
+				\draw (0,0) circle (1cm);
+				\node at (0,0) [align = center]{Energía\\primaria};
+				\draw[->] (1,0) -- (2,0);
+				
+				\draw (2,-1) rectangle (4.5, 1);
+				\node at (3.25,0) [align = center]{Transporte y\\distribución};
+				\draw[->] (4.5,0) -- (5.5,0);
+				
+				\draw (6.5,0) circle (1cm);
+				\node at (6.5,0) [align = center]{Energía\\final};
+				\draw[->] (7.5,0) -- (8.5,0);
+				
+				\draw (8.5,-1) rectangle (11, 1);
+				\node at (9.75,0) [align = center]{Equipos de\\demanda};
+				\draw[->] (11,0) -- (12,0);
+				
+				\draw (13,0) circle (1cm);
+				\node at (13,0) [align = center]{Energía\\útil};
+				
+				\draw[->] (3.25, -1) -- (3.25, -2);
+				\node at (3.25, -2.75) [align = center]{Pérdidas y\\consumos\\internos};
+				
+				\draw[->] (9.75, -1) -- (9.75, -2);
+				\node at (9.75, -2.75) [align = center]{Pérdidas y\\consumos\\internos};
+			\end{tikzpicture}
 		
+		\subsection{Formas prácticas de la energía.}
+			Pueden ser el agua almacenada en un embalse, una barra de material fisionable o un combustible que al quemarse proporciona calor. No todos los combustibles proporcionan la misma cantidad de calor por unidad de masa (1 kg de gasolina $\neq$ 1 kg carbón).\\
+			
+			\indent Para poder relacionar y comparar unos con otros tendremos que referirnos a la cantidad específica de energía por unidad de masa (o de volumen), desprendida en un proceso de combustión, llamada \textbf{poder calorífico} o \textbf{densidad energética} o entalpía $\left(\dfrac{\textit{MJ}}{\textit{kg}}, \dfrac{\textit{MJ}}{\textit{l}}, \dfrac{\textit{MJ}}{\textit{Nm}^3}\right)$.
+			
+			\indent Los combustibles que dan agua como resultado de la combustión poseen dos poderes caloríficos, el inferior (\textbf{PCI}) y el superior (\textbf{PCS}). Las fuentes energéticas más buscadas son aquellas en las que la energía está 
+			muy concentrada (mucha energía por unidad de masa).\\
+
+			\begin{minipage}{\linewidth}
+				\centering
+				\begin{tblr}{
+						cells = {c},
+						cell{1}{1} = {r=2}{},
+						cell{1}{2} = {c=2}{},
+						vlines,
+						hline{1,3-10} = {-}{},
+						hline{2} = {2-3}{},
+					}
+					Combustible & PCI                                &                                     \\
+					& $\dfrac{\textit{MJ}}{\textit{kg}}$ & $\dfrac{\textit{kWh}}{\textit{kg}}$ \\
+					Hidrógeno   & 141.0                              & 39.2                                \\
+					Gas natural & 46.4                               & 12.9                                \\
+					Gasolina    & 43.3                               & 12.0                                \\
+					Gasóleo     & 42.7                               & 11.9                                \\
+					Fuel-oil    & 40.8                               & 11.3                                \\
+					Antracita   & 35.1                               & 9.8                                 \\
+					Lignito     & 25.6                               & 7.1                                 
+				\end{tblr}
+			\end{minipage}
+
+		\subsection{Concepto de eficiencia o rendimiento.}
+			El rendimiento es un concepto termodinámico. En ingeniería suele utilizarse preferentemente la eficiencia, que establece la relación entre la energía útil y la primaria. A veces se llama COP (\textit{Coefficient of Performance})\\
+			\indent Las distintas transformaciones energéticas implican una serie de pérdidas y consumos internos tanto en la generación como en el transporte.\\
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			\begin{figure}[htbp]
+				\begin{minipage}[t]{0.45\textwidth}
+					\centering
+					\begin{tblr}{
+							cells = {c},
+							cell{1}{1} = {c=2}{},
+							hlines,
+							vlines,
+						}
+						{\textbf{Valores medios de eficiencias}\\\textbf{de diferentes tipos de centrales}} &      \\
+						Hidroeléctrica                                                             & 85\% \\
+						Térmica de Carbón                                                          & 40\% \\
+						Nuclear                                                                    & 32\% \\
+						Ciclo Combinado                                                            & 52\% \\
+						Solar fotovoltaica                                                         & 18\% \\
+						Cogeneración                                                               & 80\% 
+					\end{tblr}
+				\end{minipage}
+				\hfill
+				\begin{minipage}[t]{0.45\textwidth}
+					\centering
+					\begin{tblr}{
+							cells = {c},
+							cell{1}{1} = {c=2}{},
+							hlines,
+							vlines,
+						}
+						{\textbf{Rendimiento de varios}\\\textbf{tipos de convertidores}} &               \\
+						\textbf{Tipo de convertidor}                             & $\eta_{aprox}$ \\
+						Motor de combustión                             & 30\%          \\
+						Turbina de gas                                  & 29\%          \\
+						Turbina Pelton                                  & 92\%          \\
+						Célula de combustión                            & 80\%          \\
+						Célula fotovoltaica                             & 12\%          \\
+						Panel solar fototérmico                         & 70\%          \\
+						Motor eléctrico                                 & 95\%          
+					\end{tblr}
+				\end{minipage}
+			\end{figure}
+			
+			Aunque no es exactamente lo mismo, no se diferencia la energía mecánica de la energía eléctrica
+			puesto que la conversión puede hacerse con factores cercanos a la unidad (el rendimiento de un
+			generador síncrono puede llegar al 90\%)
+			\[1 \textit{kWh}_e \approx 1 \textit{kWh}_m\]
+			
+			Sin embargo, no ocurre lo mismo con la energía eléctrica y la energía térmica. Pueden necesitarse
+			hasta 3 o más $\textit{kWh}_t$ para obtener un $\textit{kWh}_e$.
 		
 		
 		
