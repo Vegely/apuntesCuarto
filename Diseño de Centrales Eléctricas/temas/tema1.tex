@@ -277,7 +277,7 @@
 
 		\subsection{Concepto de eficiencia o rendimiento.}
 			El rendimiento es un concepto termodinámico. En ingeniería suele utilizarse preferentemente la eficiencia, que establece la relación entre la energía útil y la primaria. A veces se llama COP (\textit{Coefficient of Performance})\\
-			\indent Las distintas transformaciones energéticas implican una serie de pérdidas y consumos internos tanto en la generación como en el transporte.\\
+			\indent Las distintas transformaciones energéticas implican una serie de pérdidas y consumos internos tanto en la generación como en el transporte.
 		
 			\begin{figure}[htbp]
 				\begin{minipage}[t]{0.45\textwidth}
@@ -322,18 +322,138 @@
 			Aunque no es exactamente lo mismo, no se diferencia la energía mecánica de la energía eléctrica
 			puesto que la conversión puede hacerse con factores cercanos a la unidad (el rendimiento de un
 			generador síncrono puede llegar al 90\%)
-			\[1 \textit{kWh}_e \approx 1 \textit{kWh}_m\]
+			\[1\, \textit{kWh}_e \approx 1\, \textit{kWh}_m\]
 			
 			Sin embargo, no ocurre lo mismo con la energía eléctrica y la energía térmica. Pueden necesitarse
 			hasta 3 o más $\textit{kWh}_t$ para obtener un $\textit{kWh}_e$.
+			
+		\subsection{Unidades de energía.}
+			La \textbf{Agencia Internacional de la Energía (AIE)} expresa sus balances de energía en una unidad
+			común que es la \textbf{tonelada equivalente de petróleo (tep o toe)}:
+			\begin{itemize}
+				\item Una tep se define como la energía liberada en la combustión de una tonelada de crudo de
+				petróleo tipo de $10^4 \, \dfrac{\textit{kcal}}{\textit{kg}}$ de poder calorífico:
+				
+				\[1\,\textit{tep} = 10^7\,\textit{kcal}=41860\textit{MJ}\]
+				\[0.086\,\textit{tep} = 1\, \textit{MWh}\]
+				\[1\,\textit{tep} = 11.63\, \textit{MWh}\]
+				
+				\item La conversión de unidades habituales a tep se hace en base a los poderes caloríficos inferiores
+				de cada uno de los combustibles considerados.
+			\end{itemize}
+			
+			La \textbf{tonelada equivalente de carbón (tec)} se define como la energía liberada en la combustión de
+			una tonelada de hulla estándar de $7000 \, \dfrac{\textit{kcal}}{\textit{kg}}$ de poder calorífico. La equivalencia viene dada por: 
+			\[1\,\textit{tec}=7\cdot10^6\,\textit{kcal} = 0.7\,\textit{tep}\]
+			
+			En las estadísticas de comercio internacional es frecuente hablar de \textbf{barriles de petróleo (bbl)}:
+			\[1\,\textit{bbl} = 159\,\textit{l} = 0.146\,\textit{tep}\]
+			
+			La \textbf{U.S. Energy Information Administration (EIA)} utiliza el \textbf{BTU (British Thermal Unit)} como unidad de energía:
+			\[1\,\textit{kWh} = 3412\,\textit{BTU}\]
+			\[1\,\textit{therm} = 10^5\,\textit{BTU}\]
+			
+			\begin{minipage}{\linewidth}
+				\centering
+				\begin{tblr}{
+						cell{1}{1} = {c=2}{},
+						hlines,
+						vlines,
+					}
+					\textbf{Unidades de energía} &            \\
+					1 \textit{tep}               & $10^7$ \textit{kcal} \\
+					1 \textit{kcal}              & 4184 \textit{J}     \\
+					1 \textit{MWh}               & 0.086 \textit{tep}  \\
+					1 \textit{tec}               & 0.7 \textit{tep}    \\
+					1 \textit{bbl}               & 0.146 \textit{tep}  \\
+					1 \textit{kWh}               & 3412 \textit{BTU}   \\
+					1 \textit{therm}             & $10^5$ \textit{BTU}   
+				\end{tblr}
+			\end{minipage}
 		
+		\subsection{Unidades de energía en combustibles gaseosos.}
+			Es frecuente referir el \textbf{PCI (poder calorífico inferior)} a la unidad de volumen ($\textit{m}^3$), pero si no están definidas las condiciones, carecería de significado.
+			\begin{itemize}
+				\item \textit{Condiciones normales:} 
+					corresponden a 0 \textdegree\textit{C} y 1 \textit{atm}. Se suele indicar con la letra \textit{N} al lado de la unidad de volumen, v.g. $3.4\,\textit{Nm}^3$.
+					\[10^3\,{\textit{Nm}^3}_{Gas\ Natural} = 0.9\,\textit{tep}\]
+					
+				\item \textit{Condiciones estándar:}
+					corresponden a 15 \textdegree\textit{C} y 1 \textit{atm}. Se suele indicar con la letra \textit{S} al lado de la unidad de volumen, v.g. $3.4\,\textit{Sm}^3$.
+					
+				\item \textit{Thermia (th):}
+					unidad de energía, equivalente a 1 millón de calorías. Se usa en el suministro
+					de gas natural para calcular las facturas. Como el gas suministrado tiene un poder calorífico algo
+					variable, el cobro se hace en termias en vez de $\textit{m}^3$.\\
+					Referido a un gas con PCS = $10^4\, \dfrac{\textit{kcal}}{\textit{Nm}^3} = 10\, \dfrac{\textit{th}}{\textit{Nm}^3}$
+			\end{itemize}
 		
+		\subsection{Consumo mundial de energía primaria.}
+			\includegraphics[width = 14cm, height = 6.68cm]{evolucionConsumo}
+			
+			El \textbf{WEC (World Energy Council}, fundado en 1923, considera tres
+			escenarios hasta el 2020 en su estudio \textquotedblleft \textit{Energía para el mundo del mañana}\textquotedblright que publicó en 1993.
+			En todos ellos se considera que para el año 2020 la población mundial será de 8100 millones
+			(según Naciones Unidas). En el año 2022 hay 8.000 millones. Para el año 2030 se estima en 8.500
+			millones.\\
+			\indent Existen diversos escenarios atendiendo al balance entre crecimiento económico y orientación ecológica:
+			\begin{itemize}
+				\item \textbf{Escenario de referencia}: 
+					Crecimiento económico medio. La economía mundial crece
+					moderadamente a una media del 3.3\% anual, resultando una demanda de energía primaria
+					mundial en 2020 de 13.4 \textit{Gtep}, y una aportación de las renovables nuevas para ese año del 4.5\% (0.6 \textit{Gtep}).\\
+					Considerando este estudio y con estos niveles de consumo de energía primaria y unos valores
+					de reserva aproximados a los indicados anteriormente, se puede estimar el tiempo de duración de los
+					distintos combustibles en años: 
+					
+					\begin{table}[h]
+						\renewcommand{\arraystretch}{1.4}
+						\centering
+						\begin{tabular}{|c|c|}
+							\hline
+							\textbf{Fuente de Energía} & \textbf{Duración (años)} \\
+							\hline
+							PETRÓLEO & 42,2 \\
+							\hline
+							CARBÓN & 224 \\
+							\hline
+							GAS NATURAL & 62,2 \\
+							\hline
+							URANIO & 100 \\
+							\hline
+						\end{tabular}
+					\end{table}
+					
+					Las reservas totales de uranio se sitúan en unos 6,14 millones de toneladas. La demanda de las 442 unidades
+					nucleares en funcionamiento (año 2011) fue de 68.875 toneladas de uranio.
+					
+				\item \textbf{Escenario de alto crecimiento económico}: 
+					el crecimiento económico es del 3,8\% y la demanda de energía primaria en el 2020 de unas 17 \textit{Gtep} y una aportación de las renovables nuevas del 4.5\% (0.8 \textit{Gtep}).
+					
+				\item \textbf{Escenario ecológico:} 
+					crecimiento económico medio con orientación ecológica. El crecimiento se supone del 3.3\%, pero la demanda de energía primaria crece sólo a 11.3 \textit{Gtep} en el 2020, y una aportación de las renovables del 11.5\% (1.3 \textit{Gtep}).
+			\end{itemize}
+
+			\indent Todos los estudios indican un \textbf{crecimiento potencial de las renovables}. Según estimaciones de Naciones Unidas, se calcula la aportación de las renovables en el 30\% de las necesidades mundiales
+			en el 2025, y el 45\% en el 2050.
 		
+			Evolución del consumo energético en España:\\
+			\includegraphics[width = 14cm, height = 7cm]{consumoEspaña}
 		
-		
-		
-		
-		
+		\subsection{Intensidad energética primaria e intensidad de energía final.}
+			\subsubsection{Intensidad energética primaria.}
+				Se define como el cociente entre el consumo de energía primaria y el PIB en un año concreto. Tiene unidades de $\dfrac{\textit{ktep}}{\textit{M€}}$.\\
+				\indent En España, a partir del 2005, se constató una mejora notable en la
+				intensidad energética primaria, lo que significa que para producir una
+				unidad de riqueza cada vez se necesita menor cantidad de energía (mayor
+				eficiencia energética). Ha habido una ralentización del consumo energético y un
+				crecimiento del PIB. España se encuentra en el puesto 34 de los 196 países.
+				
+			\subsubsection{Intensidad de energía final.}
+				Se define como el cociente entre el consumo de energía final y el PIB.\\
+				\indent La intensidad de energía final ha disminuido progresivamente. Esta mejora se debe sobre todo
+				a las mejoras tecnológicas y de gestión, así como a la mejora de la estructura productiva y de la Ley de Energías Renovables y Eficiencia Energética.\\
+				\indent En el año 2020 hubo una caída del PIB del 11\% junto con una bajada de consumo de energía primaria debido a la pandemia de COVID-19.
 		
 		
 		
