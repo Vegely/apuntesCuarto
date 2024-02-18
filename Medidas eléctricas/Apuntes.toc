@@ -1,0 +1,17 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Tema 1: Introducción y generalidades sobre metrología}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Definiciones}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Ley propagación de incertidumbres}{6}{}%
+\contentsline {subsection}{\numberline {1.3}Estimación de la incertidumbre}{8}{}%
+\contentsline {subsection}{\numberline {1.4}Relación tolerancia incertidumbre}{9}{}%
+\contentsline {subsection}{\numberline {1.5}Resumen magnitudes estudiadas en el bloque}{10}{}%
+\contentsline {subsection}{\numberline {1.6}Reglas redondeo}{10}{}%
+\contentsline {section}{\numberline {2}Tema 2: Verificación de equipos de medida eléctricos}{11}{}%
+\contentsline {subsection}{\numberline {2.1}Definiciones}{11}{}%
+\contentsline {subsection}{\numberline {2.2}Cualidades de los aparatos de medida patrones}{11}{}%
+\contentsline {subsection}{\numberline {2.3}Verificación de un aparato de medida}{14}{}%
+\contentsline {subsection}{\numberline {2.4}Criterio de rechazo de Chauvenet}{15}{}%
+\contentsline {subsection}{\numberline {2.5}Resultados de una verificación}{15}{}%
+\contentsline {subsection}{\numberline {2.6}Incertidumbre de contraste}{16}{}%
+\contentsline {subsection}{\numberline {2.7}Clase de un aparato verificado}{17}{}%
+\contentsline {subsection}{\numberline {2.8}Incertidumbre de la medida}{17}{}%

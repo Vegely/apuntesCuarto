@@ -1,0 +1,134 @@
+\section{Ejercicios resueltos}
+\subsection{Tema 1: Fundamentos y propiedades de los fluidos}
+\begin{enumerate}
+	\item Obtener el ángulo de mojabilidad $\theta_c$ 
+	\begin{figure}[H]
+		\begin{minipage}{0.7\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/mojabilidad}
+		\caption{Esquema del problema.}
+		\label{fig:mojabilidad}
+	\end{minipage}%
+	\begin{minipage}{0.3\textwidth}
+	\[P_2=P_1=P_a\]
+	\[P_2=\rho g H_0=P_3\]
+	\[P_3=P_4+\rho g (H_0+\Delta h)\]
+	\[P_1-P_4=\frac{2\sigma}{R}\]
+	\[\frac{2\sigma}{R}=\rho g \Delta h\]
+	\[Rcos(\theta_c)=a\]
+	\[\theta_c=arccos\left(\frac{a\rho g \Delta h}{2\sigma}\right)\]
+	
+	\end{minipage}
+	\end{figure}
+	
+	\item En el pueblo de Aisa se ha instalado un nuevo sistema de presión para el abastecimiento
+	de agua del municipio. El agua procedente de un manantial es impulsado por una bomba
+	y se almacena en un depósito sobrepresor. Para controlar la presión del agua a la entrada
+	y salida de la bomba se han montado un vacuómetro y un manómetro en los puntos de
+	interés. Cuando el vacuómetro marca 0.75 bares y el manómetro marca 4.2 bares, ¿cuál
+	será el valor de la presión absoluta?. ¿Existe riesgo de cavitación en algún punto de la
+	conducción?. Datos: $p_{atm}$ = 816,91 hPa; $p_v$=159856 Pa.
+	\begin{figure}[H]
+		\begin{minipage}{0.7\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/bombaAisa}
+		\caption{Esquema bomba de agua.}
+		\label{fig:bombaaisa}
+	\end{minipage}%
+	\begin{minipage}{0.3\textwidth}
+	\[P_v=P_{atm}-P_e\]
+	\[P_m=P_s-P_{atm}\]
+\[ P_e=81691-75000=6691 Pa\]
+\[P_s=81691+420000=501691 Pa\]
+Existe cavitación a la entrada.
+	
+	\end{minipage}
+\end{figure}
+
+	\newpage
+	\item La presión en un punto de un fluido ($\rho = 1234 \frac{kg}{m^3}$) alcanza el valor de 3 bares. Expresar
+	el valor de la presión en milímetros de mercurio (cm Hg) y en columna de metros de agua
+	(m.c.a.). Datos: $\rho_{Hg,rel} = 13,6$
+	\[\rho = 1234 \frac{kg}{m^3}\]
+	\[P=3\cdot10^5 Pa\]
+	\[1mmHg=\rho_{Hg}g h=13.6\cdot10^3\frac{kg}{m^3} \cdot9.8 \frac{m}{s^2}\cdot10^{-3}m=133.416Pa \]
+	\[1mca=\rho_{H_2O}g h=10^3\frac{kg}{m^3}\cdot9.8 \frac{m}{s^2}\cdot1m=9810Pa\]
+	\item Sobre una superficie de 4000 $cm^2$, orientada en el espacio por su vector normal $\vec{n}=\vec{k}$, está
+	actuando una fuerza$\vec{F}=2\vec{i}+3\vec{j}-3\vec{k}$ (N). Calcular la componente normal de la fuerza y
+	la presión que está soportando la superficie
+		\[S=4000 cm^2=0.4 m^2\]
+	\[\vec{n}=\vec{k}\]
+	\[\vec{F}=2\vec{i}+3\vec{j}-3\vec{k} \rightarrow F_n=3N\]
+	\[P=\frac{F_n}{S}=\frac{3 N}{0.4 m^2}=7.5Pa\]
+	
+	\item Sabiendo que un fluido tiene una densidad de 0.627 $\frac{kg}{l}$ y que su coeficiente de viscosidad
+	absoluta es 1.2 cP, calcular su viscosidad cinemática. ¿Cuál es su densidad relativa si
+	consideramos el agua como fluido de referencia?. Datos $\rho_{agua} = 999,8\frac{kg}{m^3}$
+\[\nu = \frac{\mu}{\rho}=\frac{1.2 cP \cdot \frac{10^{-3} Pa \cdot s}{1 cP}}{0.627 \frac{kg}{l}\cdot\frac{10^3 l}{m^3}}=1.91\cdot10^{-6}\frac{m^2}{s}\]
+\[\rho_{rel}=\frac{\rho}{\rho_{H_2O}}=\frac{0.627 \frac{kg}{l}\cdot\frac{10^3 l}{m^3}}{999.8 \frac{kg}{m^3}}=6.27\cdot10^{-1}\]
+	
+	\newpage
+	\item En la Figura se muestra un bloque, de bases paralelas con dimensiones 0,3 m x 0,6
+	m y altura 0,1 m, de densidad 1800 $\frac{kg}{m^3}$, que desliza con una velocidad constante de
+	1 $\frac{m}{s}$ a la largo de un plano inclinado debido a la acción de las fuerzas gravitacionales
+	tangenciales al mismo. Entre dicho plano y el bloque hay una película de aceite de espesor
+	1 mm. Aplicando equilibrio de fuerzas, calcular la viscosidad del aceite en Po.
+	\begin{figure}[H]
+		
+		\centering
+		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/bloqueDeslizantoT1}
+		\caption{Esquema del bloque deslizando por el plano inclinado.}
+		\label{fig:bloquedeslizantot1}
+	\end{figure}
+	\[F_n=m g sen\alpha\]
+	\[F_n=\rho V g sen\alpha\]
+	\[\tau=\mu\frac{v}{e}=\frac{F_n}{S}=\rho h g sen\alpha\]
+	\[\mu=\frac{e\rho h g sen\alpha}{v}=\frac{10^-3m\cdot1800\frac{kg}{m^3}\cdot0.1m\cdot 9.81 \frac{m}{s^2} \cdot sen(\ang{30})}{1\frac{m}{s}}=0.8829Pa\cdot s\frac{1 P}{0.1 Pa \cdot s}=8.83P\]
+\end{enumerate}
+\subsection{Tema 2: Cinemática de la partícula fluida}
+\begin{enumerate}
+	\item Dado el campo de velocidades de un flujo
+	\[\vec{v}=4cos(\omega t)x\vec{i}-2cos(\omega t)y\vec{j}-2cos(\omega t)z\vec{k}\]
+	\begin{enumerate}
+		\item Indicar el tipo de flujo\\
+		Flujo tridireccional, tridimensional y transitorio.
+		\item La ecuación de la trayectoria si en $t=0s$ se encuentra en $(x_0,y_0,z_0)$
+		\[\vec{v}=\frac{d\vec{r}}{dt} \rightarrow \vec{r}=x\vec{i}+y\vec{j}+z\vec{k}\]+
+		\[v_x=4cos(\omega t)x=\frac{dx}{dt}\]
+		\[v_y= -2cos(\omega t)y = \frac{dy}{dt}\]
+		\[v_z= -2cos(\omega t)z = \frac{dz}{dt} \]
+		\[\ln x|_0^t=\left.{\frac{4sen(\omega t)}{\omega}}\right |_0^t \rightarrow x=x_0 e^{\frac{4sen(\omega t)}{\omega}}\]
+		\[y=y_0 e^{\frac{-2sen(\omega t)}{\omega}}\]
+		\[z=z_0 e^{\frac{-2sen(\omega t)}{\omega}}\]
+		\item La ecuación de las sendas
+		\[\ln \frac{x}{x_0}=\frac{4sen(\omega t)}{\omega}\]
+		\[\ln \frac{y}{y_0}=\frac{-2sen(\omega t)}{\omega}\]
+		\[\ln \frac{z}{z_0}=\frac{-2sen(\omega t)}{\omega}\]
+		\[\frac{1}{2}\ln \frac{x}{x_0}=-\ln \frac{y}{y_0} \rightarrow xy^2=x_0y_0^2\]
+		\[\ln \frac{y}{z_0}=\ln \frac{y}{y_0} \rightarrow yz_0=zy_0\]
+		\item Las líneas de corriente en un instante t
+		\[\frac{dz}{v_z}=\frac{dy}{v_y}=\frac{dx}{v_x}\]
+		\[\frac{dy}{-2cos(\omega t)y}=\frac{dz}{-2cos(\omega t)z}\rightarrow \frac{dy}{y}=\frac{dz}{z}\rightarrow \ln z = \ln y + C_0 \rightarrow z=C_{00}y\]
+		\[\frac{dy}{-2cos(\omega t)y}=\frac{dx}{4cos(\omega t)x}\rightarrow -\frac{dy}{y}=\frac{dx}{2x}\rightarrow -\ln y = \frac{1}{2}\ln x + C_1 \rightarrow C_{11}=xy^2 \]
+	\end{enumerate}
+	\item Un campo de velocidades viene dado por $v_x=x^2-2y^2; v_y=-2xy$
+	\[\vec{v}=(x^2-2y^2)\vec{i}-2xy\vec{j}\]
+	\begin{enumerate}
+		\item Clasificación del flujo\\
+		Flujo bidireccional, bidimensional y estacionario.
+		\item La expresión de la aceleración total de la partícula fluida
+		\[\frac{D\vec{v}}{Dt}=\frac{\partial\vec{v}}{\partial t}+\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}\]
+		\[\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=v_x\frac{\partial}{\partial x}\left[v_x\vec{i}+v_y\vec{j}\right]+v_y\frac{\partial}{\partial y}\left[v_x\vec{i}+v_y\vec{j}\right]\]
+		
+		\[\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=\left[v_x\frac{\partial v_x}{\partial x} +v_y\frac{\partial v_x}{\partial y}\right]\vec{i}+\left[v_x\frac{\partial v_y}{\partial x} +v_y\frac{\partial v_y}{\partial y}\right]\vec{j}\]
+		
+		\[\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=\left[(x^2-2y^2)2x+4xy^2\right]\vec{i}+\left[(x^2-2y^2)(-2y)+4x^2y\right]\vec{j}\]
+
+		\item Aceleración local
+		\item Aceleración convectiva debida al cambio del módulo de la velocidad
+		\item Aceleración convectiva debido al cambio de dirección de la velocidad
+		\item Demostrar que la variación de la densidad a lo largo de una línea de corriente es nula
+		\item  Movimiento de la partícula fluida
+		
+	\end{enumerate}
+\end{enumerate}
