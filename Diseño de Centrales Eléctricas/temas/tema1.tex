@@ -687,95 +687,50 @@
 				\end{tabular}
 			\end{table}
 			
+		\subsection{Evolución de las pérdidas de energía eléctrica en España}
 			\begin{tikzpicture}
 				\begin{axis}[
-					width=10cm,
-					height=6cm,
 					xlabel={Año},
-					ylabel={GWh},
+					ylabel={Pérdidas en el Transporte (GWh)},
+					axis lines=left,
 					ymin=0,
 					ymax=5000,
-					ytick={0,1000,2000,3000,4000,5000},
-					xtick=data,
-					symbolic x coords={2019,2020,2021,2022,2023},
-					legend style={at={(0.5,-0.2)},anchor=north},
-					ybar,
-					bar width=10pt,
-					nodes near coords,
-					nodes near coords align={vertical},
-					every node near coord/.append style={font=\tiny},
-					restrict y to domain=-10:10, % Filtrar valores de y
+					legend style={at={(0.3,-0.2)}, anchor=north},
 					]
-					\addplot[fill = blue] coordinates {
-						(2019,4500)
-						(2020,4600)
-						(2021,4800)
-						(2022,4900)
-						(2023,4697)
+					
+					% Datos en barras (azul)
+					\addplot[blue, ybar, bar width=0.2cm, fill=blue!30] coordinates {
+						(2018.6, 0)
+						(2019, 3600)
+						(2020, 3900)
+						(2021, 4200)
+						(2022, 4500)
+						(2023, 4600)
+						(2023.4, 0)
 					};
-					\addplot[orange,sharp plot,update limits=false] coordinates {
-						(2019,220000)
-						(2020,225000)
-						(2021,227000)
-						(2022,228000)
-						(2023,229527)
+					\addlegendentry{Pérdidas}
+				\end{axis}
+				
+				\begin{axis}[
+					axis y line*=right,
+					ylabel={Demanda (GWh)},
+					ymin=220000,
+					ymax=270000,
+					hide x axis,
+					legend style={at={(0.7,-0.2)}, anchor=north},
+					]
+					
+					% Datos en línea (naranja)
+					\addplot[orange, smooth, mark=*] coordinates {
+						(2019, 250000)
+						(2020, 237000)
+						(2021, 242500)
+						(2022, 235500)
+						(2023, 230000)
 					};
-					\legend{Pérdidas de transporte, Demanda}
+					\addlegendentry{Demanda}
 				\end{axis}
 			\end{tikzpicture}
-			
-			\begin{figure}
-				\centering
-				\begin{tikzpicture}
-					\begin{groupplot}[
-						group style={
-							group size=2 by 1,
-							horizontal sep=2cm,
-						},
-						width=0.8\textwidth,
-						height=0.6\textwidth,
-						title={Double Axis Plot},
-						ymin=0,
-						]
-						
-						% Bar Plot on the left y-axis
-						\nextgroupplot[
-						ybar,
-						blue,
-						fill=blue!30,
-						bar width=0.5cm,
-						xlabel={$x$},
-						ylabel={Left Y-Axis},
-						]
-						\addplot coordinates {
-							(1, 2)
-							(2, 5)
-							(3, 3)
-							(4, 7)
-						};
-						\addlegendentry{Bar Plot}
-						
-						% Line Plot on the right y-axis
-						\nextgroupplot[
-						red,
-						mark=*,
-						smooth,
-						xlabel={$x$},
-						ylabel={Right Y-Axis},
-						]
-						\addplot coordinates {
-							(1, 3)
-							(2, 7)
-							(3, 4)
-							(4, 9)
-						};
-						\addlegendentry{Line Plot}
-						
-					\end{groupplot}
-				\end{tikzpicture}
-				\caption{Double Axis Plot.}
-				\label{fig:double_axis_plot}
-			\end{figure}
 			
 			
 			
