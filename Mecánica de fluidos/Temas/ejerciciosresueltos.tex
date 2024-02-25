@@ -111,6 +111,29 @@
 		\[\textcolor{red}{\frac{dy}{-2cos(\omega t)y}=\frac{dz}{-2cos(\omega t)z}\rightarrow \frac{dy}{y}=\frac{dz}{z}\rightarrow \ln z = \ln y + C_0 \rightarrow z=C_{00}y}\]
 		\[\textcolor{red}{\frac{dy}{-2cos(\omega t)y}=\frac{dx}{4cos(\omega t)x}\rightarrow -\frac{dy}{y}=\frac{dx}{2x}\rightarrow -\ln y = \frac{1}{2}\ln x + C_1 \rightarrow C_{11}=xy^2 }\]
 	\end{enumerate}
+	\item La velocidad de un fluido se encuentra definida por $\vec{v}=y\vec{j}+\left(ye^{-t}-z\right)\vec{k}$ Se pide:
+	\begin{enumerate}
+		\item Las componentes de la velocidad 
+		\[\textcolor{red}{v_x=0} \]
+		\[	\textcolor{red}{ v_y=y}\] 
+			\[\textcolor{red}{ v_z=ye^{-t} -z}\]
+		\item Caracterización del flujo\\
+		\textcolor{red}{Flujo bidireccional, bidimensional y transitorio.}
+		\item La aceleración de la partícula fluida cuando en t=0s pasa por el punto (0,1,0)
+		\item Movimiento de la partícula fluida
+		\item ¿Podría tratarse de un líquido?
+		\item La velocidad de deformación lineal específica en la dirección del vector unitario $\vec{l}=\frac{1}{\sqrt{3}}\left(\vec{i}-\vec{j}+\vec{k}\right)$
+	\end{enumerate}
+	\item Considere el flujo definido por $v_y=z\left(t+2t^2\right)$ y $v_z=2y$. Determine:
+	\begin{enumerate}
+		\item Tipo de flujo\\
+		\textcolor{red}{Flujo bidireccional, bidimensional y transitorio.}
+		\item La aceleración de la partícula fluida: total, local, convectiva y las contribuciones de la aceleración convectiva
+		\item  El vector velocidad angular
+		\item El movimiento de la partícula fluida
+		\item ¿Podría representar este campo de velocidades a un fluido que fuera un líquido?
+	\end{enumerate}
+	
 	\item Un campo de velocidades viene dado por $v_x=x^2-2y^2; v_y=-2xy$
 	\[\textcolor{red}{\vec{v}=(x^2-2y^2)\vec{i}-2xy\vec{j}}\]
 	\begin{enumerate}
@@ -125,12 +148,46 @@
 		\[\textcolor{red}{\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=\left[v_x\frac{\partial v_x}{\partial x} +v_y\frac{\partial v_x}{\partial y}\right]\vec{i}+\left[v_x\frac{\partial v_y}{\partial x} +v_y\frac{\partial v_y}{\partial y}\right]\vec{j}}\]
 		
 		\[\textcolor{red}{\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=\left[(x^2-2y^2)2x+4xy^2\right]\vec{i}+\left[(x^2-2y^2)(-2y)+4x^2y\right]\vec{j}}\]
-
+		\[\textcolor{red}{\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=2\left(x^2+2y^2\right)\left(x\vec{i}+y\vec{j}\right)}\]
 		\item Aceleración local
+		\[\textcolor{red}{\frac{\partial \vec{v}}{\partial t}=0}\]
 		\item Aceleración convectiva debida al cambio del módulo de la velocidad
+		\[\textcolor{red}{\vec{\nabla}\frac{|\vec{v}|^2}{2}=\vec{\nabla}\left(\frac{v_x^2+v_y^2}{2}\right)=\vec{\nabla}\left(\frac{x^4+4y^4}{2}\right)=2x^3\vec{i}+8y^3\vec{j}}\]
 		\item Aceleración convectiva debido al cambio de dirección de la velocidad
-		\item Demostrar que la variación de la densidad a lo largo de una línea de corriente es nula
+			\[\textcolor{red}{-\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)=(\vec{v} \cdot\vec{\nabla})\vec{v}-\vec{\nabla}\frac{|\vec{v}|}{2}^2=2\left(x^2+2y^2\right)\left(x\vec{i}+y\vec{j}\right)-\left(2x^3\vec{i}+8y^3\vec{j}\right)}\]
+			\[\textcolor{red}{-\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)=4y^2x\vec{i}+\left(2x^2y-4y^3\right)\vec{j}}\]
+		\item Demostrar que la variación de la densidad a lo largo de una línea de corriente es nula\\
+		\textcolor{red}{La variación de la densidad a lo largo de una línea de corriente es nula si el fluido es incompresible:}
+		\[\textcolor{red}{traza(\overline{\overline{\xi}})=\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}=2x-2x=0 \rightarrow \text{Fluido incompresible}}\]
 		\item  Movimiento de la partícula fluida
+		\[\textcolor{red}{d\vec{v}=d\vec{r}\cdot\left(\overline{\overline{\xi}}+\overline{\overline{\gamma}}\right)}\]
 		
+		\[\textcolor{red}{\overline{\overline{\xi}}=\begin{bmatrix}
+				\frac{\partial v_x}{\partial x} & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right)\\
+				\frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right) & \frac{\partial v_y}{\partial y} \\				
+		\end{bmatrix}=\begin{bmatrix}
+		 2x & -3y\\
+		 -3y& -2x \\				
+		\end{bmatrix}
+	}\]
+	\[\textcolor{red}{\overline{\overline{\gamma}}=\begin{bmatrix}
+		0 & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) \\
+		-\frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) & 0  \\
+	\end{bmatrix}=\begin{bmatrix}
+	0 & -y \\
+	y & 0  \\
+\end{bmatrix}}
+\]
+
+\[\textcolor{red}{d\vec{v}=d\vec{r}\cdot\left(\begin{bmatrix}
+		2x & -3y\\
+		-3y& -2x \\				
+	\end{bmatrix}+\begin{bmatrix}
+		0 & -y \\
+		y & 0  \\
+	\end{bmatrix}\right)=d\vec{r}\cdot\begin{bmatrix}
+		2x & -4y \\
+		-2y & -2x  \\
+	\end{bmatrix}}\]
 	\end{enumerate}
 \end{enumerate}
