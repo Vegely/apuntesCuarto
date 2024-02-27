@@ -11,6 +11,8 @@
 \contentsline {subsection}{\numberline {2.4}Derivada sustancial, local y convectiva}{11}{}%
 \contentsline {subsection}{\numberline {2.5}Movimiento diferencial en torno a un punto}{13}{}%
 \contentsline {subsection}{\numberline {2.6}Movimiento de la partícula fluida en una dirección}{14}{}%
-\contentsline {section}{\numberline {3}Ejercicios resueltos}{16}{}%
-\contentsline {subsection}{\numberline {3.1}Tema 1: Fundamentos y propiedades de los fluidos}{16}{}%
-\contentsline {subsection}{\numberline {3.2}Tema 2: Cinemática de la partícula fluida}{18}{}%
+\contentsline {section}{\numberline {3}Tema 3: Conservación de la masa}{16}{}%
+\contentsline {subsection}{\numberline {3.1}Teorema del transporte de Reynolds}{16}{}%
+\contentsline {section}{\numberline {4}Ejercicios resueltos}{18}{}%
+\contentsline {subsection}{\numberline {4.1}Tema 1: Fundamentos y propiedades de los fluidos}{18}{}%
+\contentsline {subsection}{\numberline {4.2}Tema 2: Cinemática de la partícula fluida}{20}{}%
