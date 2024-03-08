@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{book}
 
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
@@ -15,11 +15,18 @@
 \usepackage{booktabs}
 \usepackage{siunitx}
 \usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{colormaps}
 \pgfplotsset{compat=1.17}
 \usepgfplotslibrary{groupplots}
 
 \usepackage{multicol}
 \usepackage{multirow}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{pgf-pie}
+\usepackage{pgffor}
+\usetikzlibrary{arrows}
 
 \usepackage[T1]{fontenc}
 \usepackage{tgpagella}
@@ -34,10 +41,50 @@
 \author{Bogurad Barañski Barañska \and Adrián Teixeira de Uña}
 \date{\today}
 
-\begin{document}
-			
-	\maketitle
+\def\innerradius{3cm}
+\def\outerradius{4cm}
 
-	\include{temas/tema1}
+% Macro principal para el gráfico de donut
+\newcommand{\donutchart}[1]{
+	% Calcula el total
+	\pgfmathsetmacro{\totalnum}{0}
+	\foreach \value/\colour/\name in {#1} {
+		\pgfmathparse{\value + \totalnum}
+		\global\let\totalnum=\pgfmathresult
+	}
+	
+	\begin{tikzpicture}
+		% Calcula el grosor y la línea media del gráfico
+		\pgfmathsetmacro{\wheelwidth}{\outerradius - \innerradius}
+		\pgfmathsetmacro{\midradius}{(\outerradius + \innerradius) / 2}
+		
+		% Gira el gráfico para comenzar desde la parte superior
+		\begin{scope}[rotate=90]
+			% Bucle a través de cada conjunto de valores
+			\pgfmathsetmacro{\cumnum}{0}
+			\foreach \value/\colour/\name in {#1} {
+				\pgfmathsetmacro{\newcumnum}{\cumnum + \value / \totalnum * 360}
+				% Calcula el valor porcentual
+				\pgfmathsetmacro{\percentage}{\value / \totalnum * 100}
+				% Calcula el ángulo medio de los segmentos de color para colocar las etiquetas
+				\pgfmathsetmacro{\midangle}{-(\cumnum + \newcumnum) / 2}
+				% Esto es necesario para que las etiquetas se alineen correctamente
+				\pgfmathparse{(-\midangle < 180 ? "west" : "east")}
+				\edef\textanchor{\pgfmathresult}
+				\pgfmathsetmacro\labelshiftdir{1 - 1 * (-\midangle > 180)}
+				% Dibuja los segmentos de color
+				\fill[\colour] (-\cumnum:\outerradius) arc (-\cumnum:-(\newcumnum):\outerradius) -- (-\newcumnum:\innerradius) arc (-\newcumnum:-(\cumnum):\innerradius) -- cycle;
+				% Establece el ángulo acumulado antiguo al nuevo valor
+				\global\let\cumnum=\newcumnum
+			}
+		\end{scope}
+	\end{tikzpicture}
+}
+
+\begin{document}
+	
+	\mainmatter	
+		\maketitle
+		\include{temas/tema1}
 	
 \end{document}
