@@ -49,8 +49,19 @@ Para todo el volumen fluido:
 
 Si $V_f(t)\approx dV_f(t)$ entonces aplicando el teorema de gauss se llega a la ecuación diferencial de la masa o forma conservativa:
 
-Teorema de Gauss:
-\[\oiint_S \varphi \cdot \vec{n}\,dS=\iiint_V \vec{\nabla}\cdot\varphi\,dV\]
+\
+\
+\
+\begin{center}
+	\begin{tikzpicture}
+		
+		\draw [fill=lightgray](0,0) rectangle (5, 2);
+		\node at (2.5, 1) [align = center]{Teorema de Gauss: \\$\oiint_S \varphi \cdot \vec{n}\,dS=\iiint_V \vec{\nabla}\cdot\varphi\,dV $};
+		
+		
+		
+	\end{tikzpicture}
+\end{center}
 
 \[\lim_{dV \to 0}\left[\frac{\partial \rho}{\partial t} dV+\vec{\nabla}\cdot\left(\rho\vec{v}\right)dV\right]=0\]
 \[\frac{\partial \rho}{\partial t} +\vec{\nabla}\cdot\left(\rho\vec{v}\right)=0\]
@@ -58,3 +69,29 @@ Término local de masa:
 \[\frac{\partial \rho}{\partial t}\]
 Término convectivo de masa:
 \[\vec{\nabla}\cdot\left(\rho\vec{v}\right)\]
+
+\subsection{Flujo sobre una superficie}
+\begin{itemize}
+	\item Flujo másico
+	\[G_e=\iint_{S_e} \rho\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\,dS\]
+	\item Flujo volumétrico
+		\[Q_e=\iint_{S_e} \left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\,dS\]
+\end{itemize}
+
+\subsection{Propiedades en forma diferencial}
+Partiendo de la expresión de la derivada sustancial y de la conservación de la masa en forma diferencial:
+\begin{equation} \label{eq:1}
+	\frac{\partial \rho}{\partial t} +\vec{\nabla}\cdot\left(\rho\vec{v}\right)=\frac{\partial \rho}{\partial t} +\left(\vec{v}\cdot\vec{\nabla}\right)\rho+\left(\vec{\nabla}\cdot\vec{v}\right)\rho=0
+\end{equation}
+
+\begin{equation} \label{eq:4}
+	\frac{D \rho}{D t}=\frac{ \partial \rho}{\partial t}+\left(\vec{v}\cdot\vec{\nabla}\right)\rho
+\end{equation}
+
+Restando (3) a (4):
+\[\frac{D \rho}{D t}=-\left(\vec{\nabla}\cdot\vec{v}\right)\rho\]
+\begin{itemize}
+	\item Si $\vec{\nabla}\cdot\vec{v} =0 $ Incopresible localmente.
+	\item Si $\vec{\nabla}\cdot\vec{v} >0$ Se expande localmente el diferencial de Volumen.
+	\item Si $\vec{\nabla}\cdot\vec{v} <0$ Se comprime localmente el diferencial de Volumen.
+\end{itemize}

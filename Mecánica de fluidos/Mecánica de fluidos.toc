@@ -13,7 +13,15 @@
 \contentsline {subsection}{\numberline {2.6}Movimiento de la partícula fluida en una dirección}{14}{}%
 \contentsline {section}{\numberline {3}Tema 3: Conservación de la masa}{16}{}%
 \contentsline {subsection}{\numberline {3.1}Teorema del transporte de Reynolds}{16}{}%
-\contentsline {section}{\numberline {4}Ejercicios resueltos}{18}{}%
-\contentsline {subsection}{\numberline {4.1}Tema 1: Fundamentos y propiedades de los fluidos}{18}{}%
-\contentsline {subsection}{\numberline {4.2}Tema 2: Cinemática de la partícula fluida}{21}{}%
-\contentsline {subsection}{\numberline {4.3}Tema 3: Conservación de la masa}{24}{}%
+\contentsline {subsection}{\numberline {3.2}Flujo sobre una superficie}{17}{}%
+\contentsline {subsection}{\numberline {3.3}Propiedades en forma diferencial}{18}{}%
+\contentsline {section}{\numberline {4}Tema 4: Conservación de la cantidad de movimiento}{19}{}%
+\contentsline {subsection}{\numberline {4.1}Teorema del transporte de Reynolds para la cantidad de movimiento}{19}{}%
+\contentsline {subsection}{\numberline {4.2}Ecuaciones de Navier-Stokes}{19}{}%
+\contentsline {subsection}{\numberline {4.3}Número de Reynolds}{19}{}%
+\contentsline {subsection}{\numberline {4.4}Teorema de Bernouilli}{19}{}%
+\contentsline {section}{\numberline {5}Ejercicios resueltos}{20}{}%
+\contentsline {subsection}{\numberline {5.1}Tema 1: Fundamentos y propiedades de los fluidos}{20}{}%
+\contentsline {subsection}{\numberline {5.2}Tema 2: Cinemática de la partícula fluida}{23}{}%
+\contentsline {subsection}{\numberline {5.3}Tema 3: Conservación de la masa}{26}{}%
+\contentsline {subsection}{\numberline {5.4}Tema 4: Conservación de la cantidad de movimiento}{26}{}%
