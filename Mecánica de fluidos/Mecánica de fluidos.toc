@@ -15,4 +15,5 @@
 \contentsline {subsection}{\numberline {3.1}Teorema del transporte de Reynolds}{16}{}%
 \contentsline {section}{\numberline {4}Ejercicios resueltos}{18}{}%
 \contentsline {subsection}{\numberline {4.1}Tema 1: Fundamentos y propiedades de los fluidos}{18}{}%
-\contentsline {subsection}{\numberline {4.2}Tema 2: Cinemática de la partícula fluida}{20}{}%
+\contentsline {subsection}{\numberline {4.2}Tema 2: Cinemática de la partícula fluida}{21}{}%
+\contentsline {subsection}{\numberline {4.3}Tema 3: Conservación de la masa}{24}{}%
