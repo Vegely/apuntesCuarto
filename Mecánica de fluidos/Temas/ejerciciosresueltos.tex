@@ -121,19 +121,157 @@
 		\item Caracterización del flujo\\
 		\textcolor{red}{Flujo bidireccional, bidimensional y transitorio.}
 		\item La aceleración de la partícula fluida cuando en t=0s pasa por el punto (0,1,0)
+			\[\textcolor{red}{a_L=\frac{\partial\vec{v}}{\partial t}=-ye^{-t}\vec{k}}\]
+		\[\textcolor{red}{a_c=\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=
+			\left(v_x\frac{\partial}{\partial x}
+			+
+			v_y\frac{\partial}{\partial y}
+			+
+			v_y\frac{\partial}{\partial z}
+			\right)\cdot
+			\left(v_x\vec{i}+v_y\vec{j}+v_z\vec{k}\right)		
+		}\]
+		\[\textcolor{red}{a_c=\left(v_y\frac{\partial v_y}{\partial y} + v_z\frac{\partial v_y}{\partial z} \right)
+			+\left(v_y\frac{\partial v_z}{\partial y} + v_z\frac{\partial v_z}{\partial z} \right)
+			= y\vec{j}+z\vec{k}
+		}\]
+		\[	\textcolor{red}{
+			a_T=\frac{D\vec{v}}{Dt}=\frac{\partial\vec{v}}{\partial t}+\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=a_L+a_c=y\vec{j}+\left(-ye^{-t}+z\right)\vec{k}
+		}
+		\]
+	\[	\textcolor{red}{
+		\left.a_T \right|_{\vec{r}=(0,1,0)m,t=0s}=\vec{j}-\vec{k} \ \frac{m}{s^2}
+	}
+	\]
 		\item Movimiento de la partícula fluida
+				\setlength{\arraycolsep}{1.5pt}
+		\renewcommand{\arraystretch}{1.5}
+		\[\textcolor{red}{\overline{\overline{\xi}}=\begin{bmatrix}
+				\frac{\partial v_x}{\partial x} & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right) &  \frac{1}{2}\left(\frac{\partial v_x}{\partial z}+\frac{\partial v_z}{\partial x}\right)\\
+				\frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right) & \frac{\partial v_y}{\partial y} &\frac{1}{2}\left(\frac{\partial v_y}{\partial z}+\frac{\partial v_z}{\partial y}\right)\\		
+				\frac{1}{2}\left(\frac{\partial v_x}{\partial z}+\frac{\partial v_z}{\partial x}\right)  &\frac{1}{2}\left(\frac{\partial v_y}{\partial z}+\frac{\partial v_z}{\partial y}\right)& \frac{\partial v_z}{\partial z}\\	
+			\end{bmatrix}=
+			\begin{bmatrix}
+				0 & 0 &  0\\
+				0 & 1 &  \frac{e^{-t}}{2}\\
+				0 &  \frac{e^{-t}}{2} &  -1\\	
+			\end{bmatrix}
+		}\]
+		\setlength{\arraycolsep}{1.5pt}
+		\renewcommand{\arraystretch}{1.5}
+		\[\textcolor{red}{\overline{\overline{\gamma}}=\begin{bmatrix}
+				0 & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) &  \frac{1}{2}\left(\frac{\partial v_x}{\partial z}-\frac{\partial v_z}{\partial x}\right)\\
+				-\frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) & 0 &\frac{1}{2}\left(\frac{\partial v_y}{\partial z}-\frac{\partial v_z}{\partial y}\right)\\		
+				-\frac{1}{2}\left(\frac{\partial v_x}{\partial z}-\frac{\partial v_z}{\partial x}\right)  &-\frac{1}{2}\left(\frac{\partial v_y}{\partial z}-\frac{\partial v_z}{\partial y}\right)& 0\\	
+			\end{bmatrix}=
+			\begin{bmatrix}
+				0 & 0 &  0\\
+				0 & 0 &  -\frac{e^{-t}}{2}\\
+				0 &  \frac{e^{-t}}{2} &  0\\	
+			\end{bmatrix}
+		}\]
+		
 		\item ¿Podría tratarse de un líquido?
+			\[\textcolor{red}{traza(\overline{\overline{\xi}})=1-1=0\rightarrow \text{Es un líquido.} }\]
 		\item La velocidad de deformación lineal específica en la dirección del vector unitario $\vec{l}=\frac{1}{\sqrt{3}}\left(\vec{i}-\vec{j}+\vec{k}\right)$
+		\[\textcolor{red}{
+			\overline{\overline{\xi}}\cdot\vec{n}=\begin{bmatrix}
+				0 & 0 &  0\\
+				0 & 1 &  \frac{e^{-t}}{2}\\
+				0 &  \frac{e^{-t}}{2} &  -1\\	
+			\end{bmatrix} \cdot \frac{1}{\sqrt{3}}\begin{bmatrix}
+			1 \\
+			-1 \\
+			1 \\	
+			\end{bmatrix}=\frac{1}{\sqrt{3}}\begin{bmatrix}
+			0 \\
+			-1+ \frac{e^{-t}}{2}\\
+			-1-  \frac{e^{-t}}{2}\\	
+			\end{bmatrix}
+		}\]
 	\end{enumerate}
 	\item Considere el flujo definido por $v_y=z\left(t+2t^2\right)$ y $v_z=2y$. Determine:
 	\begin{enumerate}
 		\item Tipo de flujo\\
 		\textcolor{red}{Flujo bidireccional, bidimensional y transitorio.}
 		\item La aceleración de la partícula fluida: total, local, convectiva y las contribuciones de la aceleración convectiva
-		\[	\textcolor{red}{\frac{D\vec{v}}{Dt}=\frac{\partial\vec{v}}{\partial t}+\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=}\]
+	
+			\[\textcolor{red}{a_L=\frac{\partial\vec{v}}{\partial t}=z(1+4t)\vec{j}}\]
+			\[\textcolor{red}{a_c=\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=
+			\left(v_x\frac{\partial}{\partial x}
+			+
+		v_y\frac{\partial}{\partial y}
+			+
+		v_y\frac{\partial}{\partial z}
+			\right)\cdot
+			\left(v_x\vec{i}+v_y\vec{j}+v_z\vec{k}\right)		
+			}\]
+			
+			\[\textcolor{red}{a_c=\left(v_y\frac{\partial v_y}{\partial y} + v_z\frac{\partial v_y}{\partial z} \right)
+				+\left(v_y\frac{\partial v_z}{\partial y} + v_z\frac{\partial v_z}{\partial z} \right)
+				= 2y(t+2t^2)\vec{j}+2z(t+2t^2)\vec{k}
+			}\]
+			\[	\textcolor{red}{
+				a_T=\frac{D\vec{v}}{Dt}=\frac{\partial\vec{v}}{\partial t}+\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=a_L+a_c=\left[z(1+4t)+2y(t+2t^2)\right]\vec{j}+2z(t+2t^2)\vec{k}
+			}
+			\]
+			\[\textcolor{red}{a_{c_v}=\vec{\nabla}\frac{|\vec{v}|^2}{2}=\frac{1}{2}\left[
+				\frac{\partial}{\partial x}\left(v_x^2+v_y^2+v_z^2\right)\vec{i}
+				+
+				\frac{\partial}{\partial y}\left(v_x^2+v_y^2+v_z^2\right)\vec{j}
+				+
+				\frac{\partial}{\partial z}\left(v_x^2+v_y^2+v_z^2\right)\vec{k}
+				\right]
+			}\]
+			\[\textcolor{red}{a_{c_v}=
+				4y\vec{j}+z\left(t^2+4t^3+4t^4\right)\vec{k}
+			}\]
+			\[\textcolor{red}{a_{c_d}=-\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)=(\vec{v} \cdot\vec{\nabla})\vec{v}-\vec{\nabla}\frac{|\vec{v}|}{2}^2
+			}\]
+			\[\textcolor{red}{a_{c_v}=\left[z(1+4t)+2y(t+2t^2)-4y\right]\vec{j}+z(2t+3t^2-4t^3-4t^4)\vec{k}}\]
 		\item  El vector velocidad angular
+		\[\textcolor{red}{
+			\vec{\omega}= \left(\vec{\nabla}\times\vec{v}\right)=\begin{vmatrix}
+				\vec i & \vec j & \vec k \\
+				\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+				v_x & v_y & v_z \\
+			\end{vmatrix}=
+			\begin{vmatrix}
+				\vec i & \vec j & \vec k \\
+				0 & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+				0 & v_y & v_z \\
+			\end{vmatrix}=
+			\left[\frac{\partial v_z}{\partial y}-\frac{\partial v_y}{\partial z}\right]\vec{i}=\left(2-t-2t^2\right)\vec{i}
+		}\]
 		\item El movimiento de la partícula fluida
+				\setlength{\arraycolsep}{1.5pt}
+		\renewcommand{\arraystretch}{1.5}
+			\[\textcolor{red}{\overline{\overline{\xi}}=\begin{bmatrix}
+				\frac{\partial v_x}{\partial x} & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right) &  \frac{1}{2}\left(\frac{\partial v_x}{\partial z}+\frac{\partial v_z}{\partial x}\right)\\
+				\frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right) & \frac{\partial v_y}{\partial y} &\frac{1}{2}\left(\frac{\partial v_y}{\partial z}+\frac{\partial v_z}{\partial y}\right)\\		
+				\frac{1}{2}\left(\frac{\partial v_x}{\partial z}+\frac{\partial v_z}{\partial x}\right)  &\frac{1}{2}\left(\frac{\partial v_y}{\partial z}+\frac{\partial v_z}{\partial y}\right)& \frac{\partial v_z}{\partial z}\\	
+			\end{bmatrix}=
+			\begin{bmatrix}
+				0 & 0 &  0\\
+				0 & 0 &  \frac{t+2t^2+2}{2}\\
+				0 &  \frac{t+2t^2+2}{2} &  0\\	
+			\end{bmatrix}
+		}\]
+	\setlength{\arraycolsep}{1.5pt}
+	\renewcommand{\arraystretch}{1.5}
+	\[\textcolor{red}{\overline{\overline{\gamma}}=\begin{bmatrix}
+			0 & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) &  \frac{1}{2}\left(\frac{\partial v_x}{\partial z}-\frac{\partial v_z}{\partial x}\right)\\
+			-\frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) & 0 &\frac{1}{2}\left(\frac{\partial v_y}{\partial z}-\frac{\partial v_z}{\partial y}\right)\\		
+			-\frac{1}{2}\left(\frac{\partial v_x}{\partial z}-\frac{\partial v_z}{\partial x}\right)  &-\frac{1}{2}\left(\frac{\partial v_y}{\partial z}-\frac{\partial v_z}{\partial y}\right)& 0\\	
+		\end{bmatrix}=
+		\begin{bmatrix}
+			0 & 0 &  0\\
+			0 & 0 &  \frac{t+2t^2+2}{2}\\
+			0 &  \frac{-t-2t^2+2}{2} &  0\\	
+		\end{bmatrix}
+	}\]
 		\item ¿Podría representar este campo de velocidades a un fluido que fuera un líquido?
+		\[\textcolor{red}{traza(\overline{\overline{\xi}})=0\rightarrow \text{Es un líquido.} }\]
 	\end{enumerate}
 	
 	\item Un campo de velocidades viene dado por $v_x=x^2-2y^2; v_y=-2xy$
@@ -195,4 +333,88 @@
 \end{enumerate}
 \newpage
 \subsection{Tema 3: Conservación de la masa}
+\begin{enumerate}
+	\item  Calcular la relación de velocidades entre el caudal de entrada y de salida en una tubería divergente
+	\begin{figure}[H]
+		\begin{minipage}{0.7\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/tuberiaDivergente}
+		\caption{Esquema de la tubería.}
+		\label{fig:tuberiadivergente}
+	\end{minipage}
+	\begin{minipage}{0.3\textwidth}
+		
+	\end{minipage}	
+	\end{figure}
+	
+	\item Calcular la relación entre la velocidad de salida y la altura en un depósito con un agujero en su fondo
+	\begin{figure}[H] \begin{minipage}{0.7\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/depositoBujero}
+		\caption{Esquema del depósito con el agujero en su fondo.}
+		\label{fig:depositobujero}
+	\end{minipage}
+	\begin{minipage}{0.3\textwidth}
+		
+	\end{minipage}
+	\end{figure}
+	
+	
+	\item Un envase que contiene aire comprimido se abre y el aire sale por el orificio con un gasto
+	másico $\dot{m }$ = $C_p$, donde $\rho$ es la densidad del aire del depósito y C es una constante. Se
+	pide una expresión de la densidad en función del tiempo sabiendo que$\rho_0$ es la densidad
+	inicial en el depósito y V su volumen, así como el tiempo necesario para que la densidad
+	haya disminuido un 40 \%.
+	
+	\item Un tanque cilíndrico de diámetro (D) igual a 80 cm se comunica por el fondo con una
+	tubería horizontal de diámetro (d) 15 cm por la que fluye agua. La
+	velocidad del agua aguas arriba y aguas abajo del depósito es de 2,4 m/s y 1,8 m/s,
+	respectivamente. En un instante de tiempo, la altura de agua (h) en el depósito es de 35
+	cm. Calcular el tiempo que se necesita para rellenar el depósito que tiene una altura de
+	1.2 m.
+	\begin{figure}[H] \begin{minipage}{0.7\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/tuberiaDeposito}
+		\caption{Esquema de la tubería con el depósito.}
+		\label{fig:tuberiadeposito}
+	\end{minipage}
+	\begin{minipage}{0.3\textwidth}
+		
+	\end{minipage}
+	\end{figure}
+	
+	\item Se dispone de un émbolo de diámetro ($D_c$) con su superficie perforada con N agujeros de
+	diámetro d que se disponen equidistantes al centro. Inicialmente el cilindro
+	se encuentra lleno de un fluido incompresible de densidad $\rho$. El émbolo se desplaza con
+	una velocidad $w_0$, produciéndose la salida del fluido con velocidad $v_s$ por un orificio de
+	diámetro $D_s$. Se pide calcular la velocidad vs en función de los datos del ejercicio.
+	\begin{figure}[H] \begin{minipage}{0.7\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/emboloPerforado}
+		\caption{Esquema del émbolo Perforado.}
+		\label{fig:emboloperforado}
+	\end{minipage}
+	\begin{minipage}{0.3\textwidth}
+		
+	\end{minipage}
+	\end{figure}
+	
+	\item Calcular en función de la altura la relación con la velocidad de un depósito con varios agujeros
+	\begin{figure}[H] \begin{minipage}{0.7\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/depositoVariosBujeros}
+		\caption{Esquema del depósito con varios agujeros.}
+		\label{fig:depositovariosbujeros}
+	\end{minipage}
+	\begin{minipage}{0.3\textwidth}
+		
+	\end{minipage}
+	\end{figure}
+	
+	
+	\item El flujo de un fluido está representado por el siguiente campo de velocidades: u = u (x, t);
+	v = 0; w = 0, y densidad $\rho$ =  $\rho _0$ [a - cos ($\omega$t)] con a$>$1. Determinar la función u (x, t)
+	sabiendo que u (0, t) = $u_0$.
+\end{enumerate}
+\newpage
 \subsection{Tema 4: Conservación de la cantidad de movimiento}
