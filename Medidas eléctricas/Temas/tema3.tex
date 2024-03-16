@@ -46,7 +46,7 @@
 			Se suele utilizar en circuitos electrónicos con tensiones reducidas ($<100\,V$).
 			
 			\subsubsection*{Ampliación del campo de medida de un voltímetro.}
-			En el siguiente esquema se aplica tensión en alguna de las 3 bornas $V_1$, $V_2$ o $V_3$.
+			En el esquema se aplica tensión en alguna de las 3 bornas $V_1$, $V_2$ o $V_3$.
 			\begin{figure}[H]
 				\centering
 					\begin{circuitikz}
@@ -76,7 +76,6 @@
 						\draw (4.5,16.75) to[short, -*] (4.5,16.75);
 						\draw [-latex] (6.25,16.75) -- (7,16.75)node[pos=0.9,above]{I};
 					\end{circuitikz}
-				\label{fig:my_label}
 			\end{figure}
 			
 			Se define el \textit{"factor amplificador"} como:
@@ -87,7 +86,19 @@
 			
 			Normalmente $V_i >\!> V_m$, luego \[P_{R_i} \approx \dfrac{V_i^2}{R_i}\]
 			
+			
+			Se demuestra que el campo de medida del aparato aumenta conforme aumenta la resistencia en serie con éste, aplicando el debido factor amplificador.
+			
 		\subsubsection{Divisores de tensión inductivos.}
+			Sólo son válidos en corriente alterna, ya que están formados por dos bobinas acopladas en serie, en configuración, comunmente, de autotransformador. Comparados con los resistivos,
+			apenas disipan energía, siempre
+			que su R sea pequeña.
+			
+			
+			Su impedancia aumenta con la
+			frecuencia, por lo que no son útiles
+			en circuitos de frecuencia variable. Se suelen utilizar a baja tensión y a frecuencia industrial.
+			
 			\begin{figure}[H]
 				\centering
 					\begin{circuitikz}
@@ -110,6 +121,14 @@
 			\end{figure}
 		
 		\subsubsection{Divisores de tensión capacitivos.}
+			\begin{itemize}
+				\item[-] Se utilizan tanto en corriente continua como en alterna, principalmente para la medida de altas tensiones.
+				\item[-] En corriente continua los aparatos en paralelo con $C_P$ tienen que ser de tipo electrostático.
+				\item[-] Su consumo de energía es nulo a efectos prácticos.
+				\item[-] En c.a. se reduce su impedancia conforme aumenta la frecuencia, pudiendo llegar a comportarse como un cortocircuito.
+				\item[-] Se pueden usar en B.T. para aplicaciones de bajo consumo.
+			\end{itemize}
+			
 			\begin{figure}[H]
 				\centering
 					\begin{circuitikz}
@@ -133,6 +152,10 @@
 			\end{figure}
 		
 		\subsubsection{Divisores de intensidad resistivos.}
+			Existen diversas alternativas a la hora de conectar un
+			microamperímetro a resistencias en paralelo para ampliar su
+			campo de medida y hacer que tenga varios alcances. No obstante, el montaje debe impedir siempre que por el elemento indicador circule la corriente principal (a medir) ya que ésta lo destruiría.
+			
 			\begin{figure}[H]
 				\centering
 					\begin{circuitikz}
@@ -185,6 +208,17 @@
 						\draw (8.75,15.75) to[short, -*] (8.75,15.75);
 					\end{circuitikz}
 			\end{figure}
+			
+			Se inyecta corriente en alguno de los puntos $I_1, I_2$ ó $I_3$.
+			\[I_3>I_2>I_1\]
+			\[I_i=n_i\cdot I_m\ / i \in \mathbb{N}\]
+			Para el campo de $I_1$: paralelo de $R_1, R_2$ y $R_3$ con $R_m$.
+			\[(I_1-I_m)\cdot(R_1+R_2+R_3)=R_m\cdot I_m\Rightarrow R_P = R_1+R_2+R_3=\dfrac{R_m}{n_1-1}\]
+			Para el campo de $I_2$: paralelo de $R_2$ y $R_3$ con $R_m + R_1$.
+			Para el campo de $I_3$: paralelo de $R_3$ con $R_m + R_1 + R_2$.
+			Resulta:
+			\[R_2+R_3=\dfrac{R_P+R_m}{n_2}; R_3=\dfrac{R_P+R_m}{n_3}\]
+			Para las potencias, si $I_i>\,>I_m\Rightarrow P_{R_i} \approx R_i\cdot I_i^2$.
 			
 		\subsubsection*{Otros acoplamientos de resistencias.}
 			\begin{figure}[H]
