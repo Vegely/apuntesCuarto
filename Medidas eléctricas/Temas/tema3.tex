@@ -254,6 +254,7 @@
 						\node [font=\large] at (4.25,21.5) {B.T.};
 						\draw [ ](5,19.25) to (5,19) node[ground]{};
 						\draw (5,19.25) to[short, -*] (5,19.25);
+						\ctikzset{resistor = european}
 						\draw [,  ](7.5,19.25) to[R,l={ \large $Z$}] (9.75,19.25);
 						\draw [,  ](7.5,19.25) to[short] (7.5,22.5);
 						\draw [,  ](9.75,21.25) to[short] (9.75,22.5);
@@ -309,19 +310,19 @@
 				\centering
 					\begin{circuitikz}
 						\tikzstyle{every node}=[font=\large]
-						\draw [, -latex, dashed] (3,15) -- (5.25,20)node[pos=1,above]{$-I'_2$};
+						\draw [, -latex, dashed] (3,15) -- (5.25,20)node[pos=1,left]{$-I'_2$};
 						\draw [, -latex] (4.25,17.75) -- (7.75,17.75)node[pos=1,right]{$\Phi$};
 						\draw [, -latex] (4.25,17.75) -- (5.25,18.25)node[pos=1,right]{$I_0$};
 						\draw [ color={rgb,255:red,0; green,0; blue,255}, , -latex] (4.25,17.75) -- (6.25,20.5)node[pos=1,right]{$I_1$};
 						\draw [, dashed] (5.25,18.25) -- (6.25,20.5);
 						\draw [, dashed] (5.25,20) -- (6.25,20.5);
 						\draw [, -latex, dashed] (4.25,17.75) -- (4.25,22.5)node[pos=1,above]{$E_1$};
-						\draw [, -latex, dashed] (4.25,17.75) .. controls (3.75,20) and (3.75,20) .. (3,22.25)node[pos=1]{$-K_U·U_2$};
+						\draw [, -latex, dashed] (4.25,17.75) .. controls (3.75,20) and (3.75,20) .. (3,22.25)node[pos=1.05]{$-K_U·U_2$};
 						\draw [, -latex] (4.25,17.75) -- (4.25,13)node[pos=1,right]{$U_2$};
 						\draw [ color={rgb,255:red,0; green,217; blue,0}, , -latex] (4.25,17.75) -- (2,15.25)node[pos=1,left]{$I_2$};
 						\draw [, -latex] (2,16.5) -- (2.5,16);
 						\draw [, -latex] (4,15.25) -- (3.25,15.5);
-						\draw [, dashed] (2.5,16) -- (3.25,15.5)node[pos=0.2,below]{$\delta_i$};
+						\draw [] (2.5,16) -- (3.25,15.5)node[pos=0.4,below]{$\delta_i$};
 					\end{circuitikz}
 			\end{figure}
 			
@@ -329,7 +330,6 @@
 				\centering
 					\begin{circuitikz}
 						\tikzstyle{every node}=[font=\large]
-						\node  [waves, right, rotate=180, ] at(11.75,15) {};
 						\draw [, dashed] (3.25,6) -- (5.25,10.5)node[pos=0.5,above]{$\varepsilon_I$};
 						\draw [, -, dashed] (1.25,5) -- (3.25,9.5)node[pos=1,above]{$K_I·I_2$};
 						\draw [ color={rgb,255:red,0; green,0; blue,255}, , -] (1.25,5) -- (5.25,10.5)node[pos=1,right]{$I_1$};
@@ -377,13 +377,298 @@
 						\draw [, line width=0.5pt](2.5,2.5) to[short] (3.5,2.5);
 						\draw [, line width=0.5pt](0,3.75) to[short] (0,2.5);
 						\draw (0,2.5) to[short, -*] (0,2.5);
+						\ctikzset{resistor = european}
 						\draw [, line width=0.5pt](3.5,2.5) to[R,l={ \large $Z$}] (3.5,1);
 						\draw [line width=0.5pt, -latex] (0.5,3.5) -- (0.5,4.25)node[pos=0.9,right]{$I_2$};
 						\draw [line width=0.5pt, -latex] (-1,2.5) -- (-0.5,2.5)node[pos=0.9,above]{$I_1$};
+						\node [font=\large] at (1.55,5.35) {*};
+						\node [font=\large] at (1.1,4.9) {*};
+					\end{circuitikz}
+			\end{figure}
+			
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw  (15.5,15.25) circle (0.5cm) node {\large $I_A$} ;
+						\draw (16,13.5) to[L] (15,13.5);
+						\draw (15.07,13.5) to[short] (15.07,14.25);
+						\draw (15.93,13.5) to[short] (15.93,14.25);
+						\draw (15.07,14.25) to[short] (14.5,14.25);
+						\draw (14.5,14.25) to[short] (14.5,15.25);
+						\draw (14.5,15.25) to[short] (15,15.25);
+						\draw (16,15.25) to[short] (16.5,15.25);
+						\draw (16.5,15.25) to[short] (16.5,14.25);
+						\draw (16.5,14.25) to[short] (15.93,14.25);
+						\draw  (18,15.25) circle (0.5cm) node {\large $I_B$} ;
+						\draw (18.5,12.75) to[L] (17.5,12.75);
+						\draw (17.57,12.75) to[short] (17.57,14.25);
+						\draw (18.43,12.75) to[short] (18.43,14.25);
+						\draw (17.57,14.25) to[short] (17,14.25);
+						\draw (17,14.25) to[short] (17,15.25);
+						\draw (17,15.25) to[short] (17.5,15.25);
+						\draw (18.5,15.25) to[short] (19,15.25);
+						\draw (19,15.25) to[short] (19,14.25);
+						\draw (19,14.25) to[short] (18.43,14.25);
+						\draw  (20.5,15.25) circle (0.5cm) node {\large $I_C$} ;
+						\draw (21,12) to[L] (20,12);
+						\draw (20.07,12) to[short] (20.07,14.25);
+						\draw (20.93,12) to[short] (20.93,14.25);
+						\draw (20.07,14.25) to[short] (19.5,14.25);
+						\draw (19.5,14.25) to[short] (19.5,15.25);
+						\draw (19.5,15.25) to[short] (20,15.25);
+						\draw (21,15.25) to[short] (21.5,15.25);
+						\draw (21.5,15.25) to[short] (21.5,14.25);
+						\draw (21.5,14.25) to[short] (20.93,14.25);
+						\draw (14,13.5) to[short] (22,13.5);
+						\draw (14,12.75) to[short] (22,12.75);
+						\draw (14,12) to[short] (22,12);
+						\node [font=\large] at (13.75,13.5) {A};
+						\node [font=\large] at (13.75,12.75) {B};
+						\node [font=\large] at (13.75,12) {C};
+						\node [font=\large] at (13.75,11.25) {N};
+						\draw (14,11.25) to[short] (22,11.25);
+						\draw  (15.5,10) circle (0.5cm) node {\large $I_A$} ;
+						\draw (16,8.25) to[L] (15,8.25);
+						\draw (15.07,8.25) to[short] (15.07,9);
+						\draw (15.07,9) to[short] (14.5,9);
+						\draw (14.5,9) to[short] (14.5,10);
+						\draw (14.5,10) to[short] (15,10);
+						\draw (16,10) to[short] (16.5,10);
+						\draw (16.5,10) to[short] (16.5,9);
+						\draw  (18,10) circle (0.5cm) node {\large $I_B$} ;
+						\draw (17,9) to[short] (17,10);
+						\draw (17,10) to[short] (17.5,10);
+						\draw (18.5,10) to[short] (19,10);
+						\draw (19,10) to[short] (19,9);
+						\draw  (20.5,10) circle (0.5cm) node {\large $I_C$} ;
+						\draw (21,6.75) to[L] (20,6.75);
+						\draw (19.5,9) to[short] (19.5,10);
+						\draw (19.5,10) to[short] (20,10);
+						\draw (21,10) to[short] (21.5,10);
+						\draw (21.5,10) to[short] (21.5,9);
+						\draw (14,8.25) to[short] (22,8.25);
+						\draw (14,7.5) to[short] (22,7.5);
+						\draw (14,6.75) to[short] (22,6.75);
+						\node [font=\large] at (13.75,8.25) {A};
+						\node [font=\large] at (13.75,7.5) {B};
+						\node [font=\large] at (13.75,6.75) {C};
+						\node [font=\large] at (13.75,6) {N};
+						\draw (14,6) to[short] (22,6);
+						\draw (15.93,8.25) to[short] (15.93,8.75);
+						\draw (15.93,8.75) to[short] (20.93,8.75);
+						\draw (20.93,8.75) to[short] (20.93,6.75);
+						\draw (20.07,6.75) to[short] (20.07,9);
+						\draw (20.07,9) to[short] (19.5,9);
+						\draw (21.5,9) to[short] (21.5,8.5);
+						\draw (21.5,8.5) to[short] (16.5,8.5);
+						\draw (16.5,8.5) to[short] (16.5,9);
+						\draw (19,9) to[short] (19,8.5);
+						\draw (17,9) to[short] (17,8.75);
+						\draw (17,8.75) to[short, -*] (17,8.75);
+						\draw (19,8.5) to[short, -*] (19,8.5);
+						\node [font=\large] at (14.85,13.6) {*};
+						\node [font=\large] at (17.35,12.85) {*};
+						\node [font=\large] at (19.85,12.1) {*};
+						\node [font=\large] at (14.85,8.35) {*};
+						\node [font=\large] at (19.85,6.85) {*};
 					\end{circuitikz}
 			\end{figure}
 			
 	\subsection{Sensores de efecto Hall.}
 		\subsubsection{Aplicaciones y fundamento.}
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw [short] (8.75,12.25) -- (12.25,12.25);
+						\draw [short] (10.75,10) -- (14.5,10);
+						\draw [short] (8.75,12.25) -- (10.75,10);
+						\draw [short] (12.25,12.25) -- (14.5,10);
+						\draw [short] (8.75,12.25) -- (8.75,12);
+						\draw [short] (8.75,12) -- (10.75,9.75);
+						\draw [short] (10.75,10) -- (10.75,9.75);
+						\draw [short] (10.75,9.75) -- (14.5,9.75);
+						\draw [short] (14.5,10) -- (14.5,9.75);
+						\draw [short] (13.5,8.75) -- (17.5,8.75);
+						\draw [short] (17.5,8.75) -- (15.5,10.75);
+						\draw [short] (13.5,8.75) -- (12.5,9.75);
+						\draw [short] (10.5,12.25) -- (9.75,13);
+						\draw [short] (9.75,13) -- (13.25,13);
+						\draw [short] (13.25,13) -- (14.75,11.5);
+						\draw (14.75,11.5) to[short, -o] (14.75,12.75);
+						\draw (15.5,10.75) to[short, -o] (15.5,12.25);
+						\draw (9.75,11) to[short, -o] (9,11);
+						\draw (14.75,11) to (14.75,10.75) node[ground]{};
+						\draw (13.5,11) to[short] (14.75,11);
+						\draw [-latex] (9.5,11.75) -- (12.25,11.75);
+						\draw [-latex] (9.75,11.5) -- (12.5,11.5);
+						\draw [-latex] (10,11.25) -- (12.75,11.25);
+						\draw [-latex] (10.25,11) -- (13,11);
+						\draw [-latex] (10.5,10.75) -- (13.25,10.75);
+						\draw [-latex] (10.75,10.5) -- (13.5,10.5);
+						\draw [-latex] (11,10.25) -- (13.75,10.25);
+						\draw [-latex] (9.25,12) -- (12,12);
+						\node [font=\large] at (15.5,12.75) {$V=0$};
+						\node [font=\large] at (9.5,12.5) {$\vec{E}$};
+						\node [font=\large] at (8.75,11) {I};
+					\end{circuitikz}
+				\end{figure}
+						
+				\begin{figure}[H]
+					\centering
+					\begin{circuitikz}
+						\draw [short] (8.75,12.25) -- (12.25,12.25);
+						\draw [short] (10.75,10) -- (14.5,10);
+						\draw [short] (8.75,12.25) -- (10.75,10);
+						\draw [short] (12.25,12.25) -- (14.5,10);
+						\draw [short] (8.75,12.25) -- (8.75,12);
+						\draw [short] (8.75,12) -- (10.75,9.75);
+						\draw [short] (10.75,10) -- (10.75,9.75);
+						\draw [short] (10.75,9.75) -- (14.5,9.75);
+						\draw [short] (14.5,10) -- (14.5,9.75);
+						\draw [short] (13.5,8.75) -- (17.5,8.75);
+						\draw [short] (17.5,8.75) -- (15.5,10.75);
+						\draw [short] (13.5,8.75) -- (12.5,9.75);
+						\draw [short] (10.5,12.25) -- (9.75,13);
+						\draw [short] (9.75,13) -- (13.25,13);
+						\draw [short] (13.25,13) -- (14.75,11.5);
+						\draw (14.75,11.5) to[short, -o] (14.75,12.75);
+						\draw (15.5,10.75) to[short, -o] (15.5,12.25);
+						\draw (9.75,11) to[short, -o] (9,11);
+						\draw (14.75,11) to (14.75,10.75) node[ground]{};
+						\draw (13.5,11) to[short] (14.75,11);
+						\draw [-latex] (9.5,11.75) .. controls (10.25,12) and (10.75,12) .. (12.25,11.75) ;
+						\draw [-latex] (9.75,11.5) .. controls (10.75,11.75) and (11,11.75) .. (12.5,11.5) ;
+						\draw [-latex] (10.25,11) .. controls (11.5,10.75) and (12,10.75) .. (13,11) ;
+						\draw [-latex] (10.5,10.75) .. controls (11.75,10.5) and (12.25,10.5) .. (13.25,10.75) ;
+						\draw [-latex] (10.75,10.5) .. controls (11.75,10.25) and (12.5,10.25) .. (13.5,10.5) ;
+						\draw [-latex] (9.25,12) .. controls (10.5,12.25) and (10.5,12.25) .. (12,12) ;
+						\node [font=\large] at (15.75,12.5) {$V=V_{Hall}$};
+						\node [font=\large] at (9.5,12.5) {$(+)$};
+						\draw [-latex] (10.75,13.75) -- (10.75,11.75);
+						\draw [-latex] (11.25,13.25) -- (11.25,11.25);
+						\draw [-latex] (11.75,12.75) -- (11.75,10.75);
+						\draw [-latex] (10.75,9.75) -- (10.75,9.25);
+						\draw [-latex] (11.25,9.75) -- (11.25,8.75);
+						\draw [-latex] (11.75,9.75) -- (11.75,8.25);
+						\node [font=\large] at (12.25,9.5) {$(-)$};
+						\node [font=\large] at (10.5,14) {$\vec{B}$};
+						\node [font=\large] at (8.75,11) {I};
+					\end{circuitikz}
+			\end{figure}
 		\subsubsection{Cuestiones sobre sensores de efecto Hall.}
+		
 		\subsubsection{Ejemplos de características y aplicaciones.}
+			\begin{figure}[!ht]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw [short] (17.5,14) -- (19.75,14);
+						\draw [short] (19.75,14) -- (21,15);
+						\draw [short] (17.5,13) -- (19.75,13);
+						\draw [short] (19.75,13) -- (21,14);
+						\draw [short] (17.5,13) -- (18.75,14);
+						\draw [short] (19.75,14) -- (21,14);
+						\draw [short] (17.5,13) -- (17.5,12.75);
+						\draw [short] (17.5,12.75) -- (19.75,12.75);
+						\draw [short] (19.75,13) -- (19.75,12.75);
+						\draw [short] (19.75,12.75) -- (21,13.75);
+						\draw [short] (21,14) -- (21,13.75);
+						\draw [short] (17.5,12) -- (19.75,12);
+						\draw [short] (19.75,12) -- (21,13);
+						\draw [short] (21,13) -- (20,13);
+						\draw [short] (17.5,12) -- (18.5,12.75);
+						\draw [short] (19.75,14) -- (19.75,16);
+						\draw [short] (21,15) -- (21,17);
+						\draw [short] (17.5,14) -- (17.5,16);
+						\draw [short] (17.5,16) -- (15,16);
+						\draw [short] (19.75,16) -- (19.75,18);
+						\draw [short] (19.75,18) -- (15,18);
+						\draw [short] (21,17) -- (21,19);
+						\draw [short] (19.75,18) -- (21,19);
+						\draw [short] (21,19) -- (16,19);
+						\draw [short] (15,16) -- (15,10.25);
+						\draw [short] (17.5,12) -- (17.5,10.5);
+						\draw [short] (19.75,12) -- (19.75,10.25);
+						\draw [short] (17.5,10.5) -- (17.5,10.25);
+						\draw [short] (21,13) -- (21,11.25);
+						\draw [short] (17.5,10.25) -- (15,10.25);
+						\draw [short] (19.75,10.25) -- (19.75,8.75);
+						\draw [short] (15,18) -- (13,18);
+						\draw [short] (13,18) -- (13,8.5);
+						\draw [short] (13,8.5) -- (19.75,8.5);
+						\draw [short] (19.75,8.5) -- (19.75,8.75);
+						\draw [short] (21,11.25) -- (21,9.5);
+						\draw [short] (19.75,8.5) -- (21,9.5);
+						\draw [short] (13,18) -- (14.5,19);
+						\draw [short] (16,19) -- (14.5,19);
+						\draw [short] (15,10.25) -- (16.25,11.25);
+						\draw [short] (16.25,11.25) -- (16.25,16);
+						\draw [short] (16.25,11.25) -- (17.5,11.25);
+						\draw [short] (18.25,13.25) -- (18.25,14);
+						\draw [short] (19.5,13.25) -- (19.5,14);
+						\draw [short] (20.25,13.75) -- (20.25,14.4);
+						\draw [short] (19,13.75) -- (19,14);
+						\draw [-latex] (18.25,12.75) -- (18.25,12.25);
+						\draw [-latex] (19.5,12.75) -- (19.5,12.25);
+						\draw [-latex] (20.25,13.15) -- (20.25,12.75);
+						\node [font=\large] at (18.75,13.5) {$\Phi_m$};
+						\draw (20.25,13.25) to[short] (21.5,13.25);
+						\draw (17.75,13.25) to[short] (17.25,13.25);
+						\draw (17.75,13.25) to[short] (17.25,13.25);
+						\draw (17.75,13.25) to[short] (17.25,13.25);
+						\draw (17.75,13.25) to[short] (17.25,13.25);
+						\draw (10.25,10.25) to[R,l={ \large $R_C$}] (12.25,10.25);
+						\draw (10.25,8.75) to[L ] (10.25,10.25);
+						\draw (9.5,10.25) to[L ] (9.5,8.75);
+						\draw [short] (9.8,10) -- (9.8,9);
+						\draw [short] (9.95,10) -- (9.95,9);
+						\draw [short] (11,14.75) -- (15,14.75);
+						\draw [short] (15,14.25) -- (16.25,15);
+						\draw [short] (13,13.75) -- (15,13.75);
+						\draw [short] (15,13.75) -- (16.25,14.5);
+						\draw [short] (13,13.25) -- (15,13.25);
+						\draw [short] (15,13.25) -- (16.25,14);
+						\draw [short] (13,12.75) -- (15,12.75);
+						\draw [short] (15,12.75) -- (16.25,13.5);
+						\draw [short] (13,12.25) -- (15,12.25);
+						\draw [short] (15,12.25) -- (16.25,13);
+						\draw [short] (13,11.75) -- (11.25,11.75);
+						\draw [short] (15,14.25) -- (13,14.25);
+						\draw [short] (15,14.75) -- (16.25,15.5);
+						\draw (8.25,8.75) to[short] (8.25,14.75);
+						\draw (8.25,7.75) to[short, o-] (8.25,8.25);
+						\draw (9,7.75) to[short, o-] (9,8.25);
+						\draw (11.25,11.75) to[short] (10.25,11.75);
+						\draw [short] (17.25,13.25) -- (12.5,10.25);
+						\draw (12.25,10.25) to[short] (12.5,10.25);
+						\draw [short] (21.5,13.25) -- (16,8.75);
+						\draw [short] (16,8.75) -- (10.25,8.75);
+						\draw  (23.25,13.5) circle (0.5cm) node {\large W} ;
+						\draw [short] (20,14) -- (21,14.75);
+						\draw [short] (21,14.75) -- (23.25,14.75);
+						\draw [short] (23.25,14.75) -- (23.25,14);
+						\draw [short] (18.55,12.85) -- (17.75,12.25);
+						\draw [short] (17.75,12.25) -- (23.25,12.25);
+						\draw [short] (23.25,13) -- (23.25,12.25);
+						\draw [-latex] (11.25,14.75) -- (11.75,14.75)node[pos=0.8,above]{$I_L$};
+						\draw (8.75,14.75) to[R,l={ \large $R_L$}] (10.25,14.75);
+						\draw (10.25,11.75) to[short] (9,11.75);
+						\draw (9,11.75) to[short] (9,8.25);
+						\draw (9.5,10.25) to[short] (9,10.25);
+						\draw (9.5,8.75) to[short] (8.25,8.75);
+						\draw (8.25,8.25) to[short] (8.25,8.75);
+						\draw (8.25,8.75) to[short, -*] (8.25,8.75);
+						\draw (9,10.25) to[short, -*] (9,10.25);
+						\draw (8.25,14.75) to[short] (8.75,14.75);
+						\draw (10.25,14.75) to[short] (11,14.75);
+						\node [font=\large] at (8.6,7.25) {Línea};
+						\draw [-latex] (13.5,14.25) -- (14,14.25);
+						\draw [-latex] (13.5,13.75) -- (14,13.75);
+						\draw [-latex] (13.5,13.25) -- (14,13.25);
+						\draw [-latex] (13.5,12.75) -- (14,12.75);
+						\draw [-latex] (13.5,12.25) -- (14,12.25);
+						\draw [-latex] (11.75,11.75) -- (11.25,11.75);
+					\end{circuitikz}
+			\end{figure}
