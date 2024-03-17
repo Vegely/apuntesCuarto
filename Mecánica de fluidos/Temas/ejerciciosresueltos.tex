@@ -512,3 +512,83 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 \end{enumerate}
 \newpage
 \subsection{Tema 4: Conservación de la cantidad de movimiento}
+\begin{enumerate}
+	\item Considérese una tubería de sección decreciente con un codo con un ángulo $\alpha$. Calcule la fuerza que se ejerce sobre las paredes.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/tuberiaCodoDecreciente}
+		\caption{Esquema de la tubería.}
+		\label{fig:tuberiacododecreciente}
+	\end{figure}
+	\textcolor{blue}{
+	Se plantean las ecuaciones de conservación de la masa: 
+	\[\frac{d}{dt}\iiint_{V_c(t)}\rho\,dV+\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	Como el fluido es globalmente estacionario y no varia el volumen:
+	\[\rho\oiint_{S_c(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	\[\oiint_{S_c(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=
+	\iint_{S_1(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
+	+
+	\iint_{S_2(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
+	+
+	\iint_{S_p(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS\]
+	\[\iint_{S_1(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=-v_1\pi\frac{D_1^2}{4}\]
+	\[\iint_{S_2(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=v_2\pi\frac{D_2^2}{4}\]
+	\[\iint_{S_p(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	Por tanto de la conservación de la masa se obtiene:
+	\[v_1D_1^2=v_2D_2^2\]
+	Planteando la conservación de la cantidad de movimiento
+	\[\iiint_{V_f}\vec{f}_V\,dV
+	+
+	\oiint_{S_f}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
+	\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV
+	+\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
+	El término de fuerzas volumétricas:
+	\[\iiint_{V_f}\vec{f}_V\,dV=\iiint_{V_f}\rho\vec{g}\,dV=\rho \vec{g}V_c\]
+	El término de fuerzas superficiales:
+	\[\oiint_{S_f}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
+	\iint_{S_1}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+	+
+	\iint_{S_2}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+	+
+	\iint_{S_p}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+	\]
+	El término local:
+	\[\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV=0\]
+	El término convectivo:
+	\[\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
+	\iint_{S_1}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS+
+	\iint_{S_2}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS
+	+\iint_{S_p}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
+	\[\iint_{S_1}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=\rho v_1\vec{i}\cdot v_1\vec{i}\cdot-\vec{i}\frac{D^2_1}{\pi}=-\rho v^2_1\frac{D^2_1}{\pi}\vec{i}\]
+	\[\iint_{S_2}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=\rho v_2\vec{n}\cdot v_2\vec{n}\cdot\vec{n}\frac{D^2_2}{\pi}=\rho v^2_2\frac{D^2_2}{\pi}\vec{n}=\rho v^2_2\frac{D^2_2}{\pi}\left[cos(\alpha)\vec{i}+sen(\alpha)\vec{j}\right]\]
+	\[\iint_{S_p}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=0\]
+		}
+		
+	
+	
+	
+	
+	\item Se tiene un elemento de área de 2 $mm^2$ cuya normal es paralela al vector de componentes
+	(1, 2, 3). Si el tensor de esfuerzos es de la forma $\tau_{xx} = -2 \times 10^5; \tau_{yy} = -110 \times 10^ 3; \tau_{zz} =
+	-115 \times 10^3; \tau_{xy} = 1\times10^3; \tau_{xz} = -5 \times 10^4;  \tau_{zy} = 1 \times 10^5$, todos ellos en pascales. Se pide:
+	\begin{itemize}
+		\item 	El tensor de esfuerzos
+		\item 	Escribir el tensor de esfuerzos para dicho fluido en reposo y el tensor de esfuerzos
+		viscosos si la presión es de 1.5 bares.
+		\item El valor de la fuerza superficial sobre dicha área.
+	\end{itemize}
+
+	
+
+	\item Considérese un depósito cilíndrico de sección A que se encuentra fijo sobre una plataforma. El depósito tiene una altura h de agua y en el instante inicial se practica
+	un orificio de área $A_s$ en la parte inferior de la pared. ¿Hacia dónde tendería a desplazarse
+	si no estuviera fijado a la plataforma? Calcular la fuerza de reacción de la plataforma sobre
+	el depósito.
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=0.7\linewidth]{imagenesEjercicios/depositobloqueado}
+ 	\caption{Esquema del depósito.}
+ 	\label{fig:depositobloqueado}
+ \end{figure}
+ 
+\end{enumerate}

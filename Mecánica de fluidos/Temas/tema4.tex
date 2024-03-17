@@ -32,7 +32,7 @@ En estas expresiones aparecen dos tipos de fuerzas:
 	\begin{enumerate}
 		\item La expresión general de estas fuerzas es:
 		\[\vec{f}_s=
-		\red{\underbrace{\black -p\vec{n}}_{\text{Presión hidroestática}}}\black
+		\red{\underbrace{\black -P\vec{n}}_{\text{Presión hidroestática}}}\black
 		+
 		\red{\underbrace{\black \overline{\overline{\tau}}_v\cdot\vec{n}}_{\text{Esfuerzos viscosos}}}\black
 		\]
@@ -68,7 +68,7 @@ Desarrollando mediante el teorema de la divergencia de Gauss:
 \begin{equation}
 	\oiint_{S_f}\vec{f}_s\,dS
 	=
-	\oiint_{S_f}-p\vec{n}_s\,dS
+	\oiint_{S_f}-P\vec{n}_s\,dS
 	+
 	\oiint_{S_f}\overline{\overline{\tau}}\cdot\vec{n}_s\,dS
 	=
@@ -86,7 +86,7 @@ Desarrollando mediante el teorema de la divergencia de Gauss:
 Juntando las ecuaciones (5), (6) y (7):
 \[\iiint_{V_f}\vec{f}_V\,dV
 +
-\iiint_{V_f}-\vec{\nabla}p\,dV
+\iiint_{V_f}-\vec{\nabla}P\,dV
 +
 \iiint_{V_f}\vec{\nabla}\cdot\overline{\overline{\tau}}\,dV
 =
@@ -99,7 +99,7 @@ Para un valor $V_f \approx dV$ arbitrariamente pequeño pero no nulo. Se obtiene
 \[
 \vec{f}_V
 -
-\vec{\nabla}p
+\vec{\nabla}P
 +
 \vec{\nabla}\cdot\overline{\overline{\tau}}
 =
@@ -111,7 +111,7 @@ Para un valor $V_f \approx dV$ arbitrariamente pequeño pero no nulo. Se obtiene
 Desarrollando:
 \[\vec{f}_V
 -
-\vec{\nabla}p
+\vec{\nabla}P
 +
 \vec{\nabla}\cdot\overline{\overline{\tau}}
 =
@@ -138,7 +138,7 @@ En fluidos newtonianos se cumple que $\rho,\mu=cte$ con lo cual:
 \[\frac{\partial \rho}{\partial t}=0; \vec{\nabla}\rho=0; \vec{\nabla}\cdot\vec{v}=0\]
 
 Por tanto, las ecuaciones de Navier-Stokes junto a la conservación de la masa en forma diferencial:
-\[\rho\frac{\partial \vec{v}}{\partial t}+\rho\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=-\vec{\nabla}p+\mu\vec{\nabla}^2\vec{v}+\rho \vec{g}\]
+\[\rho\frac{\partial \vec{v}}{\partial t}+\rho\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=-\vec{\nabla}P+\mu\vec{\nabla}^2\vec{v}+\rho \vec{g}\]
 \[\frac{\partial \rho}{\partial t} +\vec{\nabla}\cdot\left(\rho\vec{v}\right)=0\]
 \subsection{Número de Reynolds}
 El número de Reynolds es un número adimensional que se emplea para caracterizar el movimiento de un fluido y se define como:
@@ -151,13 +151,13 @@ El número de Reynolds es un número adimensional que se emplea para caracteriza
 \end{itemize}
 \subsection{Teorema de Bernouilli}
 Se parte de la ecuación de Navier-Stokes en forma diferencial:
-\[\rho\frac{\partial \vec{v}}{\partial t}+\rho\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=-\vec{\nabla}p+\mu\vec{\nabla}^2\vec{v}+ \vec{f}_v\]
+\[\rho\frac{\partial \vec{v}}{\partial t}+\rho\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=-\vec{\nabla}P+\mu\vec{\nabla}^2\vec{v}+ \vec{f}_v\]
 
 Desarrollando:
 \[\rho\frac{\partial \vec{v}}{\partial t}
 +
 \rho\vec{\nabla}\frac{|\vec{v}|}{2}^2-\rho\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)
-=-\vec{\nabla}p+\mu\vec{\nabla}^2\vec{v}+\vec{f}_v
+=-\vec{\nabla}P+\mu\vec{\nabla}^2\vec{v}+\vec{f}_v
 \]
 
 Se supone un líquido incompresible, estacionario, fuerzas de viscosidad despreciables y que las fuerzas volumétricas tienen la siguiente función potencial:
@@ -166,17 +166,17 @@ Se supone un líquido incompresible, estacionario, fuerzas de viscosidad desprec
 -
 \rho\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)
 =
--\vec{\nabla}\left(p+\rho U_g\right)\]
+-\vec{\nabla}\left(P+\rho U_g\right)\]
 
 Multiplicando por $\vec{v}$
 \[\vec{v}\cdot\left[\rho\vec{\nabla}\frac{|\vec{v}|}{2}^2
 -
 \rho\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)
 =
--\vec{\nabla}\left(p+\rho U_g\right)\right]\rightarrow\vec{\nabla}\left(p+\frac{1}{2}\rho|v|^2+\rho U_g\right)=0\]
+-\vec{\nabla}\left(P+\rho U_g\right)\right]\rightarrow\vec{\nabla}\left(P+\frac{1}{2}\rho|v|^2+\rho U_g\right)=0\]
 
 De esta expresión se deduce que:
-\[p+\frac{1}{2}\rho|v|^2+\rho U_g=cte\]
+\[P+\frac{1}{2}\rho|v|^2+\rho U_g=cte\]
 
 En el caso de que el campo potencial gravitatorio sea paralelo al eje z, se obtiene el teorema de Bernouilli:
-\[p+\frac{1}{2}\rho|v|^2+\rho gz=cte\]
+\[P+\frac{1}{2}\rho|v|^2+\rho gz=cte\]
