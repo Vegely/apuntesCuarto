@@ -37,6 +37,7 @@
 						\draw [-latex] (5.25,19.75) -- (5.25,16.25);
 						\draw [-latex] (8.25,17.75) -- (8.25,16.25);
 					\end{circuitikz}
+				\caption{Divisor de tensión resistivo.}
 			\end{figure}
 			
 			$R_V$ ha de ser $>100\cdot R_P$ para que el error de inserción $\varepsilon_I<1\%$.
@@ -76,6 +77,7 @@
 						\draw (4.5,16.75) to[short, -*] (4.5,16.75);
 						\draw [-latex] (6.25,16.75) -- (7,16.75)node[pos=0.9,above]{I};
 					\end{circuitikz}
+				\caption{Ampliación del campo de medida de un voltímetro.}
 			\end{figure}
 			
 			Se define el \textit{"factor amplificador"} como:
@@ -90,9 +92,9 @@
 			Se demuestra que el campo de medida del aparato aumenta conforme aumenta la resistencia en serie con éste, aplicando el debido factor amplificador.
 			
 		\subsubsection{Divisores de tensión inductivos.}
-			Sólo son válidos en corriente alterna, ya que están formados por dos bobinas acopladas en serie, en configuración, comunmente, de autotransformador. Comparados con los resistivos,
+			Sólo son válidos en corriente alterna, ya que están formados por dos bobinas acopladas en serie, en configuración, comunmente, de \textbf{autotransformador}. Comparados con los resistivos,
 			apenas disipan energía, siempre
-			que su R sea pequeña.
+			que su $R$ sea pequeña.
 			
 			
 			Su impedancia aumenta con la
@@ -108,7 +110,7 @@
 						\draw (5.25,19.75) to[short, -o] (4.5,19.75);
 						\draw (5.25,16.25) to[short, -o] (4.5,16.25);
 						\draw (5.25,19.75) to[short] (5.25,19.5);
-						\draw (5.25,16.5) to[short] (5.25,16.25);
+						\draw (5.25,16.5) to[short, -*] (5.25,16.25);
 						\draw (5.25,16.25) to[short, -*] (7.5,16.25);
 						\draw [-latex] (6.25,18) -- (5.25,18);
 						\draw (6.25,18) to[short, -*] (7.5,18);
@@ -118,15 +120,16 @@
 						\draw [-] (9,16.25) -- (7.5,16.25);
 						\draw (9,18) to[R,l={ \large $R_C$}] (9,16.25);
 					\end{circuitikz}
+				\caption{Divisor de tensión inductivo.}
 			\end{figure}
 		
 		\subsubsection{Divisores de tensión capacitivos.}
 			\begin{itemize}
-				\item[-] Se utilizan tanto en corriente continua como en alterna, principalmente para la medida de altas tensiones.
+				\item[-] Se utilizan tanto en corriente continua como en alterna, principalmente para la \textbf{medida de altas tensiones}.
 				\item[-] En corriente continua los aparatos en paralelo con $C_P$ tienen que ser de tipo electrostático.
 				\item[-] Su consumo de energía es nulo a efectos prácticos.
 				\item[-] En c.a. se reduce su impedancia conforme aumenta la frecuencia, pudiendo llegar a comportarse como un cortocircuito.
-				\item[-] Se pueden usar en B.T. para aplicaciones de bajo consumo.
+				\item[-] Se pueden usar en B.T. para \textbf{aplicaciones de bajo consumo}.
 			\end{itemize}
 			
 			\begin{figure}[H]
@@ -149,6 +152,7 @@
 						\draw (5.75,14.25) to[short, -*] (5.75,14.25);
 						\draw [-latex] (5.75,15.5) -- (5.75,14.5)node[pos=0.5,right]{$U_2$};
 					\end{circuitikz}
+				\caption{Divisor de tensión inductivo.}
 			\end{figure}
 		
 		\subsubsection{Divisores de intensidad resistivos.}
@@ -176,6 +180,7 @@
 						\draw (8,15.75) to[short, -o] (8.25,15.75);
 						\draw (7.25,15.75) to[short, -*] (7.25,15.75);
 					\end{circuitikz}
+				\caption{Divisor de intensidad resistivo.}
 			\end{figure}
 			
 		\subsubsection*{Shunt de Ayrton.}
@@ -207,6 +212,7 @@
 						\draw (6.75,15.75) to[short, -*] (6.75,15.75);
 						\draw (8.75,15.75) to[short, -*] (8.75,15.75);
 					\end{circuitikz}
+				\caption{Shunt de Ayrton.}
 			\end{figure}
 			
 			Se inyecta corriente en alguno de los puntos $I_1, I_2$ ó $I_3$.
@@ -218,7 +224,7 @@
 			Para el campo de $I_3$: paralelo de $R_3$ con $R_m + R_1 + R_2$.
 			Resulta:
 			\[R_2+R_3=\dfrac{R_P+R_m}{n_2}; R_3=\dfrac{R_P+R_m}{n_3}\]
-			Para las potencias, si $I_i>\,>I_m\Rightarrow P_{R_i} \approx R_i\cdot I_i^2$.
+			Para las potencias, si $I_i>\!>I_m\Rightarrow P_{R_i} \approx R_i\cdot I_i^2$.
 			La $R$ interna del aparato es distinta para cada alcance.
 			
 		\subsubsection*{Otros acoplamientos de resistencias.}
@@ -261,12 +267,13 @@
 						\node [font=\large] at (9,17) {(-)};
 						\node [font=\large] at (-0.25,17) {(+)};
 					\end{circuitikz}
+				\caption{Divisor de intensidad de resistencia global cuasiconstante.}
 			\end{figure}
 			
 			\[I_3>I_2>I_1\]
 			\[n_i=\dfrac{I_i}{I_m}\]
 			
-			Como $R_m>\,>R_i$, la $R$ interna global se mantiene prácticamente constante y con valor $R_1+R_2+R_3$.
+			Como $R_m>\!>R_i$, la $R$ interna global se mantiene prácticamente constante y con valor $R_1+R_2+R_3$.
 			
 	\subsection{Transformadores de medida.} 
 		\subsubsection{Utilidad de los trafos de medida.}
@@ -323,6 +330,7 @@
 						\draw [,  ](10.5,20.25) to[short] (10.5,19.75);
 					\end{circuitikz}
 				}%
+				\caption{Transformadores de medida.}
 				\label{fig:my_label}
 			\end{figure}
 		
@@ -338,7 +346,7 @@
 			voltimétricas de vatímetros, contadores...).
 		
 			
-			Para mantener la linealidad hay que evitar en todo momento la saturación del núcleo (deben tenerse en cuenta los valores máximos de la onda senoidal).
+			Para mantener la linealidad hay que evitar en todo momento la saturación del núcleo (deben tenerse en cuenta los \textbf{valores máximos de la onda senoidal}).
 			
 			
 			No exigen otros requerimientos especiales, pudiendo
@@ -379,13 +387,13 @@
 						\draw [-latex, dashed] (4.25,17.75) -- (4.25,22.5)node[pos=1,left]{$E_1$};
 						\draw [-latex] (4.25,22.5) -- (6.25,23.75)node[pos=0.7,sloped,above]{$R_1·I_1$};
 						\draw [-latex, dashed] (4.25,17.75) -- (3,22.25)node[pos=1,left]{$-K_U·U_2$};
-						\draw [-latex] (3.25,21.25) .. controls (3.75,21.75) and (4.25,21.75) .. (4.75,21.5)node[pos=0.3,above]{$\delta_U$};
+						\draw [latex-latex] (3.25,21.25) .. controls (3.75,21.75) and (4.25,21.75) .. (4.75,21.5)node[pos=0.3,above]{$\delta_U$};
 						\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (4.25,17.75) -- (5,15.5)node[pos=0.4,right]{$U_2$};
 						\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (5,15.5) -- (3.5,13.75)node[pos=0.5,sloped,above]{$R_2·I_2$};
 						\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (3.5,13.75) -- (4.25,13)node[pos=0.5,sloped,below]{$X_2·I_2$};
 						\draw [-latex] (4.25,17.75) -- (4.25,13)node[pos=1,right]{$E_2$};
 						\draw [ color={rgb,255:red,0; green,217; blue,0}, -latex] (4.25,17.75) -- (2,15.25)node[pos=1,left]{$I_2$};
-						\draw [-latex] (3.25,16.5) .. controls (3.5,16) and (4.25,16) .. (4.75,16.25)node[pos=0.2,below]{$\varphi_2$};
+						\draw [latex-latex] (3.25,16.5) .. controls (3.5,16) and (4.25,16) .. (4.75,16.25)node[pos=0.2,below]{$\varphi_2$};
 					\end{circuitikz}
 				\end{figure}
 				
@@ -490,7 +498,7 @@
 				
 				Si el devanado secundario está abierto:
 				\[I_2 = 0 \Rightarrow \Phi_1 = \Phi_d\]
-				haciendo que toda la $I_1$ sea magnetizante, lo que hace crecer mucho el flujo que satura el núcleo y produce su calentamiento. Este aumento de flujo puede hacer que se induzcan tensiones muy elevadas en el secundario, por eso nunca debe quedar abierto el secundario en un transformador de intensidad.
+				haciendo que toda la $I_1$ sea magnetizante, lo que hace crecer mucho el flujo que satura el núcleo y produce su calentamiento. Este aumento de flujo puede hacer que se induzcan tensiones muy elevadas en el secundario, por eso \textbf{nunca debe quedar abierto el secundario en un transformador de intensidad}.
 				
 			\subsubsection*{Errores sistemáticos.}
 				Sus principales causas son el flujo de dispersión y la impedancia de carga del secundario. La relación $\dfrac{I_1}{I_2}$ debería mantenerse constante e igual a $\dfrac{N_2}{N_1}$. Como esta condición no se da, se toma
@@ -577,8 +585,8 @@
 				\end{table}
 				
 			\subsubsection*{Vatímetro en conexión semidirecta.}
-				La corriente I 2 es K I veces menor que la I 1, por lo que la
-				potencia de Z es K I veces la indicada por el vatímetro.
+				La corriente $I_2$ es $K_I$ veces menor que la $I_1$, por lo que la
+				potencia de $Z$ es $K_I$ veces la indicada por el vatímetro.
 			
 				\begin{figure}[H]
 					\centering
