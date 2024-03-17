@@ -522,36 +522,57 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 	\end{figure}
 	\textcolor{blue}{
 	Se plantean las ecuaciones de conservación de la masa: 
-	\[\frac{d}{dt}\iiint_{V_c(t)}\rho\,dV+\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	\[\frac{d}{dt}\iiint_{V_c}\rho\,dV+\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
 	Como el fluido es globalmente estacionario y no varia el volumen:
-	\[\rho\oiint_{S_c(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
-	\[\oiint_{S_c(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=
-	\iint_{S_1(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
+	\[\rho\oiint_{S_c} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	\[\oiint_{S_c} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=
+	\iint_{S_1} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
 	+
-	\iint_{S_2(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
+	\iint_{S_2} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
 	+
-	\iint_{S_p(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS\]
-	\[\iint_{S_1(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=-v_1\pi\frac{D_1^2}{4}\]
-	\[\iint_{S_2(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=v_2\pi\frac{D_2^2}{4}\]
-	\[\iint_{S_p(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	\iint_{S_p} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS\]
+	\[\iint_{S_1} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=-v_1\pi\frac{D_1^2}{4}\]
+	\[\iint_{S_2} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=v_2\pi\frac{D_2^2}{4}\]
+	\[\iint_{S_p} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
 	Por tanto de la conservación de la masa se obtiene:
 	\[v_1D_1^2=v_2D_2^2\]
 	Planteando la conservación de la cantidad de movimiento
-	\[\iiint_{V_f}\vec{f}_V\,dV
+	\[\iiint_{V_c}\vec{f}_V\,dV
 	+
-	\oiint_{S_f}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
+	\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
 	\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV
 	+\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
 	El término de fuerzas volumétricas:
-	\[\iiint_{V_f}\vec{f}_V\,dV=\iiint_{V_f}\rho\vec{g}\,dV=\rho \vec{g}V_c\]
+	\[\iiint_{V_c}\vec{f}_V\,dV=\iiint_{V_f}\rho\vec{g}\,dV=\rho \vec{g}V_c\]
 	El término de fuerzas superficiales:
-	\[\oiint_{S_f}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
+	\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
 	\iint_{S_1}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
 	+
 	\iint_{S_2}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
 	+
 	\iint_{S_p}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
 	\]
+	\begin{itemize}
+		\item 	Como se cumple que la fuerza ejercida por la atmósfera sobre toda la superficie de control es nula:
+		\[\oiint_{S_c}P_a\vec{n}\,dS=0\]
+		\item Por tanto, para tener en cuenta las aportaciones de fuerza tanto del fluido como de la presión atmosférica:
+		\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=\oiint_{S_c}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS\]
+		\item Además, el término de fuerza superficial sobre las paredes es la fuerza a calcular:
+		\[\iint_{S_p}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=-F_{fluido+atm\rightarrow pared}\]
+		\item En un perfil uniforme se cumple que $\tau_v$ es despreciable frente al término de presión. Por tanto:
+		\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
+		\iint_{S_1}-(P-P_a)\vec{n}\,dS
+		+
+		\iint_{S_2}-(P-P_a)\vec{n}\,dS
+		-F_{fluido\rightarrow pared}\]
+		\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
+		-(P_1-P_a)\frac{\pi D^2_1}{4}(-\vec{i})
+		-(P_2-P_a)\frac{\pi D^2_2}{4}(\vec{n})
+		-F_{fluido+atm\rightarrow pared}\]
+		\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
+		\frac{\pi}{4}\left[(P_1-P_a) D^2_1\vec{i}-(P_2-P_a)D^2_2\left(cos(\alpha)\vec{i}+sen(\alpha)\vec{j}\right)\right]
+		-F_{fluido+atm\rightarrow pared}\]
+	\end{itemize}
 	El término local:
 	\[\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV=0\]
 	El término convectivo:
@@ -562,7 +583,11 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 	\[\iint_{S_1}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=\rho v_1\vec{i}\cdot v_1\vec{i}\cdot-\vec{i}\frac{D^2_1}{\pi}=-\rho v^2_1\frac{D^2_1}{\pi}\vec{i}\]
 	\[\iint_{S_2}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=\rho v_2\vec{n}\cdot v_2\vec{n}\cdot\vec{n}\frac{D^2_2}{\pi}=\rho v^2_2\frac{D^2_2}{\pi}\vec{n}=\rho v^2_2\frac{D^2_2}{\pi}\left[cos(\alpha)\vec{i}+sen(\alpha)\vec{j}\right]\]
 	\[\iint_{S_p}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=0\]
-		}
+	Por tanto, sustituyendo los término se obtiene:
+	\[F_{fluido+atm\rightarrow pared}=\frac{\pi}{4}\left[(P_1-P_a) D^2_1\vec{i}-(P_2-P_a)D^2_2\vec{n}\right]+\rho g V_c \vec{j}
+	+\rho\frac{\pi}{4}\left[v^2_1D^2_1\vec{i}-v^2_2D^2_2\vec{n}\right] \]
+	\[\vec{n}=cos(\alpha)\vec{i}+sen(\alpha)\vec{j}\]
+	}
 		
 	
 	

@@ -14,7 +14,7 @@ Aplicando al teorema del transporte de Reynolds la función $\Phi=\rho\vec{v}$ y
 \iiint_{V_f}\frac{\partial \rho\vec{v}}{\partial t}\,dV+\oiint_{S_f}\rho\vec{v}\left(\vec{v}\cdot\vec{n}\right)\,dS\]
 
 Para un volumen de control:
-\[\iiint_{V_f}\vec{f}_V\,dV+\oiint_{S_f}\vec{f}_s\,dS=
+\[\iiint_{V_c}\vec{f}_V\,dV+\oiint_{S_c}\vec{f}_s\,dS=
 \frac{d}{dt}\iiint_{V_f}\rho\vec{v}\,dV=
 \iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV
 +\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
@@ -26,6 +26,7 @@ En estas expresiones aparecen dos tipos de fuerzas:
 		\item Típicamente son fuerzas relacionadas con campos:
 		\[\vec{f}_v=\rho \vec{g}\]
 		\item Pueden ser también fuerzas de inercia en sistemas de referencia móviles.
+		\item En un gas suelen ser despreciables estas fuerzas.
 	\end{enumerate}
 	\item Fuerzas superficiales $\vec{f}_s$
 	
