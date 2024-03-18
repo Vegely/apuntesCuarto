@@ -521,7 +521,7 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 		\label{fig:tuberiacododecreciente}
 	\end{figure}
 	\textcolor{blue}{
-	Se plantean las ecuaciones de conservación de la masa: 
+	Se plantea la ecuación de conservación de la masa:  
 	\[\frac{d}{dt}\iiint_{V_c}\rho\,dV+\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
 	Como el fluido es globalmente estacionario y no varia el volumen:
 	\[\rho\oiint_{S_c} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
@@ -598,11 +598,40 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 	-115 \times 10^3; \tau_{xy} = 1\times10^3; \tau_{xz} = -5 \times 10^4;  \tau_{zy} = 1 \times 10^5$, todos ellos en pascales. Se pide:
 	\begin{itemize}
 		\item 	El tensor de esfuerzos
-		\item 	Escribir el tensor de esfuerzos para dicho fluido en reposo y el tensor de esfuerzos
-		viscosos si la presión es de 1.5 bares.
-		\item El valor de la fuerza superficial sobre dicha área.
+		\textcolor{blue}{
+		\[\overline{\overline{\tau}}=\begin{bmatrix}
+			\tau_{xx} &\tau_{xy}&\tau_{xz}\\
+				\tau_{yx} &\tau_{yy}&\tau_{yz}\\
+					\tau_{zx} &\tau_{zy}&\tau_{zz}\\
+		\end{bmatrix}=
+		\begin{bmatrix}
+		 -2 \times 10^5&1\times10^3&-5 \times 10^4\\
+		1\times10^3& -110 \times 10^ 3&1 \times 10^5\\
+		 -5 \times 10^4&1 \times 10^5&-115 \times 10^3\\
+		\end{bmatrix}
+		\]}
+		\item El valor de la fuerza superficial sobre dicha área  si la presión es de 1.5 bares.
+			\textcolor{blue}{\[F=\oiint_{S_c}\left(-p\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=\left(-p\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}S \]
+			\[	F=-1.5\times10^5 \frac{2\times 10^{-6}}{\sqrt{1^2+2^2+3^2}}\begin{bmatrix}
+					1 \\
+					2 \\
+					3 \\
+				\end{bmatrix}+	\begin{bmatrix}
+				-2 \times 10^5&1\times10^3&-5 \times 10^4\\
+				1\times10^3& -110 \times 10^ 3&1 \times 10^5\\
+				-5 \times 10^4&1 \times 10^5&-115 \times 10^3\\
+				\end{bmatrix}\cdot\frac{2\times 10^{-6}}{\sqrt{1^2+2^2+3^2}}\begin{bmatrix}
+				1 \\
+				2 \\
+				3 \\
+				\end{bmatrix}\]
+			\[F=\frac{1}{\sqrt{14}}\begin{bmatrix}
+				-0.996 \\
+				-0.438 \\
+				-1.29 \\
+			\end{bmatrix}\]}
 	\end{itemize}
-
+\newpage
 	
 
 	\item Considérese un depósito cilíndrico de sección A que se encuentra fijo sobre una plataforma. El depósito tiene una altura h de agua y en el instante inicial se practica
@@ -615,5 +644,64 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
  	\caption{Esquema del depósito.}
  	\label{fig:depositobloqueado}
  \end{figure}
+ \textcolor{blue}{
+ 	Se plantea la ecuación de conservación de la masa: 
+ 	\[\frac{d}{dt}\iiint_{V_c}\rho\,dV+\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+ 	Teniendo en cuenta desarrollos de ejercicios anteriores:
+ 	\[A\dot{h}(t)=v_s(t)A_s\]
+ 	Planteando la conservación de la cantidad de movimiento, donde solo se buscan los términos en dirección $\vec{i}$ ya que el depósito si no estuviese fijo se movería hacia la izquierda y los términos de fuerza en dirección al suelo solo soportan el peso del depósito y no intervendrían en este ''movimiento''
+ 	\[\iiint_{V_c}\vec{f}_V\,dV
+ 	+
+ 	\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
+ 	\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV
+ 	+\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
+ 	El término de fuerzas volumétricas es nulo en la dirección de la fuerza a reacción a calcular:
+ 	\[\iiint_{V_c}\vec{f}_V\,dV=0\]
+ 	El término de fuerzas superficiales:
+ 	\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
+ 	\iint_{S_s}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+ 	+
+ 	\iint_{S_n}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+ 	+
+ 	\iint_{S_p}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+ 	\]
+ 	\begin{itemize}
+ 		\item En un perfil uniforme se cumple que $\tau_v$ es despreciable frente al término de presión. Por tanto la resultante en la dirección $\vec{i}$:
+ 		\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS\cdot\vec{i}=
+ 		\left[
+ 		\iint_{S_s}-(P-P_a)\vec{n}\,dS
+ 		+
+ 		\iint_{S_n}-(P-P_a)\vec{n}\,dS
+ 		+
+ 		\iint_{S_p}-(P-P_a)\vec{n}\,dS
+ 		\right]\cdot\vec{i}
+ 		\]
+ 		\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS\cdot\vec{i}=
+ 		(P_s-P_a)A_s
+ 		+0
+ 		-F_{fl+atm\rightarrow dep}=(P_s-P_a)A_s -F_{fl+atm\rightarrow dep}\]
+ 	\end{itemize}
+ 	El término local es nulo debido a que la variación de la derivada de la altura tiene un orden de magnitud mucho menor al resto de términos y, por tanto es despreciable :
+ 	\[\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV=0\]
+ 	El término convectivo en la dirección de $\vec{i}$:
+ 	\[\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
+ 	\iint_{S_n}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS+
+ 	\iint_{S_s}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS
+ 	+\iint_{S_p}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
+ 	\[\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\cdot\vec{i}=
+ 	0+
+ 	\rho v^2_s A_s \vec{i}\cdot\vec{i}
+ 	+0=	\rho v^2_s A_s\]
+ 	Por tanto, sustituyendo los término se obtiene:
+ \[(P_s-P_a)A_s -F_{fl+atm\rightarrow dep}=\rho v^2_s A_s\rightarrow P_s=P_a\]
+ \[|F_{fl+atm\rightarrow dep}|=|\rho v^2_s A_s|\rightarrow  \text{Como se mueve a la izquierda: } \vec{F}_{fl+atm\rightarrow dep}= -\rho v^2_s A_s\vec{i}\]
+ Para obtener la relación entre altura y velocidad de salida se aplica el teorema de Bernouilli entre la parte superior del depósito y la salida:
+ \[P_1+\rho g h(t)=P_s+\frac{v^2_s(t)}{2}\rho\rightarrow P_1=P_s=P_a \rightarrow h(t)=\frac{v^2_s(t)}{2g}\rightarrow v_s(t)=\sqrt{2gh(t)}\]
+ Aplicando esta expresión junto a la obtenida con la conservación de la masa:
+ \[v_s(t)=\sqrt{2gh(t)}\]
+ \[A\dot{h}(t)=v_s(t)A_s\]
+ Resolviendo la EDO se obtiene:
+ \[\sqrt{h(t)}=\frac{-A_s}{A}\sqrt{\frac{g}{2}}t+\sqrt{h_0}\]
+ 	}
  
 \end{enumerate}
