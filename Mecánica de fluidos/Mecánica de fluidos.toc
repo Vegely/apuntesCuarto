@@ -3,7 +3,7 @@
 \contentsline {subsection}{\numberline {1.1}Hipótesis de medio continuo}{2}{}%
 \contentsline {subsection}{\numberline {1.2}Ecuaciones equilibrio termodinámico local}{4}{}%
 \contentsline {subsection}{\numberline {1.3}Fuerzas y respuestas en sólidos y fluidos}{4}{}%
-\contentsline {subsection}{\numberline {1.4}Mojabilidad}{8}{}%
+\contentsline {subsection}{\numberline {1.4}Mojabilidad}{9}{}%
 \contentsline {section}{\numberline {2}Tema 2: Cinemática de la partícula fluida}{10}{}%
 \contentsline {subsection}{\numberline {2.1}Repaso operador nabla}{10}{}%
 \contentsline {subsection}{\numberline {2.2}Conceptos fundamentales}{11}{}%

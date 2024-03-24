@@ -141,9 +141,59 @@ El fluido está en condiciones subsónicas si:
 	En fluidos newtonianos la viscosidad es relativamente constante: 
 	\[\mu=f(T) [Pa \cdot s]\]
 	\[\tau =\mu \dot{\varepsilon} = \mu \frac{\Delta v_n}{\Delta l_n} \rightarrow \dot{\varepsilon}\ \text{es la velocidad de deformación} [s^-1]\]
-\begin{figure}[H]
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.7\linewidth]{imagenesTema1/viscosidad}
+%	\caption{Cálculo de viscosidad.}
+%	\label{fig:viscosidad}
+%\end{figure}
+
+\begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.7\linewidth]{imagenesTema1/viscosidad}
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\large]
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (3,15.75) -- (3,14.25);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (3,14.25) -- (6,14.25);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (6,14.25) -- (6,15.75);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (6,15.75) -- (3,15.75);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (6,14.25) -- (6.5,14.75);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (6.5,14.75) -- (6.75,15);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (6.75,15) -- (6.75,16.5);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (6.75,16.5) -- (6,15.75);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (3,15.75) -- (3.75,16.5);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (3.75,16.5) -- (6.75,16.5);
+			\node [font=\large, color={rgb,255:red,255; green,0; blue,0}] at (4.75,16.125) {A};
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (1,15) -- (3,15)node[pos=0.5,above, fill=white]{$\vec{F}$};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (6.5,15.25) -- (8.5,15.25)node[pos=0.5,above]{$\vec{v}=cte$};
+			\draw [short] (1.25,11) -- (8.75,11);
+			\draw [short] (4,14.25) -- (4,11);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (4,11) -- (5.6,14.25)node[pos=0.5,right]{$\vec{v}(\Delta l)$};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (4,14) -- (5.5,14);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (4,13.5) -- (5.25,13.5);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (4,13) -- (5,13);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (4,12.5) -- (4.75,12.5);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (4,12) -- (4.5,12);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (4,11.5) -- (4.25,11.5);
+			\draw [dashed] (6,14.25) -- (8.75,14.25);
+			\draw [dashed] (6.75,15) -- (9,15);
+			\draw [dashed] (3,14.25) -- (1.25,14.25);
+			\node [font=\large, color={rgb,255:red,255; green,128; blue,0}] at (8,13.5) {$\mu,$ $\rho$};
+			\node [font=\large] at (5.75,12.25) {};
+			\node [font=\large, color={rgb,255:red,255; green,0; blue,255}] at (3.25,11.25) {$v=0$};
+			\draw [ color={rgb,255:red,255; green,0; blue,255} ] (4,11) circle (0.25cm);
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, latex-latex] (1.5,14.25) -- (1.5,11)node[pos=0.5,left, fill=white]{$\Delta l_n$};
+			\draw [short] (1.75,11) -- (1.25,10.5);
+			\draw [short] (2.5,11) -- (2,10.5);
+			\draw [short] (3.25,11) -- (2.75,10.5);
+			\draw [short] (4,11) -- (3.5,10.5);
+			\draw [short] (4.75,11) -- (4.25,10.5);
+			\draw [short] (5.5,11) -- (5,10.5);
+			\draw [short] (6.25,11) -- (5.75,10.5);
+			\draw [short] (7,11) -- (6.5,10.5);
+			\draw [short] (7.75,11) -- (7.25,10.5);
+			\draw [short] (8.5,11) -- (8,10.5);
+		\end{circuitikz}
+	
 	\caption{Cálculo de viscosidad.}
 	\label{fig:viscosidad}
 \end{figure}
@@ -186,9 +236,44 @@ El fluido está en condiciones subsónicas si:
 	\item \underline{\textbf{Interfases}}: 
 	\begin{itemize}
 		\item Vaso grande: Existe intercambio de moléculas en la interfase pero las presiones se equilibran.
+		 %\begin{figure}[H]
+		 %	\centering
+		 %	\includegraphics[width=0.5\linewidth]{imagenesTema1/vasoGrande}
+		 %	\caption{Interfase Vaso grande.}
+		 %	\label{fig:vasogrande}
+		 %\end{figure}
+		 
 		 \begin{figure}[H]
 		 	\centering
-		 	\includegraphics[width=0.5\linewidth]{imagenesTema1/vasoGrande}
+		 		\begin{circuitikz}
+		 			\tikzstyle{every node}=[font=\large]
+		 			\draw [short] (2.75,20.75) -- (2.75,17);
+		 			\draw [short] (2.75,17) -- (5.25,17);
+		 			\draw [short] (5.25,17) -- (5.25,20.75);
+		 			\draw [color={rgb,255:red,0; green,128; blue,255}, short] (2.75,20) -- (5.25,20);
+		 			\node [font=\large] at (4,20.75) {$P_a$};
+		 			\node [font=\large, color={rgb,255:red,0; green,128; blue,255}] at (4,19.5) {$P_{agua}$};
+		 			\draw [-latex] (2,21.25) -- (2,20.25)node[pos=0.5,left, fill=white]{$\vec{g}$};
+		 			\node [font=\large] at (4,21.5) {Aire};
+		 			\node [font=\large, color={rgb,255:red,0; green,128; blue,255}] at (4,18.75) {Agua};
+		 			\draw  (9.5,19) circle (2cm);
+		 			\draw [short] (4.5,20) -- (9.25,21);
+		 			\draw [short] (4.5,20) -- (8.5,17.25);
+		 			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (7.5,19.5) -- (11.5,19.5);
+		 			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (7.5,18.5) -- (11.5,18.5);
+		 			\node [font=\large] at (9.5,20.5) {Aire};
+		 			\node [font=\large] at (9.5,17.5) {Agua};
+		 			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (8,18.25) -- (8.25,18.75);
+		 			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (8,19.75) -- (8.5,19.25);
+		 			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (9.25,19.25) -- (9.5,19.75);
+		 			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (9.25,18.75) -- (9.5,18.25);
+		 			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (10.75,19.25) -- (10.25,19.75);
+		 			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (10.75,18.75) -- (10.5,18.25);
+		 			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (10.25,19) -- (9.75,19);
+		 			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (11.5,18.75) -- (11,19);
+		 			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (7.5,19) -- (8,19.25);
+		 		\end{circuitikz}
+		 	
 		 	\caption{Interfase Vaso grande.}
 		 	\label{fig:vasogrande}
 		 \end{figure}
@@ -196,18 +281,35 @@ El fluido está en condiciones subsónicas si:
 		\item Vaso pequeño: Existe efecto de la tensión superficial ($\sigma \left[
 		\frac{N}{m}\right]$) descrita mediante la ecuación de Laplace-Young. Solo aplica a fluidos inmiscibles. 
 		\begin{figure}[H]
-			\begin{minipage}{0.7\textwidth}
-				\centering
-				\includegraphics[width=0.2\linewidth]{imagenesTema1/vasoPeque}
-				\caption{Efecto tensión superficial Vaso pequeño}
-				\label{fig:vasopeque}
-			\end{minipage}%
-			\begin{minipage}{0.3\textwidth}
+			\begin{minipage}{0.5\textwidth}
+				%\centering
+				%\includegraphics[width=0.2\linewidth]{imagenesTema1/vasoPeque}
+				%\caption{Efecto tensión superficial Vaso pequeño}
+				%\label{fig:vasopeque}
+				
+				\begin{figure}[H]
+					\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw [short] (3.25,21) -- (3.25,15.75);
+						\draw [short] (3.25,15.75) -- (4.25,15.75);
+						\draw [short] (4.25,15.75) -- (4.25,21);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (3.25,20.5) .. controls (3.75,20.25) and (3.75,20.25) .. (4.25,20.5);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, latex-latex] (3.25,21.5) -- (4.25,21.5)node[pos=0.5,above, fill=white]{$l_c$};
+						\node [font=\large, color={rgb,255:red,0; green,128; blue,255}] at (3.75,18.25) {$P_{liq}$};
+						\node [font=\large, color={rgb,255:red,3; green,3; blue,3}] at (5,19) {$P_{a}$};
+					\end{circuitikz}
+					
+					\caption{Efecto de la tensión superficial en un vaso pequeño}
+					\label{fig:vasopeque}
+				\end{figure}
+			\end{minipage}
+			\hspace{0.05\textwidth}
+			\begin{minipage}{0.5\textwidth}
 				\[P_a - P_{liquido}=\sigma K\]
-			\[K \ \text{expresión de la curvatura}\]
-			\[K=\nabla_s \vec{n} = \left(\frac{1}{R_i}+\frac{1}{R_j}\right) \]
-			\[R_i \ y \  R_j \ \text{son radios característicos}\]
-			
+				\[K \ \text{expresión de la curvatura}\]
+				\[K=\nabla_s \vec{n} = \left(\frac{1}{R_i}+\frac{1}{R_j}\right) \]
+				\[R_i \ y \  R_j \ \text{son radios característicos}\]
 			\end{minipage}
 		\end{figure}
 
@@ -215,38 +317,96 @@ El fluido está en condiciones subsónicas si:
 		\[\rho g l_c \approx \sigma \rightarrow l_c \approx \left(\frac{\sigma}{\rho g}\right)^{\frac{1}{2}}\]
 		
 		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.4\linewidth]{imagenesTema1/zonaEfectos}
-			\caption{Zona de efecto.}
-			\label{fig:zonaefectos}
+			%\centering
+			%\includegraphics[width=0.4\linewidth]{imagenesTema1/zonaEfectos}
+			%\caption{Zona de efecto.}
+			%\label{fig:zonaefectos}
+			
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw [short] (-1.75,21.5) -- (-1.75,17.75);
+						\draw [short] (-1.75,17.75) -- (1,17.75);
+						\draw [short] (1,17.75) -- (1,21.5);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (-1.75,20.75) -- (1,20.75);
+						\draw [ color={rgb,255:red,255; green,0; blue,0} ] (1,20.75) circle (0.5cm);
+						\draw [ color={rgb,255:red,255; green,0; blue,0} ] (4.75,20.75) circle (1.75cm);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (0.77,21.2) -- (4.25,22.425);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (0.77,20.3) -- (4.25,19.07);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (3,20.75) -- (5,20.75);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (5,20.75) .. controls (5.75,20.75) and (6,21) .. (6,22);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, latex-latex] (5.25,20.5) -- (6,20.5)node[pos=0.5,below]{$l_c$};
+						\draw [short] (6,22) -- (6,19.5);
+					\end{circuitikz}
+				\caption{Zona de efecto.}
+				\label{fig:zonaefectos}
+			\end{figure}
 		\end{figure}
 		
 		\item Casos particulares
 		\begin{enumerate}
 			\item Chorro
 			\begin{figure}[H]
-				\begin{minipage}{0.4\textwidth}
-				\centering
-				\includegraphics[width=0.7\linewidth]{imagenesTema1/chorro}
-				\caption{Chorro.}
-				\label{fig:chorro}
+				\begin{minipage}{0.5\textwidth}
+				%\centering
+				%\includegraphics[width=0.7\linewidth]{imagenesTema1/chorro}
+				%\caption{Chorro.}
+				%\label{fig:chorro}
+				
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\large]
+							\node [font=\large, color={rgb,255:red,0; green,128; blue,255}] at (1.25,16.75) {$P_i$};
+							\draw [short] (0.25,17.5) -- (3.25,17.5);
+							\draw [short] (0.25,16) -- (3.25,16);
+							\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (3.25,16.75) -- (3.25,17.5)node[pos=1.2,right]{$R_j=R$};
+							\draw  (3.25,16.75) ellipse (0.5cm and 0.75cm);
+							\draw [short] (0.25,17.5) .. controls (-0.25,17.25) and (-0.25,16.25) .. (0.25,16);
+							\node [font=\large] at (1.25,15.5) {$P_e$};
+							\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (1.75,18.5) -- (1.75,17.5)node[pos=0,above, fill=white]{$R_i$ $\rightarrow$ $\infty$};
+						\end{circuitikz}
+					
+					\caption{Chorro.}
+					\label{fig:chorro}
+				\end{figure}
+				
 			\end{minipage}%
-			\begin{minipage}{0.3\textwidth}
+			\begin{minipage}{0.5\textwidth}
 			\[P_i - P_e =\sigma\left(\frac{1}{R_i}+\frac{1}{R_j}\right)=\frac{\sigma}{R}\]
 			
 			\end{minipage}
 			\end{figure}
 			
+			
 			\item Gota
 			
 			\begin{figure}[H]
-				\begin{minipage}{0.4\textwidth}
-				\centering
-				\includegraphics[width=0.7\linewidth]{imagenesTema1/gota}
-				\caption{Gota.}
-				\label{fig:gota}
-					\end{minipage}%
-				\begin{minipage}{0.3\textwidth}
+				\begin{minipage}{0.5\textwidth}
+				%\centering
+				%\includegraphics[width=0.7\linewidth]{imagenesTema1/gota}
+				%\caption{Gota.}
+				%\label{fig:gota}
+				
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\large]
+							\draw  (2.25,17.5) circle (2cm);
+							\draw [dashed] (0.25,17.5) .. controls (1,18.25) and (3.5,18.25) .. (4.25,17.5);
+							\draw [short] (0.25,17.5) .. controls (1,16.75) and (3.5,16.75) .. (4.25,17.5);
+							\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (2.25,17.5) -- (3.5,19)node[pos=0.35,above]{R};
+							\node [font=\large, color={rgb,255:red,0; green,128; blue,255}] at (1.5,18.5) {$P_i$};
+							\node [font=\large] at (3.5,19.75) {$P_e$};
+						\end{circuitikz}
+					
+					\caption{Gota.}
+					\label{fig:gota}
+				\end{figure}
+				
+				\end{minipage}%
+				\begin{minipage}{0.5\textwidth}
 				\[P_i - P_e =\sigma\left(\frac{1}{R_i}+\frac{1}{R_j}\right)=\frac{2\sigma}{R}\]
 				
 				\end{minipage}
@@ -256,13 +416,36 @@ El fluido está en condiciones subsónicas si:
 			\item Pompa
 			
 			\begin{figure}[H]
-				\begin{minipage}{0.4\textwidth}
-				\centering
-				\includegraphics[width=0.7\linewidth]{imagenesTema1/pompa}
-				\caption{Pompa.}
-				\label{fig:pompa}
+				\begin{minipage}{0.5\textwidth}
+				%\centering
+				%\includegraphics[width=0.7\linewidth]{imagenesTema1/pompa}
+				%\caption{Pompa.}
+				%\label{fig:pompa}
+				
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\large]
+							\draw  (2.25,17.5) circle (2cm);
+							\draw [dashed] (0.25,17.5) .. controls (1,18.25) and (3.5,18.25) .. (4.25,17.5);
+							\draw [short] (0.25,17.5) .. controls (1,16.75) and (3.5,16.75) .. (4.25,17.5);
+							\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (2.25,17.5) -- (3.5,19)node[pos=0.35,above]{R};
+							\node [font=\large, color={rgb,255:red,0; green,128; blue,255}] at (1.5,18.5) {$P_i$};
+							\node [font=\large] at (3.5,19.75) {$P_e$};
+							\draw  (2.25,17.5) circle (1.75cm);
+							\draw [short] (0.5,17.5) .. controls (1,17) and (3.5,17) .. (4,17.5);
+							\draw [dashed] (0.5,17.5) .. controls (1,18) and (3.5,18) .. (4,17.5);
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (2.25,15.75) -- (2.25,15.5);
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (2.25,15) -- (2.25,15.5)node[pos=0.5,left]{$e<\!<R$};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (2.25,16.25) -- (2.25,15.75);
+						\end{circuitikz}
+					
+					\caption{Pompa.}
+					\label{fig:pompa}
+				\end{figure}
+				
 			\end{minipage}%
-			\begin{minipage}{0.3\textwidth}
+			\begin{minipage}{0.5\textwidth}
 			\[P_i - P_m =\frac{2\sigma}{R}\]
 			\[P_m - P_e =\frac{2\sigma}{R}\]
 			\[P_i - P_e =\frac{4\sigma}{R}\]
@@ -273,13 +456,28 @@ El fluido está en condiciones subsónicas si:
 			\item Plano
 			
 			\begin{figure}[H]
-								\begin{minipage}{0.4\textwidth}
-				\centering
-				\includegraphics[width=0.7\linewidth]{imagenesTema1/plano}
-				\caption{Plano.}
-				\label{fig:plano}
+			\begin{minipage}{0.5\textwidth}
+				%\centering
+				%\includegraphics[width=0.7\linewidth]{imagenesTema1/plano}
+				%\caption{Plano.}
+				%\label{fig:plano}
+				
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\large]
+							\draw [short] (-0.5,18) -- (3.5,18);
+							\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (2,19.75) -- (2,18)node[pos=0.5,right]{$R \rightarrow \infty$};
+							\node [font=\large] at (0.5,18.5) {$P_i$};
+							\node [font=\large] at (0.5,17.5) {$P_e$};
+						\end{circuitikz}
+					
+					\caption{Plano.}
+					\label{fig:plano}
+				\end{figure}
+				
 			\end{minipage}%
-			\begin{minipage}{0.3\textwidth}
+			\begin{minipage}{0.5\textwidth}
 			\[P_i - P_e =\sigma\left(\frac{1}{R_i}+\frac{1}{R_j}\right)=0\rightarrow P_i = P_e\]
 			
 			\end{minipage}
@@ -295,8 +493,33 @@ El fluido está en condiciones subsónicas si:
 	\item Un líquido moja a un sólido si $\theta_c  \lesssim \ang{45}$. Sólido hidrofílico totalmente.
 \end{itemize}
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{imagenesTema1/mojabilidad}
-	\caption{Mojabilidad.}
-	\label{fig:mojabilidad}
+	%\centering
+	%\includegraphics[width=0.7\linewidth]{imagenesTema1/mojabilidad}
+	%\caption{Mojabilidad.}
+	%\label{fig:mojabilidad}
+	
+	\begin{figure}[H]
+		\centering
+			\begin{circuitikz}
+				\tikzstyle{every node}=[font=\large]
+				\draw [short] (-0.5,18.25) -- (3.5,18.25);
+				\draw [short] (-0.25,18.25) -- (-0.5,18);
+				\draw [short] (0.25,18.25) -- (0,18);
+				\draw [short] (0.75,18.25) -- (0.5,18);
+				\draw [short] (1.25,18.25) -- (1,18);
+				\draw [short] (1.75,18.25) -- (1.5,18);
+				\draw [short] (2.25,18.25) -- (2,18);
+				\draw [short] (2.75,18.25) -- (2.5,18);
+				\draw [short] (3.25,18.25) -- (3,18);
+				\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (1.75,18.25) -- (3.5,20);
+				\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (2.25,18.75) .. controls (1.75,19) and (1.25,18.75) .. (1,18.25)node[pos=0.5,above]{$\theta_c$};
+				\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (2.5,19) .. controls (2.75,19.75) and (2.25,20) .. (1.5,20);
+				\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (1.5,20) .. controls (0.5,20) and (-0.5,18.25) .. (0.5,18.25);
+				\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (0.5,18.25) .. controls (1,18.25) and (1.25,18.25) .. (1.75,18.25);
+				\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (1.75,18.25) -- (2.5,19);
+			\end{circuitikz}
+		\caption{Mojabilidad.}
+		\label{fig:mojabilidad}
+	\end{figure}
+	
 \end{figure}
