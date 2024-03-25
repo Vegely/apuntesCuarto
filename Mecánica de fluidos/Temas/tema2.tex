@@ -52,11 +52,42 @@ No es un operador conmutativo.
 \end{itemize}
 
 \subsection{Conceptos fundamentales}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.5\linewidth]{imagenesTema2/magnitudesFundamentales}
+%	\caption{Magnitudes fundamentales.}
+%	\label{fig:magnitudesfundamentales}
+%\end{figure}
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\linewidth]{imagenesTema2/magnitudesFundamentales}
-	\caption{Magnitudes fundamentales.}
-	\label{fig:magnitudesfundamentales}
+	\resizebox{1\textwidth}{!}{%
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\large]
+			\draw [-latex] (-2.75,17.75) -- (-2.75,22.5)node[pos=1,above]{$\vec{k}$};
+			\draw [-latex] (-2.75,17.75) -- (2.5,17.75)node[pos=1,right]{$\vec{i}$};
+			\draw [-latex] (-2.75,17.75) -- (-5.25,15.5)node[pos=1,left]{$\vec{j}$};
+			\draw [short] (-1.5,22) .. controls (-1.25,22.75) and (-0.5,23) .. (0.5,22.75);
+			\draw [short] (0.5,22.75) .. controls (1.5,22.75) and (1.75,22.75) .. (2.25,22);
+			\draw [short] (2.25,22) .. controls (3.25,20.75) and (3.25,20) .. (2.25,19);
+			\draw [short] (2.25,19) .. controls (1.5,18.25) and (1,18) .. (0.25,18.25);
+			\draw [short] (0.25,18.25) .. controls (-1.25,19) and (-1.75,18.5) .. (-1.75,19.75);
+			\draw [short] (-1.75,19.75) .. controls (-2,20.75) and (-2.25,20.5) .. (-1.5,22);
+			\draw  (0,21.75) circle (0.5cm);
+			\node [font=\large] at (0.25,23.25) {V};
+			\node [font=\large] at (-1,21.75) {dV};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (-2.75,17.75) -- (0,21.75)node[pos=0.35,left]{$\vec{r}(t)$};
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (0,21.75) -- (1.5,21.75)node[pos=1,above]{$d\vec{r}$};
+			\draw [ color={rgb,255:red,255; green,0; blue,255}, -latex] (-2.75,17.75) -- (1.5,21.75)node[pos=0.35,right]{$\vec{r}(t+dt)$};
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (0,21.75) -- (0.75,21.75)node[pos=1,above]{$\vec{v}$};
+			\draw [short] (-0.5,21.75) .. controls (-0.25,21.5) and (0.25,21.5) .. (0.5,21.75);
+			\draw [short] (-2,20.5) .. controls (-1.25,19.5) and (2.25,19.5) .. (3,20.5);
+			\draw [dashed] (-2,20.5) .. controls (-1.25,21.25) and (2.25,21.25) .. (3,20.5);
+			\draw [dashed] (-0.5,21.75) .. controls (-0.25,22) and (0.25,22) .. (0.5,21.75);
+		\end{circuitikz}
+	}%
+	
+	\label{fig:my_label}
 \end{figure}
 
 \begin{enumerate}
@@ -137,11 +168,40 @@ No es un operador conmutativo.
 Al operador diferencial de variación temporal se le denomina derivada sustancial, total o material:
 \[\frac{D}{Dt}=\frac{\partial}{\partial t}+\left(\vec{v} \cdot \vec{\nabla}\right)\]
 
-\begin{figure}[H]
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.5\linewidth]{imagenesTema2/derivadaSustancial}
+%	\caption{Derivada sustancial.}
+%	\label{fig:derivadasustancial}
+%\end{figure}
+
+
+\begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.5\linewidth]{imagenesTema2/derivadaSustancial}
-	\caption{Derivada sustancial.}
-	\label{fig:derivadasustancial}
+	\resizebox{1\textwidth}{!}{%
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\large]
+			\draw [-latex] (-2.75,21.25) -- (-2.75,22.5)node[pos=1,above]{$\vec{k}$};
+			\draw [-latex] (-2.75,17.75) -- (2.5,17.75)node[pos=1,right]{$\vec{i}$};
+			\draw [-latex] (-2.75,17.75) -- (-5.25,15.5)node[pos=1,left]{$\vec{j}$};
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (-5.25,20.75) -- (1.5,21.75);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (-5,18.75) -- (1.75,19.75);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (-5.25,20.75) .. controls (-4.75,20.25) and (-4.5,20.25) .. (-5,19.75);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (-5,19.75) .. controls (-5.5,19.25) and (-5.25,19) .. (-5,18.75);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (-5.25,20.75) .. controls (-5.5,20.5) and (-5.5,20) .. (-5,19.75);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (1.5,21.75) .. controls (1.75,21.25) and (1.75,21.25) .. (1.5,20.5);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (1.5,21.75) .. controls (1.25,21.25) and (1,21.25) .. (1.25,20.75);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (1.25,20.75) .. controls (1.5,20.25) and (2,20.5) .. (1.75,19.75);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, dashed] (-2,21.25) .. controls (-2.5,20.5) and (-2.25,19.75) .. (-1.75,19.25);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, dashed] (-2,21.25) .. controls (-1.5,20.75) and (-1.25,19.75) .. (-1.75,19.25);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (-2.75,17.75) -- (-1.75,20.25)node[pos=0.3,right]{$\vec{r}$};
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (-1.75,20.25) -- (-0.25,20.5)node[pos=1,above]{$\vec{v}(\vec{r},t)$};
+			\draw [dashed] (-2.75,21.25) -- (-2.75,19);
+			\draw [short] (-2.75,19.25) -- (-2.75,17.75);
+		\end{circuitikz}
+	}%
+	
+	\label{fig:my_label}
 \end{figure}
 
 Sea $\phi=f(\vec{r},t)$ y $\vec{r}=x\vec{i}+y\vec{j}+z\vec{k}$
@@ -175,12 +235,47 @@ Sea $\phi=f(\vec{r},t)$ y $\vec{r}=x\vec{i}+y\vec{j}+z\vec{k}$
 \subsection{Movimiento diferencial en torno a un punto}
 A partir de la figura siguiente, se puede deducir que el movimiento diferencial es:
 \[\lim_{{dt \to 0}} d\vec{v}dt=\vec{v}(\vec{r}+d\vec{r},t)dt-\vec{v}(\vec r ,t)dt\]
-\begin{figure}[H]
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.7\linewidth]{imagenesTema2/movimientoDiferencial}
+%	\caption{Magnitudes fundamentales del movimiento diferencial.}
+%	\label{fig:movimientodiferencial}
+%\end{figure}
+
+\begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.7\linewidth]{imagenesTema2/movimientoDiferencial}
-	\caption{Magnitudes fundamentales del movimiento diferencial.}
-	\label{fig:movimientodiferencial}
+	\resizebox{1\textwidth}{!}{%
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\large]
+			\draw [-latex] (3,17.75) -- (3.75,17.75)node[pos=1,right]{$\vec{i}$};
+			\draw [-latex] (-3.25,17.25) -- (-4.25,16.25)node[pos=1,left]{$\vec{j}$};
+			\draw [-latex] (-2.75,21.75) -- (-2.75,22.75)node[pos=1,above]{$\vec{k}$};
+			\draw [short] (-0.5,22.25) .. controls (1.25,22.25) and (2.5,23.25) .. (3.25,22.25);
+			\draw [short] (3.25,22.25) .. controls (4.25,21.25) and (3.5,21.25) .. (3.75,20);
+			\draw [short] (3.75,20) .. controls (4,18.25) and (3.5,18.25) .. (2.25,17.25);
+			\draw [short] (2.25,17.25) .. controls (0.75,16.25) and (0.5,17.25) .. (-1.5,17.25);
+			\draw [short] (-1.5,17.25) .. controls (-3.25,17.25) and (-3.25,17) .. (-4.25,17.75);
+			\draw [short] (-4.25,17.75) .. controls (-5,18.75) and (-4.75,19.5) .. (-3.75,20.75);
+			\draw [short] (-3.75,20.75) .. controls (-3,21.75) and (-2.5,22) .. (-0.5,22.25);
+			\node [font=\large] at (0.75,22.75) {V};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (-2.75,17.75) -- (-2,19.75)node[pos=0.9,left]{$\vec{r}$};
+			\draw [ color={rgb,255:red,0; green,255; blue,0}, -latex] (-2,19.75) -- (-1,20)node[pos=0.5,sloped,above]{$d\vec{r}$};
+			\draw [ color={rgb,255:red,0; green,176; blue,0}, -latex] (-2.75,17.75) -- (-1,20)node[pos=0.5,above,sloped]{$r+d\vec{r}$};
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (-2,19.75) -- (0.5,19.25)node[pos=0.5,below,sloped]{$\vec{v}(\vec{r},t)dt$};
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (-2.75,17.75) -- (0.5,19.25)node[pos=0.75,below,sloped]{$\vec{r}(t+dt)$};
+			\draw [ color={rgb,255:red,0; green,255; blue,0}, -latex] (0.5,19.25) -- (1.5,19.5)node[pos=0.5,below,sloped]{$d\vec{r}$};
+			\draw [ color={rgb,255:red,255; green,0; blue,255}, -latex] (-1,20) -- (1.5,19.5)node[pos=0.55,above,sloped]{$\vec{v}(\vec{r},t)dt$};
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (1.5,19.5) -- (1,21.25)node[pos=0.5,above,sloped]{$d\vec{v}dt$};
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (-1,20) -- (1,21.25)node[pos=0.65,above,sloped]{$\vec{v}(\vec{r}+d\vec{r},t)dt$};
+			\draw [dashed] (-2.75,21.75) -- (-2.75,17.75);
+			\draw [dashed] (-3.25,17.25) -- (-2.75,17.75);
+			\draw [dashed] (-2.75,17.75) -- (3,17.75);
+		\end{circuitikz}
+	}%
+	
+	\label{fig:my_label}
 \end{figure}
+
 Operando y despreciando el diferencial de tiempo:
 \[d\vec{v}=\vec{v}(\vec{r}+d\vec{r},t)-\vec{v}(\vec r ,t)=d\vec{r}\cdot(\vec{\nabla}\vec{v})\]
 Donde $\vec{\nabla}\vec{v}$ es el tensor gradiente de la velocidad:
