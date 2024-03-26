@@ -761,3 +761,227 @@
 			\end{itemize}
 		\end{minipage}
 	\end{figure}
+	
+\section{Emisiones y factor de emisión de $\mathbf{CO_2}$ equivalente asociado a la generación de energía eléctrica en España (2023).}
+	\includegraphics[width = 14cm, height = 7cm]{emisionesGeneracion}
+	
+\section{Clasificación de las centrales eléctricas según el tipo de energía primaria.}
+	\begin{itemize}
+		\item[-] \textit{Centrales hidroeléctricas:}
+			\begin{itemize}
+				\item Centrales hidráulicas convencionales.
+				\item Centrales hidráulicas reversibles de bombeo.
+			\end{itemize}
+		\item[-] \textit{Centrales termoeléctricas:}
+			\begin{itemize}
+				\item Centrales de carbón
+				\item Centrales de fuel-oil o gasoil.
+				\item Centrales de ciclo combinado de gas natural.
+				\item Centrales de cogeneración con gas natural.
+			\end{itemize}
+		\item[-] \textit{Centrales nucleares:}
+			\begin{itemize}
+				\item Centrales nucleares de agua a presión (PWR).
+				\item Centrales nucleares de agua en ebullición (BWR).
+			\end{itemize}
+		\item[-] \textit{Centrales con energías renovables.}
+			\begin{itemize}
+				\item Centrales eólicas.
+				\item Centrales termoeléctricas solares.
+				\item Centrales fotovoltaicas.
+				\item Centrales de biomasa (combustión y gasificación) y residuos sólidos urbanos (RSU).
+				\item Centrales de energías marinas.
+				\item Centrales geotérmicas.
+				\item Centrales hidráulicas de tipo fluyente (desviaciones de ríos).
+			\end{itemize}
+	\end{itemize}
+	
+\section{Emplazamiento de las centrales eléctricas en España.}
+	\includegraphics[width = 14cm, height = 9cm]{emplazamientoCentrales}
+	
+\section{Clasificación de las centrales termoeléctricas según el tipo de ciclo termodinámico.}
+	\begin{itemize}
+		\item[-] \textit{Ciclo de Rankine (Agua-Vapor):}
+			para las centrales térmicas de carbón y nucleares de $>1000\,MW$ con \textbf{turbinas de vapor.}
+		\item[-] \textit{Ciclo de Brayton-Erikson:}
+			para centrales de gas natural con \textbf{turbinas de gas.}
+		\item[-] \textit{Ciclo combinado Brayton-Rankine:} 
+			centrales gas-aire y agua-vapor con \textbf{turbinas de gas natural y turbinas de vapor.}
+		\item[-] \textit{Ciclos de Otto y Diesel:} 
+			para cogeneración hasta $1\,MW$ con \textbf{motores de combustión interna.}
+	\end{itemize}
+	
+\section{Clasificación de las centrales según la misión que realizan dentro del sistema eléctrico.}
+	\begin{itemize}
+		\item[-] \textit{Centrales de base:} 
+			proporcionan la parte de energía que se consume de forma permanente en el sistema. \textbf{Centrales nucleares, térmicas, termosolares con acumulación, biomasa e hidráulicas de tipo fluyente.}
+		\item[-] \textit{Centrales de puntas:}
+			suministran la energía necesaria para atender las puntas de consumo. \textbf{Centrales hidroeléctricas, térmicas de gas natural y fuel-oil.}
+		\item[-] \textit{Centrales intermedias:}
+			suelen funcionar bajo programa (consigna de producción variable en función de la hora del día) de acuerdo con las previsiones de la demanda realizadas por las compañías. \textit{Centrales hidráulicas y térmicas de gas natural.}
+		\item[-] \textit{Centrales de reserva:}
+			entran en servicio en caso de avería o revisión de otras centrales.
+		\item[-] \textit{Centrales de reserva rodante:}
+			están en funcionamiento a baja carga. \textbf{Centrales de ciclo combinado e hidráulicas.}
+		\item[-] \textit{Centrales de socorro:}
+			pequeñas unidades transportables. \textbf{Grupos electrógenos de gasoil o fuel-oil.}
+		\item[-] \textit{Centrales de acumulación:}
+			consumen energía durante las horas de menor consumo. \textbf{Centrales hidráulicas de bombeo.}
+	\end{itemize}
+	
+\section{Fuentes de energía primaria fósil.}
+	\subsection{Petróleo (crudo de petróleo).}
+		Es un aceite mineral de color oscuro o negro, menos denso que el agua y de un olor acre característico. Es una mezcla homogénea de compuestos orgánicos principalmente hidrocarburos insolubles en agua acompañados de azufre, oxígeno y nitrógeno en cantidades variables.
+		
+		\subsubsection{Formación del petróleo.}
+			El petróleo en el subsuelo se encuentra atrapado en los pequeños espacios o poros de ciertas rocas
+			sedimentarias, a la manera del agua en una esponja. Con el paso del tiempo, agua y petróleo van filtrándose a través de la roca madre, hasta encontrarse con una roca impermeable. La roca porosa está recubierta de una capa de roca impermeable. Si ésta tiene forma de bóveda, agua y petróleo se van acumulando gradualmente bajo ella.
+			
+			
+			El crudo se separa del agua por
+			diferencia de densidad y
+			finalmente se sitúa en la parte
+			superior de la roca porosa.
+			A menudo se encuentra una capa
+			de gas natural por encima de todo,
+			coronando la bóveda.
+			
+			\begin{center}
+				\includegraphics[width = 8cm, height = 10cm]{pozosPetroleo}
+			\end{center}
+			
+		\subsubsection{Yacimientos de petróleo en el mundo.}
+			\begin{center}
+				\begin{tikzpicture}
+					\def\printonlylargeenough#1#2{\unless\ifdim#2pt<#1pt\relax
+						#2\printnumbertrue
+						\else
+						\printnumberfalse
+						\fi}
+					\newif\ifprintnumber
+					\pie[rotate=90, text=legend, before number=\printonlylargeenough{6.86}, after number=\ifprintnumber\%\fi]{
+						20.8/Venezuela,
+						19.1/Resto del mundo,
+						18.6/Arabia Saudí,
+						9.63/Irán,
+						8.08/Iraq,
+						7.13/Kuwait,
+						6.87/UAE,
+						3.26/Libia: 3.26\%,
+						2.61/Nigeria: 2.61\%, 
+						1.78/Qatar: 1.78\%,
+						0.85/Argelia: 0.85\%, 
+						0.66/Angola: 0.66\%,
+						0.45/Ecuador: 0.45\%
+					}
+				\end{tikzpicture}
+			\end{center}
+			
+		\subsubsection{Extracción del petróleo.}
+			\textbf{\textit{Extracción tradicional}}
+				\begin{enumerate}
+					\item 
+						El crudo que brota espontáneamente por la presión interior del yacimiento recibe el nombre de \textbf{primario}.
+					\item 
+						Cuando la presión desciende se puede aumentar \textbf{inyectando agua, vapor de agua o gas en el interior}. Así se obtiene el \textbf{petróleo secundario}.
+					
+						La proporción entre el primario y el secundario depende de la porosidad de la roca y de la propia viscosidad del crudo. Suele ser un 25\% el primario.
+					\item 
+						Una vez explotado mediante este procedimiento se puede extraer más crudo reduciendo la viscosidad del petróleo \textbf{inyectando vapor de agua} para aumentar la temperatura, o por medio de \textbf{productos químicos} para diluirlo. Este es el \textbf{petróleo terciario.}
+				\end{enumerate}
+				
+			\textbf{\textit{Fracking (fractura hidráulica).}}
+			
+			
+				Es una técnica para posibilitar o aumentar la extracción de petróleo y gas del subsuelo. El proceso es el siguiente:
+				\begin{enumerate}
+					\item
+						Se realiza la perforación vertical de un pozo, atravesando capas de roca y acuíferos, desde la plataforma en la superficie hacia donde se encuentra la capa de pizarra, que puede estar a varios kilómetros.
+					\item 
+						Antes de llegar a la capa de pizarra comienza la perforación horizontal o dirigida.
+					\item 
+						Dibujando una larga curva penetra finalmente en el estrato de pizarra, donde se extiende horizontalmente una media de 1-1.5 km. Como las distancias horizontales son muy largas, el proceso de fracking se lleva a cabo en varias etapas independientes.
+					\item
+						Una vez alcanzado el estrato deseado se utilizan explosivos para crear pequeñas grietas.
+					\item 
+						Se bombea un fluido, mezcla de agua y químicos, a elevada presión para abrir y extender las grietas.
+					\item 	
+						Al reducir la presión el fluido retorna a la superficie junto al gas y otras sustancias presentes en la roca, como metales pesados y partículas radiactivas.
+					\item 
+						La mezcla es procesada para separar todas las sustancias. Se estima que entre un 15 y un 80\% del fluido inyectado emerge de nuevo a la superficie, mientras el resto permanece bajo tierra.
+				\end{enumerate}
+				
+				El proceso de fracking consume enormes cantidades de agua. Se ha calculado que se requieren entre 9000 y 29000 $m^3$ de agua para las operaciones de un solo pozo.
+				
+		\subsubsection{Alternativas a la producción de crudo de petróleo.}
+			\begin{itemize}
+				\item[-] \textit{Licuefacción del carbón.}
+					También conocido como proceso de Pott-Broche. Es un proceso químico que converte el carbón directamente en una mezcla de hidrocarburos líquidos y luego se añade hidrógeno para realizar un hidrocraqueo en presencia de un catalizador. El producto obtenido es un crudo sintético que hay que refinar, consumiendo más hidrógeno. Las cantidades obtenidas aún son poco importantes.
+				\item[-] \textit{Licuefacción indirecta.}
+					Consiste en generar un gas de síntesis que luego es convertido en hidrocarburos líquidos mediante la reacción de Fischer-Tropsch.
+				\item[-] \textit{Reservas de pizarras, arenas bituminosas o arenas de alquitrán.}
+					Se separa el betún de la arena obteniendo un combustible fósil de baja graduación que require ser sometido a un proceso energético intensivo para convertirlo en crudo de petróleo sintético, parecido al crudo de petróleo convencional. Se hace añadiendo hidrógeno o quitando carbono. Muchas reservas pero poca producción.
+			\end{itemize}
+			
+		\subsubsection{Grados API del petróleo.}
+			El carácter más importante de los crudos es su densidad. Se puede dar en $g/cm^3$ o en grados API. Los grados API son una medida de cuánto pesa un producto de petróleo en relación al agua a temperaturas iguales. Si el producto del petróleo es más liviano que el algua y flota sobre ésta, su grado API es mayor que 10.
+			
+			
+			\[1\,\dfrac{g}{cm^3} = 10^\circ API \text{ (crudos extra pesados (menor PCI))}\]
+			
+			\[0.77\,\dfrac{g}{cm^3} = 50^\circ API \text{ (crudos ligeros (mayor PCI))}\]
+			
+			
+			Los grados API se utilizan para determinar el precio de un crudo determinado, ya que cuanto mayor es el valor en grados API mayor es la proporción de crudo utilizable. El 60\% de las reservas mundiales de petróleo tiene densidades inferiores a 33\textdegree API y contenidos de S superiores al 1.5\%. Por tanto, existe una oferta creciente de crudos pesados y ácidos.
+			
+		\subsubsection{Densidad relativa y gravedad específica.}
+			\[\rho_r=\dfrac{\rho_{petroleo}[kg/m^3]}{\rho_{agua}[kg/m^3]} = GE\text{ (Gravedad específica)} = \rho\cdot g = \dfrac{m}{V}\cdot g\]
+			
+			\[GE = \dfrac{141.5}{API+131.5} \Rightarrow API=\dfrac{141.5}{GE}-131.5\]
+			
+		\subsubsection{Infraestructura de la red de transporte y distribución de productos petrolíferos.}
+			Las empresas que cuentan con plantas de refino en españa son REPSOL, CAMPSA y Petronor, que forman las tres el grupo REPSOL-YPF (Yacimientos Petrolíferos Fiscales), CEPSA/Elf y BP.
+			
+			
+			La distribuciuón y comercialización queda a cargo de CLH (Compañía Logística de Hidrocarburos), integrada en el grupo REPSOL. Se transporta en grandes buques petroleros, que pueden transportar hasta 300.000 toneladas.
+			
+		\subsubsection{Procedencia del crudo de petróleo en España.}
+			\begin{table}[H]
+				\begin{tabular}{llllll}
+					\textbf{x1000 t}	&	\textbf{2000}	&	\textbf{2010}	&	\textbf{2020}	&	\textbf{2021}	&	\textbf{2022}	\\
+					\hline
+					Angola	&	664	&	1112	&	1696	&	679	&	2316	\\
+					Argelia	&	1476	&	1010	&	827	&	1660	&	3172	\\
+					Guinea Ecuatorial	&	0	&	0	&	735	&	1065	&	1238	\\
+					Libia	&	6901	&	6826	&	1966	&	6270	&	4997	\\
+					Nigeria	&	9165	&	5579	&	10840	&	10275	&	8123	\\
+					\textbf{Total África}	&	\textbf{22804}	&	\textbf{18872}	&	\textbf{17888}	&	\textbf{21251}	&	\textbf{20608}	\\
+					\hline
+					Brasil	&	30	&	667	&	3070	&	2063	&	5401	\\
+					Canadá	&	0	&	169	&	523	&	1435	&	2670	\\
+					Colombia	&	0	&	74	&	456	&	145	&	974	\\
+					Estados Unidos	&	0	&	0	&	3095	&	4096	&	6639	\\
+					México	&	7622	&	5928	&	8443	&	7648	&	6125	\\
+					Venezuela	&	1562	&	789	&	1403	&	0	&	727	\\
+					\textbf{Total América}	&	\textbf{9214}	&	\textbf{7699}	&	\textbf{17397}	&	\textbf{15688}	&	\textbf{23459}	\\
+					\hline
+					Azerbaiyán	&	138	&	750	&	1769	&	1342	&	1942	\\
+					Kazajistán	&	0	&	557	&	4519	&	4201	&	3298	\\
+					Noruega	&	249	&	691	&	996	&	1600	&	1031	\\
+					Reino Unido	&	2039	&	405	&	1017	&	502	&	1104	\\
+					Rusia	&	5141	&	6665	&	979	&	2569	&	698	\\
+					\textbf{Total Europa y Eurasia}	&	\textbf{8282}	&	\textbf{9331}	&	\textbf{10518}	&	\textbf{11540}	&	\textbf{9230}	\\
+					\hline
+					Arabia Saudí	&	6628	&	6571	&	5542	&	3942	&	4773	\\
+					Iraq	&	5995	&	1905	&	3507	&	3751	&	5212	\\
+					Irán	&	3880	&	7671	&	0	&	0	&	0	\\
+					\textbf{Total Oriente Medio}	&	\textbf{17157}	&	\textbf{16559}	&	\textbf{9049}	&	\textbf{7693}	&	\textbf{10298}	\\
+					\hline
+					\textbf{Total Mundo}	&	\textbf{57457}	&	\textbf{52461}	&	\textbf{54852}	&	\textbf{56172}	&	\textbf{63596}	\\
+					\hline
+					Saldo Producción	&	12580	&	12758	&	-5407	&	-4919	&	-2437	\\
+					\textbf{Total Saldo importador}	&	\textbf{70037}	&	\textbf{65219}	&	\textbf{49445}	&	\textbf{51253}	&	\textbf{61158} \\
+					\hline
+					
+				\end{tabular}
+			\end{table}
