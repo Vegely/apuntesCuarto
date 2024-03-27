@@ -324,12 +324,44 @@ Donde:
 \subsection{Movimiento de la partícula fluida en una dirección}
 Se parte de la expresión deducida anteriormente pero expresando el $d\vec{r}$ mediante módulo dirección, esta expresión, también se suele denominar movimiento vectorial:
 \[d\vec{v}=d\vec{r}\cdot\left(\vec{\nabla}\vec{v}\right)=d\vec{r}\cdot\left(\overline{\overline{\xi}}+\overline{\overline{\gamma}}\right)=|d\vec{r}|\vec{n}\cdot\left(\overline{\overline{\xi}}+\overline{\overline{\gamma}}\right)\]
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.7\linewidth]{imagenesTema2/movimientoDireccion}
+%	\caption{Magnitudes fundamentales del movimiento de la partícula fluida.}
+%	\label{fig:movimientodireccion}
+%\end{figure}
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{imagenesTema2/movimientoDireccion}
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\large]
+			\draw [-latex] (-1.75,15.75) -- (-1.75,21.25)node[pos=1,above]{$\vec{k}$};
+			\draw [-latex] (3.75,15.75) -- (5.75,15.75)node[pos=1,right]{$\vec{i}$};
+			\draw [-latex] (-1.75,15.75) -- (-3.25,14.25)node[pos=1,left]{$\vec{j}$};
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (-1.25,20) .. controls (-2,21.5) and (-0.25,20.75) .. (1.5,21.5);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (1.5,21.5) .. controls (3.25,21.75) and (3.25,21) .. (5,20.5);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (5,20.5) .. controls (5.75,20.25) and (5.25,19.5) .. (5.5,18.25);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (5.5,18.25) .. controls (5.75,16.75) and (5,17.25) .. (4.25,16.25);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (4.25,16.25) .. controls (3,14.75) and (2,16.25) .. (-0.25,16);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (-0.25,16) .. controls (-1.5,16.25) and (-1.75,17) .. (-1.5,18);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (-1.5,18) .. controls (-1.25,19) and (-0.75,19) .. (-1.25,20);
+			\node [font=\large, color={rgb,255:red,128; green,0; blue,255}] at (4.25,21.25) {V};
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (-0.5,17.75) -- (0.25,18.75)node[pos=0.5,left]{$\vec{n}$};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (-0.5,17.75) -- (1,19.75)node[pos=0.8,left]{$d\vec{r}$};
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (1,19.75) -- (3.5,20.75)node[pos=0.5,sloped,above]{$\vec{v}(\vec{r}+d\vec{r},t)dt$};
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (4.25,19.25) -- (3.5,20.75)node[pos=0.5,right]{$d\vec{v}dt$};
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (-0.5,17.75) -- (2.75,17)node[pos=0.5,sloped,above]{$\vec{v}(\vec{r},t)dt$};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (2.75,17) -- (4.25,19.25)node[pos=0.5,left]{$d\vec{r}$};
+			\draw [ color={rgb,255:red,255; green,128; blue,255}, -latex] (1,19.75) -- (4.25,19.25)node[pos=0.5,sloped,below]{$\vec{v}(\vec{r},t)dt$};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, dashed] (3.5,20.75) -- (2.75,19.5);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (3,20) .. controls (3.25,19.75) and (3.75,19.75) .. (4,19.75)node[pos=0.45,above]{$\alpha$};
+			\draw [dashed] (3.75,15.75) -- (1.75,15.75);
+			\draw [short] (1.75,15.75) -- (-1.75,15.75);
+		\end{circuitikz}
 	\caption{Magnitudes fundamentales del movimiento de la partícula fluida.}
 	\label{fig:movimientodireccion}
 \end{figure}
+
 Si se aplica a una dirección concreta, también suele denominarse como movimiento escalar:
 \[d\vec{v}\cdot\vec{n}=d\vec{r}\cdot\left(\vec{\nabla}\vec{v}\right)=d\vec{r}\cdot\left(\overline{\overline{\xi}}+\overline{\overline{\gamma}}\right)=|d\vec{r}|\vec{n}\cdot\left(\overline{\overline{\xi}}+\overline{\overline{\gamma}}\right)\cdot\vec{n}=\vec{n}\cdot\left(\overline{\overline{\xi}}+\overline{\overline{\gamma}}\right)\cdot\vec{n}\]
 Como la dirección no es más que una composición de las distintas direcciones, se puede dividir por coordenadas:

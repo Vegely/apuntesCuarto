@@ -1,9 +1,45 @@
 \section{Tema 4: Conservación de la cantidad de movimiento}
 \subsection{Teorema del transporte de Reynolds para la cantidad de movimiento}
 Sea un volumen sometido a un conjunto de fuerzas:
-\begin{figure}[H]
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.7\linewidth]{imagenesTema4/magnitudesFuerzas}
+%	\caption{Magnitudes principales que influencian la cantidad de movimiento.}
+%	\label{fig:magnitudesfuerzas}
+%\end{figure}
+
+\begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.7\linewidth]{imagenesTema4/magnitudesFuerzas}
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\large]
+			\draw [-latex] (-1.75,15.75) -- (-1.75,21.25)node[pos=1,above]{$\vec{k}$};
+			\draw [-latex] (-1.75,15.75) -- (5.75,15.75)node[pos=1,right]{$\vec{i}$};
+			\draw [-latex] (-1.75,15.75) -- (-3.25,14.25)node[pos=1,left]{$\vec{j}$};
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, dashed] (-0.25,20) .. controls (0.5,21.25) and (1.5,20) .. (3,19.75);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, dashed] (3,19.75) .. controls (4,19.75) and (3.25,18.5) .. (3.25,17.25);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, dashed] (3.25,17.25) .. controls (3.5,15.75) and (2.5,16) .. (1,16.25);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, dashed] (1,16.25) .. controls (0,16.75) and (-0.5,16) .. (-0.75,17.25);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, dashed] (-0.75,17.25) .. controls (-1.25,18.75) and (-0.5,19) .. (-0.25,20);
+			\node [font=\large, color={rgb,255:red,128; green,0; blue,255}] at (3.75,19.5) {V};
+			\draw [ color={rgb,255:red,0; green,128; blue,0} ] (0.5,18.25) rectangle (1.75,17.5);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (0.5,18.25) -- (0.75,18.5);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (0.75,18.5) -- (2,18.5);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (2,18.5) -- (1.75,18.25);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (2,18.5) -- (2,17.75);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (2,17.75) -- (1.75,17.5);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (2,18) -- (6.25,18)node[pos=0.5,above]{$\vec{v}(\vec{r},t)$};
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (1.25,17.75) -- (1.25,16.5)node[pos=0.85,right]{$\vec{f}_V$};
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, short] (0.25,20.25) .. controls (1.25,20.25) and (1.75,19.75) .. (3,19.5);
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, short] (3,19.5) -- (2.75,19.25);
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, short] (2.75,19.25) .. controls (1.25,19.5) and (1.25,20) .. (0,20);
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, short] (0,20) -- (0.25,20.25);
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (1.5,21.25) -- (1.5,19.75)node[pos=0,above]{$\vec{f}_S$};
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (2,21) -- (2,19.5);
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (2.5,20.75) -- (2.5,19.5);
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (1,21.25) -- (1,20);
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (0.5,21.25) -- (0.5,20);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (-1.75,15.75) -- (1,17.75)node[pos=0.65,above]{$\vec{r}$};
+		\end{circuitikz}
 	\caption{Magnitudes principales que influencian la cantidad de movimiento.}
 	\label{fig:magnitudesfuerzas}
 \end{figure}
