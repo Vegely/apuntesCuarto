@@ -1,9 +1,41 @@
 \section{Tema 3: Conservación de la masa}
 \subsection{Teorema del transporte de Reynolds}
 Se parte de una función genérica $\Phi=f(\vec{r},t) $
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.7\linewidth]{imagenesTema3/magnitudesReynolds}
+%	\caption{Evolución de una magnitud en un volumen fluido.}
+%	\label{fig:magnitudesreynolds}
+%\end{figure}
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{imagenesTema3/magnitudesReynolds}
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\large]
+			\draw [-latex] (-1.75,15.75) -- (-1.75,21.25)node[pos=1,above]{$\vec{k}$};
+			\draw [-latex] (-1.75,15.75) -- (5.75,15.75)node[pos=1,right]{$\vec{i}$};
+			\draw [-latex] (-1.75,15.75) -- (-3.25,14.25)node[pos=1,left]{$\vec{j}$};
+			\node [font=\large, color={rgb,255:red,128; green,0; blue,255}] at (0.5,20.75) {$V_C(t)$};
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, dashed] (2.25,20.25) .. controls (3,21.5) and (4,20.25) .. (5.5,20);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, dashed] (5.5,20) .. controls (6.5,20) and (5.75,18.75) .. (5.75,17.5);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, dashed] (5.75,17.5) .. controls (6,16) and (5,16.25) .. (3.5,16.5);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, dashed] (3.5,16.5) .. controls (2.5,17) and (2,16.25) .. (1.75,17.5);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, dashed] (1.75,17.5) .. controls (1.25,19) and (2,19.25) .. (2.25,20.25);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (-1,20.25) .. controls (0,21) and (0,19.75) .. (1,19.25);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (1,19.25) .. controls (2,19) and (1.5,18.5) .. (2,17.5);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (2,17.5) .. controls (2.5,16.5) and (1.5,16.75) .. (0.75,16);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (0.75,16) .. controls (-0.25,15) and (-0.25,16.25) .. (-1.25,16.25);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (-1.25,16.25) .. controls (-2.75,16.75) and (-1.75,17.5) .. (-2.5,18.75);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (-2.5,18.75) .. controls (-3,20) and (-1.75,19.5) .. (-1,20.25);
+			\draw [ color={rgb,255:red,128; green,0; blue,255} ] (-0.75,19.25) circle (0.5cm);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, short] (-1.25,19.25) .. controls (-1,19) and (-0.5,19) .. (-0.25,19.25);
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, dashed] (-1.25,19.25) .. controls (-1,19.5) and (-0.5,19.5) .. (-0.25,19.25);
+			\node [font=\large, color={rgb,255:red,128; green,0; blue,255}] at (-0.5,20) {dV};
+			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (-1.75,15.75) -- (-0.75,19.25)node[pos=0.8,left]{$\vec{r}$};
+			\node [font=\large, color={rgb,255:red,128; green,0; blue,255}] at (5.25,20.5) {$V_C(t+dt)$};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (0.25,17.25) -- (3.5,18.5)node[pos=1,above]{$\vec{v}_C(t)$};
+			\node [font=\large, color={rgb,255:red,0; green,128; blue,0}] at (0.25,17) {$\Phi(\vec{r},$ t)};
+		\end{circuitikz}
 	\caption{Evolución de una magnitud en un volumen fluido.}
 	\label{fig:magnitudesreynolds}
 \end{figure}
@@ -54,12 +86,8 @@ Si $V_f(t)\approx dV_f(t)$ entonces aplicando el teorema de gauss se llega a la 
 \
 \begin{center}
 	\begin{tikzpicture}
-		
 		\draw [fill=lightgray](0,0) rectangle (5, 2);
 		\node at (2.5, 1) [align = center]{Teorema de Gauss: \\$\oiint_S \varphi \cdot \vec{n}\,dS=\iiint_V \vec{\nabla}\cdot\varphi\,dV $};
-		
-		
-		
 	\end{tikzpicture}
 \end{center}
 
