@@ -887,4 +887,99 @@ Luego el resultado es:
 \[\vec{F}_{jet+atm\rightarrow placa} = -\rho(v_e-v_p)^2\cdot\dfrac{\pi D_e^2}{4}\vec{k}\]
 }
  
+ \item Cálcule la fuerza aplicada por un chorro sobre una placa móvil: 
+ \begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{imagenesEjercicios/chorro placa}
+	\caption{Esquema del problema.}
+	\label{fig:depositobloqueado}
+\end{figure}
+ \textcolor{blue}{
+Se coloca el sistema de referencia en la placa y con velocidad $\vec{v}_p$ que como es constante no provoca fuerzas de inercia. De esta manera el chorro sale a la velocidad: $\vec{v}_e-\vec{v}_p$
+\\
+Se plantea la ecuación de conservación de la masa: 
+\[\frac{d}{dt}\iiint_{V_c}\rho\,dV+\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+Como el volumen de control no cambia:
+\[\frac{d}{dt}\iiint_{V_c}\rho\,dV=0\]
+Desarrollando el término de superficie:
+\[\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=\]
+\[
+\iint_{S_e} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
++
+\iint_{S_{int}} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
++
+\iint_{S_r} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
++
+\iint_{S_P} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
+\]
+La velocidad del volumen de control $\vec{v}_c=0$
+\begin{itemize}
+	\item En la salida del chorro, por ser un perfil uniforme:
+	\[\iint_{S_e} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=
+	\iint_{S_e} \rho\\left(v_e-v_P\right)\vec{i}\cdot-\vec{i} \,dS=
+	-\left(v_e-v_P\right)\frac{\pi D^2_i}{4}\]
+	\item En la interfase como la velocidad es siempre perpendicular a la superficie:
+	\[\iint_{S_{int}} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	\item En la dirección radial de la placa:
+	\[\iint_{S_r} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=
+	\iint_{S_r} \rho v_r\vec{e}_r\cdot\vec{e}_r \,dS=v_r2\pi r h(r) \text{ [Área de un cilindro]}\]
+	\item En la placa, como la velocidad del fluido es 0:
+	\[\iint_{S_P} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+\end{itemize}
+Por tanto:
+\[\left(v_e-v_P\right)\frac{\pi D^2_i}{4}=v_r2\pi r h(r)\]
+Planteando la conservación de la cantidad de movimiento:
+\[\iiint_{V_c}\vec{f}_V\,dV
++
+\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
+\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV
++\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
+Se desprecia el término de fuerzas volumétricas (número de Froude elevado):
+\[\iiint_{V_c}\vec{f}_V\,dV=0\]
+El término de fuerzas superficiales:
+\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=\]
+\[
+\iint_{S_e}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
++
+\iint_{S_{int}}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
++
+\iint_{S_r}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
++
+\iint_{S_P}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+\]
+Aplicando el mismo razonamiento que en anteriores ejercicios se introduce la presión atmosférica $P_a$. Como el número de Reynolds y Froude son elevados porque es un líquido está dentro de un gas, $\overline{\overline{\tau}} $ es despreciable.
+\begin{itemize}
+	\item En la salida del chorro, por ser un perfil uniforme y la presión es la atmosférica:
+	\[\iint_{S_e}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=0\]
+	\item En la interfase como la presión es la atmosférica:
+	\[\iint_{S_{int}}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=0\]
+	\item En la dirección radial de la placa como la presión es la atmosférica:
+	\[\iint_{S_r}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=0\]
+	\item En la placa:
+	\[\iint_{S_p}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=-F_{jet+atm\rightarrow placa}\]
+\end{itemize}
+El término local es despreciable ya que el fluido es globalmente estacionario:
+\[\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV=0\]
+El término superficial, teniendo en cuenta como en los desarrollos anteriores solo eran no nulos los términos a la salida del chorro y en la dirección radial de la placa:
+\[\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
+\iint_{S_e}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS
++
+\iint_{S_r}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
+\begin{itemize}
+	\item En la salida del chorro:
+	\[\iint_{S_e}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
+	\iint_{S_e}\rho \left(v_e-v_p\right) \vec{k}\left[\left(v_e-v_p\right) \vec{k}\cdot-\vec{k}\right]\,dS=-\rho\left(v_e-v_p\right)^2\frac{\pi D^2_i}{4}\vec{k}\]
+	\item En la dirección radial de la placa:
+	\[\iint_{S_r}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
+	\iint_{S_r}\rho v_r \vec{e}_r\left[v_r \vec{e}_r\cdot\vec{e}_r\right]\,dS=\rho v^2_r\iint_{S_r}\vec{e}_r\,dS=0 \text{ Ver figura inferior}\]
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{imagenesEjercicios/resultante0}
+		\caption{Representación de $\vec{e}_r$ a lo largo de la superficie.}
+		\label{fig:resultante0}
+	\end{figure}
+\end{itemize}
+Por tanto:
+\[F_{jet+atm\rightarrow placa}=\rho\left(v_e-v_p\right)^2\frac{\pi D^2_i}{4}\vec{k}\]
+}
 \end{enumerate}
