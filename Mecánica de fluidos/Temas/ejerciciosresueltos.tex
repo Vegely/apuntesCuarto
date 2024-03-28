@@ -703,5 +703,188 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
  Resolviendo la EDO se obtiene:
  \[\sqrt{h(t)}=\frac{-A_s}{A}\sqrt{\frac{g}{2}}t+\sqrt{h_0}\]
  	}
+ 	
+\item Considérese el siguiente chorro impactando contra una placa de forma axilsimétrica.
+
+\begin{figure}[H]
+	\centering
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\large]
+			\draw  (-5.5,15.75) rectangle (-3.25,15.25);
+			\draw  (-5.5,13.25) rectangle (-3.25,12.75);
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (-3.25,15.25) -- (0,15.25);
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (0,15.25) .. controls (1,15.25) and (1.25,15.5) .. (1.25,16.5);
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (1.25,16.5) -- (1.25,18.5);
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (-3.25,13.25) -- (0,13.25);
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (0,13.25) .. controls (1.25,13.25) and (1.25,13) .. (1.25,12);
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (1.25,12) -- (1.25,10);
+			\draw [short] (1.5,18.5) -- (1.5,10);
+			\draw [short] (2.5,18.5) -- (2.5,10);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (2,14.25) -- (2,15.75)node[pos=1,above]{$\vec{e}_r$};
+			\draw [-latex] (2,14.25) -- (4.5,14.25)node[pos=1,right]{$\vec{v}_p$};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (2,14.25) -- (3.25,14.25)node[pos=1,above]{$\vec{k}$};
+			\draw [short] (-6,14.25) -- (-5,14.25);
+			\draw [short] (-4.75,14.25) -- (-4.5,14.25);
+			\draw [short] (-4.25,14.25) -- (-3.25,14.25);
+			\draw [short] (-3,14.25) -- (-2.75,14.25);
+			\draw [short] (-2.5,14.25) -- (-1.5,14.25);
+			\draw [short] (-1.25,14.25) -- (-1,14.25);
+			\draw [short] (-0.75,14.25) -- (0.25,14.25);
+			\draw [short] (0.5,14.25) -- (0.75,14.25);
+			\draw [short] (1,14.25) -- (2,14.25);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (-5.5,14.75) -- (-3.5,14.75)node[pos=1,right]{$\vec{v}_e$};
+			\node [font=\large, color={rgb,255:red,0; green,128; blue,255}] at (-1.75,13.75) {$\rho=cte$};
+			\node [font=\large] at (-4.25,17.75) {$P_a$};
+			\draw [-latex] (0.75,17.75) -- (1.25,17.75)node[pos=0,above]{h(r)};
+			\draw [-latex] (2,17.75) -- (1.5,17.75);
+			\node [font=\large] at (1,15.25) {\textbf{r}};
+			\draw [-latex] (-5.5,9.75) -- (-4.25,9.75)node[pos=1,right]{$\vec{i}$};
+			\draw [-latex] (-5.5,9.75) -- (-5.5,11)node[pos=1,above]{$\vec{j}$};
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (1.25,11.75) -- (2.25,11.75)node[pos=0.5,above]{$\vec{n}_p$};
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (1,15.5) -- (0.25,16.25)node[pos=1,above]{$\vec{n}_{int}$};
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (-4.5,13.75) -- (-5.75,13.75)node[pos=0.4,above]{$\vec{n}_e$};
+			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (1.5,11.25) -- (1.5,10.25)node[pos=0.5,left]{$\vec{n}_r,$ $\vec{v}_r$};
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (-4.5,15.25) -- (-4.5,13.25);
+			\node [font=\large, color={rgb,255:red,0; green,128; blue,255}] at (0.25,13.75) {$V_C$};
+			\node [font=\large] at (-4.5,16) {Boquilla};
+			\node [font=\large] at (3.5,13.25) {$v_e>v_p$};
+			\draw [latex-latex] (-6,15.25) -- (-6,13.25)node[pos=0.5,left]{$D_e$};
+		\end{circuitikz}
+		
+		\begin{circuitikz}
+			\draw  (11,14.25) ellipse (2cm and 3cm);
+			\draw [short] (11,17.25) -- (9.75,17.25);
+			\draw [short] (11,11.25) -- (9.75,11.25);
+			\draw [short] (9.75,11.25) .. controls (8,12.25) and (7.75,16.25) .. (9.75,17.25);
+			\draw [-latex] (11,14.25) -- (11,17.25)node[pos=0.5,left]{r};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (11,14.25) -- (10.5,15)node[pos=0.5,left]{$\vec{e}_r$};
+			\draw [latex-latex] (9.75,17.75) -- (11,17.75)node[pos=0.5,above]{h(r)};
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (9,15.75) -- (8.25,16)node[pos=1,above]{$\vec{e}_r,$ $\vec{v}_r$};
+		\end{circuitikz}
+	\caption{Esquema del chorro axilsimétrico.}
+	\label{fig:chorroaxil}
+\end{figure}
+
+Calcular la fuerza que ejerce el chorro junto con la presión atmosférica sobre la placa.
+
+\textcolor{blue}
+{
+	\textit{Conservación de la masa en forma integral:}
+	\[\dfrac{d}{dt} \iiint_{V_C}\rho dV + \oiint_{S_C} \rho (\vec{v}-\vec{v}_C)\cdot \vec{n} dS = 0\]
+	Asumiendo el sistema como globalmente estacionario:
+	\[\dfrac{d}{dt} \iiint_{V_C} \rho dV = 0; S_C = S_e \cup S_p \cup S_{int} \cup S_r\]
+	\[
+	\red
+	{
+		\underbrace
+		{
+			\blue \iint_{S_e}\rho (\vec{v}-\vec{v}_C)\cdot \vec{n}_e dS
+		}
+		_
+		{
+			\begin{matrix}
+				\vec{v}_C=\vec{0}\\
+				\vec{v}=-(v_e-v_p)\vec{k}\\
+				\vec{n}_e=-\vec{k}
+			\end{matrix}
+		}
+	}
+	\blue +
+	\red
+	{
+		\underbrace
+		{
+			\blue \iint_{S_p}\rho (\vec{v}-\vec{v}_C)\cdot \vec{n}_p dS
+		}
+		_
+		{
+			\begin{matrix}
+				\vec{v}_C=\vec{0}\\
+				\vec{v}=0\\
+				\vec{n}_p=\text{no importa}
+			\end{matrix}
+		}
+	}
+	\blue +
+	\red
+	{
+		\underbrace
+		{
+			\blue \iint_{S_{int}}\rho (\vec{v}-\vec{v}_C)\cdot \vec{n}_{int} dS
+		}
+		_
+		{
+			\begin{matrix}
+				\vec{v}_C=\vec{0}\\
+				\vec{v}=\vec{v}_{int}\\
+				\vec{n}_{int}\perp \vec{v}_{int}
+			\end{matrix}
+		}
+	}
+	\blue +
+	\red
+	{
+		\underbrace
+		{
+			\blue \iint_{S_{r}}\rho (\vec{v}-\vec{v}_C)\cdot \vec{n}_{r} dS
+		}
+		_
+		{
+			\begin{matrix}
+				\vec{v}_C=\vec{0}\\
+				\vec{v}=\vec{v}_{r} \cdot \vec{e}_r\\
+			\end{matrix}
+		}
+	}
+	\blue \Rightarrow
+	\]	
+	Sabiendo que $\vec{e}_r$ es un campo vectorial central y, por tanto \[\iint_S\vec{e}_rdS=0\Rightarrow\]
+	\[(v_e-v_p)\dfrac{\pi D_e^2}{4}=v_r2\pi rh(r)\]
+	\textit{Conservación de la cantidad de movimiento en forma integral:}
+	\[\dfrac{d}{dt} \iiint_{V_C}\rho \vec{v} dV + \oiint_{S_C} \rho \vec{v} (\vec{v}-\vec{v}_C)\cdot \vec{n} dS = \oiint_{S_C}(-p\cdot \bar{\bar{I}}+\bar{\bar{\tau}}_v)\cdot \vec{n}dS+\iiint_{V_C}\rho \vec{g} dV=(*)\]
+	\[\iiint_{V_C}\rho \vec{g} dV = 0\text{ al ser el número de Froude } Fr\uparrow\uparrow \]
+	\[\iint_{S_e\cup S_{int}\cup S_r} (-(p-p_a)\bar{\bar{I}} + \bar{\bar{\tau}}_v)\cdot \vec{n} dS = 0 \text{ al ser } P = P_a, \text{ flujo ideal uniforme } (Re\uparrow\uparrow) \Rightarrow \bar{\bar{\tau}}_v = \bar{\bar{0}}\]
+	\[(*)=-\rho(v_e-v_p)^2\cdot\dfrac{\pi D_e^2}{4}\vec{k}+
+	\red
+	{
+		\underbrace
+		{
+			\blue \iint_{S_r} \rho \vec{v}(\vec{v}-\vec{v}_C)\cdot \vec{n} dS
+		}
+		_
+		{
+			\rho |\vec{v}_r|^2 \iint_{S_r} \vec{e}_r dS = 0
+		}
+	}
+	\blue
+	+
+	\red
+	{
+		\underbrace
+		{
+			\blue \iint_{S_p}\dots dS
+		}
+		_
+		{
+			0
+		}
+	}
+	\blue
+	+ 
+	\red
+	{
+		\underbrace
+		{
+			\blue \iint_{S_{int}}\dots dS
+		}
+		_
+		{
+			0
+		}
+	}
+\]
+Luego el resultado es:
+\[\vec{F}_{jet+atm\rightarrow placa} = -\rho(v_e-v_p)^2\cdot\dfrac{\pi D_e^2}{4}\vec{k}\]
+}
  
 \end{enumerate}
