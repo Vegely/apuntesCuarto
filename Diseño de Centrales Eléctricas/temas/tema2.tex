@@ -209,8 +209,197 @@ En cuanto a los rendimientos de diversas plantas de generación eléctrica:
 		\bottomrule
 	\end{tabular}
 \end{table}
+\newpage
+\section{Protocolo de Kioto.}
+El Protocolo de Kioto estableció 3 vías para su cumplimiento:
+\subsection{Políticas y medidas.}
+Directiva 2033/87 CE de Comercio de Derechos de Emisión de gases
+de efecto invernadero en la Unión Europea.
+\subsection{Creación de sumideros.}
+Se consideran sumideros todos los sistemas por los que se extraen gases de la atmósfera. Se consideran sumideros actividades como la reforestación.
+\subsection{Mecanismos flexibles.}
+\begin{enumerate}
+	\item \textbf{Comercio de derechos de emisión (CDE):}
+		Establece una asignación de una determinada cantidad de derechos de emisión gratuitos para
+		las centrales térmicas y el sector industrial que equivalen a 1 tonelada de CO$_2$. Un país que haya conseguido reducir sus emisiones podrá vender a otro país que no llegue a su objetivo previsto. En España se llama \textbf{PNA} (Plan Nacional de Asignación).
+	\item \textbf{Mecnismo de desarrollo limpio (MDL):}
+		El país desarrollado invierte en tecnologías limpias en países en vías de desarrollo.
+	\item \textbf{Aplicación conjunta (AC):}
+		Un país desarrollado invierte en otro país desarrollado en un proyecto de energía limpia.
+\end{enumerate}
+\section{PNA.}
+	La Directiva de la Unión Europea sobre Comercio de Emisiones (2003/87/CE) establece que cada Estado
+	miembro deberá elaborar un Plan Nacional de Asignación (PNA) en el que se determinen la cantidad total de
+	derechos a asignar durante un periodo y el procedimiento de asignación aplicado.
+	
+	
+	Actualmente en España se asigna mediante el PNA IV donde se permiten unas emisiones de CO$_2$ = 44 MtCO$_{2-eq}$
+\section{Precio de emisión.}
+SENDECO2 es la plataforma que proporciona a todos los empresarios un lugar donde intercambiar Derechos de Emisión (EUAs) por Créditos de carbono (CERs) que certifican que se deja de emitir una tonelada de CO$_2$.
+\subsection{Evolución del precio del derecho de emisión.}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{res/tema2/precioEUA}
+	\label{fig:t-emisiones}
+\end{figure}
+\newpage
+\subsection{Influencia coste de emisión en el mercado eléctrico.}
+Desde el año 2021 las centrales térmicas no tienen cantidades asignadas gratuitas y por ello, tienen que comprar derechos de emisión. Este coste repercute en el coste de la generación ofertado y, por tanto el precio de la energía como se puede ver en la figura inferior.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.2\linewidth]{res/tema2/variacionPrecio}
+	\label{fig:variacionprecio}
+\end{figure}
+\subsection{Factor de emisión.}
+El factor de emisión (fe) representa la cantidad de CO$_2$ que se genera por MWh de electricidad producida en bornes de la central:
+\[fe=\frac{tCO_{2-eq}}{MWhe}=\frac{tCO_{2-eq}}{TJ}\]
+Los factores de emisión se actualizan anualmente.
+\subsection{Cálculo del factor de emisión.}
+Para el cálculo se emplea la siguiente expresión:
+\[f\left(\frac{tCO_2}{MWh}\right)=\frac{tCO_2}{TJ}\cdot\frac{3,6 TJ}{1000 MWh}\cdot\frac{100}{\eta}\]
+\begin{enumerate}
+	\item \textbf{Centrales térmicas de carbón:}
+		El carbón es un combustible con un alto contenido en carbono y por ello genera una cantidad elevada de CO$_2$ por MWhe. El tep (tonelada equivalente petróleo) es una unidad para referir la energía con respecto a la obtenida con una tonelada de petróleo.
+	\begin{table}[H]
+		\centering
+		\renewcommand{\arraystretch}{1.1}
+		\begin{tabular}{cm{2cm}m{2cm}m{3cm}m{2cm}m{2cm}}
+			\hline
+			\textbf{Combustible} & \textbf{ktCO2/ktep} & \textbf{TJ/ktep} & \textbf{Factor de Emisión  combustible (tCO2/TJ)} & \textbf{Rendimiento eléctrico (\%)} & (tCO2/MWh)\\  
+			\hline
+			Hulla + Antracita nacional & 4,032 & 41,868 & 96,303 & 36\% & 0,96 \\
+			Carbón importado           & 4,032 & 41,868 & 96,303 & 36\% & 0,96 \\
+			Lignito negro              & 3,861 & 41,868 & 92,218 & 36\% & 0,92 \\
+			Lignito pardo              & 3,983 & 41,868 & 95,132 & 36\% &0,95 \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	\item \textbf{Centrales térmicas de ciclo combinado con gas natural:}
+		Utilizan gas natural, un combustible con menor contenido en carbono que junto a su elevado rendimiento hace que tenga un menor factor de emisión.
+		\begin{table}[H]
+		\centering
+		\renewcommand{\arraystretch}{1.1}
+		\begin{tabular}{cm{2cm}m{2cm}m{3cm}m{2cm}m{2cm}}
+			\hline
+			\textbf{Combustible} & \textbf{ktCO2/ktep} & \textbf{TJ/ktep} & \textbf{Factor de Emisión  combustible (tCO2/TJ)} & \textbf{Rendimiento eléctrico (\%)} & (tCO2/MWh)\\  
+			\hline
+			Gas natural & 2,337 & 41,868 & 55,818 & 54\% & 0,37 \\
+		 \hline
+		\end{tabular}
+	\end{table}
+	\newpage
+	\item \textbf{Centrales térmicas de fuel-gas:}
+		Debido a su heterogeneidad se utilizan valores medios empíricos para este conjunto de centrales.
+				\begin{table}[H]
+			\centering
+			\renewcommand{\arraystretch}{1.1}
+			\begin{tabular}{cm{2cm}}
+				\hline
+				\textbf{Combustible}  & (tCO2/MWh)\\  
+				\hline
+				Gas natural & 0,77 \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\item \textbf{Centrales hidráulicas, renovables y nuclear:}
+		No emiten CO$_2$ para generar electricidad.
+		\begin{table}[H]
+			\centering
+			\renewcommand{\arraystretch}{1.1}
+			\begin{tabular}{cm{2cm}}
+				\hline
+				\textbf{Combustible}  & (tCO2/MWh)\\  
+				\hline
+				Centrales hidráulicas, renovables y nuclear & 0
+				 \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\item \textbf{Cogeneración:}
+		Consiste en la producción combinada de calor y electricidad, lo que permite conseguir un rendimiento conjunto superior.
+		\begin{table}[H]
+			\centering
+			\renewcommand{\arraystretch}{1.1}
+			\begin{tabular}{cm{2cm}}
+				\hline
+				\textbf{Combustible}  & (tCO2/MWh)\\  
+				\hline
+				Cogeneración & 0,37
+				\\
+				\hline
+			\end{tabular}
+		\end{table}
+	\item \textbf{Residuos:}
+		Como existe una gran heterogeneidad en los combustibles empleados se toma un valor medio. En el caso de la biomasa su factor de emisión es nulo porque son neutros a nivel de emisiones. Además las emisiones de N$_2$O asociadas a los residuos no son significativas a nivel de cálculos del factor de emisión.
+		\begin{table}[H]
+			\centering
+			\renewcommand{\arraystretch}{1.1}
+			\begin{tabular}{cm{2cm}m{2cm}}
+				\hline
+				\textbf{Combustible} & \textbf{Rendimiento eléctrico (\%)} & (tCO2/MWh)\\  
+				\hline
+				Residuos &25\%& 0,24
+				\\
+					Biomasa &-& 0
+				\\
+				\hline
+			\end{tabular}
+		\end{table}
+\end{enumerate}
+\subsection{Emisiones en la combustión.}
+Las fuentes de combustión que producen emisiones de CO$_2$ se calculan multiplicando el contenido de energía por un factor de emisión y oxidación (se asume igual a 1 el factor de oxidación).
+\[\text{Emisiones CO}_2 = \text{Datos de la actividad} \times \text{Factor de emisión} \times \text{Factor de oxidación}\]
 
-\section{Protocolo de Kioto}
-\subsection{Políticas y medidas}
-\subsection{Creación de sumideros}
-\subsection{Mecanismos flexibles}
+Los datos de actividad se expresan como el contenido de energía neto del combustible consumido [TJ] durante un periodo.
+\[\text{Contenido de energía [TJ]}=\text{Combustible consumido [t o m$^3$]}\times \text{Poder calorífico combustible [TJ/t o TJ/m$^3$]}\]
+
+El poder calorífico neto es un valor representativo de la energía liberada en la combustión en forma de calor. Esta magnitud tiene límite superior (PCS) e inferior (PCI) en función de la humedad del combustible.
+
+\[[PCI]_s (kcal/kg)=[PCS]_s-597\cdot (9H+H_2O)\]
+\begin{itemize}
+	\item [-] H $\rightarrow$ \% de hidrógeno contenido en el combustible (base seca).
+	\item [-] H$_2$O $\rightarrow$ \% de humedad del combustible.
+\end{itemize}
+
+\subsection{Emisiones evitadas con las energías renovables.}
+Las energías renovables en España permitieron reducir la emisión de 55,6 millones de tCO$_2$ y cubrieron el 42,2\% de la demanda eléctrica.
+\newpage
+\section{Combustibles fósiles.}
+\subsection{Combustible sólidos.}
+\begin{enumerate}
+	\item \textbf{Biomasa:}
+		El combustible esta compuesto de materia vegetal que había sido creada a través de la fotosíntesis:
+		\[6 CO_2 + 6 H_2O + 112 kcal/mol \rightarrow C_6 (H_2O)_6 + 6 O_2 ( Glucosa)\]
+		Por tanto, la fotosíntesis fija al año 18.000 Mt de CO$_2$ y por tanto, quemar esta planta no produce más CO$_2$ que el que liberaría al morir por fermentación. De esta manera, se podría considerar renovable.
+	\item \textbf{Carbón:}
+		Es una roca de fácil combustión con aproximadamente el 50\% del peso en carbono. No obstante, en función del porcentaje de carbono cambia el poder calorífico:
+		\begin{table}[H]
+			\centering
+			\renewcommand{\arraystretch}{1.1}
+			\begin{tabular}{cccc}
+				\hline
+				&\textbf{Lignito} & \textbf{Hulla} & \textbf{Lignito}\\  
+				\hline
+			Densidad &  1,1-1,3&1,2-1,5  &1,4-1,8\\ 
+			Humedad (\%) &20-50  &3-25  &3-5\\ 
+			\% C & 27-31 &  37-86&89-98\\ 
+			\% Volátiles &25-55  &25-50  &2-14\\ 
+			PC (kcal/kg) &  2000-4000&3500-7500  &7000-8350\\ 
+				\hline
+			\end{tabular}
+		\end{table}
+		El carbón esta formado por distintos elementos que condicionan su comportamiento como combustible:
+		\begin{enumerate}
+			\item \textbf{Carbón fijo (65-95\%):}
+			\item \textbf{Hidrógeno (3-6\%):}
+			\item \textbf{Azufre (0,2-11\%):}
+			\item \textbf{Humedad (1-60\%):}
+			\item \textbf{Nitrógeno (1-1,5\%):}
+			\item \textbf{Oxígeno (2-30\%):}
+			\item \textbf{Materia volátil (5-40\%):}
+			\item \textbf{Cenizas (30\%):}		
+		\end{enumerate}
+		
+\end{enumerate}
+\subsection{Combustible líquidos.}
+\subsection{Combustible gaseosos.}
