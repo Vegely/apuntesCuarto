@@ -519,12 +519,239 @@ Las energías renovables en España permitieron reducir la emisión de 55,6 mill
 				Que resumido en un gráfico queda:
 				\begin{figure}[H]
 					\centering
-					\includegraphics[width=0.6\linewidth]{res/tema2/perdidas}
+					\includegraphics[width=0.5\linewidth]{res/tema2/perdidas}
 					\label{fig:perdidas}
 				\end{figure}
 				Por tanto, el rendimiento de la caldera queda como:
 				\[\eta = \frac{\text{Potencia térmica cedida al vapor sobrecalentado de salida}}{PCI \times \dot{m}_\text{combustible} \times \text{Potencia térmica aire caliente}}\approx 85-88\%\]
+				En general en la caldera hay varios rendimientos:
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.7\linewidth]{res/tema2/caldera}
+					\label{fig:caldera}
+				\end{figure}
+				Los distintos rendimientos son:
+				\[\eta_{caldera}=\frac{P_{tv}}{P_{tv}+P_{aire}}\]
+				\[P_{tv}=\dot{m}_{comb}\times PCI\]
+				\[P_{aire}=\dot{m}_{aire}\times h_{aire}\]
+				\[\eta_{planta}=\frac{P_{bc}}{P_{comb}}\]
 		\end{itemize}
 \end{enumerate}
 \subsection{Combustible gaseosos.}
+Principalmente gases naturales y materia volátil. Son de fácil combustión (poco exceso de aire). Emiten NO$_x$ y SO$_2$. Tienen peligro de explosión y por ello, requieren elevada estanqueidad.
 \subsection{Combustible líquidos.}
+Se compone de mezclas complejas de hidrocarburos de cadena larga. Tienen un punto de inflamación baja. Emiten NO$_x$ y SO$_2$. Provocan corrosión a baja temperatura.
+
+\section{Impacto ambiental de las centrales térmicas de combustión.}
+\subsection{Composición de gases de la combustión.}
+\begin{enumerate}
+	\item \textbf{Monóxido de carbono (CO):}
+		Se produce por combustiones incompletas de compuestos que contienen carbono. Es un gas muy tóxico. En contacto con el oxígeno forma CO$_2$.
+	\item \textbf{Materia particulada (PM):}
+		Son mineral, inquemados y elementos de traza.
+		\begin{itemize}
+			\item [-] Una cuarta parte se recoge como ceniza mediante los ceniceros. El resto es liberado y se captura con filtros ciclónicos o electrostáticos.
+			\item [-] Los elementos de traza (Hg y Se) se capturan mediante filtros de resinas.
+		\end{itemize}
+		Los minerales que se consideran contaminantes son:  Be, Cr, Mn, Co, Ni, As, Se, Cd, Sb, Hg y Pb.
+	\item \textbf{Compuestos orgánicos:}
+		Se pueden encontrar como gas si son volátiles (metano y benceno) o en la superficie de partículas como hidrocarburos aromáticos policlínicos.
+	\item \textbf{Óxidos de azufre (SO$_2$, SO$_3$, SH$_2$):}
+		Provocan lluvia ácida. En las calderas se forma SO$_2$ que posteriormente forma el resto de óxidos.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.4\linewidth]{res/tema2/sicloazufgre}
+			\label{fig:sicloazufgre}
+		\end{figure}
+		
+	\item \textbf{Óxidos de nitrógeno (NO$_x$):}
+		Provocan lluvia ácida, destrucción de la capa de ozono y smog fotoquímico:
+		\begin{itemize}
+			\item [-] \textbf{NO$_2$:} precursor del efecto invernadero. Son muy absorbentes de radiación infrarroja. Se genera a partir del NO con exceso de oxígeno.
+			\item [-] \textbf{NO:} reducción del ozono en la estratosfera (es menos tóxico que el NO$_2$). Se genera por la alta temperatura de la caldera con el N$_2$ del aire. 
+			\item [-] \textbf{N$_2$O:} reducción del ozono en la troposfera. Se produce en mezclas pobres con poco O$_2$.
+		\end{itemize}
+\end{enumerate}
+\subsection{Tratamientos para reducción de emisiones.}
+\begin{enumerate}
+	\item \textbf{Óxidos de azufre (SO$_2$):}
+	Se clasifican en función del momento de la combustión en el que se realice el tratamiento:
+	\begin{enumerate}
+		\item \textbf{Precombustión:} 
+		\begin{itemize}
+			\item [-] Uso de carbones de alta calidad.
+			\item [-] Combustión mixta con gas natural.
+			\item [-] Lavado y desulfuración del combustible.
+			\item [-] Gasificación del carbón.
+		\end{itemize}
+		\item \textbf{Durante la combustión:}
+		\textbf{Solo en calderas de lecho fluidificado} se puede introducir caliza CO$_3$Ca para fijar el azufre. 
+		\item \textbf{Postcombustión:}
+			Se manipulan los gases mediante torres de lavado por vía húmeda o semihumeda con un rendimiento del 40\%.
+			
+			El proceso de absorción química en las torres de lavado es el siguiente:
+			\[SO_2+H_2O\rightarrow H_2SO_4\]
+			\[CaCO_3+H_2SO_4\rightarrow CaSO_3+CO_2+H_2O\]
+			\[CaSO_3+0,5O_2+H_2O\rightarrow CaSO_4+2H_2O\]
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.5\linewidth]{res/tema2/desulfuric}
+				\label{fig:desulfuric}
+			\end{figure}
+			
+	\end{enumerate}
+	\item \textbf{Óxidos de nitrógeno (NO$_x$):}
+	\begin{itemize}
+		\item [-] \textbf{Técnicas primarias:} Se basan en el control del proceso de combustión. Modificacando los siguientes parámetros que reducen las emisiones de NO$_x$ a costa del rendimiento:
+		\begin{itemize}
+			\item Reducción de la temperatura.
+			\item Disminución del exceso de aire.
+			\item Inyección de vapor.
+			\item Combustión con O$_2$ puro.
+			\item Combustible con menos N$_2$.
+			\item Uso de catalizadores.
+		\end{itemize}
+		El problema de los NO$_x$ disminuye en las calderas de lecho fluido debido a que trabajan a 900° C en lugar de los 1500° C de una caldera convencional.
+		\item [-] \textbf{Técnicas secundarias:} Se basan en reducir las emisiones de gases tras la combustión:
+		\begin{itemize}
+			\item Absorción química con $H_2SO_4$:
+			
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{res/tema2/H2so4abs}
+	\label{fig:h2so4abs}
+\end{figure}
+	\item Proceso TYCO: incorpora eliminación $SO_2$ y recupera ácidos:
+	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{res/tema2/tyci+}
+	\label{fig:tyci}
+\end{figure}
+\item Reducción catalítica selectiva: se emplea amoniaco que al reaccionar con los NO$_x$. Tiene una eficiencia de eliminación del 85\%.
+\[6NO_x+4xNH_3\rightarrow [2x+3]N_2+6xH_2O\]
+		\end{itemize}
+	\end{itemize}
+	\item \textbf{Materia particulada (PM):} Se trata mediante filtros ciclónicos y electrostáticos tras la combustión. Tienen un gran consumo energético 12\% del autoconsumo.
+\end{enumerate}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{res/tema2/filtroelectrostatico}
+	\label{fig:filtroelectrostatico}
+\end{figure}
+
+\subsection{Impacto ambiental centrales térmicas.}
+Anteriormente se han discutido principalmente las centrales térmicas de carbón, pero si el combustible es líquido o sólido cambia ligeramente el impacto ambiental.
+\begin{itemize}
+	\item \textbf{Combustible líquido:}
+		El impacto ambiental es menor que el de las de carbón aunque el uso de estas centrales esta disminuyendo. Emite menos gases contaminantes y la materia particulada esta compuesta principalmente por hollín. 
+		
+		
+		Los combustibles principales usados son los gasóleos (comparten mercado con la automoción) y los fuelóleos (uso exclusivo en instalaciones térmicas).
+		
+		El principal inconveniente de los fuelóleos es su alto contenido en azufre.
+	\item \textbf{Gas natural:}
+		El gas natural es un combustible con muy alto poder calorífico y son las centrales de combustión de combustibles fósiles con menor impacto ambiental aunque tienen problemas de emisiones de NO$_x$ y generan elevada contaminación acústica.
+		
+		Cabe destacar, que otra ventaja es que como se recibe continuamente gas no es necesario invertir en sistemas de almacenamiento y, además, no necesita tratamiento previo. Que también como durante el transporte se entierran la contaminación producida por fugas es despreciable.
+\end{itemize}
+\section{Impacto ambiental centrales nucleares.}
+Tienen el mismo impacto térmico y químico que las centrales térmicas convencionales aunque no libera gases contaminantes. No obstante, presenta el problema de los residuos radioactivos.
+\subsection{Tipos de radioactividad.}
+La radioactividad es un efecto producido por descomposición espontánea de un núcleo inestable en otro más estable. Los tipos de radiación principales son:
+\begin{itemize}
+	\item [-] La radiación alfa ($\alpha$) está formada por núcleos de helio. No es capaz de atravesar el papel.
+	\item [-] La radiación beta ($\beta$) está constituida por electrones. No es capaz de atravesar el acero.
+	\item [-] La radiación gamma ($\gamma$) es de naturaleza electromagnética. No es capaz de atravesar el plomo.
+	\item [-] Radiación neutrónica (n). No es capaz de atravesar el cemento.
+\end{itemize}
+\subsection{Medida de la radioactividad.}
+Se mide mediante la cantidad de radiación emitida. 
+\begin{itemize}
+	\item [-] Si la radiación afecta al ser humano se mide en Sievert (Sv): Unidad de dosis equivalente.
+	\item [-] Si la radiación afecta a un objeto se mide en Gray (Gy): Unidad de dosis absorbida. Se define como la dosis de radiación que transfiere una energía de 1 julio a 1 kilogramo masa de
+	material irradiado
+	\item [-] Si se habla de fuente emisora de radiación (material radiactivo) se emplea el Becquerel (Bq). Se define como la actividad de un material que experimenta una desintegración por segundo.
+	
+\begin{figure}[H]
+	\begin{center}
+	\scalebox{0.8}[0.8]{
+		\begin{tikzpicture}
+			\def\printonlylargeenough#1#2{\unless\ifdim#2pt<#1pt\relax
+				#2\printnumbertrue
+				\else
+				\printnumberfalse
+				\fi}
+			\newif\ifprintnumber
+			\pie[rotate=90, text=legend, before number=\printonlylargeenough{1}, after number=\ifprintnumber\%\fi]{
+				36.7/Inhalación de radón,
+				29.1/Aplicaciones médicas,
+				13.1/Radiación suelo,
+				10.2/Radiación cosmica,
+				9.9/Propio Cuerpo,
+				0.6/Exposición profesional: 0.6\%,
+				0.3/Poso radioactivo 0.3\%,
+				0.1/Centrales nucleares 0.1\%
+			}
+		\end{tikzpicture}
+}	\end{center}
+\end{figure}	
+\end{itemize}
+\subsection{Clasificación de los residuos radioactivos.}
+\begin{itemize}
+	\item [-] \textbf{Según el estado de agregación.}
+	\begin{enumerate}
+		\item \textbf{Residuos gaseosos:} Se debe distinguir entre isotopos radioactivos y el aire. Mediante filtros de alta eficiencia (HEPA) se retiene el 99,9\% de las partículas de 0,3 $\mu$m.
+		\item \textbf{Residuos líquidos:} Principalmente tritio. Se eliminan con operaciones de filtración, centrifugación, precipitación química,
+		intercambio iónico y evaporación .
+		\item \textbf{Residuos sólidos:} Se clasifican en alta, media o baja actividad.
+	\end{enumerate}
+	\item [-] \textbf{Según la radiactividad.}
+	\begin{enumerate}
+		\item \textbf{Sólidos de actividad media y baja:} Tienen una vida media de menos de 30 años. Se mezclan con aglomerantes y se almacenan en depósitos. 
+		
+		España genera 1220 m$^3$ al año. Los residuos dejan de ser peligrosos a los cientos de años con lo cual es seguro almacenarlos en instalaciones permanentes en superficie. 
+		\item \textbf{Sólidos de alta actividad:} Están constituidos por el combustible gastado. Contienen radionucleidos de larga vida media que tardan miles de años en llegar a niveles seguros de radiación. 
+		
+		Se enfrían en piscinas en la propia central durante 5 años y después se embuten en vidrio para ser almacenados en lugares de almacenamiento centralizado. Actualmente en España estos residuos se almacenan en el extranjero con un coste de 49.545,17€/día (en teoria deberian haber vuelto a España en 2010). Al año se gastan 160 toneladas de combustible 5\% de los residuos radioactivos.
+	\end{enumerate}
+	La generación media de una central tipo de 1.000 MW es de 20 toneladas de uranio al
+	año (combustible gastado), de 50 m$_3$ (centrales con tecnología PWR) y 130 m$^3$
+	(centrales BWR) de residuos de media y baja actividad.
+	
+	Anteriormente el precio de la gestión de los residuos radiactivos recaía sobre el consumidor de la energía eléctrica. No obstante, actualmente se plantea que las nucleares paguen esta gestión.
+\end{itemize}
+\subsection{Gestión del combustible gastado.}
+Cuando se descarga el combustible del reactor todavía hay gran cantidad de energía puede ser utilizada al solo haberse gastado el 5\% de la energía inicial.
+\begin{itemize}
+	\item [-] Si se almacena tras su uso en instalaciones de almacenamiento geológico profundo se habla de ciclo abierto.
+	\item [-] Si se reprocesa el combustible gastado para ser reutilizado se habla de ciclo cerrado. En el ciclo cerrado se recupera el combustible fabricando pastillas de óxido de uranio (UO$_2$) y óxido de plutonio (PuO$_2$) que se denominan combustible MOX.
+\end{itemize}
+Las piscinas donde se almacena el combustible gastado suelen ser de agua por su alto coeficiente de transmisión del calor y sus propiedades como blindaje. Hoy en día presentan una problemática debido a que las piscinas de las centrales nucleares españolas están saturadas.
+\section{Impacto ambiental centrales hidroeléctricas.}
+De acuerdo con la IHA (International Hydropower Association), existen varios aspectos clave que hay que tener en
+cuenta para mantener el potencial hidroeléctrico con un desarrollo sostenible en materia medioambiental:
+\begin{enumerate}
+	\item \textbf{Calidad del agua:} Puede reducir la cantidad de oxígeno en agua, su temperatura y la estratificación de los sedimentos.
+	\item \textbf{Erosión y transporte de sedimentos:} Cambia la cantidad de sedimentos transportados y a largo plazo puede cambiar la forma del río por el cambio de la erosión.
+	\item \textbf{Hidrología y flujos mediambientales del río:} Como cambia la hidrología y el entorno del río afecta a la fauna y a actividades humanas que se desarrollaban en el río.
+	\item \textbf{Especies en peligro de extinción:}  La construcción de una presa puede poner en serio riesgo a especies amenazadas o únicas, debido a los
+	cambios del hábitat natural.
+	\item \textbf{Paso de especies:} Muchas especies recorren el río a lo largo de su ciclo de vida en uno o ambos sentidos. En muchos lugares,
+	la migración de peces (como el salmón) es un acontecimiento anual, que se ve seriamente dificultado por las
+	presas.
+	\item \textbf{Plagas animales y vegetales en los embalses:} Los cambios en las condiciones del agua pueden facilitar la colonización de especies
+	ajenas al entorno, creando plagas.
+	\item \textbf{Aspectos sanitarios:} Los cambios producidos en el entorno por la construcción de presas pueden afectar a la salud pública,
+	influyendo en la transmisión de enfermedades.
+	\item \textbf{Actividades de construcción:} Las actividades de construcción provocan alteraciones en el medio acuático y terrestre.
+\end{enumerate}
+\section{Impacto ambiental transporte y transformación energía eléctrica.}
+Tienen un impacto menor que las instalaciones de producción.
+\begin{enumerate}
+	\item \textbf{Líneas de transporte y distribución:} Se utilizan terrenos para la instalación de torres que provocan impacto visual y afectan a la avifauna.
+	\item \textbf{Subestaciones de transformación:}
+	Provocan una pérdida de suelo y vegetación, emiten ruidos y pueden provocar contaminación de agua por fugas.
+	\item \textbf{Redes de baja tensión y centros de transformación:} Producen impacto visual y emisión de ruidos.
+	\item \textbf{Campos electromagnéticos:} Los campos eléctricos son proporcionales a la tensión y los campos magnéticos a la intensidad.	
+\end{enumerate}
