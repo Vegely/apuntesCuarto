@@ -644,7 +644,8 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
  	\caption{Esquema del depósito.}
  	\label{fig:depositobloqueado}
  \end{figure}
- \textcolor{blue}{
+ \textcolor{blue}
+ {
  	Se plantea la ecuación de conservación de la masa: 
  	\[\frac{d}{dt}\iiint_{V_c}\rho\,dV+\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
  	Teniendo en cuenta desarrollos de ejercicios anteriores:
@@ -693,293 +694,341 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
  	\rho v^2_s A_s \vec{i}\cdot\vec{i}
  	+0=	\rho v^2_s A_s\]
  	Por tanto, sustituyendo los término se obtiene:
- \[(P_s-P_a)A_s -F_{fl+atm\rightarrow dep}=\rho v^2_s A_s\rightarrow P_s=P_a\]
- \[|F_{fl+atm\rightarrow dep}|=|\rho v^2_s A_s|\rightarrow  \text{Como se mueve a la izquierda: } \vec{F}_{fl+atm\rightarrow dep}= -\rho v^2_s A_s\vec{i}\]
- Para obtener la relación entre altura y velocidad de salida se aplica el teorema de Bernouilli entre la parte superior del depósito y la salida:
- \[P_1+\rho g h(t)=P_s+\frac{v^2_s(t)}{2}\rho\rightarrow P_1=P_s=P_a \rightarrow h(t)=\frac{v^2_s(t)}{2g}\rightarrow v_s(t)=\sqrt{2gh(t)}\]
- Aplicando esta expresión junto a la obtenida con la conservación de la masa:
- \[v_s(t)=\sqrt{2gh(t)}\]
- \[A\dot{h}(t)=v_s(t)A_s\]
- Resolviendo la EDO se obtiene:
- \[\sqrt{h(t)}=\frac{-A_s}{A}\sqrt{\frac{g}{2}}t+\sqrt{h_0}\]
- 	}
- 	
-\item Considérese el siguiente chorro impactando contra una placa de forma axilsimétrica.
-
-\begin{figure}[H]
-	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\large]
-			\draw  (-5.5,15.75) rectangle (-3.25,15.25);
-			\draw  (-5.5,13.25) rectangle (-3.25,12.75);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (-3.25,15.25) -- (0,15.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (0,15.25) .. controls (1,15.25) and (1.25,15.5) .. (1.25,16.5);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (1.25,16.5) -- (1.25,18.5);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (-3.25,13.25) -- (0,13.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (0,13.25) .. controls (1.25,13.25) and (1.25,13) .. (1.25,12);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (1.25,12) -- (1.25,10);
-			\draw [short] (1.5,18.5) -- (1.5,10);
-			\draw [short] (2.5,18.5) -- (2.5,10);
-			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (2,14.25) -- (2,15.75)node[pos=1,above]{$\vec{e}_r$};
-			\draw [-latex] (2,14.25) -- (4.5,14.25)node[pos=1,right]{$\vec{v}_p$};
-			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (2,14.25) -- (3.25,14.25)node[pos=1,above]{$\vec{k}$};
-			\draw [short] (-6,14.25) -- (-5,14.25);
-			\draw [short] (-4.75,14.25) -- (-4.5,14.25);
-			\draw [short] (-4.25,14.25) -- (-3.25,14.25);
-			\draw [short] (-3,14.25) -- (-2.75,14.25);
-			\draw [short] (-2.5,14.25) -- (-1.5,14.25);
-			\draw [short] (-1.25,14.25) -- (-1,14.25);
-			\draw [short] (-0.75,14.25) -- (0.25,14.25);
-			\draw [short] (0.5,14.25) -- (0.75,14.25);
-			\draw [short] (1,14.25) -- (2,14.25);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (-5.5,14.75) -- (-3.5,14.75)node[pos=1,right]{$\vec{v}_e$};
-			\node [font=\large, color={rgb,255:red,0; green,128; blue,255}] at (-1.75,13.75) {$\rho=cte$};
-			\node [font=\large] at (-4.25,17.75) {$P_a$};
-			\draw [-latex] (0.75,17.75) -- (1.25,17.75)node[pos=0,above]{h(r)};
-			\draw [-latex] (2,17.75) -- (1.5,17.75);
-			\node [font=\large] at (1,15.25) {\textbf{r}};
-			\draw [-latex] (-5.5,9.75) -- (-4.25,9.75)node[pos=1,right]{$\vec{i}$};
-			\draw [-latex] (-5.5,9.75) -- (-5.5,11)node[pos=1,above]{$\vec{j}$};
-			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (1.25,11.75) -- (2.25,11.75)node[pos=0.5,above]{$\vec{n}_p$};
-			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (1,15.5) -- (0.25,16.25)node[pos=1,above]{$\vec{n}_{int}$};
-			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (-4.5,13.75) -- (-5.75,13.75)node[pos=0.4,above]{$\vec{n}_e$};
-			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (1.5,11.25) -- (1.5,10.25)node[pos=0.5,left]{$\vec{n}_r,$ $\vec{v}_r$};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (-4.5,15.25) -- (-4.5,13.25);
-			\node [font=\large, color={rgb,255:red,0; green,128; blue,255}] at (0.25,13.75) {$V_C$};
-			\node [font=\large] at (-4.5,16) {Boquilla};
-			\node [font=\large] at (3.5,13.25) {$v_e>v_p$};
-			\draw [latex-latex] (-6,15.25) -- (-6,13.25)node[pos=0.5,left]{$D_e$};
-		\end{circuitikz}
-		
-		\begin{circuitikz}
-			\draw  (11,14.25) ellipse (2cm and 3cm);
-			\draw [short] (11,17.25) -- (9.75,17.25);
-			\draw [short] (11,11.25) -- (9.75,11.25);
-			\draw [short] (9.75,11.25) .. controls (8,12.25) and (7.75,16.25) .. (9.75,17.25);
-			\draw [-latex] (11,14.25) -- (11,17.25)node[pos=0.5,left]{r};
-			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (11,14.25) -- (10.5,15)node[pos=0.5,left]{$\vec{e}_r$};
-			\draw [latex-latex] (9.75,17.75) -- (11,17.75)node[pos=0.5,above]{h(r)};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (9,15.75) -- (8.25,16)node[pos=1,above]{$\vec{e}_r,$ $\vec{v}_r$};
-		\end{circuitikz}
-	\caption{Esquema del chorro axilsimétrico.}
-	\label{fig:chorroaxil}
-\end{figure}
-
-Calcular la fuerza que ejerce el chorro junto con la presión atmosférica sobre la placa.
-
-\textcolor{blue}
-{
-	\textit{Conservación de la masa en forma integral:}
-	\[\dfrac{d}{dt} \iiint_{V_C}\rho dV + \oiint_{S_C} \rho (\vec{v}-\vec{v}_C)\cdot \vec{n} dS = 0\]
-	Asumiendo el sistema como globalmente estacionario:
-	\[\dfrac{d}{dt} \iiint_{V_C} \rho dV = 0; S_C = S_e \cup S_p \cup S_{int} \cup S_r\]
-	\[
-	\red
-	{
-		\underbrace
-		{
-			\blue \iint_{S_e}\rho (\vec{v}-\vec{v}_C)\cdot \vec{n}_e dS
-		}
-		_
-		{
-			\begin{matrix}
-				\vec{v}_C=\vec{0}\\
-				\vec{v}=-(v_e-v_p)\vec{k}\\
-				\vec{n}_e=-\vec{k}
-			\end{matrix}
-		}
-	}
-	\blue +
-	\red
-	{
-		\underbrace
-		{
-			\blue \iint_{S_p}\rho (\vec{v}-\vec{v}_C)\cdot \vec{n}_p dS
-		}
-		_
-		{
-			\begin{matrix}
-				\vec{v}_C=\vec{0}\\
-				\vec{v}=0\\
-				\vec{n}_p=\text{no importa}
-			\end{matrix}
-		}
-	}
-	\blue +
-	\red
-	{
-		\underbrace
-		{
-			\blue \iint_{S_{int}}\rho (\vec{v}-\vec{v}_C)\cdot \vec{n}_{int} dS
-		}
-		_
-		{
-			\begin{matrix}
-				\vec{v}_C=\vec{0}\\
-				\vec{v}=\vec{v}_{int}\\
-				\vec{n}_{int}\perp \vec{v}_{int}
-			\end{matrix}
-		}
-	}
-	\blue +
-	\red
-	{
-		\underbrace
-		{
-			\blue \iint_{S_{r}}\rho (\vec{v}-\vec{v}_C)\cdot \vec{n}_{r} dS
-		}
-		_
-		{
-			\begin{matrix}
-				\vec{v}_C=\vec{0}\\
-				\vec{v}=\vec{v}_{r} \cdot \vec{e}_r\\
-			\end{matrix}
-		}
-	}
-	\blue \Rightarrow
-	\]	
-	Sabiendo que $\vec{e}_r$ es un campo vectorial central y, por tanto \[\iint_S\vec{e}_rdS=0\Rightarrow\]
-	\[(v_e-v_p)\dfrac{\pi D_e^2}{4}=v_r2\pi rh(r)\]
-	\textit{Conservación de la cantidad de movimiento en forma integral:}
-	\[\dfrac{d}{dt} \iiint_{V_C}\rho \vec{v} dV + \oiint_{S_C} \rho \vec{v} (\vec{v}-\vec{v}_C)\cdot \vec{n} dS = \oiint_{S_C}(-p\cdot \bar{\bar{I}}+\bar{\bar{\tau}}_v)\cdot \vec{n}dS+\iiint_{V_C}\rho \vec{g} dV=(*)\]
-	\[\iiint_{V_C}\rho \vec{g} dV = 0\text{ al ser el número de Froude } Fr\uparrow\uparrow \]
-	\[\iint_{S_e\cup S_{int}\cup S_r} (-(p-p_a)\bar{\bar{I}} + \bar{\bar{\tau}}_v)\cdot \vec{n} dS = 0 \text{ al ser } P = P_a, \text{ flujo ideal uniforme } (Re\uparrow\uparrow) \Rightarrow \bar{\bar{\tau}}_v = \bar{\bar{0}}\]
-	\[(*)=-\rho(v_e-v_p)^2\cdot\dfrac{\pi D_e^2}{4}\vec{k}+
-	\red
-	{
-		\underbrace
-		{
-			\blue \iint_{S_r} \rho \vec{v}(\vec{v}-\vec{v}_C)\cdot \vec{n} dS
-		}
-		_
-		{
-			\rho |\vec{v}_r|^2 \iint_{S_r} \vec{e}_r dS = 0
-		}
-	}
-	\blue
-	+
-	\red
-	{
-		\underbrace
-		{
-			\blue \iint_{S_p}\dots dS
-		}
-		_
-		{
-			0
-		}
-	}
-	\blue
-	+ 
-	\red
-	{
-		\underbrace
-		{
-			\blue \iint_{S_{int}}\dots dS
-		}
-		_
-		{
-			0
-		}
-	}
-\]
-Luego el resultado es:
-\[\vec{F}_{jet+atm\rightarrow placa} = -\rho(v_e-v_p)^2\cdot\dfrac{\pi D_e^2}{4}\vec{k}\]
+	 \[(P_s-P_a)A_s -F_{fl+atm\rightarrow dep}=\rho v^2_s A_s\rightarrow P_s=P_a\]
+	 \[|F_{fl+atm\rightarrow dep}|=|\rho v^2_s A_s|\rightarrow  \text{Como se mueve a la izquierda: } \vec{F}_{fl+atm\rightarrow dep}= -\rho v^2_s A_s\vec{i}\]
+	 Para obtener la relación entre altura y velocidad de salida se aplica el teorema de Bernouilli entre la parte superior del depósito y la salida:
+	 \[P_1+\rho g h(t)=P_s+\frac{v^2_s(t)}{2}\rho\rightarrow P_1=P_s=P_a \rightarrow h(t)=\frac{v^2_s(t)}{2g}\rightarrow v_s(t)=\sqrt{2gh(t)}\]
+	 Aplicando esta expresión junto a la obtenida con la conservación de la masa:
+	 \[v_s(t)=\sqrt{2gh(t)}\]
+	 \[A\dot{h}(t)=v_s(t)A_s\]
+	 Resolviendo la EDO se obtiene:
+	 \[\sqrt{h(t)}=\frac{-A_s}{A}\sqrt{\frac{g}{2}}t+\sqrt{h_0}\]
 }
+%\item Considérese el siguiente chorro impactando contra una placa de forma axilsimétrica.
+%
+%\begin{figure}[H]
+%	\centering
+%		\begin{circuitikz}
+%			\tikzstyle{every node}=[font=\large]
+%			\draw  (-5.5,15.75) rectangle (-3.25,15.25);
+%			\draw  (-5.5,13.25) rectangle (-3.25,12.75);
+%			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (-3.25,15.25) -- (0,15.25);
+%			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (0,15.25) .. controls (1,15.25) and (1.25,15.5) .. (1.25,16.5);
+%			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (1.25,16.5) -- (1.25,18.5);
+%			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (-3.25,13.25) -- (0,13.25);
+%			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (0,13.25) .. controls (1.25,13.25) and (1.25,13) .. (1.25,12);
+%			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (1.25,12) -- (1.25,10);
+%			\draw [short] (1.5,18.5) -- (1.5,10);
+%			\draw [short] (2.5,18.5) -- (2.5,10);
+%			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (2,14.25) -- (2,15.75)node[pos=1,above]{$\vec{e}_r$};
+%			\draw [-latex] (2,14.25) -- (4.5,14.25)node[pos=1,right]{$\vec{v}_p$};
+%			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (2,14.25) -- (3.25,14.25)node[pos=1,above]{$\vec{k}$};
+%			\draw [short] (-6,14.25) -- (-5,14.25);
+%			\draw [short] (-4.75,14.25) -- (-4.5,14.25);
+%			\draw [short] (-4.25,14.25) -- (-3.25,14.25);
+%			\draw [short] (-3,14.25) -- (-2.75,14.25);
+%			\draw [short] (-2.5,14.25) -- (-1.5,14.25);
+%			\draw [short] (-1.25,14.25) -- (-1,14.25);
+%			\draw [short] (-0.75,14.25) -- (0.25,14.25);
+%			\draw [short] (0.5,14.25) -- (0.75,14.25);
+%			\draw [short] (1,14.25) -- (2,14.25);
+%			\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (-5.5,14.75) -- (-3.5,14.75)node[pos=1,right]{$\vec{v}_e$};
+%			\node [font=\large, color={rgb,255:red,0; green,128; blue,255}] at (-1.75,13.75) {$\rho=cte$};
+%			\node [font=\large] at (-4.25,17.75) {$P_a$};
+%			\draw [-latex] (0.75,17.75) -- (1.25,17.75)node[pos=0,above]{h(r)};
+%			\draw [-latex] (2,17.75) -- (1.5,17.75);
+%			\node [font=\large] at (1,15.25) {\textbf{r}};
+%			\draw [-latex] (-5.5,9.75) -- (-4.25,9.75)node[pos=1,right]{$\vec{i}$};
+%			\draw [-latex] (-5.5,9.75) -- (-5.5,11)node[pos=1,above]{$\vec{j}$};
+%			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (1.25,11.75) -- (2.25,11.75)node[pos=0.5,above]{$\vec{n}_p$};
+%			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (1,15.5) -- (0.25,16.25)node[pos=1,above]{$\vec{n}_{int}$};
+%			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (-4.5,13.75) -- (-5.75,13.75)node[pos=0.4,above]{$\vec{n}_e$};
+%			\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (1.5,11.25) -- (1.5,10.25)node[pos=0.5,left]{$\vec{n}_r,$ $\vec{v}_r$};
+%			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (-4.5,15.25) -- (-4.5,13.25);
+%			\node [font=\large, color={rgb,255:red,0; green,128; blue,255}] at (0.25,13.75) {$V_C$};
+%			\node [font=\large] at (-4.5,16) {Boquilla};
+%			\node [font=\large] at (3.5,13.25) {$v_e>v_p$};
+%			\draw [latex-latex] (-6,15.25) -- (-6,13.25)node[pos=0.5,left]{$D_e$};
+%		\end{circuitikz}
+%		
+%		\begin{circuitikz}
+%			\draw  (11,14.25) ellipse (2cm and 3cm);
+%			\draw [short] (11,17.25) -- (9.75,17.25);
+%			\draw [short] (11,11.25) -- (9.75,11.25);
+%			\draw [short] (9.75,11.25) .. controls (8,12.25) and (7.75,16.25) .. (9.75,17.25);
+%			\draw [-latex] (11,14.25) -- (11,17.25)node[pos=0.5,left]{r};
+%			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (11,14.25) -- (10.5,15)node[pos=0.5,left]{$\vec{e}_r$};
+%			\draw [latex-latex] (9.75,17.75) -- (11,17.75)node[pos=0.5,above]{h(r)};
+%			\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (9,15.75) -- (8.25,16)node[pos=1,above]{$\vec{e}_r,$ $\vec{v}_r$};
+%		\end{circuitikz}
+%	\caption{Esquema del chorro axilsimétrico.}
+%	\label{fig:chorroaxil}
+%\end{figure}
+%
+%Calcular la fuerza que ejerce el chorro junto con la presión atmosférica sobre la placa.
+%
+%\textcolor{blue}
+%{
+%	\textit{Conservación de la masa en forma integral:}
+%	\[\dfrac{d}{dt} \iiint_{V_C}\rho dV + \oiint_{S_C} \rho (\vec{v}-\vec{v}_C)\cdot \vec{n} dS = 0\]
+%	Asumiendo el sistema como globalmente estacionario:
+%	\[\dfrac{d}{dt} \iiint_{V_C} \rho dV = 0; S_C = S_e \cup S_p \cup S_{int} \cup S_r\]
+%	\[
+%	\red
+%	{
+%		\underbrace
+%		{
+%			\blue \iint_{S_e}\rho (\vec{v}-\vec{v}_C)\cdot \vec{n}_e dS
+%		}
+%		_
+%		{
+%			\begin{matrix}
+%				\vec{v}_C=\vec{0}\\
+%				\vec{v}=-(v_e-v_p)\vec{k}\\
+%				\vec{n}_e=-\vec{k}
+%			\end{matrix}
+%		}
+%	}
+%	\blue +
+%	\red
+%	{
+%		\underbrace
+%		{
+%			\blue \iint_{S_p}\rho (\vec{v}-\vec{v}_C)\cdot \vec{n}_p dS
+%		}
+%		_
+%		{
+%			\begin{matrix}
+%				\vec{v}_C=\vec{0}\\
+%				\vec{v}=0\\
+%				\vec{n}_p=\text{no importa}
+%			\end{matrix}
+%		}
+%	}
+%	\blue +
+%	\red
+%	{
+%		\underbrace
+%		{
+%			\blue \iint_{S_{int}}\rho (\vec{v}-\vec{v}_C)\cdot \vec{n}_{int} dS
+%		}
+%		_
+%		{
+%			\begin{matrix}
+%				\vec{v}_C=\vec{0}\\
+%				\vec{v}=\vec{v}_{int}\\
+%				\vec{n}_{int}\perp \vec{v}_{int}
+%			\end{matrix}
+%		}
+%	}
+%	\blue +
+%	\red
+%	{
+%		\underbrace
+%		{
+%			\blue \iint_{S_{r}}\rho (\vec{v}-\vec{v}_C)\cdot \vec{n}_{r} dS
+%		}
+%		_
+%		{
+%			\begin{matrix}
+%				\vec{v}_C=\vec{0}\\
+%				\vec{v}=\vec{v}_{r} \cdot \vec{e}_r\\
+%			\end{matrix}
+%		}
+%	}
+%	\blue \Rightarrow
+%	\]	
+%	Sabiendo que $\vec{e}_r$ es un campo vectorial central y, por tanto \[\iint_S\vec{e}_rdS=0\Rightarrow\]
+%	\[(v_e-v_p)\dfrac{\pi D_e^2}{4}=v_r2\pi rh(r)\]
+%	\textit{Conservación de la cantidad de movimiento en forma integral:}
+%	\[\dfrac{d}{dt} \iiint_{V_C}\rho \vec{v} dV + \oiint_{S_C} \rho \vec{v} (\vec{v}-\vec{v}_C)\cdot \vec{n} dS = \oiint_{S_C}(-p\cdot \bar{\bar{I}}+\bar{\bar{\tau}}_v)\cdot \vec{n}dS+\iiint_{V_C}\rho \vec{g} dV=(*)\]
+%	\[\iiint_{V_C}\rho \vec{g} dV = 0\text{ al ser el número de Froude } Fr\uparrow\uparrow \]
+%	\[\iint_{S_e\cup S_{int}\cup S_r} (-(p-p_a)\bar{\bar{I}} + \bar{\bar{\tau}}_v)\cdot \vec{n} dS = 0 \text{ al ser } P = P_a, \text{ flujo ideal uniforme } (Re\uparrow\uparrow) \Rightarrow \bar{\bar{\tau}}_v = \bar{\bar{0}}\]
+%	\[(*)=-\rho(v_e-v_p)^2\cdot\dfrac{\pi D_e^2}{4}\vec{k}+
+%	\red
+%	{
+%		\underbrace
+%		{
+%			\blue \iint_{S_r} \rho \vec{v}(\vec{v}-\vec{v}_C)\cdot \vec{n} dS
+%		}
+%		_
+%		{
+%			\rho |\vec{v}_r|^2 \iint_{S_r} \vec{e}_r dS = 0
+%		}
+%	}
+%	\blue
+%	+
+%	\red
+%	{
+%		\underbrace
+%		{
+%			\blue \iint_{S_p}\dots dS
+%		}
+%		_
+%		{
+%			0
+%		}
+%	}
+%	\blue
+%	+ 
+%	\red
+%	{
+%		\underbrace
+%		{
+%			\blue \iint_{S_{int}}\dots dS
+%		}
+%		_
+%		{
+%			0
+%		}
+%	}
+%\]
+%Luego el resultado es:
+%\[\vec{F}_{jet+atm\rightarrow placa} = -\rho(v_e-v_p)^2\cdot\dfrac{\pi D_e^2}{4}\vec{k}\]
+%}
  
- \item Cálcule la fuerza aplicada por un chorro sobre una placa móvil: 
- \begin{figure}[H]
+\item Calcule la fuerza aplicada por un chorro sobre una placa móvil: 
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{imagenesEjercicios/chorro placa}
 	\caption{Esquema del problema.}
 	\label{fig:depositobloqueado}
 \end{figure}
- \textcolor{blue}{
-Se coloca el sistema de referencia en la placa y con velocidad $\vec{v}_p$ que como es constante no provoca fuerzas de inercia. De esta manera el chorro sale a la velocidad: $\vec{v}_e-\vec{v}_p$
-\\
-Se plantea la ecuación de conservación de la masa: 
-\[\frac{d}{dt}\iiint_{V_c}\rho\,dV+\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
-Como el volumen de control no cambia:
-\[\frac{d}{dt}\iiint_{V_c}\rho\,dV=0\]
-Desarrollando el término de superficie:
-\[\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=\]
-\[
-\iint_{S_e} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
-+
-\iint_{S_{int}} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
-+
-\iint_{S_r} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
-+
-\iint_{S_P} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
-\]
-La velocidad del volumen de control $\vec{v}_c=0$
-\begin{itemize}
-	\item En la salida del chorro, por ser un perfil uniforme:
-	\[\iint_{S_e} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=
-	\iint_{S_e} \rho\\left(v_e-v_P\right)\vec{i}\cdot-\vec{i} \,dS=
-	-\left(v_e-v_P\right)\frac{\pi D^2_i}{4}\]
-	\item En la interfase como la velocidad es siempre perpendicular a la superficie:
-	\[\iint_{S_{int}} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
-	\item En la dirección radial de la placa:
-	\[\iint_{S_r} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=
-	\iint_{S_r} \rho v_r\vec{e}_r\cdot\vec{e}_r \,dS=v_r2\pi r h(r) \text{ [Área de un cilindro]}\]
-	\item En la placa, como la velocidad del fluido es 0:
-	\[\iint_{S_P} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
-\end{itemize}
-Por tanto:
-\[\left(v_e-v_P\right)\frac{\pi D^2_i}{4}=v_r2\pi r h(r)\]
-Planteando la conservación de la cantidad de movimiento:
-\[\iiint_{V_c}\vec{f}_V\,dV
-+
-\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
-\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV
-+\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
-Se desprecia el término de fuerzas volumétricas (número de Froude elevado):
-\[\iiint_{V_c}\vec{f}_V\,dV=0\]
-El término de fuerzas superficiales:
-\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=\]
-\[
-\iint_{S_e}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
-+
-\iint_{S_{int}}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
-+
-\iint_{S_r}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
-+
-\iint_{S_P}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
-\]
-Aplicando el mismo razonamiento que en anteriores ejercicios se introduce la presión atmosférica $P_a$. Como el número de Reynolds y Froude son elevados porque es un líquido está dentro de un gas, $\overline{\overline{\tau}} $ es despreciable.
-\begin{itemize}
-	\item En la salida del chorro, por ser un perfil uniforme y la presión es la atmosférica:
-	\[\iint_{S_e}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=0\]
-	\item En la interfase como la presión es la atmosférica:
-	\[\iint_{S_{int}}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=0\]
-	\item En la dirección radial de la placa como la presión es la atmosférica:
-	\[\iint_{S_r}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=0\]
-	\item En la placa:
-	\[\iint_{S_p}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=-F_{jet+atm\rightarrow placa}\]
-\end{itemize}
-El término local es despreciable ya que el fluido es globalmente estacionario:
-\[\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV=0\]
-El término superficial, teniendo en cuenta como en los desarrollos anteriores solo eran no nulos los términos a la salida del chorro y en la dirección radial de la placa:
-\[\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
-\iint_{S_e}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS
-+
-\iint_{S_r}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
-\begin{itemize}
-	\item En la salida del chorro:
-	\[\iint_{S_e}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
-	\iint_{S_e}\rho \left(v_e-v_p\right) \vec{k}\left[\left(v_e-v_p\right) \vec{k}\cdot-\vec{k}\right]\,dS=-\rho\left(v_e-v_p\right)^2\frac{\pi D^2_i}{4}\vec{k}\]
-	\item En la dirección radial de la placa:
-	\[\iint_{S_r}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
-	\iint_{S_r}\rho v_r \vec{e}_r\left[v_r \vec{e}_r\cdot\vec{e}_r\right]\,dS=\rho v^2_r\iint_{S_r}\vec{e}_r\,dS=0 \text{ Ver figura inferior}\]
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.6\linewidth]{imagenesEjercicios/resultante0}
-		\caption{Representación de $\vec{e}_r$ a lo largo de la superficie.}
-		\label{fig:resultante0}
-	\end{figure}
-\end{itemize}
-Por tanto:
-\[F_{jet+atm\rightarrow placa}=\rho\left(v_e-v_p\right)^2\frac{\pi D^2_i}{4}\vec{k}\]
+\textcolor{blue}
+{
+	Se coloca el sistema de referencia en la placa y con velocidad $\vec{v}_p$ que como es constante no provoca fuerzas de inercia. De esta manera el chorro sale a la velocidad: $\vec{v}_e-\vec{v}_p$
+	\\
+	Se plantea la ecuación de conservación de la masa: 
+	\[\frac{d}{dt}\iiint_{V_c}\rho\,dV+\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	Como el volumen de control no cambia:
+	\[\frac{d}{dt}\iiint_{V_c}\rho\,dV=0\]
+	Desarrollando el término de superficie:
+	\[\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=\]
+	\[
+	\iint_{S_e} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
+	+
+	\iint_{S_{int}} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
+	+
+	\iint_{S_r} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
+	+
+	\iint_{S_P} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
+	\]
+	La velocidad del volumen de control $\vec{v}_c=0$
+	\begin{itemize}
+		\item En la salida del chorro, por ser un perfil uniforme:
+			\[\iint_{S_e} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=
+			\iint_{S_e} \rho \left( v_e-v_P \right)\vec{i}\cdot-\vec{i} \,dS=
+			-\left(v_e-v_P\right)\frac{\pi D^2_i}{4}\]
+		\item En la interfase como la velocidad es siempre perpendicular a la superficie:
+			\[\iint_{S_{int}}\rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right]\,dS=0\]
+		\item En la dirección radial de la placa:
+			\[\iint_{S_r} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=\iint_{S_r} \rho v_r\vec{e}_r\cdot\vec{e}_r \,dS=v_r2\pi r h(r) \text{[Área de un cilindro]}\]
+		\item En la placa, como la velocidad del fluido es 0:
+			\[\iint_{S_P} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right]\,dS=0\]
+	\end{itemize}
+	Por tanto:
+		\[\left(v_e-v_P\right)\frac{\pi D^2_i}{4}=v_r2\pi r h(r)\]
+	Planteando la conservación de la cantidad de movimiento:
+		\[\iiint_{V_c}\vec{f}_V\,dV
+		+
+		\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
+		\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV
+		+ \oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
+	Se desprecia el término de fuerzas volumétricas (número de Froude elevado):
+		\[\iiint_{V_c}\vec{f}_V\,dV=0\]
+	El término de fuerzas superficiales:
+		\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=\]
+		\[
+		\iint_{S_e}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+		+
+		\iint_{S_{int}}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+		+
+		\iint_{S_r}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+		+
+		\iint_{S_P}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+		\]
+	Aplicando el mismo razonamiento que en anteriores ejercicios se introduce la presión atmosférica $P_a$. Como el número de Reynolds y Froude son elevados porque es un líquido está dentro de un gas, $\overline{\overline{\tau}} $ es despreciable.
+	\begin{itemize}
+		\item En la salida del chorro, por ser un perfil uniforme y la presión es la atmosférica:
+			\[\iint_{S_e}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=0\]
+		\item En la interfase como la presión es la atmosférica:
+			\[\iint_{S_{int}}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=0\]
+		\item En la dirección radial de la placa como la presión es la atmosférica:
+			\[\iint_{S_r}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=0\]
+		\item En la placa:
+			\[\iint_{S_p}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=-F_{jet+atm\rightarrow placa}\]
+	\end{itemize}
+	El término local es despreciable ya que el fluido es globalmente estacionario:
+		\[\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV=0\]
+	El término superficial, teniendo en cuenta como en los desarrollos anteriores solo eran no nulos los términos a la salida del chorro y en la dirección radial de la placa:
+		\[\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
+		\iint_{S_e}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS
+		+
+		\iint_{S_r}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
+	\begin{itemize}
+		\item En la salida del chorro:
+			\[\iint_{S_e}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
+			\iint_{S_e}\rho \left(v_e-v_p\right) \vec{k}\left[\left(v_e-v_p\right) \vec{k}\cdot-\vec{k}\right]\,dS=-\rho\left(v_e-v_p\right)^2\frac{\pi D^2_i}{4}\vec{k}\]
+		\item En la dirección radial de la placa:
+			\[\iint_{S_r}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
+			\iint_{S_r}\rho v_r \vec{e}_r\left[v_r \vec{e}_r\cdot\vec{e}_r\right]\,dS=\rho v^2_r\iint_{S_r}\vec{e}_r\,dS=0 \text{ Ver figura inferior}\]
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.6\linewidth]{imagenesEjercicios/resultante0}
+			\caption{Representación de $\vec{e}_r$ a lo largo de la superficie.}
+			\label{fig:resultante0}
+		\end{figure}
+	\end{itemize}
+	Por tanto:
+		\[F_{jet+atm\rightarrow placa}=\rho\left(v_e-v_p\right)^2\frac{\pi D^2_i}{4}\vec{k}\]
 }
+\item Dado el depósito de la Figura \ref{fig:depositoaltura}, determinar la expresión de la longitud que recorre el chorro que sale del depósito, en función del tiempo.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{imagenesEjercicios/depositoAltura}
+	\caption{Esquema del depósito en altura.}
+	\label{fig:depositoaltura}
+\end{figure}
+
+\blue
+\textit{\textbf{Forma macroscópica.}}
+\[V_C = V_{\text{depósito}} = V_{C, \text{líquido}} + V_{C, \text{gas}}\]
+\[\dfrac{d}{dt} \iiint_{V_{C_l}} \rho\,dV + \oiint_{S_{C_l} = S_p \cup S_{nivel} \cup S_{salida}} \rho (\vec{v}-\vec{v}_C) \cdot \vec{n}\,dS=0\]
+
+\begin{itemize}
+	\item El término local:
+	\[\dfrac{d}{dt} \iiint_{V_{C_l}} \rho\,dV = \rho A \dfrac{dH}{dt}\]
+	\item El término convectivo:
+	\[\oiint_{S_{C_l} = S_p \cup S_{nivel} \cup S_{salida}} \rho (\vec{v}-\vec{v}_C) \cdot \vec{n}\,dS=\rho v_s \dfrac{\pi D_0^2}{4}\]
+\end{itemize}
+
+\[-A\dfrac{dH}{dt} = v_s\dfrac{\pi D_0^2}{4}\]
+
+\[Q_{\text{líquido}} = Q_{\text{gas}} \Rightarrow v_s\dfrac{\pi D_0^2}{4} = v_g\dfrac{\pi D_1^2}{4}\]
+\[\dfrac{dV_C}{dt} = 0 \Rightarrow \dfrac{dV_{C_{\text{líquido}}}}{dt} = -\dfrac{dV_{C_{\text{gas}}}}{dt}\]
+
+Analizando el lazo de presiones:
+
+\[
+	\begin{matrix}
+		P_1 = P_a\\
+		P_2 + \dfrac{1}{2}\rho_a v_g^2 = P_1 + \dfrac{1}{2}\rho_a v_{g,atm}^2\\
+		P_3 = P_2(\rho_a \text{ es muy pequeña})\\
+		P_4 = P_3 (\text{interfase plana})\\
+		P_5 = P_4 + \rho_l g H(t)\\
+		P_6 = P_5
+		P_7 + \dfrac{1}{2} \rho_l v_s^2 = P_6\\
+		P_7 = P_a
+	\end{matrix}
+\]
+
+Donde $P_1$ es la presión antes del orificio 1 (por donde entra el gas), $P_2$ la presión después del orificio, $P_3$ antes de la interfase, $P_4$ después de la interfase, $P_5$ en el fondo del depósito, $P_6$ algo antes del orificio de salida y $P_7$ la presión tras salir del edificio.
+
+
+Sabiendo que el término $\dfrac{1}{2}\rho_a v_{g,atm}^2$ es despreciable frente a $\dfrac{1}{2}\rho_a v_{g}^2$, tras sumar todas las presiones resulta:
+\[\dfrac{1}{2}\rho_a v_{g}^2 = \dfrac{1}{2}\rho_a v_{s}^2 + \rho g H(t)\]
+
+\textit{\textbf{Forma microscópica.}}
+
+
 \end{enumerate}
