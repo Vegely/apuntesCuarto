@@ -101,89 +101,90 @@
 \contentsline {section}{\numberline {2.10}Impacto ambiental centrales hidroeléctricas.}{43}{}%
 \contentsline {section}{\numberline {2.11}Impacto ambiental transporte y transformación energía eléctrica.}{44}{}%
 \contentsline {chapter}{\numberline {3}Tecnologías más eficientes. Captura de $\textbf {CO}_2$}{45}{}%
-\contentsline {section}{\numberline {3.1}Evolución de las calderas de combustión de carbón.}{46}{}%
-\contentsline {subsection}{\numberline {3.1.1}Turbina de vapor.}{46}{}%
+\contentsline {section}{\numberline {3.1}Evolución de las calderas de combustión de carbón.}{45}{}%
+\contentsline {subsection}{\numberline {3.1.1}Turbina de vapor.}{45}{}%
 \contentsline {section}{\numberline {3.2}Tecnología de captura y almacenamiento de CO$_2$.}{46}{}%
 \contentsline {subsection}{\numberline {3.2.1}Combustión convencional del carbón pulverizado.}{46}{}%
 \contentsline {subsection}{\numberline {3.2.2}Co-combustión.}{46}{}%
-\contentsline {subsection}{\numberline {3.2.3}Captura CO$_2$ antes de la combustión.}{46}{}%
-\contentsline {subsection}{\numberline {3.2.4}Captura CO$_2$ durante la combustión.}{46}{}%
-\contentsline {subsection}{\numberline {3.2.5}Captura CO$_2$ tras la combustión.}{46}{}%
-\contentsline {subsection}{\numberline {3.2.6}Transporte y almacenamiento de CO$_2$.}{46}{}%
-\contentsline {subsection}{\numberline {3.2.7}Transformación CO$_2$ en metano.}{46}{}%
-\contentsline {section}{\numberline {3.3}Calderas de combustión de lecho fluidizado (CLF).}{46}{}%
-\contentsline {subsection}{\numberline {3.3.1}Ventajas CLF.}{46}{}%
-\contentsline {subsection}{\numberline {3.3.2}Tipos de CLF.}{46}{}%
-\contentsline {section}{\numberline {3.4}Gasificación del carbón.}{46}{}%
-\contentsline {subsection}{\numberline {3.4.1}Tipos de gasificadores.}{46}{}%
-\contentsline {subsection}{\numberline {3.4.2}Estado actual de la gasificación.}{46}{}%
-\contentsline {section}{\numberline {3.5}Hidrógeno.}{46}{}%
-\contentsline {subsection}{\numberline {3.5.1}Producción del hidrógeno.}{46}{}%
-\contentsline {subsection}{\numberline {3.5.2}Clasificación del hidrógeno.}{46}{}%
-\contentsline {subsection}{\numberline {3.5.3}Almacenamiento del hidrógeno.}{46}{}%
-\contentsline {subsection}{\numberline {3.5.4}Aplicaciones del hidrógeno.}{46}{}%
-\contentsline {section}{\numberline {3.6}Ciclos combinados.}{46}{}%
-\contentsline {section}{\numberline {3.7}Fusión nuclear.}{46}{}%
-\contentsline {section}{\numberline {3.8}Almacenamiento de energía.}{46}{}%
-\contentsline {subsection}{\numberline {3.8.1}Volantes de inercia.}{46}{}%
-\contentsline {subsection}{\numberline {3.8.2}Supercondensadores.}{47}{}%
-\contentsline {subsection}{\numberline {3.8.3}Baterías.}{47}{}%
-\contentsline {subsection}{\numberline {3.8.4}Aire comprimido (CAES).}{47}{}%
-\contentsline {subsection}{\numberline {3.8.5}Centrales de bombeo.}{47}{}%
-\contentsline {chapter}{\numberline {4}Cobertura de la demanda. Mercado eléctrico.}{49}{}%
-\contentsline {section}{\numberline {4.1}Explotación del mercado eléctrico.}{50}{}%
-\contentsline {section}{\numberline {4.2}Curva de demanda diaria.}{50}{}%
-\contentsline {section}{\numberline {4.3}Pérdidas en la red.}{50}{}%
-\contentsline {section}{\numberline {4.4}Gestión de la red.}{50}{}%
-\contentsline {subsection}{\numberline {4.4.1}Incidencias no previstas.}{50}{}%
-\contentsline {subsection}{\numberline {4.4.2}Configuración sistema eléctrico de potencia.}{50}{}%
-\contentsline {section}{\numberline {4.5}Funcionamiento del mercado eléctrico.}{50}{}%
-\contentsline {subsection}{\numberline {4.5.1}Actividades principales.}{50}{}%
-\contentsline {subsection}{\numberline {4.5.2}Reparto de la distribución de energía eléctrica.}{50}{}%
-\contentsline {subsection}{\numberline {4.5.3}Comercialización.}{50}{}%
-\contentsline {subsection}{\numberline {4.5.4}Organización.}{50}{}%
-\contentsline {subsection}{\numberline {4.5.5}Instituciones reguladoras.}{50}{}%
-\contentsline {subsection}{\numberline {4.5.6}Operador del mercado (OMIE).}{50}{}%
-\contentsline {subsection}{\numberline {4.5.7}Operador del sistema (REE).}{50}{}%
-\contentsline {section}{\numberline {4.6}Mercado ibérico (MIBEL).}{50}{}%
-\contentsline {section}{\numberline {4.7}Interconexiones con el extranjero.}{50}{}%
-\contentsline {subsection}{\numberline {4.7.1}Francia.}{50}{}%
-\contentsline {subsection}{\numberline {4.7.2}Portugal.}{50}{}%
-\contentsline {subsection}{\numberline {4.7.3}Marruecos.}{50}{}%
-\contentsline {subsection}{\numberline {4.7.4}Gestión de las interconexiones.}{50}{}%
-\contentsline {section}{\numberline {4.8}Mercado intradiario.}{50}{}%
-\contentsline {subsection}{\numberline {4.8.1}Secuencia de los procesos del mercado.}{50}{}%
-\contentsline {subsection}{\numberline {4.8.2}Mercados a plazo.}{50}{}%
-\contentsline {subsection}{\numberline {4.8.3}Mercado organizado diario (casación horaria).}{50}{}%
-\contentsline {subsection}{\numberline {4.8.4}Tipos de oferta de venta de energía.}{50}{}%
-\contentsline {subsection}{\numberline {4.8.5}Proceso de casación.}{50}{}%
-\contentsline {subsection}{\numberline {4.8.6}Curva de oferta de venta de energía.}{50}{}%
-\contentsline {subsection}{\numberline {4.8.7}Influencia fuentes renovables.}{50}{}%
-\contentsline {subsection}{\numberline {4.8.8}Retribuciones para amortizar costes fijos.}{50}{}%
-\contentsline {subsection}{\numberline {4.8.9}Curva de demanda.}{50}{}%
-\contentsline {section}{\numberline {4.9}Mercado de restricciones técnicas.}{50}{}%
-\contentsline {section}{\numberline {4.10}Mercado de servicios complementarios.}{50}{}%
-\contentsline {subsection}{\numberline {4.10.1}Regulación primaria.}{50}{}%
-\contentsline {subsection}{\numberline {4.10.2}Regulación secundaria.}{50}{}%
-\contentsline {subsection}{\numberline {4.10.3}Control de tensión.}{50}{}%
-\contentsline {subsection}{\numberline {4.10.4}Reservas de potencia.}{50}{}%
-\contentsline {subsection}{\numberline {4.10.5}Gestión de desvíos.}{50}{}%
-\contentsline {subsection}{\numberline {4.10.6}Regulación terciaria.}{50}{}%
-\contentsline {section}{\numberline {4.11}Precio medio final.}{50}{}%
-\contentsline {subsection}{\numberline {4.11.1}Costes recogidos en la tarifa eléctrica (PVPC).}{50}{}%
-\contentsline {section}{\numberline {4.12}Programación de la generación de electricidad.}{50}{}%
-\contentsline {subsection}{\numberline {4.12.1}Curva acumulada de demanda anual.}{50}{}%
-\contentsline {subsection}{\numberline {4.12.2}Curva de demanda anual.}{50}{}%
-\contentsline {subsection}{\numberline {4.12.3}Parámetros principales curva de demanda.}{50}{}%
-\contentsline {subsection}{\numberline {4.12.4}Curva acumulada de generación anual.}{50}{}%
-\contentsline {subsection}{\numberline {4.12.5}Parámetros principales curva de generación.}{50}{}%
-\contentsline {section}{\numberline {4.13}Reserva de potencia.}{50}{}%
-\contentsline {subsection}{\numberline {4.13.1}Características estáticas.}{50}{}%
-\contentsline {subsection}{\numberline {4.13.2}Características dinámicas.}{50}{}%
-\contentsline {subsection}{\numberline {4.13.3}Secuenciamiento óptimo de grupos.}{50}{}%
-\contentsline {section}{\numberline {4.14}Costes de generación.}{50}{}%
-\contentsline {subsection}{\numberline {4.14.1}Comparativa de costes.}{50}{}%
-\contentsline {subsection}{\numberline {4.14.2}Coste de inversión o fijo.}{50}{}%
-\contentsline {subsection}{\numberline {4.14.3}Costes variables.}{50}{}%
-\contentsline {subsection}{\numberline {4.14.4}Coste total.}{50}{}%
-\contentsline {section}{\numberline {4.15}Aspectos técnicos de la producción de energía.}{50}{}%
+\contentsline {subsection}{\numberline {3.2.3}Captura CO$_2$ antes de la combustión.}{47}{}%
+\contentsline {subsection}{\numberline {3.2.4}Captura CO$_2$ durante la combustión.}{47}{}%
+\contentsline {subsection}{\numberline {3.2.5}Captura CO$_2$ tras la combustión.}{47}{}%
+\contentsline {subsection}{\numberline {3.2.6}Transporte y almacenamiento de CO$_2$.}{48}{}%
+\contentsline {subsection}{\numberline {3.2.7}Transformación CO$_2$ en metano.}{49}{}%
+\contentsline {section}{\numberline {3.3}Calderas de combustión de lecho fluidizado (CLF).}{49}{}%
+\contentsline {subsection}{\numberline {3.3.1}Ventajas CLF.}{49}{}%
+\contentsline {subsection}{\numberline {3.3.2}Tipos de CLF.}{50}{}%
+\contentsline {section}{\numberline {3.4}Gasificación del carbón.}{51}{}%
+\contentsline {subsection}{\numberline {3.4.1}Tipos de gasificadores.}{51}{}%
+\contentsline {subsection}{\numberline {3.4.2}Estado actual de la gasificación.}{51}{}%
+\contentsline {section}{\numberline {3.5}Hidrógeno.}{52}{}%
+\contentsline {subsection}{\numberline {3.5.1}Producción del hidrógeno.}{52}{}%
+\contentsline {subsection}{\numberline {3.5.2}Clasificación del hidrógeno.}{52}{}%
+\contentsline {subsection}{\numberline {3.5.3}Almacenamiento del hidrógeno.}{53}{}%
+\contentsline {subsection}{\numberline {3.5.4}Ventajas del hidrógeno.}{53}{}%
+\contentsline {subsection}{\numberline {3.5.5}Aplicaciones del hidrógeno.}{53}{}%
+\contentsline {section}{\numberline {3.6}Ciclos combinados.}{54}{}%
+\contentsline {section}{\numberline {3.7}Fusión nuclear.}{54}{}%
+\contentsline {section}{\numberline {3.8}Almacenamiento de energía.}{54}{}%
+\contentsline {subsection}{\numberline {3.8.1}Volantes de inercia.}{55}{}%
+\contentsline {subsection}{\numberline {3.8.2}Supercondensadores.}{55}{}%
+\contentsline {subsection}{\numberline {3.8.3}Baterías.}{55}{}%
+\contentsline {subsection}{\numberline {3.8.4}Centrales de bombeo.}{55}{}%
+\contentsline {subsection}{\numberline {3.8.5}Aire comprimido (CAES).}{55}{}%
+\contentsline {chapter}{\numberline {4}Cobertura de la demanda. Mercado eléctrico.}{57}{}%
+\contentsline {section}{\numberline {4.1}Explotación del mercado eléctrico.}{57}{}%
+\contentsline {section}{\numberline {4.2}Curva de demanda diaria.}{57}{}%
+\contentsline {section}{\numberline {4.3}Pérdidas en la red.}{57}{}%
+\contentsline {section}{\numberline {4.4}Gestión de la red.}{57}{}%
+\contentsline {subsection}{\numberline {4.4.1}Incidencias no previstas.}{57}{}%
+\contentsline {subsection}{\numberline {4.4.2}Configuración sistema eléctrico de potencia.}{57}{}%
+\contentsline {section}{\numberline {4.5}Funcionamiento del mercado eléctrico.}{57}{}%
+\contentsline {subsection}{\numberline {4.5.1}Actividades principales.}{57}{}%
+\contentsline {subsection}{\numberline {4.5.2}Reparto de la distribución de energía eléctrica.}{57}{}%
+\contentsline {subsection}{\numberline {4.5.3}Comercialización.}{57}{}%
+\contentsline {subsection}{\numberline {4.5.4}Organización.}{58}{}%
+\contentsline {subsection}{\numberline {4.5.5}Instituciones reguladoras.}{58}{}%
+\contentsline {subsection}{\numberline {4.5.6}Operador del mercado (OMIE).}{58}{}%
+\contentsline {subsection}{\numberline {4.5.7}Operador del sistema (REE).}{58}{}%
+\contentsline {section}{\numberline {4.6}Mercado ibérico (MIBEL).}{58}{}%
+\contentsline {section}{\numberline {4.7}Interconexiones con el extranjero.}{58}{}%
+\contentsline {subsection}{\numberline {4.7.1}Francia.}{58}{}%
+\contentsline {subsection}{\numberline {4.7.2}Portugal.}{58}{}%
+\contentsline {subsection}{\numberline {4.7.3}Marruecos.}{58}{}%
+\contentsline {subsection}{\numberline {4.7.4}Gestión de las interconexiones.}{58}{}%
+\contentsline {section}{\numberline {4.8}Mercado intradiario.}{58}{}%
+\contentsline {subsection}{\numberline {4.8.1}Secuencia de los procesos del mercado.}{58}{}%
+\contentsline {subsection}{\numberline {4.8.2}Mercados a plazo.}{58}{}%
+\contentsline {subsection}{\numberline {4.8.3}Mercado organizado diario (casación horaria).}{58}{}%
+\contentsline {subsection}{\numberline {4.8.4}Tipos de oferta de venta de energía.}{58}{}%
+\contentsline {subsection}{\numberline {4.8.5}Proceso de casación.}{59}{}%
+\contentsline {subsection}{\numberline {4.8.6}Curva de oferta de venta de energía.}{59}{}%
+\contentsline {subsection}{\numberline {4.8.7}Influencia fuentes renovables.}{59}{}%
+\contentsline {subsection}{\numberline {4.8.8}Retribuciones para amortizar costes fijos.}{59}{}%
+\contentsline {subsection}{\numberline {4.8.9}Curva de demanda.}{59}{}%
+\contentsline {section}{\numberline {4.9}Mercado de restricciones técnicas.}{59}{}%
+\contentsline {section}{\numberline {4.10}Mercado de servicios complementarios.}{59}{}%
+\contentsline {subsection}{\numberline {4.10.1}Regulación primaria.}{59}{}%
+\contentsline {subsection}{\numberline {4.10.2}Regulación secundaria.}{59}{}%
+\contentsline {subsection}{\numberline {4.10.3}Control de tensión.}{59}{}%
+\contentsline {subsection}{\numberline {4.10.4}Reservas de potencia.}{59}{}%
+\contentsline {subsection}{\numberline {4.10.5}Gestión de desvíos.}{59}{}%
+\contentsline {subsection}{\numberline {4.10.6}Regulación terciaria.}{59}{}%
+\contentsline {section}{\numberline {4.11}Precio medio final.}{59}{}%
+\contentsline {subsection}{\numberline {4.11.1}Costes recogidos en la tarifa eléctrica (PVPC).}{59}{}%
+\contentsline {section}{\numberline {4.12}Programación de la generación de electricidad.}{60}{}%
+\contentsline {subsection}{\numberline {4.12.1}Curva acumulada de demanda anual.}{60}{}%
+\contentsline {subsection}{\numberline {4.12.2}Curva de demanda anual.}{60}{}%
+\contentsline {subsection}{\numberline {4.12.3}Parámetros principales curva de demanda.}{60}{}%
+\contentsline {subsection}{\numberline {4.12.4}Curva acumulada de generación anual.}{60}{}%
+\contentsline {subsection}{\numberline {4.12.5}Parámetros principales curva de generación.}{60}{}%
+\contentsline {section}{\numberline {4.13}Reserva de potencia.}{60}{}%
+\contentsline {subsection}{\numberline {4.13.1}Características estáticas.}{60}{}%
+\contentsline {subsection}{\numberline {4.13.2}Características dinámicas.}{60}{}%
+\contentsline {subsection}{\numberline {4.13.3}Secuenciamiento óptimo de grupos.}{60}{}%
+\contentsline {section}{\numberline {4.14}Costes de generación.}{60}{}%
+\contentsline {subsection}{\numberline {4.14.1}Comparativa de costes.}{60}{}%
+\contentsline {subsection}{\numberline {4.14.2}Coste de inversión o fijo.}{60}{}%
+\contentsline {subsection}{\numberline {4.14.3}Costes variables.}{60}{}%
+\contentsline {subsection}{\numberline {4.14.4}Coste total.}{60}{}%
+\contentsline {section}{\numberline {4.15}Aspectos técnicos de la producción de energía.}{61}{}%
