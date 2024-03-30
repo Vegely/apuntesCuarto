@@ -1028,7 +1028,185 @@ Donde $P_1$ es la presión antes del orificio 1 (por donde entra el gas), $P_2$ 
 Sabiendo que el término $\dfrac{1}{2}\rho_a v_{g,atm}^2$ es despreciable frente a $\dfrac{1}{2}\rho_a v_{g}^2$, tras sumar todas las presiones resulta:
 \[\dfrac{1}{2}\rho_a v_{g}^2 = \dfrac{1}{2}\rho_a v_{s}^2 + \rho g H(t)\]
 
-\textit{\textbf{Forma microscópica.}}
+Conocemos las expresiones de las velocidades de entrada y salida:
+\[v_g = \dfrac{Q}{\dfrac{\pi D_1^2}{4}}; v_s = \dfrac{Q}{\dfrac{\pi D_0^2}{4}}; Q = Q_g = Q_s\]
 
+Sustituyendo en la ecuación anterior:
+\[\rho_l g H(t) = \dfrac{1}{2} \rho_a \dfrac{Q^2}{\dfrac{\pi^2 D_1^4}{16}} + \dfrac{1}{2}\rho_l \dfrac{Q^2}{\dfrac{\pi^2 D_0^4}{16}} =
+\dfrac{\rho_l 8 Q^2}{\pi^2 D_0^4}\left(\dfrac{\rho_a D_0^4}{\rho_l D_1^4} + 1\right) \Rightarrow\]
+\[\Rightarrow
+	\begin{matrix}
+		\rho_l g H(t)=\dfrac{\rho_l 8 Q^2}{\pi^2 D_0^4}\left(\dfrac{\rho_a D_0^4}{\rho_l D_1^4} + 1\right)\text{, donde }\dfrac{\rho_a D_0^4}{\rho_l D_1^4}\text{ puede llegar a ser de orden 1.}\\
+		Q=-A\dfrac{dH}{dt}
+	\end{matrix}
+	\Biggr\} \Rightarrow\]
+\[\Rightarrow Q = \sqrt{\dfrac{\pi^2 D_0^4 g}{\left(\dfrac{\rho_a D_0^4}{\rho_l D_1^4} + 1\right)} H(t)} = -A\dfrac{dH}{dt}\]
+
+Conociendo la expresión de la caída libre:
+\[\Gamma(t) = L(t)\cdot\vec{i} + Y(t)\cdot\vec{j} = t\cdot v_s(t) \cdot\vec{i} + (H_1 -\dfrac{1}{2}gt^2 )\cdot\vec{j}\]
+
+Y despreciando la componente $\vec{j}$, despejamos la expresión pedida:
+\[L(t) = 4t
+\sqrt
+{
+	\dfrac
+	{gH(t)}
+	{
+		\left(
+		\dfrac
+			{\rho_a D_0^4}
+			{\rho_l D_1^4}
+	 	+ 1
+		\right)
+	}
+}
+\]
+
+\textit{\textbf{Forma microscópica.}}
+	Se trata de centrarse en la interfase. No se estudiará en profundidad.
+	\[\begin{matrix}
+		v_l(\text{interfase}) = v_g(\text{interfase})\\
+		A_l = A_g
+	\end{matrix}
+	\Biggr\} \Rightarrow Q_g = Q_l
+	\]
+	
+\black
+\item El movimiento de un flujo incompresible e isótropo viene dado por el campo de velocidades
+$\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido a la acción de la gravedad, que actúa en la dirección negativa del eje Y. Se pide:
+\begin{enumerate}
+	\item Clasificar el flujo.\\
+	\blue Estacionario, tridimensional, bidireccional.\\
+	\black
+	\item Comprobar que se verifica la ecuación de continuidad.\\
+	\blue
+		\[\dfrac{\partial \rho}{\partial t} + \vec{\nabla}(\rho \vec{v}) = 0\]
+		\[\text{Incompresible}\Rightarrow \rho = cte \Rightarrow \dfrac{\partial \rho}{\partial t} = 0; \vec{\nabla} \cdot \vec{v} = 0\]
+		
+		\[
+			\begin{matrix}
+				\vec{\nabla} = 
+					\dfrac{\partial}{\partial x} \vec{i} +
+					\dfrac{\partial}{\partial y} \vec{j} +
+					\dfrac{\partial}{\partial z} \vec{k}\\
+				\vec{v} = v_x \vec{i} + v_y \vec{j} + v_z \vec{k}
+			\end{matrix}
+			\Biggr\} \Rightarrow
+			\vec{\nabla}\cdot\vec{v} = 
+				\dfrac{\partial v_x}{\partial x} + 
+				\dfrac{\partial v_y}{\partial y} + 
+				\dfrac{\partial v_z}{\partial z}	
+			\Rightarrow
+		\]
+		
+		\[\Rightarrow -2x+0+2x = 0 \Rightarrow \text{Se verifica}\]
+		
+	\black
+	\item Calcular el campo de presiones que actúa sobre el fluido, sabiendo que la presión en el plano XZ con $y=0$ es la presión atmosférica.
+	\blue
+		\[
+			\rho \dfrac{\partial \vec{v}}{\partial t} + \rho (\vec{v} \cdot \vec{\nabla}) \cdot \vec{v} =
+				- \vec{\nabla} P + \mu \vec{\nabla}^2 \vec{v} + \rho \vec{g}
+		\]
+		
+		Desarrollando cada término:
+		
+		\[\dfrac{\partial \vec{v}}{\partial t} = 0 \text{ al ser un flujo estacionario.}\]
+		$(\vec{i})\,\,\,2x^3 + 2xz^2 = -\dfrac{\partial P}{\partial x}$\\
+		$(\vec{j})\,\,\,0 = -\dfrac{\partial P}{\partial y} - \rho g$\\
+		$(\vec{k})\,\,\,(z^2 - x^2)(2z) + 2xz(2x) = 2z^3 + 2x^2z = -\dfrac{\partial P}{\partial z}$\\
+		
+		$\dfrac{\partial P}{\partial x} = -2x^3 -2xz^2 \Rightarrow \int_x \Rightarrow P(x,y,z) = -\dfrac{1}{2} x^4 - x^2z^2 + f(y,z)$\\
+		$\dfrac{\partial P}{\partial y} = -\rho g \Rightarrow \int_y \Rightarrow P(x,y,z) = -\rho g y + m(x,z)$\\
+		$\dfrac{\partial P}{\partial z} = -2z^3 -2zx^2 \Rightarrow \int_z \Rightarrow P(x,y,z) = -\dfrac{1}{2} z^4 - z^2x^2 + h(x,y)$\\
+		
+		$P_a = P(x, y=0, z) = -\dfrac{1}{2} x^4 - x^2z^2 + f(y = 0,z)$\\
+		$P_a = m(x,z)$\\
+		$P_a = P(x, y=0, z) = -\dfrac{1}{2} z^4 - z^2x^2 + h(x,y=0)$
+		
+		\[\rho (\vec{v} \cdot \vec{\nabla}) \cdot \vec{v} = \rho ((z^2 - x^2)(2z-2x) + (2xz)(2z + 2x))\]
+		
+		$\vec{v} \cdot \vec{\nabla} = 
+			v_x \dfrac{\partial}{\partial x} + 
+			v_y \dfrac{\partial}{\partial y} + 
+			v_z \dfrac{\partial}{\partial z}
+		$\\
+		
+		$(\vec{v} \cdot \vec{\nabla})v_x = 
+			v_x \dfrac{\partial v_x}{\partial x} + 
+			v_y \dfrac{\partial v_x}{\partial y} + 
+			v_z \dfrac{\partial v_x}{\partial z} =
+			(z^2 - x^2)(-2x) + (2xz)(2z)
+		$\\
+		
+		$(\vec{v} \cdot \vec{\nabla})v_y = 
+			v_x \dfrac{\partial v_y}{\partial x} + 
+			v_y \dfrac{\partial v_y}{\partial y} + 
+			v_z \dfrac{\partial v_y}{\partial z} =
+			0
+		$\\
+		
+		$(\vec{v} \cdot \vec{\nabla})v_z = 
+			v_x \dfrac{\partial v_z}{\partial x} + 
+			v_y \dfrac{\partial v_z}{\partial y} + 
+			v_z \dfrac{\partial v_z}{\partial z} =
+			(z^2 - x^2)(2z) + (2xz)(2x)
+		$
+		
+		\[-\vec{\nabla} P = -\left(
+			\dfrac{\partial P}{\partial x} \vec{i} +
+			\dfrac{\partial P}{\partial y} \vec{j} +
+			\dfrac{\partial P}{\partial z} \vec{k}
+			\right)
+		\]	
+		
+		\[
+			\mu \vec{\nabla}^2 \vec{v} =
+				\mu \vec{\nabla}^2 v_x \vec{i} + 
+				\mu \vec{\nabla}^2 v_y \vec{j} + 
+				\mu \vec{\nabla}^2 v_z \vec{k} =
+				\vec{0} \text{ (ver debajo)}
+		\]
+		
+		$\vec{\nabla}^2 = \vec{\nabla} \cdot \vec{\nabla} = 
+			\dfrac{\partial^2}{\partial x^2} \vec{i} +
+			\dfrac{\partial^2}{\partial y^2} \vec{j} +
+			\dfrac{\partial^2}{\partial z^2} \vec{k}
+		$\\
+		
+		$\vec{\nabla}^2 v_x = -2 + 0 + 2 = 0$\\
+		$\vec{\nabla}^2 v_y = 0$\\
+		$\vec{\nabla}^2 v_z = 0 + 0 + 0 = 0$
+		
+		\[\rho \vec{g} = \vec{f}_v = -\rho g \vec{j}\]
+		
+\end{enumerate}
+
+\newpage
+\black
+\item Para el depósito de la Figura \ref{fig:depositoAnillo} hallar la expresión del tiempo que tardaría en vaciarse sabiendo que $h(t = 0) = H_0$
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{imagenesEjercicios/depositoAnillo}
+	\caption{Esquema del depósito con salida de tipo anillo.}
+	\label{fig:depositoAnillo}
+\end{figure}
+
+\blue
+	\textit{Conservación de la masa:}
+		\[-A_d \dfrac{dh(t)}{dt} = v_s h_s \sqrt{4\pi A_d}\]
+		$A_d = \dfrac{\pi D^2}{4} \Rightarrow D = \sqrt{4\pi A_d}$\\
+		$P_1 = P_a$\\
+		$P_2 = P_1 + (M + m)g \cdot \dfrac{1}{A_d}$\\
+		$P_3 = P_2 + \rho g h(t)$\\
+		$P_4 = P_3$\\
+		$P_5 + \dfrac{1}{2}\rho v_s^2 = P_4$\\
+		$P_5 = P_a$
+		
+		\[\dfrac{1}{2}\rho v_s^2 = (M + m)\dfrac{g}{A_d} + \rho g h(t)\]
+		\[t_{vaciado} \Rightarrow h(t = t_{vaciado}) = 0\]
+		
+	Se observa que no depende de la geometría del orificio de salida, sino de la velocidad de salida del fluido.
 
 \end{enumerate}
