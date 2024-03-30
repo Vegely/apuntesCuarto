@@ -100,7 +100,7 @@
 \contentsline {subsection}{\numberline {2.9.4}Gestión del combustible gastado.}{43}{}%
 \contentsline {section}{\numberline {2.10}Impacto ambiental centrales hidroeléctricas.}{43}{}%
 \contentsline {section}{\numberline {2.11}Impacto ambiental transporte y transformación energía eléctrica.}{44}{}%
-\contentsline {chapter}{\numberline {3}Tecnologías más eficientes. Captura de $\textbf {CO}_2$}{45}{}%
+\contentsline {chapter}{\numberline {3}Tecnologías más eficientes. Captura de $\textbf {CO}_2$.}{45}{}%
 \contentsline {section}{\numberline {3.1}Evolución de las calderas de combustión de carbón.}{45}{}%
 \contentsline {subsection}{\numberline {3.1.1}Turbina de vapor.}{45}{}%
 \contentsline {section}{\numberline {3.2}Tecnología de captura y almacenamiento de CO$_2$.}{46}{}%
@@ -188,3 +188,5 @@
 \contentsline {subsection}{\numberline {4.14.3}Costes variables.}{60}{}%
 \contentsline {subsection}{\numberline {4.14.4}Coste total.}{60}{}%
 \contentsline {section}{\numberline {4.15}Aspectos técnicos de la producción de energía.}{61}{}%
+\contentsline {chapter}{\numberline {5}Despacho económico a corto plazo.}{63}{}%
+\contentsline {chapter}{\numberline {6}Generador síncrono.}{65}{}%
