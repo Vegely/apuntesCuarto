@@ -59,134 +59,157 @@
 \contentsline {subsubsection}{Tipos de extracción de gas no convencionales.}{26}{}%
 \contentsline {subsubsection}{Consumo de gas natural en España.}{27}{}%
 \contentsline {subsubsection}{Procedencia del gas natural en España.}{27}{}%
-\contentsline {chapter}{\numberline {2}Energía eléctrica y desarrollo sostenible.}{29}{}%
-\contentsline {section}{\numberline {2.1}Introducción al desarrollo sostenible.}{29}{}%
-\contentsline {subsection}{\numberline {2.1.1}Cumbres climáticas.}{29}{}%
-\contentsline {section}{\numberline {2.2}Gases de efecto invernadero.}{30}{}%
-\contentsline {subsection}{\numberline {2.2.1}CO$_2$ equivalente.}{30}{}%
-\contentsline {subsection}{\numberline {2.2.2}Dióxido de carbono (CO$_2$).}{30}{}%
-\contentsline {subsection}{\numberline {2.2.3}Óxido nitroso (N$_2$O) y óxidos de nitrógeno (NO$_x$ ).}{30}{}%
-\contentsline {subsection}{\numberline {2.2.4}Metano (CH$_4$).}{30}{}%
-\contentsline {subsection}{\numberline {2.2.5}Hidrofluorocarbonos (HFC).}{30}{}%
-\contentsline {subsection}{\numberline {2.2.6}Perfluororcarburos (PFC).}{30}{}%
-\contentsline {subsection}{\numberline {2.2.7}Hexafluoruro de azufre (SF$_6$).}{30}{}%
-\contentsline {section}{\numberline {2.3}Efecto invernadero.}{31}{}%
-\contentsline {subsection}{\numberline {2.3.1}Forzamiento radiactivo o climático.}{31}{}%
-\contentsline {subsection}{\numberline {2.3.2}Evolución de las emisiones de CO$_2$ equivalente en España.}{32}{}%
-\contentsline {section}{\numberline {2.4}Protocolo de Kioto.}{33}{}%
-\contentsline {subsection}{\numberline {2.4.1}Políticas y medidas.}{33}{}%
-\contentsline {subsection}{\numberline {2.4.2}Creación de sumideros.}{33}{}%
-\contentsline {subsection}{\numberline {2.4.3}Mecanismos flexibles.}{33}{}%
-\contentsline {section}{\numberline {2.5}PNA.}{33}{}%
-\contentsline {section}{\numberline {2.6}Precio de emisión.}{33}{}%
-\contentsline {subsection}{\numberline {2.6.1}Evolución del precio del derecho de emisión.}{33}{}%
-\contentsline {subsection}{\numberline {2.6.2}Influencia coste de emisión en el mercado eléctrico.}{34}{}%
-\contentsline {subsection}{\numberline {2.6.3}Factor de emisión.}{34}{}%
-\contentsline {subsection}{\numberline {2.6.4}Cálculo del factor de emisión.}{34}{}%
-\contentsline {subsection}{\numberline {2.6.5}Emisiones en la combustión.}{35}{}%
-\contentsline {subsection}{\numberline {2.6.6}Emisiones evitadas con las energías renovables.}{35}{}%
-\contentsline {section}{\numberline {2.7}Combustibles fósiles.}{36}{}%
-\contentsline {subsection}{\numberline {2.7.1}Combustible sólidos.}{36}{}%
-\contentsline {subsection}{\numberline {2.7.2}Combustible gaseosos.}{39}{}%
-\contentsline {subsection}{\numberline {2.7.3}Combustible líquidos.}{39}{}%
-\contentsline {section}{\numberline {2.8}Impacto ambiental de las centrales térmicas de combustión.}{39}{}%
-\contentsline {subsection}{\numberline {2.8.1}Composición de gases de la combustión.}{39}{}%
-\contentsline {subsection}{\numberline {2.8.2}Tratamientos para reducción de emisiones.}{40}{}%
-\contentsline {subsection}{\numberline {2.8.3}Impacto ambiental centrales térmicas.}{42}{}%
-\contentsline {section}{\numberline {2.9}Impacto ambiental centrales nucleares.}{42}{}%
-\contentsline {subsection}{\numberline {2.9.1}Tipos de radioactividad.}{42}{}%
-\contentsline {subsection}{\numberline {2.9.2}Medida de la radioactividad.}{42}{}%
-\contentsline {subsection}{\numberline {2.9.3}Clasificación de los residuos radioactivos.}{43}{}%
-\contentsline {subsection}{\numberline {2.9.4}Gestión del combustible gastado.}{43}{}%
-\contentsline {section}{\numberline {2.10}Impacto ambiental centrales hidroeléctricas.}{43}{}%
-\contentsline {section}{\numberline {2.11}Impacto ambiental transporte y transformación energía eléctrica.}{44}{}%
-\contentsline {chapter}{\numberline {3}Tecnologías más eficientes. Captura de $\textbf {CO}_2$.}{45}{}%
-\contentsline {section}{\numberline {3.1}Evolución de las calderas de combustión de carbón.}{45}{}%
-\contentsline {subsection}{\numberline {3.1.1}Turbina de vapor.}{45}{}%
-\contentsline {section}{\numberline {3.2}Tecnología de captura y almacenamiento de CO$_2$.}{46}{}%
-\contentsline {subsection}{\numberline {3.2.1}Combustión convencional del carbón pulverizado.}{46}{}%
-\contentsline {subsection}{\numberline {3.2.2}Co-combustión.}{46}{}%
-\contentsline {subsection}{\numberline {3.2.3}Captura CO$_2$ antes de la combustión.}{47}{}%
-\contentsline {subsection}{\numberline {3.2.4}Captura CO$_2$ durante la combustión.}{47}{}%
-\contentsline {subsection}{\numberline {3.2.5}Captura CO$_2$ tras la combustión.}{47}{}%
-\contentsline {subsection}{\numberline {3.2.6}Transporte y almacenamiento de CO$_2$.}{48}{}%
-\contentsline {subsection}{\numberline {3.2.7}Transformación CO$_2$ en metano.}{49}{}%
-\contentsline {section}{\numberline {3.3}Calderas de combustión de lecho fluidizado (CLF).}{49}{}%
-\contentsline {subsection}{\numberline {3.3.1}Ventajas CLF.}{49}{}%
-\contentsline {subsection}{\numberline {3.3.2}Tipos de CLF.}{50}{}%
-\contentsline {section}{\numberline {3.4}Gasificación del carbón.}{51}{}%
-\contentsline {subsection}{\numberline {3.4.1}Tipos de gasificadores.}{51}{}%
-\contentsline {subsection}{\numberline {3.4.2}Estado actual de la gasificación.}{51}{}%
-\contentsline {section}{\numberline {3.5}Hidrógeno.}{52}{}%
-\contentsline {subsection}{\numberline {3.5.1}Producción del hidrógeno.}{52}{}%
-\contentsline {subsection}{\numberline {3.5.2}Clasificación del hidrógeno.}{52}{}%
-\contentsline {subsection}{\numberline {3.5.3}Almacenamiento del hidrógeno.}{53}{}%
-\contentsline {subsection}{\numberline {3.5.4}Ventajas del hidrógeno.}{53}{}%
-\contentsline {subsection}{\numberline {3.5.5}Aplicaciones del hidrógeno.}{53}{}%
-\contentsline {section}{\numberline {3.6}Ciclos combinados.}{54}{}%
-\contentsline {section}{\numberline {3.7}Fusión nuclear.}{54}{}%
-\contentsline {section}{\numberline {3.8}Almacenamiento de energía.}{54}{}%
-\contentsline {subsection}{\numberline {3.8.1}Volantes de inercia.}{55}{}%
-\contentsline {subsection}{\numberline {3.8.2}Supercondensadores.}{55}{}%
-\contentsline {subsection}{\numberline {3.8.3}Baterías.}{55}{}%
-\contentsline {subsection}{\numberline {3.8.4}Centrales de bombeo.}{55}{}%
-\contentsline {subsection}{\numberline {3.8.5}Aire comprimido (CAES).}{55}{}%
-\contentsline {chapter}{\numberline {4}Cobertura de la demanda. Mercado eléctrico.}{57}{}%
-\contentsline {section}{\numberline {4.1}Explotación del mercado eléctrico.}{57}{}%
-\contentsline {section}{\numberline {4.2}Curva de demanda diaria.}{57}{}%
-\contentsline {section}{\numberline {4.3}Pérdidas en la red.}{57}{}%
-\contentsline {section}{\numberline {4.4}Gestión de la red.}{57}{}%
-\contentsline {subsection}{\numberline {4.4.1}Incidencias no previstas.}{57}{}%
-\contentsline {subsection}{\numberline {4.4.2}Configuración sistema eléctrico de potencia.}{57}{}%
-\contentsline {section}{\numberline {4.5}Funcionamiento del mercado eléctrico.}{57}{}%
-\contentsline {subsection}{\numberline {4.5.1}Actividades principales.}{57}{}%
-\contentsline {subsection}{\numberline {4.5.2}Reparto de la distribución de energía eléctrica.}{57}{}%
-\contentsline {subsection}{\numberline {4.5.3}Comercialización.}{57}{}%
-\contentsline {subsection}{\numberline {4.5.4}Organización.}{58}{}%
-\contentsline {subsection}{\numberline {4.5.5}Instituciones reguladoras.}{58}{}%
-\contentsline {subsection}{\numberline {4.5.6}Operador del mercado (OMIE).}{58}{}%
-\contentsline {subsection}{\numberline {4.5.7}Operador del sistema (REE).}{58}{}%
-\contentsline {section}{\numberline {4.6}Mercado ibérico (MIBEL).}{58}{}%
-\contentsline {section}{\numberline {4.7}Interconexiones con el extranjero.}{58}{}%
-\contentsline {subsection}{\numberline {4.7.1}Francia.}{58}{}%
-\contentsline {subsection}{\numberline {4.7.2}Portugal.}{58}{}%
-\contentsline {subsection}{\numberline {4.7.3}Marruecos.}{58}{}%
-\contentsline {subsection}{\numberline {4.7.4}Gestión de las interconexiones.}{58}{}%
-\contentsline {section}{\numberline {4.8}Mercado intradiario.}{58}{}%
-\contentsline {subsection}{\numberline {4.8.1}Secuencia de los procesos del mercado.}{58}{}%
-\contentsline {subsection}{\numberline {4.8.2}Mercados a plazo.}{58}{}%
-\contentsline {subsection}{\numberline {4.8.3}Mercado organizado diario (casación horaria).}{58}{}%
-\contentsline {subsection}{\numberline {4.8.4}Tipos de oferta de venta de energía.}{58}{}%
-\contentsline {subsection}{\numberline {4.8.5}Proceso de casación.}{59}{}%
-\contentsline {subsection}{\numberline {4.8.6}Curva de oferta de venta de energía.}{59}{}%
-\contentsline {subsection}{\numberline {4.8.7}Influencia fuentes renovables.}{59}{}%
-\contentsline {subsection}{\numberline {4.8.8}Retribuciones para amortizar costes fijos.}{59}{}%
-\contentsline {subsection}{\numberline {4.8.9}Curva de demanda.}{59}{}%
-\contentsline {section}{\numberline {4.9}Mercado de restricciones técnicas.}{59}{}%
-\contentsline {section}{\numberline {4.10}Mercado de servicios complementarios.}{59}{}%
-\contentsline {subsection}{\numberline {4.10.1}Regulación primaria.}{59}{}%
-\contentsline {subsection}{\numberline {4.10.2}Regulación secundaria.}{59}{}%
-\contentsline {subsection}{\numberline {4.10.3}Control de tensión.}{59}{}%
-\contentsline {subsection}{\numberline {4.10.4}Reservas de potencia.}{59}{}%
-\contentsline {subsection}{\numberline {4.10.5}Gestión de desvíos.}{59}{}%
-\contentsline {subsection}{\numberline {4.10.6}Regulación terciaria.}{59}{}%
-\contentsline {section}{\numberline {4.11}Precio medio final.}{59}{}%
-\contentsline {subsection}{\numberline {4.11.1}Costes recogidos en la tarifa eléctrica (PVPC).}{59}{}%
-\contentsline {section}{\numberline {4.12}Programación de la generación de electricidad.}{60}{}%
-\contentsline {subsection}{\numberline {4.12.1}Curva acumulada de demanda anual.}{60}{}%
-\contentsline {subsection}{\numberline {4.12.2}Curva de demanda anual.}{60}{}%
-\contentsline {subsection}{\numberline {4.12.3}Parámetros principales curva de demanda.}{60}{}%
-\contentsline {subsection}{\numberline {4.12.4}Curva acumulada de generación anual.}{60}{}%
-\contentsline {subsection}{\numberline {4.12.5}Parámetros principales curva de generación.}{60}{}%
-\contentsline {section}{\numberline {4.13}Reserva de potencia.}{60}{}%
-\contentsline {subsection}{\numberline {4.13.1}Características estáticas.}{60}{}%
-\contentsline {subsection}{\numberline {4.13.2}Características dinámicas.}{60}{}%
-\contentsline {subsection}{\numberline {4.13.3}Secuenciamiento óptimo de grupos.}{60}{}%
-\contentsline {section}{\numberline {4.14}Costes de generación.}{60}{}%
-\contentsline {subsection}{\numberline {4.14.1}Comparativa de costes.}{60}{}%
-\contentsline {subsection}{\numberline {4.14.2}Coste de inversión o fijo.}{60}{}%
-\contentsline {subsection}{\numberline {4.14.3}Costes variables.}{60}{}%
-\contentsline {subsection}{\numberline {4.14.4}Coste total.}{60}{}%
-\contentsline {section}{\numberline {4.15}Aspectos técnicos de la producción de energía.}{61}{}%
-\contentsline {chapter}{\numberline {5}Despacho económico a corto plazo.}{63}{}%
-\contentsline {chapter}{\numberline {6}Generador síncrono.}{65}{}%
+\contentsline {subsubsection}{Transporte y distribución del gas natural en España.}{27}{}%
+\contentsline {subsubsection}{Cadena del valor del GNL.}{28}{}%
+\contentsline {subsubsection}{Centrales de ciclo combinado con gas natural.}{29}{}%
+\contentsline {subsubsection}{Cogeneración con gas natural.}{29}{}%
+\contentsline {subsection}{\numberline {1.24.3}Carbón.}{29}{}%
+\contentsline {subsubsection}{Análisis del sector carbón.}{29}{}%
+\contentsline {subsubsection}{Consumo de carbón a nivel mundial.}{30}{}%
+\contentsline {subsubsection}{Recursos geológicos y explotables en España.}{30}{}%
+\contentsline {subsubsection}{Centrales térmicas de carbón.}{30}{}%
+\contentsline {subsection}{\numberline {1.24.4}Uranio.}{30}{}%
+\contentsline {subsubsection}{Recursos mundiales de uranio}{30}{}%
+\contentsline {subsubsection}{Formas minerales del uranio:}{31}{}%
+\contentsline {subsubsection}{Isótopos del uranio. Fisión nuclear.}{31}{}%
+\contentsline {subsubsection}{Proceso del combustible nuclear.}{32}{}%
+\contentsline {subsubsection}{Procedencia del concentrado comprado en España:}{32}{}%
+\contentsline {subsubsection}{Carga de combustible de una central nuclear.}{33}{}%
+\contentsline {subsubsection}{Reciclado de residuos nucleares.}{33}{}%
+\contentsline {subsubsection}{Centrales térmicas nucleares.}{34}{}%
+\contentsline {subsubsection}{Almacenamiento de residuos nucleares.}{35}{}%
+\contentsline {subsubsection}{El programa nuclear español.}{35}{}%
+\contentsline {subsubsection}{Comparativa de costes de producción de distintas centrales térmicas.}{36}{}%
+\contentsline {section}{\numberline {1.25}Energía hidráulica.}{36}{}%
+\contentsline {subsection}{\numberline {1.25.1}Centrales hidroeléctricas de bombeo.}{36}{}%
+\contentsline {chapter}{\numberline {2}Energía eléctrica y desarrollo sostenible.}{37}{}%
+\contentsline {section}{\numberline {2.1}Introducción al desarrollo sostenible.}{37}{}%
+\contentsline {subsection}{\numberline {2.1.1}Cumbres climáticas.}{37}{}%
+\contentsline {section}{\numberline {2.2}Gases de efecto invernadero.}{38}{}%
+\contentsline {subsection}{\numberline {2.2.1}CO$_2$ equivalente.}{38}{}%
+\contentsline {subsection}{\numberline {2.2.2}Dióxido de carbono (CO$_2$).}{38}{}%
+\contentsline {subsection}{\numberline {2.2.3}Óxido nitroso (N$_2$O) y óxidos de nitrógeno (NO$_x$ ).}{38}{}%
+\contentsline {subsection}{\numberline {2.2.4}Metano (CH$_4$).}{38}{}%
+\contentsline {subsection}{\numberline {2.2.5}Hidrofluorocarbonos (HFC).}{38}{}%
+\contentsline {subsection}{\numberline {2.2.6}Perfluororcarburos (PFC).}{38}{}%
+\contentsline {subsection}{\numberline {2.2.7}Hexafluoruro de azufre (SF$_6$).}{38}{}%
+\contentsline {section}{\numberline {2.3}Efecto invernadero.}{39}{}%
+\contentsline {subsection}{\numberline {2.3.1}Forzamiento radiactivo o climático.}{39}{}%
+\contentsline {subsection}{\numberline {2.3.2}Evolución de las emisiones de CO$_2$ equivalente en España.}{40}{}%
+\contentsline {section}{\numberline {2.4}Protocolo de Kioto.}{41}{}%
+\contentsline {subsection}{\numberline {2.4.1}Políticas y medidas.}{41}{}%
+\contentsline {subsection}{\numberline {2.4.2}Creación de sumideros.}{41}{}%
+\contentsline {subsection}{\numberline {2.4.3}Mecanismos flexibles.}{41}{}%
+\contentsline {section}{\numberline {2.5}PNA.}{41}{}%
+\contentsline {section}{\numberline {2.6}Precio de emisión.}{41}{}%
+\contentsline {subsection}{\numberline {2.6.1}Evolución del precio del derecho de emisión.}{41}{}%
+\contentsline {subsection}{\numberline {2.6.2}Influencia coste de emisión en el mercado eléctrico.}{42}{}%
+\contentsline {subsection}{\numberline {2.6.3}Factor de emisión.}{42}{}%
+\contentsline {subsection}{\numberline {2.6.4}Cálculo del factor de emisión.}{42}{}%
+\contentsline {subsection}{\numberline {2.6.5}Emisiones en la combustión.}{43}{}%
+\contentsline {subsection}{\numberline {2.6.6}Emisiones evitadas con las energías renovables.}{43}{}%
+\contentsline {section}{\numberline {2.7}Combustibles fósiles.}{44}{}%
+\contentsline {subsection}{\numberline {2.7.1}Combustible sólidos.}{44}{}%
+\contentsline {subsection}{\numberline {2.7.2}Combustible gaseosos.}{47}{}%
+\contentsline {subsection}{\numberline {2.7.3}Combustible líquidos.}{47}{}%
+\contentsline {section}{\numberline {2.8}Impacto ambiental de las centrales térmicas de combustión.}{47}{}%
+\contentsline {subsection}{\numberline {2.8.1}Composición de gases de la combustión.}{47}{}%
+\contentsline {subsection}{\numberline {2.8.2}Tratamientos para reducción de emisiones.}{48}{}%
+\contentsline {subsection}{\numberline {2.8.3}Impacto ambiental centrales térmicas.}{50}{}%
+\contentsline {section}{\numberline {2.9}Impacto ambiental centrales nucleares.}{50}{}%
+\contentsline {subsection}{\numberline {2.9.1}Tipos de radioactividad.}{50}{}%
+\contentsline {subsection}{\numberline {2.9.2}Medida de la radioactividad.}{50}{}%
+\contentsline {subsection}{\numberline {2.9.3}Clasificación de los residuos radioactivos.}{51}{}%
+\contentsline {subsection}{\numberline {2.9.4}Gestión del combustible gastado.}{51}{}%
+\contentsline {section}{\numberline {2.10}Impacto ambiental centrales hidroeléctricas.}{51}{}%
+\contentsline {section}{\numberline {2.11}Impacto ambiental transporte y transformación energía eléctrica.}{52}{}%
+\contentsline {chapter}{\numberline {3}Tecnologías más eficientes. Captura de $\textbf {CO}_2$.}{53}{}%
+\contentsline {section}{\numberline {3.1}Evolución de las calderas de combustión de carbón.}{53}{}%
+\contentsline {subsection}{\numberline {3.1.1}Turbina de vapor.}{53}{}%
+\contentsline {section}{\numberline {3.2}Tecnología de captura y almacenamiento de CO$_2$.}{54}{}%
+\contentsline {subsection}{\numberline {3.2.1}Combustión convencional del carbón pulverizado.}{54}{}%
+\contentsline {subsection}{\numberline {3.2.2}Co-combustión.}{54}{}%
+\contentsline {subsection}{\numberline {3.2.3}Captura CO$_2$ antes de la combustión.}{55}{}%
+\contentsline {subsection}{\numberline {3.2.4}Captura CO$_2$ durante la combustión.}{55}{}%
+\contentsline {subsection}{\numberline {3.2.5}Captura CO$_2$ tras la combustión.}{55}{}%
+\contentsline {subsection}{\numberline {3.2.6}Transporte y almacenamiento de CO$_2$.}{56}{}%
+\contentsline {subsection}{\numberline {3.2.7}Transformación CO$_2$ en metano.}{57}{}%
+\contentsline {section}{\numberline {3.3}Calderas de combustión de lecho fluidizado (CLF).}{57}{}%
+\contentsline {subsection}{\numberline {3.3.1}Ventajas CLF.}{57}{}%
+\contentsline {subsection}{\numberline {3.3.2}Tipos de CLF.}{58}{}%
+\contentsline {section}{\numberline {3.4}Gasificación del carbón.}{59}{}%
+\contentsline {subsection}{\numberline {3.4.1}Tipos de gasificadores.}{59}{}%
+\contentsline {subsection}{\numberline {3.4.2}Estado actual de la gasificación.}{59}{}%
+\contentsline {section}{\numberline {3.5}Hidrógeno.}{60}{}%
+\contentsline {subsection}{\numberline {3.5.1}Producción del hidrógeno.}{60}{}%
+\contentsline {subsection}{\numberline {3.5.2}Clasificación del hidrógeno.}{60}{}%
+\contentsline {subsection}{\numberline {3.5.3}Almacenamiento del hidrógeno.}{61}{}%
+\contentsline {subsection}{\numberline {3.5.4}Ventajas del hidrógeno.}{61}{}%
+\contentsline {subsection}{\numberline {3.5.5}Aplicaciones del hidrógeno.}{61}{}%
+\contentsline {section}{\numberline {3.6}Ciclos combinados.}{62}{}%
+\contentsline {section}{\numberline {3.7}Fusión nuclear.}{62}{}%
+\contentsline {section}{\numberline {3.8}Almacenamiento de energía.}{62}{}%
+\contentsline {subsection}{\numberline {3.8.1}Volantes de inercia.}{63}{}%
+\contentsline {subsection}{\numberline {3.8.2}Supercondensadores.}{63}{}%
+\contentsline {subsection}{\numberline {3.8.3}Baterías.}{63}{}%
+\contentsline {subsection}{\numberline {3.8.4}Centrales de bombeo.}{63}{}%
+\contentsline {subsection}{\numberline {3.8.5}Aire comprimido (CAES).}{63}{}%
+\contentsline {chapter}{\numberline {4}Cobertura de la demanda. Mercado eléctrico.}{65}{}%
+\contentsline {section}{\numberline {4.1}Explotación del mercado eléctrico.}{65}{}%
+\contentsline {section}{\numberline {4.2}Curva de demanda diaria.}{65}{}%
+\contentsline {section}{\numberline {4.3}Pérdidas en la red.}{65}{}%
+\contentsline {section}{\numberline {4.4}Gestión de la red.}{65}{}%
+\contentsline {subsection}{\numberline {4.4.1}Incidencias no previstas.}{65}{}%
+\contentsline {subsection}{\numberline {4.4.2}Configuración sistema eléctrico de potencia.}{65}{}%
+\contentsline {section}{\numberline {4.5}Funcionamiento del mercado eléctrico.}{65}{}%
+\contentsline {subsection}{\numberline {4.5.1}Actividades principales.}{65}{}%
+\contentsline {subsection}{\numberline {4.5.2}Reparto de la distribución de energía eléctrica.}{65}{}%
+\contentsline {subsection}{\numberline {4.5.3}Comercialización.}{65}{}%
+\contentsline {subsection}{\numberline {4.5.4}Organización.}{66}{}%
+\contentsline {subsection}{\numberline {4.5.5}Instituciones reguladoras.}{66}{}%
+\contentsline {subsection}{\numberline {4.5.6}Operador del mercado (OMIE).}{66}{}%
+\contentsline {subsection}{\numberline {4.5.7}Operador del sistema (REE).}{66}{}%
+\contentsline {section}{\numberline {4.6}Mercado ibérico (MIBEL).}{66}{}%
+\contentsline {section}{\numberline {4.7}Interconexiones con el extranjero.}{66}{}%
+\contentsline {subsection}{\numberline {4.7.1}Francia.}{66}{}%
+\contentsline {subsection}{\numberline {4.7.2}Portugal.}{66}{}%
+\contentsline {subsection}{\numberline {4.7.3}Marruecos.}{66}{}%
+\contentsline {subsection}{\numberline {4.7.4}Gestión de las interconexiones.}{66}{}%
+\contentsline {section}{\numberline {4.8}Mercado intradiario.}{66}{}%
+\contentsline {subsection}{\numberline {4.8.1}Secuencia de los procesos del mercado.}{66}{}%
+\contentsline {subsection}{\numberline {4.8.2}Mercados a plazo.}{66}{}%
+\contentsline {subsection}{\numberline {4.8.3}Mercado organizado diario (casación horaria).}{66}{}%
+\contentsline {subsection}{\numberline {4.8.4}Tipos de oferta de venta de energía.}{66}{}%
+\contentsline {subsection}{\numberline {4.8.5}Proceso de casación.}{67}{}%
+\contentsline {subsection}{\numberline {4.8.6}Curva de oferta de venta de energía.}{67}{}%
+\contentsline {subsection}{\numberline {4.8.7}Influencia fuentes renovables.}{67}{}%
+\contentsline {subsection}{\numberline {4.8.8}Retribuciones para amortizar costes fijos.}{67}{}%
+\contentsline {subsection}{\numberline {4.8.9}Curva de demanda.}{67}{}%
+\contentsline {section}{\numberline {4.9}Mercado de restricciones técnicas.}{67}{}%
+\contentsline {section}{\numberline {4.10}Mercado de servicios complementarios.}{67}{}%
+\contentsline {subsection}{\numberline {4.10.1}Regulación primaria.}{67}{}%
+\contentsline {subsection}{\numberline {4.10.2}Regulación secundaria.}{67}{}%
+\contentsline {subsection}{\numberline {4.10.3}Control de tensión.}{67}{}%
+\contentsline {subsection}{\numberline {4.10.4}Reservas de potencia.}{67}{}%
+\contentsline {subsection}{\numberline {4.10.5}Gestión de desvíos.}{67}{}%
+\contentsline {subsection}{\numberline {4.10.6}Regulación terciaria.}{67}{}%
+\contentsline {section}{\numberline {4.11}Precio medio final.}{67}{}%
+\contentsline {subsection}{\numberline {4.11.1}Costes recogidos en la tarifa eléctrica (PVPC).}{67}{}%
+\contentsline {section}{\numberline {4.12}Programación de la generación de electricidad.}{68}{}%
+\contentsline {subsection}{\numberline {4.12.1}Curva acumulada de demanda anual.}{68}{}%
+\contentsline {subsection}{\numberline {4.12.2}Curva de demanda anual.}{68}{}%
+\contentsline {subsection}{\numberline {4.12.3}Parámetros principales curva de demanda.}{68}{}%
+\contentsline {subsection}{\numberline {4.12.4}Curva acumulada de generación anual.}{68}{}%
+\contentsline {subsection}{\numberline {4.12.5}Parámetros principales curva de generación.}{68}{}%
+\contentsline {section}{\numberline {4.13}Reserva de potencia.}{68}{}%
+\contentsline {subsection}{\numberline {4.13.1}Características estáticas.}{68}{}%
+\contentsline {subsection}{\numberline {4.13.2}Características dinámicas.}{68}{}%
+\contentsline {subsection}{\numberline {4.13.3}Secuenciamiento óptimo de grupos.}{68}{}%
+\contentsline {section}{\numberline {4.14}Costes de generación.}{68}{}%
+\contentsline {subsection}{\numberline {4.14.1}Comparativa de costes.}{68}{}%
+\contentsline {subsection}{\numberline {4.14.2}Coste de inversión o fijo.}{68}{}%
+\contentsline {subsection}{\numberline {4.14.3}Costes variables.}{68}{}%
+\contentsline {subsection}{\numberline {4.14.4}Coste total.}{68}{}%
+\contentsline {section}{\numberline {4.15}Aspectos técnicos de la producción de energía.}{69}{}%
+\contentsline {chapter}{\numberline {5}Despacho económico a corto plazo.}{71}{}%
+\contentsline {chapter}{\numberline {6}Generador síncrono.}{73}{}%
