@@ -54,7 +54,7 @@
 \contentsline {subsubsection}{Conversión de fuelóleos y residuos pesados.}{24}{}%
 \contentsline {subsubsection}{Centrales termoeléctricas de fuel-oil y gasoil.}{25}{}%
 \contentsline {subsection}{\numberline {1.24.2}Gas natural.}{25}{}%
-\contentsline {subsubsection}{Índice de Wobbe.}{26}{}%
+\contentsline {subsubsection}{Índice de Wobbe.}{25}{}%
 \contentsline {subsubsection}{Reservas y producción.}{26}{}%
 \contentsline {subsubsection}{Tipos de extracción de gas no convencionales.}{26}{}%
 \contentsline {subsubsection}{Consumo de gas natural en España.}{27}{}%
@@ -72,11 +72,11 @@
 \contentsline {subsubsection}{Recursos mundiales de uranio}{30}{}%
 \contentsline {subsubsection}{Formas minerales del uranio:}{31}{}%
 \contentsline {subsubsection}{Isótopos del uranio. Fisión nuclear.}{31}{}%
-\contentsline {subsubsection}{Proceso del combustible nuclear.}{32}{}%
+\contentsline {subsubsection}{Proceso del combustible nuclear.}{31}{}%
 \contentsline {subsubsection}{Procedencia del concentrado comprado en España:}{32}{}%
-\contentsline {subsubsection}{Carga de combustible de una central nuclear.}{33}{}%
+\contentsline {subsubsection}{Carga de combustible de una central nuclear.}{32}{}%
 \contentsline {subsubsection}{Reciclado de residuos nucleares.}{33}{}%
-\contentsline {subsubsection}{Centrales térmicas nucleares.}{34}{}%
+\contentsline {subsubsection}{Centrales térmicas nucleares.}{33}{}%
 \contentsline {subsubsection}{Almacenamiento de residuos nucleares.}{35}{}%
 \contentsline {subsubsection}{El programa nuclear español.}{35}{}%
 \contentsline {subsubsection}{Comparativa de costes de producción de distintas centrales térmicas.}{36}{}%
