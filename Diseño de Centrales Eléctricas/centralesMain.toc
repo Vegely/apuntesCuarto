@@ -167,7 +167,7 @@
 \contentsline {section}{\numberline {4.5}Funcionamiento del mercado eléctrico.}{67}{}%
 \contentsline {subsection}{\numberline {4.5.1}Actividades principales.}{67}{}%
 \contentsline {subsection}{\numberline {4.5.2}Reparto de la distribución de energía eléctrica.}{67}{}%
-\contentsline {subsection}{\numberline {4.5.3}Comercialización.}{67}{}%
+\contentsline {subsection}{\numberline {4.5.3}Comercialización.}{68}{}%
 \contentsline {subsection}{\numberline {4.5.4}Organización.}{68}{}%
 \contentsline {subsection}{\numberline {4.5.5}Instituciones reguladoras.}{68}{}%
 \contentsline {subsection}{\numberline {4.5.6}Operador del mercado (OMIE).}{68}{}%
@@ -182,7 +182,7 @@
 \contentsline {subsection}{\numberline {4.8.1}Secuencia de los procesos del mercado.}{68}{}%
 \contentsline {subsection}{\numberline {4.8.2}Mercados a plazo.}{68}{}%
 \contentsline {subsection}{\numberline {4.8.3}Mercado organizado diario (casación horaria).}{68}{}%
-\contentsline {subsection}{\numberline {4.8.4}Tipos de oferta de venta de energía.}{68}{}%
+\contentsline {subsection}{\numberline {4.8.4}Tipos de oferta de venta de energía.}{69}{}%
 \contentsline {subsection}{\numberline {4.8.5}Proceso de casación.}{69}{}%
 \contentsline {subsection}{\numberline {4.8.6}Curva de oferta de venta de energía.}{69}{}%
 \contentsline {subsection}{\numberline {4.8.7}Influencia fuentes renovables.}{69}{}%
@@ -197,7 +197,7 @@
 \contentsline {subsection}{\numberline {4.10.5}Gestión de desvíos.}{69}{}%
 \contentsline {subsection}{\numberline {4.10.6}Regulación terciaria.}{69}{}%
 \contentsline {section}{\numberline {4.11}Precio medio final.}{69}{}%
-\contentsline {subsection}{\numberline {4.11.1}Costes recogidos en la tarifa eléctrica (PVPC).}{69}{}%
+\contentsline {subsection}{\numberline {4.11.1}Costes recogidos en la tarifa eléctrica (PVPC).}{70}{}%
 \contentsline {section}{\numberline {4.12}Programación de la generación de electricidad.}{70}{}%
 \contentsline {subsection}{\numberline {4.12.1}Curva acumulada de demanda anual.}{70}{}%
 \contentsline {subsection}{\numberline {4.12.2}Curva de demanda anual.}{70}{}%
@@ -212,7 +212,7 @@
 \contentsline {subsection}{\numberline {4.14.1}Comparativa de costes.}{70}{}%
 \contentsline {subsection}{\numberline {4.14.2}Coste de inversión o fijo.}{70}{}%
 \contentsline {subsection}{\numberline {4.14.3}Costes variables.}{70}{}%
-\contentsline {subsection}{\numberline {4.14.4}Coste total.}{70}{}%
+\contentsline {subsection}{\numberline {4.14.4}Coste total.}{71}{}%
 \contentsline {section}{\numberline {4.15}Aspectos técnicos de la producción de energía.}{71}{}%
 \contentsline {chapter}{\numberline {5}Despacho económico a corto plazo.}{73}{}%
 \contentsline {chapter}{\numberline {6}Generador síncrono.}{75}{}%
