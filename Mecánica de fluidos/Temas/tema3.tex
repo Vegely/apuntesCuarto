@@ -1,5 +1,5 @@
-\section{Tema 3: Conservación de la masa}
-\subsection{Teorema del transporte de Reynolds}
+\chapter{Conservación de la masa.}
+\section{Teorema del transporte de Reynolds.}
 Se parte de una función genérica $\Phi=f(\vec{r},t) $
 %\begin{figure}[H]
 %	\centering
@@ -50,12 +50,13 @@ Como solo se estudia la velocidad de compresión o expansión del fluido en la d
 \[dV=\vec{v}_c\cdot\vec{n}dS\Delta t\]
 
 Por tanto:
-\begin{equation} \label{eq:1}
+\begin{equation}\label{eq:ttr1}
 \frac{d}{dt}\iiint_{V_c(t)} \Phi(\vec{r},t) \,dV=\iiint_{V_c(t)} \frac{\partial}{\partial t}\Phi(\vec{r},t) \,dV+\oiint_{S_c(t)} \Phi(\vec{r},t)\vec{v}_c\cdot\vec{n} \,dS
 \end{equation}
 
 De manera similar se puede aplicar esta deducción a un volumen fluido:
-\begin{equation} \label{eq:2}
+
+\begin{equation}\label{eq:ttr2}
 \frac{d}{dt}\iiint_{V_f(t)} \Phi(\vec{r},t) \,dV=
 \red{\underbrace{\black\iiint_{V_f(t)} \frac{\partial}{\partial t}\Phi(\vec{r},t) \,dV}_{\text{Variación local}}}
 \black+
@@ -63,10 +64,10 @@ De manera similar se puede aplicar esta deducción a un volumen fluido:
 \black
 \end{equation}
 
-En un tiempo t* paramétrico tal que $V_c(t*)=V_f(t*)$ se cumple que
+En un tiempo $t*$ paramétrico tal que $V_c(t*)=V_f(t*)$ se cumple que
 \[ \iiint_{V_c(t*)}\frac{\partial \Phi}{\partial t}\,dV\approx \iiint_{V_f(t*)}\frac{\partial \Phi}{\partial t}\,dV\]
 
-Por tanto, si se hace la siguiente resta $(2)-(1)$. Se obtiene el Teorema de Reynolds aplicado a los problemas:
+Por tanto, si se hace la siguiente resta \eqref{eq:ttr2} - \eqref{eq:ttr1}. Se obtiene el Teorema de Reynolds aplicado a los problemas:
 
 \[\frac{d}{dt}\iiint_{V_f(t)}\Phi(\vec{r},t)\,dV=\frac{d}{dt}\iiint_{V_c(t)}\Phi(\vec{r},t)\,dV+\oiint_{S_c(t)} \Phi(\vec{r},t)\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS\]
 
@@ -98,7 +99,7 @@ Término local de masa:
 Término convectivo de masa:
 \[\vec{\nabla}\cdot\left(\rho\vec{v}\right)\]
 
-\subsection{Flujo sobre una superficie}
+\section{Flujo sobre una superficie.}
 \begin{itemize}
 	\item Flujo másico
 	\[G_e=\iint_{S_e} \rho\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\,dS\]
@@ -106,7 +107,7 @@ Término convectivo de masa:
 		\[Q_e=\iint_{S_e} \left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\,dS\]
 \end{itemize}
 
-\subsection{Propiedades en forma diferencial}
+\section{Propiedades en forma diferencial.}
 Partiendo de la expresión de la derivada sustancial y de la conservación de la masa en forma diferencial:
 \begin{equation} \label{eq:1}
 	\frac{\partial \rho}{\partial t} +\vec{\nabla}\cdot\left(\rho\vec{v}\right)=\frac{\partial \rho}{\partial t} +\left(\vec{v}\cdot\vec{\nabla}\right)\rho+\left(\vec{\nabla}\cdot\vec{v}\right)\rho=0

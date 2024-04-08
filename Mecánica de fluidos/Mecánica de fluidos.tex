@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{book}
 \usepackage[spanish]{babel}  % Add the babel package with Spanish language option
 \usepackage{amsmath}  % Include the amsmath package
 \usepackage{graphicx}  % Include the graphicx package
@@ -14,6 +14,7 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
 \usepackage{circuitikz}
+\usepackage[left=3cm,top=3cm,right=3cm,bottom=3cm]{geometry}
 
 \title{Mecánica de fluidos}
 \author{Bogurad Barañski Barañska \and Adrián Teixeira de Uña}
@@ -21,15 +22,18 @@
 \date{\today}
 
 \begin{document}
-	
 	\maketitle
-	\tableofcontents % Insert a table of contents
+	\frontmatter
+		
+		\tableofcontents % Insert a table of contents
+		\addcontentsline{toc}{chapter}{Índice general}
 	
-	\include{Temas/tema1}
-	\include{Temas/tema2}
-	\include{Temas/tema3}
-	\include{Temas/tema4}
-	\include{Temas/ejerciciosresueltos}
+	\mainmatter
+		\include{Temas/tema1}
+		\include{Temas/tema2}
+		\include{Temas/tema3}
+		\include{Temas/tema4}
+		\include{Temas/ejerciciosresueltos}
 
 
 

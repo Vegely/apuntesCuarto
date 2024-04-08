@@ -1,11 +1,11 @@
-\section{Ejercicios resueltos}
-\subsection{Tema 1: Fundamentos y propiedades de los fluidos}
+\chapter{Ejercicios resueltos.}
+\section{Fundamentos y propiedades de los fluidos.}
 \begin{enumerate}
-	\item Obtener el ángulo de mojabilidad $\theta_c$ 
+	\item Obtener el ángulo de mojabilidad $\theta_c$.
 	\begin{figure}[H]
 		\begin{minipage}{0.7\textwidth}
 		\centering
-		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/mojabilidad}
+		\includegraphics[width=0.65\linewidth]{imagenesEjercicios/mojabilidad}
 		\caption{Esquema del problema.}
 		\label{fig:mojabilidad}
 	\end{minipage}%
@@ -13,28 +13,42 @@
 	\[\textcolor{blue}{P_2=P_1=P_a}\]
 	\[\textcolor{blue}{P_2=\rho g H_0=P_3}\]
 	\[\textcolor{blue}{P_3=P_4+\rho g (H_0+\Delta h)}\]
-	\[\textcolor{blue}{P_1-P_4=\frac{2\sigma}{R}}\]
-	\[\textcolor{blue}{\frac{2\sigma}{R}=\rho g \Delta h}\]
+	\[\textcolor{blue}{P_1-P_4=\dfrac{2\sigma}{R}}\]
+	\[\textcolor{blue}{\dfrac{2\sigma}{R}=\rho g \Delta h}\]
 	\[\textcolor{blue}{Rcos(\theta_c)=a}\]
-	\[\textcolor{blue}{\theta_c=arccos\left(\frac{a\rho g \Delta h}{2\sigma}\right)}\]
-	
+	\[\textcolor{blue}{\theta_c=arccos\left(\dfrac{a\rho g \Delta h}{2\sigma}\right)}\]
 	\end{minipage}
 	\end{figure}
 	
-	\item En el pueblo de Aisa se ha instalado un nuevo sistema de presión para el abastecimiento
-	de agua del municipio. El agua procedente de un manantial es impulsado por una bomba
+	\item Se ha instalado un nuevo sistema de presión para el abastecimiento
+	de agua de un municipio. El agua procedente de un manantial es impulsado por una bomba
 	y se almacena en un depósito sobrepresor. Para controlar la presión del agua a la entrada
 	y salida de la bomba se han montado un vacuómetro y un manómetro en los puntos de
-	interés. Cuando el vacuómetro marca 0.75 bares y el manómetro marca 4.2 bares, ¿cuál
-	será el valor de la presión absoluta?. ¿Existe riesgo de cavitación en algún punto de la
-	conducción?. Datos: $p_{atm}$ = 816,91 hPa; $p_v$=159856 Pa.
+	interés. Cuando el vacuómetro marca 0.75 bares y el manómetro marca 4.2 bares. ¿Cuál
+	será el valor de la presión absoluta? ¿Existe riesgo de cavitación en algún punto de la
+	conducción? Datos: $p_{atm}$ = 816,91 hPa; $p_v$=159856 Pa.
 	\begin{figure}[H]
 		\begin{minipage}{0.7\textwidth}
-		\centering
-		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/bombaAisa}
-		\caption{Esquema bomba de agua.}
-		\label{fig:bombaaisa}
-	\end{minipage}%
+		%\centering
+		%\includegraphics[width=0.7\linewidth]{imagenesEjercicios/bombaAisa}
+		%\caption{Esquema bomba de agua.}
+		%\label{fig:bombaaisa}
+		\begin{figure}[H]
+			\centering
+				\begin{circuitikz}[scale = 0.9]
+					\tikzstyle{every node}=[font=\normalsize]
+					\draw  (4.75,20) circle (0.75cm) node {\normalsize Bomba} ;
+					\draw [short] (5.5,20) -- (7,20);
+					\draw [short] (6.25,20.25) -- (6.25,19.75)node[pos=0,above]{Salida};
+					\node [font=\normalsize] at (7.25,19.5) {Manómetro $(P_S)$};
+					\draw[] (4,20) to[short] (2.5,20);
+					\draw [short] (3.25,20.25) -- (3.25,19.75)node[pos=0,above]{Entrada};
+					\node [font=\normalsize] at (2.5,19.5) {Vacuómetro $(P_0)$};
+				\end{circuitikz}
+			
+			\label{fig:my_label}
+		\end{figure}
+		\end{minipage}%
 	\begin{minipage}{0.3\textwidth}
 	\[\textcolor{blue}{P_v=P_{atm}-P_e}\]
 	\[\textcolor{blue}{P_m=P_s-P_{atm}}\]
@@ -46,47 +60,54 @@
 \end{figure}
 
 	\newpage
-	\item La presión en un punto de un fluido ($\rho = 1234 \frac{kg}{m^3}$) alcanza el valor de 3 bares. Expresar
+	\item La presión en un punto de un fluido ($\rho = 1234 \dfrac{kg}{m^3}$) alcanza el valor de 3 bares. Expresar
 	el valor de la presión en milímetros de mercurio (cm Hg) y en columna de metros de agua
 	(m.c.a.). Datos: $\rho_{Hg,rel} = 13,6$
-	\[\textcolor{blue}{\rho = 1234 \frac{kg}{m^3}}\]
+	\[\textcolor{blue}{\rho = 1234 \dfrac{kg}{m^3}}\]
 	\[\textcolor{blue}{P=3\cdot10^5 Pa}\]
-	\[\textcolor{blue}{1mmHg=\rho_{Hg}g h=13.6\cdot10^3\frac{kg}{m^3} \cdot9.8 \frac{m}{s^2}\cdot10^{-3}m=133.416Pa} \]
-	\[\textcolor{blue}{1mca=\rho_{H_2O}g h=10^3\frac{kg}{m^3}\cdot9.8 \frac{m}{s^2}\cdot1m=9810Pa}\]
+	\[\textcolor{blue}{1mmHg=\rho_{Hg}g h=13.6\cdot10^3\dfrac{kg}{m^3} \cdot9.8 \dfrac{m}{s^2}\cdot10^{-3}m=133.416Pa} \]
+	\[\textcolor{blue}{1mca=\rho_{H_2O}g h=10^3\dfrac{kg}{m^3}\cdot9.8 \dfrac{m}{s^2}\cdot1m=9810Pa}\]
 	\item Sobre una superficie de 4000 $cm^2$, orientada en el espacio por su vector normal $\vec{n}=\vec{k}$, está
 	actuando una fuerza$\vec{F}=2\vec{i}+3\vec{j}-3\vec{k}$ (N). Calcular la componente normal de la fuerza y
 	la presión que está soportando la superficie
 		\[\textcolor{blue}{S=4000 cm^2=0.4 m^2}\]
 	\[\textcolor{blue}{\vec{n}=\vec{k}}\]
 	\[\textcolor{blue}{\vec{F}=2\vec{i}+3\vec{j}-3\vec{k} \rightarrow F_n=3N}\]
-	\[\textcolor{blue}{P=\frac{F_n}{S}=\frac{3 N}{0.4 m^2}=7.5Pa}\]
+	\[\textcolor{blue}{P=\dfrac{F_n}{S}=\dfrac{3 N}{0.4 m^2}=7.5Pa}\]
 	
-	\item Sabiendo que un fluido tiene una densidad de 0.627 $\frac{kg}{l}$ y que su coeficiente de viscosidad
+	\item Sabiendo que un fluido tiene una densidad de 0.627 $\dfrac{kg}{l}$ y que su coeficiente de viscosidad
 	absoluta es 1.2 cP, calcular su viscosidad cinemática. ¿Cuál es su densidad relativa si
-	consideramos el agua como fluido de referencia?. Datos $\rho_{agua} = 999,8\frac{kg}{m^3}$
-\[\textcolor{blue}{\nu = \frac{\mu}{\rho}=\frac{1.2 cP \cdot \frac{10^{-3} Pa \cdot s}{1 cP}}{0.627 \frac{kg}{l}\cdot\frac{10^3 l}{m^3}}=1.91\cdot10^{-6}\frac{m^2}{s}}\]
-\[\textcolor{blue}{\rho_{rel}=\frac{\rho}{\rho_{H_2O}}=\frac{0.627 \frac{kg}{l}\cdot\frac{10^3 l}{m^3}}{999.8 \frac{kg}{m^3}}=6.27\cdot10^{-1}}\]
-	
-	\newpage
+	consideramos el agua como fluido de referencia?. Datos $\rho_{agua} = 999,8\dfrac{kg}{m^3}$
+\[\textcolor{blue}{\nu = \dfrac{\mu}{\rho}=\dfrac{1.2 cP \cdot \dfrac{10^{-3} Pa \cdot s}{1 cP}}{0.627 \dfrac{kg}{l}\cdot\dfrac{10^3 l}{m^3}}=1.91\cdot10^{-6}\dfrac{m^2}{s}}\]
+\[\textcolor{blue}{\rho_{rel}=\dfrac{\rho}{\rho_{H_2O}}=\dfrac{0.627 \dfrac{kg}{l}\cdot\dfrac{10^3 l}{m^3}}{999.8 \dfrac{kg}{m^3}}=6.27\cdot10^{-1}}\]
+
 	\item En la Figura se muestra un bloque, de bases paralelas con dimensiones 0,3 m x 0,6
-	m y altura 0,1 m, de densidad 1800 $\frac{kg}{m^3}$, que desliza con una velocidad constante de
-	1 $\frac{m}{s}$ a la largo de un plano inclinado debido a la acción de las fuerzas gravitacionales
+	m y altura 0,1 m, de densidad 1800 $\dfrac{kg}{m^3}$, que desliza con una velocidad constante de
+	1 $\dfrac{m}{s}$ a la largo de un plano inclinado debido a la acción de las fuerzas gravitacionales
 	tangenciales al mismo. Entre dicho plano y el bloque hay una película de aceite de espesor
 	1 mm. Aplicando equilibrio de fuerzas, calcular la viscosidad del aceite en Po.
 	\begin{figure}[H]
 		
 		\centering
-		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/bloqueDeslizantoT1}
+		\includegraphics[width=0.6\linewidth]{imagenesEjercicios/bloqueDeslizantoT1}
 		\caption{Esquema del bloque deslizando por el plano inclinado.}
 		\label{fig:bloquedeslizantot1}
 	\end{figure}
-	\[\textcolor{blue}{F_n=m g sen\alpha}\]
-	\[\textcolor{blue}{F_n=\rho V g sen\alpha}\]
-	\[\textcolor{blue}{\tau=\mu\frac{v}{e}=\frac{F_n}{S}=\rho h g sen\alpha}\]
-	\[\textcolor{blue}{\mu=\frac{e\rho h g sen\alpha}{v}=\frac{10^-3m\cdot1800\frac{kg}{m^3}\cdot0.1m\cdot 9.81 \frac{m}{s^2} \cdot sen(\ang{30})}{1\frac{m}{s}}=0.8829Pa\cdot s\frac{1 P}{0.1 Pa \cdot s}=8.83P}\]
+	\blue
+	\[F_n=m g sen\alpha\]
+	\[F_n=\rho V g sen\alpha\]
+	\[\tau=\mu\dfrac{v}{e}=\dfrac{F_n}{S}=\rho h g sen\alpha\]
+	\[
+	\mu=
+	\dfrac{e\rho h g sen\alpha}{v} =
+	\dfrac{10^{-3}\,m\cdot1800\dfrac{kg}{m^3}\cdot0.1\,m\cdot 9.81 \dfrac{m}{s^2} \cdot sen(\ang{30})} {1\,m/s} = 
+	0.8829\,Pa\cdot s\cdot\dfrac{1 P}{0.1\,Pa \cdot s}=8.83\,P
+	\]
+	\black
 \end{enumerate}
 \newpage
-\subsection{Tema 2: Cinemática de la partícula fluida}
+
+\section{Cinemática de la partícula fluida.}
 \begin{enumerate}
 	\item Dado el campo de velocidades de un flujo
 	\[\vec{v}=4cos(\omega t)x\vec{i}-2cos(\omega t)y\vec{j}-2cos(\omega t)z\vec{k}\]
@@ -94,24 +115,25 @@
 		\item Indicar el tipo de flujo\\
 		\textcolor{blue}{Flujo tridireccional, tridimensional y transitorio.}
 		\item La ecuación de la trayectoria si en $t=0s$ se encuentra en $(x_0,y_0,z_0)$
-		\[\textcolor{blue}{\vec{v}=\frac{d\vec{r}}{dt} \rightarrow \vec{r}=x\vec{i}+y\vec{j}+z\vec{k}}\]
-		\[\textcolor{blue}{v_x=4cos(\omega t)x=\frac{dx}{dt}}\]
-		\[\textcolor{blue}{v_y= -2cos(\omega t)y = \frac{dy}{dt}}\]
-		\[\textcolor{blue}{v_z= -2cos(\omega t)z = \frac{dz}{dt}} \]
-		\[\textcolor{blue}{\ln x|_0^t=\left.{\frac{4sen(\omega t)}{\omega}}\right |_0^t \rightarrow x=x_0 e^{\frac{4sen(\omega t)}{\omega}}}\]
-		\[\textcolor{blue}{y=y_0 e^{\frac{-2sen(\omega t)}{\omega}}}\]
-		\[\textcolor{blue}{z=z_0 e^{\frac{-2sen(\omega t)}{\omega}}}\]
+		\[\textcolor{blue}{\vec{v}=\dfrac{d\vec{r}}{dt} \rightarrow \vec{r}=x\vec{i}+y\vec{j}+z\vec{k}}\]
+		\[\textcolor{blue}{v_x=4cos(\omega t)x=\dfrac{dx}{dt}}\]
+		\[\textcolor{blue}{v_y= -2cos(\omega t)y = \dfrac{dy}{dt}}\]
+		\[\textcolor{blue}{v_z= -2cos(\omega t)z = \dfrac{dz}{dt}} \]
+		\[\textcolor{blue}{\ln x|_0^t=\left.{\dfrac{4sen(\omega t)}{\omega}}\right |_0^t \rightarrow x=x_0 e^{\dfrac{4sen(\omega t)}{\omega}}}\]
+		\[\textcolor{blue}{y=y_0 e^{\dfrac{-2sen(\omega t)}{\omega}}}\]
+		\[\textcolor{blue}{z=z_0 e^{\dfrac{-2sen(\omega t)}{\omega}}}\]
 		\item La ecuación de las sendas
-		\[\textcolor{blue}{\ln \frac{x}{x_0}=\frac{4sen(\omega t)}{\omega}}\]
-		\[\textcolor{blue}{\ln \frac{y}{y_0}=\frac{-2sen(\omega t)}{\omega}}\]
-		\[\textcolor{blue}{\ln \frac{z}{z_0}=\frac{-2sen(\omega t)}{\omega}}\]
-		\[\textcolor{blue}{\frac{1}{2}\ln \frac{x}{x_0}=-\ln \frac{y}{y_0} \rightarrow xy^2=x_0y_0^2}\]
-		\[\textcolor{blue}{\ln \frac{y}{z_0}=\ln \frac{y}{y_0} \rightarrow yz_0=zy_0}\]
+		\[\textcolor{blue}{\ln \dfrac{x}{x_0}=\dfrac{4sen(\omega t)}{\omega}}\]
+		\[\textcolor{blue}{\ln \dfrac{y}{y_0}=\dfrac{-2sen(\omega t)}{\omega}}\]
+		\[\textcolor{blue}{\ln \dfrac{z}{z_0}=\dfrac{-2sen(\omega t)}{\omega}}\]
+		\[\textcolor{blue}{\dfrac{1}{2}\ln \dfrac{x}{x_0}=-\ln \dfrac{y}{y_0} \rightarrow xy^2=x_0y_0^2}\]
+		\[\textcolor{blue}{\ln \dfrac{y}{z_0}=\ln \dfrac{y}{y_0} \rightarrow yz_0=zy_0}\]
 		\item Las líneas de corriente en un instante t
-		\[\textcolor{blue}{\frac{dz}{v_z}=\frac{dy}{v_y}=\frac{dx}{v_x}}\]
-		\[\textcolor{blue}{\frac{dy}{-2cos(\omega t)y}=\frac{dz}{-2cos(\omega t)z}\rightarrow \frac{dy}{y}=\frac{dz}{z}\rightarrow \ln z = \ln y + C_0 \rightarrow z=C_{00}y}\]
-		\[\textcolor{blue}{\frac{dy}{-2cos(\omega t)y}=\frac{dx}{4cos(\omega t)x}\rightarrow -\frac{dy}{y}=\frac{dx}{2x}\rightarrow -\ln y = \frac{1}{2}\ln x + C_1 \rightarrow C_{11}=xy^2 }\]
+		\[\textcolor{blue}{\dfrac{dz}{v_z}=\dfrac{dy}{v_y}=\dfrac{dx}{v_x}}\]
+		\[\textcolor{blue}{\dfrac{dy}{-2cos(\omega t)y}=\dfrac{dz}{-2cos(\omega t)z}\rightarrow \dfrac{dy}{y}=\dfrac{dz}{z}\rightarrow \ln z = \ln y + C_0 \rightarrow z=C_{00}y}\]
+		\[\textcolor{blue}{\dfrac{dy}{-2cos(\omega t)y}=\dfrac{dx}{4cos(\omega t)x}\rightarrow -\dfrac{dy}{y}=\dfrac{dx}{2x}\rightarrow -\ln y = \dfrac{1}{2}\ln x + C_1 \rightarrow C_{11}=xy^2 }\]
 	\end{enumerate}
+	\newpage
 	\item La velocidad de un fluido se encuentra definida por $\vec{v}=y\vec{j}+\left(ye^{-t}-z\right)\vec{k}$ Se pide:
 	\begin{enumerate}
 		\item Las componentes de la velocidad 
@@ -121,72 +143,72 @@
 		\item Caracterización del flujo\\
 		\textcolor{blue}{Flujo bidireccional, bidimensional y transitorio.}
 		\item La aceleración de la partícula fluida cuando en t=0s pasa por el punto (0,1,0)
-			\[\textcolor{blue}{a_L=\frac{\partial\vec{v}}{\partial t}=-ye^{-t}\vec{k}}\]
+			\[\textcolor{blue}{a_L=\dfrac{\partial\vec{v}}{\partial t}=-ye^{-t}\vec{k}}\]
 		\[\textcolor{blue}{a_c=\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=
-			\left(v_x\frac{\partial}{\partial x}
+			\left(v_x\dfrac{\partial}{\partial x}
 			+
-			v_y\frac{\partial}{\partial y}
+			v_y\dfrac{\partial}{\partial y}
 			+
-			v_y\frac{\partial}{\partial z}
+			v_y\dfrac{\partial}{\partial z}
 			\right)\cdot
 			\left(v_x\vec{i}+v_y\vec{j}+v_z\vec{k}\right)		
 		}\]
-		\[\textcolor{blue}{a_c=\left(v_y\frac{\partial v_y}{\partial y} + v_z\frac{\partial v_y}{\partial z} \right)
-			+\left(v_y\frac{\partial v_z}{\partial y} + v_z\frac{\partial v_z}{\partial z} \right)
+		\[\textcolor{blue}{a_c=\left(v_y\dfrac{\partial v_y}{\partial y} + v_z\dfrac{\partial v_y}{\partial z} \right)
+			+\left(v_y\dfrac{\partial v_z}{\partial y} + v_z\dfrac{\partial v_z}{\partial z} \right)
 			= y\vec{j}+z\vec{k}
 		}\]
 		\[	\textcolor{blue}{
-			a_T=\frac{D\vec{v}}{Dt}=\frac{\partial\vec{v}}{\partial t}+\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=a_L+a_c=y\vec{j}+\left(-ye^{-t}+z\right)\vec{k}
+			a_T=\dfrac{D\vec{v}}{Dt}=\dfrac{\partial\vec{v}}{\partial t}+\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=a_L+a_c=y\vec{j}+\left(-ye^{-t}+z\right)\vec{k}
 		}
 		\]
 	\[	\textcolor{blue}{
-		\left.a_T \right|_{\vec{r}=(0,1,0)m,t=0s}=\vec{j}-\vec{k} \ \frac{m}{s^2}
+		\left.a_T \right|_{\vec{r}=(0,1,0)m,t=0s}=\vec{j}-\vec{k} \ \dfrac{m}{s^2}
 	}
 	\]
 		\item Movimiento de la partícula fluida
 				\setlength{\arraycolsep}{1.5pt}
-		\renewcommand{\arraystretch}{1.5}
+		\renewcommand{\arraystretch}{2}
 		\[\textcolor{blue}{\overline{\overline{\xi}}=\begin{bmatrix}
-				\frac{\partial v_x}{\partial x} & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right) &  \frac{1}{2}\left(\frac{\partial v_x}{\partial z}+\frac{\partial v_z}{\partial x}\right)\\
-				\frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right) & \frac{\partial v_y}{\partial y} &\frac{1}{2}\left(\frac{\partial v_y}{\partial z}+\frac{\partial v_z}{\partial y}\right)\\		
-				\frac{1}{2}\left(\frac{\partial v_x}{\partial z}+\frac{\partial v_z}{\partial x}\right)  &\frac{1}{2}\left(\frac{\partial v_y}{\partial z}+\frac{\partial v_z}{\partial y}\right)& \frac{\partial v_z}{\partial z}\\	
+				\dfrac{\partial v_x}{\partial x} & \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}+\dfrac{\partial v_y}{\partial x}\right) &  \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial z}+\dfrac{\partial v_z}{\partial x}\right)\\
+				\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}+\dfrac{\partial v_y}{\partial x}\right) & \dfrac{\partial v_y}{\partial y} &\dfrac{1}{2}\left(\dfrac{\partial v_y}{\partial z}+\dfrac{\partial v_z}{\partial y}\right)\\		
+				\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial z}+\dfrac{\partial v_z}{\partial x}\right)  &\dfrac{1}{2}\left(\dfrac{\partial v_y}{\partial z}+\dfrac{\partial v_z}{\partial y}\right)& \dfrac{\partial v_z}{\partial z}\\	
 			\end{bmatrix}=
 			\begin{bmatrix}
 				0 & 0 &  0\\
-				0 & 1 &  \frac{e^{-t}}{2}\\
-				0 &  \frac{e^{-t}}{2} &  -1\\	
+				0 & 1 &  \dfrac{e^{-t}}{2}\\
+				0 &  \dfrac{e^{-t}}{2} &  -1\\	
 			\end{bmatrix}
 		}\]
 		\setlength{\arraycolsep}{1.5pt}
-		\renewcommand{\arraystretch}{1.5}
+		\renewcommand{\arraystretch}{2}
 		\[\textcolor{blue}{\overline{\overline{\gamma}}=\begin{bmatrix}
-				0 & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) &  \frac{1}{2}\left(\frac{\partial v_x}{\partial z}-\frac{\partial v_z}{\partial x}\right)\\
-				-\frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) & 0 &\frac{1}{2}\left(\frac{\partial v_y}{\partial z}-\frac{\partial v_z}{\partial y}\right)\\		
-				-\frac{1}{2}\left(\frac{\partial v_x}{\partial z}-\frac{\partial v_z}{\partial x}\right)  &-\frac{1}{2}\left(\frac{\partial v_y}{\partial z}-\frac{\partial v_z}{\partial y}\right)& 0\\	
+				0 & \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}-\dfrac{\partial v_y}{\partial x}\right) &  \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial z}-\dfrac{\partial v_z}{\partial x}\right)\\
+				-\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}-\dfrac{\partial v_y}{\partial x}\right) & 0 &\dfrac{1}{2}\left(\dfrac{\partial v_y}{\partial z}-\dfrac{\partial v_z}{\partial y}\right)\\		
+				-\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial z}-\dfrac{\partial v_z}{\partial x}\right)  &-\dfrac{1}{2}\left(\dfrac{\partial v_y}{\partial z}-\dfrac{\partial v_z}{\partial y}\right)& 0\\	
 			\end{bmatrix}=
 			\begin{bmatrix}
 				0 & 0 &  0\\
-				0 & 0 &  -\frac{e^{-t}}{2}\\
-				0 &  \frac{e^{-t}}{2} &  0\\	
+				0 & 0 &  -\dfrac{e^{-t}}{2}\\
+				0 &  \dfrac{e^{-t}}{2} &  0\\	
 			\end{bmatrix}
 		}\]
 		
 		\item ¿Podría tratarse de un líquido?
 			\[\textcolor{blue}{traza(\overline{\overline{\xi}})=1-1=0\rightarrow \text{Es un líquido.} }\]
-		\item La velocidad de deformación lineal específica en la dirección del vector unitario $\vec{l}=\frac{1}{\sqrt{3}}\left(\vec{i}-\vec{j}+\vec{k}\right)$
+		\item La velocidad de deformación lineal específica en la dirección del vector unitario $\vec{l}=\dfrac{1}{\sqrt{3}}\left(\vec{i}-\vec{j}+\vec{k}\right)$
 		\[\textcolor{blue}{
 			\overline{\overline{\xi}}\cdot\vec{n}=\begin{bmatrix}
 				0 & 0 &  0\\
-				0 & 1 &  \frac{e^{-t}}{2}\\
-				0 &  \frac{e^{-t}}{2} &  -1\\	
-			\end{bmatrix} \cdot \frac{1}{\sqrt{3}}\begin{bmatrix}
+				0 & 1 &  \dfrac{e^{-t}}{2}\\
+				0 &  \dfrac{e^{-t}}{2} &  -1\\	
+			\end{bmatrix} \cdot \dfrac{1}{\sqrt{3}}\begin{bmatrix}
 			1 \\
 			-1 \\
 			1 \\	
-			\end{bmatrix}=\frac{1}{\sqrt{3}}\begin{bmatrix}
+			\end{bmatrix}=\dfrac{1}{\sqrt{3}}\begin{bmatrix}
 			0 \\
-			-1+ \frac{e^{-t}}{2}\\
-			-1-  \frac{e^{-t}}{2}\\	
+			-1+ \dfrac{e^{-t}}{2}\\
+			-1-  \dfrac{e^{-t}}{2}\\	
 			\end{bmatrix}
 		}\]
 	\end{enumerate}
@@ -196,78 +218,80 @@
 		\textcolor{blue}{Flujo bidireccional, bidimensional y transitorio.}
 		\item La aceleración de la partícula fluida: total, local, convectiva y las contribuciones de la aceleración convectiva
 	
-			\[\textcolor{blue}{a_L=\frac{\partial\vec{v}}{\partial t}=z(1+4t)\vec{j}}\]
+			\[\textcolor{blue}{a_L=\dfrac{\partial\vec{v}}{\partial t}=z(1+4t)\vec{j}}\]
 			\[\textcolor{blue}{a_c=\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=
-			\left(v_x\frac{\partial}{\partial x}
+			\left(v_x\dfrac{\partial}{\partial x}
 			+
-		v_y\frac{\partial}{\partial y}
+		v_y\dfrac{\partial}{\partial y}
 			+
-		v_y\frac{\partial}{\partial z}
+		v_y\dfrac{\partial}{\partial z}
 			\right)\cdot
 			\left(v_x\vec{i}+v_y\vec{j}+v_z\vec{k}\right)		
 			}\]
 			
-			\[\textcolor{blue}{a_c=\left(v_y\frac{\partial v_y}{\partial y} + v_z\frac{\partial v_y}{\partial z} \right)
-				+\left(v_y\frac{\partial v_z}{\partial y} + v_z\frac{\partial v_z}{\partial z} \right)
+			\[\textcolor{blue}{a_c=\left(v_y\dfrac{\partial v_y}{\partial y} + v_z\dfrac{\partial v_y}{\partial z} \right)
+				+\left(v_y\dfrac{\partial v_z}{\partial y} + v_z\dfrac{\partial v_z}{\partial z} \right)
 				= 2y(t+2t^2)\vec{j}+2z(t+2t^2)\vec{k}
 			}\]
 			\[	\textcolor{blue}{
-				a_T=\frac{D\vec{v}}{Dt}=\frac{\partial\vec{v}}{\partial t}+\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=a_L+a_c=\left[z(1+4t)+2y(t+2t^2)\right]\vec{j}+2z(t+2t^2)\vec{k}
+				a_T=\dfrac{D\vec{v}}{Dt}=\dfrac{\partial\vec{v}}{\partial t}+\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=a_L+a_c=\left[z(1+4t)+2y(t+2t^2)\right]\vec{j}+2z(t+2t^2)\vec{k}
 			}
 			\]
-			\[\textcolor{blue}{a_{c_v}=\vec{\nabla}\frac{|\vec{v}|^2}{2}=\frac{1}{2}\left[
-				\frac{\partial}{\partial x}\left(v_x^2+v_y^2+v_z^2\right)\vec{i}
+			\[\textcolor{blue}{a_{c_v}=\vec{\nabla}\dfrac{|\vec{v}|^2}{2}=\dfrac{1}{2}\left[
+				\dfrac{\partial}{\partial x}\left(v_x^2+v_y^2+v_z^2\right)\vec{i}
 				+
-				\frac{\partial}{\partial y}\left(v_x^2+v_y^2+v_z^2\right)\vec{j}
+				\dfrac{\partial}{\partial y}\left(v_x^2+v_y^2+v_z^2\right)\vec{j}
 				+
-				\frac{\partial}{\partial z}\left(v_x^2+v_y^2+v_z^2\right)\vec{k}
+				\dfrac{\partial}{\partial z}\left(v_x^2+v_y^2+v_z^2\right)\vec{k}
 				\right]
 			}\]
 			\[\textcolor{blue}{a_{c_v}=
 				4y\vec{j}+z\left(t^2+4t^3+4t^4\right)\vec{k}
 			}\]
-			\[\textcolor{blue}{a_{c_d}=-\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)=(\vec{v} \cdot\vec{\nabla})\vec{v}-\vec{\nabla}\frac{|\vec{v}|}{2}^2
+			\[\textcolor{blue}{a_{c_d}=-\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)=(\vec{v} \cdot\vec{\nabla})\vec{v}-\vec{\nabla}\dfrac{|\vec{v}|}{2}^2
 			}\]
 			\[\textcolor{blue}{a_{c_v}=\left[z(1+4t)+2y(t+2t^2)-4y\right]\vec{j}+z(2t+3t^2-4t^3-4t^4)\vec{k}}\]
 		\item  El vector velocidad angular
 		\[\textcolor{blue}{
-			\vec{\omega}= \left(\vec{\nabla}\times\vec{v}\right)=\begin{vmatrix}
+			\vec{\omega}= \left(\vec{\nabla}\times\vec{v}\right)=
+			\renewcommand{\arraystretch}{1.2}
+			\begin{vmatrix}
 				\vec i & \vec j & \vec k \\
-				\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+				\dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
 				v_x & v_y & v_z \\
 			\end{vmatrix}=
 			\begin{vmatrix}
 				\vec i & \vec j & \vec k \\
-				0 & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+				0 & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
 				0 & v_y & v_z \\
 			\end{vmatrix}=
-			\left[\frac{\partial v_z}{\partial y}-\frac{\partial v_y}{\partial z}\right]\vec{i}=\left(2-t-2t^2\right)\vec{i}
+			\left[\dfrac{\partial v_z}{\partial y}-\dfrac{\partial v_y}{\partial z}\right]\vec{i}=\left(2-t-2t^2\right)\vec{i}
 		}\]
 		\item El movimiento de la partícula fluida
 				\setlength{\arraycolsep}{1.5pt}
-		\renewcommand{\arraystretch}{1.5}
+		\renewcommand{\arraystretch}{2}
 			\[\textcolor{blue}{\overline{\overline{\xi}}=\begin{bmatrix}
-				\frac{\partial v_x}{\partial x} & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right) &  \frac{1}{2}\left(\frac{\partial v_x}{\partial z}+\frac{\partial v_z}{\partial x}\right)\\
-				\frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right) & \frac{\partial v_y}{\partial y} &\frac{1}{2}\left(\frac{\partial v_y}{\partial z}+\frac{\partial v_z}{\partial y}\right)\\		
-				\frac{1}{2}\left(\frac{\partial v_x}{\partial z}+\frac{\partial v_z}{\partial x}\right)  &\frac{1}{2}\left(\frac{\partial v_y}{\partial z}+\frac{\partial v_z}{\partial y}\right)& \frac{\partial v_z}{\partial z}\\	
+				\dfrac{\partial v_x}{\partial x} & \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}+\dfrac{\partial v_y}{\partial x}\right) &  \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial z}+\dfrac{\partial v_z}{\partial x}\right)\\
+				\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}+\dfrac{\partial v_y}{\partial x}\right) & \dfrac{\partial v_y}{\partial y} &\dfrac{1}{2}\left(\dfrac{\partial v_y}{\partial z}+\dfrac{\partial v_z}{\partial y}\right)\\		
+				\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial z}+\dfrac{\partial v_z}{\partial x}\right)  &\dfrac{1}{2}\left(\dfrac{\partial v_y}{\partial z}+\dfrac{\partial v_z}{\partial y}\right)& \dfrac{\partial v_z}{\partial z}\\	
 			\end{bmatrix}=
 			\begin{bmatrix}
 				0 & 0 &  0\\
-				0 & 0 &  \frac{t+2t^2+2}{2}\\
-				0 &  \frac{t+2t^2+2}{2} &  0\\	
+				0 & 0 &  \dfrac{t+2t^2+2}{2}\\
+				0 &  \dfrac{t+2t^2+2}{2} &  0\\	
 			\end{bmatrix}
 		}\]
 	\setlength{\arraycolsep}{1.5pt}
-	\renewcommand{\arraystretch}{1.5}
+	\renewcommand{\arraystretch}{2}
 	\[\textcolor{blue}{\overline{\overline{\gamma}}=\begin{bmatrix}
-			0 & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) &  \frac{1}{2}\left(\frac{\partial v_x}{\partial z}-\frac{\partial v_z}{\partial x}\right)\\
-			-\frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) & 0 &\frac{1}{2}\left(\frac{\partial v_y}{\partial z}-\frac{\partial v_z}{\partial y}\right)\\		
-			-\frac{1}{2}\left(\frac{\partial v_x}{\partial z}-\frac{\partial v_z}{\partial x}\right)  &-\frac{1}{2}\left(\frac{\partial v_y}{\partial z}-\frac{\partial v_z}{\partial y}\right)& 0\\	
+			0 & \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}-\dfrac{\partial v_y}{\partial x}\right) &  \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial z}-\dfrac{\partial v_z}{\partial x}\right)\\
+			-\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}-\dfrac{\partial v_y}{\partial x}\right) & 0 &\dfrac{1}{2}\left(\dfrac{\partial v_y}{\partial z}-\dfrac{\partial v_z}{\partial y}\right)\\		
+			-\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial z}-\dfrac{\partial v_z}{\partial x}\right)  &-\dfrac{1}{2}\left(\dfrac{\partial v_y}{\partial z}-\dfrac{\partial v_z}{\partial y}\right)& 0\\	
 		\end{bmatrix}=
 		\begin{bmatrix}
 			0 & 0 &  0\\
-			0 & 0 &  \frac{t+2t^2+2}{2}\\
-			0 &  \frac{-t-2t^2+2}{2} &  0\\	
+			0 & 0 &  \dfrac{t+2t^2+2}{2}\\
+			0 &  \dfrac{-t-2t^2+2}{2} &  0\\	
 		\end{bmatrix}
 	}\]
 		\item ¿Podría representar este campo de velocidades a un fluido que fuera un líquido?
@@ -275,51 +299,50 @@
 	\end{enumerate}
 	
 	\item Un campo de velocidades viene dado por $v_x=x^2-2y^2; v_y=-2xy$
-	\[\textcolor{blue}{\vec{v}=(x^2-2y^2)\vec{i}-2xy\vec{j}}\]
+	$\textcolor{blue}{\Rightarrow \vec{v}=(x^2-2y^2)\vec{i}-2xy\vec{j}}$
 	\begin{enumerate}
-		\item Clasificación del flujo\\
+		\item Clasificación del flujo.\\
 		\textcolor{blue}{Flujo bidireccional, bidimensional y estacionario.}
-		\item La expresión de la aceleración total de la partícula fluida
+		\item La expresión de la aceleración total de la partícula fluida.
 	
-		\[	\textcolor{blue}{\frac{D\vec{v}}{Dt}=\frac{\partial\vec{v}}{\partial t}+\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}}\]
+		\[	\textcolor{blue}{\dfrac{D\vec{v}}{Dt}=\dfrac{\partial\vec{v}}{\partial t}+\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}}\]
 		
-		\[\textcolor{blue}{\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=v_x\frac{\partial}{\partial x}\left[v_x\vec{i}+v_y\vec{j}\right]+v_y\frac{\partial}{\partial y}\left[v_x\vec{i}+v_y\vec{j}\right]}\]
+		\[\textcolor{blue}{\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=v_x\dfrac{\partial}{\partial x}\left[v_x\vec{i}+v_y\vec{j}\right]+v_y\dfrac{\partial}{\partial y}\left[v_x\vec{i}+v_y\vec{j}\right]}\]
 		
-		\[\textcolor{blue}{\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=\left[v_x\frac{\partial v_x}{\partial x} +v_y\frac{\partial v_x}{\partial y}\right]\vec{i}+\left[v_x\frac{\partial v_y}{\partial x} +v_y\frac{\partial v_y}{\partial y}\right]\vec{j}}\]
+		\[\textcolor{blue}{\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=\left[v_x\dfrac{\partial v_x}{\partial x} +v_y\dfrac{\partial v_x}{\partial y}\right]\vec{i}+\left[v_x\dfrac{\partial v_y}{\partial x} +v_y\dfrac{\partial v_y}{\partial y}\right]\vec{j}}\]
 		
 		\[\textcolor{blue}{\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=\left[(x^2-2y^2)2x+4xy^2\right]\vec{i}+\left[(x^2-2y^2)(-2y)+4x^2y\right]\vec{j}}\]
 		\[\textcolor{blue}{\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=2\left(x^2+2y^2\right)\left(x\vec{i}+y\vec{j}\right)}\]
-		\item Aceleración local
-		\[\textcolor{blue}{\frac{\partial \vec{v}}{\partial t}=0}\]
-		\item Aceleración convectiva debida al cambio del módulo de la velocidad
-		\[\textcolor{blue}{\vec{\nabla}\frac{|\vec{v}|^2}{2}=\vec{\nabla}\left(\frac{v_x^2+v_y^2}{2}\right)=\vec{\nabla}\left(\frac{x^4+4y^4}{2}\right)=2x^3\vec{i}+8y^3\vec{j}}\]
-		\item Aceleración convectiva debido al cambio de dirección de la velocidad
-			\[\textcolor{blue}{-\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)=(\vec{v} \cdot\vec{\nabla})\vec{v}-\vec{\nabla}\frac{|\vec{v}|}{2}^2=2\left(x^2+2y^2\right)\left(x\vec{i}+y\vec{j}\right)-\left(2x^3\vec{i}+8y^3\vec{j}\right)}\]
+		\item Aceleración local.
+		\[\textcolor{blue}{\dfrac{\partial \vec{v}}{\partial t}=0}\]
+		\item Aceleración convectiva debida al cambio del módulo de la velocidad.
+		\[\textcolor{blue}{\vec{\nabla}\dfrac{|\vec{v}|^2}{2}=\vec{\nabla}\left(\dfrac{v_x^2+v_y^2}{2}\right)=\vec{\nabla}\left(\dfrac{x^4+4y^4}{2}\right)=2x^3\vec{i}+8y^3\vec{j}}\]
+		\item Aceleración convectiva debido al cambio de dirección de la velocidad.
+			\[\textcolor{blue}{-\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)=(\vec{v} \cdot\vec{\nabla})\vec{v}-\vec{\nabla}\dfrac{|\vec{v}|}{2}^2=2\left(x^2+2y^2\right)\left(x\vec{i}+y\vec{j}\right)-\left(2x^3\vec{i}+8y^3\vec{j}\right)}\]
 			\[\textcolor{blue}{-\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)=4y^2x\vec{i}+\left(2x^2y-4y^3\right)\vec{j}}\]
-		\item Demostrar que la variación de la densidad a lo largo de una línea de corriente es nula\\
-		\textcolor{blue}{La variación de la densidad a lo largo de una línea de corriente es nula si el fluido es incompresible:}
-		\[\textcolor{blue}{traza(\overline{\overline{\xi}})=\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}=2x-2x=0 \rightarrow \text{Fluido incompresible}}\]
-		\item  Movimiento de la partícula fluida
-		\[\textcolor{blue}{d\vec{v}=d\vec{r}\cdot\left(\overline{\overline{\xi}}+\overline{\overline{\gamma}}\right)}\]
+		\item Demostrar que la variación de la densidad a lo largo de una línea de corriente es nula.\\
+		\textcolor{blue}{La variación de la densidad a lo largo de una línea de corriente nula $\Leftrightarrow$ fluido incompresible:}
+		\[\textcolor{blue}{traza(\overline{\overline{\xi}})=\dfrac{\partial v_x}{\partial x}+\dfrac{\partial v_y}{\partial y}=2x-2x=0 \rightarrow \text{Fluido incompresible}}\]
+		\item  Movimiento de la partícula fluida.
 		
 		\[\textcolor{blue}{\overline{\overline{\xi}}=\begin{bmatrix}
-				\frac{\partial v_x}{\partial x} & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right)\\
-				\frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right) & \frac{\partial v_y}{\partial y} \\				
+				\dfrac{\partial v_x}{\partial x} & \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}+\dfrac{\partial v_y}{\partial x}\right)\\
+				\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}+\dfrac{\partial v_y}{\partial x}\right) & \dfrac{\partial v_y}{\partial y} \\				
 		\end{bmatrix}=\begin{bmatrix}
 		 2x & -3y\\
 		 -3y& -2x \\				
 		\end{bmatrix}
 	}\]
 	\[\textcolor{blue}{\overline{\overline{\gamma}}=\begin{bmatrix}
-		0 & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) \\
-		-\frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) & 0  \\
+		0 & \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}-\dfrac{\partial v_y}{\partial x}\right) \\
+		-\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}-\dfrac{\partial v_y}{\partial x}\right) & 0  \\
 	\end{bmatrix}=\begin{bmatrix}
 	0 & -y \\
 	y & 0  \\
 \end{bmatrix}}
 \]
 
-\[\textcolor{blue}{d\vec{v}=d\vec{r}\cdot\left(\begin{bmatrix}
+\[\textcolor{blue}{d\vec{v}=d\vec{r}\cdot\left(\overline{\overline{\xi}}+\overline{\overline{\gamma}}\right)=d\vec{r}\cdot\left(\begin{bmatrix}
 		2x & -3y\\
 		-3y& -2x \\				
 	\end{bmatrix}+\begin{bmatrix}
@@ -332,7 +355,8 @@
 	\end{enumerate}
 \end{enumerate}
 \newpage
-\subsection{Tema 3: Conservación de la masa}
+
+\section{Conservación de la masa.}
 \begin{enumerate}
 	\item  Calcular la relación de velocidades entre el caudal de entrada y de salida en una tubería divergente
 	\begin{figure}[H]
@@ -343,9 +367,9 @@
 		\label{fig:tuberiadivergente}
 
 	\[\textcolor{blue}{\text{Se parte de la ecuación de conservación de la masa.}}\]
-	\[\textcolor{blue}{\frac{d}{dt}\iiint_{V_c(t)}\rho\,dV+\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0}\]
+	\[\textcolor{blue}{\dfrac{d}{dt}\iiint_{V_c(t)}\rho\,dV+\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0}\]
 \[\textcolor{blue}{
-	\frac{d}{dt}\iiint_{V_c(t)}\rho\,dV=0 \rightarrow \text{El volumen no varia con el tiempo.}
+	\dfrac{d}{dt}\iiint_{V_c(t)}\rho\,dV=0 \rightarrow \text{El volumen no varia con el tiempo.}
 }\]
 \[\textcolor{blue}{
 	\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=
@@ -374,9 +398,9 @@
 		\caption{Esquema del depósito con el agujero en su fondo.}
 		\label{fig:depositobujero}
 	\[\textcolor{blue}{\text{Se parte de la ecuación de conservación de la masa.}}\]
-\[\textcolor{blue}{\frac{d}{dt}\iiint_{V_c(t)}\rho\,dV+\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0}\]
+\[\textcolor{blue}{\dfrac{d}{dt}\iiint_{V_c(t)}\rho\,dV+\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0}\]
 \[\textcolor{blue}{
-	\frac{d}{dt}\iiint_{V_c(t)}\rho\,dV=\rho \frac{d}{dt} V(t)=\rho A_d \dot{h}(t)
+	\dfrac{d}{dt}\iiint_{V_c(t)}\rho\,dV=\rho \dfrac{d}{dt} V(t)=\rho A_d \dot{h}(t)
 }\]
 \[\textcolor{blue}{
 	\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=
@@ -405,9 +429,9 @@
 	haya disminuido un 40 \%.
 		\[\textcolor{blue}{\text{Se parte de la ecuación de conservación de la masa.}}\]
 		\[\textcolor{blue}{\text{El volumen es constante y $\rho = f(t)$ con $\dot{m}=C\rho$}}\]
-	\[\textcolor{blue}{\frac{d}{dt}\iiint_{V_c(t)}\rho\,dV+\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0}\]
+	\[\textcolor{blue}{\dfrac{d}{dt}\iiint_{V_c(t)}\rho\,dV+\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0}\]
 	\[\textcolor{blue}{
-		\frac{d}{dt}\iiint_{V_c(t)}\rho\,dV=V \frac{d}{dt} \rho(t)=V \dot{\rho}(t)
+		\dfrac{d}{dt}\iiint_{V_c(t)}\rho\,dV=V \dfrac{d}{dt} \rho(t)=V \dot{\rho}(t)
 	}\]
 	
 	\textcolor{blue}{Como ya se ha hecho en los ejercicios anteriores, se descompone la superficie y como solo existe velocidad en el orificio:
@@ -415,7 +439,7 @@
 	Por tanto:
 	\[V \dot{\rho}(t)+C\rho(t)=0\]
 	Que no es más que una EDO con variables separables cuya solución es:
-	\[ln\left(\frac{\rho(t)}{\rho _0}\right)=-\frac{C}{V}t \rightarrow \text{Para una reducción de rho de un 40 \%} \rightarrow t=\frac{V}{C}ln\left(\frac{1}{0.6}\right)\]}
+	\[ln\left(\dfrac{\rho(t)}{\rho _0}\right)=-\dfrac{C}{V}t \rightarrow \text{Para una reducción de rho de un 40 \%} \rightarrow t=\dfrac{V}{C}ln\left(\dfrac{1}{0.6}\right)\]}
 	\newpage
 	\item Un tanque cilíndrico de diámetro (D) igual a 80 cm se comunica por el fondo con una
 	tubería horizontal de diámetro (d) 15 cm por la que fluye agua. La
@@ -438,14 +462,15 @@
 		\item Pared
 	\end{itemize}
 	Partiendo de la ecuación de la masa y basandose en desarrollos anteriores:
-	\[\frac{d}{dt}\iiint_{V_c(t)}\rho\,dV+\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	\[\dfrac{d}{dt}\iiint_{V_c(t)}\rho\,dV+\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
 	Como $\rho= cte$:
-	\[\frac{d}{dt}\iiint_{V_c(t)}\,dV+\oiint_{S_c(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
-	\[\frac{d}{dt}\left[\pi \frac{D^2}{4}h(t)+l_{H}\pi\frac{d^2}{4}\right]-v_e\pi\frac{d^2}{4}+v_s\pi\frac{d^2}{4}=0\]
+	\[\dfrac{d}{dt}\iiint_{V_c(t)}\,dV+\oiint_{S_c(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	\[\dfrac{d}{dt}\left[\pi \dfrac{D^2}{4}h(t)+l_{H}\pi\dfrac{d^2}{4}\right]-v_e\pi\dfrac{d^2}{4}+v_s\pi\dfrac{d^2}{4}=0\]
 	\[D^2\dot{h}(t)-v_e d^2+v_s d^2=0\]
 	Resolviendo la EDO
-	\[h(t)=h_0+\frac{d^2}{D^2}\left(v_e-v_s\right) t\rightarrow \text{Sustituyendo los datos del enunciado se obtiene} \rightarrow t=40.3s\]
+	\[h(t)=h_0+\dfrac{d^2}{D^2}\left(v_e-v_s\right) t\rightarrow \text{Sustituyendo los datos del enunciado se obtiene} \rightarrow t=40.3s\]
 	}
+	\newpage
 	\item Se dispone de un émbolo de diámetro ($D_c$) con su superficie perforada con N agujeros de
 	diámetro d que se disponen equidistantes al centro. Inicialmente el cilindro
 	se encuentra lleno de un fluido incompresible de densidad $\rho$. El émbolo se desplaza con
@@ -460,15 +485,15 @@
 	\end{figure}
 	\textcolor{blue}{
 		Se escoge el volumen de control marcado sobre la figura y se plantea la ecuación de conservación de la masa:
-	\[\frac{d}{dt}\iiint_{V_c(t)}\rho\,dV+\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	\[\dfrac{d}{dt}\iiint_{V_c(t)}\rho\,dV+\oiint_{S_c(t)} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
 	Como $\rho=cte$:
-	\[\frac{d}{dt}\iiint_{V_c(t)}\,dV+\oiint_{S_c(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	\[\dfrac{d}{dt}\iiint_{V_c(t)}\,dV+\oiint_{S_c(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
 	El término local, como la única variación del volumen ocurre por la introducción de la varilla:
-	\[\frac{d}{dt}\iiint_{V_c(t)}\,dV=-\omega _0 \pi \frac{D^2_0}{4}\]
+	\[\dfrac{d}{dt}\iiint_{V_c(t)}\,dV=-\omega _0 \pi \dfrac{D^2_0}{4}\]
 	El término convectivo, teniendo en cuenta que las superficies son la pared o la de salida:
-	\[\oiint_{S_c(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=v_s \pi \frac{D^2_s}{4}\]
+	\[\oiint_{S_c(t)} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=v_s \pi \dfrac{D^2_s}{4}\]
 	Por tanto:
-	\[-\omega _0 \pi \frac{D^2_0}{4}+v_s \pi \frac{D^2_s}{4}=0\rightarrow v_s=\omega _0 \left(\frac{D_0}{D_s}\right)^2\]
+	\[-\omega _0 \pi \dfrac{D^2_0}{4}+v_s \pi \dfrac{D^2_s}{4}=0\rightarrow v_s=\omega _0 \left(\dfrac{D_0}{D_s}\right)^2\]
 	}	
 	
 	\newpage
@@ -483,11 +508,11 @@
 Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se pueden plantear directamente las ecuaciones teniendo en cuenta las distintas regiones:
 \begin{itemize}
 	\item $h(t)>h_1$
-	\[-A_d\dot{h}(t)=v_3\frac{\pi D^2_3}{4}+v_2\frac{\pi D^2_2}{4}+v_1\frac{\pi D^2_1}{4}\]
+	\[-A_d\dot{h}(t)=v_3\dfrac{\pi D^2_3}{4}+v_2\dfrac{\pi D^2_2}{4}+v_1\dfrac{\pi D^2_1}{4}\]
 	\item $h_1>h(t)>h_2$
-	\[-A_d\dot{h}(t)=v_3\frac{\pi D^2_3}{4}+v_2\frac{\pi D^2_2}{4}\]
+	\[-A_d\dot{h}(t)=v_3\dfrac{\pi D^2_3}{4}+v_2\dfrac{\pi D^2_2}{4}\]
 	\item $h(t)<h_2$
-	\[-A_d\dot{h}(t)=v_3\frac{\pi D^2_3}{4}\]
+	\[-A_d\dot{h}(t)=v_3\dfrac{\pi D^2_3}{4}\]
 \end{itemize}
 }
 
@@ -498,20 +523,21 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 	\textcolor{blue}{
 	\[\rho =  \rho _0 [a - cos (\omega t)] \ y \ v=f(x,t)\]
 	Se plantea la ecuación de conservación de la masa en forma diferencial:
-	\[\frac{\partial \rho}{\partial t} +\vec{\nabla}\cdot\left(\rho\vec{v}\right)=0\]
-	\[\frac{\partial}{\partial t}\left(\rho _0 [a - cos (\omega t)]\right)+\left[\frac{\partial}{\partial x}\vec{i}+
-	\frac{\partial}{\partial y}\vec{j}+
-	\frac{\partial}{\partial z}\vec{k}\right]\cdot \left[ \rho _0 [a - cos (\omega t)] \right]v(x,t)=0\]
+	\[\dfrac{\partial \rho}{\partial t} +\vec{\nabla}\cdot\left(\rho\vec{v}\right)=0\]
+	\[\dfrac{\partial}{\partial t}\left(\rho _0 [a - cos (\omega t)]\right)+\left[\dfrac{\partial}{\partial x}\vec{i}+
+	\dfrac{\partial}{\partial y}\vec{j}+
+	\dfrac{\partial}{\partial z}\vec{k}\right]\cdot \left[ \rho _0 [a - cos (\omega t)] \right]v(x,t)=0\]
 	\[
-	\omega \rho _0 sen(\omega t)+\left[ \rho _0 [a - cos (\omega t)] \right]\frac{\partial}{\partial x}v(x,t)=0
+	\omega \rho _0 sen(\omega t)+\left[ \rho _0 [a - cos (\omega t)] \right]\dfrac{\partial}{\partial x}v(x,t)=0
 	\]
-	\[\frac{\partial}{\partial x}v(x,t)=-\frac{\omega sen(\omega t)}{a - cos (\omega t)}\]
+	\[\dfrac{\partial}{\partial x}v(x,t)=-\dfrac{\omega sen(\omega t)}{a - cos (\omega t)}\]
 	Resolviendo la EDO con la condición de que v (0, t) = $v_0$.
-	\[v(x,t)=-\frac{\omega sen(\omega t)}{a - cos (\omega t)}x+v_0\]
+	\[v(x,t)=-\dfrac{\omega sen(\omega t)}{a - cos (\omega t)}x+v_0\]
 	}
 \end{enumerate}
 \newpage
-\subsection{Tema 4: Conservación de la cantidad de movimiento}
+
+\section{Conservación de la cantidad de movimiento.}
 \begin{enumerate}
 	\item Considérese una tubería de sección decreciente con un codo con un ángulo $\alpha$. Calcule la fuerza que se ejerce sobre las paredes.
 	\begin{figure}[H]
@@ -522,7 +548,7 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 	\end{figure}
 	\textcolor{blue}{
 	Se plantea la ecuación de conservación de la masa:  
-	\[\frac{d}{dt}\iiint_{V_c}\rho\,dV+\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	\[\dfrac{d}{dt}\iiint_{V_c}\rho\,dV+\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
 	Como el fluido es globalmente estacionario y no varia el volumen:
 	\[\rho\oiint_{S_c} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
 	\[\oiint_{S_c} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=
@@ -531,8 +557,8 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 	\iint_{S_2} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS
 	+
 	\iint_{S_p} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS\]
-	\[\iint_{S_1} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=-v_1\pi\frac{D_1^2}{4}\]
-	\[\iint_{S_2} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=v_2\pi\frac{D_2^2}{4}\]
+	\[\iint_{S_1} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=-v_1\pi\dfrac{D_1^2}{4}\]
+	\[\iint_{S_2} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=v_2\pi\dfrac{D_2^2}{4}\]
 	\[\iint_{S_p} \left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
 	Por tanto de la conservación de la masa se obtiene:
 	\[v_1D_1^2=v_2D_2^2\]
@@ -540,7 +566,7 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 	\[\iiint_{V_c}\vec{f}_V\,dV
 	+
 	\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
-	\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV
+	\iiint_{V_c}\dfrac{\partial \rho\vec{v}}{\partial t}\,dV
 	+\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
 	El término de fuerzas volumétricas:
 	\[\iiint_{V_c}\vec{f}_V\,dV=\iiint_{V_f}\rho\vec{g}\,dV=\rho \vec{g}V_c\]
@@ -566,32 +592,32 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 		\iint_{S_2}-(P-P_a)\vec{n}\,dS
 		-F_{fluido\rightarrow pared}\]
 		\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
-		-(P_1-P_a)\frac{\pi D^2_1}{4}(-\vec{i})
-		-(P_2-P_a)\frac{\pi D^2_2}{4}(\vec{n})
+		-(P_1-P_a)\dfrac{\pi D^2_1}{4}(-\vec{i})
+		-(P_2-P_a)\dfrac{\pi D^2_2}{4}(\vec{n})
 		-F_{fluido+atm\rightarrow pared}\]
 		\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
-		\frac{\pi}{4}\left[(P_1-P_a) D^2_1\vec{i}-(P_2-P_a)D^2_2\left(cos(\alpha)\vec{i}+sen(\alpha)\vec{j}\right)\right]
+		\dfrac{\pi}{4}\left[(P_1-P_a) D^2_1\vec{i}-(P_2-P_a)D^2_2\left(cos(\alpha)\vec{i}+sen(\alpha)\vec{j}\right)\right]
 		-F_{fluido+atm\rightarrow pared}\]
 	\end{itemize}
 	El término local:
-	\[\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV=0\]
+	\[\iiint_{V_c}\dfrac{\partial \rho\vec{v}}{\partial t}\,dV=0\]
 	El término convectivo:
 	\[\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
 	\iint_{S_1}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS+
 	\iint_{S_2}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS
 	+\iint_{S_p}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
-	\[\iint_{S_1}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=\rho v_1\vec{i}\cdot v_1\vec{i}\cdot-\vec{i}\frac{D^2_1}{\pi}=-\rho v^2_1\frac{D^2_1}{\pi}\vec{i}\]
-	\[\iint_{S_2}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=\rho v_2\vec{n}\cdot v_2\vec{n}\cdot\vec{n}\frac{D^2_2}{\pi}=\rho v^2_2\frac{D^2_2}{\pi}\vec{n}=\rho v^2_2\frac{D^2_2}{\pi}\left[cos(\alpha)\vec{i}+sen(\alpha)\vec{j}\right]\]
+	\[\iint_{S_1}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=\rho v_1\vec{i}\cdot v_1\vec{i}\cdot-\vec{i}\dfrac{D^2_1}{\pi}=-\rho v^2_1\dfrac{D^2_1}{\pi}\vec{i}\]
+	\[\iint_{S_2}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=\rho v_2\vec{n}\cdot v_2\vec{n}\cdot\vec{n}\dfrac{D^2_2}{\pi}=\rho v^2_2\dfrac{D^2_2}{\pi}\vec{n}=\rho v^2_2\dfrac{D^2_2}{\pi}\left[cos(\alpha)\vec{i}+sen(\alpha)\vec{j}\right]\]
 	\[\iint_{S_p}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=0\]
 	Por tanto, sustituyendo los término se obtiene:
-	\[F_{fluido+atm\rightarrow pared}=\frac{\pi}{4}\left[(P_1-P_a) D^2_1\vec{i}-(P_2-P_a)D^2_2\vec{n}\right]+\rho g V_c \vec{j}
-	+\rho\frac{\pi}{4}\left[v^2_1D^2_1\vec{i}-v^2_2D^2_2\vec{n}\right] \]
+	\[F_{fluido+atm\rightarrow pared}=\dfrac{\pi}{4}\left[(P_1-P_a) D^2_1\vec{i}-(P_2-P_a)D^2_2\vec{n}\right]+\rho g V_c \vec{j}
+	+\rho\dfrac{\pi}{4}\left[v^2_1D^2_1\vec{i}-v^2_2D^2_2\vec{n}\right] \]
 	\[\vec{n}=cos(\alpha)\vec{i}+sen(\alpha)\vec{j}\]
 	}
 		
 	
 	
-	
+	\newpage
 	
 	\item Se tiene un elemento de área de 2 $mm^2$ cuya normal es paralela al vector de componentes
 	(1, 2, 3). Si el tensor de esfuerzos es de la forma $\tau_{xx} = -2 \times 10^5; \tau_{yy} = -110 \times 10^ 3; \tau_{zz} =
@@ -612,7 +638,7 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 		\]}
 		\item El valor de la fuerza superficial sobre dicha área  si la presión es de 1.5 bares.
 			\textcolor{blue}{\[F=\oiint_{S_c}\left(-p\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=\left(-p\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}S \]
-			\[	F=-1.5\times10^5 \frac{2\times 10^{-6}}{\sqrt{1^2+2^2+3^2}}\begin{bmatrix}
+			\[	F=-1.5\times10^5 \dfrac{2\times 10^{-6}}{\sqrt{1^2+2^2+3^2}}\begin{bmatrix}
 					1 \\
 					2 \\
 					3 \\
@@ -620,12 +646,12 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 				-2 \times 10^5&1\times10^3&-5 \times 10^4\\
 				1\times10^3& -110 \times 10^ 3&1 \times 10^5\\
 				-5 \times 10^4&1 \times 10^5&-115 \times 10^3\\
-				\end{bmatrix}\cdot\frac{2\times 10^{-6}}{\sqrt{1^2+2^2+3^2}}\begin{bmatrix}
+				\end{bmatrix}\cdot\dfrac{2\times 10^{-6}}{\sqrt{1^2+2^2+3^2}}\begin{bmatrix}
 				1 \\
 				2 \\
 				3 \\
 				\end{bmatrix}\]
-			\[F=\frac{1}{\sqrt{14}}\begin{bmatrix}
+			\[F=\dfrac{1}{\sqrt{14}}\begin{bmatrix}
 				-0.996 \\
 				-0.438 \\
 				-1.29 \\
@@ -647,14 +673,14 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
  \textcolor{blue}
  {
  	Se plantea la ecuación de conservación de la masa: 
- 	\[\frac{d}{dt}\iiint_{V_c}\rho\,dV+\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+ 	\[\dfrac{d}{dt}\iiint_{V_c}\rho\,dV+\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
  	Teniendo en cuenta desarrollos de ejercicios anteriores:
  	\[A\dot{h}(t)=v_s(t)A_s\]
  	Planteando la conservación de la cantidad de movimiento, donde solo se buscan los términos en dirección $\vec{i}$ ya que el depósito si no estuviese fijo se movería hacia la izquierda y los términos de fuerza en dirección al suelo solo soportan el peso del depósito y no intervendrían en este ''movimiento''
  	\[\iiint_{V_c}\vec{f}_V\,dV
  	+
  	\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
- 	\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV
+ 	\iiint_{V_c}\dfrac{\partial \rho\vec{v}}{\partial t}\,dV
  	+\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
  	El término de fuerzas volumétricas es nulo en la dirección de la fuerza a reacción a calcular:
  	\[\iiint_{V_c}\vec{f}_V\,dV=0\]
@@ -683,7 +709,7 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
  		-F_{fl+atm\rightarrow dep}=(P_s-P_a)A_s -F_{fl+atm\rightarrow dep}\]
  	\end{itemize}
  	El término local es nulo debido a que la variación de la derivada de la altura tiene un orden de magnitud mucho menor al resto de términos y, por tanto es despreciable :
- 	\[\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV=0\]
+ 	\[\iiint_{V_c}\dfrac{\partial \rho\vec{v}}{\partial t}\,dV=0\]
  	El término convectivo en la dirección de $\vec{i}$:
  	\[\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
  	\iint_{S_n}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS+
@@ -697,12 +723,12 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 	 \[(P_s-P_a)A_s -F_{fl+atm\rightarrow dep}=\rho v^2_s A_s\rightarrow P_s=P_a\]
 	 \[|F_{fl+atm\rightarrow dep}|=|\rho v^2_s A_s|\rightarrow  \text{Como se mueve a la izquierda: } \vec{F}_{fl+atm\rightarrow dep}= -\rho v^2_s A_s\vec{i}\]
 	 Para obtener la relación entre altura y velocidad de salida se aplica el teorema de Bernouilli entre la parte superior del depósito y la salida:
-	 \[P_1+\rho g h(t)=P_s+\frac{v^2_s(t)}{2}\rho\rightarrow P_1=P_s=P_a \rightarrow h(t)=\frac{v^2_s(t)}{2g}\rightarrow v_s(t)=\sqrt{2gh(t)}\]
+	 \[P_1+\rho g h(t)=P_s+\dfrac{v^2_s(t)}{2}\rho\rightarrow P_1=P_s=P_a \rightarrow h(t)=\dfrac{v^2_s(t)}{2g}\rightarrow v_s(t)=\sqrt{2gh(t)}\]
 	 Aplicando esta expresión junto a la obtenida con la conservación de la masa:
 	 \[v_s(t)=\sqrt{2gh(t)}\]
 	 \[A\dot{h}(t)=v_s(t)A_s\]
 	 Resolviendo la EDO se obtiene:
-	 \[\sqrt{h(t)}=\frac{-A_s}{A}\sqrt{\frac{g}{2}}t+\sqrt{h_0}\]
+	 \[\sqrt{h(t)}=\dfrac{-A_s}{A}\sqrt{\dfrac{g}{2}}t+\sqrt{h_0}\]
 }
 %\item Considérese el siguiente chorro impactando contra una placa de forma axilsimétrica.
 %
@@ -886,7 +912,7 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 %Luego el resultado es:
 %\[\vec{F}_{jet+atm\rightarrow placa} = -\rho(v_e-v_p)^2\cdot\dfrac{\pi D_e^2}{4}\vec{k}\]
 %}
- 
+ \newpage
 \item Calcule la fuerza aplicada por un chorro sobre una placa móvil: 
 \begin{figure}[H]
 	\centering
@@ -899,9 +925,9 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 	Se coloca el sistema de referencia en la placa y con velocidad $\vec{v}_p$ que como es constante no provoca fuerzas de inercia. De esta manera el chorro sale a la velocidad: $\vec{v}_e-\vec{v}_p$
 	\\
 	Se plantea la ecuación de conservación de la masa: 
-	\[\frac{d}{dt}\iiint_{V_c}\rho\,dV+\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
+	\[\dfrac{d}{dt}\iiint_{V_c}\rho\,dV+\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=0\]
 	Como el volumen de control no cambia:
-	\[\frac{d}{dt}\iiint_{V_c}\rho\,dV=0\]
+	\[\dfrac{d}{dt}\iiint_{V_c}\rho\,dV=0\]
 	Desarrollando el término de superficie:
 	\[\oiint_{S_c} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=\]
 	\[
@@ -918,7 +944,7 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 		\item En la salida del chorro, por ser un perfil uniforme:
 			\[\iint_{S_e} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right] \,dS=
 			\iint_{S_e} \rho \left( v_e-v_P \right)\vec{i}\cdot-\vec{i} \,dS=
-			-\left(v_e-v_P\right)\frac{\pi D^2_i}{4}\]
+			-\left(v_e-v_P\right)\dfrac{\pi D^2_i}{4}\]
 		\item En la interfase como la velocidad es siempre perpendicular a la superficie:
 			\[\iint_{S_{int}}\rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right]\,dS=0\]
 		\item En la dirección radial de la placa:
@@ -927,12 +953,12 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 			\[\iint_{S_P} \rho\left[(\vec{v}-\vec{v}_c)\cdot\vec{n}\right]\,dS=0\]
 	\end{itemize}
 	Por tanto:
-		\[\left(v_e-v_P\right)\frac{\pi D^2_i}{4}=v_r2\pi r h(r)\]
+		\[\left(v_e-v_P\right)\dfrac{\pi D^2_i}{4}=v_r2\pi r h(r)\]
 	Planteando la conservación de la cantidad de movimiento:
 		\[\iiint_{V_c}\vec{f}_V\,dV
 		+
 		\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
-		\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV
+		\iiint_{V_c}\dfrac{\partial \rho\vec{v}}{\partial t}\,dV
 		+ \oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
 	Se desprecia el término de fuerzas volumétricas (número de Froude elevado):
 		\[\iiint_{V_c}\vec{f}_V\,dV=0\]
@@ -959,7 +985,7 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 			\[\iint_{S_p}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS=-F_{jet+atm\rightarrow placa}\]
 	\end{itemize}
 	El término local es despreciable ya que el fluido es globalmente estacionario:
-		\[\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV=0\]
+		\[\iiint_{V_c}\dfrac{\partial \rho\vec{v}}{\partial t}\,dV=0\]
 	El término superficial, teniendo en cuenta como en los desarrollos anteriores solo eran no nulos los términos a la salida del chorro y en la dirección radial de la placa:
 		\[\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
 		\iint_{S_e}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS
@@ -968,7 +994,7 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 	\begin{itemize}
 		\item En la salida del chorro:
 			\[\iint_{S_e}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
-			\iint_{S_e}\rho \left(v_e-v_p\right) \vec{k}\left[\left(v_e-v_p\right) \vec{k}\cdot-\vec{k}\right]\,dS=-\rho\left(v_e-v_p\right)^2\frac{\pi D^2_i}{4}\vec{k}\]
+			\iint_{S_e}\rho \left(v_e-v_p\right) \vec{k}\left[\left(v_e-v_p\right) \vec{k}\cdot-\vec{k}\right]\,dS=-\rho\left(v_e-v_p\right)^2\dfrac{\pi D^2_i}{4}\vec{k}\]
 		\item En la dirección radial de la placa:
 			\[\iint_{S_r}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
 			\iint_{S_r}\rho v_r \vec{e}_r\left[v_r \vec{e}_r\cdot\vec{e}_r\right]\,dS=\rho v^2_r\iint_{S_r}\vec{e}_r\,dS=0 \text{ Ver figura inferior}\]
@@ -980,8 +1006,10 @@ Teniendo en cuenta los resultados obtenidos anteriormente para un depósito, se 
 		\end{figure}
 	\end{itemize}
 	Por tanto:
-		\[F_{jet+atm\rightarrow placa}=\rho\left(v_e-v_p\right)^2\frac{\pi D^2_i}{4}\vec{k}\]
+		\[F_{jet+atm\rightarrow placa}=\rho\left(v_e-v_p\right)^2\dfrac{\pi D^2_i}{4}\vec{k}\]
 }
+
+\newpage
 \item Dado el depósito de la Figura \ref{fig:depositoaltura}, determinar la expresión de la longitud que recorre el chorro que sale del depósito, en función del tiempo.
 \begin{figure}[H]
 	\centering
@@ -1034,7 +1062,7 @@ Conocemos las expresiones de las velocidades de entrada y salida:
 Sustituyendo en la ecuación anterior:
 \[\rho_l g H(t) = \dfrac{1}{2} \rho_a \dfrac{Q^2}{\dfrac{\pi^2 D_1^4}{16}} + \dfrac{1}{2}\rho_l \dfrac{Q^2}{\dfrac{\pi^2 D_0^4}{16}} =
 \dfrac{\rho_l 8 Q^2}{\pi^2 D_0^4}\left(\dfrac{\rho_a D_0^4}{\rho_l D_1^4} + 1\right) \Rightarrow\]
-\[\Rightarrow
+\[
 	\begin{matrix}
 		\rho_l g H(t)=\dfrac{\rho_l 8 Q^2}{\pi^2 D_0^4}\left(\dfrac{\rho_a D_0^4}{\rho_l D_1^4} + 1\right)\text{, donde }\dfrac{\rho_a D_0^4}{\rho_l D_1^4}\text{ puede llegar a ser de orden 1.}\\
 		Q=-A\dfrac{dH}{dt}
@@ -1071,6 +1099,7 @@ Y despreciando la componente $\vec{j}$, despejamos la expresión pedida:
 	\Biggr\} \Rightarrow Q_g = Q_l
 	\]
 	
+
 \black
 \item El movimiento de un flujo incompresible e isótropo viene dado por el campo de velocidades
 $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido a la acción de la gravedad, que actúa en la dirección negativa del eje Y. Se pide:
@@ -1182,7 +1211,7 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
 		
 \end{enumerate}
 
-\newpage
+
 \black
 \item Para el depósito de la Figura \ref{fig:depositoAnillo} hallar la expresión del tiempo que tardaría en vaciarse sabiendo que $h(t = 0) = H_0$
 

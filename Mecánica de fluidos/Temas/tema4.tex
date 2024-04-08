@@ -1,5 +1,5 @@
-\section{Tema 4: Conservación de la cantidad de movimiento}
-\subsection{Teorema del transporte de Reynolds para la cantidad de movimiento}
+\chapter{Conservación de la cantidad de movimiento.}
+\section{Teorema del transporte de Reynolds para la cantidad de movimiento.}
 Sea un volumen sometido a un conjunto de fuerzas:
 %\begin{figure}[H]
 %	\centering
@@ -10,7 +10,7 @@ Sea un volumen sometido a un conjunto de fuerzas:
 
 \begin{figure}[!ht]
 	\centering
-		\begin{circuitikz}
+		\begin{circuitikz}[scale = 0.9]
 			\tikzstyle{every node}=[font=\large]
 			\draw [-latex] (-1.75,15.75) -- (-1.75,21.25)node[pos=1,above]{$\vec{k}$};
 			\draw [-latex] (-1.75,15.75) -- (5.75,15.75)node[pos=1,right]{$\vec{i}$};
@@ -27,7 +27,7 @@ Sea un volumen sometido a un conjunto de fuerzas:
 			\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (2,18.5) -- (1.75,18.25);
 			\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (2,18.5) -- (2,17.75);
 			\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (2,17.75) -- (1.75,17.5);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (2,18) -- (6.25,18)node[pos=0.5,above]{$\vec{v}(\vec{r},t)$};
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (2,18) -- (6.25,18)node[pos=1,above]{$\vec{v}(\vec{r},t)$};
 			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (1.25,17.75) -- (1.25,16.5)node[pos=0.85,right]{$\vec{f}_V$};
 			\draw [ color={rgb,255:red,255; green,128; blue,0}, short] (0.25,20.25) .. controls (1.25,20.25) and (1.75,19.75) .. (3,19.5);
 			\draw [ color={rgb,255:red,255; green,128; blue,0}, short] (3,19.5) -- (2.75,19.25);
@@ -46,13 +46,13 @@ Sea un volumen sometido a un conjunto de fuerzas:
 
 Aplicando al teorema del transporte de Reynolds la función $\Phi=\rho\vec{v}$ y una similitud con la segunda ley de Newton se obtiene para volúmenes fluidos:
 \[\iiint_{V_f}\vec{f}_V\,dV+\oiint_{S_f}\vec{f}_s\,dS=
-\frac{d}{dt}\iiint_{V_f}\rho\vec{v}\,dV=
-\iiint_{V_f}\frac{\partial \rho\vec{v}}{\partial t}\,dV+\oiint_{S_f}\rho\vec{v}\left(\vec{v}\cdot\vec{n}\right)\,dS\]
+\dfrac{d}{dt}\iiint_{V_f}\rho\vec{v}\,dV=
+\iiint_{V_f}\dfrac{\partial \rho\vec{v}}{\partial t}\,dV+\oiint_{S_f}\rho\vec{v}\left(\vec{v}\cdot\vec{n}\right)\,dS\]
 
 Para un volumen de control:
 \[\iiint_{V_c}\vec{f}_V\,dV+\oiint_{S_c}\vec{f}_s\,dS=
-\frac{d}{dt}\iiint_{V_f}\rho\vec{v}\,dV=
-\iiint_{V_c}\frac{\partial \rho\vec{v}}{\partial t}\,dV
+\dfrac{d}{dt}\iiint_{V_f}\rho\vec{v}\,dV=
+\iiint_{V_c}\dfrac{\partial \rho\vec{v}}{\partial t}\,dV
 +\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\]
 
 En estas expresiones aparecen dos tipos de fuerzas:
@@ -76,10 +76,11 @@ En estas expresiones aparecen dos tipos de fuerzas:
 		\item Siendo el tensor de esfuerzas viscosos (es una ecuación constitutiva, depende del material):
 		\[
 		\overline{\overline{\tau}}=
+		\renewcommand{\arraystretch}{1}
 		\begin{bmatrix}
-			\tau_{xx} &\tau_{xy} & \tau_{xz} \\
-			 \tau_{yx}&  \tau_{yy}& \tau_{yz}\\	
-			\tau_{zx} & \tau_{zy} & \tau_{zz} \\
+			\tau_{xx} & \tau_{xy} & \tau_{xz}\\
+			\tau_{yx} & \tau_{yy} & \tau_{yz}\\	
+			\tau_{zx} & \tau_{zy} & \tau_{zz}\\
 		\end{bmatrix}
 		=2\mu \overline{\overline{\xi}} + \lambda \left(\vec{\nabla}\cdot \vec{v}\right)\overline{\overline{I}}
 		\]
@@ -90,14 +91,14 @@ En estas expresiones aparecen dos tipos de fuerzas:
 		\end{itemize}
 	\end{enumerate}
 \end{enumerate}
-\subsection{Ecuaciones de Navier-Stokes}
+\section{Ecuaciones de Navier-Stokes.}
 Se parte del teorema del transporte de Reynolds:
 \begin{equation}
 \iiint_{V_f}\vec{f}_V\,dV
 +
 \oiint_{S_f}\vec{f}_s\,dS
 =
-\iiint_{V_f}\frac{\partial \rho\vec{v}}{\partial t}\,dV
+\iiint_{V_f}\dfrac{\partial \rho\vec{v}}{\partial t}\,dV
 +
 \oiint_{S_f}\rho\vec{v}\left(\vec{v}\cdot\vec{n}\right)\,dS
 \end{equation}
@@ -127,7 +128,7 @@ Juntando las ecuaciones (5), (6) y (7):
 +
 \iiint_{V_f}\vec{\nabla}\cdot\overline{\overline{\tau}}\,dV
 =
-\iiint_{V_f}\frac{\partial \rho\vec{v}}{\partial t}\,dV
+\iiint_{V_f}\dfrac{\partial \rho\vec{v}}{\partial t}\,dV
 +
 \iiint_{V_f}\vec{\nabla}\cdot\left(\rho \vec{ v} \otimes \vec{v}\right)\,dV
 \]
@@ -140,7 +141,7 @@ Para un valor $V_f \approx dV$ arbitrariamente pequeño pero no nulo. Se obtiene
 +
 \vec{\nabla}\cdot\overline{\overline{\tau}}
 =
-\frac{\partial \rho\vec{v}}{\partial t}
+\dfrac{\partial \rho\vec{v}}{\partial t}
 +
 \vec{\nabla}\cdot\left(\rho \vec{ v} \otimes \vec{v}\right)
 \]
@@ -152,16 +153,17 @@ Desarrollando:
 +
 \vec{\nabla}\cdot\overline{\overline{\tau}}
 =
-\red{\underbrace{\black \rho\frac{\partial\vec{v}}{\partial t}
+\red{\underbrace{\black \rho\dfrac{\partial\vec{v}}{\partial t}
 +
-\rho \left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}}_{\rho\frac{D\vec{v}}{Dt}}}\black\]
+\rho \left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}}_{\dfrac{\rho D\vec{v}}{Dt}}}\]
+\black
 \[\vec{\nabla}\cdot\overline{\overline{\tau}}
 =
 \vec{\nabla}\cdot\left(2\mu\overline{\overline{\xi}}\right)
 +
 \vec{\nabla}\cdot\left[\lambda\left(\vec{\nabla}\cdot\vec{v}\right)\overline{\overline{I}}\right]
 =
-\vec{\nabla}\cdot\left(2\mu\frac{\vec{\nabla}\vec{v}+\left(\vec{\nabla}\vec{v}\right)^T}{2}\right)
+\vec{\nabla}\cdot\left(2\mu\dfrac{\vec{\nabla}\vec{v}+\left(\vec{\nabla}\vec{v}\right)^T}{2}\right)
 +
 \lambda\vec{\nabla}\cdot\left[\left(\vec{\nabla}\cdot\vec{v}\right)\overline{\overline{I}}\right]
 \]
@@ -172,48 +174,48 @@ Desarrollando:
 	\]
 	
 En fluidos newtonianos se cumple que $\rho,\mu=cte$ con lo cual:
-\[\frac{\partial \rho}{\partial t}=0; \vec{\nabla}\rho=0; \vec{\nabla}\cdot\vec{v}=0\]
+\[\dfrac{\partial \rho}{\partial t}=0; \vec{\nabla}\rho=0; \vec{\nabla}\cdot\vec{v}=0\]
 
 Por tanto, las ecuaciones de Navier-Stokes junto a la conservación de la masa en forma diferencial:
-\[\rho\frac{\partial \vec{v}}{\partial t}+\rho\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=-\vec{\nabla}P+\mu\vec{\nabla}^2\vec{v}+\rho \vec{g}\]
-\[\frac{\partial \rho}{\partial t} +\vec{\nabla}\cdot\left(\rho\vec{v}\right)=0\]
-\subsection{Número de Reynolds}
+\[\rho\dfrac{\partial \vec{v}}{\partial t}+\rho\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=-\vec{\nabla}P+\mu\vec{\nabla}^2\vec{v}+\rho \vec{g}\]
+\[\dfrac{\partial \rho}{\partial t} +\vec{\nabla}\cdot\left(\rho\vec{v}\right)=0\]
+\section{Número de Reynolds.}
 El número de Reynolds es un número adimensional que se emplea para caracterizar el movimiento de un fluido y se define como:
-\[Re=\frac{\text{Orden de magnitud de la inercia convectiva}}{\text{Orden de magnitud de fuerzas viscosas}}\]
-\[Re=\frac{|\rho\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}|}{|\mu\vec{\nabla}^2\vec{v}|}
-\stackrel{|\vec{\nabla}|=\frac{1}{L_c}}{=}\frac{\rho_c v^2_c/L_c}{\mu_c v_c/L^2_c}=\frac{\rho_c v_c L_c}{\mu_c}\]
+\[Re=\dfrac{\text{Orden de magnitud de la inercia convectiva}}{\text{Orden de magnitud de fuerzas viscosas}}\]
+\[Re=\dfrac{|\rho\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}|}{|\mu\vec{\nabla}^2\vec{v}|}
+\stackrel{|\vec{\nabla}|=\dfrac{1}{L_c}}{=}\dfrac{\rho_c v^2_c/L_c}{\mu_c v_c/L^2_c}=\dfrac{\rho_c v_c L_c}{\mu_c}\]
 \begin{itemize}
 	\item Si Re es elevado, el flujo es de inercia dominante, flujo turbulento.
 	\item Si Re es bajo, el flujo es de viscosidad dominante, flujo laminar.
 \end{itemize}
-\subsection{Teorema de Bernouilli}
+\section{Teorema de Bernouilli.}
 Se parte de la ecuación de Navier-Stokes en forma diferencial:
-\[\rho\frac{\partial \vec{v}}{\partial t}+\rho\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=-\vec{\nabla}P+\mu\vec{\nabla}^2\vec{v}+ \vec{f}_v\]
+\[\rho\dfrac{\partial \vec{v}}{\partial t}+\rho\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}=-\vec{\nabla}P+\mu\vec{\nabla}^2\vec{v}+ \vec{f}_v\]
 
 Desarrollando:
-\[\rho\frac{\partial \vec{v}}{\partial t}
+\[\rho\dfrac{\partial \vec{v}}{\partial t}
 +
-\rho\vec{\nabla}\frac{|\vec{v}|}{2}^2-\rho\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)
+\rho\vec{\nabla}\dfrac{|\vec{v}|}{2}^2-\rho\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)
 =-\vec{\nabla}P+\mu\vec{\nabla}^2\vec{v}+\vec{f}_v
 \]
-
+\newpage
 Se supone un líquido incompresible, estacionario, fuerzas de viscosidad despreciables y que las fuerzas volumétricas tienen la siguiente función potencial:
 \[\vec{f}_V=-g\vec{\nabla}U_g\]
-\[\rho\vec{\nabla}\frac{|\vec{v}|}{2}^2
+\[\rho\vec{\nabla}\dfrac{|\vec{v}|}{2}^2
 -
 \rho\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)
 =
 -\vec{\nabla}\left(P+\rho U_g\right)\]
 
 Multiplicando por $\vec{v}$
-\[\vec{v}\cdot\left[\rho\vec{\nabla}\frac{|\vec{v}|}{2}^2
+\[\vec{v}\cdot\left[\rho\vec{\nabla}\dfrac{|\vec{v}|}{2}^2
 -
 \rho\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)
 =
--\vec{\nabla}\left(P+\rho U_g\right)\right]\rightarrow\vec{\nabla}\left(P+\frac{1}{2}\rho|v|^2+\rho U_g\right)=0\]
+-\vec{\nabla}\left(P+\rho U_g\right)\right]\rightarrow\vec{\nabla}\left(P+\dfrac{1}{2}\rho|v|^2+\rho U_g\right)=0\]
 
 De esta expresión se deduce que:
-\[P+\frac{1}{2}\rho|v|^2+\rho U_g=cte\]
+\[P+\dfrac{1}{2}\rho|v|^2+\rho U_g=cte\]
 
 En el caso de que el campo potencial gravitatorio sea paralelo al eje z, se obtiene el teorema de Bernouilli:
-\[P+\frac{1}{2}\rho|v|^2+\rho gz=cte\]
+\[P+\dfrac{1}{2}\rho|v|^2+\rho gz=cte\]

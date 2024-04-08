@@ -1,27 +1,28 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Tema 1: Fundamentos y propiedades de los fluidos}{2}{}%
-\contentsline {subsection}{\numberline {1.1}Hipótesis de medio continuo}{2}{}%
-\contentsline {subsection}{\numberline {1.2}Ecuaciones equilibrio termodinámico local}{4}{}%
-\contentsline {subsection}{\numberline {1.3}Fuerzas y respuestas en sólidos y fluidos}{4}{}%
-\contentsline {subsection}{\numberline {1.4}Mojabilidad}{9}{}%
-\contentsline {section}{\numberline {2}Tema 2: Cinemática de la partícula fluida}{10}{}%
-\contentsline {subsection}{\numberline {2.1}Repaso operador nabla}{10}{}%
-\contentsline {subsection}{\numberline {2.2}Conceptos fundamentales}{11}{}%
-\contentsline {subsection}{\numberline {2.3}Clasificación flujos}{12}{}%
-\contentsline {subsection}{\numberline {2.4}Derivada sustancial, local y convectiva}{13}{}%
-\contentsline {subsection}{\numberline {2.5}Movimiento diferencial en torno a un punto}{15}{}%
-\contentsline {subsection}{\numberline {2.6}Movimiento de la partícula fluida en una dirección}{16}{}%
-\contentsline {section}{\numberline {3}Tema 3: Conservación de la masa}{18}{}%
-\contentsline {subsection}{\numberline {3.1}Teorema del transporte de Reynolds}{18}{}%
-\contentsline {subsection}{\numberline {3.2}Flujo sobre una superficie}{20}{}%
-\contentsline {subsection}{\numberline {3.3}Propiedades en forma diferencial}{20}{}%
-\contentsline {section}{\numberline {4}Tema 4: Conservación de la cantidad de movimiento}{21}{}%
-\contentsline {subsection}{\numberline {4.1}Teorema del transporte de Reynolds para la cantidad de movimiento}{21}{}%
-\contentsline {subsection}{\numberline {4.2}Ecuaciones de Navier-Stokes}{22}{}%
-\contentsline {subsection}{\numberline {4.3}Número de Reynolds}{23}{}%
-\contentsline {subsection}{\numberline {4.4}Teorema de Bernouilli}{23}{}%
-\contentsline {section}{\numberline {5}Ejercicios resueltos}{25}{}%
-\contentsline {subsection}{\numberline {5.1}Tema 1: Fundamentos y propiedades de los fluidos}{25}{}%
-\contentsline {subsection}{\numberline {5.2}Tema 2: Cinemática de la partícula fluida}{28}{}%
-\contentsline {subsection}{\numberline {5.3}Tema 3: Conservación de la masa}{33}{}%
-\contentsline {subsection}{\numberline {5.4}Tema 4: Conservación de la cantidad de movimiento}{40}{}%
+\contentsline {chapter}{Índice general}{\es@scroman {i}}{}%
+\contentsline {chapter}{\numberline {1}Fundamentos y propiedades de los fluidos.}{1}{}%
+\contentsline {section}{\numberline {1.1}Hipótesis de medio continuo.}{1}{}%
+\contentsline {section}{\numberline {1.2}Ecuaciones equilibrio termodinámico local.}{3}{}%
+\contentsline {section}{\numberline {1.3}Fuerzas y respuestas en sólidos y fluidos}{3}{}%
+\contentsline {section}{\numberline {1.4}Mojabilidad.}{7}{}%
+\contentsline {chapter}{\numberline {2}Cinemática de la partícula fluida.}{9}{}%
+\contentsline {section}{\numberline {2.1}Repaso del operador nabla.}{9}{}%
+\contentsline {section}{\numberline {2.2}Conceptos fundamentales.}{10}{}%
+\contentsline {section}{\numberline {2.3}Clasificación de los flujos.}{11}{}%
+\contentsline {section}{\numberline {2.4}Derivada sustancial, local y convectiva.}{11}{}%
+\contentsline {section}{\numberline {2.5}Movimiento diferencial en torno a un punto.}{13}{}%
+\contentsline {section}{\numberline {2.6}Movimiento de la partícula fluida en una dirección.}{14}{}%
+\contentsline {chapter}{\numberline {3}Conservación de la masa.}{17}{}%
+\contentsline {section}{\numberline {3.1}Teorema del transporte de Reynolds.}{17}{}%
+\contentsline {section}{\numberline {3.2}Flujo sobre una superficie.}{19}{}%
+\contentsline {section}{\numberline {3.3}Propiedades en forma diferencial.}{19}{}%
+\contentsline {chapter}{\numberline {4}Conservación de la cantidad de movimiento.}{21}{}%
+\contentsline {section}{\numberline {4.1}Teorema del transporte de Reynolds para la cantidad de movimiento.}{21}{}%
+\contentsline {section}{\numberline {4.2}Ecuaciones de Navier-Stokes.}{22}{}%
+\contentsline {section}{\numberline {4.3}Número de Reynolds.}{23}{}%
+\contentsline {section}{\numberline {4.4}Teorema de Bernouilli.}{23}{}%
+\contentsline {chapter}{\numberline {5}Ejercicios resueltos.}{25}{}%
+\contentsline {section}{\numberline {5.1}Fundamentos y propiedades de los fluidos.}{25}{}%
+\contentsline {section}{\numberline {5.2}Cinemática de la partícula fluida.}{28}{}%
+\contentsline {section}{\numberline {5.3}Conservación de la masa.}{32}{}%
+\contentsline {section}{\numberline {5.4}Conservación de la cantidad de movimiento.}{39}{}%

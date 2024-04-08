@@ -1,44 +1,44 @@
-\section{Tema 2: Cinemática de la partícula fluida}
+\chapter{Cinemática de la partícula fluida.}
 
-\subsection{Repaso operador nabla}
+\section{Repaso del operador nabla.}
 En cartesianas nabla se define como:
 
-\[\vec\nabla=\frac{\partial}{\partial x}\vec i + \frac{\partial}{\partial y}\vec j +\frac{\partial}{\partial z}\vec k\]
+\[\vec\nabla=\dfrac{\partial}{\partial x}\vec i + \dfrac{\partial}{\partial y}\vec j +\dfrac{\partial}{\partial z}\vec k\]
 
 \begin{itemize}
 	\item Aplicado a un campo escalar $\Phi = f(x,y,z)$
 	
 	\begin{itemize}
 		\item Operador gradiente
-		\[\vec\nabla \Phi = \left(\frac{\partial}{\partial x}\vec i + \frac{\partial}{\partial y}\vec j +\frac{\partial}{\partial z}\vec k\right) \Phi\]
-No es un operador conmutativo.
-\item Laplaciano: 
-\[\vec\nabla^2=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\]
+		\[\vec\nabla \Phi = \left(\dfrac{\partial}{\partial x}\vec i + \dfrac{\partial}{\partial y}\vec j +\dfrac{\partial}{\partial z}\vec k\right) \Phi \text{ \textbf{(No conmutativo)}}\]
 
-\[\vec\nabla^2\Phi=\Delta\Phi=\frac{\partial^2\Phi}{\partial x^2}+\frac{\partial^2\Phi}{\partial y^2}+\frac{\partial^2\Phi}{\partial z^2}\]
+\item Laplaciano: 
+\[\vec\nabla^2=\dfrac{\partial^2}{\partial x^2}+\dfrac{\partial^2}{\partial y^2}+\dfrac{\partial^2}{\partial z^2}\]
+
+\[\vec\nabla^2\Phi=\Delta\Phi=\dfrac{\partial^2\Phi}{\partial x^2}+\dfrac{\partial^2\Phi}{\partial y^2}+\dfrac{\partial^2\Phi}{\partial z^2}\]
 	\end{itemize}
 	
 	\item Aplicado a un campo vectorial $\vec\Phi = \phi_x(x,y,z)\vec i+\phi_y(x,y,z)\vec j+\phi_z(x,y,z)\vec z$
 	\begin{itemize}
 		\item Divergencia
-		\[\vec\nabla \cdot \vec\Phi = \frac{\partial \phi_x}{\partial x} + \frac{\partial \phi_y}{\partial y} + \frac{\partial \phi_z}{\partial z}\]
+		\[\vec\nabla \cdot \vec\Phi = \dfrac{\partial \phi_x}{\partial x} + \dfrac{\partial \phi_y}{\partial y} + \dfrac{\partial \phi_z}{\partial z}\]
 		
 		\item Rotacional
 		
 		\[
 		\vec\nabla \times \vec\Phi = \begin{vmatrix}
 			\vec i & \vec j & \vec k \\
-			\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+			\dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
 			\phi_x & \phi_y & \phi_z \\
 		\end{vmatrix}
 		\]
 		\item Gradiente 
 		\setlength{\arraycolsep}{1.5pt}
-		\renewcommand{\arraystretch}{1.5}
+		\renewcommand{\arraystretch}{2}
 		\[\vec\nabla  \vec\Phi = \begin{bmatrix}
-			\frac{\partial \phi_x}{\partial x} & \frac{\partial \phi_x}{\partial y} & \frac{\partial \phi_x}{\partial z} \\
-			\frac{\partial \phi_y}{\partial x} & \frac{\partial \phi_y}{\partial y} & \frac{\partial \phi_y}{\partial z} \\
-			\frac{\partial \phi_z}{\partial x} & \frac{\partial \phi_z}{\partial y} & \frac{\partial \phi_z}{\partial z} \\
+			\dfrac{\partial \phi_x}{\partial x} & \dfrac{\partial \phi_x}{\partial y} & \dfrac{\partial \phi_x}{\partial z} \\
+			\dfrac{\partial \phi_y}{\partial x} & \dfrac{\partial \phi_y}{\partial y} & \dfrac{\partial \phi_y}{\partial z} \\
+			\dfrac{\partial \phi_z}{\partial x} & \dfrac{\partial \phi_z}{\partial y} & \dfrac{\partial \phi_z}{\partial z} \\
 		\end{bmatrix}\]
 		
 	\end{itemize}
@@ -47,11 +47,11 @@ No es un operador conmutativo.
 		\item $\vec{\nabla}(\varphi \phi) =\varphi\vec{\nabla}\phi+\phi\vec{\nabla}\varphi$
 		\item $\vec{\nabla} \times \left(\vec{\nabla} \phi\right)=0$
 		\item $\vec{\nabla} \cdot \left(\vec{\nabla} \times \vec{\Phi}\right) =0$
-		\item $\left(\vec{\Phi}  \cdot \vec{\nabla}\right)\vec{\Phi}=\vec{\nabla} \frac{\left|\vec\Phi \right|}{2}^2-\vec\Phi \times \left(\vec{\Phi}  \cdot \vec{\nabla}\right) $ 
+		\item $\left(\vec{\Phi}  \cdot \vec{\nabla}\right)\vec{\Phi}=\vec{\nabla} \dfrac{|\vec\Phi|}{2}^2-\vec\Phi \times \left(\vec{\Phi}  \cdot \vec{\nabla}\right) $ 
 	\end{enumerate}
 \end{itemize}
 
-\subsection{Conceptos fundamentales}
+\section{Conceptos fundamentales.}
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=0.5\linewidth]{imagenesTema2/magnitudesFundamentales}
@@ -61,8 +61,7 @@ No es un operador conmutativo.
 
 \begin{figure}[H]
 	\centering
-	\resizebox{1\textwidth}{!}{%
-		\begin{circuitikz}
+		\begin{circuitikz}[scale = 0.9]
 			\tikzstyle{every node}=[font=\large]
 			\draw [-latex] (-2.75,17.75) -- (-2.75,22.5)node[pos=1,above]{$\vec{k}$};
 			\draw [-latex] (-2.75,17.75) -- (2.5,17.75)node[pos=1,right]{$\vec{i}$};
@@ -85,14 +84,13 @@ No es un operador conmutativo.
 			\draw [dashed] (-2,20.5) .. controls (-1.25,21.25) and (2.25,21.25) .. (3,20.5);
 			\draw [dashed] (-0.5,21.75) .. controls (-0.25,22) and (0.25,22) .. (0.5,21.75);
 		\end{circuitikz}
-	}%
-	
-	\label{fig:my_label}
+	\caption{Magnitudes fundamentales.}
+	\label{fig:magnitudesfundamentales}
 \end{figure}
 
 \begin{enumerate}
 	\item \underline{\textbf{Trayectoria}}: Se determina el vector posición a partir de la velocidad. Esta ligada al enfoque lagrangiano. Tiene realidad física.
-	\[\vec{v}=\frac{d\vec{r}}{dt} \rightarrow \vec{r}(t=0)=\vec{r_0}\]
+	\[\vec{v}=\dfrac{d\vec{r}}{dt} \rightarrow \vec{r}(t=0)=\vec{r_0}\]
 	
 	\item \underline{\textbf{Senda}}: Camino que se recorre. Es independiente del tiempo y se obtiene eliminando el tiempo t de la trayectoria. Tiene realidad física.
 	
@@ -106,19 +104,19 @@ No es un operador conmutativo.
 		dx & dy & dz \\
 	\end{vmatrix}= \left(v_ydz-v_zdy\right)\vec{i} +\left(v_zdx-v_xdz\right)\vec{j}+\left(v_xdy-v_ydx\right) \]
 	
-	\[\therefore\frac{dz}{v_z}=\frac{dy}{v_y} \rightleftharpoons \frac{dz}{v_z}=\frac{dx}{v_x} \rightleftharpoons \frac{dx}{v_x}=\frac{dy}{v_y} \]
+	\[\therefore\dfrac{dz}{v_z}=\dfrac{dy}{v_y} \rightleftharpoons \dfrac{dz}{v_z}=\dfrac{dx}{v_x} \rightleftharpoons \dfrac{dx}{v_x}=\dfrac{dy}{v_y} \]
 \end{enumerate}
 
-\subsection{Clasificación flujos}
+\section{Clasificación de los flujos.}
 \begin{enumerate}
-	\item \underline{\textbf{Enfoque elección de coordenadas}}
+	\item \underline{\textbf{Enfoque en la elección de coordenadas:}}
 	\begin{enumerate}
 		\item Lagrangiano: Enfoque de seguir a la partícula. 
 		\[\vec{v}=\vec{v}(t(\vec{r}))=\vec{v}(t)\]
 		\item Euclídeo: Enfoque de centrarse en el espacio.
 		\[\vec{v}=\vec{v}(\vec{r},t)=v_x(x,y,z,t)\vec{i}+v_y(x,y,z,t)\vec{j}+v_z(x,y,z,t)\vec{k}\]
 	\end{enumerate}
-	\item \underline{\textbf{Dirección}}
+	\item \underline{\textbf{Dirección:}}
 	\begin{enumerate}
 		\item 3 direcciones ($\vec{i},\vec{j},\vec{k}$): 
 		\begin{itemize}
@@ -133,7 +131,7 @@ No es un operador conmutativo.
 			\item Campo vectorial unidireccional.
 		\end{itemize}
 	\end{enumerate}
-	\item \underline{\textbf{Espacio}}
+	\item \underline{\textbf{Espacio:}}
 	\begin{enumerate}
 		\item Si alguna componente depende de x, y, z: 
 		\begin{itemize}
@@ -152,7 +150,7 @@ No es un operador conmutativo.
 			\item Campo vectorial uniforme o homogéneo.
 		\end{itemize}
 	\end{enumerate}
-	\item \underline{\textbf{Tiempo}}
+	\item \underline{\textbf{Tiempo:}}
 	\begin{enumerate}
 		\item Si alguna componente depende del tiempo:
 		\begin{itemize}
@@ -164,9 +162,10 @@ No es un operador conmutativo.
 		\end{itemize}
 	\end{enumerate}
 \end{enumerate}
-\subsection{Derivada sustancial, local y convectiva}
+
+\section{Derivada sustancial, local y convectiva.}
 Al operador diferencial de variación temporal se le denomina derivada sustancial, total o material:
-\[\frac{D}{Dt}=\frac{\partial}{\partial t}+\left(\vec{v} \cdot \vec{\nabla}\right)\]
+\[\dfrac{D}{Dt}=\dfrac{\partial}{\partial t}+\left(\vec{v} \cdot \vec{\nabla}\right)\]
 
 %\begin{figure}[H]
 %	\centering
@@ -178,7 +177,6 @@ Al operador diferencial de variación temporal se le denomina derivada sustancia
 
 \begin{figure}[!ht]
 	\centering
-	\resizebox{1\textwidth}{!}{%
 		\begin{circuitikz}
 			\tikzstyle{every node}=[font=\large]
 			\draw [-latex] (-2.75,21.25) -- (-2.75,22.5)node[pos=1,above]{$\vec{k}$};
@@ -199,25 +197,24 @@ Al operador diferencial de variación temporal se le denomina derivada sustancia
 			\draw [dashed] (-2.75,21.25) -- (-2.75,19);
 			\draw [short] (-2.75,19.25) -- (-2.75,17.75);
 		\end{circuitikz}
-	}%
-	
-	\label{fig:my_label}
+	\caption{Derivada sustancial.}
+	\label{fig:derivadasustancial}
 \end{figure}
 
 Sea $\phi=f(\vec{r},t)$ y $\vec{r}=x\vec{i}+y\vec{j}+z\vec{k}$
-\[d\phi=\phi(\vec{r}+d\vec{r},t+dt)-\phi(\vec{r},t)=dx\frac{\partial \phi}{\partial x}+dy\frac{\partial \phi}{\partial y}+dz\frac{\partial \phi}{\partial z}+\frac{\partial \phi}{\partial t}dt=d\vec{r} \cdot\vec{\nabla}\phi+\frac{\partial \phi}{\partial t}dt\]
+\[d\phi=\phi(\vec{r}+d\vec{r},t+dt)-\phi(\vec{r},t)=dx\dfrac{\partial \phi}{\partial x}+dy\dfrac{\partial \phi}{\partial y}+dz\dfrac{\partial \phi}{\partial z}+\dfrac{\partial \phi}{\partial t}dt=d\vec{r} \cdot\vec{\nabla}\phi+\dfrac{\partial \phi}{\partial t}dt\]
 
-\[\frac{d\phi}{dt}=\left(\vec{v} \cdot\vec{\nabla}\right)\phi +\frac{\partial \phi}{\partial t} \]
+\[\dfrac{d\phi}{dt}=\left(\vec{v} \cdot\vec{\nabla}\right)\phi +\dfrac{\partial \phi}{\partial t} \]
 \begin{itemize}
 	\item Derivada convectiva: $\vec{v} \cdot\vec{\nabla}\phi$
-	\item Derivada local o temporal: $\frac{\partial \phi}{\partial t}$
+	\item Derivada local o temporal: $\dfrac{\partial \phi}{\partial t}$
 	\item Si $\phi = \vec{v}$
-	\[\frac{d\vec{v}}{dt}=(\vec{v} \cdot\vec{\nabla})\vec{v}+\frac{\partial \vec v}{\partial t} \]
+	\[\dfrac{d\vec{v}}{dt}=(\vec{v} \cdot\vec{\nabla})\vec{v}+\dfrac{\partial \vec v}{\partial t} \]
 	\begin{itemize}
 		\item Aceleración convectiva: $(\vec{v} \cdot\vec{\nabla})\vec{v}$
-		\[(\vec{v} \cdot\vec{\nabla})\vec{v}=\vec{\nabla}\frac{|\vec{v}|}{2}^2-\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)\]
+		\[(\vec{v} \cdot\vec{\nabla})\vec{v}=\vec{\nabla}\dfrac{|\vec{v}|}{2}^2-\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)\]
 		\begin{itemize}
-			\item Aceleración modular o debida a cambios del módulo de la velocidad: $\vec{\nabla}\frac{|\vec{v}|}{2}^2$
+			\item Aceleración modular o debida a cambios del módulo de la velocidad: $\vec{\nabla}\dfrac{|\vec{v}|}{2}^2$
 			\item Aceleración direccional: $-\vec{v} \times \left(\vec{\nabla}\times\vec{v}\right)$
 			\begin{itemize}
 				\item Vorticidad: $\vec{\omega}= \left(\vec{\nabla}\times\vec{v}\right)$
@@ -225,14 +222,14 @@ Sea $\phi=f(\vec{r},t)$ y $\vec{r}=x\vec{i}+y\vec{j}+z\vec{k}$
 				\item Si la vorticidad es nula, el fluido es irrotacional y existe una función de corriente tal que:
 				\[\vec{v}=-\vec{\nabla}\phi \rightarrow \vec{\nabla}\times\left(-\vec{\nabla}\phi\right)=0\]
 				\item  En la literatura, a veces en lugar de hablar de vorticidad, se define velocidad de rotación como:
-				\[\vec{\Omega}=\frac{\vec{\omega}}{2}\]
+				\[\vec{\Omega}=\dfrac{\vec{\omega}}{2}\]
 			\end{itemize}
 		\end{itemize}
-		\item Aceleración local: $\frac{\partial \vec v}{\partial t}$
+		\item Aceleración local: $\dfrac{\partial \vec v}{\partial t}$
 	\end{itemize}
 \end{itemize}
 \newpage
-\subsection{Movimiento diferencial en torno a un punto}
+\section{Movimiento diferencial en torno a un punto.}
 A partir de la figura siguiente, se puede deducir que el movimiento diferencial es:
 \[\lim_{{dt \to 0}} d\vec{v}dt=\vec{v}(\vec{r}+d\vec{r},t)dt-\vec{v}(\vec r ,t)dt\]
 %\begin{figure}[H]
@@ -244,9 +241,8 @@ A partir de la figura siguiente, se puede deducir que el movimiento diferencial 
 
 \begin{figure}[!ht]
 	\centering
-	\resizebox{1\textwidth}{!}{%
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\large]
+		\begin{circuitikz}[scale = 1.1]
+			\tikzstyle{every node}=[font=\normalsize]
 			\draw [-latex] (3,17.75) -- (3.75,17.75)node[pos=1,right]{$\vec{i}$};
 			\draw [-latex] (-3.25,17.25) -- (-4.25,16.25)node[pos=1,left]{$\vec{j}$};
 			\draw [-latex] (-2.75,21.75) -- (-2.75,22.75)node[pos=1,above]{$\vec{k}$};
@@ -260,7 +256,7 @@ A partir de la figura siguiente, se puede deducir que el movimiento diferencial 
 			\node [font=\large] at (0.75,22.75) {V};
 			\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (-2.75,17.75) -- (-2,19.75)node[pos=0.9,left]{$\vec{r}$};
 			\draw [ color={rgb,255:red,0; green,255; blue,0}, -latex] (-2,19.75) -- (-1,20)node[pos=0.5,sloped,above]{$d\vec{r}$};
-			\draw [ color={rgb,255:red,0; green,176; blue,0}, -latex] (-2.75,17.75) -- (-1,20)node[pos=0.5,above,sloped]{$r+d\vec{r}$};
+			\draw [ color={rgb,255:red,0; green,176; blue,0}, -latex] (-2.75,17.75) -- (-1,20)node[pos=0.6,above,sloped]{$\vec{r}+d\vec{r}$};
 			\draw [ color={rgb,255:red,255; green,128; blue,0}, -latex] (-2,19.75) -- (0.5,19.25)node[pos=0.5,below,sloped]{$\vec{v}(\vec{r},t)dt$};
 			\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (-2.75,17.75) -- (0.5,19.25)node[pos=0.75,below,sloped]{$\vec{r}(t+dt)$};
 			\draw [ color={rgb,255:red,0; green,255; blue,0}, -latex] (0.5,19.25) -- (1.5,19.5)node[pos=0.5,below,sloped]{$d\vec{r}$};
@@ -271,37 +267,37 @@ A partir de la figura siguiente, se puede deducir que el movimiento diferencial 
 			\draw [dashed] (-3.25,17.25) -- (-2.75,17.75);
 			\draw [dashed] (-2.75,17.75) -- (3,17.75);
 		\end{circuitikz}
-	}%
-	
-	\label{fig:my_label}
+	\caption{Magnitudes fundamentales del movimiento diferencial.}
+	\label{fig:movimientodiferencial}
 \end{figure}
 
 Operando y despreciando el diferencial de tiempo:
 \[d\vec{v}=\vec{v}(\vec{r}+d\vec{r},t)-\vec{v}(\vec r ,t)=d\vec{r}\cdot(\vec{\nabla}\vec{v})\]
 Donde $\vec{\nabla}\vec{v}$ es el tensor gradiente de la velocidad:
 \setlength{\arraycolsep}{1.5pt}
-\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arraystretch}{2}
 \[\vec{\nabla}\vec{v}=\begin{bmatrix}
-	\frac{\partial v_x}{\partial x} & \frac{\partial v_x}{\partial y} & \frac{\partial v_x}{\partial z} \\
-	\frac{\partial v_y}{\partial x} & \frac{\partial v_y}{\partial y} & \frac{\partial v_y}{\partial z} \\
-	\frac{\partial v_z}{\partial x} & \frac{\partial v_z}{\partial y} & \frac{\partial v_z}{\partial z} \\
-\end{bmatrix}=\frac{1}{2}\left[\vec{\nabla}\vec{v}+\left(\vec{\nabla}\vec{v}\right)^t\right]+\frac{1}{2}\left[\vec{\nabla}\vec{v}-\left(\vec{\nabla}\vec{v}\right)^t\right]=\overline{\overline{\xi}}+\overline{\overline{\gamma}}\]
+	\dfrac{\partial v_x}{\partial x} & \dfrac{\partial v_x}{\partial y} & \dfrac{\partial v_x}{\partial z} \\
+	\dfrac{\partial v_y}{\partial x} & \dfrac{\partial v_y}{\partial y} & \dfrac{\partial v_y}{\partial z} \\
+	\dfrac{\partial v_z}{\partial x} & \dfrac{\partial v_z}{\partial y} & \dfrac{\partial v_z}{\partial z} \\
+\end{bmatrix}=\dfrac{1}{2}\left[\vec{\nabla}\vec{v}+\left(\vec{\nabla}\vec{v}\right)^t\right]+\dfrac{1}{2}\left[\vec{\nabla}\vec{v}-\left(\vec{\nabla}\vec{v}\right)^t\right]=\overline{\overline{\xi}}+\overline{\overline{\gamma}}\]
 Las variables que aparecen, son $\overline{\overline{\xi}}$ el tensor de velocidad de deformación (simétrico) y $\overline{\overline{\gamma}}$ el tensor de velocidad de rotación.
+\newpage
 \setlength{\arraycolsep}{1.5pt}
-\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arraystretch}{2}
 \[\overline{\overline{\xi}}=\begin{bmatrix}
-	\frac{\partial v_x}{\partial x} & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right) & \frac{1}{2}\left(\frac{\partial v_x}{\partial z}+\frac{\partial v_z}{\partial x}\right) \\
-	\frac{1}{2}\left(\frac{\partial v_x}{\partial y}+\frac{\partial v_y}{\partial x}\right) & \frac{\partial v_y}{\partial y} & \frac{1}{2}\left(\frac{\partial v_y}{\partial z} +\frac{\partial v_z}{\partial y}\right) \\
-	\frac{1}{2}\left(\frac{\partial v_x}{\partial z}+\frac{\partial v_z}{\partial x}\right) & \frac{1}{2}\left(\frac{\partial v_y}{\partial z} +\frac{\partial v_z}{\partial y}\right) & \frac{\partial v_z}{\partial z} \\
+	\dfrac{\partial v_x}{\partial x} & \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}+\dfrac{\partial v_y}{\partial x}\right) & \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial z}+\dfrac{\partial v_z}{\partial x}\right) \\
+	\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}+\dfrac{\partial v_y}{\partial x}\right) & \dfrac{\partial v_y}{\partial y} & \dfrac{1}{2}\left(\dfrac{\partial v_y}{\partial z} +\dfrac{\partial v_z}{\partial y}\right) \\
+	\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial z}+\dfrac{\partial v_z}{\partial x}\right) & \dfrac{1}{2}\left(\dfrac{\partial v_y}{\partial z} +\dfrac{\partial v_z}{\partial y}\right) & \dfrac{\partial v_z}{\partial z} \\
 \end{bmatrix}\]
 \setlength{\arraycolsep}{1.5pt}
-\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arraystretch}{2}
 \[\overline{\overline{\gamma}}=\begin{bmatrix}
-0 & \frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) & \frac{1}{2}\left(\frac{\partial v_x}{\partial z}-\frac{\partial v_z}{\partial x}\right) \\
+0 & \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}-\dfrac{\partial v_y}{\partial x}\right) & \dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial z}-\dfrac{\partial v_z}{\partial x}\right) \\
 
-	-\frac{1}{2}\left(\frac{\partial v_x}{\partial y}-\frac{\partial v_y}{\partial x}\right) & 0 & \frac{1}{2}\left(\frac{\partial v_y}{\partial z} -\frac{\partial v_z}{\partial y}\right) \\
+	-\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial y}-\dfrac{\partial v_y}{\partial x}\right) & 0 & \dfrac{1}{2}\left(\dfrac{\partial v_y}{\partial z} -\dfrac{\partial v_z}{\partial y}\right) \\
 	
-	-\frac{1}{2}\left(\frac{\partial v_x}{\partial z}-\frac{\partial v_z}{\partial x}\right) & -\frac{1}{2}\left(\frac{\partial v_y}{\partial z} -\frac{\partial v_z}{\partial y}\right) & 0 \\
+	-\dfrac{1}{2}\left(\dfrac{\partial v_x}{\partial z}-\dfrac{\partial v_z}{\partial x}\right) & -\dfrac{1}{2}\left(\dfrac{\partial v_y}{\partial z} -\dfrac{\partial v_z}{\partial y}\right) & 0 \\
 \end{bmatrix}\]
 Por tanto, aplicado al movimiento:
 \[d\vec{v}=d\vec{r}\cdot(\vec{\nabla}\vec{v})=d\vec{r}\cdot\overline{\overline{\xi}}+d\vec{r}\cdot\overline{\overline{\gamma}}\]
@@ -314,14 +310,14 @@ Donde:
 	\item Movimiento velocidad de rotación: $\overline{\overline{\gamma}}$ que representa el movimiento del fluido como si fuera un sólido rígido.
 	\begin{itemize}
 		\item Se puede relacionar este tensor con la vorticidad y se demuestra que:
-		\[\overline{\overline{\gamma}} =\frac{1}{2}\vec{\omega}\times d \vec{r}=\left(\vec{\nabla}\times\vec{v}\right)\times d \vec{r}=\begin{bmatrix}
-			0 & -\frac{1}{2}\omega_z & \frac{1}{2}\omega_y \\
-			\frac{1}{2}\omega_z & 0 & -\frac{1}{2}\omega_x\\	
-			-\frac{1}{2}\omega_y & \frac{1}{2}\omega_x & 0 \\
+		\[\overline{\overline{\gamma}} =\dfrac{1}{2}\vec{\omega}\times d \vec{r}=\left(\vec{\nabla}\times\vec{v}\right)\times d \vec{r}=\begin{bmatrix}
+			0 & -\dfrac{1}{2}\omega_z & \dfrac{1}{2}\omega_y \\
+			\dfrac{1}{2}\omega_z & 0 & -\dfrac{1}{2}\omega_x\\	
+			-\dfrac{1}{2}\omega_y & \dfrac{1}{2}\omega_x & 0 \\
 		\end{bmatrix}\]
 	\end{itemize}
 \end{itemize}
-\subsection{Movimiento de la partícula fluida en una dirección}
+\section{Movimiento de la partícula fluida en una dirección.}
 Se parte de la expresión deducida anteriormente pero expresando el $d\vec{r}$ mediante módulo dirección, esta expresión, también se suele denominar movimiento vectorial:
 \[d\vec{v}=d\vec{r}\cdot\left(\vec{\nabla}\vec{v}\right)=d\vec{r}\cdot\left(\overline{\overline{\xi}}+\overline{\overline{\gamma}}\right)=|d\vec{r}|\vec{n}\cdot\left(\overline{\overline{\xi}}+\overline{\overline{\gamma}}\right)\]
 %\begin{figure}[H]
