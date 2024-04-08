@@ -142,16 +142,16 @@
 \contentsline {subsection}{\numberline {3.3.2}Tipos de CLF.}{60}{}%
 \contentsline {section}{\numberline {3.4}Gasificación del carbón.}{61}{}%
 \contentsline {subsection}{\numberline {3.4.1}Tipos de gasificadores.}{61}{}%
-\contentsline {subsection}{\numberline {3.4.2}Estado actual de la gasificación.}{61}{}%
+\contentsline {subsection}{\numberline {3.4.2}Estado actual de la gasificación.}{62}{}%
 \contentsline {section}{\numberline {3.5}Hidrógeno.}{62}{}%
 \contentsline {subsection}{\numberline {3.5.1}Producción del hidrógeno.}{62}{}%
-\contentsline {subsection}{\numberline {3.5.2}Clasificación del hidrógeno.}{62}{}%
+\contentsline {subsection}{\numberline {3.5.2}Clasificación del hidrógeno.}{63}{}%
 \contentsline {subsection}{\numberline {3.5.3}Almacenamiento del hidrógeno.}{63}{}%
 \contentsline {subsection}{\numberline {3.5.4}Ventajas del hidrógeno.}{63}{}%
 \contentsline {subsection}{\numberline {3.5.5}Aplicaciones del hidrógeno.}{63}{}%
 \contentsline {section}{\numberline {3.6}Ciclos combinados.}{64}{}%
 \contentsline {section}{\numberline {3.7}Fusión nuclear.}{64}{}%
-\contentsline {section}{\numberline {3.8}Almacenamiento de energía.}{64}{}%
+\contentsline {section}{\numberline {3.8}Almacenamiento de energía.}{65}{}%
 \contentsline {subsection}{\numberline {3.8.1}Volantes de inercia.}{65}{}%
 \contentsline {subsection}{\numberline {3.8.2}Supercondensadores.}{65}{}%
 \contentsline {subsection}{\numberline {3.8.3}Baterías.}{65}{}%
