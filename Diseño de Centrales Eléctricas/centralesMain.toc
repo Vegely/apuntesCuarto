@@ -165,54 +165,45 @@
 \contentsline {subsection}{\numberline {4.4.1}Incidencias no previstas.}{68}{}%
 \contentsline {subsection}{\numberline {4.4.2}Configuración sistema eléctrico de potencia.}{68}{}%
 \contentsline {section}{\numberline {4.5}Funcionamiento del mercado eléctrico.}{68}{}%
-\contentsline {subsection}{\numberline {4.5.1}Actividades principales.}{68}{}%
-\contentsline {subsection}{\numberline {4.5.2}Reparto de la distribución de energía eléctrica.}{69}{}%
-\contentsline {subsection}{\numberline {4.5.3}Comercialización.}{69}{}%
-\contentsline {subsection}{\numberline {4.5.4}Organización.}{69}{}%
-\contentsline {subsection}{\numberline {4.5.5}Instituciones reguladoras.}{69}{}%
-\contentsline {subsection}{\numberline {4.5.6}Operador del mercado (OMIE).}{69}{}%
-\contentsline {subsection}{\numberline {4.5.7}Operador del sistema (REE).}{69}{}%
-\contentsline {section}{\numberline {4.6}Mercado ibérico (MIBEL).}{69}{}%
-\contentsline {section}{\numberline {4.7}Interconexiones con el extranjero.}{69}{}%
-\contentsline {subsection}{\numberline {4.7.1}Francia.}{69}{}%
-\contentsline {subsection}{\numberline {4.7.2}Portugal.}{69}{}%
-\contentsline {subsection}{\numberline {4.7.3}Marruecos.}{69}{}%
-\contentsline {subsection}{\numberline {4.7.4}Gestión de las interconexiones.}{69}{}%
-\contentsline {section}{\numberline {4.8}Mercado intradiario.}{69}{}%
-\contentsline {subsection}{\numberline {4.8.1}Secuencia de los procesos del mercado.}{69}{}%
-\contentsline {subsection}{\numberline {4.8.2}Mercados a plazo.}{69}{}%
-\contentsline {subsection}{\numberline {4.8.3}Mercado organizado diario (casación horaria).}{70}{}%
-\contentsline {subsection}{\numberline {4.8.4}Tipos de oferta de venta de energía.}{70}{}%
-\contentsline {subsection}{\numberline {4.8.5}Proceso de casación.}{70}{}%
-\contentsline {subsection}{\numberline {4.8.6}Curva de oferta de venta de energía.}{70}{}%
-\contentsline {subsection}{\numberline {4.8.7}Influencia fuentes renovables.}{70}{}%
-\contentsline {subsection}{\numberline {4.8.8}Retribuciones para amortizar costes fijos.}{70}{}%
-\contentsline {subsection}{\numberline {4.8.9}Curva de demanda.}{70}{}%
-\contentsline {section}{\numberline {4.9}Mercado de restricciones técnicas.}{70}{}%
-\contentsline {section}{\numberline {4.10}Mercado de servicios complementarios.}{70}{}%
-\contentsline {subsection}{\numberline {4.10.1}Regulación primaria.}{70}{}%
-\contentsline {subsection}{\numberline {4.10.2}Regulación secundaria.}{70}{}%
-\contentsline {subsection}{\numberline {4.10.3}Control de tensión.}{70}{}%
-\contentsline {subsection}{\numberline {4.10.4}Reservas de potencia.}{70}{}%
-\contentsline {subsection}{\numberline {4.10.5}Gestión de desvíos.}{70}{}%
-\contentsline {subsection}{\numberline {4.10.6}Regulación terciaria.}{70}{}%
-\contentsline {section}{\numberline {4.11}Precio medio final.}{71}{}%
-\contentsline {subsection}{\numberline {4.11.1}Costes recogidos en la tarifa eléctrica (PVPC).}{71}{}%
-\contentsline {section}{\numberline {4.12}Programación de la generación de electricidad.}{71}{}%
-\contentsline {subsection}{\numberline {4.12.1}Curva acumulada de demanda anual.}{71}{}%
-\contentsline {subsection}{\numberline {4.12.2}Curva de demanda anual.}{71}{}%
-\contentsline {subsection}{\numberline {4.12.3}Parámetros principales curva de demanda.}{71}{}%
-\contentsline {subsection}{\numberline {4.12.4}Curva acumulada de generación anual.}{71}{}%
-\contentsline {subsection}{\numberline {4.12.5}Parámetros principales curva de generación.}{71}{}%
-\contentsline {section}{\numberline {4.13}Reserva de potencia.}{71}{}%
-\contentsline {subsection}{\numberline {4.13.1}Características estáticas.}{71}{}%
-\contentsline {subsection}{\numberline {4.13.2}Características dinámicas.}{71}{}%
-\contentsline {subsection}{\numberline {4.13.3}Secuenciamiento óptimo de grupos.}{71}{}%
-\contentsline {section}{\numberline {4.14}Costes de generación.}{71}{}%
-\contentsline {subsection}{\numberline {4.14.1}Comparativa de costes.}{71}{}%
-\contentsline {subsection}{\numberline {4.14.2}Coste de inversión o fijo.}{71}{}%
-\contentsline {subsection}{\numberline {4.14.3}Costes variables.}{72}{}%
-\contentsline {subsection}{\numberline {4.14.4}Coste total.}{72}{}%
-\contentsline {section}{\numberline {4.15}Aspectos técnicos de la producción de energía.}{72}{}%
-\contentsline {chapter}{\numberline {5}Despacho económico a corto plazo.}{73}{}%
-\contentsline {chapter}{\numberline {6}Generador síncrono.}{75}{}%
+\contentsline {subsection}{\numberline {4.5.1}Actividades principales.}{69}{}%
+\contentsline {section}{\numberline {4.6}Mercado ibérico (MIBEL).}{70}{}%
+\contentsline {section}{\numberline {4.7}Interconexiones con el extranjero.}{70}{}%
+\contentsline {subsection}{\numberline {4.7.1}Francia.}{71}{}%
+\contentsline {subsection}{\numberline {4.7.2}Portugal.}{71}{}%
+\contentsline {subsection}{\numberline {4.7.3}Marruecos.}{71}{}%
+\contentsline {subsection}{\numberline {4.7.4}Gestión de las interconexiones.}{71}{}%
+\contentsline {section}{\numberline {4.8}Mercado Eléctrico.}{72}{}%
+\contentsline {subsection}{\numberline {4.8.1}Secuencia de los procesos del mercado.}{72}{}%
+\contentsline {subsection}{\numberline {4.8.2}Mercados a plazo.}{74}{}%
+\contentsline {subsection}{\numberline {4.8.3}Mercado organizado diario.}{74}{}%
+\contentsline {subsection}{\numberline {4.8.4}Proceso de casación.}{74}{}%
+\contentsline {subsection}{\numberline {4.8.5}Curva de oferta de venta de energía.}{75}{}%
+\contentsline {subsection}{\numberline {4.8.6}Coste de oportunidad fuentes de energía.}{75}{}%
+\contentsline {subsection}{\numberline {4.8.7}Retribuciones para amortizar costes fijos.}{75}{}%
+\contentsline {subsection}{\numberline {4.8.8}Curva de demanda.}{76}{}%
+\contentsline {section}{\numberline {4.9}Mercado de restricciones técnicas.}{76}{}%
+\contentsline {section}{\numberline {4.10}Mercado de servicios complementarios.}{76}{}%
+\contentsline {subsection}{\numberline {4.10.1}Regulación primaria.}{77}{}%
+\contentsline {subsection}{\numberline {4.10.2}Regulación secundaria.}{77}{}%
+\contentsline {subsection}{\numberline {4.10.3}Regulación terciaria.}{77}{}%
+\contentsline {subsection}{\numberline {4.10.4}Control de tensión.}{77}{}%
+\contentsline {subsection}{\numberline {4.10.5}Gestión de desvíos.}{77}{}%
+\contentsline {section}{\numberline {4.11}Precio medio final.}{78}{}%
+\contentsline {section}{\numberline {4.12}Programación de la generación de electricidad.}{79}{}%
+\contentsline {subsection}{\numberline {4.12.1}Curva acumulada de demanda anual.}{79}{}%
+\contentsline {subsection}{\numberline {4.12.2}Parámetros principales curva de demanda.}{79}{}%
+\contentsline {subsection}{\numberline {4.12.3}Curva acumulada de generación anual.}{80}{}%
+\contentsline {subsection}{\numberline {4.12.4}Parámetros principales curva de generación.}{80}{}%
+\contentsline {section}{\numberline {4.13}Reserva de potencia.}{81}{}%
+\contentsline {subsection}{\numberline {4.13.1}Características estáticas.}{81}{}%
+\contentsline {subsection}{\numberline {4.13.2}Características dinámicas.}{81}{}%
+\contentsline {subsection}{\numberline {4.13.3}Secuenciamiento óptimo de grupos.}{81}{}%
+\contentsline {section}{\numberline {4.14}Costes de generación (LCOE).}{81}{}%
+\contentsline {subsection}{\numberline {4.14.1}Comparativa de costes.}{82}{}%
+\contentsline {subsection}{\numberline {4.14.2}Coste de inversión o fijo.}{82}{}%
+\contentsline {subsection}{\numberline {4.14.3}Costes variables.}{82}{}%
+\contentsline {subsection}{\numberline {4.14.4}Coste total.}{82}{}%
+\contentsline {subsection}{\numberline {4.14.5}Indices principales.}{83}{}%
+\contentsline {section}{\numberline {4.15}Aspectos técnicos de la producción de energía.}{83}{}%
+\contentsline {chapter}{\numberline {5}Despacho económico a corto plazo.}{85}{}%
+\contentsline {chapter}{\numberline {6}Generador síncrono.}{87}{}%
