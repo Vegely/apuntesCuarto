@@ -206,4 +206,19 @@
 \contentsline {subsection}{\numberline {4.14.5}Indices principales.}{83}{}%
 \contentsline {section}{\numberline {4.15}Aspectos técnicos de la producción de energía.}{83}{}%
 \contentsline {chapter}{\numberline {5}Despacho económico a corto plazo.}{85}{}%
-\contentsline {chapter}{\numberline {6}Generador síncrono.}{87}{}%
+\contentsline {section}{\numberline {5.1}Despacho económico diario de generación. Mercado diario.}{85}{}%
+\contentsline {subsection}{\numberline {5.1.1}Problema de optimización.}{85}{}%
+\contentsline {subsection}{\numberline {5.1.2}Restricciones en la optimización.}{85}{}%
+\contentsline {subsection}{\numberline {5.1.3}Curva de consumo de las unidades térmicas generadoras.}{86}{}%
+\contentsline {section}{\numberline {5.2}Despacho de generación: despacho económico (D.E.).}{86}{}%
+\contentsline {subsection}{\numberline {5.2.1}Característica de coste de las unidades térmicas generadoras.}{86}{}%
+\contentsline {subsection}{\numberline {5.2.2}Conversión de la curva de consumo específico a curva de costes.}{87}{}%
+\contentsline {section}{\numberline {5.3}Coste total de producción del sistema eléctrico.}{87}{}%
+\contentsline {subsection}{\numberline {5.3.1}}{87}{}%
+\contentsline {section}{\numberline {5.4}Coste incremental de la generación.}{87}{}%
+\contentsline {subsection}{\numberline {5.4.1}}{87}{}%
+\contentsline {section}{\numberline {5.5}Despacho económico con pérdidas en la red.}{87}{}%
+\contentsline {subsection}{\numberline {5.5.1}}{87}{}%
+\contentsline {section}{\numberline {5.6}Programación de arranques y paradas de centrales.}{87}{}%
+\contentsline {subsection}{\numberline {5.6.1}}{87}{}%
+\contentsline {chapter}{\numberline {6}Generador síncrono.}{89}{}%
