@@ -149,6 +149,105 @@
 		\subsection*{Ejemplo.}
 			Una central térmica de carbón, con un PCI de $6050\,th/t$ tiene un coste de $37.91\,\euro/t$. Obtener la curva de coste del generador.
 			\[C_1\,\left[\dfrac{\euro}{h}\right] = \dfrac{H_1\,\left[\dfrac{th}{h}\right]}{6050\,\left[\dfrac{th}{t}\right]} \cdot 37.91\,\left[\dfrac{\euro}{t}\right] = 426.56 + 10.756\cdot P_{G_1} + 0.0031\cdot P_{G_1}^2\]
+			
+		\subsection{Restricciones técnicas de la curva de coste o consumo.}
+			\begin{itemize}
+				\item Límites operativos:
+				\begin{itemize}
+					\item Potencia mínima (por caldera y turbina).
+					\item Potencia máxima (por generador síncrono).
+				\end{itemize}
+				
+				\item Tiempo mínimo de operación.
+				\item Tiempo mínimo de arranque.
+				\item Tiempo de respuesta entre intervalos horarios: Rampa de subida y bajada [MW/h].
+				\item Coste de arranque.
+				\item Coste de parada.
+				\item Penalizaciones por emisiones de $CO_2$.
+			\end{itemize}
+			
+		\subsection{Consumo específico o \textit{Heat Rate} (H.I.).}
+			Es la medida del rendimiento de una central termoeléctrica. Se define por el cociente entre la energía térmica aportada en forma de combustible y la energía generada en bornes del generador.
+			
+			\[HR = \dfrac{H_{G_i}}{P_{G_i}} = \dfrac{\alpha_i}{P_{G_i}} + \beta_i + \gamma_i\cdot P_{G_i}\]
+			
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw [->, >=Stealth] (3.5,10.25) -- (3.5,16)node[pos=1,above]{$HR\,\left[\dfrac{MJ}{MWh}\right]$};
+						\draw [->, >=Stealth] (3.5,10.25) -- (9.5,10.25)node[pos=1,right]{$P_{G_i}\,[MW]$};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (4.5,15.25) .. controls (6,11.5) and (8,11.75) .. (8.5,13.25);
+						\draw [dashed] (4.5,15.25) -- (4.5,10.25)node[pos=1,below]{$P_{G_i}^{min}$};
+						\draw [dashed] (8.5,13.25) -- (8.5,10.25)node[pos=1,below]{$P_{G_i}^{max}$};
+						\draw [dashed] (7.25,12.25) -- (7.25,10.25)node[pos=1,below]{$P_{ef}$};
+						\draw [dashed] (7.25,12.25) -- (3.5,12.25);
+						\draw (7.25,12.25) to[short, -*] (7.25,12.25);
+					\end{circuitikz}
+				
+				\label{fig:my_label}
+			\end{figure}
+			
+			La máxima eficiencia de la unidad se obtiene en el mínimo de la función HR, que se da para valores próximos a la potencia máxima del generador.
+			
+			\begin{figure}
+				\begin{minipage}{0.5\textwidth}
+					\[\eta = \dfrac{3600}{HR}\,\left[\dfrac{MWh_e}{MWh_t}\right]\]
+				\end{minipage}
+				\begin{minipage}{0.5\textwidth}
+					\[HR = \dfrac{3600}{\eta}\,\left[\dfrac{MJ}{MWh}\right]\]
+				\end{minipage}
+			\end{figure}
+			
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}[scale = 0.7]
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw [->, >=Stealth] (3.5,10.25) -- (3.5,16)node[pos=1,right]{$\eta\,[\%]$};
+						\draw [->, >=Stealth] (3.5,10.25) -- (9.5,10.25)node[pos=1,right]{$P_{G_i}\,[MW]$};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (4.25,11.25) .. controls (4.75,13.75) and (6.5,15) .. (8.75,15);
+						\draw [->, >=Stealth] (12.5,10.25) -- (12.5,16.25)node[pos=1,right]{$HR\,\left[\dfrac{MJ}{MWh}\right]$};
+						\draw [->, >=Stealth] (12.5,10.25) -- (18.25,10.25)node[pos=1,right]{$P_{G_i}\,[MW]$};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (13.5,15) .. controls (14,12.5) and (15.25,11.5) .. (17.5,11.25);
+					\end{circuitikz}
+				
+				\label{fig:my_label}
+			\end{figure}
+			
+		\subsection*{Ejemplo.}
+			Cálculo del HR para una turbina de gas.
+		
+		
+			\textbf{Ojo:} el HR de la turbina determinado mediante pruebas es distinto del $H\!R_{ISO}$ que proporciona el fabricante.
+			
+			
+			\textbf{Datos:} 
+			
+			
+			\renewcommand{\arraystretch}{1.2}
+			\centering
+			\begin{tabular}{llc}
+				\textbf{Característica TG} & \textbf{Unidades} & \textbf{Valor}\\
+				\hline
+				Temperatura ambiente & $^\circ C$ & 15\\
+				\hline
+				Presión atmosférica & $mbar$ & 1013\\
+				\hline
+				\multirow{2}{*}{$HR_{ISO}$} & \multirow{2}{*}{$\dfrac{kJ}{kWh}$} & \multirow{2}{*}{9526}\\
+				&&\\
+				\hline
+				\multirow{2}{*}{PCI} & \multirow{2}{*}{$\dfrac{MJ}{Nm^3}$} & \multirow{2}{*}{35.5}\\
+				&&\\
+				\hline
+				Potencia eléctrica neta (ISO) & $MW$ & 240
+			\end{tabular}
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\linewidth]{res/tema5/turbinaGas}
+				\label{fig:turbinagas}
+			\end{figure}
+			
 	
 	\section{Coste total de producción del sistema eléctrico.}
 		\subsection{}
