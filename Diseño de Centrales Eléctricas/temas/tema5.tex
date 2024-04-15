@@ -592,7 +592,7 @@
 				\begin{minipage}{0.5\textwidth}
 					\begin{figure}[H]
 						\centering
-						\begin{circuitikz}
+						\begin{circuitikz}[scale = 0.95]
 							\tikzstyle{every node}=[font=\normalsize]
 							\draw [->, >=Stealth] (6.75,13.25) -- (6.75,17)node[pos=1,right]{$Q\,\left[\dfrac{m^3}{h}\right]$};
 							\draw [->, >=Stealth] (6.75,13.25) -- (11.25,13.25)node[pos=1,above]{$P\,[MW]$};
@@ -603,16 +603,16 @@
 							\draw [dashed] (7.25,14.5) -- (7.25,13.25)node[pos=1,below]{$P_{min}$};
 							\node [font=\normalsize, rotate around={-360:(0,0)}] at (8.75,12.5) {Curva de entrada/salida};
 							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (9.9,16.5) -- (9.75,15.5)node[pos=0,above]{Altura de salto fija};
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8,15.5) -- (7.75,14.2)node[pos=0,above]{Altura variable};
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8,15.5) -- (8,14.5);
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8,15.5) -- (8.25,14.8);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8.2,15.5) -- (7.75,14.2)node[pos=0,above]{Altura variable};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8.2,15.5) -- (8,14.5);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8.2,15.5) -- (8.25,14.8);
 						\end{circuitikz}
 						
 						\label{fig:my_label}
 					\end{figure}
 					\begin{figure}[H]
 						\centering
-						\begin{circuitikz}
+						\begin{circuitikz}[scale = 0.95]
 							\tikzstyle{every node}=[font=\normalsize]
 							\draw [->, >=Stealth] (6.75,13.25) -- (6.75,17)node[pos=1,right]{$C_{incr}\,\left[\dfrac{m^3}{MWh}\right]$};
 							\draw [->, >=Stealth] (6.75,13.25) -- (11.25,13.25)node[pos=1,above]{$P\,[MW]$};
@@ -708,6 +708,7 @@
 		El despacho básico consiste en minimizar el coste de producción con respecto a las generaciones.
 		\[\text{Objetivo: } \min{\left\{C_t = \sum_{i=1}^N C_i\right\}}\]
 		
+		\newpage
 		\subsection{Restricciones en la producción de energía eléctrica.}
 			\begin{itemize}
 				\item Balance nodal: flujo de potencia, estabilidad y mantenimiento de las tensiones en los nudos.
@@ -746,49 +747,55 @@
 				(tienen la misma dirección).
 				
 				\begin{figure}[H]
-					\centering
-						\begin{circuitikz}
-							\tikzstyle{every node}=[font=\normalsize]
-							\draw [->, >=Stealth] (6.75,13.25) -- (6.75,17)node[pos=1,right]{y};
-							\draw [->, >=Stealth] (6.75,13.25) -- (11.25,13.25)node[pos=1,above]{x};
-							\draw [ color={rgb,255:red,0; green,128; blue,255} , rotate around={61:(9.25,15.5)}] (9.25,15.5) ellipse (1.5cm and 2cm);
-							\draw [ color={rgb,255:red,0; green,128; blue,255} , rotate around={61:(9,15.75)}] (9,15.75) ellipse (1cm and 1.5cm);
-							\draw [ color={rgb,255:red,0; green,128; blue,255} , rotate around={61:(8.5,16)}] (8.5,16) ellipse (0.5cm and 0.75cm);
-							\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (11.25,17) .. controls (8.25,16.25) and (9.5,14.25) .. (7.5,13.25);
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (9.25,15.5) -- (8.5,16);
-							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (9.25,15.5) -- (10,15);
-							\draw [ color={rgb,255:red,0; green,128; blue,0} , rotate around={61:(9.25,15.5)}, dashed] (9.25,15.5) ellipse (0.5cm and 1cm);
-							\draw [ color={rgb,255:red,0; green,128; blue,0}, dashed] (9.25,16) -- (9.75,17.5);
-							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}, rotate around={-360:(0,0)}] at (9.75,18.3) {Los vectores gradientes en el};
-							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}, rotate around={-360:(0,0)}] at (9.75,18) {punto de tangencia están orientados};
-							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}, rotate around={-360:(0,0)}] at (9.75,17.7) {en la misma dirección};
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8,15.75) -- (8.25,16);
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (9,16.25) -- (8.5,16.25);
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8,16.5) -- (8.25,16.25);
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (10.25,15) -- (10,15.5);
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (9.75,16.5) -- (9.5,16.25);
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8,16.75) -- (8.25,16.5);
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8,15.25) -- (8.25,15.5);
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (7.5,15.25) -- (7.75,15.5);
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (10.25,14) -- (10,14.4);
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (11,15.75) -- (10.5,15.5);
-							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (8.5,14.25) -- (9,14);
-							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (10,16.5) -- (10.25,16);
-							\node [font=\footnotesize, color={rgb,255:red,255; green,0; blue,0}, rotate around={-360:(0,0)}] at (11.5,16.75) {$g(x,y)=c$};
-							\node [font=\footnotesize, color={rgb,255:red,0; green,128; blue,255}, rotate around={-360:(0,0)}] at (9.9,13.75) {$f(x,y)=d_1$};
-							\node [font=\footnotesize, color={rgb,255:red,0; green,128; blue,255}, rotate around={-360:(0,0)}] at (9.5,14.5) {$f(x,y)=d_2$};
-							\node [font=\footnotesize, color={rgb,255:red,0; green,128; blue,255}, rotate around={-360:(0,0)}] at (7.6,14) {$f(x,y)=d_3$};
-							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth, dashed] (7.5,14.25) -- (8.5,15.5);
-						\end{circuitikz}
-					
-					\label{fig:my_label}
+					\begin{minipage}{0.5\textwidth}
+						\begin{figure}[H]
+							\centering
+							\begin{circuitikz}
+								\tikzstyle{every node}=[font=\normalsize]
+								\draw [->, >=Stealth] (6.75,13.25) -- (6.75,17)node[pos=1,right]{y};
+								\draw [->, >=Stealth] (6.75,13.25) -- (11.25,13.25)node[pos=1,above]{x};
+								\draw [ color={rgb,255:red,0; green,128; blue,255} , rotate around={61:(9.25,15.5)}] (9.25,15.5) ellipse (1.5cm and 2cm);
+								\draw [ color={rgb,255:red,0; green,128; blue,255} , rotate around={61:(9,15.75)}] (9,15.75) ellipse (1cm and 1.5cm);
+								\draw [ color={rgb,255:red,0; green,128; blue,255} , rotate around={61:(8.5,16)}] (8.5,16) ellipse (0.5cm and 0.75cm);
+								\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (11.25,17) .. controls (8.25,16.25) and (9.5,14.25) .. (7.5,13.25);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (9.25,15.5) -- (8.5,16);
+								\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (9.25,15.5) -- (10,15);
+								\draw [ color={rgb,255:red,0; green,128; blue,0} , rotate around={61:(9.25,15.5)}, dashed] (9.25,15.5) ellipse (0.5cm and 1cm);
+								\draw [ color={rgb,255:red,0; green,128; blue,0}, dashed] (9.25,16) -- (9.75,17.5);
+								\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}, rotate around={-360:(0,0)}] at (9.75,18.3) {Los vectores gradientes en el};
+								\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}, rotate around={-360:(0,0)}] at (9.75,18) {punto de tangencia están orientados};
+								\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}, rotate around={-360:(0,0)}] at (9.75,17.7) {en la misma dirección};
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8,15.75) -- (8.25,16);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (9,16.25) -- (8.5,16.25);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8,16.5) -- (8.25,16.25);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (10.25,15) -- (10,15.5);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (9.75,16.5) -- (9.5,16.25);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8,16.75) -- (8.25,16.5);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8,15.25) -- (8.25,15.5);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (7.5,15.25) -- (7.75,15.5);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (10.25,14) -- (10,14.4);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (11,15.75) -- (10.5,15.5);
+								\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (8.5,14.25) -- (9,14);
+								\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (10,16.5) -- (10.25,16);
+								\node [font=\footnotesize, color={rgb,255:red,255; green,0; blue,0}, rotate around={-360:(0,0)}] at (11.5,16.75) {$g(x,y)=c$};
+								\node [font=\footnotesize, color={rgb,255:red,0; green,128; blue,255}, rotate around={-360:(0,0)}] at (9.9,13.75) {$f(x,y)=d_1$};
+								\node [font=\footnotesize, color={rgb,255:red,0; green,128; blue,255}, rotate around={-360:(0,0)}] at (9.5,14.5) {$f(x,y)=d_2$};
+								\node [font=\footnotesize, color={rgb,255:red,0; green,128; blue,255}, rotate around={-360:(0,0)}] at (7.6,14) {$f(x,y)=d_3$};
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth, dashed] (7.5,14.25) -- (8.5,15.5);
+							\end{circuitikz}
+							
+							\label{fig:my_label}
+						\end{figure}
+					\end{minipage}
+					\begin{minipage}{0.5\textwidth}
+						Cuando dos vectores apuntan en la misma dirección pero con distinto sentido	podemos multiplicar cualquiera de los dos por una constante $\lambda_0$ para obtener el otro.
+						
+						
+						Si el punto $(x_0,\,y_0)$ cumple la condición de tangencia, entonces
+						\[\vec \nabla f(x_0,\,y_0) = \lambda_0 \vec \nabla g(x_0,\,y_0)\]
+						\[\lambda_0 = \text{multiplicador de Lagrange}\]
+					\end{minipage}
 				\end{figure}
-				
-				Cuando dos vectores apuntan en la misma dirección pero con distinto sentido	podemos multiplicar cualquiera de los dos por una constante $\lambda_0$ para obtener el otro.
-				
-				
-				Si el punto $(x_0,\,y_0)$ cumple la condición de tangencia, entonces
-				\[\vec \nabla f(x_0,\,y_0) = \lambda_0 \vec \nabla g(x_0,\,y_0)\,/\,\lambda_0 = \text{multiplicador de Lagrange}\]
 				
 			\subsubsection{Función lagrangiana.}
 				\[L(x,y,\lambda) = f(x,y) - \lambda(g(x,y)-c)\]
@@ -804,17 +811,17 @@
 				
 				
 				\begin{figure}[H]
-					\begin{minipage}{0.5\textwidth}
+					\begin{minipage}{0.65\textwidth}
 						El objetivo es conseguir el mismo coste incremental $\lambda$ para todos los generadores. No siempre se podrá cumplir, sobre todo si los generadores trabajan en su límite de funcionamiento y el sistema tiene pérdidas.
 						
 						\vspace{0.25cm}
 						El valor común de $\lambda$ será el coste total o marginal óptimo para ese tramo horario:
 						\[\lambda = \dfrac{dC(P_G)}{dP_D^{total}}\, \left[\dfrac{\euro}{MWh}\right]\]
 					\end{minipage}
-					\begin{minipage}{0.5\textwidth}
+					\begin{minipage}{0.35\textwidth}
 						\begin{figure}[H]
 							\centering
-							\begin{circuitikz}
+							\begin{circuitikz}[scale = 0.7]
 								\tikzstyle{every node}=[font=\normalsize]
 								\draw [->, >=Stealth] (5,10.75) -- (5,14.75);
 								\draw [->, >=Stealth] (5,10.75) -- (9.5,10.75)node[pos=1,above]{$P_{G_i}$};
@@ -832,8 +839,8 @@
 					\end{minipage}
 				\end{figure}
 				
-				El coste total de producción de un sistema se reduce al mínimo cuando todas las unidades generadoras se cargan de modo que sus costes marginales sean los mismos: 
-				\[\lambda_1 = \lambda_2 = \dots = \lambda_n = \lambda\]
+				El coste total de producción de un sistema se reduce al mínimo cuando todas las unidades generadoras se cargan de modo que sus costes marginales son los mismos: $\lambda_1 = \lambda_2 = \dots = \lambda_n = \lambda$
+				
 				
 			\subsubsection{Despacho económico óptimo.}
 				Si dos generadores térmicos trabajan con costes incrementales distintos $(\lambda_1 \neq \lambda_2)$, siempre es posible realizar la reasignación de las potencias de un generador a otro obteniendo una disminución del coste total de generación.
@@ -845,7 +852,7 @@
 					\begin{minipage}{0.5\textwidth}
 						\begin{figure}[H]
 							\centering
-							\begin{circuitikz}
+							\begin{circuitikz}[scale = 0.75]
 								\tikzstyle{every node}=[font=\normalsize]
 								\draw [->, >=Stealth] (5,10.75) -- (5,14.75)node[pos=1,above]{$C_1(P_1)$};
 								\draw [->, >=Stealth] (5,10.75) -- (9.5,10.75)node[pos=1,above]{$P_{G_1}$};
@@ -862,7 +869,7 @@
 					\begin{minipage}{0.5\textwidth}
 						\begin{figure}[H]
 							\centering
-							\begin{circuitikz}
+							\begin{circuitikz}[scale = 0.75]
 								\tikzstyle{every node}=[font=\normalsize]
 								\draw [->, >=Stealth] (5,10.75) -- (5,14.75)node[pos=1,above]{$C_2(P_2)$};
 								\draw [->, >=Stealth] (5,10.75) -- (9.5,10.75)node[pos=1,above]{$P_{G_2}$};
@@ -870,7 +877,7 @@
 								\draw [short] (6,12) -- (7,12)node[pos=0.5,below]{$\Delta$ $P_2$};
 								\draw [short] (6,12) -- (7,12.6);
 								\draw [short] (7,12.6) -- (7,12)node[pos=0.5,right]{$\Delta$ $C_2$};
-								\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (6.5,13.75) {$\lambda_2 = \dfrac{\Delta C_2}{\Delta P_2}$};
+								\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (9,13.75) {$\lambda_2 = \dfrac{\Delta C_2}{\Delta P_2}$};
 							\end{circuitikz}
 							
 							\label{fig:my_label}
@@ -1047,12 +1054,12 @@
 				\[CI_i(P_{G_i}) = \lambda\left(1-\dfrac{\partial P_{perd}}{\partial P_{G_i}}\right)\]
 				
 				
-				Balance de potencias:
-				\[\sum_{i=1}^{n}\left(1-\left.\dfrac{\partial P_{perd}}{\partial P_{G_i}} \right|_S \right) dP_{G-i} = 0\]
-				
-				
-				Costes marginales:
-				\[\lambda_i = \dfrac{\partial C}{\partial P_{D_i}} = \lambda \left(1-\left.\dfrac{\partial P_{perd}}{\partial P_{G_i}} \right|_S \right)\]
+				%Balance de potencias:
+				%\[\sum_{i=1}^{n}\left(1-\left.\dfrac{\partial P_{perd}}{\partial P_{G_i}} \right|_S \right) dP_{G-i} = 0\]
+				%
+				%
+				%Costes marginales:
+				%\[\lambda_i = \dfrac{\partial C}{\partial P_{D_i}} = \lambda \left(1-\left.\dfrac{\partial P_{perd}}{\partial P_{G_i}} \right|_S \right)\]
 				
 				
 				Pérdidas incrementales en cada generador:
@@ -1060,12 +1067,12 @@
 				
 				
 				Factor de penalización de cada generador:
-				\[L_i = \dfrac{10}{1-PIT_i}\]
+				\[L_i = \dfrac{1}{1-PIT_i}\]
 				
 				
 				El óptimo queda definido por las ecuaciones:
-				\[CI_i\cdot L_i = \lambda\]
-				\[\sum_{i=1}^{g} P_{G_i} = P_D + P_p(P_1,\dots P_g)\]
+				\[CI_i\cdot L_i = \lambda \quad /\,i = 1,2\dots g\]
+				\[\sum_{i=1}^{g} P_{G_i} = P_D + P_p(P_1,P_2\dots P_g)\]
 				
 				
 			\subsubsection{Conclusiones.}
@@ -1076,7 +1083,400 @@
 				
 				Los generadores no operan a costes marginales iguales, tal como en el caso sin pérdidas, sino que
 				varían según sus pérdidas.
+				
+			\subsubsection{Cálculo de las pérdidas incrementales de cada generador.}
+				Una de las formas de plantear el problema es a través de la ecuación de pérdidas por métodos empíricos. A partir de datos históricos del sistema eléctrico o de múltiples estudios del mismo, se puede obtener una ecuación cuadrática de las pérdidas en función de las potencias generadas considerando los coeficientes de pérdidas $B$:
+				\[P_p = \sum_{i=1}^{m}\sum_{j=1}^{m} P_{G_i}\cdot B_{ij} \cdot P_{G_j} + \sum_{i=1}^{m} B_{0i} \cdot P_{G_i} + B_{00}\]
+				
+				$B_{ij}$ son pérdidas ($RI^2$).
+				
+				$B_{0i}$ es un término lineal.
+				
+				$B_{00}$ son pérdidas fijas en los transformadores, etc.
+				
+				
+				\vspace{0.25cm}
+				Conocidos los coeficientes de pérdidas Bij (MW-1), las pérdidas incrementales de transmisión vendrán dadas por:
+				\[PIT_i = \dfrac{\partial P_p}{\partial P_{G_i}} = 2 \sum_{j=1}^{m} B_{ij} \cdot P_{G_j} + B_{0i}\]
+				
+				
+				Los coeficientes $B$ no son constantes, sino que varían en función del estados de carga del sistema. En la práctica, estos coeficientes pueden considerarse constantes, siempre que las condiciones del sistema no difieran drásticamente de las del caso base. En un sistema real, dada la variación de la potencia demandada a lo largo de un día, es necesario utilizar más de un conjunto de coeficientes $B$ durante el ciclo de carga diario.
+				
+				
+				\vspace{0.25cm}
+				Restricción de desigualdad:
+				\[P_D + \sum_{i=1}^{m}\sum_{j=1}^{m}  P_{G_i}\cdot B_{ij} \cdot P_{G_j} + \sum_{i=1}^{m} B_{0i} \cdot P_{G_i} + B_{00} - \sum_{i=1}^{m} P_{G_i} = 0\]
+				
+				
+				\vspace{0.25cm}
+				Factor de penalización:
+				\[L_i = \dfrac{1}{1-PIT_i} = \dfrac{1}{1-2 \sum\limits_{i=1}^{m} B_{ij} \cdot P_{G_j} + B_{0i}}\]
+				
+				
+				\vspace{0.25cm}
+				Ecuaciones de coordinación:
+				\[CI_i(P_{G_i}) = \lambda \left(1 - \left(2 \sum\limits_{i=1}^{m} B_{ij} \cdot P_{G_j} + B_{0i} \right) \right)\]
+				\[P_D + \sum_{i=1}^{m}\sum_{j=1}^{m}  P_{G_i}\cdot B_{ij} \cdot P_{G_j} + \sum_{i=1}^{m} B_{0i} \cdot P_{G_i} + B_{00} - \sum_{i=1}^{m} P_{G_i} = 0\]
+				
+				
+			\subsubsection*{Ejemplo.}
+				Un sistema de potencia tiene dos plantas generadoras y los coeficientes de pérdidas $B$ correspondientes a la red de transmisión son:
+				
+				\begin{figure}[H]
+					\begin{minipage}{0.5\textwidth}
+						\[B =
+						\left[
+						\begin{matrix}
+							0.00500 & -0.00003\\
+							-0.00003 & 0.00500
+						\end{matrix}
+						\right]
+						\]
+						\[
+						B_0 =
+						\left[
+						\begin{matrix}
+							0.00030\\
+							0.00040
+						\end{matrix}
+						\right]\] 
+						\[B_{00} = 0.00006\]
+						Los datos están en valores por unidad sobre la base de $100\,MVA$. Determinar la expresión de las pérdidas en la red de transmisión.
+					\end{minipage}
+					\begin{minipage}{0.5\textwidth}
+						\begin{figure}[H]
+							\centering
+							\begin{circuitikz}
+								\tikzstyle{every node}=[font=\normalsize]
+								\draw  (9.25,17.5) circle (0.5cm) node {\normalsize $G_1$} ;
+								\draw  (12.25,17.5) circle (0.5cm) node {\normalsize $G_2$} ;
+								\draw [short] (9.25,17) -- (9.25,16.5);
+								\draw [short] (12.25,17) -- (12.25,16.5);
+								\draw [short] (8.75,16.5) -- (9.75,16.5)node[pos=1,right]{1};
+								\draw [short] (10,13.5) -- (11.5,13.5)node[pos=0.5,above]{3};
+								\draw [->, >=Stealth] (10.75,13.5) -- (10.75,12.75)node[pos=0.5,right]{D};
+								\draw [short] (9,16.5) -- (9,14.75);
+								\draw [short] (9,14.75) -- (10.25,14.75);
+								\draw [short] (10.25,14.75) -- (10.25,13.5);
+								\draw [short] (11.25,14.75) -- (11.25,13.5);
+								\draw [short] (11.25,14.75) -- (12.5,14.75);
+								\draw [short] (12.5,14.75) -- (12.5,16.5);
+								\draw [short] (12.75,16.5) -- (11.75,16.5)node[pos=1,left]{2};
+								\draw [short] (9.5,16.5) -- (9.5,16);
+								\draw [short] (9.5,16) -- (12,16);
+								\draw [short] (12,16) -- (12,16.5);
+							\end{circuitikz}
+							
+							\label{fig:my_label}
+						\end{figure}
+					\end{minipage}
+				\end{figure}
+				
+				\underline{Solución:}
+					\[P_p = P_{G_1}^2 B_{11} + P_{G_2}^2 B_{22} + 2 P_{G_1}P_{G_2}B_{12} + P_{G_1}B_{01} + P_{G_2}B_{02} + B_{00}\]
+					
+					$B_{11} = B_{22} = 0.005\cdot 100 = 0.5$
+					
+					$B_{12} = B_{21} = -0.00003\cdot 100 = -0.003$
+					
+					$B_{01} = 0.03$
+					
+					$B_{02} = 0.04$
+					
+					$B_{03} = 0.006$
+					
+					Cada central tendrá asociado un coste de penalización:
+					
+					\[PIT_i = \dfrac{\partial P_p}{\partial P_{G_i}} \Rightarrow
+						\left\{
+							\begin{matrix}
+								L_1 = \dfrac{1}{1 - PIT_1} = \dfrac{1}{1 - (P_{G_1} - 0.006 P_{G_2} + 0.03)}\\
+								L_2 = \dfrac{1}{1 - PIT_2} = \dfrac{1}{1 - (P_{G_2} - 0.006 P_{G_1} + 0.04)}
+							\end{matrix}
+						\right.
+					\]
+					
+				\subsubsection{Método iterativo para obtener $\mathbf{\lambda}$.}
+					Las ecuaciones que proporciona el despacho económico de los generadores son, generalmente, no lineales, debiendo utilizarse un algoritmo iterativo para su resolución. De la interpretación de $\lambda$ como coste marginal del sistema se deriva un algoritmo iterativo muy utilizado en las implementaciones prácticas del despacho económico:
+					\begin{enumerate}
+						\item Dada la demanda $P_D$, elegir valores iniciales de $P_{G_i}$.
+						\item Calcular los $PIT_i$ de cada generador.
+						\item Elegir un $\lambda$ inicial:
+							\begin{enumerate}
+								\item Determinar la potencia del generador $i$ de $L_i \cdot CI_i = \lambda$.
+								\item Dependiendo del error en el balance de potencias:
+								\[\sum_i P_{G_i} < P_D \Rightarrow \text{incrementar }\lambda\]
+								\[\sum_i P_{G_i} > P_D \Rightarrow \text{decrementar }\lambda\]
+								\item Si el error $\varepsilon$ en el balance de potencias del sistema no es despreciable, volver al apartado a).
+								\[\left|\sum_i P{G_i} - P_D\right| < \varepsilon\]
+ 							\end{enumerate}
+ 						\item Si los cambios en las potencias son relativamente pequeños, el proceso de iteración finaliza. En caso contrario, volver al punto 2.
+					\end{enumerate}
+				
+				\subsubsection{Método de la secante.}
+					Partiendo de 2 puntos, se supone que para la iteración $\lambda_{m-1}$ hay un error $E_{m-1}$, y para la iteración $\lambda_m$ un error $E_m$. Por tanto se cumplirá que para un $\lambda_{m+1}$ habrá un $E=0$, realizando una extrapolación lineal de los otros dos puntos.
+				
+					\[\lambda_{m+1} = \lambda_{m} - \varepsilon_m \left(\dfrac{\lambda_{m-1} - \lambda_{m}}{\varepsilon_{m-1} - \varepsilon_m}\right)\]
+					
+					\begin{figure}[H]
+						\begin{minipage}{0.6\textwidth}
+							\textbf{Procedimiento:}	
+							\begin{enumerate}
+								\item Se realiza un D.E. con o sin pérdidas para obtener un $\lambda_{m-1}$ común, con un error de $E_{m-1}$.
+								\item Se realiza un nuevo D.E. tomando un valor de $\lambda_m$ mayor, que dará un error de $E_m$.
+								\item Con los valores anteriores se calcula $\lambda_{m+1}$, que cumple con la condición de que $E=0$:
+								\item Si $E<10^{-3}$ se finaliza el proceso y se toman los valores finales como válidos. En caso contrario se vuelve a tomar un valor de $\lambda_{m}$
+							\end{enumerate}
+						\end{minipage}
+						\begin{minipage}{0.4\textwidth}
+							\begin{figure}[H]
+								\centering
+								\begin{circuitikz}[scale = 0.8]
+									\tikzstyle{every node}=[font=\normalsize]
+									\draw [->, >=Stealth] (6.5,16.75) -- (6.5,19.25)node[pos=1,above]{E(+)};
+									\draw [->, >=Stealth] (6.5,16.75) -- (6.5,14.25)node[pos=1,below]{E(-)};
+									\draw [->, >=Stealth] (6.5,16.75) -- (11.5,16.75)node[pos=1,above]{$\lambda$};
+									\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (7.25,14.75) -- (11.25,18);
+									\draw [dashed] (7.5,15) -- (6.5,15)node[pos=1,left]{$E_{m-1}$};
+									\draw [dashed] (8.5,15.75) -- (6.5,15.75)node[pos=1,left]{$E_m$};
+									\draw [dashed] (8.5,15.75) -- (8.5,16.75)node[pos=1,above]{$\lambda_m$};
+									\draw [dashed] (7.5,15) -- (7.5,16.75)node[pos=1,above]{$\lambda_{m-1}$};
+									\draw (9.7,16.75) to[short, -*] (9.7,16.75);
+									\node [font=\normalsize] at (10,16.4) {$\lambda_{m+1}$};
+								\end{circuitikz}
+								
+								\label{fig:my_label}
+							\end{figure}
+						\end{minipage}
+					\end{figure}
+									
+				\subsubsection*{Ejemplo.}
+					Considerando las características de costes de los generadores del ejemplo anterior:
+					\[C_1(P_{G_1}) = 900 + 45\, P_{G_1} + 0.01\, P_{G_1}^2\,\dfrac{UM}{h}; \quad 50\,MW \leq P_{G_1} \leq 200\,MW\]
+					\[C_2(P_{G_2}) = 2500 + 43\, P_{G_2} + 0.003\, P_{G_2}^2\,\dfrac{UM}{h}; \quad 50\,MW \leq P_{G_2} \leq 600\,MW\]
+					La carga total $P_D$ que debe ser suministrada es de $700\,MW$. La expresión simplificada de las pérdidas es de la forma:
+					\[P_p = B_{11}P_{G_1}^2 + B_{22}P_{G_2}^2\,MW\]
+					Los coeficientes de pérdidas:
+					\[B_{11} = 3\cdot 10^{-5} \qquad B_{22} = 9\cdot 10^{-5}\]
+					Determinar, utilizando el método de iteración en $\lambda$, la potencia que debe entregar cada máquina, las pérdidas
+					en el sistema, el coste incremental y el coste total.
+					
+					\vspace{0.25cm}
+					\underline{Solución:}
+					\[\lambda = L_1 CI_1 = \dfrac{1}{1-0.00006 P_1}(45 + 0.02 P_1) \qquad \lambda = L_2 CI_2 = \dfrac{1}{1-0.00018 P_1}(43 + 0.006 P_2)\]
+					\[P_p = 0.00003 P_1^2 + 0.00009 P_2^2\]
+					\[P_1 + P_2 - P_p - 700 = 0\]
+					
+					
+					Para utilizar el método de iteración en $\lambda$ conviene escribir las ecuaciones de la forma:
+					\[P_1 = \dfrac{\lambda - 45}{0.02 + 0.00006\lambda}\qquad P_2 = \dfrac{\lambda - 43}{0.006 + 0.00018\lambda}\]
+					\[P_p = 0.00003 P_1^2 + 0.00009 P_2^2\]
+					\[P_1 + P_2 - P_p - 700 = 0\]
+					
+					
+					Para comenzar el proceso iterativo se puede considerar como valor de partida para $\lambda$ el determinado en el caso de despacho sin pérdidas y con límites: $\lambda = 46.69$. En la tabla siguiente se muestra el desarrollo del proceso y los resultados obtenidos mediante iteraciones:
+					
+					\begin{table}[H]
+						\centering
+						\begin{tabular}{ccccccc}
+							n	 & $\lambda$ & $P_1$ & $P_2$ & $P_p$ & $P_1+P_2+P_3-P_D$ & $C_T = C_1 + C_2$\\
+							-	 & $[UM/MWh]$ & $[MW]$ & $[MW]$ & $[MW]$ & $[MW]$ & $[UM/h]$\\
+							\hline
+							1	 & 46,690	& 74,12		& 256,18	& 6,07  & -375,78	& 18002,67\\
+							2	 & 50,000	& 217,39	& 466,67	& 21,02 &	-36,96	& 34375,20\\
+							3	 & 50,500	& 238,82	& 497,02	& 23,94 &	11,89	& 36830,05\\
+							4	 & 50,300	& 230,25	& 484,92	& 22,75 &	-7,58	& 35848.67\\
+							5	 & 50,350	& 232,40	& 487,95	& 23,05 &	-2,70	& 36094,09\\
+							6	 & 50,370	& 233,25	& 489,16	& 23,17 &	-0,75	& 36192,24\\
+							7	 & 50,375	& 233,47	& 489,46	& 23,20 &	-0,27	& 36216,78\\
+							8	 & 50,380	& 233,68	& 489,77	& 23.23 &	0.22	& 36241,31\\
+							9	 & 50,378	& 233,60	& 489,65	& 23,21 &	0,03	& 36231,50\\
+							10 	 & 50,377	& 233,55	& 489,59	& 23,21 &	-0,07	& 36226,59
+							
+						\end{tabular}
+					\end{table}
+					
+					Comparando la iteración 9 con los casos sin pérdidas se aprecia que el coste incremental y total ahora son mayores y que la potencia entregada entregada por el generador 1 aumenta y la entregada por el generador 2 disminuye, a pesar de que el coste incremental de esta última es menor, debido a que su factor de penalización es mayor.
+					
+					
+					Tomando como punto de partida el valor de $\lambda_{m-1} = 46,69$, con $\varepsilon_{m-1} = -375,78\,MW$ se realiza otra iteración con un valor superior de $\lambda_m = 50.350$, que da un valor de $\varepsilon_m = -2.70\,MW$. Sustituyendo en la expresión
+					\[\lambda_{m+1} = \lambda_{m} - \varepsilon_m \left(\dfrac{\lambda_{m-1} - \lambda_{m}}{\varepsilon_{m-1} - \varepsilon_m}\right)\]
+					
+					
+					se obtiene un valor de $\lambda_{m+1} = 5.0376$ y un valor de $\varepsilon_{m+1} = -0.165\,MW = -16.5\cdot 10^{-8}\,p.u.$, que es muy próximo a 0, y por lo tanto se asume válido.
 			
 	\section{Programación de arranques y paradas de centrales.}
-		\subsection{}
-	
+		El problema de la programación de arranques y paradas de centrales térmicas
+		consiste en determinar qué centrales van a estar en servicio y cuánto van a generar en
+		cada periodo con el objeto de optimizar los costes de producción, teniendo en cuenta
+		la evolución de la demanda a cubrir por las centrales térmicas a lo largo del
+		horizonte de programación.
+		
+		
+		Suponiendo que el horizonte de programación es de 24 horas y que existen ng
+		generadores térmicos, la función de costes a optimizar se puede expresar de la
+		siguiente forma:
+		\[\sum_{g=1}^{n}\left(A_g + \sum_{t=1}^{24} C_{g,t}(P_{g,t})\right)\]
+		$C_{g,t}$ es el coste de generación del generador $g$ a la hora $t$.
+		$A_g$ es la suma de los otros costes que incurre en el generador $g$, típicamente costes de arranque y parada de la central.
+		
+		
+		Las restricciones que debe cumplir el problema de optimización se pueden clasificar
+		en dos grupos:
+		\begin{itemize}
+			\item Restricciones impuestas por el sistema eléctrico.
+			\item Restricciones particulares de cada central.
+		\end{itemize}
+		
+		\subsection{Costes de arranque y parada.}
+			El coste de arranque puede variar desde un valor máximo (coste de arranque en frío) hasta un valor
+			menor si la central se desacoplo recientemente y aún está cerca de su temperatura de operación.
+
+			Tiempos de arranque de algunas centrales:
+			\begin{itemize}
+				\item Nuclear: 7 días.
+				\item Carbón: 12 horas.
+				\item Fuel/gas: 8 horas.
+				\item Ciclo combinado: 4 horas.
+				\item Hidráulica: minutos.
+				\item Eólica y fotovoltaica: minutos (no controlable).
+			\end{itemize}
+			
+			Los costes de parada son típicamente constantes para cada central y representan el desaprovechamiento de combustible y
+			la mano de obra necesaria para desacoplar una central. Son generalmente mucho más pequeños que los costes de arranque.
+			
+		\subsection{Coordinación hidrotérmica.}
+			Conocida la energía total disponible (cantidad de agua embalsada) para la generación
+			en centrales hidroeléctricas, la coordinación hidrotérmica determina qué fracción de
+			la demanda se va a cubrir mediante dichas centrales en cada intervalo del horizonte
+			de programación, siempre con el objeto de reducir al máximo el coste de
+			generación diario.
+			
+			
+			Es habitual trabajar con una curva de costes del parque térmico en función de la
+			potencia cubierta mediante generación térmica: $CT(PT)$.
+			
+			
+			La generación hidráulica se reserva para las horas punta de mayor consumo: mayor coste de
+			oportunidad.
+			
+			
+			Suponiendo que el horizonte de programación es de 24 horas y que existen $ng$
+			generadores térmicos y $nh$ generadores hidráulicos:
+			\[P_{Dt} = \sum_{t=1}^{24} P_{T_t} + P_{H_t}\]
+			
+			\subsubsection{Restricciones de las centrales hidráulicas.}
+				\begin{itemize}
+					\item \textbf{Balance energético de cada periodo:}
+						\[P_{Dt} = P_{T_t} + \sum_{h=1}^{nh} P_{h,t}\quad/\,t=1,2,\dots24\]
+						Donde $P_{h,t}$ es la contribución de las centrales hidráulicas en cada periodo $t$.
+					
+					\item \textbf{Potencia máxima y mínima de cada grupo hidráulico.}
+						\[P_h^{min} \leq P_{h,t} \leq P_h^{max}\]
+						
+					\item \textbf{Energía embalsada disponible en el horizonte de programación.}
+						\[V_h \geq \sum_{t=1}^{24} P_{h,t}\]
+						Siendo $V_h$ la energía total disponible en MWh.
+				\end{itemize}
+				
+			\subsubsection{Balance de las centrales hidráulicas.}
+				\textbf{\textit{Volumen de agua embalsada.}}
+				
+				\[V_{h,t} = V_{h,t-1} + A_{h,t} - D_{h,t} - Q_{h,t}(P_{h,t})\]
+				\begin{itemize}
+					\item $V_{h,t-1}$ es el volumen de agua en el embalse asociado a la central $h$ en el intervalo $t$, sujeto a límites máximo y mínimo.
+					\item $A_{h,t}$ son las aportaciones externas al embalse en el intervalo $t$, conocidas o estimadas.
+					\item $D_{h,t}$ es el caudal vertido por el embalse en el intervalo $t$, excedente que no es utilizado para la generación eléctrica.
+					\item $Q_{h,t}$ es el caudal medio utilizado por la central $h$ en el intervalo $t$, con límites mínimo y máximo.
+				\end{itemize}
+				
+				\textbf{\textit{Centrales de una misma cuenca.}}
+				\[V_{h,t} = V_{h,t-1} + A_{h,t} - D_{h,t} - Q_{h,t}(P_{h,t}) + \sum_e \left(Q_{e,t-\tau}(P_{e,t-\tau}) + D_{e,t-\tau}\right)\]
+				Siendo $D_h$ el conjunto de embalses aguas arriba del embalse $h$ y $\tau$ el tiempo que tarda el caudal vertido por la central $e$ en estar disponible en el embalse $h$.
+				
+				\newpage
+				\textbf{\textit{Centrales de bombeo reversibles.}}
+				
+				
+				En el caso de las centrales hidráulicas de bombeo puro (centrales cuya única aportación apreciable al agua
+				embalsada es la bombeada por la propia central), la ecuación de continuidad del agua embalsada es la
+				siguiente:
+				\[V_{b,t} = V_{b,t-1} - Q_{G_{b,t}}(P_{G_{b,t}}) + Q_{C_{b,t}}(P_{C_{b,t}})\]
+				
+				El balance energético en cada periodo deberá incluir tanto la generación como el consumo de las centrales de
+				bombeo:
+				\[P_{Dt} = P_{Tt} + \sum_{h=1}^{nh}P_{h,t} + \sum_{b=1}^{nb}P_{G_{b,t}}-P_{C_{b,t}}\]
+				
+			\subsubsection*{Ejemplo.}
+				Una central hidroeléctrica con una potencia máxima de $600\,MW$ dispone de una energía almacenada en el embalse de $3600\,MWh$. La demanda de energía evoluciona según la figura:
+				
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}[scale = 0.9]
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [short] (3.75,14) .. controls (5.25,13.5) and (6,12.25) .. (6.5,10.75);
+							\draw [short] (6.5,10.75) -- (8.5,10.75);
+							\draw [short] (8.5,10.75) -- (8.5,14);
+							\draw [short] (8.5,14) -- (8.75,14);
+							\draw [short] (8.75,14) -- (9.5,10.75);
+							\draw [short] (9.5,10.75) -- (11,10.75);
+							\draw [short] (9.25,11.75) -- (10.5,11.75);
+							\draw [short] (10.5,11.75) -- (10.5,10.75);
+							\draw [->, >=Stealth] (10,11.25) -- (11.75,11.25)node[pos=1,above]{P $\leq$ $600\,MW$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (5,13.25) -- (8.5,13.25);
+							\node [font=\normalsize] at (7.25,12.25) {$3600\,MWh$};
+							\draw [->, >=Stealth] (14,10.75) -- (14,14.25)node[pos=1,right]{$P_D\,[MW]$};
+							\draw [->, >=Stealth] (14,10.75) -- (19.5,10.75)node[pos=1,right]{$t\,[h]$};
+							\draw [dashed] (16.75,10.75) -- (16.75,13)node[pos=0,below]{12};
+							\draw [dashed] (16,10.75) -- (16,11.75)node[pos=0,below]{8};
+							\draw [dashed] (19.25,10.75) -- (19.25,13)node[pos=0,below]{24};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (14,11.75) -- (16,11.75);
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (16,11.75) -- (16,13.5);
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (16,13.5) -- (16.75,13.5);
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (16.75,13.5) -- (16.75,13);
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (16.75,13) -- (19.25,13);
+							\draw [dashed] (16,13.5) -- (14,13.5)node[pos=1,left]{2500};
+							\draw [dashed] (16.75,13) -- (14,13)node[pos=1,left]{2000};
+							\draw [dashed] (14,11.75) -- (14,11.75)node[pos=1,left]{1000};
+						\end{circuitikz}
+					
+					\label{fig:my_label}
+				\end{figure}
+				
+				La curva de coste equivalente del conjunto de centrales térmicas es la siguiente:
+				\[C_T = 3250 - 0.3P_T + 0.0024 P_T^2\,\left[\dfrac{\euro}{h}\right]\]
+				
+				
+				Determinar el programa óptimo de generación de la central hidráulica y el ahorro que se obtiene al utilizar energía almacenada en el embalse.
+				
+				\vspace{0.25cm}
+				\underline{Solución:}
+				
+				
+				Si toda la demanda fuera asumida por las centrales térmicas el coste de generación sería:
+				\[P_T = 1000 \Rightarrow C = 5350\,\left[\dfrac{\euro}{h}\right]\]
+				\[P_T = 2500 \Rightarrow C = 17500\,\left[\dfrac{\euro}{h}\right]\]
+				\[P_T = 2000 \Rightarrow C = 12250\,\left[\dfrac{\euro}{h}\right]\]
+				Coste total: $8\cdot 5350 + 4\cdot 17500 + 12\cdot 12250 = 259800\,\euro$
+				
+				
+				Luego hay que minimizar
+				\[\sum_{t=1}^{3}d_t\cdot C(P_{T_t})\]
+				
+				
+				Las restricciones que debe cumplir el problema de optimización son las siguientes:
+				\[P_{Dt} = \sum_{t=1}^{24} P_{T_t} + P_{H_t} \quad /\,t = 1,2,3 \text{ y } P_{H_t} \text{ la potencia de la central en cada periodo.}\]
+				\[0 \leq P_{H_t} \leq 600\]
+				\[3600 = \sum_{t=1}^{3}d_t\cdot P_{H_t}\]
+				
+				\begin{itemize}
+					\item De 0:00 a 8:00h la central hidráulica no genera, por lo que el coste es del parque térmico:
+						\[P_T = 1000 \Rightarrow C = 5350\,\euro/h\]
+					\item De 8:00 a 12:00h la central hidráulica trabaja con una potencia media de $600\,MW$, consumiendo una energía de $2400\,MWh$. El coste horario es:
+						\[P_T = 1900 \Rightarrow C = 11344\,\euro/h\]
+					\item De 12:00 a 24:00h la central hidráulica trabaja con una potencia media de $100\,MW$, consumiendo una energía de $1200\,MWh$. El coste horario es:
+						\[P_T = 1900 \Rightarrow C = 11344\,\euro/h\]
+				\end{itemize}
+				
+				En consecuencia, el coste óptimo diario resulta $224304\,\euro$ y el ahorro obtenido de la utilización de la energía hidráulica es $35496\,\euro$.
+				
