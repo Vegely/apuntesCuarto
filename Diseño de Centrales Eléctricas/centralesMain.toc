@@ -240,3 +240,17 @@
 \contentsline {subsection}{\numberline {5.6.2}Coordinación hidrotérmica.}{101}{}%
 \contentsline {subsubsection}{Restricciones de las centrales hidráulicas.}{101}{}%
 \contentsline {subsubsection}{Balance de las centrales hidráulicas.}{101}{}%
+\contentsline {chapter}{\numberline {6}Generador síncrono.}{105}{}%
+\contentsline {section}{\numberline {6.1}Generalidades.}{105}{}%
+\contentsline {subsection}{\numberline {6.1.1}Aplicaciones de la máquina síncrona.}{105}{}%
+\contentsline {subsection}{\numberline {6.1.2}Aspectos constructivos.}{105}{}%
+\contentsline {section}{\numberline {6.2}Particularidades según su emplazamiento.}{106}{}%
+\contentsline {subsection}{\numberline {6.2.1}Alternadores de centrales hidroeléctricas.}{106}{}%
+\contentsline {subsection}{\numberline {6.2.2}Alternadores de centrales térmicas.}{106}{}%
+\contentsline {section}{\numberline {6.3}Refrigeración en los generadores síncronos.}{106}{}%
+\contentsline {subsection}{\numberline {6.3.1}Tipos de refrigeración en máquinas de gran potencia.}{106}{}%
+\contentsline {subsection}{\numberline {6.3.2}Sistemas de refrigeración de las bobinas rotóricas y estatóricas.}{107}{}%
+\contentsline {subsection}{\numberline {6.3.3}Refrigeración del rotor cilíndrico.}{107}{}%
+\contentsline {subsection}{\numberline {6.3.4}Refrigeración del estátor.}{107}{}%
+\contentsline {subsection}{\numberline {6.3.5}Refrigeración mediante hidrógeno.}{107}{}%
+\contentsline {section}{\numberline {6.4}Partes de un generador síncrono.}{107}{}%
