@@ -29,5 +29,13 @@
 \contentsline {subsubsection}{\numberline {3.3.1}Aplicaciones y fundamento.}{31}{}%
 \contentsline {subsubsection}{\numberline {3.3.2}Vatímetro de efecto Hall.}{32}{}%
 \contentsline {section}{\numberline {4}Tema 4. Medidas de tensiones, intensidades y resistencias.}{33}{}%
+\contentsline {subsection}{\numberline {4.1}Métodos industriales frente a métodos de laboratorio.}{33}{}%
+\contentsline {subsection}{\numberline {4.2}Métodos industriales para medir tensión e intensidad.}{33}{}%
+\contentsline {subsection}{\numberline {4.3}Error de inserción.}{33}{}%
+\contentsline {subsection}{\numberline {4.4}Medida de resistencia con óhmetros.}{33}{}%
+\contentsline {subsection}{\numberline {4.5}Medida de resistencia con voltímetro y amperímetro.}{33}{}%
+\contentsline {subsection}{\numberline {4.6}Métodos de laboratorio para medir tensión e intensidad.}{33}{}%
+\contentsline {subsection}{\numberline {4.7}Puente de Wheatstone para medida de resistencia.}{33}{}%
+\contentsline {subsection}{\numberline {4.8}Puente de Kelvin-Thomson.}{33}{}%
 \contentsline {section}{\numberline {5}Tema 5. Medidas de impedancia, capacidad y autoinducción en corriente alterna.}{34}{}%
 \contentsline {section}{\numberline {6}Tema 6. Medida de potencia y energía.}{35}{}%
