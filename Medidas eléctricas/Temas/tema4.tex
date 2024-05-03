@@ -114,7 +114,7 @@ Por tanto, para elegir un montaje u otro se igualan los errores y se obtiene el 
 Donde si la resistencia R es mayor a $R_C$ se debe usar el montaje largo y el montaje corto en caso contrario.
 \subsection{Medida de R con una $R_p$.}
 \subsubsection{Por comparación de corrientes.}
-Se mantiene constante $U_0$ se compara la corriente que circula por la resistencia desconocida y la resistencia patrón.
+Se mantiene constante $U_0$ y se compara la corriente que circula por la resistencia desconocida y la resistencia patrón.
 \begin{figure}[H]
 	\begin{minipage}{0.5\textwidth}
 		\begin{figure}[H]
@@ -124,13 +124,39 @@ Se mantiene constante $U_0$ se compara la corriente que circula por la resistenc
 		\end{figure}
 	\end{minipage}
 	\begin{minipage}{0.5\textwidth}
-	\[U_0=I_x(R_x+R_A)\]
+	\[U_0=I_x(R_x+R_A)=I_P(R_P+R_A)\rightarrow R_x=R_P\frac{I_p}{I_x}+R_A\left(\frac{I_P}{I_x}-1\right)\]
+	Si $R_A <<R_x$ y $R_P$:
+	\[R_x\approx R_P\frac{I_P}{I_x}\]
+	Si se ajusta $R_P$ de manera que las corrientes sean iguales entonces la resistencia interna del amperímetro no influye ya que $R_P=R_x$.
 	\end{minipage}
 \end{figure}
 
 
 
 \subsubsection{Por comparación de tensiones.}
+Se mantiene constante $I$ y se compara la tensión que circula por la resistencia desconocida y la resistencia patrón.
+\begin{figure}[H]
+	\begin{minipage}{0.5\textwidth}
+		\begin{figure}[H]
+			\centering
+			\label{fig:6}
+			\includegraphics[width=0.7\linewidth]{ImagenesTema4/6}
+		\end{figure}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\[U_x=I_x(R_x||R_V); U_P=I_P(R_P||R_b)\rightarrow \frac{U_x}{U_P}=\frac{R_x||R_V}{R_P||R_V}=\frac{R'_x}{R'_P}\]
+		\[R'_x=R'_P\frac{U_x}{U_P}\]
+		Si $R_V >>R_x$ y $R_P$:
+		\[R_x\approx R_P\frac{V_x}{V_P}\]
+		Si se ajusta $R_P$ de manera que las tensiones sean iguales entonces la resistencia interna del voltímetro no influye ya que $R_P=R_x$.
+	\end{minipage}
+\end{figure}
 \subsection{Métodos de laboratorio para medir tensión e intensidad.}
+\subsubsection{Método de sustitución.}
+\subsubsection{Método de compensación.}
+
 \subsection{Puente de Wheatstone para medida de resistencia.}
+\subsubsection{Método del falso cero.}
+\subsubsection{Puente límite.}
+\subsubsection{Análisis de sensibilidad.}
 \subsection{Puente de Kelvin-Thomson.}
