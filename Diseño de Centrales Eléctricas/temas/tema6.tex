@@ -160,3 +160,74 @@
 				\item \textbf{Tubo pantalla:} Es de aluminio. Su misión es doble: servir como conducto para la circulación del refrigerante (hidrógeno o aire) y como apantallamiento para el flujo creado por las altas intensidades. Se ponen a tierra por varios puntos.
 			\end{itemize}
 		
+		\subsection{Circuito equivalente por fase de un generador síncrono.}
+			\subsubsection{Principio de funcionamiento.}
+				En una máquina síncrona las tensiones inducidas forman un sistema trifásico equilibrado y de secuencia directa. Estas tensiones inducidas, si no se consideran efectos de saturación, son proporcionales a la intensidad de excitación en corriente continua, dado que la velocidad de rotación tiene que ser constante para mantener la frecuencia de la red constante.
+				
+				
+				\begin{figure}[H]
+					\begin{minipage}{0.5\textwidth}
+						\begin{figure}[H]
+							\centering
+							\includegraphics[width=0.7\linewidth]{res/tema6/ejes_dq}
+							\label{fig:ejesdq}
+						\end{figure}
+					\end{minipage}
+					\begin{minipage}{0.5\textwidth}
+						Si el generador es de polos salientes la reluctancia en el entrehierro no es uniforme y aparecen dos reactancias:
+						\begin{itemize}
+							\item \textbf{Reactancia del eje directo:} $X_d$.
+							\item \textbf{Reactancia del eje transversal o en cuadratura:} $X_q$.
+						\end{itemize}
+						Si el generador es de rotor cilíndrico sólo se considera la \textbf{reactancia síncrona:} $X_s$.
+						
+						\[f = \dfrac{p\cdot n}{60} \qquad E = k\cdot \omega \cdot i_{ex}\]
+					\end{minipage}
+				\end{figure}
+			
+			\subsubsection{Circuito equivalente por fase.}
+				Considerando un generador de rotor cilíndrico o liso, al conectarla una carga y circular intensidad, estas corrientes crean un campo magnético, denominado \textbf{reacción de inducido}, que presenta una distribución senoidal y que gira a la misma velocidad y en el mismo sentido que el rotor. Esto provoca una caída de tensión en carga respecto de la tensión en vacío, y se representa mediante una reactancia de reacción de inducido, $X_{ri}$.
+				
+				
+				No todo el flujo que crea el inductor es recogido por el inducido. Esta pérdida de flujo se representa mediante una reactancia de dispersión $X_\sigma$.
+				
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw (3.25,18) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={$\vec E_a$}] (3.25,14.75);
+							\draw (3.25,18) to[L,l={$jX_{ri}$} ] (5,18);
+							\draw (5,18) to[L,l={$jX_\sigma$} ] (6.75,18);
+							\draw (6.75,18) to[R,l={$R$}] (8.5,18);
+							\draw [](8.5,18) to[short, -o] (9,18) ;
+							\draw [](3.25,14.75) to[short, -o] (9,14.75);
+							\draw [->, >=Stealth] (9,17.5) -- (9,15.25)node[pos=0.5,right, fill=white]{$\vec U_a$};
+							\draw [short] (3.5,19) -- (6.5,19)node[pos=0.5,above, fill=white]{$jX_s$};
+							\draw [short] (3.5,19) -- (3.5,18.75);
+							\draw [short] (6.5,19) -- (6.5,18.75);
+							\draw [->, >=Stealth] (8.25,18) -- (8.75,18)node[pos=0.7,above]{$\vec I_a$};
+							\draw [->, >=Stealth] (5,17.5) -- (5,15.25)node[pos=0.5,right]{$\vec E_{ag}$};
+						\end{circuitikz}
+				\end{figure}
+				
+				\begin{figure}[H]
+					\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw [ color={rgb,255:red,0; green,0; blue,255}, ->, >=Stealth] (5,14.75) -- (7.75,14.75)node[pos=1,above]{$\vec{U}$};
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (7.75,14.75) -- (8.5,14)node[pos=1,below]{$R\vec{I}$};
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (8.5,14) -- (10.5,16.25)node[pos=0.5,right]{$jX_\sigma\vec{I}$};
+						\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (5,14.75) -- (10.5,16.25)node[pos=0.9,above]{$\vec{E}_{ag}$};
+						\draw [ color={rgb,255:red,128; green,0; blue,255}, ->, >=Stealth] (5,14.75) -- (6.5,13.25)node[pos=1,below]{$\vec{I}$};
+						\draw [ color={rgb,255:red,210; green,105; blue,0}, ->, >=Stealth] (5,14.75) -- (4,17.75)node[pos=1,right]{$\Phi$};
+						\draw [ color={rgb,255:red,255; green,128; blue,0}, ->, >=Stealth] (5,14.75) -- (4.25,17)node[pos=1,right]{$\vec{F}_{r}$};
+						\draw [ color={rgb,255:red,255; green,0; blue,128}, ->, >=Stealth] (4.25,17) -- (3,18.25)node[pos=0.8,above]{$\,\,\,\,\vec{F}_i$};
+						\draw [ color={rgb,255:red,0; green,128; blue,128}, ->, >=Stealth] (5,14.75) -- (11.75,17.75)node[pos=0.9,above]{$\vec{E}_a$};
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (10.5,16.25) -- (11.75,17.75)node[pos=0.5,right]{$jX_r\vec{I}$};
+						\draw [ color={rgb,255:red,128; green,128; blue,128}, ->, >=Stealth] (5,14.75) -- (2.425,19.25)node[pos=1,left]{$\Phi_0$};
+						\draw [->, >=Stealth] (5,14.75) -- (3,18.25)node[pos=0.9,left]{$\vec{F}_{ex}$};
+						\draw (6,14.75) arc [radius=1cm, start angle=0, end angle=-45]node[pos=0.6,right]{$\varphi$};
+						\draw (6.5,14.75) arc [radius=1.5cm, start angle=0, end angle=25]node[pos=0.4,right]{$\delta$};
+						\draw (7,15.275) arc [radius=2cm, start angle=10, end angle=19]node[pos=0.9,right]{$\delta_m$};
+					\end{circuitikz}
+				\end{figure}

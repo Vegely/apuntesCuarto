@@ -250,7 +250,11 @@
 \contentsline {section}{\numberline {6.3}Refrigeración en los generadores síncronos.}{106}{}%
 \contentsline {subsection}{\numberline {6.3.1}Tipos de refrigeración en máquinas de gran potencia.}{106}{}%
 \contentsline {subsection}{\numberline {6.3.2}Sistemas de refrigeración de las bobinas rotóricas y estatóricas.}{107}{}%
-\contentsline {subsection}{\numberline {6.3.3}Refrigeración del rotor cilíndrico.}{107}{}%
+\contentsline {subsection}{\numberline {6.3.3}Aspectos constructivos del rotor cilíndrico.}{107}{}%
 \contentsline {subsection}{\numberline {6.3.4}Refrigeración del estátor.}{107}{}%
 \contentsline {subsection}{\numberline {6.3.5}Refrigeración mediante hidrógeno.}{107}{}%
-\contentsline {section}{\numberline {6.4}Partes de un generador síncrono.}{107}{}%
+\contentsline {section}{\numberline {6.4}Partes de un generador síncrono.}{108}{}%
+\contentsline {subsection}{\numberline {6.4.1}Conductores de salida del estátor. Barras de fase aislada.}{108}{}%
+\contentsline {subsection}{\numberline {6.4.2}Circuito equivalente por fase de un generador síncrono.}{108}{}%
+\contentsline {subsubsection}{Principio de funcionamiento.}{108}{}%
+\contentsline {subsubsection}{Circuito equivalente por fase.}{109}{}%
