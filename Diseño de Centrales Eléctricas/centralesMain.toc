@@ -258,3 +258,5 @@
 \contentsline {subsection}{\numberline {6.4.2}Circuito equivalente por fase de un generador síncrono.}{108}{}%
 \contentsline {subsubsection}{Principio de funcionamiento.}{108}{}%
 \contentsline {subsubsection}{Circuito equivalente por fase.}{109}{}%
+\contentsline {chapter}{\numberline {7}Control potencia - frecuencia.}{111}{}%
+\contentsline {chapter}{\numberline {8}Centrales térmicas de carbón.}{113}{}%
