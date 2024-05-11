@@ -1,1 +1,114 @@
 \chapter{Control potencia - frecuencia.}
+\section{Control potencia - frecuencia desde el punto de vista del mercado de servicios complementarios.}
+
+
+Repasando el tema 4, el control se divide en primario, secundario y terciario.
+\subsection{Control primario.}
+Es una respuesta a nivel de central con un tiempo de actuación de 2 a 20 segundos.
+\begin{itemize}
+	\item [-] Es un servicio obligatorio no retribuido.
+	\item [-] Su objetivo es mantener la estabilidad de la frecuencia del sistema de forma automática.
+	\item [-] Los reguladores de velocidad actúan de manera automática para corregir desequilibrios de variación de carga de hasta el 1.5\% de la potencia nominal.
+	\begin{itemize}
+		\item En 15s desvíos de frecuencia $\le 100mHz$.
+		\item Lineal entre 15 y 30s antes desvíos entre $100$ y $200mHz$.
+	\end{itemize}
+\end{itemize}
+\subsection{Control secundario.}
+Es una respuesta para corregir efectos no resueltos por la regulación primaria con un tiempo de respuesta entre 20 segundos y 2 minutos:
+\begin{itemize}
+	\item [-] Desviación de la frecuencia respecto a la de referencia.  
+	\item [-] El reparto de demando queda determinada por el estatismo del generador (se verá más adelante) y no se cumplen los flujos de potencia programados.
+\end{itemize}
+La regulación secundaria es un servicio voluntario y retribuido. 
+\subsection{Control terciario.}
+Es el encargado de establecer la consigna de producción base de potencia para cada generador para restablecer la reserva de regulación rodante. El tiempo de respuesta es de 10 a 15 minutos. La reserva es determinada por el operador del sistema, REE, para los generadores habilitados. La reserva a subir se establece entre el 40\% y el 100\%.
+
+
+\section{Dinámica del rotor}
+\begin{figure}[H]
+	\centering
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw [short] (7.25,10.25) -- (7.25,8.75);
+			\draw [short] (6.25,9.25) -- (7.25,8.75);
+			\draw [short] (6.25,9.75) -- (7.25,10.25);
+			\node [font=\normalsize] at (3.5,10.75) {};
+			\node [font=\normalsize] at (6.75,9.5) {TV};
+			\draw [short] (7.25,9.75) -- (9,9.75);
+			\draw [short] (7.25,9.25) -- (9,9.25);
+			\draw [short] (9.75,10) -- (10,10);
+			\draw [short] (10,10) -- (10,9.75);
+			\draw [short] (9.75,9) -- (10,9);
+			\draw [short] (10,9) -- (10,9.25);
+			\draw [short] (10,9.25) -- (11.75,9.25);
+			\draw [short] (10,9.75) .. controls (12.5,9.75) and (10.25,9.75) .. (11.75,9.75);
+			\draw  (12.5,9.5) circle (0.75cm) node {\normalsize G} ;
+			\draw [line width=0.2pt, short] (12.25,9.25) .. controls (12.5,9.5) and (12.5,9) .. (12.75,9.25);
+			\draw [short] (13.25,9.5) -- (15.5,9.5);
+			\draw [short] (14.75,9.5) -- (14.75,7);
+			\draw  (11.5,7.5) rectangle (13.5,6.5);
+			\node [font=\normalsize] at (12.5,7.25) {Regulador};
+			\node [font=\normalsize] at (12.5,6.75) {AVR};
+			\draw (11.75,8.25) to[L ] (13.25,8.25);
+			\draw [short] (11.75,8.25) -- (11.75,7.5);
+			\draw [short] (13.25,8.25) -- (13.25,7.5);
+			\draw [line width=0.2pt, short] (13.5,9.25) -- (13.75,9.75);
+			\draw [line width=0.2pt, short] (13.75,9.25) -- (14,9.75);
+			\draw [line width=0.2pt, short] (14,9.25) -- (14.25,9.75);
+			\draw [line width=0.2pt, short] (14.25,9.25) -- (14.5,9.75);
+			\draw [short] (9.75,10) -- (9.75,11.25);
+			\draw [short] (9.75,10) -- (9.5,10);
+			\draw [short] (9.5,10) -- (9.5,9.75);
+			\draw [short] (9.5,9.25) -- (9.5,9);
+			\draw [short] (9.5,9) -- (9.75,9);
+			\draw [short] (9,9.75) -- (9.5,9.75);
+			\draw [short] (9,9.25) -- (9.5,9.25);
+			\draw [short] (6.25,9.75) -- (6.25,9.25);
+			\draw  (8.75,12.25) rectangle (10.75,11.25);
+			\node [font=\normalsize] at (9.75,12) {Regulador};
+			\node [font=\normalsize] at (9.75,11.5) {velocidad};
+			\draw [->, >=Stealth] (8,10) .. controls (8.25,9.5) and (8.25,9.5) .. (8,9) ;
+			\draw [->, >=Stealth] (8.75,10) .. controls (9,9.5) and (9,9.5) .. (8.75,9) ;
+			\draw [->, >=Stealth] (11.25,9) .. controls (11,9.5) and (11,9.5) .. (11.25,10) ;
+			\node [font=\normalsize] at (8,8.75) {n};
+			\node [font=\normalsize] at (10,10.75) {n};
+			\node [font=\normalsize] at (11.25,10.25) {$T_{elec}$};
+			\node [font=\normalsize] at (8.75,8.75) {$T_{mec}$};
+			\draw [->, >=Stealth] (9.75,10) -- (9.75,11.25);
+			\draw [->, >=Stealth] (12,11.75) -- (10.75,11.75);
+			\draw [->, >=Stealth] (12.5,5.75) -- (12.5,6.5);
+			\draw [->, >=Stealth] (11.5,7.75) -- (11.5,8.25);
+			\draw [->, >=Stealth] (14.75,7) -- (13.5,7);
+			\node [font=\normalsize] at (14.75,8.25) {};
+			\node [font=\normalsize] at (12.5,5.5) {$V_{ref}$};
+			\node [font=\normalsize] at (11.25,8) {$I_{ex}$};
+			\node [font=\normalsize] at (15,8) {V};
+			\node [font=\normalsize] at (12.5,11.75) {$P_{ref}$};
+			\draw  (8,11.75) circle (0.5cm);
+			\draw [short] (8.75,11.75) -- (8.5,11.75);
+			\node [font=\normalsize] at (8,11.75) {$M$};
+			\draw [short] (7.5,11.75) -- (5.75,11.75);
+			\draw [->, >=Stealth] (5.75,11.75) -- (5.75,11.25);
+			\draw [short] (5.75,11.25) -- (6.25,11.5);
+			\draw [short] (5.75,11.25) -- (6.25,11);
+			\draw [short] (6.25,11) -- (6.25,11.5);
+			\draw [short] (5.75,11.25) -- (5.25,11.5);
+			\draw [short] (5.25,11.5) -- (5.25,11);
+			\draw [short] (5.25,11) -- (5.75,11.25);
+			\draw [short] (6.75,10) -- (6.75,11.25);
+			\draw [short] (6.25,11.25) -- (6.75,11.25);
+			\draw [short] (5.25,11.25) -- (4.75,11.25);
+			\node [font=\normalsize] at (8,12.5) {$Servomotor$};
+			\node [font=\normalsize] at (4,11.5) {$Entrada$};
+			\node [font=\normalsize] at (4,11) {$vapor$};
+			\draw [ color={rgb,255:red,2; green,141; blue,37} , dashed] (10.5,10.75) rectangle  (16,5);
+			\draw [ color={rgb,255:red,234; green,72; blue,72}, dashed] (13,10.75) -- (13,13.5);
+			\draw [ color={rgb,255:red,234; green,72; blue,72}, dashed] (13,13.5) -- (3.25,13.5);
+			\draw [ color={rgb,255:red,234; green,72; blue,72}, dashed] (3.25,13.5) -- (3.25,7.75);
+			\draw [ color={rgb,255:red,234; green,72; blue,72}, dashed] (3.25,7.75) -- (10.5,7.75);
+			\node [font=\normalsize, color={rgb,255:red,234; green,72; blue,72}] at (4.25,13) {Control P-f};
+			\node [font=\normalsize, color={rgb,255:red,62; green,167; blue,89}] at (14.75,5.5) {Control Q-V};
+		\end{circuitikz}
+	\label{fig:my_label}
+\end{figure}
