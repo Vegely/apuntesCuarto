@@ -1,88 +1,199 @@
 \chapter{Sistemas de excitación. Control tensión - reactiva.}
-\begin{figure}[H]
-	\centering
-	\begin{circuitikz}
-		\tikzstyle{every node}=[font=\normalsize]
-		\draw [short] (7.25,10.25) -- (7.25,8.75);
-		\draw [short] (6.25,9.25) -- (7.25,8.75);
-		\draw [short] (6.25,9.75) -- (7.25,10.25);
-		\node [font=\normalsize] at (3.5,10.75) {};
-		\node [font=\normalsize] at (6.75,9.5) {TV};
-		\draw [short] (7.25,9.75) -- (9,9.75);
-		\draw [short] (7.25,9.25) -- (9,9.25);
-		\draw [short] (9.75,10) -- (10,10);
-		\draw [short] (10,10) -- (10,9.75);
-		\draw [short] (9.75,9) -- (10,9);
-		\draw [short] (10,9) -- (10,9.25);
-		\draw [short] (10,9.25) -- (11.8,9.25);
-		\draw [short] (10,9.75) .. controls (12.5,9.75) and (10.25,9.75) .. (11.8,9.75);
-		\draw  (12.5,9.5) circle (0.75cm) node {\normalsize G} ;
-		\draw [line width=0.2pt, short] (12.25,9.25) .. controls (12.5,9.5) and (12.5,9) .. (12.75,9.25);
-		\draw [short] (13.25,9.5) -- (15.5,9.5);
-		\draw [short] (14.75,9.5) -- (14.75,7);
-		\draw  (11.5,7.5) rectangle (13.5,6.5);
-		\node [font=\normalsize] at (12.5,7.25) {Regulador};
-		\node [font=\normalsize] at (12.5,6.75) {AVR};
-		\draw (11.75,8.25) to[L ] (13.25,8.25);
-		\draw [short] (11.75,8.25) -- (11.75,7.5);
-		\draw [short] (13.25,8.25) -- (13.25,7.5);
-		\draw [line width=0.2pt, short] (13.5,9.25) -- (13.75,9.75);
-		\draw [line width=0.2pt, short] (13.75,9.25) -- (14,9.75);
-		\draw [line width=0.2pt, short] (14,9.25) -- (14.25,9.75);
-		\draw [line width=0.2pt, short] (14.25,9.25) -- (14.5,9.75);
-		\draw [short] (9.75,10) -- (9.75,11.25);
-		\draw [short] (9.75,10) -- (9.5,10);
-		\draw [short] (9.5,10) -- (9.5,9.75);
-		\draw [short] (9.5,9.25) -- (9.5,9);
-		\draw [short] (9.5,9) -- (9.75,9);
-		\draw [short] (9,9.75) -- (9.5,9.75);
-		\draw [short] (9,9.25) -- (9.5,9.25);
-		\draw [short] (6.25,9.75) -- (6.25,9.25);
-		\draw  (8.75,12.25) rectangle (10.75,11.25);
-		\node [font=\normalsize] at (9.75,12) {Regulador};
-		\node [font=\normalsize] at (9.75,11.5) {velocidad};
-		\draw [->, >=Stealth] (8,10) .. controls (8.25,9.5) and (8.25,9.5) .. (8,9) ;
-		\draw [->, >=Stealth] (8.75,10) .. controls (9,9.5) and (9,9.5) .. (8.75,9) ;
-		\draw [->, >=Stealth] (11.25,9) .. controls (11,9.5) and (11,9.5) .. (11.25,10) ;
-		\node [font=\normalsize] at (8,8.75) {n};
-		\node [font=\normalsize] at (10,10.75) {n};
-		\node [font=\normalsize] at (11.25,10.25) {$T_{elec}$};
-		\node [font=\normalsize] at (8.75,8.75) {$T_{mec}$};
-		\draw [->, >=Stealth] (9.75,10) -- (9.75,11.25);
-		\draw [->, >=Stealth] (12,11.75) -- (10.75,11.75);
-		\draw [->, >=Stealth] (12.5,5.75) -- (12.5,6.5);
-		\draw [->, >=Stealth] (11.5,7.75) -- (11.5,8.25);
-		\draw [->, >=Stealth] (14.75,7) -- (13.5,7);
-		\node [font=\normalsize] at (14.75,8.25) {};
-		\node [font=\normalsize] at (12.5,5.5) {$V_{ref}$};
-		\node [font=\normalsize] at (11.25,8) {$I_{ex}$};
-		\node [font=\normalsize] at (15,8) {V};
-		\node [font=\normalsize] at (12.5,11.75) {$P_{ref}$};
-		\draw  (8,11.75) circle (0.5cm);
-		\draw [short] (8.75,11.75) -- (8.5,11.75);
-		\node [font=\normalsize] at (8,11.75) {$M$};
-		\draw [short] (7.5,11.75) -- (5.75,11.75);
-		\draw [->, >=Stealth] (5.75,11.75) -- (5.75,11.25);
-		\draw [short] (5.75,11.25) -- (6.25,11.5);
-		\draw [short] (5.75,11.25) -- (6.25,11);
-		\draw [short] (6.25,11) -- (6.25,11.5);
-		\draw [short] (5.75,11.25) -- (5.25,11.5);
-		\draw [short] (5.25,11.5) -- (5.25,11);
-		\draw [short] (5.25,11) -- (5.75,11.25);
-		\draw [short] (6.75,10) -- (6.75,11.25);
-		\draw [short] (6.25,11.25) -- (6.75,11.25);
-		\draw [short] (5.25,11.25) -- (4.75,11.25);
-		\node [font=\normalsize] at (8,12.5) {$Servomotor$};
-		\node [font=\normalsize] at (4,11.5) {$Entrada$};
-		\node [font=\normalsize] at (4,11) {$vapor$};
-		\draw [ color={rgb,255:red,2; green,141; blue,37} , dashed] (10.5,10.75) rectangle  (16,5);
-		\draw [ color={rgb,255:red,234; green,72; blue,72}, dashed] (13,10.75) -- (13,13.5);
-		\draw [ color={rgb,255:red,234; green,72; blue,72}, dashed] (13,13.5) -- (3.25,13.5);
-		\draw [ color={rgb,255:red,234; green,72; blue,72}, dashed] (3.25,13.5) -- (3.25,7.75);
-		\draw [ color={rgb,255:red,234; green,72; blue,72}, dashed] (3.25,7.75) -- (10.5,7.75);
-		\node [font=\normalsize, color={rgb,255:red,234; green,72; blue,72}] at (4.25,13) {Control P-f};
-		\node [font=\normalsize, color={rgb,255:red,62; green,167; blue,89}] at (14.75,5.5) {Control Q-V};
-	\end{circuitikz}
-	\label{fig:my_label}
-\end{figure}
+	\section{Respuesta de sistemas.}
+		\subsection{Sistemas de primer orden.}
+			Sea el sistema con realimentación unitaria de la figura siguiente:
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}[scale=0.7]
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw  (9.75,14) circle (0.5cm);
+						\draw [->, >=Stealth] (7.75,14) -- (9.25,14)node[pos=0.25,above]{X(s)};
+						\draw [->, >=Stealth] (10.25,14) -- (11.25,14);
+						\draw  (11.25,14.75) rectangle  node {\normalsize G(s)} (13.5,13.25);
+						\draw [short] (14.5,14) -- (14.5,12.5);
+						\draw [short] (14.5,12.5) -- (9.75,12.5);
+						\draw [->, >=Stealth] (9.75,12.5) -- (9.75,13.5);
+						\node [font=\normalsize] at (9,14.25) {+};
+						\node [font=\normalsize] at (10,13.25) {-};
+						\node at (14.5,14) [circ] {};
+						\draw [->, >=Stealth] (13.5,14) -- (15.5,14)node[pos=0.5,above]{Y(s)};
+					\end{circuitikz}
+			\end{figure}
+			
+			$G(s)$ se denomina "función de transferencia de la planta", y su comportamiento viene descrito por los polos y ceros que lo componen:
+			\[G(s) = \dfrac{\prod\limits_i ceros_i}{\prod\limits_i polos_i} = \dfrac{b_0 + b_1 s + b_2 s^2\dots + b_m s^m}{a_0 + a_1 s + a_2 s^2\dots + a_n s^n}\]
+			El sistema será estable si, en la función de transferencia global, el número de polos es mayor al de ceros: $n>m$.
+			
+			La función de transferencia del sistema es:
+			\[M(s) = \dfrac{Y(s)}{X(s)} = \dfrac{G(s)}{1 + G(s)}\]
+			
+			
+			Si una función $G(s)$ es de primer orden es de la forma:
+			\[G(s) = \dfrac{K}{1+Ts} = \dfrac{\dfrac{K}{T}}{s+\dfrac{1}{T}}\]
+			Donde $K$ es la ganancia del sistema (su valor cuando finaliza el transitorio) y $T$ la constante de tiempo del sistema.
+			
+			
+			La respuesta a escalón de un sistema de primer orden es:
+			\[y(t) = K\left(1-e^{-t/T}\right)\]
+			
+			
+			Los sistemas de primer orden tienen un polo. Si el polo es positivo entonces el sistema es inestable, si es negativo es estable y si es 0 el sistema no converge y es críticamente estable:
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw [->, >=Stealth] (11.25,13) -- (15.5,13)node[pos=1,above]{Re};
+						\draw [->, >=Stealth] (13.25,12.5) -- (13.25,15)node[pos=1,above]{Im};
+						\node at (12.25,13) {$\times$};
+						\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth, dashed] (13,14.5) -- (11.25,14.5)node[pos=0.5,above]{Estable};
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth, dashed] (13.5,14.5) -- (15.5,14.5)node[pos=0.5,above]{Inestable};
+					\end{circuitikz}
+				
+				\label{fig:my_label}
+			\end{figure}
+			
+		\subsection{Sistemas de segundo orden subamortiguados.}
+			Sea el sistema con realimentación unitaria de la figura anterior. Si ahora $G(s)$ tiene 2 polos será de segundo orden. La posición de los polos de la función de transferencia del lazo abierto determina el lugar de las raíces, que muestra el comportamiento del sistema: si son complejos conjugados será subamortiguado.
+			
+			\begin{figure}[H]
+				\begin{minipage}{0.5\textwidth}
+					\[G(s) = \dfrac{K \omega_n^2}{s^2 + 2\xi \omega_n s + \omega_n^2}\]
+					\[\sigma = \xi \omega_n \qquad \xi = \cos \theta\]
+				\end{minipage}
+				\begin{minipage}{0.5\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [->, >=Stealth] (11.25,13) -- (14,13)node[pos=1,above]{Re};
+							\draw [->, >=Stealth] (13.25,11) -- (13.25,15)node[pos=1,above]{Im};
+							\node at (11.75,14.25) {$\times$};
+							\node at (11.75,11.75) {$\times$};
+							\draw [short] (13.25,13) -- (11.75,14.25)node[pos=0.5,above, sloped]{$\omega_n$};
+							\draw [dashed] (11.75,14.25) -- (13.25,14.25)node[pos=1,right]{$j\omega_d$};
+							\draw [dashed] (11.75,14.25) -- (11.75,11.75)node[pos=0.4,left]{$\sigma$};
+							\draw [short] (11.75,11.75) -- (13.25,13);
+							\draw [<->, >=Stealth] (12.5,13.6) .. controls (12.25,13.3) and (12.25,13.25) .. (12.25,13)node[pos=0.5,left]{$\theta$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (11.75,11.75) -- (11.75,11);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (11.75,14.25) -- (11.75,15);
+						\end{circuitikz}
+						
+						\label{fig:my_label}
+					\end{figure}
+				\end{minipage}
+			\end{figure}
+			
+			
+			Respuesta a escalón en sistemas subamortiguados ($0 <\xi < 0.707$):
+			\[y(t) = K\left(1-\dfrac{e^{-\sigma t}}{\sqrt{1-\xi^2}} \sin (\omega_d t + \theta)\right)\]
+			\begin{itemize}
+				\item \textbf{\textit{Tiempo de establecimiento:}} tiempo que tarda en llegar al valor final con un error del 5\%: \[t_s = \dfrac{\pi}{\sigma}\]
+				\item \textbf{\textit{Tiempo de pico:}} \[t_p = \dfrac{\pi}{\omega_d}\]
+				\item \textbf{\textit{Sobreoscilación:}} \[M_p = e^{-\pi/\tan \theta}\cdot 100\%\]
+				\item \textbf{\textit{Tiempo de subida:}} tiempo que tarda en alcanzar el 100\% desde el inicio del transitorio: \[t_r = \dfrac{\pi - \theta}{\omega_d}\]
+			\end{itemize}
+			
+		\subsection{Sistemas de tercer orden.}
+			Constan de tres polos. Se distinguen, por simplificar, 2 casos fundamentales:
+			\begin{itemize}
+				\item \textbf{\textit{Tres polos reales:}}
+				 	La salida de la función de transferencia tendrá 3 componentes de la forma:
+				 	\[A_1 e^{s_1 t},\,A_2 e^{s_2 t},\,A_3 e^{s_3 t}\]
+				 	
+				 	Luego para que el sistema sea estable $s_1$, $s_2$ y $s_3$ deben ser negativos en su parte real.
+				 	
+				 \item \textbf{\textit{Un polo real y dos complejos conjugados:}}
+				 	La salida de la función de transferencia tendrá la forma:
+				 	\[A_1\cdot e^{\sigma t} \sin (\omega t + \beta)\]
+				 	
+				 	Para que la exponencial decrezca $\sigma$ debe ser negativa.
+			\end{itemize}
+	
+	
+	\begin{figure}[H]
+		\centering
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw [short] (7.25,10.25) -- (7.25,8.75);
+			\draw [short] (6.25,9.25) -- (7.25,8.75);
+			\draw [short] (6.25,9.75) -- (7.25,10.25);
+			\node [font=\normalsize] at (3.5,10.75) {};
+			\node [font=\normalsize] at (6.75,9.5) {TV};
+			\draw [short] (7.25,9.75) -- (9,9.75);
+			\draw [short] (7.25,9.25) -- (9,9.25);
+			\draw [short] (9.75,10) -- (10,10);
+			\draw [short] (10,10) -- (10,9.75);
+			\draw [short] (9.75,9) -- (10,9);
+			\draw [short] (10,9) -- (10,9.25);
+			\draw [short] (10,9.25) -- (11.8,9.25);
+			\draw [short] (10,9.75) .. controls (12.5,9.75) and (10.25,9.75) .. (11.8,9.75);
+			\draw  (12.5,9.5) circle (0.75cm) node {\normalsize G} ;
+			\draw [line width=0.2pt, short] (12.25,9.25) .. controls (12.5,9.5) and (12.5,9) .. (12.75,9.25);
+			\draw [short] (13.25,9.5) -- (15.5,9.5);
+			\draw [short] (14.75,9.5) -- (14.75,7);
+			\draw  (11.5,7.5) rectangle (13.5,6.5);
+			\node [font=\normalsize] at (12.5,7.25) {Regulador};
+			\node [font=\normalsize] at (12.5,6.75) {AVR};
+			\draw (11.75,8.25) to[L ] (13.25,8.25);
+			\draw [short] (11.75,8.25) -- (11.75,7.5);
+			\draw [short] (13.25,8.25) -- (13.25,7.5);
+			\draw [line width=0.2pt, short] (13.5,9.25) -- (13.75,9.75);
+			\draw [line width=0.2pt, short] (13.75,9.25) -- (14,9.75);
+			\draw [line width=0.2pt, short] (14,9.25) -- (14.25,9.75);
+			\draw [line width=0.2pt, short] (14.25,9.25) -- (14.5,9.75);
+			\draw [short] (9.75,10) -- (9.75,11.25);
+			\draw [short] (9.75,10) -- (9.5,10);
+			\draw [short] (9.5,10) -- (9.5,9.75);
+			\draw [short] (9.5,9.25) -- (9.5,9);
+			\draw [short] (9.5,9) -- (9.75,9);
+			\draw [short] (9,9.75) -- (9.5,9.75);
+			\draw [short] (9,9.25) -- (9.5,9.25);
+			\draw [short] (6.25,9.75) -- (6.25,9.25);
+			\draw  (8.75,12.25) rectangle (10.75,11.25);
+			\node [font=\normalsize] at (9.75,12) {Regulador};
+			\node [font=\normalsize] at (9.75,11.5) {velocidad};
+			\draw [->, >=Stealth] (8,10) .. controls (8.25,9.5) and (8.25,9.5) .. (8,9) ;
+			\draw [->, >=Stealth] (8.75,10) .. controls (9,9.5) and (9,9.5) .. (8.75,9) ;
+			\draw [->, >=Stealth] (11.25,9) .. controls (11,9.5) and (11,9.5) .. (11.25,10) ;
+			\node [font=\normalsize] at (8,8.75) {n};
+			\node [font=\normalsize] at (10,10.75) {n};
+			\node [font=\normalsize] at (11.25,10.25) {$T_{elec}$};
+			\node [font=\normalsize] at (8.75,8.75) {$T_{mec}$};
+			\draw [->, >=Stealth] (9.75,10) -- (9.75,11.25);
+			\draw [->, >=Stealth] (12,11.75) -- (10.75,11.75);
+			\draw [->, >=Stealth] (12.5,5.75) -- (12.5,6.5);
+			\draw [->, >=Stealth] (11.5,7.75) -- (11.5,8.25);
+			\draw [->, >=Stealth] (14.75,7) -- (13.5,7);
+			\node [font=\normalsize] at (14.75,8.25) {};
+			\node [font=\normalsize] at (12.5,5.5) {$V_{ref}$};
+			\node [font=\normalsize] at (11.25,8) {$I_{ex}$};
+			\node [font=\normalsize] at (15,8) {V};
+			\node [font=\normalsize] at (12.5,11.75) {$P_{ref}$};
+			\draw  (8,11.75) circle (0.5cm);
+			\draw [short] (8.75,11.75) -- (8.5,11.75);
+			\node [font=\normalsize] at (8,11.75) {$M$};
+			\draw [short] (7.5,11.75) -- (5.75,11.75);
+			\draw [->, >=Stealth] (5.75,11.75) -- (5.75,11.25);
+			\draw [short] (5.75,11.25) -- (6.25,11.5);
+			\draw [short] (5.75,11.25) -- (6.25,11);
+			\draw [short] (6.25,11) -- (6.25,11.5);
+			\draw [short] (5.75,11.25) -- (5.25,11.5);
+			\draw [short] (5.25,11.5) -- (5.25,11);
+			\draw [short] (5.25,11) -- (5.75,11.25);
+			\draw [short] (6.75,10) -- (6.75,11.25);
+			\draw [short] (6.25,11.25) -- (6.75,11.25);
+			\draw [short] (5.25,11.25) -- (4.75,11.25);
+			\node [font=\normalsize] at (8,12.5) {$Servomotor$};
+			\node [font=\normalsize] at (4,11.5) {$Entrada$};
+			\node [font=\normalsize] at (4,11) {$vapor$};
+			\draw [ color={rgb,255:red,2; green,141; blue,37} , dashed] (10.5,10.75) rectangle  (16,5);
+			\draw [ color={rgb,255:red,234; green,72; blue,72}, dashed] (13,10.75) -- (13,13.5);
+			\draw [ color={rgb,255:red,234; green,72; blue,72}, dashed] (13,13.5) -- (3.25,13.5);
+			\draw [ color={rgb,255:red,234; green,72; blue,72}, dashed] (3.25,13.5) -- (3.25,7.75);
+			\draw [ color={rgb,255:red,234; green,72; blue,72}, dashed] (3.25,7.75) -- (10.5,7.75);
+			\node [font=\normalsize, color={rgb,255:red,234; green,72; blue,72}] at (4.25,13) {Control P-f};
+			\node [font=\normalsize, color={rgb,255:red,62; green,167; blue,89}] at (14.75,5.5) {Control Q-V};
+		\end{circuitikz}
+		\label{fig:my_label}
+	\end{figure}
 
