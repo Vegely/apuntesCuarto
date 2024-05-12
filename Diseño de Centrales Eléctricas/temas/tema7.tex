@@ -1,4 +1,4 @@
-\chapter{Sistemas de excitación. Control tensión - reactiva.}
+\chapter{Sistemas de excitación. Control tensión-reactiva.}
 	\section{Respuesta de sistemas.}
 		\subsection{Sistemas de primer orden.}
 			Sea el sistema con realimentación unitaria de la figura siguiente:
@@ -155,6 +155,522 @@
 				 	Para que la exponencial decrezca $\sigma$ debe ser negativa.
 			\end{itemize}
 	
+	\section{Sistemas de excitación del generador síncrono.}
+		La corriente de excitación de los generadores síncronos trifásicos se produce mediante corriente continua que recorre el circuito del devanado del inductor en el rotor y crea un campo magnético fijo. El valor de la $f.e.m.$ interna que crea el inductor depende de esta corriente de excitación:
+		\[E_0 = f(I_{ex})\]
+		
+		
+		La tensión máxima de excitación $E_{max}$ suele estar entre $2$ y $2.1\,p.u.$
+		\begin{itemize}
+			\item \textbf{\textit{Excitación independiente:}} permite regular la reactiva mediante la tensión de excitación. Hay pérdidas en el rotor y se necesitan devanados de amortiguamiento.
+			\item \textbf{\textit{Excitación con imanes permanentes:}} reduce el volumen total de la máquina y crea un flujo prácticamente constante. No son necesarios anillos rozantes y no hay pérdidas en el rotor. Tampoco es necesaria refrigeración del rotor. No es posible regular la reactiva.
+		\end{itemize}
+		
+		\subsection{Factor de respuesta o rapidez de respuesta:}
+			\begin{figure}[H]
+				\begin{minipage}{0.75\textwidth}
+					Define la capacidad de mantener la intensidad de excitación en el valor necesario durante una perturbación o un cambio de carga. Debe asegurar un restablecimiento tan rápido como sea posible del valor de la tensión en los
+					bornes del generador, por ejemplo, en un cortocircuito. 
+				\end{minipage}
+				\begin{minipage}{0.24\textwidth}
+					\[fr = \dfrac{V_f\,\left[\dfrac{V}{s}\right]}{U_{\text{\textit{max, ex}}}}\]
+				\end{minipage}
+			\end{figure}			
+
+			\begin{figure}[H]
+				\begin{minipage}{0.6\textwidth}
+					La velocidad de respuesta $V_f$ se determina obteniendo el valor de la $\tan \alpha$, es decir, el ángulo de inclinación que forma la recta que sustituye a la curva $U = f(t)$ en el intervalo entre $t=0$ y $t = 0,5 s$, con la máquina girando a la velocidad constante de $n_s$.
+					
+					\vspace{0.25cm}
+					$OA$ = $U_{ex}$ necesaria para producir la $E_0$ a $75\,^\circ C$.
+					
+					$AD$ = $0.5\,s$ (valor de referencia).
+					
+					$OB$ = $U_{\text{\textit{ex, max}}}$
+				\end{minipage}
+				\begin{minipage}{0.4\textwidth}
+					\includegraphics[width=1\linewidth]{res/tema7/tanAlpha}
+				\end{minipage}
+			\end{figure}
+					
+		\subsection{Clasificación de los sistemas de excitación.}
+			\subsubsection{Excitación estática o directa, autoexcitada con anillos y escobillas.}
+				\begin{figure}[H]
+					\begin{minipage}{0.3\textwidth}
+						Es un sistema autoexcitado de excitación independiente. Muy habitual en generadores de pequeña potencia. 
+						
+						\vspace{0.25cm}
+						Se alimenta el inductor a través de anillos rozantes y escobillas. Es un sistema de respuesta rápida y es autónomo menos en el arranque. 
+						
+						\vspace{0.25cm}
+						Tiene la desventaja de poder causar cortocircuitos en las partes metálicas puestas a tierra, como la armadura del motor.
+					\end{minipage}
+					\hspace{0.25cm}
+					\begin{minipage}{0.6\textwidth}
+						\begin{figure}[H]
+							\centering
+							\begin{circuitikz}
+								\tikzstyle{every node}=[font=\normalsize]
+								\draw  (13,14.25) circle (0.75cm);
+								\draw  (13,13.5) circle (0.75cm);
+								\draw  (14.5,11.75) circle (0.5cm);
+								\draw  (15,11.75) circle (0.5cm);
+								\draw (17.5,10.5) to[D] (16.5,10.5);
+								\draw  (16.25,11) rectangle (17.75,10);
+								\draw  (13,9.25) circle (1.5cm);
+								\draw  (13,9.25) circle (1cm) node {\normalsize Rotor} ;
+								\node [font=\normalsize] at (13,7.5) {Estátor};
+								\draw [](13,10.75) to[short] (13,12.75);
+								\draw[] (14,11.75) to[short] (13,11.75);
+								\node at (13,11.75) [circ] {};
+								\node [font=\normalsize] at (14.75,12.9) {Transformador};
+								\node [font=\normalsize] at (14.75,12.5) {de excitación};
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (11.55,14) {Transformador};
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (12,14) {de potencia};
+								\draw [](13,15) to[short] (13,16);
+								\draw [](12.75,15.75) to[short] (13.25,15.75);
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (14.75,15.75) {Red de transporte};
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (15.25,10.6) {Puente de};
+								\draw [](15.5,11.75) to[short] (17,11.75);
+								\draw [](17,11.75) to[short] (17,11);
+								\draw [](17,10) to[short] (17,9.25);
+								\draw[] (17,9.25) to[short] (14,9.25);
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (15.25,10.25) {tiristores};
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (16.25,12) {c.a.};
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (15.75,9.5) {c.c.};
+								\draw [, rotate around={-360:(19.625, 10.5)}] (19,11) rectangle  node {\normalsize AVR} (20.25,10);
+								\draw (19,10.5) to[short] (17.75,10.5);
+							\end{circuitikz}
+							
+							\label{fig:my_label}
+						\end{figure}
+					\end{minipage}
+				\end{figure}
+				
+		\subsubsection{Excitación estática o directa, con excitación independiente a través de servicios auxiliares.}
+			\begin{figure}[H]
+				\begin{minipage}{0.3\textwidth}
+					Se alimenta de la red de servicios auxiliares o similar. 
+					
+					\vspace{0.25cm}
+					Muy habitual en generadores de pequeña potencia. Utiliza escobillas y anillos rozantes. Respuesta rápida. 
+					
+					\vspace{0.25cm}
+					Tiene la desventaja de tener una respuesta pobre ante cortocircuitos en la red.
+				\end{minipage}
+				\hspace{0.25cm}
+				\begin{minipage}{0.6\textwidth}
+					\begin{figure}[H]
+						\centering
+							\begin{circuitikz}
+								\tikzstyle{every node}=[font=\LARGE]
+								\draw  (13,14.25) circle (0.75cm);
+								\draw  (13,13.5) circle (0.75cm);
+								\draw  (17,13.25) circle (0.5cm);
+								\draw  (17,12.75) circle (0.5cm);
+								\draw (17.5,10.5) to[D] (16.5,10.5);
+								\draw  (16.25,11) rectangle (17.75,10);
+								\draw  (13,9.25) circle (1.5cm);
+								\draw  (13,9.25) circle (1cm) node {\normalsize Rotor} ;
+								\node [font=\normalsize] at (13,7.5) {Estátor};
+								\draw [](13,10.75) to[short] (13,12.75);
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (15.9,13) {Servicios};
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (16.25,13) {auxiliares};
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (11.55,14) {Transformador};
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (12,14) {de potencia};
+								\draw [](13,15) to[short] (13,16);
+								\draw [](12.75,15.75) to[short] (13.25,15.75);
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (14.75,15.75) {Red de transporte};
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (15.25,10.6) {Puente de};
+								\draw [](17,12.25) to[short] (17,11.75);
+								\draw [](17,11.75) to[short] (17,11);
+								\draw [](17,10) to[short] (17,9.25);
+								\draw[] (17,9.25) to[short] (14,9.25);
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (15.25,10.25) {tiristores};
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (16.75,11.75) {c.a.};
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (15.75,9.5) {c.c.};
+								\draw [, rotate around={-360:(19.625, 10.5)}] (19,11) rectangle  node {\normalsize AVR} (20.25,10);
+								\draw[] (19,10.5) to[short] (17.75,10.5);
+								\draw [](17,13.75) to[short] (17,14.5);
+							\end{circuitikz}
+						
+						\label{fig:my_label}
+					\end{figure}
+				\end{minipage}
+			\end{figure}
+			
+		\subsubsection{Excitación rotativa o indirecta, con excitatriz de c.c. sin excitatriz piloto.}
+			\begin{figure}[H]
+				\begin{minipage}{0.3\textwidth}
+					Una máquina de c.c. alimenta el inductor a través de anillos rozantes y escobillas. Unida al eje del generador.
+					
+					\vspace{0.25cm}
+					Para generadores hidráulicos de hasta $50\,MV\!A$. 
+					
+					\vspace{0.25cm}
+					Alimentación independiente mediante red auxiliar.
+				\end{minipage}
+				\hspace{0.25cm}
+				\begin{minipage}{0.6\textwidth}
+					\begin{figure}[H]
+						\centering
+							\begin{circuitikz}
+								\tikzstyle{every node}=[font=\normalsize]
+								\draw  (13,14.25) circle (0.75cm);
+								\draw  (13,13.5) circle (0.75cm);
+								\draw  (18.5,14) circle (0.5cm);
+								\draw  (18.5,13.5) circle (0.5cm);
+								\draw (19,11.25) to[D] (18,11.25);
+								\draw  (17.75,11.75) rectangle (19.25,10.75);
+								\draw  (13,9.25) circle (1.5cm);
+								\draw  (13,9.25) circle (1cm) node {\normalsize Generador} ;
+								\draw [](13,10.75) to[short] (13,12.75);
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (17.4,13.75) {Servicios};
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (17.75,13.75) {auxiliares};
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (11.55,14) {Transformador};
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (12,14) {de potencia};
+								\draw [](13,15) to[short] (13,16);
+								\draw [](12.75,15.75) to[short] (13.25,15.75);
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (14.75,15.75) {Red de transporte};
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (16.75,11.3) {Puente de};
+								\draw [](18.5,13) to[short] (18.5,12.5);
+								\draw [](18.5,12.5) to[short] (18.5,11.75);
+								\draw [](18.5,10.75) to[short] (18.5,10);
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (16.75,11) {tiristores};
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (18.25,12.5) {c.a.};
+								\draw [, rotate around={-360:(21.125, 11.25)}] (20.5,11.75) rectangle  node {\normalsize AVR} (21.75,10.75);
+								\draw[] (20.5,11.25) to[short] (19.25,11.25);
+								\draw [](18.5,14.5) to[short] (18.5,15.25);
+								
+								\draw  (16.5,9.25) circle (0.5cm);
+								\draw  (16.5,9.25) circle (0.75cm) node {\normalsize Exc.} ;
+								\draw [dashed] (14,9.25) -- (16,9.25);
+								\draw [short] (13.75,9.875) -- (14.5,10.5);
+								\draw [short] (13.75,8.625) -- (14.5,8);
+								\draw [short] (14.5,10.5) -- (16.5,10.5);
+								\draw [short] (16.5,10.5) -- (16.5,10);
+								\draw [short] (16.5,8.5) -- (16.5,8);
+								\draw [short] (16.5,8) -- (14.5,8);
+								\node at (16.5,10) [circ] {};
+								\node at (16.5,8.5) [circ] {};
+								\draw [ fill={rgb,255:red,0; green,0; blue,0} , rotate around={-360:(17.625, 9.25)}] (17.5,10) rectangle (17.75,8.5);
+								\draw [](18.5,10) to[short] (18.5,9.25);
+								\draw[] (18.5,9.25) to[short] (17.75,9.25);
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (18.25,10) {c.c.};
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (15.25,8.25) {c.c.};
+							\end{circuitikz}
+						
+						\label{fig:my_label}
+					\end{figure}
+				\end{minipage}
+			\end{figure}
+					
+		En el caso de un cortocircuito en la red, el inducido provoca un campo opuesto al campo principal, lo que provoca que la excitatriz tiene que suministrar una potencia más alta que en servicio nominal. Este exceso de tensión puede estar entre un 40 y un 80\% de la tensión nominal.
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		\begin{figure}[H]
+			\centering
+				\begin{circuitikz}
+					\tikzstyle{every node}=[font=\normalsize]
+					\draw  (13,14.25) circle (0.75cm);
+					\draw  (13,13.5) circle (0.75cm);
+					\draw (16.75,11.25) to[D] (15.75,11.25);
+					\draw  (15.5,11.75) rectangle (17,10.75);
+					\draw  (13,9.25) circle (1.5cm);
+					\draw  (13,9.25) circle (1cm) node {\normalsize Generador} ;
+					\draw [](13,10.75) to[short] (13,12.75);
+					\node [font=\normalsize, rotate around={90:(0,0)}] at (11.55,14) {Transformador};
+					\node [font=\normalsize, rotate around={90:(0,0)}] at (12,14) {de potencia};
+					\draw [](13,15) to[short] (13,16);
+					\draw [](12.75,15.75) to[short] (13.25,15.75);
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (14.75,15.75) {Red de transporte};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (16.25,10.5) {Puente de};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (16.25,10.175) {tiristores};
+					
+					\draw  (19.5,9.25) circle (0.5cm);
+					\draw  (19.5,9.25) circle (0.75cm) node {\normalsize G} ;
+					\draw [dashed] (14,9.25) -- (19,9.25);
+					\draw [short] (13.75,9.875) -- (15,11.25);
+					\draw [short] (15,11.25) -- (15.5,11.25);
+					\draw [short] (17,11.25) -- (17.5,11.25);
+					\draw [short] (17.5,11.25) -- (18.95,9.75);
+					\draw [, rotate around={-360:(16.25, 12.75)}] (15.5,13.25) rectangle  node {\normalsize AVR} (17,12.25);
+					\draw [](16.25,12.25) to[short] (16.25,11.75);
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (19.5,10.75) {Imanes};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (19.5,10.5) {Permanentes};
+				\end{circuitikz}
+			
+			\label{fig:my_label}
+		\end{figure}
+		
+		
+		
+		\begin{figure}[H]
+			\centering
+				\begin{circuitikz}
+					\tikzstyle{every node}=[font=\normalsize]
+					\draw  (13,14.25) circle (0.75cm);
+					\draw  (13,13.5) circle (0.75cm);
+					\draw  (19.75,14) circle (0.5cm);
+					\draw  (19.75,13.5) circle (0.5cm);
+					\draw (20.25,11.25) to[D] (19.25,11.25);
+					\draw  (19,11.75) rectangle (20.5,10.75);
+					\draw  (13,9.25) circle (1.5cm);
+					\draw  (13,9.25) circle (1cm) node {\normalsize Generador} ;
+					\draw [](13,10.75) to[short] (13,12.75);
+					\node [font=\normalsize, rotate around={90:(0,0)}] at (18.7,13.75) {Servicios};
+					\node [font=\normalsize, rotate around={90:(0,0)}] at (19,13.75) {auxiliares};
+					\node [font=\normalsize, rotate around={90:(0,0)}] at (11.65,14) {Transformador};
+					\node [font=\normalsize, rotate around={90:(0,0)}] at (12,14) {de potencia};
+					\draw [](13,15) to[short] (13,16);
+					\draw [](12.75,15.75) to[short] (13.25,15.75);
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (14.75,15.75) {Red de transporte};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (18,11.3) {Puente de};
+					\draw [](19.75,13) to[short] (19.75,12.5);
+					\draw [](19.75,12.5) to[short] (19.75,11.75);
+					\draw [](19.75,10.75) to[short] (19.75,10);
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (18,11) {tiristores};
+					\node [font=\normalsize, rotate around={90:(0,0)}] at (19.5,12.5) {c.a.};
+					\draw [, rotate around={-360:(22.375, 11.25)}] (21.75,11.75) rectangle  node {\normalsize AVR} (23,10.75);
+					\draw[] (21.75,11.25) to[short] (20.5,11.25);
+					\draw [](19.75,14.5) to[short] (19.75,15.25);
+					
+					\draw  (18.25,9.25) circle (0.5cm);
+					\draw  (18.25,9.25) circle (0.75cm) node {\normalsize Exc.} ;
+					\draw [short] (14,9.25) -- (15.25,9.25);
+					\draw [](19.75,10) to[short] (19.75,9.25);
+					\draw[] (19.75,9.25) to[short] (19,9.25);
+					\node [font=\normalsize, rotate around={90:(0,0)}] at (19.5,10) {c.c.};
+					\draw  (15.25,9.75) rectangle (16.75,8.75);
+					\draw (16.5,9.25) to[D] (15.5,9.25);
+					\draw [](16.75,9.25) to[short] (17.75,9.25);
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (16,10.5) {Caja de};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (16,10.15) {diodos giratorios};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (17.2,9.5) {c.a.};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (14.85,9.5) {c.c.};
+				\end{circuitikz}
+			
+			\label{fig:my_label}
+		\end{figure}
+		
+		
+		
+		
+		
+		\begin{figure}[H]
+			\centering
+				\begin{circuitikz}
+					\tikzstyle{every node}=[font=\normalsize]
+					\draw  (13,14.25) circle (0.75cm);
+					\draw  (13,13.5) circle (0.75cm);
+					\draw  (15.75,12) circle (0.5cm);
+					\draw  (16.25,12) circle (0.5cm);
+					\draw (20.25,10.75) to[D] (19.25,10.75);
+					\draw  (19,11.25) rectangle (20.5,10.25);
+					\draw  (13,9.25) circle (1.5cm);
+					\draw  (13,9.25) circle (1cm) node {\normalsize Generador} ;
+					\draw [](13,10.75) to[short] (13,12.75);
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (16,13.1) {Transformador};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (16,12.75) {de excitación};
+					\node [font=\normalsize, rotate around={90:(0,0)}] at (11.65,14) {Transformador};
+					\node [font=\normalsize, rotate around={90:(0,0)}] at (12,14) {de potencia};
+					\draw [](13,15) to[short] (13,16);
+					\draw [](12.75,15.75) to[short] (13.25,15.75);
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (14.75,15.75) {Red de transporte};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (18,11) {Puente de};
+					\draw [](19.75,12) to[short] (19.75,11.25);
+					\draw [](19.75,10.25) to[short] (19.75,10);
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (18,10.6) {tiristores};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (18.25,12.25) {c.a.};
+					\draw [, rotate around={-360:(22.375, 10.75)}] (21.75,11.25) rectangle  node {\normalsize AVR} (23,10.25);
+					\draw[] (21.75,10.75) to[short] (20.5,10.75);
+					
+					\draw  (18.25,9.25) circle (0.5cm);
+					\draw  (18.25,9.25) circle (0.75cm) node {\normalsize Exc.} ;
+					\draw [short] (14,9.25) -- (15.25,9.25);
+					\draw [](19.75,10) to[short] (19.75,9.25);
+					\draw[] (19.75,9.25) to[short] (19,9.25);
+					\node [font=\normalsize, rotate around={90:(0,0)}] at (19.5,9.75) {c.c.};
+					\draw  (15.25,9.75) rectangle (16.75,8.75);
+					\draw (16.5,9.25) to[D] (15.5,9.25);
+					\draw [](16.75,9.25) to[short] (17.75,9.25);
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (16,10.5) {Caja de};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (16,10.15) {diodos giratorios};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (17.2,9.5) {c.a.};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (14.85,9.5) {c.c.};
+					\draw [](16.75,12) to[short] (19.75,12);
+					\draw[] (15.25,12) to[short] (13,12);
+					\node at (13,12) [circ] {};
+				\end{circuitikz}
+			
+			\label{fig:my_label}
+		\end{figure}
+		
+		
+		
+		\begin{figure}[H]
+			\centering
+				\begin{circuitikz}
+					\tikzstyle{every node}=[font=\normalsize]
+					\draw  (10,12.75) circle (1.5cm);
+					\draw  (10,12.75) circle (1cm);
+					\draw (10,13.5) to[L ] (10,12);
+					\draw [dashed] (10,12.75) -- (18.5,12.75);
+					\draw [ fill={rgb,255:red,0; green,0; blue,0} , rotate around={-360:(12.625, 12.75)}] (12.5,13.25) rectangle (12.75,12.25);
+					\draw [ fill={rgb,255:red,0; green,0; blue,0} , rotate around={-360:(13.125, 12.75)}] (13,13.25) rectangle (13.25,12.25);
+					\draw  (15,12.75) circle (0.5cm);
+					\node at (15,13.25) [circ] {};
+					\node at (15,12.25) [circ] {};
+					\draw [](10,12) to[short] (11.75,12);
+					\draw [](11.75,12) to[short] (11.75,12.25);
+					\draw [](11.75,12.25) to[short] (11.75,12.5);
+					\draw [](11.75,12.5) to[short] (13,12.5);
+					\draw [](10,13.5) to[short] (11.75,13.5);
+					\draw [](11.75,13.5) to[short] (11.75,13);
+					\draw [](11.75,13) to[short] (12.5,13);
+					\draw [](12.625,13.25) to[short] (12.625,13.75);
+					\draw [](12.625,13.75) to[short] (15,13.75);
+					\draw [](15,13.75) to[short] (15,13.25);
+					\draw [](15,12.25) to[short] (15,11.75);
+					\draw[] (15,11.75) to[short] (13.125,11.75);
+					\draw [](13.125,11.75) to[short] (13.125,12.25);
+					\draw (16,13.5) to[L ] (16,12);
+					\draw  (18.5,12.75) circle (0.5cm);
+					\draw [](18.5,13.25) to[short] (18.5,13.75);
+					\draw [](18.5,12.25) to[short] (18.5,11.75);
+					\draw (16,13.75) to[R] (17.5,13.75);
+					\draw [->, >=Stealth] (16.75,14.5) -- (16.75,14);
+					\draw [short] (16.75,14.5) -- (18.5,14.5);
+					\draw [short] (18.5,14.5) -- (18.5,13.75);
+					\draw [short] (16,13.75) -- (16,13.5);
+					\draw [short] (18.5,11.75) -- (16,11.75);
+					\draw [short] (16,11.75) -- (16,12);
+					\draw (19.5,13.5) to[L ] (19.5,12);
+					\draw [](19.5,13.5) to[short] (19.5,14.5);
+					\draw[] (19.5,14.5) to[short] (18.5,14.5);
+					\draw [](18.5,11.75) to[short] (19.5,11.75);
+					\draw [](19.5,11.75) to[short] (19.5,12);
+					\node at (18.5,14.5) [circ] {};
+					\node at (18.5,11.75) [circ] {};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (18.25,13.5) {+};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (14.75,13.5) {+};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (15.5,11.4) {Excitatriz};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (15.5,11.1) {principal};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (19,11.4) {Excitatriz};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (19,11.1) {piloto};
+					\draw (7,12.75) to[tmultiwire= \normalsize Red] (8.5,12.75);
+				\end{circuitikz}
+			
+			\label{fig:my_label}
+		\end{figure}
+					
+					
+					
+		\begin{figure}[H]
+			\centering
+				\begin{circuitikz}
+					\tikzstyle{every node}=[font=\normalsize]
+					\draw  (10,12.75) circle (1.5cm);
+					\draw  (10,12.75) circle (1cm);
+					\draw (10,13.5) to[L ] (10,12);
+					\draw [dashed] (10,12.75) -- (18,12.75);
+					\draw [ fill={rgb,255:red,0; green,0; blue,0} , rotate around={-360:(12.625, 12.75)}] (12.5,13.25) rectangle (12.75,12.25);
+					\draw [ fill={rgb,255:red,0; green,0; blue,0} , rotate around={-360:(13.125, 12.75)}] (13,13.25) rectangle (13.25,12.25);
+					\draw [](10,12) to[short] (11.75,12);
+					\draw [](11.75,12) to[short] (11.75,12.25);
+					\draw [](11.75,12.25) to[short] (11.75,12.5);
+					\draw [](11.75,12.5) to[short] (13,12.5);
+					\draw [](10,13.5) to[short] (11.75,13.5);
+					\draw [](11.75,13.5) to[short] (11.75,13);
+					\draw [](11.75,13) to[short] (12.5,13);
+					\draw [](13.125,13.25) to[short] (13.125,14.5);
+					\draw [](7,12.75) to[tmultiwire= \normalsize Red] (8.5,12.75);
+					\draw (15,14.75) to[D] (14,14.75);
+					\draw [, rotate around={-360:(14.5, 14.75)}] (13.75,15.25) rectangle (15.25,14.25);
+					\draw [short] (13.125,14.5) -- (13.75,14.5);
+					\draw [short] (13.75,15) -- (12.625,15);
+					\draw [short] (12.625,15) -- (12.625,13.25);
+					\draw [short] (15.25,14.75) -- (16.25,14.75);
+					\draw  (16.25,12.75) circle (1cm);
+					\draw  (16.25,12.75) circle (1.25cm);
+					\draw (16.25,13.5) to[L ] (16.25,12);
+					\draw [](16.25,14) to[tmultiwire] (16.25,14.75);
+					\draw [](16.25,13.5) to[short] (18,13.5);
+					\draw [](16.25,12) to[short] (18,12);
+					\draw (18.5,12.25) to[D] (18.5,13.25);
+					\draw [, rotate around={-360:(18.5, 12.75)}] (18,13.75) rectangle (19,11.75);
+					\draw [dashed] (19,12.75) -- (20.5,12.75);
+					\draw  (21,12.75) circle (0.75cm) node {\normalsize Exc.} ;
+					\draw  (21,12.75) circle (0.5cm);
+					\draw[] (21,14.25) to[tmultiwire] (18.5,14.25);
+					\draw [](21,14.25) to[short] (21,13.5);
+					\draw [](18.5,14.25) to[short] (18.5,13.75);
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (16.75,11.25) {Excitatriz principal};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (16.75,10.8) {de corriente alterna};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (21,11.25) {Excitatriz piloto};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (21,10.8) {de imanes permanentes};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (10,11) {Alternador};
+				\end{circuitikz}
+			
+			\label{fig:my_label}
+		\end{figure}
+		
+		
+		
+		\begin{figure}[H]
+			\centering
+				\begin{circuitikz}
+					\tikzstyle{every node}=[font=\normalsize]
+					\draw (22.75,10.5) to[D] (21.75,10.5);
+					\draw  (21.5,11) rectangle (23,10);
+					\draw  (13,9.75) circle (1.5cm);
+					\draw  (13,9.75) circle (1cm) node {\normalsize Generador} ;
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (24,11.25) {Puente de tiristores};
+					
+					\draw  (18.25,9.75) circle (0.5cm);
+					\draw  (18.25,9.75) circle (0.75cm) node {\normalsize Exc.} ;
+					\draw [short] (14,9.75) -- (15.25,9.75);
+					\draw[] (21.5,10.5) to[short] (21,10.5);
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (20.75,10.75) {c.c.};
+					\draw  (15.25,10.25) rectangle (16.75,9.25);
+					\draw (16.5,9.75) to[D] (15.5,9.75);
+					\draw [](16.75,9.75) to[short] (17.75,9.75);
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (16,8.75) {Caja de};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (16,8.375) {diodos giratorios};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (17.2,9.5) {c.a.};
+					\node [font=\normalsize, rotate around={-360:(0,0)}] at (14.85,9.5) {c.c.};
+					\draw  (10.25,9.75) circle (0.5cm) node {\normalsize M} ;
+					\draw [dashed] (10.75,9.75) -- (12,9.75);
+					\draw  (21.5,12.25) rectangle  node {\normalsize AVR} (23,11.5);
+					\draw [short] (22.25,11.5) -- (22.25,11);
+					\draw (19,9.75) to[R] (21,9.75);
+					\draw [->, >=Stealth] (20,10.5) -- (20,10);
+					\draw [short] (20,10.5) -- (21,10.5);
+					\draw [](13,11.25) to[tmultiwire= \normalsize Red] (13,12.25);
+					\draw  (24.5,9.75) circle (0.5cm) node {\normalsize G} ;
+					\draw [dashed] (24,9.75) -- (21.25,9.75);
+					\draw [](23,10.5) to[tmultiwire] (24.5,10.5);
+					\draw [](24.5,10.5) to[short] (24.5,10.25);
+					\node [font=\normalsize] at (10.25,11) {Motor};
+					\node [font=\normalsize] at (10.25,10.625) {primario};
+					\node [font=\normalsize] at (24.5,9) {Excitatriz piloto};
+					\node [font=\normalsize] at (24.5,8.625) {de imanes permanentes};
+					\node [font=\normalsize] at (18.25,11.5) {Excitatriz principal};
+					\node [font=\normalsize] at (18.25,11.125) {de corriente};
+					\node [font=\normalsize] at (18.25,10.75) {alterna};
+				\end{circuitikz}
+			
+			\label{fig:my_label}
+		\end{figure}
+				
 	
 	\begin{figure}[H]
 		\centering
