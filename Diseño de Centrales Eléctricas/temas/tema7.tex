@@ -21,7 +21,7 @@
 			\end{figure}
 			
 			$G(s)$ se denomina "función de transferencia de la planta", y su comportamiento viene descrito por los polos y ceros que lo componen:
-			\[G(s) = \dfrac{\prod\limits_i ceros_i}{\prod\limits_i polos_i} = \dfrac{b_0 + b_1 s + b_2 s^2\dots + b_m s^m}{a_0 + a_1 s + a_2 s^2\dots + a_n s^n}\]
+			\[G(s) = \dfrac{\prod ceros}{\prod polos} = \dfrac{b_0 + b_1 s + b_2 s^2\dots + b_m s^m}{a_0 + a_1 s + a_2 s^2\dots + a_n s^n}\]
 			El sistema será estable si, en la función de transferencia global, el número de polos es mayor al de ceros: $n>m$.
 			
 			La función de transferencia del sistema es:
@@ -39,18 +39,39 @@
 			
 			Los sistemas de primer orden tienen un polo. Si el polo es positivo entonces el sistema es inestable, si es negativo es estable y si es 0 el sistema no converge y es críticamente estable:
 			\begin{figure}[H]
-				\centering
-					\begin{circuitikz}
-						\tikzstyle{every node}=[font=\normalsize]
-						\draw [->, >=Stealth] (11.25,13) -- (15.5,13)node[pos=1,above]{Re};
-						\draw [->, >=Stealth] (13.25,12.5) -- (13.25,15)node[pos=1,above]{Im};
-						\node at (12.25,13) {$\times$};
-						\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth, dashed] (13,14.5) -- (11.25,14.5)node[pos=0.5,above]{Estable};
-						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth, dashed] (13.5,14.5) -- (15.5,14.5)node[pos=0.5,above]{Inestable};
-					\end{circuitikz}
-				
-				\label{fig:my_label}
+				\begin{minipage}{0.5\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [->, >=Stealth] (11.25,13) -- (15.5,13)node[pos=1,above]{Re};
+							\draw [->, >=Stealth] (13.25,12.5) -- (13.25,15)node[pos=1,above]{Im};
+							\node at (12.25,13) {$\times$};
+							\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth, dashed] (13,14.5) -- (11.25,14.5)node[pos=0.5,above]{Estable};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth, dashed] (13.5,14.5) -- (15.5,14.5)node[pos=0.5,above]{Inestable};
+						\end{circuitikz}
+						
+						\label{fig:my_label}
+					\end{figure}
+				\end{minipage}
+				\begin{minipage}{0.5\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}[scale = 0.8]
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [->, >=Stealth] (13.75,12.75) -- (17.5,12.75)node[pos=1,above]{t};
+							\draw [->, >=Stealth] (14,12.5) -- (14,16)node[pos=1,right]{y};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (14,12.75) .. controls (14.25,14) and (14.25,15.5) .. (17.25,15.5);
+							\draw [dashed] (17.25,15.5) -- (14,15.5)node[pos=1,left]{K};
+						\end{circuitikz}
+						
+						\label{fig:my_label}
+					\end{figure}
+				\end{minipage}
 			\end{figure}
+			
+			
+			
 			
 		\subsection{Sistemas de segundo orden subamortiguados.}
 			Sea el sistema con realimentación unitaria de la figura anterior. Si ahora $G(s)$ tiene 2 polos será de segundo orden. La posición de los polos de la función de transferencia del lazo abierto determina el lugar de las raíces, que muestra el comportamiento del sistema: si son complejos conjugados será subamortiguado.
@@ -83,15 +104,40 @@
 				\end{minipage}
 			\end{figure}
 			
-			
 			Respuesta a escalón en sistemas subamortiguados ($0 <\xi < 0.707$):
 			\[y(t) = K\left(1-\dfrac{e^{-\sigma t}}{\sqrt{1-\xi^2}} \sin (\omega_d t + \theta)\right)\]
-			\begin{itemize}
-				\item \textbf{\textit{Tiempo de establecimiento:}} tiempo que tarda en llegar al valor final con un error del 5\%: \[t_s = \dfrac{\pi}{\sigma}\]
-				\item \textbf{\textit{Tiempo de pico:}} \[t_p = \dfrac{\pi}{\omega_d}\]
-				\item \textbf{\textit{Sobreoscilación:}} \[M_p = e^{-\pi/\tan \theta}\cdot 100\%\]
-				\item \textbf{\textit{Tiempo de subida:}} tiempo que tarda en alcanzar el 100\% desde el inicio del transitorio: \[t_r = \dfrac{\pi - \theta}{\omega_d}\]
-			\end{itemize}
+			
+			\begin{figure}[H]
+				\begin{minipage}{0.5\textwidth}
+					\begin{itemize}
+						\item \textbf{\textit{Tiempo de establecimiento:}} tiempo que tarda en llegar al valor final con un error del 5\%: \[t_s = \dfrac{\pi}{\sigma}\]
+						\item \textbf{\textit{Tiempo de pico:}} \[t_p = \dfrac{\pi}{\omega_d}\]
+						\item \textbf{\textit{Sobreoscilación:}} \[M_p = e^{-\pi/\tan \theta}\cdot 100\%\]
+						\item \textbf{\textit{Tiempo de subida:}} tiempo que tarda en alcanzar el 100\% desde el inicio del transitorio: \[t_r = \dfrac{\pi - \theta}{\omega_d}\]
+					\end{itemize}
+				\end{minipage}
+				\begin{minipage}{0.5\textwidth}
+					\begin{figure}[H]
+						\centering
+							\begin{circuitikz}[scale = 1.3]
+								\tikzstyle{every node}=[font=\normalsize]
+								\draw [->, >=Stealth] (13.75,12.75) -- (17.5,12.75)node[pos=1,above]{t};
+								\draw [->, >=Stealth] (14,12.5) -- (14,16)node[pos=1,right]{y};
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (14,12.75) .. controls (14.25,15) and (14.5,16) .. (15,14.75);
+								\draw [dashed] (17.25,14.75) -- (14,14.75)node[pos=1,left]{K};
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (15,14.75) .. controls (15.5,13.5) and (15.5,15.75) .. (16,14.75);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (16,14.75) .. controls (16.5,14) and (16.5,15.25) .. (16.75,14.75);
+								\draw [dashed] (14.6,15.3) -- (14.6,12.75)node[pos=1,below]{$t_p$};
+								\draw [dashed] (15.75,15) -- (15.75,12.75)node[pos=1,below]{$t_s$};
+								\draw [dashed] (14.3,14.75) -- (14.3,12.75)node[pos=1,below]{$t_r$};
+								\draw [dashed] (14.6,15.3) -- (14,15.3)node[pos=1,left]{$K \cdot M_p$};
+							\end{circuitikz}
+						
+						\label{fig:my_label}
+					\end{figure}
+				\end{minipage}
+			\end{figure}
+			
 			
 		\subsection{Sistemas de tercer orden.}
 			Constan de tres polos. Se distinguen, por simplificar, 2 casos fundamentales:
