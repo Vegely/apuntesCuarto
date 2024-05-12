@@ -305,23 +305,24 @@
 \contentsline {section}{\numberline {10.6}Quemadores.}{140}{}%
 \contentsline {section}{\numberline {10.7}Hogar.}{140}{}%
 \contentsline {subsection}{\numberline {10.7.1}Pantallas evaporadoras.}{140}{}%
-\contentsline {section}{\numberline {10.8}Ventiladores.}{140}{}%
-\contentsline {section}{\numberline {10.9}Precalentadores.}{140}{}%
-\contentsline {section}{\numberline {10.10}Productos de desecho.}{140}{}%
-\contentsline {section}{\numberline {10.11}Ceniceros.}{140}{}%
-\contentsline {section}{\numberline {10.12}Desulfuración de gases.}{140}{}%
-\contentsline {section}{\numberline {10.13}Retención de cenizas.}{140}{}%
-\contentsline {section}{\numberline {10.14}Chimenea.}{140}{}%
-\contentsline {section}{\numberline {10.15}Circuito agua vapor.}{140}{}%
-\contentsline {section}{\numberline {10.16}Ciclo de Rankine.}{140}{}%
-\contentsline {section}{\numberline {10.17}Caldera acuotubular.}{140}{}%
-\contentsline {section}{\numberline {10.18}Calderín.}{141}{}%
-\contentsline {section}{\numberline {10.19}Sobrecalentadores.}{141}{}%
-\contentsline {section}{\numberline {10.20}Economizador.}{141}{}%
-\contentsline {section}{\numberline {10.21}Líneas de vapor.}{141}{}%
-\contentsline {section}{\numberline {10.22}Turbinas de vapor.}{141}{}%
-\contentsline {section}{\numberline {10.23}Condensadores.}{141}{}%
-\contentsline {section}{\numberline {10.24}Desgasificador.}{141}{}%
-\contentsline {section}{\numberline {10.25}Sistema de refrigeración.}{141}{}%
-\contentsline {section}{\numberline {10.26}Control.}{141}{}%
+\contentsline {section}{\numberline {10.8}Ventiladores.}{141}{}%
+\contentsline {subsection}{\numberline {10.8.1}Ventiladores de tiro forzado.}{141}{}%
+\contentsline {subsection}{\numberline {10.8.2}Ventiladores de tiro inducido.}{141}{}%
+\contentsline {section}{\numberline {10.9}Precalentadores.}{141}{}%
+\contentsline {section}{\numberline {10.10}Productos de desecho.}{141}{}%
+\contentsline {section}{\numberline {10.11}Ceniceros.}{141}{}%
+\contentsline {section}{\numberline {10.12}Retención de cenizas.}{141}{}%
+\contentsline {section}{\numberline {10.13}Chimenea.}{141}{}%
+\contentsline {section}{\numberline {10.14}Circuito agua vapor.}{141}{}%
+\contentsline {section}{\numberline {10.15}Ciclo de Rankine.}{142}{}%
+\contentsline {section}{\numberline {10.16}Caldera acuotubular.}{142}{}%
+\contentsline {section}{\numberline {10.17}Calderín.}{142}{}%
+\contentsline {section}{\numberline {10.18}Sobrecalentadores.}{142}{}%
+\contentsline {section}{\numberline {10.19}Economizador.}{142}{}%
+\contentsline {section}{\numberline {10.20}Líneas de vapor.}{142}{}%
+\contentsline {section}{\numberline {10.21}Turbinas de vapor.}{142}{}%
+\contentsline {section}{\numberline {10.22}Condensadores.}{142}{}%
+\contentsline {section}{\numberline {10.23}Desgasificador.}{142}{}%
+\contentsline {section}{\numberline {10.24}Sistema de refrigeración.}{142}{}%
+\contentsline {section}{\numberline {10.25}Control.}{142}{}%
 \contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{143}{}%
