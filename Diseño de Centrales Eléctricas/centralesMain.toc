@@ -264,28 +264,34 @@
 \contentsline {subsection}{\numberline {6.5.6}Comportamiento conectado a la red eléctrica.}{112}{}%
 \contentsline {section}{\numberline {6.6}Diagrama límite de capacidad de la máquina síncrona.}{112}{}%
 \contentsline {section}{\numberline {6.7}Modos de funcionamiento de una máquina síncrona.}{113}{}%
-\contentsline {chapter}{\numberline {7}Sistemas de excitación. Control tensión - reactiva.}{115}{}%
+\contentsline {chapter}{\numberline {7}Sistemas de excitación. Control tensión-reactiva.}{115}{}%
 \contentsline {section}{\numberline {7.1}Respuesta de sistemas.}{115}{}%
 \contentsline {subsection}{\numberline {7.1.1}Sistemas de primer orden.}{115}{}%
 \contentsline {subsection}{\numberline {7.1.2}Sistemas de segundo orden subamortiguados.}{116}{}%
 \contentsline {subsection}{\numberline {7.1.3}Sistemas de tercer orden.}{116}{}%
-\contentsline {chapter}{\numberline {8}Control potencia - frecuencia.}{119}{}%
-\contentsline {section}{\numberline {8.1}Esquema del control de un generador síncrono.}{119}{}%
-\contentsline {section}{\numberline {8.2}Control potencia - frecuencia desde el punto de vista del mercado de servicios complementarios.}{119}{}%
-\contentsline {subsection}{\numberline {8.2.1}Control primario.}{119}{}%
-\contentsline {subsection}{\numberline {8.2.2}Control secundario.}{120}{}%
-\contentsline {subsection}{\numberline {8.2.3}Control terciario.}{120}{}%
-\contentsline {section}{\numberline {8.3}Dinámica del rotor}{120}{}%
-\contentsline {subsection}{\numberline {8.3.1}Valores de la constante de inercia.}{121}{}%
-\contentsline {section}{\numberline {8.4}Respuesta de la demanda ante una desviación de la frecuencia.}{121}{}%
-\contentsline {section}{\numberline {8.5}Regulador de velocidad.}{123}{}%
-\contentsline {subsection}{\numberline {8.5.1}Regulador astático.}{123}{}%
-\contentsline {subsection}{\numberline {8.5.2}Regulador con estatismo positivo.}{123}{}%
-\contentsline {section}{\numberline {8.6}Participación en la regulación de generadores en paralelo.}{124}{}%
-\contentsline {section}{\numberline {8.7}Participación de distintas áreas en la regulación.}{125}{}%
-\contentsline {section}{\numberline {8.8}Ejemplos de aplicación.}{126}{}%
-\contentsline {subsection}{\numberline {8.8.1}Ejemplo 1.}{126}{}%
-\contentsline {subsection}{\numberline {8.8.2}Ejemplo 2.}{129}{}%
-\contentsline {chapter}{\numberline {9}Servicios auxiliares de las centrales eléctricas.}{133}{}%
-\contentsline {chapter}{\numberline {10}Centrales térmicas de carbón.}{135}{}%
-\contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{137}{}%
+\contentsline {section}{\numberline {7.2}Sistemas de excitación del generador síncrono.}{117}{}%
+\contentsline {subsection}{\numberline {7.2.1}Factor de respuesta o rapidez de respuesta:}{117}{}%
+\contentsline {subsection}{\numberline {7.2.2}Clasificación de los sistemas de excitación.}{117}{}%
+\contentsline {subsubsection}{Excitación estática o directa, autoexcitada con anillos y escobillas.}{117}{}%
+\contentsline {subsubsection}{Excitación estática o directa, con excitación independiente a través de servicios auxiliares.}{118}{}%
+\contentsline {subsubsection}{Excitación rotativa o indirecta, con excitatriz de c.c. sin excitatriz piloto.}{118}{}%
+\contentsline {chapter}{\numberline {8}Control potencia - frecuencia.}{123}{}%
+\contentsline {section}{\numberline {8.1}Esquema del control de un generador síncrono.}{123}{}%
+\contentsline {section}{\numberline {8.2}Control potencia - frecuencia desde el punto de vista del mercado de servicios complementarios.}{123}{}%
+\contentsline {subsection}{\numberline {8.2.1}Control primario.}{123}{}%
+\contentsline {subsection}{\numberline {8.2.2}Control secundario.}{124}{}%
+\contentsline {subsection}{\numberline {8.2.3}Control terciario.}{124}{}%
+\contentsline {section}{\numberline {8.3}Dinámica del rotor}{124}{}%
+\contentsline {subsection}{\numberline {8.3.1}Valores de la constante de inercia.}{125}{}%
+\contentsline {section}{\numberline {8.4}Respuesta de la demanda ante una desviación de la frecuencia.}{125}{}%
+\contentsline {section}{\numberline {8.5}Regulador de velocidad.}{127}{}%
+\contentsline {subsection}{\numberline {8.5.1}Regulador astático.}{127}{}%
+\contentsline {subsection}{\numberline {8.5.2}Regulador con estatismo positivo.}{127}{}%
+\contentsline {section}{\numberline {8.6}Participación en la regulación de generadores en paralelo.}{128}{}%
+\contentsline {section}{\numberline {8.7}Participación de distintas áreas en la regulación.}{129}{}%
+\contentsline {section}{\numberline {8.8}Ejemplos de aplicación.}{130}{}%
+\contentsline {subsection}{\numberline {8.8.1}Ejemplo 1.}{130}{}%
+\contentsline {subsection}{\numberline {8.8.2}Ejemplo 2.}{133}{}%
+\contentsline {chapter}{\numberline {9}Servicios auxiliares de las centrales eléctricas.}{137}{}%
+\contentsline {chapter}{\numberline {10}Centrales térmicas de carbón.}{139}{}%
+\contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{141}{}%
