@@ -82,8 +82,28 @@ En el MIBEL se fijan los precios basandose en el punto de equilibrio entre el si
 \newpage
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{res/tema4/diagramaPochoAdrikun}
-	\label{fig:diagramapochoadrikun}
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw [ fill={rgb,255:red,145; green,200; blue,255} , rounded corners = 8.4, ] (7.25,18.25) rectangle  node {Generadores} (11.5,17.25);
+			\draw [ fill={rgb,255:red,145; green,200; blue,255} , rounded corners = 7.2, ] (9,16.5) rectangle  node {Transporte} (11.5,15.5);
+			\draw [ fill={rgb,255:red,145; green,200; blue,255} , rounded corners = 7.2, ] (9,14.75) rectangle  node {Distribuidoras} (11.5,13.75);
+			\draw [ fill={rgb,255:red,145; green,200; blue,255} , rounded corners = 10.2, ] (7.25,13) rectangle  node {\makecell{Comercializadoras y\\consumidores directos}} (11.5,11.25);
+			\draw [ fill={rgb,255:red,145; green,200; blue,255} , rounded corners = 10.2, ] (7.25,10.25) rectangle  node {\makecell{Consumidores domésticos\\y pequeñas empresas}} (11.5,8.5);
+			\draw [ fill={rgb,255:red,255; green,198; blue,140} , rounded corners = 9.0, ] (15.5,18.5) rectangle  node {Estado} (17.5,13.5);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (8.5,17.25) -- (8.5,13)node[pos=0.5,left]{\makecell{Componente\\libre mercado}};
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (10.25,17.25) -- (10.25,16.5);
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (10.25,15.5) -- (10.25,14.75);
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (10.25,13.75) -- (10.25,13);
+			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (10.25,11.25) -- (10.25,10.25);
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (8.5,11.25) -- (8.5,10.25)node[pos=0.5,left]{Contrato libre};
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (11.5,12) -- (16.5,12)node[pos=0.5,above]{Componente regulada};
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (16.5,12) -- (16.5,13.5);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (15.5,14.25) -- (11.5,14.25)node[pos=0.5,above]{Costes reconocidos};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (15.5,16) -- (11.5,16)node[pos=0.5,above]{Costes reconocidos};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (15.5,17.75) -- (11.5,17.75)node[pos=0.5,above]{Primas, subvenciones...};
+		\end{circuitikz}
+	
+	\label{fig:my_label}
 \end{figure}
 
 
@@ -150,8 +170,32 @@ Actividades liberalizadas:
 	\end{itemize}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{res/tema4/diagramaPochoAdrikun2}
-	\label{fig:diagramapochoadrikun2}
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw [ fill={rgb,255:red,136; green,196; blue,255} , rounded corners = 6.0, ] (6.5,18.5) rectangle  node {\normalsize Transportista} (9,17.5);
+			\draw [ fill={rgb,255:red,136; green,196; blue,255} , rounded corners = 6.0, ] (13.5,18.5) rectangle  node {\normalsize Distribuidor} (16,17.5);
+			\draw [ fill={rgb,255:red,136; green,196; blue,255} , rounded corners = 6.0, ] (16.75,15) rectangle  node {\normalsize Consumidor} (19.25,14);
+			\draw [ fill={rgb,255:red,136; green,196; blue,255} , rounded corners = 6.0, ] (9.75,15) rectangle  node {\normalsize Comercializador} (12.75,14);
+			\draw [ fill={rgb,255:red,136; green,196; blue,255} , rounded corners = 6.0, ] (6.75,14.25) rectangle  node {\normalsize Productor} (8.75,13.25);
+			\draw [ fill={rgb,255:red,185; green,255; blue,185} , rounded corners = 6.0, ] (10.5,11.75) rectangle  node {\normalsize Pool} (12,10.75);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, <->, >=Stealth] (9,18) -- (13.5,18)node[pos=0.5,above,sloped]{\makecell{Contrato de acceso a la red}};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (11.25,15) -- (11.25,18)node[pos=0.5,below, sloped]{\makecell{Pago por el\\uso de redes}};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (16.75,14.5) -- (12.75,14.5)node[pos=0.5,above]{Contrato de suministro};
+			\draw [ color={rgb,255:red,0; green,0; blue,255}, ->, >=Stealth] (18,18) -- (18,15)node[pos=0.5,above,sloped]{\makecell{Contrato de\\acceso a la red}};
+			\draw [ color={rgb,255:red,0; green,0; blue,255}, short] (16,18) -- (18,18);
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (11.25,14) -- (11.25,11.75)node[pos=0.5,above, sloped]{\makecell{Compra de\\electricidad}};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (10.5,11.25) -- (7.75,11.25)node[pos=0.5,above]{\makecell{Venta de\\electricidad}};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (7.75,11.25) -- (7.75,13.25);
+			\draw [ color={rgb,255:red,0; green,0; blue,255}, ->, >=Stealth] (14.75,19) -- (14.75,18.5);
+			\draw [ color={rgb,255:red,0; green,0; blue,255}, short] (7.75,19) -- (7.75,18.5);
+			\draw [ color={rgb,255:red,0; green,0; blue,255}, short] (7.75,19) -- (14.75,19);
+			\draw [ color={rgb,255:red,0; green,0; blue,255}, short] (7.75,14.25) -- (7.75,16.25);
+			\draw [ color={rgb,255:red,0; green,0; blue,255}, ->, >=Stealth] (7.75,16.25) -- (7.75,17.5);
+			\draw [ color={rgb,255:red,0; green,0; blue,255}, ->, >=Stealth] (15.25,12.5) -- (16.5,12.5)node[pos=1,right]{Flujo de electricidad};
+			\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (15.25,12) -- (16.5,12)node[pos=1,right]{Flujo económico};
+		\end{circuitikz}
+	
+	\label{fig:my_label}
 \end{figure}
 
 \end{itemize}
