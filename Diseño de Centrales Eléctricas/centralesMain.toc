@@ -253,18 +253,24 @@
 \contentsline {subsection}{\numberline {6.3.3}Aspectos constructivos del rotor cilíndrico.}{109}{}%
 \contentsline {subsection}{\numberline {6.3.4}Refrigeración del estátor.}{109}{}%
 \contentsline {subsection}{\numberline {6.3.5}Refrigeración mediante hidrógeno.}{109}{}%
-\contentsline {section}{\numberline {6.4}Partes de un generador síncrono.}{110}{}%
+\contentsline {section}{\numberline {6.4}Partes de un generador síncrono.}{109}{}%
 \contentsline {subsection}{\numberline {6.4.1}Conductores de salida del estátor. Barras de fase aislada.}{110}{}%
-\contentsline {subsection}{\numberline {6.4.2}Circuito equivalente por fase de un generador síncrono.}{110}{}%
-\contentsline {subsubsection}{Principio de funcionamiento.}{110}{}%
-\contentsline {subsubsection}{Circuito equivalente por fase.}{111}{}%
-\contentsline {chapter}{\numberline {7}Sistemas de excitación. Control tensión - reactiva.}{113}{}%
-\contentsline {chapter}{\numberline {8}Control potencia - frecuencia.}{115}{}%
-\contentsline {section}{\numberline {8.1}Control potencia - frecuencia desde el punto de vista del mercado de servicios complementarios.}{115}{}%
-\contentsline {subsection}{\numberline {8.1.1}Control primario.}{115}{}%
-\contentsline {subsection}{\numberline {8.1.2}Control secundario.}{115}{}%
-\contentsline {subsection}{\numberline {8.1.3}Control terciario.}{115}{}%
-\contentsline {section}{\numberline {8.2}Dinámica del rotor}{116}{}%
-\contentsline {chapter}{\numberline {9}Servicios auxiliares de las centrales eléctricas.}{117}{}%
-\contentsline {chapter}{\numberline {10}Centrales térmicas de carbón.}{119}{}%
-\contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{121}{}%
+\contentsline {section}{\numberline {6.5}Circuito equivalente de un generador síncrono.}{110}{}%
+\contentsline {subsection}{\numberline {6.5.1}Principio de funcionamiento.}{110}{}%
+\contentsline {subsection}{\numberline {6.5.2}Circuito equivalente por fase.}{110}{}%
+\contentsline {subsection}{\numberline {6.5.3}Modelo fasorial para un generador de polos salientes.}{111}{}%
+\contentsline {subsection}{\numberline {6.5.4}Determinación de la reactancia síncrona saturada.}{112}{}%
+\contentsline {subsection}{\numberline {6.5.5}Estabilidad.}{112}{}%
+\contentsline {subsection}{\numberline {6.5.6}Comportamiento conectado a la red eléctrica.}{112}{}%
+\contentsline {section}{\numberline {6.6}Diagrama límite de capacidad de la máquina síncrona.}{112}{}%
+\contentsline {section}{\numberline {6.7}Modos de funcionamiento de una máquina síncrona.}{113}{}%
+\contentsline {chapter}{\numberline {7}Sistemas de excitación. Control tensión - reactiva.}{115}{}%
+\contentsline {chapter}{\numberline {8}Control potencia - frecuencia.}{117}{}%
+\contentsline {section}{\numberline {8.1}Control potencia - frecuencia desde el punto de vista del mercado de servicios complementarios.}{117}{}%
+\contentsline {subsection}{\numberline {8.1.1}Control primario.}{117}{}%
+\contentsline {subsection}{\numberline {8.1.2}Control secundario.}{117}{}%
+\contentsline {subsection}{\numberline {8.1.3}Control terciario.}{117}{}%
+\contentsline {section}{\numberline {8.2}Dinámica del rotor}{118}{}%
+\contentsline {chapter}{\numberline {9}Servicios auxiliares de las centrales eléctricas.}{119}{}%
+\contentsline {chapter}{\numberline {10}Centrales térmicas de carbón.}{121}{}%
+\contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{123}{}%
