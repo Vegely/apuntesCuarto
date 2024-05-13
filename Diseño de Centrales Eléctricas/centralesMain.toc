@@ -1,5 +1,5 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Índice}{7}{}%
+\contentsline {chapter}{Índice}{8}{}%
 \contentsline {chapter}{\numberline {1}Recursos Energéticos y la Producción de Electricidad.}{9}{}%
 \contentsline {section}{\numberline {1.1}Introducción.}{9}{}%
 \contentsline {section}{\numberline {1.2}Fuentes de energía no renovable.}{9}{}%
@@ -272,26 +272,70 @@
 \contentsline {section}{\numberline {7.2}Sistemas de excitación del generador síncrono.}{117}{}%
 \contentsline {subsection}{\numberline {7.2.1}Factor de respuesta o rapidez de respuesta:}{117}{}%
 \contentsline {subsection}{\numberline {7.2.2}Clasificación de los sistemas de excitación.}{117}{}%
-\contentsline {subsubsection}{Excitación estática o directa, autoexcitada con anillos y escobillas.}{117}{}%
+\contentsline {subsubsection}{Excitación estática o directa, autoexcitada con anillos y escobillas.}{118}{}%
 \contentsline {subsubsection}{Excitación estática o directa, con excitación independiente a través de servicios auxiliares.}{118}{}%
-\contentsline {subsubsection}{Excitación rotativa o indirecta, con excitatriz de c.c. sin excitatriz piloto.}{118}{}%
-\contentsline {chapter}{\numberline {8}Control potencia - frecuencia.}{123}{}%
-\contentsline {section}{\numberline {8.1}Esquema del control de un generador síncrono.}{123}{}%
-\contentsline {section}{\numberline {8.2}Control potencia - frecuencia desde el punto de vista del mercado de servicios complementarios.}{123}{}%
-\contentsline {subsection}{\numberline {8.2.1}Control primario.}{123}{}%
-\contentsline {subsection}{\numberline {8.2.2}Control secundario.}{124}{}%
-\contentsline {subsection}{\numberline {8.2.3}Control terciario.}{124}{}%
-\contentsline {section}{\numberline {8.3}Dinámica del rotor}{124}{}%
-\contentsline {subsection}{\numberline {8.3.1}Valores de la constante de inercia.}{125}{}%
-\contentsline {section}{\numberline {8.4}Respuesta de la demanda ante una desviación de la frecuencia.}{125}{}%
-\contentsline {section}{\numberline {8.5}Regulador de velocidad.}{127}{}%
-\contentsline {subsection}{\numberline {8.5.1}Regulador astático.}{127}{}%
-\contentsline {subsection}{\numberline {8.5.2}Regulador con estatismo positivo.}{127}{}%
-\contentsline {section}{\numberline {8.6}Participación en la regulación de generadores en paralelo.}{128}{}%
-\contentsline {section}{\numberline {8.7}Participación de distintas áreas en la regulación.}{129}{}%
-\contentsline {section}{\numberline {8.8}Ejemplos de aplicación.}{130}{}%
-\contentsline {subsection}{\numberline {8.8.1}Ejemplo 1.}{130}{}%
-\contentsline {subsection}{\numberline {8.8.2}Ejemplo 2.}{133}{}%
-\contentsline {chapter}{\numberline {9}Servicios auxiliares de las centrales eléctricas.}{137}{}%
-\contentsline {chapter}{\numberline {10}Centrales térmicas de carbón.}{139}{}%
-\contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{141}{}%
+\contentsline {subsubsection}{Excitación rotativa o indirecta, con excitatriz de c.c. sin excitatriz piloto.}{119}{}%
+\contentsline {subsubsection}{Excitación rotativa o indirecta, con excitatriz principal y piloto de c.c.}{119}{}%
+\contentsline {subsubsection}{Excitación rotativa o indirecta, con excitatriz de c.a. y piloto de imanes permanentes}{120}{}%
+\contentsline {subsubsection}{Excitación rotativa o indirecta, con generador auxiliar de c.a. de imanes permanentes.}{120}{}%
+\contentsline {subsubsection}{Excitación rotativa o indirecta, sin escobillas con diodos giratorios y excitatriz de c.a.}{121}{}%
+\contentsline {subsubsection}{Excitación rotativa o indirecta, con diodos giratorios, excitatriz de c.a. y excitatriz piloto de imanes permanentes.}{121}{}%
+\contentsline {subsubsection}{Sistema de autoexcitación con excitatriz de c.a. y diodos giratorios.}{122}{}%
+\contentsline {subsection}{\numberline {7.2.3}Cortocircuitos en la red.}{122}{}%
+\contentsline {section}{\numberline {7.3}Regulador de tensión (AVR).}{122}{}%
+\contentsline {subsection}{\numberline {7.3.1}Funciones de regulación y protección del AVR.}{123}{}%
+\contentsline {chapter}{\numberline {8}Control potencia - frecuencia.}{125}{}%
+\contentsline {section}{\numberline {8.1}Esquema del control de un generador síncrono.}{125}{}%
+\contentsline {section}{\numberline {8.2}Control potencia - frecuencia desde el punto de vista del mercado de servicios complementarios.}{125}{}%
+\contentsline {subsection}{\numberline {8.2.1}Control primario.}{125}{}%
+\contentsline {subsection}{\numberline {8.2.2}Control secundario.}{126}{}%
+\contentsline {subsection}{\numberline {8.2.3}Control terciario.}{126}{}%
+\contentsline {section}{\numberline {8.3}Dinámica del rotor}{126}{}%
+\contentsline {subsection}{\numberline {8.3.1}Valores de la constante de inercia.}{127}{}%
+\contentsline {section}{\numberline {8.4}Respuesta de la demanda ante una desviación de la frecuencia.}{127}{}%
+\contentsline {section}{\numberline {8.5}Regulador de velocidad.}{129}{}%
+\contentsline {subsection}{\numberline {8.5.1}Regulador astático.}{129}{}%
+\contentsline {subsection}{\numberline {8.5.2}Regulador con estatismo positivo.}{129}{}%
+\contentsline {section}{\numberline {8.6}Participación en la regulación de generadores en paralelo.}{130}{}%
+\contentsline {section}{\numberline {8.7}Participación de distintas áreas en la regulación.}{131}{}%
+\contentsline {section}{\numberline {8.8}Ejemplos de aplicación.}{132}{}%
+\contentsline {subsection}{\numberline {8.8.1}Ejemplo 1.}{132}{}%
+\contentsline {subsection}{\numberline {8.8.2}Ejemplo 2.}{135}{}%
+\contentsline {chapter}{\numberline {9}Servicios auxiliares de las centrales eléctricas.}{139}{}%
+\contentsline {chapter}{\numberline {10}Centrales térmicas de carbón.}{141}{}%
+\contentsline {section}{\numberline {10.1}Esquema funcional de una central de carbón.}{141}{}%
+\contentsline {section}{\numberline {10.2}Circuito aire-combustible-gases-ceniza.}{141}{}%
+\contentsline {section}{\numberline {10.3}Almacenamiento y preparación del combustible.}{142}{}%
+\contentsline {subsection}{\numberline {10.3.1}Almacenamiento del combustible.}{142}{}%
+\contentsline {subsection}{\numberline {10.3.2}Preparación del combustible}{142}{}%
+\contentsline {section}{\numberline {10.4}Tipos de molinos.}{143}{}%
+\contentsline {subsection}{\numberline {10.4.1}Molino de anillo de bolas.}{143}{}%
+\contentsline {subsection}{\numberline {10.4.2}Molino tubular de bolas tipo Hardinge.}{143}{}%
+\contentsline {subsection}{\numberline {10.4.3}Molino tubular de bolas Foster Wheeler.}{143}{}%
+\contentsline {subsection}{\numberline {10.4.4}Molino de rodillos Babcock-Wilcox.}{144}{}%
+\contentsline {subsection}{\numberline {10.4.5}Molino de rodillos de Raymond.}{144}{}%
+\contentsline {subsection}{\numberline {10.4.6}Molino de batea móvil.}{144}{}%
+\contentsline {subsection}{\numberline {10.4.7}Molinos de tipo impacto.}{145}{}%
+\contentsline {section}{\numberline {10.5}Circuito aire-gases.}{145}{}%
+\contentsline {section}{\numberline {10.6}Quemadores.}{146}{}%
+\contentsline {section}{\numberline {10.7}Hogar.}{146}{}%
+\contentsline {subsection}{\numberline {10.7.1}Pantallas evaporadoras.}{146}{}%
+\contentsline {section}{\numberline {10.8}Ventiladores.}{146}{}%
+\contentsline {section}{\numberline {10.9}Precalentadores.}{146}{}%
+\contentsline {section}{\numberline {10.10}Productos de desecho.}{146}{}%
+\contentsline {section}{\numberline {10.11}Ceniceros.}{146}{}%
+\contentsline {section}{\numberline {10.12}Retención de cenizas.}{146}{}%
+\contentsline {section}{\numberline {10.13}Chimenea.}{146}{}%
+\contentsline {section}{\numberline {10.14}Circuito agua vapor.}{146}{}%
+\contentsline {section}{\numberline {10.15}Ciclo de Rankine.}{146}{}%
+\contentsline {section}{\numberline {10.16}Caldera acuotubular.}{146}{}%
+\contentsline {section}{\numberline {10.17}Calderín.}{146}{}%
+\contentsline {section}{\numberline {10.18}Sobrecalentadores.}{147}{}%
+\contentsline {section}{\numberline {10.19}Economizador.}{147}{}%
+\contentsline {section}{\numberline {10.20}Líneas de vapor.}{147}{}%
+\contentsline {section}{\numberline {10.21}Turbinas de vapor.}{147}{}%
+\contentsline {section}{\numberline {10.22}Condensadores.}{147}{}%
+\contentsline {section}{\numberline {10.23}Desgasificador.}{147}{}%
+\contentsline {section}{\numberline {10.24}Sistema de refrigeración.}{147}{}%
+\contentsline {section}{\numberline {10.25}Control.}{147}{}%
+\contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{149}{}%
