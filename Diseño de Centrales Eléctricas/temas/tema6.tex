@@ -457,8 +457,189 @@
 		\end{figure}
 		
 		
+	\section{Ejercicio completo resuelto.}		
+		Un alternador de polos salientes de una central hidráulica tiene las siguientes características técnicas:
+		\begin{figure}[H]
+			\begin{minipage}{0.33\textwidth}
+				\begin{itemize}
+					\item $S_n = 300\,MV\!A$
+					\item $U_n = 22\,kV$
+					\item $\cos \varphi_n = 0.85\,ind$
+					\item $p = 20$
+				\end{itemize}
+			\end{minipage}
+			\begin{minipage}{0.33\textwidth}
+				\begin{itemize}
+					\item $\delta_{max} = 85^\circ$
+					\item $X_d = 2.45\,\varOmega/fase$
+					\item $X_q = 1.45\,\varOmega/fase$
+				\end{itemize}
+			\end{minipage}
+			\begin{minipage}{0.33\textwidth}
+				\begin{itemize}
+					\item $E_{\text{\textit{exc, máx}}} = 2.1\,p.u.$
+					\item $P_{max} = 255\,MW$
+					\item $P_{min} = 45\,MW$
+				\end{itemize}
+			\end{minipage}
+		\end{figure}
+		
+
+		Dibujar el diagrama de capacidad en valores $p.u.$ y calcular los valores de $P\,[MW]$, $Q\,[MV\!Ar]$, $S\,[MV\!A]$, $I\,[kA]$, $\cos \varphi$, $E\,[kV]$ y $\delta$ para cada punto de intersección entre valores límites. Considerar despresciable la caída de tensión en los devanados del inducido por la resistencia 
+		interna.
 		
 		
+		\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+		\vspace{-0.2cm}
 		
+		
+		$S_n = S_b = 1\,p.u.\qquad U_n = U_b = 1\,p.u.$
+		
+		\vspace{0.1cm}
+		$I_n = \dfrac{S_b}{\sqrt{3}U_b} = \dfrac{300\cdot 10^6}{\sqrt{3}\cdot 22\cdot 10^3} = 7.87\,kA = I_b$
+		
+		\vspace{0.1cm}
+		$Z_b = \dfrac{U_b^2}{S_b} = \dfrac{(22\cdot 10^3)^2}{300\cdot 10^6} = 1.61\,\varOmega$
+		
+		\vspace{0.1cm}
+		$X_s = \dfrac{X_d + X_q}{2} = \dfrac{2.45 + 1.45}{2} = 1.95\,\varOmega/fase\quad \Rightarrow \quad X_{s,\,p.u.} = \dfrac{X_s}{Z_b} = 1.21\,p.u.$
+		
+		\vspace{0.1cm}
+		Límite inductor $=\dfrac{E\cdot U_n}{X_{s,\,p.u.}} = \dfrac{2.1\cdot 1}{1.21} = 1.7355\,p.u.$
+		
+		\vspace{0.1cm}
+		$P_{max,\,p.u.} = \dfrac{255}{300} = 0.85\,p.u.\qquad P_{min,\,p.u.} = \dfrac{45}{300} = 0.15\,p.u.$
+		
+		\subsubsection*{Punto A.}
+			Datos conocidos: $P_{min} = 0.15\,p.u.\quad E_{max} = 2.1\,p.u.\quad X_s = 1.21\,p.u.\quad U = 1\,p.u.$
+			
+			\vspace{0.1cm}
+			$P_A = \dfrac{E\cdot U}{X_s}\cdot \sin \delta = 0.15 \quad \Rightarrow \quad \delta = 4.95^\circ$
+			
+			\vspace{0.1cm}
+			$Q_A = \dfrac{E\cdot U}{X_s}\cdot \cos \delta - \dfrac{U^2}{X_s} = 0.9\,p.u.\cdot S_b = 271.08\,MV\!Ar$
+			
+			\vspace{0.1cm}
+			$S_A = \sqrt{P_A^2+Q_A^2} = 0.92\cdot S_b = 276\,MV\!A$
+			
+			\vspace{0.1cm}
+			$I_A = \dfrac{S_A}{\sqrt{3}\cdot U_A} = \dfrac{276\cdot 10^6}{\sqrt{3}\cdot 22\cdot 10^3} = 7.2\,kA$
+			
+			\vspace{0.1cm}
+			$\varphi_A = \arctan \left(\dfrac{Q_A}{P_A}\right) = 80.57^\circ \quad \Rightarrow \quad \cos \varphi_A = 0.16$
+		
+		\subsubsection*{Punto B.}
+			Datos conocidos: $S_n = 1\,p.u.\quad U_n = 1\,p.u.\quad X_s = 1.21\,p.u.\quad E_{max} = 2.1\,p.u.$
+			
+			\vspace{0.1cm}
+			$
+			\left.
+			\begin{matrix}
+				P_B = \dfrac{E_0\cdot U}{X_s}\cdot \sin \delta\\
+				Q_B = \dfrac{E_0\cdot U}{X_s}\cdot \cos \delta - \dfrac{U^2}{X_s}\\\\
+				S^2 = P^2 + Q^2
+			\end{matrix}
+			\right\}
+			\left(\dfrac{E_0\cdot U}{X_s}\sin \delta\right)^2 + \left(\dfrac{E_0\cdot U}{X_s}\cos \delta - \dfrac{U^2}{X_s}\right)^2 = 1
+			$
+			
+			\vspace{0.1cm}
+			Resolviendo se obtiene $\cos \delta = 0.93 \quad \Rightarrow \quad \delta_B = 20^\circ$
+			
+			\vspace{0.1cm}
+			$P_B = \dfrac{2.1\cdot 1}{1.21}\sin 20^\circ = 0.59\,p.u. \cdot S_b = 177.45\,MW$
+			
+			\vspace{0.1cm}
+			$Q_B = \dfrac{2.1\cdot 1}{1.21}\cos 20^\circ - \dfrac{1^2}{1.21} = 0.81\,p.u.\cdot S_b = 241.89\,MV\!Ar$
+			
+			\vspace{0.1cm}
+			$\varphi_B = \arctan\left(\dfrac{Q_B}{P_D}\right) = 53.74^\circ \quad \Rightarrow \quad \cos \varphi_B = 0.59$
+			
+			\vspace{0.1cm}
+			$I_B = I_n = 7.87\,kA$
+			
+		\subsubsection*{Punto C.}
+			Datos conocidos: $P_{max} = 0.85\,p.u.\quad S_n = 1\,p.u.\quad I_n = 7.87\,kA$
+			
+			\vspace{0.1cm}
+			$Q_C = \sqrt{S^2 - P^2} = \sqrt{1^2 - 0.85^2} = 0.527\,p.u. = 158.03\,MV\!A$
+			
+			\vspace{0.1cm}
+			$\tan \varphi_C = \dfrac{Q_C}{P_C} = \dfrac{158.03}{255} = 0.619 \quad \Rightarrow \quad \varphi_C = 31.78^\circ \quad \Rightarrow \quad \cos \varphi_C = 0.85$
+			
+			\vspace{0.1cm}
+			$P_C = \dfrac{E_0\cdot U}{X_s}\sin \delta = 0.85\,p.u. \quad \Rightarrow \quad E_C = \dfrac{P_C \cdot X_S}{U\cdot \sin \delta}$
+			
+			\vspace{0.1cm}
+			Sustituyendo en $Q_C = \dfrac{E_0\cdot U}{X_s}\cdot \cos \delta - \dfrac{U^2}{X_s} = \dfrac{\dfrac{P_C\cdot X_s}{U\cdot \sin \delta}}{X_s}\cos \delta - \dfrac{U^2}{X_s} = \dfrac{P_C}{\sin \delta}\cos \delta - \dfrac{U^2}{X_s} = 0.527$
+			
+			\vspace{0.1cm}
+			$\dfrac{0.85}{\sin \delta}\cos \delta - \dfrac{1}{1.21} = 0.527 \quad \Rightarrow \quad \dfrac{0.85}{\tan \delta} = 1.350 \quad \Rightarrow \quad \tan \delta = 0.628 \quad \Rightarrow \quad \delta_C = 32.129^\circ$
+			
+			\vspace{0.1cm}
+			$E_C = \dfrac{0.85\cdot 1.21}{1\cdot \sin 32.12^\circ} = 1.933\,p.u. = 42.54\,kV$
+			
+		\subsubsection*{Punto D.}
+			Datos conocidos: $P_{max} = 0.85\,p.u.\quad S_n = 1\,p.u.\quad I_n = 7.87\,kA$
+			
+			\vspace{0.1cm}
+			$Q_D = \sqrt{S^2 - P^2} = -0.527 = -158.03\,MV\!Ar$
+			
+			\vspace{0.1cm}
+			$\tan \varphi_D = \dfrac{Q_D}{P_D} = \dfrac{-158.03\,MV\!Ar}{255\,MW} = -0.619 \quad \Rightarrow \quad \varphi_D = -31.78^\circ \quad \Rightarrow \quad \cos \varphi_D = 0.85$ (cap)
+			
+			\vspace{0.1cm}
+			$P_D = \dfrac{E_0\cdot U}{X_s}\sin \delta = 0.85\,p.u. \quad \Rightarrow \quad E_D = \dfrac{P_D \cdot X_s}{U\cdot \sin \delta}$
+			
+			\vspace{0.1cm}
+			Sustituyendo en $Q_D = \dfrac{E_0\cdot U}{X_s}\cdot \cos \delta - \dfrac{U^2}{X_s} = \dfrac{\dfrac{P_C\cdot X_s}{U\cdot \sin \delta}}{X_s}\cos \delta - \dfrac{U^2}{X_s} = \dfrac{P_D}{\sin \delta}\cos \delta - \dfrac{U^2}{X_s} = -0.527$
+			
+			\vspace{0.1cm}
+			Operando se obtiene $\tan \delta = 2.83 \quad \Rightarrow \quad \delta = 70.59^\circ$
+			
+			\vspace{0.1cm}
+			$E_D = \dfrac{0.85\cdot 1.21}{1\cdot \sin 70.59^\circ} = 1.09 = 23.99\,kV$
+		
+		\subsubsection*{Punto E.}
+			Datos conocidos: $S_n = 1\,p.u.\quad I_n = 7.87\,kA\quad \delta_{max} = 85^\circ$
+			
+			\vspace{0.1cm}
+			$
+			\left.
+			\begin{matrix}
+				P_E = \dfrac{E_0\cdot U}{X_s}\cdot \sin \delta\\
+				Q_E = \dfrac{E_0\cdot U}{X_s}\cdot \cos \delta - \dfrac{U^2}{X_s}\\\\
+				S^2 = P^2 + Q^2
+			\end{matrix}
+			\right\}
+			\left(\dfrac{E_0\cdot U}{X_s}\sin \delta\right)^2 + \left(\dfrac{E_0\cdot U}{X_s}\cos \delta - \dfrac{U^2}{X_s}\right)^2 = 1
+			$
+			
+			\vspace{0.1cm}
+			Resolviendo: $0.68E^2 - 0.119E - 0.318 = 0 \quad \Rightarrow \quad E_E = 0.77 = 16.98\,kV$
+			
+			\vspace{0.1cm}
+			$P_E = \dfrac{0.77\cdot 1}{1.21}\sin 85^\circ = 0.634 = 190.18\,MW$
+			
+			\vspace{0.1cm}
+			$Q_E = \dfrac{0.77\cdot 1}{1.21}\cos 85^\circ - \dfrac{1^2}{1.21} = -0.77 = -231.3\,MV\!Ar$
+			
+			\vspace{0.1cm}
+			$\tan \varphi = \dfrac{Q_E}{P_E} = 1.22 \quad \Rightarrow \quad \varphi_E = -50.57^\circ \quad \Rightarrow \quad \cos \varphi_E = 0.63$ (cap)
+		
+		\subsubsection*{Punto F.}
+			Datos conocidos: $P_{min} = 0.15\,p.u.\quad \delta_{max} = 85^\circ\quad X_s = 1.21\,p.u.$
+			
+			\vspace{0.1cm}
+			$P_F = \dfrac{E_0\cdot U}{X_s}\cdot \sin \delta = 0.15 \quad \Rightarrow \quad E_F = 0.182\,p.u. = 4.01\,kV$
+			
+			\vspace{0.1cm}
+			$Q_F = \dfrac{0.182\cdot 1}{1.21}\cos 85^\circ - \dfrac{1^2}{1.21} = -0.813 = -244.0\,MV\!Ar$
+			
+			\vspace{0.1cm}
+			$S_F = \sqrt{P_F^2 + Q_F^2} = 0.826\,p.u. = 248.02\,MV\!A \qquad I_F = \dfrac{S_F}{\sqrt{3}\cdot U_n} = 6.51\,kA$
+			
+			\vspace{0.1cm}
+			$\tan \varphi_F = \dfrac{Q_F}{P_F} = 5.422 \quad \Rightarrow \quad \varphi_F = -79.55^\circ \quad \Rightarrow \quad \cos \varphi_F = 0.181$ (cap)
 		
 			
