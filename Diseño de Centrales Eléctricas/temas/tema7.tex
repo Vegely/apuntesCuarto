@@ -825,41 +825,45 @@
 		Donde $T_a < T_e < T_g$, luego el polo del amplificador será el más lento y el del generador el más rápido.
 		
 		\newpage
-		Es necesario cuidar el valor de la ganancia total. Visualizándolos en el lugar de las raíces:
 		\begin{figure}[H]
-			\centering
-				\begin{circuitikz}
-					\tikzstyle{every node}=[font=\normalsize]
-					\draw [->, >=Stealth] (12.75,4.75) -- (12.75,10.25)node[pos=1,right]{$j\omega$};
-					\draw [->, >=Stealth] (9,7.5) -- (14.5,7.5)node[pos=1,right]{$\sigma$};
-					\node at (12.25,7.5) [] {$\times$};
-					\node at (10.75,7.5) [] {$\times$};
-					\node at (9,7.5) [] {$\times$};
-					\node [font=\footnotesize] at (9,7) {$s=-\dfrac{1}{T_a}$};
-					\node [font=\footnotesize] at (10.5,7) {$s=-\dfrac{1}{T_e}$};
-					\node [font=\footnotesize] at (12,7) {$s=-\dfrac{1}{T_g}$};
-					\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (9,7.5) -- (7.75,7.5);
-					\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (13.5,10.25) .. controls (11.25,8) and (11.25,6.75) .. (13.5,4.75);
-					\node at (13,5.25) [, color={rgb,255:red,0; green,128; blue,255}] {\scriptsize$\bigtriangleup$};
-					\node at (13,9.75) [, color={rgb,255:red,0; green,128; blue,255}] {\scriptsize$\bigtriangleup$};
-					\node at (8.25,7.5) [, color={rgb,255:red,0; green,128; blue,255}] {\scriptsize$\bigtriangleup$};
-					\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13,9.75) -- (13,5.25);
-					\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (8.25,7.75) {$s_1$};
-					\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (13.35,9.75) {$s_2$};
-					\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (13.35,5.25) {$s_3$};
-					\normalsize
-					\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth, dashed] (12.75,10.5) -- (14.25,10.5)node[pos=0.5,above]{Inestable};
-					\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth, dashed] (12.75,10.5) -- (11.25,10.5)node[pos=0.5,above]{Estable};
-					\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth, dashed] (14.25,8) -- (13.25,9.5)node[pos=0,right]{Polos inestables};
-					\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth, dashed] (14.25,8) -- (13.25,5.5);
-					\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (10.75,7.5) -- (12.25,7.5);
-				\end{circuitikz}
-			
-			\label{fig:my_label}
-		\end{figure}
-		
-		Vemos que para un valor de $K$ muy alto el sistema puede volverse inestable. El AVR tiene en cuenta esto con los parámetros que se describieron en el apartado de "funciones de regulación".
-		
+			\begin{minipage}{0.29\textwidth}
+				Es necesario cuidar el valor de la ganancia total. Visualizándolos en el lugar de las raíces de la figura adjunta. Se observa que para un valor de $K$ muy alto el sistema puede volverse inestable. El AVR tiene en cuenta esto con los parámetros que se describieron en el apartado de "funciones de regulación".				
+			\end{minipage}
+			\begin{minipage}{0.7\textwidth}
+				\begin{figure}[H]
+					\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw [->, >=Stealth] (12.75,4.75) -- (12.75,10.25)node[pos=1,right]{$j\omega$};
+						\draw [->, >=Stealth] (9,7.5) -- (14.5,7.5)node[pos=1,right]{$\sigma$};
+						\node at (12.25,7.5) [] {$\times$};
+						\node at (10.75,7.5) [] {$\times$};
+						\node at (9,7.5) [] {$\times$};
+						\node [font=\footnotesize] at (9,7) {$s=-\dfrac{1}{T_a}$};
+						\node [font=\footnotesize] at (10.5,7) {$s=-\dfrac{1}{T_e}$};
+						\node [font=\footnotesize] at (12,7) {$s=-\dfrac{1}{T_g}$};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (9,7.5) -- (7.75,7.5);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (13.5,10.25) .. controls (11.25,8) and (11.25,6.75) .. (13.5,4.75);
+						\node at (13,5.25) [, color={rgb,255:red,0; green,128; blue,255}] {\scriptsize$\bigtriangleup$};
+						\node at (13,9.75) [, color={rgb,255:red,0; green,128; blue,255}] {\scriptsize$\bigtriangleup$};
+						\node at (8.25,7.5) [, color={rgb,255:red,0; green,128; blue,255}] {\scriptsize$\bigtriangleup$};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13,9.75) -- (13,5.25);
+						\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (8.25,7.75) {$s_1$};
+						\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (13.35,9.75) {$s_2$};
+						\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (13.35,5.25) {$s_3$};
+						\normalsize
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth, dashed] (12.75,10.5) -- (14.25,10.5)node[pos=0.5,above]{Inestable};
+						\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth, dashed] (12.75,10.5) -- (11.25,10.5)node[pos=0.5,above]{Estable};
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth, dashed] (14.25,8) -- (13.25,9.5)node[pos=0,right]{Polos inestables};
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth, dashed] (14.25,8) -- (13.25,5.5);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (10.75,7.5) -- (12.25,7.5);
+					\end{circuitikz}
+					
+					\label{fig:my_label}
+				\end{figure}
+			\end{minipage}
+		\end{figure}	
+	
 		\subsection{Estructura del control V-Q del sistema eléctrico de potencia.}
 			\begin{itemize}
 				\item \textbf{Control primario a nivel de central:}
@@ -883,4 +887,285 @@
 						\item Retribuido.
 					\end{itemize}
 			\end{itemize}
-
+		
+		\subsection{Control primario a nivel de central.}
+			Comprende el nivel de control de la tensión en bornes de los generadores constituidos por los reguladores (AVRs) y el control de la tensión en barras de la central o regulador de planta (PQRs).
+			
+			
+			El margen de variación de tensión que típicamente admite un generador en bornes es de $\pm5\%$ con respecto a su tensión nominal.
+			
+			
+			El tiempo de respuesta está fijado alrededor de un minuto el tiempo de variación de la tensión de generador desde el valor mínimo ($-5\%$, valor máximo de absorción de reactiva [\textit{lagging}]) al valor máximo ($+5\%$, valor máximo de generación de reactiva [\textit{leading}]).
+			
+			
+			\subsubsection{Regulador de central: PQR.}
+				El objetivo de los PQRs es repartir equilibradamente la generación de reactiva entre los diferentes grupos de la central y alcanzar la consigna de tensión y/o de potencia reactiva que reciba del nivel de control jerárquicamente superior. Los AVRs se pueden controlar mediante señal local o remota de los PQRs.
+				
+				
+				La ley de control del PQR está basada en la resolución de un problema de optimización, y minimiza el error en régimen permanente de la tensión de alta o en barras de la central y de la generación de reactiva total.
+				
+				
+				Los PQRs mantienen en barras de la central las consignas de tensión y/o la generación o absorción de reactiva, modificando la consigna de tensión a la salida de los grupos bajo control. Están coordinados con los RVRs.
+				
+				
+				Disponen de dos canales de control: manual y automático (recibe consignas del control secundario).
+				
+				\vspace{0.25cm}
+				\textit{\textbf{Funciones:}}
+				\begin{itemize}
+					\item Reparte equitativamente la generación de potencia reactiva entre los grupos de la central según sus límites.
+					\item Se asegura el mantenimiento de las tensiones y reactiva de los grupos y servicios auxiliares dentro de los
+					límites operativos.
+					\item Se adapta a procedimientos de operación de REE.
+					\item Incentiva la preferencia por la central, situándola en una situación óptima para que sus recursos sean
+					asignados y se obtenga una mayor retribución.
+				\end{itemize}
+				
+				
+				\textbf{\textit{Optimización:}}
+				
+				
+					El proceso de optimización está sujeto a los límites de los grupos y de control del PQR:
+					\begin{itemize}
+						\item Límite máximo y mínimo de tensión de grupo.
+						\item Límite máximo y mínimo de tensión de los servicios auxiliares.
+						\item Límite máximo y mínimo de absorción de reactiva.
+						\item Límite máximo de incremento de consigna en un paso de control.
+						\item Máximo desequilibrio de reactiva entre los grupos. Normalmente nulo.
+					\end{itemize}
+					Si se requiere una variación mayor se utiliza el transformador principal de potencia con regulador de tomas en alta tensión y en carga.
+					
+			\subsubsection{Control mediante tomas de regulación del transformador.}
+				Los transformadores con cambio de tomas contienen un devanado en el que la conexión puede realizarse a lo largo de distintos puntos, permitiendo una regulación directa de la relación de transformación dentro de un margen relativamente estrecho. El margen de regulación típico es $\pm10\%$ respecto a la relación de transformación nominal o la tensión nominal. Este margen suele estar dividido en escalones de aproximadamente $\pm2\%$. Por ejemplo, un transformador de $400/21\,kV$ $\pm 16 \pm 0.8\%$, es decir, 32 tomas de $0.8\,kV$.
+				
+				\vspace{0.25cm}
+				\textbf{\textit{Casuísticas según las tensiones del transformador:}}
+				\begin{itemize}
+					\item Al aumentar la relación de transformación aumenta la potencia reactiva que pasa por el transformador:
+					\[\uparrow U_2 \Rightarrow \downarrow U_1' \Rightarrow U_1 > U_1' \Rightarrow \text{Fluye Q hacia la red.}\]
+					\item $U_1' > U_2$: la potencia reactiva fluye desde el generador hacia la red $\Rightarrow$ Red inductiva, generador sobreexcitado.
+					\item $U_1' < U_2$: la potencia reactiva fluye desde la red hacia el generador $\Rightarrow$ Red capacitiva, generador subexcitado.
+				\end{itemize}
+				
+			\subsubsection{Compensadores síncronos.}
+				Pueden estar instalados en la central o en subestaciones primarias. Son máquinas síncronas funcionando como motor $(\delta < 0)$. Consumen potencia activa y pueden generar o absorber reactiva. Hay que utilizar otra máquina para sincronizarlos a la red.
+				
+				
+				A diferencia de los compensadores estáticos (SVCs):
+				\begin{itemize}
+					\item Puede regular la tensión de forma continua, sin transitorios.
+					\item No introduce ni se ve afectado por armónicos en la red.
+					\item No causa problemas de resonancia.
+					\item En casos de caída de tensión son capaces de proporcionar corriente de cortocircuito durante un tiempo limitado, facilitando el ajuste de las protecciones de sobreintensidad.
+				\end{itemize}
+				
+		\subsection{Control secundario.}
+		\subsubsection{Control zonal (RVR).}
+			Se sitúa entre el nivel de control de minimización de pérdidas y el nivel de control de central. Actúa en un tiempo entre 20 segundos a 2 minutos.
+			
+			
+			Para cada zona de control, se definen unos nudos pilotos en los cuales se desea mantener un perfil de tensiones. El RVR mantiene las tensiones de dichos nudos en sus valores de consigna y dentro de la tolerancia permitida $\pm7\%$ (redes de transporte de 400 y 220 kV). El RVR dispone de todos los datos de tensiones y potencias reactivas del sistema eléctrico de potencia de cada zona. Está diseñado para seguir las variaciones de demanda y los cambios diarios en el sistema.
+			
+			
+			Intercambia información con los PQRs y entre los RVRs de otras zonas. Envían información cada diez minutos a los RVRs de tal forma que los RVRs conocen las capacidades reales de cada central.
+			
+			\vspace{0.25cm}
+			\textit{\textbf{Nudo piloto típico:}}
+			\begin{figure}[H]
+				\begin{minipage}{0.35\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw  (11.5,15.25) circle (0.5cm) node {\normalsize G} ;
+							\draw [short] (11.5,14.75) -- (11.5,14.25);
+							\draw [short] (10.75,14.25) -- (12.25,14.25);
+							\draw [->, >=Stealth] (11,14.25) -- (11,13.25)node[pos=1,left]{$P_{dk}+jQ_{dk}$};
+							\draw [->, >=Stealth] (12,14.25) -- (12,13.25)node[pos=1,right]{$U_k$};
+							\node [font=\normalsize] at (12.75,14.5) {$P_{gk}+jQ_{gk}$};
+							\node [font=\normalsize] at (10,14.25) {Nudo $k$};
+						\end{circuitikz}
+						
+					\end{figure}
+				\end{minipage}
+				\hspace{0.25cm}
+				\begin{minipage}{0.6\textwidth}
+					\textbf{\textit{Datos:}}
+					
+					$Q_{max}$ y $Q_{min}$ que se puede inyectar o absorber en el nudo.
+					
+					$P_{gk} - P_{dk} = P_k$ (pérdidas).
+					
+					$U_k$ dentro de unos límites.
+				\end{minipage}
+			\end{figure}
+			
+			\subsubsection{Estabilidad de tensión en los nudos.}
+			\vspace{-0.6cm}
+				\begin{figure}[H]
+					\begin{minipage}{0.35\textwidth}
+						Las tensiones en los nudos deben mantenerse estables y dentro de sus límites aceptables. Con cargas pequeñas (menor consumo de reactiva), la tendencia de la tensión es a subir cuando la carga es capacitiva y a bajar cuando la carga es inductiva. Sin embargo, con cargas grandes (mayor consumo de reactiva) la tensión siempre decrece.
+						
+						\vspace{0.25cm}
+						Las curvas P-V, o curvas nariz, se pueden obtener para los diferentes nudos de control. Los puntos situados por debajo de la línea discontinua son inestables y el sistema eléctrico nunca opera en ellos.
+					\end{minipage}
+					\hspace{0.15cm}
+					\begin{minipage}{0.6\textwidth}
+						\begin{figure}[H]
+							\centering
+							\begin{circuitikz}[scale = 0.7]
+								\tikzstyle{every node}=[font=\normalsize]
+								\draw [->, >=Stealth] (9.5,9) -- (9.5,19);
+								\draw [->, >=Stealth] (9,9.5) -- (21.5,9.5);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (9.5,18.5) .. controls (26,19.25) and (24.25,13) .. (9.75,9.75);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (9.5,18.5) .. controls (21,18.25) and (24.75,14.75) .. (9.75,9.75);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (9.5,18.5) .. controls (15,17.5) and (23.75,15.5) .. (9.75,9.75);
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (9.5,18.5) .. controls (12.5,17.75) and (20,14.5) .. (9.75,9.75);
+								\draw [ color={rgb,255:red,255; green,0; blue,0}, dashed] (10,12.5) -- (22,15)node[pos=0.2,above, sloped]{Límite de estabilidad};
+								\draw [->, >=Stealth] (14.75,10.25) -- (13.75,12)node[pos=0,right]{$0.9$ ind};
+								\draw [->, >=Stealth] (16.75,10.75) -- (15.5,12.5)node[pos=0,right]{$0.95$ ind};
+								\draw [->, >=Stealth] (19.25,11) -- (17.5,13)node[pos=0,right]{1};
+								\draw [->, >=Stealth] (18.75,19) -- (19,17.25)node[pos=0,left]{$0.95$ cap};
+								\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (9.5,18.5) .. controls (28.5,18) and (19.25,12) .. (9.75,9.75);
+								\draw [->, >=Stealth] (20.5,18.5) -- (20,17.5)node[pos=0,right]{$0.9$ cap};
+								\node [font=\normalsize, rotate around={90:(0,0)}] at (9.2,14.5) {Tensión en la carga [p.u.]};
+								\node [font=\normalsize, rotate around={-360:(0,0)}] at (15.25,9.1) {Potencia activa demandada en la carga [p.u.]};
+							\end{circuitikz}
+							
+							\label{fig:my_label}
+						\end{figure}
+					\end{minipage}
+				\end{figure}
+				
+				\textit{\textbf{Colapso de tensión:}}
+				
+				
+				Se produce como consecuencia de una cadena de eventos (desconexión brusca de una línea cargada) acompañados de un problema de inestabilidad de tensión (exceso de carga en líneas adyacentes y un mayor consumo de reactiva) que provoca un perfil bajo de tensiones en una parte extensa del sistema eléctrico. 
+				
+				
+				Para solucionarlo el control automático de los generadores incrementa el valor de la excitación y la aportación de reactiva para recuperar la tensión, y en las subestaciones se cambian las tomas de los transformadores reguladores, o mediante los compensadores estáticos se
+				introducen condensadores. Esto provoca más flujo por las líneas, mayor caída de tensión y más demanda para los generadores que
+				pueden estar cerca de su límite. Si esto sucede, la tensión en sus terminales desciende, agravando la situación.
+				
+			\subsubsection{Control V-Q regional.}
+				
+					 
+					\begin{figure}[H]
+						\begin{minipage}{0.5\textwidth}
+							\begin{figure}[H]
+								\centering
+								\begin{circuitikz}
+									\tikzstyle{every node}=[font=\normalsize]
+									\draw [](12.25,17.25) to[short] (14.25,17.25);
+									\draw [](13.25,17.25) to[short] (13.25,16.25);
+									\draw [](11,16.25) to[short] (15.25,16.25);
+									\draw (11,16.25) to[L ] (11,13.75);
+									\draw (12.25,16.25) to[L ] (12.25,14.75);
+									\draw (12.25,14.75) to[C] (12.25,13.75);
+									\draw (13.75,13.75) to[C] (13.75,14.75);
+									\draw (15.25,13.75) to[C] (15.25,14.75);
+									\draw (13.75,16.25) to[normal open switch] (13.75,14.75);
+									\draw (15.25,16.25) to[normal open switch] (15.25,14.75);
+									\draw (11,13.75) to (11,13.5) node[ground]{};
+									\draw (12.25,13.75) to (12.25,13.5) node[ground]{};
+									\draw (13.75,13.75) to (13.75,13.5) node[ground]{};
+									\draw (15.25,13.75) to (15.25,13.5) node[ground]{};
+									\node [font=\normalsize, rotate around={-360:(0,0)}] at (13.25,17.5) {$U$};
+									\draw [short] (10.75,12.75) -- (12.5,12.75)node[pos=0.5,below]{1};
+									\draw [short] (10.75,12) -- (14,12)node[pos=0.5,below]{2};
+									\draw [short] (10.75,11.25) -- (15.5,11.25)node[pos=0.5,below]{3};
+									\draw [short] (15.5,11.25) -- (15.5,11.5);
+									\draw [short] (14,12) -- (14,12.25);
+									\draw [short] (12.5,12.75) -- (12.5,13);
+									\draw [short] (10.75,12.75) -- (10.75,13);
+									\draw [short] (10.75,12) -- (10.75,12.25);
+									\draw [short] (10.75,11.25) -- (10.75,11.5);
+									\draw [->, >=Stealth] (13.25,17) -- (13.25,16.5)node[pos=0.5,right]{$I_S$};
+								\end{circuitikz}
+								
+								\label{fig:my_label}
+							\end{figure}
+							
+							\begin{figure}[H]
+								\centering
+								\begin{circuitikz}[scale=0.8]
+									\tikzstyle{every node}=[font=\normalsize]
+									\draw [->, >=Stealth] (12,12.75) -- (12,18.25)node[pos=1,right]{$U$};
+									\draw [<->, >=Stealth] (9,12.75) -- (15,12.75)node[pos=1,right]{$I_S$};
+									\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (12,12.75) -- (9.75,15.25)node[pos=0.85,right]{3};
+									\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (12,12.75) -- (10.5,15.5)node[pos=0.85,right]{2};
+									\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (12,12.75) -- (11.25,15.75)node[pos=0.85,right]{1};
+									\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (9.75,15.25) -- (11.25,15.75);
+									\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (11.25,15.75) -- (13.5,16.5);
+									\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (13.5,16.5) -- (14,17.75)node[pos=1,right]{1};
+									\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (13,16.35) -- (13.25,17.5)node[pos=1,right]{2};
+									\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (12.5,16.15) -- (12.6,17.25)node[pos=1,right]{3};
+								\end{circuitikz}
+								
+								\label{fig:my_label}
+							\end{figure}
+						\end{minipage}
+						\begin{minipage}{0.5\textwidth}
+							En las redes de distribución, el carácter radial de las mismas simplifica el control de tensiones. Este
+							control suele realizarse a lo largo de las líneas, mediante conexión de condensadores y reactancias (SVCs, \textit{Static Voltage Compensators}), y autotransformadores regulables con intercambiadores de tomas (SVRs, \textit{Booster or Stepper Voltage Regulators}). 
+							
+							\vspace{0.25cm}
+							\textit{\textbf{Compensadores estáticos (SVCs):}}
+							
+							
+							Son dispositivos que se conectan en paralelo con la red eléctrica a través de semiconductores controlados, y pueden generar o absorber potencia reactiva. El margen de control del compensador estático puede ampliarse mediante la conexión de condensadores conmutados, que se conectan y desconectan en función de la tensión. Si la tensión desciende se desplaza la característica tensión–corriente hacia la zona capacitiva.
+							
+							\vspace{0.25cm}
+							En la figura, la etapa 1 está constituida por la bobina regulable y un filtro capacitivo, y da origen a la característica 1.
+							La misión del filtro es reducir los armónicos. Si la tensión desciende, se conectan sucesivamente la etapa 2 y 3, que desplazan la característica tensión–corriente hacia la zona capacitiva.
+						\end{minipage}
+					\end{figure}
+					
+					\begin{figure}[H]
+						\begin{minipage}{0.6\textwidth}
+							Los dispositivos para conectar y desconectar condensadores pueden ser interruptores mecánicos (con tiempos de
+							actuación superiores a los $100\,ms$ y provocan transitorios electromagnéticos), o mediante tiristores, que pueden
+							realizar una conexión rápida y suave de los condensadores.
+							
+							\vspace{0.25cm}
+							Los tiristores de cada fase empiezan a conducir cuando la diferencia de tensión entre el condensador y la red es nula,
+							eliminando el transitorio.
+						\end{minipage}
+						\begin{minipage}{0.4\textwidth}
+							\begin{figure}[H]
+								\centering
+								\begin{circuitikz}
+									\tikzstyle{every node}=[font=\normalsize]
+									\draw (9.5,13.75) to[D] (9.5,12.25);
+									\draw (11,12.25) to[D] (11,13.75);
+									\draw [](9.5,13.75) to[short] (11,13.75);
+									\draw [](9.5,12.25) to[short] (11,12.25);
+									\draw [](10.25,13.75) to[short, -o] (10.25,14.25) ;
+									\draw [short] (10.25,12.25) -- (10.25,12);
+									\draw (10.25,12) to[C] (10.25,11);
+									\draw [](10.25,10.75) to[short, o-] (10.25,11) ;
+									\node at (10.25,12.25) [circ] {};
+									\node at (10.25,13.75) [circ] {};
+									\draw [short] (9.5,12.75) -- (9.25,12.5);
+									\draw [short] (11,13.25) -- (11.25,13.5);
+								\end{circuitikz}
+								
+								\label{fig:my_label}
+							\end{figure}
+						\end{minipage}
+					\end{figure}
+					
+					
+			\subsection{Control terciario a nivel nacional (LMC).}
+				Tiene como objetivo minimizar las pérdidas en el transporte, manteniendo una adecuada reserva de potencia reactiva.
+				
+				
+				Opera en un tiempo superior a 10 minutos. Actúa en el ámbito nacional, buscando un reparto de cargas optimizado para minimizar las pérdidas en la red.
+				
+				
+				Las tensiones de referencia en los nudos controlados por el Operador del Sistema se determinan globalmente sobre la base de criterios de óptimo y seguridad.
+				
+				
+				Se engloba dentro de los Servicios Complementarios del Mercado de compra y venta de energía y tiene carácter potestativo y obligatorio. Está remunerado (pago regulado). Para participar en él, los distintos agentes productores habilitados, consumidores o gestores de redes de distribución realizan ofertas de recursos adicionales de control de tensión.
+					
+					
