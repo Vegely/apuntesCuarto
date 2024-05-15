@@ -336,22 +336,31 @@
 \contentsline {subsection}{\numberline {10.8.1}Ventiladores de tiro forzado.}{153}{subsection.10.8.1}%
 \contentsline {subsection}{\numberline {10.8.2}Ventiladores de tiro inducido.}{153}{subsection.10.8.2}%
 \contentsline {section}{\numberline {10.9}Precalentadores.}{153}{section.10.9}%
-\contentsline {subsection}{\numberline {10.9.1}Precalentadores regenerativos.}{153}{subsection.10.9.1}%
-\contentsline {subsection}{\numberline {10.9.2}Precalentador de Rothemuhle.}{153}{subsection.10.9.2}%
-\contentsline {section}{\numberline {10.10}Productos de desecho.}{153}{section.10.10}%
-\contentsline {section}{\numberline {10.11}Ceniceros.}{153}{section.10.11}%
-\contentsline {section}{\numberline {10.12}Retención de cenizas.}{154}{section.10.12}%
-\contentsline {section}{\numberline {10.13}Chimenea.}{154}{section.10.13}%
-\contentsline {section}{\numberline {10.14}Circuito agua vapor.}{154}{section.10.14}%
-\contentsline {section}{\numberline {10.15}Ciclo de Rankine.}{154}{section.10.15}%
-\contentsline {section}{\numberline {10.16}Caldera acuotubular.}{154}{section.10.16}%
-\contentsline {section}{\numberline {10.17}Calderín.}{154}{section.10.17}%
-\contentsline {section}{\numberline {10.18}Sobrecalentadores.}{154}{section.10.18}%
-\contentsline {section}{\numberline {10.19}Economizador.}{154}{section.10.19}%
-\contentsline {section}{\numberline {10.20}Líneas de vapor.}{154}{section.10.20}%
-\contentsline {section}{\numberline {10.21}Turbinas de vapor.}{154}{section.10.21}%
-\contentsline {section}{\numberline {10.22}Condensadores.}{154}{section.10.22}%
-\contentsline {section}{\numberline {10.23}Desgasificador.}{154}{section.10.23}%
-\contentsline {section}{\numberline {10.24}Sistema de refrigeración.}{154}{section.10.24}%
-\contentsline {section}{\numberline {10.25}Control.}{155}{section.10.25}%
-\contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{157}{chapter.11}%
+\contentsline {section}{\numberline {10.10}Productos de desecho: Cenizas volantes y escoria.}{154}{section.10.10}%
+\contentsline {subsection}{\numberline {10.10.1}Ceniceros.}{154}{subsection.10.10.1}%
+\contentsline {subsection}{\numberline {10.10.2}Retención de cenizas volantes.}{155}{subsection.10.10.2}%
+\contentsline {subsubsection}{Filtros mecánicos.}{155}{subsubsection*.277}%
+\contentsline {subsubsection}{Filtros electrostáticos.}{155}{subsubsection*.280}%
+\contentsline {subsubsection}{Colectores mixtos.}{156}{subsubsection*.282}%
+\contentsline {section}{\numberline {10.11}Chimenea.}{156}{section.10.11}%
+\contentsline {section}{\numberline {10.12}Circuito agua vapor.}{156}{section.10.12}%
+\contentsline {section}{\numberline {10.13}Ciclo de Rankine.}{157}{section.10.13}%
+\contentsline {subsection}{\numberline {10.13.1}Ejercicio resuelto.}{157}{subsection.10.13.1}%
+\contentsline {section}{\numberline {10.14}Caldera acuotubular.}{157}{section.10.14}%
+\contentsline {section}{\numberline {10.15}Calderín.}{158}{section.10.15}%
+\contentsline {section}{\numberline {10.16}Sobrecalentadores.}{158}{section.10.16}%
+\contentsline {section}{\numberline {10.17}Recalentadores.}{158}{section.10.17}%
+\contentsline {section}{\numberline {10.18}Economizador.}{159}{section.10.18}%
+\contentsline {section}{\numberline {10.19}Líneas de vapor.}{159}{section.10.19}%
+\contentsline {section}{\numberline {10.20}Turbinas de vapor.}{159}{section.10.20}%
+\contentsline {subsection}{\numberline {10.20.1}Clasificación de turbinas de vapor.}{160}{subsection.10.20.1}%
+\contentsline {subsection}{\numberline {10.20.2}Recorrido del vapor a través de la turbina.}{160}{subsection.10.20.2}%
+\contentsline {section}{\numberline {10.21}Condensadores.}{160}{section.10.21}%
+\contentsline {subsection}{\numberline {10.21.1}Condensadores de superficie.}{161}{subsection.10.21.1}%
+\contentsline {section}{\numberline {10.22}Sistema de alimentación.}{161}{section.10.22}%
+\contentsline {section}{\numberline {10.23}Desgasificador.}{161}{section.10.23}%
+\contentsline {section}{\numberline {10.24}Calentadores de agua de ciclo.}{162}{section.10.24}%
+\contentsline {section}{\numberline {10.25}Sistema de refrigeración.}{162}{section.10.25}%
+\contentsline {section}{\numberline {10.26}Tratamiento del agua de alimentación-circuito de refrigeración.}{163}{section.10.26}%
+\contentsline {section}{\numberline {10.27}Control de una central térmica.}{164}{section.10.27}%
+\contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{165}{chapter.11}%

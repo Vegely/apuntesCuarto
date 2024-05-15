@@ -282,40 +282,635 @@ Se colocan dos por seguridad y se encargan de aspirar los gases del hogar y los 
 \end{figure}
 
 \section{Precalentadores.}
-f
-\subsection{Precalentadores regenerativos.}
-\subsection{Precalentador de Rothemuhle.}
+Su misión es recuperar parte del calor de los gases de combustión para volver a introducirlos en la caldera. De esta forma se aumenta el rendimiento entre un 2,3 y un 2,6\% y un ahorro de combustible entre el 5 y 10\%.
 
 
-\section{Productos de desecho.}
-f
-\section{Ceniceros.}
-f
-\section{Retención de cenizas.}
-f
+
+Los precalentadores pueden de tipo:
+\begin{itemize}
+	\item [-] \textbf{Recuperativo}: los gases y el aire están separados por una pared metálica que transmite el calor.
+	\item [-] \textbf{Regenerativo}: la superficie metálica es calentada y enfriada por los gases y el aire de manera alternada. Si tienen un tambor fijo y giran los tubos se denominan de Rothemüle y si el proceso es inverso se denominan de Ljungstrom. 
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{res/tema10/precalentador}
+	\label{fig:precalentador}
+\end{figure}
+
+
+
+\section{Productos de desecho: Cenizas volantes y escoria.}
+El tratamientos para otros productos de desecho de las centrales (gases principalmente) se discutieron en los capítulos 2 y 3. 
+
+
+Cuando se habla de cenizas volantes y escorias se refiere a compuestos inorgánicos que no se descomponen a la temperatura del hogar pero si se funden. Se diferencia entre las cenizas volantes y la escoria reside en el grosor de estas aglomeraciones. La proporción cenizas volantes y escorias es 4:1 respectivamente.
+
+
+
+
+
+ Aunque la composición de materia inorgánica varia enormemente según la clase de carbón se pueden establecer los siguientes valores orientativos:
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{|c|c|}
+		\hline
+		Compuesto&$\%$  en peso\\
+		\hline
+		$SiO_2$&$50,8-32,9$\\
+		\hline
+		$Al_2O_3$&$30,6-15,1$\\
+		\hline
+		$Fe_2O_3$&$11,0-32,9$\\
+		\hline
+		$CaO$&$5,0-8,4$\\
+		\hline
+		$Na_2O+K_2O$&$2,0-3,0$\\
+		\hline
+		$MgO$&$0,6-0,8$\\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+
+\subsection{Ceniceros.}
+Son recipientes diseñados para enfriar las cenizas y evacuarlas al exterior.
+
+
+
+
+En función del tipo de funcionamiento se diferencian entre húmedo y seco. A su vez, los de tipo húmedo se diferencian entre los de funcionamiento continuo (tipo alemán) y funcionamiento intermitente (tipo americano).
+\begin{figure}[H]
+	\begin{minipage}{0.55\textwidth}
+		\centering
+		\textbf{Cenicero de tipo alemán.}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=1\linewidth]{res/tema10/aleman}
+			\label{fig:aleman}
+		\end{figure}
+	\end{minipage}
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\textbf{Cenicero de tipo americano.}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{res/tema10/americano}
+			\label{fig:americano}
+		\end{figure}
+	\end{minipage}
+\end{figure}	
+
+
+
+
+
+\subsection{Retención de cenizas volantes.}
+La extracción de de las cenizas volantes se efectúa mediante tolvas colectoras situadas en distintos puntos del circuito aire-gas:
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{|c|c|}
+		\hline
+		Punto&$\%$ de ceniza recogida\\
+		\hline
+		Precipitador electrostático&$60$\\
+		\hline
+		Precipitador mecánico&$25$\\
+		\hline
+		Precalentador de aire&$7$\\
+		\hline
+		Economizador&$5$\\
+		\hline
+		Base de la chimenea&$3$\\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+El principal problema que existe con el contenido en polvo de los gases de combustión es su extremada finura ($50\mu m$). Por ello, para limitar la evacuación de polvo a la atmósfera se emplean filtros mecánicos, electrostáticos o mixtos.
+\subsubsection{Filtros mecánicos.}
+Separan las partículas más pesadas por cambios de dirección (filtros en zigzag) o por fuerza centrífuga (filtros ciclón). Las partículas intermedias son retenidas por filtros de mangas y las más finas por los electrostáticos.
+\begin{figure}[H]
+	\begin{minipage}{0.55\textwidth}
+El filtrado se puede producir en la masa del material y cuando se colmata hay que sustituirle o bien en su superficie, permitiendo su limpieza. Para ello, se elige recubrir con una capa de Gore-Tex (teflón microporoso).	
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{res/tema10/ciclo9n}
+
+	\label{fig:ciclo9n}
+\end{figure}
+	\end{minipage}
+\end{figure}
+
+
+
+\subsubsection{Filtros electrostáticos.}
+Se basan en ionizar las partículas mediante un campo eléctrico elevado que posteriormente serán atraídas por los electrodos. Suelen a funcionar entre tensiones de 20 y 100kV y consumir entre 600 y 800kW para una planta de 400MW.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{res/tema2/filtroelectrostatico}
+	\label{fig:filtroelectrostatico}
+\end{figure} 
+\subsubsection{Colectores mixtos.}
+Son filtros electromecánicos y utilizan una separación escalonada. A la entrada se coloca el colector mecánico para atrapar las partículas mecánicas y a continuación el electrostático.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{res/tema10/colectorMixto}
+	\label{fig:colectormixto}
+\end{figure}
+
 \section{Chimenea.}
-f
+Los gases de escape de la combustión, una vez enfriados en los precalentadores hasta cerca de 130 °C
+y filtrados en los precipitadores, son aspirados por los ventiladores de tiro inducido y descargados a la
+atmósfera por las chimeneas.
+
+
+La construcción de las chimeneas es de doble pared: la interior con tramos de idéntica sección y
+altura, construida con material refractario, y el fuste exterior de hormigón de sección decreciente y
+construido en una sola pieza por fraguado continuo.
+
+
+
+Las chimeneas son diseñadas para asegurar, en todo momento, que los gases emitidos no van a
+afectar la calidad del aire ambiente, a nivel del suelo.
+
 \section{Circuito agua vapor.}
-f
+El circuito agua vapor esta compuesto por todos los elementos que participan en el ciclo termodinámico realizado mediante el uso de agua. Este ciclo funciona en circuito cerrado salvo pequeñas pérdidas y desde el punto de vista técnico se suele trabajar a presiones de 180 bar y temperaturas de 550\grado.
+
+
+
+
+Los elementos que forman el circuito son:
+\begin{itemize}
+	\item [-] Pantallas evaporadoras.
+ 	\item [-] Sobrecalentador.
+ 	\begin{itemize}
+ 		\item Sobrecalentador primario de radiación.
+ 		\item Sobrecalentador secundario de convección.
+ 	\end{itemize}
+	\item [-] Recalentadores.
+	\begin{itemize}
+		\item Recalentador primario.
+		\item Recalentador secundario.
+		\item Recalentador terciario.
+	\end{itemize}
+	\item [-] Economizador.
+	\item [-] Calderín.
+	\item [-] Turbina de vapor.
+	\begin{itemize}
+		\item Cuerpo de alta presión.
+		\item Cuerpo de media presión.
+		\item Cuerpo de baja presión.
+	\end{itemize}
+	\item [-] Condensador.
+	\item [-] Desgasificador.
+	\item [-] Precalentadores de agua de alimentación de la caldera.
+	\item [-] Bomba de alimentación agua caldera.
+\end{itemize}
+
+
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{res/tema10/awaVapor}
+	\label{fig:colectormixto}
+\end{figure}
+
 \section{Ciclo de Rankine.}
-f
+Es el ciclo principal empleado para obtener energía útil a partir del carbón.
+
+PDF Bengoa p137-145
+diapo 64
+\subsection{Ejercicio resuelto.}
 \section{Caldera acuotubular.}
-f
+Para hacer frente a presiones más elevadas, se emplean sistemas de circulación asistida y permiten mayor flexibilidad (periodos de variación de carga). En estos circuitos, se mantiene la circulación en el circuito por medio de bombas de agua instaladas en los tubos bajantes.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{res/tema10/autotubu}
+	\label{fig:autotubu}
+\end{figure}
+
+
+
+Las calderas de circulación forzada se denominan también generadores de vapor o calderas de circuito abierto. En ellas el agua es impulsada unicamente por una bomba de alta presión (llega a los 230 bar).
 \section{Calderín.}
-f
+Tiene como objetivo separar las fases líquida y gaseosa por medio de equipos separadores de la mezcla procedente del evaporador para conseguir un vapor seco con grado de humedad $<10\%$. 
+
+
+
+El calderín se sitúa en la parte más alta de la caldera y es un gran cilindro horizontal de unos 2 metros de diámetro y 15m de longitud. El cuerpo del calderín se hace de acero especial de manera que soporte las tensiones térmicas (espesor de 10cm):
+\begin{itemize}
+	\item [-] Interior: 175 bar y 350\grado.
+	\item [-] Exterior: 1 bar y 30\grado.
+\end{itemize}
+
+
+
+
+El volumen de agua existente en el calderín constituye una gran reserva de
+seguridad que amortigua los efectos de los transitorios de carga.
+
+
+
+Para realizar el secado del vapor húmedo se centrifuga este mismo de manera que se separa el vapor de la humedad por diferencia de pesos. Tras ello, el vapor seco se pasa el vapor seco a través de chapas apiladas que eliminan el agua residual y llena el pleno gaseoso del calderín. Por otra parte, la humedad pasa a formar parte de la piscina líquida.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{res/tema10/calderin}
+	\label{fig:calderin}
+\end{figure}
+
 \section{Sobrecalentadores.}
-f
+Son los intercambiadores de haces tubulares que están sometidos a mayores temperaturas,
+ya que por su interior circula vapor  y por el
+exterior lo hacen los gases de combustión.
+
+
+
+
+Constructivamente, son haces de tubos con diámetros de unos 50mm distribuidos en bancos de profundidad de unos pocos metros y con una ligera separación entre ellos. El vapor circula por su interior a velocidades comprendidas entre 20 y 35 $\frac{m}{s}$.
+
+
+
+
+
+En función de la temperatura se emplean diferentes materiales. Hasta 540\grado se usan aceros ferríticos de baja aleación (con algo de Cromo, Molibdeno y
+Vanadio). Mientras que para temperaturas hasta los 600\grado se sustituyen por aceros austeníticos
+(inoxidables, con alto contenido en Cromo 18\% y Níquel 8\%) con un coste notablemente
+mayor.
+
+
+
+
+El sobrecalentador se divide en el primario (radiación) y secundario (convección).
+
+
+\section{Recalentadores.}
+En las calderas que alimentan turbinas de dos o tres cuerpos ( alta, media y baja presión)
+existen los recalentadores, destinados a recalentar el vapor parcialmente expansionado en el
+cuerpo de alta presión.
+
+
+Los recalentadores tienen características similares a los sobrecalentadores aunque trabajan a aproximadamente una cuarta parte de la presión. Tienen una pérdida de carga de aproximadamente un 4\%.
+
 \section{Economizador.}
-f
+Tiene como objetivo reducir el consumo de combustible de la instalación y evitar tensiones térmicas en el calderín. Se sitúa en el extremo final de la zona de recuperación de calor en la caldera.
+
+
+Es este punto la temperatura de los humos todavía es elevada (por encima de 500\grado) y el
+modo predominante de transmisión de calor es por convección.
+
+El economizador es un intercambiador sin mezcla del tipo agua/gas formado por un conjunto de
+haces tubulares.
+
 \section{Líneas de vapor.}
-f
+Una línea de vapor principal o vapor vivo conduce el vapor sobrecalentado desde la caldera hasta la turbina
+de alta presión. La línea de vapor vivo es de gran longitud ya que se extiende desde la parte alta del
+edificio de caldera hasta la cota de operaciones en la nave de turbinas.
+
+
+
+Una línea de vapor recalentado caliente transporta el vapor ya recalentado hasta la turbina de media presión.
+
+
+
+Las tuberías que se emplean para estos circuitos suelen tener diámetros en torno a los 80cm y deben soportar las máximas temperaturas de vapor. Además, se envuelven en aislante térmico para reducir las pérdidas en las tuberías.
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{cccc}
+		\hline
+		Línea&Caudal de vapor ($\frac{t}{h}$)&Presión máxima (bar)&Temperatura máxima (\grado)\\
+		\hline
+		Vapor vivo&1900&170&538\\
+		\hline
+		Vapor recalentado frío&1900&36&421\\
+		\hline
+		Vapor recalentado caliente&1750&34&538\\
+		\hline
+	\end{tabular}
+\end{table}
 \section{Turbinas de vapor.}
-f
+La turbina de vapor está destinada a proporcionar potencia mecánica para
+mover un generador eléctrico y producir electricidad. Constituye un conjunto denominado
+turbogenerador que tiene una velocidad de giro de 1500 o 3000rpm.
+
+
+El vapor llega a la turbina a alta presión y temperatura (por encima de los 175 bar y 545 \grado) con un alto valor entálpico de 3400$\frac{kJ}{kg}$. De esta forma, durante la expansión, y de forma escalonada según el número de etapas de alabes el vapor transfiere su energía a la turbina generando potencia. 
+
+
+
+La energía mecánica generada por unidad de masa:
+\[W=W^*\cdot \eta =(h_1-h_2)\cdot \eta\]
+\begin{itemize}
+	\item $W$: Trabajo útil por unidad de masa $\left[\frac{kJ}{kg}\right]$.
+	\item $W^*$: Trabajo isoentrópico por unidad de masa $\left[\frac{kJ}{kg}\right]$.
+	\item $\eta$: Rendimiento mecánico.
+	\item $h_1$: Entalpía a la entrada $\left[\frac{kJ}{kg}\right]$.
+	\item $h_2$: Entalpía a la salida $\left[\frac{kJ}{kg}\right]$.
+\end{itemize}
+
+
+La potencia:
+\[P_{mec}=W\cdot \dot{m}\]
+\begin{itemize}
+	\item $\dot{m}$: Caudal másico de vapor $\left[\frac{kg}{s}\right]$.
+\end{itemize}
+
+
+Si la turbina se compone de más cuerpos la potencia mecánica total es la suma de potencias y si se realizan extracciones l caudal se resta la porción de
+vapor extraído.
+
+
+Debido a la gran longitud que puede alcanzar el turbogrupo ( 20 a 40 m), se divide en tres o
+más partes , correspondientes a los cuerpos de la turbina ( alta, media y baja presión) y el alternador. La disposición más común es en eje tamdem-compound , en el que todos los rotores están
+alineados en un sólo eje.
+
+\subsection{Clasificación de turbinas de vapor.}
+Según la dirección del flujo se habla de turbinas axiales o radiales.
+
+
+Según el tipo de escalonamiento se habla de turbinas tipo Curtis (escalonamiento de velocidad) o de tipo Rateau (escalonamiento de presión). 
+
+
+\begin{figure}[H]
+	\begin{minipage}{0.50\textwidth}
+		\centering
+		\textbf{Escalonamiento de velocidad.}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{res/tema10/escVel}
+			\label{fig:escvel}
+		\end{figure}
+	\end{minipage}
+	\begin{minipage}{0.50\textwidth}
+		\centering
+		\textbf{Escalonamiento de presión.}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{res/tema10/escpre}
+			\label{fig:escpre}
+		\end{figure}
+	\end{minipage}
+\end{figure}
+
+
+
+
+
+
+
+
+Según el estado del vapor a la entrada de la turbina, puede ser de vapor vivo ( cuerpo de alta presión),
+vapor saturado (cuerpo de media presión) o vapor recalentado (cuerpo de baja presión).
+
+
+
+
+
+\subsection{Recorrido del vapor a través de la turbina.}
+El vapor sobrecalentado se conduce a la turbina de alta presión, pasando primero por las válvulas de parada y después por las válvulas de regulación. Tras ello, el vapor pasa por los sucesivos escalonamientos produciendo un trabajo específico
+por unidad de masa (salto entálpico). Este vapor sale con una temperatura y presión más baja.
+
+
+Una vez sale el vapor de la zona de alta presión se recalienta hasta una temperatura similar a la del vapor vivo y, a una presión inferior (50 bar) que será conducida al cuerpo de media presión.
+
+Por último, el vapor expansionado a 10bar se puede introducir en los cuerpos de baja presión simétricos (tubería crossover) o bien ser recalentado.
 \section{Condensadores.}
-f
+Tiene como función condensar el vapor procedente de la turbina. El calor latente del vapor se transfiere al medio refrigerante para ser disipado a la atmósfera.
+
+Esto supone que, aproximadamente, dos terceras partes del contenido energético del combustible
+son evacuadas directamente al condensador.
+
+
+La temperatura a la que el vapor se condensa depende en gran parte de la temperatura del foco
+frío, que no permanece constante en el tiempo. Las variaciones del foco frío pueden ser
+estacionales.
+
+
+
+Se trata de un equipo esencial, ya que sus condiciones determinan el salto entálpico disponible del
+vapor. Para conseguir un máximo de aprovechamiento de la expansión en turbina el condensador trabaja
+en condiciones de vacío, a una presión inferior a la atmosférica.
+
+
+Normalmente, como agente refrigerante, la mayor parte de los condensadores emplean agua.
+
+En función de la disposición de los tubos implicados se habla de intercambiadores de mezcla y de intercambiadores de superficie (más comunes en centrales térmicas).
+
+\begin{itemize}
+	\item [-] En los intercambiadores de mezcla existe contacto íntimo entre los fluidos a calentar y condensar.
+	\item [-] En los intercambiadores de superficie una barrera física separa ambos fluidos.
+\end{itemize}
+
+\subsection{Condensadores de superficie.}
+El vapor procedente del
+escape de la turbina inunda el vacío de la carcasa , mientras que el agua de refrigeración
+fluye por el interior de los tubos con la presión necesaria para vencer las pérdidas de carga.
+
+
+
+Como consecuencia del gran volumen específico del vapor a baja presión (20$\frac{m^3}{
+	kg}$ a 50
+mmHg) y el enorme flujo de vapor a tratar (700 $\frac{t}{h}$ en un grupo de 350 MW ) el tamaño del
+condensador es considerable.
+
+
+
+El condensador consta de:
+\begin{itemize}
+	\item [-] Uno o varios cuerpos, generalmente de acero, en los que el vapor es descargado y donde se
+	aloja el haz tubular.
+	\item [-] Las cajas de agua situadas en los extremos del condensador que sirven para distribuir de
+	forma homogénea el caudal del agua de circulación entre todos los tubos.
+	\item [-] Haz de tubos , generalmente de aleaciones de cobre, dispuestos verticalmente en forma de
+	tresbolillo.
+	\item [-] En la zona inferior se ubica una balsa o foso, denominado pozo de condensado o pozo
+	caliente, que recoge el vapor ya condensado.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{res/tema10/condensador}
+	\label{fig:condensador}
+\end{figure}
+
+\section{Sistema de alimentación.}
+El vapor condensado se debe bombear nuevamente a la caldera en las condiciones adecuadas de presión y temperatura.
+
+
+
+Este bombeo en fase líquida se realiza normalmente en dos etapas, que dan origen a los
+sistemas de agua de condensado (desde el pozo caliente del condensador hasta el
+desgasificador) y de agua de alimentación (desde el tanque del desgasificador hasta el
+economizador de caldera).
 \section{Desgasificador.}
-f
+Se encarga de que el agua de alimentación  alcance la temperatura de ebullición correspondiente la presión de vapor de
+extracción de la turbina. Para ello, en el desgasificador se debe garantizar un calentamiento uniforme, la desgasificación y la extracción de incondensables.
+
+
+El calentamiento del agua de condensado con vapor de caldeo se efectúa en diferentes
+etapas de acuerdo con el número de extracciones de turbina ya que el rendimiento del ciclo aumenta al emplear el vapor de turbina para calentar el agua del
+ciclo.
+
+
+
+Las líneas del sistema de extracciones de vapor, que conducen este hasta los calentadores,
+van provistas de válvulas de cierre y válvulas de retención controladas para evitar que se
+pudiese revertir el flujo de vapor, lo que podría provocar el embalamiento de la turbina si el
+grupo se desacopla de la red.
+
+
+\section{Calentadores de agua de ciclo.}
+Habitualmente son de dos pasos por tubo por lo que las cámaras de entrada y salida están
+localizadas en el mismo extremo del cambiador. Las velocidades suelen ser de 3$\frac{m}{s}$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{res/tema10/calentador}
+	\label{fig:calentador}
+\end{figure}
+
+Las características geométricas de los cambiadores suelen ser las siguientes:
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{cc}
+		\hline
+		Propiedad&Magnitud\\
+		\hline
+		Longitud&6-9m\\
+		\hline
+		Diámetro de la carcasa&0,75-1,5m\\
+		\hline
+		Número de tubos&400-1200\\
+		\hline
+		Diámetro tubos&14-146mm\\
+		\hline
+		Superficie total de calefacción&300-1000$m^2$\\
+		\hline
+		
+	\end{tabular}
+\end{table}
+
 \section{Sistema de refrigeración.}
-f
-\section{Control.}
-f
+El agua de circulación debe evacuar el calor latente de condensación y, por ello, son necesarios circuitos de refrigeración.
+
+
+El sistema de circulación tiene tres disposiciones básicas:
+\begin{itemize}
+	\item [-] \textbf{Circuito abierto}: el agua se  obtiene aguas arriba de un río y se expulsa aguas abajo.
+	\item [-] \textbf{Circuito cerrado}: el agua no sale del circuito y se emplean torres de refrigeración.
+	\item [-] \textbf{Circuito mixto}: se obtiene agua aguas abajo de un río y se emplean torres de refrigeración.
+\end{itemize}
+	
+Las bombas de agua están situadas en la toma de agua en un edificio denominado casa de bombas. La toma de aguas debe disponer dispositivos de filtrado adecuados. Las bombas por su parte, suelen ser centrífugas, diseñadas para un gran caudal y tener rendimientos altos.
+
+
+Por otro lado, las torres de refrigeración son las encargadas del intercambio de materia y energía con el aire ambiente. Por ello, se debe maximizar la cantidad de agua en contacto.
+
+
+Para ello, el aire asciende por el interior de la torre y el agua desciende por gravedad.
+
+
+En función de la forma de crear el tiro se distingue entre:
+\begin{itemize}
+	\item [-] \textbf{Tiro natural}: se basan en la diferencia de densidad entre el aire caliente dentro de la torre y el aire más fresco en el exterior para generar un flujo de aire. Pueden ser hiperbólicas, cilíndricas o troncocónicas.
+	\item [-] \textbf{Tiro mecánico}: se basan en el uso de ventiladores para enfriar el agua. Pueden ser de tipo inducido o forzado.
+	\item [-] \textbf{Tiro asistido}: es un sistema mixto entre los anteriores.
+\end{itemize}
+
+En función del flujo relativo agua-aire:
+\begin{itemize}
+	\item [-] Flujo en contracorriente.
+	\item [-] Flujo cruzado.
+\end{itemize}
+\section{Tratamiento del agua de alimentación-circuito de refrigeración.}
+El agua empleada en una central térmica no debe tener sales e impurezas, pues ello, reduciría considerablemente la vida útil de los distintos componentes del circuito. Por tanto, el agua debe tener las siguientes características:
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{ccc}
+		\hline
+		Elemento/propiedad&Cantidad &Unidades\\
+		\hline
+		Sólidos disueltos&0,05 &p.p.m\\
+		\hline
+		Oxígeno disuelto&0,007  &p.p.m\\
+		\hline
+		Sílice&0,02 &p.p.m\\
+		\hline
+		Hierro&0,01&p.p.m\\
+		\hline
+		Cobre& 0,002&p.p.m\\
+		\hline
+		Dureza&0 &p.p.m\\
+		\hline
+		$CO_2$&0 &p.p.m\\
+		\hline
+		Materia orgánica& 0&p.p.m\\
+		\hline
+		pH&8,5-9,2 & -\\
+		\hline
+		Conductividad& 20,1&$\frac{\mu s}{cm}$\\
+		\hline
+	\end{tabular}
+\end{table}
+
+Para conseguir estas propiedades se realiza el siguiente proceso de tratamiento:
+\begin{enumerate}
+	\item Pretratamiento del agua.
+	\item Desmineralización del agua pretratada.
+	\item Tratamiento del condensado.
+	\item Tratamientos adicionales.
+	\begin{enumerate}
+		\item Clarificación, coagulación y sedimentación.
+		\item Ablandamiento.
+		\item Esterilización.
+		\item Filtración.
+	\end{enumerate}
+\end{enumerate}
+
+
+
+
+Si no se trata el agua pueden ocurrir las siguientes acciones perjudiciales:
+\begin{itemize}
+	\item [-] \textbf{Incrustaciones}: son debidas principalmente a los cationes iónicos disueltos. Lo cual produce:
+	\begin{itemize}
+		\item Disminución del coeficiente de transmisión del calor.
+		\item Reducción de la sección útil de las tuberías.
+		\item Rotura de tubos por sobrecalentamiento.
+	\end{itemize}
+	\item [-] \textbf{Corrosiones}: se deben principalmente al oxígeno y en menor medida al dióxido de carbono y otros ácidos minerales. Lo cual produce:
+	\begin{itemize}
+		\item Disolución del metal de la caldera, economizador, condensador y tuberías.
+		\item Los gases insolubles se eliminan en el desgasificador.
+		\item El oxígeno residual puede reaccionar con sulfito sódico para dar sulfatos o hidracina para dar agua y nitrógeno libre.
+		\item Para contrarrestar la acidificación producida por el dióxido de carbono se inyecta amoniaco. 
+	\end{itemize}
+\end{itemize}
+\section{Control de una central térmica.}
+El control de una central térmica se puede realizar siguiendo tres criterios:
+\begin{itemize}
+	\item [-] \textbf{Turbina siguiendo a caldera}: se utiliza cuando el combustible que se desea gastar no se puede almacenar y se debe consumir a medida que se produce. Centrales que aprovechan el gas de alto horno.
+	\item [-] \textbf{Caldera siguiendo a turbina}: es el más extendido y tiene como objetivo satisfacer la demanda eléctrica. 
+	\item [-] \textbf{Control coordinado}:
+	la señal de demanda de energía actúa simultáneamente sobre caldera y turbina.
+\end{itemize}
+
+
+Los principales controles de una central térmica son:
+\begin{itemize}
+	\item [-] Control de combustión.
+	\item [-] Control de temperatura de vapor sobrecalentado y recalentado.
+	\item [-] Control de agua de alimentación.
+	\item [-] Control de condensado y drenaje de calentadores.
+	\item [-] Control de bypass de alta y baja presión de la turbina.
+\end{itemize}
+
+El control de combustión consiste en regular la cantidad de aire y combustible que entran en el hogar, en función de la consigna de potencia eléctrica a suministrar.
