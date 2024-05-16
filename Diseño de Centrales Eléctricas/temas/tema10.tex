@@ -483,11 +483,384 @@ Los elementos que forman el circuito son:
 \end{figure}
 
 \section{Ciclo de Rankine.}
-Es el ciclo principal empleado para obtener energía útil a partir del carbón.
+Es el ciclo principal empleado para obtener energía útil a partir del carbón. En las figuras siguientes se puede ver el ciclo básico tanto en diagrama TS como en su ejecución.
 
-PDF Bengoa p137-145
-diapo 64
-\subsection{Ejercicio resuelto.}
+
+\begin{figure}[H]
+
+		
+	\begin{minipage}{0.5\textwidth}
+		 \begin{adjustbox}{width=1\textwidth}
+			\centering
+			\begin{circuitikz}
+				\tikzstyle{every node}=[font=\normalsize]
+				\draw  (3,11.5) circle (0.25cm);
+				\draw [short] (2.75,11.5) -- (2.5,11);
+				\draw [short] (2.5,11) -- (3.5,11);
+				\draw [short] (3.5,11) -- (3.25,11.5);
+				\draw [short] (3.25,11.5) -- (5.25,11.5);
+				\draw [short] (3,11.75) -- (3,13.25);
+				\draw  (5.25,11.75) rectangle (7.25,10.75);
+				\draw [short] (7.25,11) -- (9.25,11);
+				\draw [short] (9.25,11) -- (9.25,12.75);
+				\draw [short] (8.5,13) -- (9.25,12.75);
+				\draw [short] (9.25,12.75) -- (10,12.5);
+				\draw [short] (10,12.5) -- (10,13.75);
+				\draw [short] (8.5,13) -- (8.5,13.5);
+				\draw [short] (10,13.75) -- (10,14);
+				\draw [short] (8.5,13.5) -- (10,14);
+				\draw [short] (9.25,13.75) -- (9.25,15);
+				\draw [short] (9.25,15) -- (7.5,15);
+				\draw [short] (7.25,15.5) .. controls (7.5,15.25) and (7.5,14.5) .. (7.25,14.5);
+				\draw [short] (5.25,14.5) .. controls (5,14.5) and (5,15.25) .. (5.25,15.5);
+				\draw [short] (5.25,14.5) -- (7.25,14.5);
+				\draw [short] (7.25,15.5) -- (5.25,15.5);
+				\draw [short] (5,15) -- (3,15);
+				\draw [short] (3,15) -- (3,13);
+				\draw [short] (10,13.5) -- (10.75,13.5);
+				\draw [short] (10,13) -- (10.75,13);
+				\draw  (11.25,13.25) circle (0.5cm) node {\normalsize G} ;
+				\draw [->, >=Stealth, dashed] (1.75,11.5) -- (2.75,11.5);
+				\draw [->, >=Stealth, dashed] (6.25,10.75) -- (6.25,9.75);
+				\draw [->, >=Stealth, dashed] (6.25,16.5) -- (6.25,15.5);
+				\draw [->, >=Stealth, dashed] (10.25,14) -- (11.5,14);
+				\node [font=\normalsize] at (6.25,16.75) {$Q_C$};
+				\node [font=\normalsize] at (6.25,9.5) {$Q_F$};
+				\node [font=\normalsize] at (10.5,14.5) {$W_{TV}$};
+				\node [font=\normalsize] at (1.75,11.75) {$W_B$};
+				\node [font=\normalsize] at (9.25,13.25) {TV};
+				\node [font=\normalsize] at (3,11.5) {B};
+				\node [font=\normalsize] at (6.25,11.25) {Cond};
+				\node [font=\normalsize] at (6.25,15) {Cald};
+				\draw [short] (4.25,11.75) -- (4.25,11.25);
+				\draw [short] (4.25,14.75) -- (4.25,15.25);
+				\draw [short] (8.25,11.25) -- (8.25,10.75);
+				\draw [short] (8.25,14.75) -- (8.25,15.25);
+				\node [font=\normalsize] at (8.25,15.5) {1};
+				\node [font=\normalsize] at (8.25,11.5) {2};
+				\node [font=\normalsize] at (4.25,12) {3};
+				\node [font=\normalsize] at (4.25,15.5) {4};
+			\end{circuitikz}
+			\label{fig:my_label}
+			 \end{adjustbox}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+	 \begin{adjustbox}{width=0.8\textwidth}
+		\centering	
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw [->, >=Stealth] (3.5,10) -- (3.5,16.25);
+			\draw [->, >=Stealth] (3,10.5) -- (11,10.5);
+			\node [font=\normalsize] at (11.25,10.5) {S};
+			\node [font=\normalsize] at (3.5,16.5) {T};
+			\draw [short] (4.25,11) .. controls (5.25,13) and (5.75,15) .. (6.75,15);
+			\draw [short] (6.75,15) .. controls (7.75,14.75) and (8.25,13) .. (10,11.5);
+			\draw [->, >=Stealth, dashed] (5.25,13.25) -- (8.5,13.25);
+			\draw [->, >=Stealth, dashed] (8.5,13.25) -- (8.5,11.5);
+			\draw [->, >=Stealth, dashed] (8.5,11.5) -- (4.5,11.5);
+			\draw [->, >=Stealth, dashed] (4.5,11.5) -- (4.5,12.25);
+			\draw [->, >=Stealth, dashed] (4.5,12.25) -- (5.25,13.25);
+			\node [font=\normalsize] at (8.75,13.5) {1};
+			\node [font=\normalsize] at (8.5,11.25) {2};
+			\node [font=\normalsize] at (4.5,11) {3};
+			\node [font=\normalsize] at (4.25,12.25) {4};
+		\end{circuitikz}
+		\label{fig:my_label}
+	 \end{adjustbox}
+	\end{minipage}
+\end{figure}
+Las distintas etapas del ciclo son:
+\begin{itemize}
+	\item [-] Proceso 1$\rightarrow$2. Expansión isoentrópica del vapor en la turbina. $\dot{W}_{TV}=h_1-h_2$.
+	\item [-] Proceso 2$\rightarrow$3. Condensación isobárica del vapor en el condensador. $\dot{q}_F=h_2-h_3$.
+	\item [-] Proceso 3$\rightarrow$4. Compresión isoentrópica en la bomba. $\dot{W}_B=h_4-h_3=\frac{P_4-P_3}{\rho}$.
+	\item [-] Proceso 4$\rightarrow$1. Calentamiento isobárico en la caldera. $\dot{q}_C=h_1-h_4$.
+\end{itemize}
+
+El rendimiento por otro lado:
+\[\eta=\frac{\dot{W}_{TV}-|\dot{W}_B|}{\dot{q}_C}=1-\frac{\dot{q}_F}{\dot{q}_C}\]
+
+
+En una turbina se cumple que:
+
+\begin{itemize}
+	
+	
+
+\item [-]La energía mecánica generada por unidad de masa:
+
+\[W=W^*\cdot \eta =(h_1-h_2)\cdot \eta\]
+\begin{itemize}
+	\item $W$: Trabajo útil por unidad de masa $\left[\frac{kJ}{kg}\right]$.
+	\item $W^*$: Trabajo isoentrópico por unidad de masa $\left[\frac{kJ}{kg}\right]$.
+	\item $\eta$: Rendimiento mecánico.
+	\item $h_1$: Entalpía a la entrada $\left[\frac{kJ}{kg}\right]$.
+	\item $h_2$: Entalpía a la salida $\left[\frac{kJ}{kg}\right]$.
+\end{itemize}
+
+
+\item [-]La potencia:
+\[P_{mec}=W\cdot \dot{m}\]
+\begin{itemize}
+	\item $\dot{m}$: Caudal másico de vapor $\left[\frac{kg}{s}\right]$.
+\end{itemize}
+
+\end{itemize}
+
+No obstante, este ciclo presenta los siguientes inconvenientes:
+\begin{itemize}
+  	\item [-] Rendimiento bajo (20-25\%).
+	\item [-] El punto 2 del ciclo se sitúa en la región bifásica. Por ello, el vapor tiene un grado de humedad $>10\%$ que provoca un desgaste elevado en los álabes de la turbina.
+\end{itemize}
+
+
+
+Por ello, para mejorar la eficiencia se pueden tomar las siguientes medidas:
+\begin{itemize}
+	\item [-] Trabajar a mayor presión en la caldera. 
+	\begin{itemize}
+		\item Permite aumentar el grado de humedad del vapor de escape.
+		\item Se exige una mayor robustez de los elementos lo cual aumenta el coste de la instalación.
+	\end{itemize}
+	\item [-] Trabajar a mayor temperatura en la caldera.
+	\begin{itemize}
+		\item Mejora la calidad del vapor a la salida de la turbina.
+		\item Mejora el rendimiento interno de la turbina.
+		\item  Aumenta el trabajo obtenido en la turbina.
+		\item Aumenta el consumo de calor cedido que equivale a mayor consumo de combustible.
+	\end{itemize}
+	\item [-] Disminuir la presión y temperatura en el condensador.
+	\begin{itemize}
+		\item Aumenta el trabajo obtenido en la turbina.
+		\item Requiere de disponer de agua de refrigeración a la temperatura adecuada.
+		\item Como la presión es menor aumenta el volumen ocupado por el vapor. Esto, implica un aumento de las dimensiones de la turbina y condensador.
+	\end{itemize}
+	\item [-] Sobrecaletar el vapor a la salida de la caldera.
+	\begin{itemize}
+		\item Disminuye el grado de humedad.
+		\item Implica subir la temperatura del punto 4.
+	\end{itemize}
+	\item [-] Recalentar el vapor a la salida de la turbina.
+	\begin{itemize}
+		\item Se basa en turbinar en varias etapas. Alta presión, media presión y baja presión.
+		\item Se recalienta el vapor a la salida de cada cuerpo. Se lleva el vapor a la caldera.
+	\end{itemize}
+	\item [-] Precalentar el agua de alimentación mediante extracciones de vapor. 
+	\begin{itemize}
+		\item Se extrae parte del agua caliente de las turbinas para los calentadores y desgasificador.
+	\end{itemize}
+\end{itemize}
+
+
+En el siguiente ciclo, en rojo se marca el sobrecalentamiento y en morado el recalentamiento.
+\begin{figure}[H]
+	\centering
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw [->, >=Stealth] (3.5,10) -- (3.5,16.25);
+			\draw [->, >=Stealth] (3,10.5) -- (11,10.5);
+			\node [font=\normalsize] at (11.25,10.5) {S};
+			\node [font=\normalsize] at (3.5,16.5) {T};
+			\draw [short] (4.25,11) .. controls (5.25,13) and (5.75,15) .. (6.75,15);
+			\draw [short] (6.75,15) .. controls (8,14.75) and (8.25,13) .. (10.25,11.25);
+			\draw [->, >=Stealth, dashed] (5.25,13.25) -- (8.5,13.25);
+			\draw [->, >=Stealth, dashed] (9.25,14.5) -- (9.25,13.25);
+			\draw [->, >=Stealth, dashed] (10,11.5) -- (4.5,11.5);
+			\draw [->, >=Stealth, dashed] (4.5,11.5) -- (4.5,12.25);
+			\draw [->, >=Stealth, dashed] (4.5,12.25) -- (5.25,13.25);
+			\node [font=\normalsize] at (9.25,14.75) {1};
+			\node [font=\normalsize] at (10,11) {4};
+			\node [font=\normalsize] at (4.5,11) {5};
+			\node [font=\normalsize] at (4.25,12.5) {6};
+			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth, dashed] (8.5,13.25) -- (9.25,14.5);
+			\draw [ color={rgb,255:red,212; green,0; blue,255}, ->, >=Stealth, dashed] (9.25,13.25) -- (10,14.5);
+			\draw [->, >=Stealth, dashed] (10,14.5) -- (10,13.25);
+			\draw [ color={rgb,255:red,212; green,0; blue,255}, ->, >=Stealth, dashed] (10,13.25) -- (10.75,14.5);
+			\draw [->, >=Stealth, dashed] (10.75,14.5) -- (10.75,12);
+			\draw [dashed] (10,11.5) -- (10.75,12);
+			\node [font=\normalsize] at (9.25,13) {1'};
+			\node [font=\normalsize] at (10,14.75) {2};
+			\node [font=\normalsize] at (10,13) {2'};
+			\node [font=\normalsize] at (11,14.75) {3};
+			\node [font=\normalsize] at (11,13) {3'};
+		\end{circuitikz}
+	\label{fig:my_label}
+\end{figure}
+
+Representando el esquema según sus bloques funcionales.
+\begin{figure}[H]
+ \begin{adjustbox}{width=1\textwidth}
+	\centering
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw [](1.5,15) to[short] (1.5,9.75);
+			\draw [](1.5,9.75) to[short] (5,9.75);
+			\draw [](5,9.75) to[short] (5,15);
+			\draw [short] (5,15) -- (5,15.5);
+			\draw [short] (5,15.5) -- (1.5,15.5);
+			\draw [short] (1.5,15.5) -- (1.5,14.75);
+			\draw [short] (3.25,16.75) -- (3.25,15.5);
+			\draw [short] (3,9.75) -- (3,8.75);
+			\draw [short] (3,8.75) -- (6,8.75);
+			\draw  (6,9.25) rectangle (7,8.25);
+			\draw  (8.5,8.75) circle (0.5cm) node {\normalsize $B_{AP}$} ;
+			\draw [short] (8,8.75) -- (7.75,8);
+			\draw [short] (7.75,8) -- (9.25,8);
+			\draw [short] (9,8.75) -- (9.25,8);
+			\draw [short] (8,8.75) -- (7,8.75);
+			\draw [short] (12,8.75) -- (11,8.75);
+			\draw  (10,9.25) rectangle (11,8.25);
+			\draw [short] (9,8.75) -- (10,8.75);
+			\draw  (13.25,9.25) circle (0.25cm);
+			\draw [ fill={rgb,255:red,255; green,255; blue,254} ] (13.25,8.75) ellipse (1.25cm and 0.5cm);
+			\node [font=\normalsize] at (13.25,8.75) {Desgasificador};
+			\node [font=\normalsize] at (8.5,7.25) {Calentadores};
+			\draw [->, >=Stealth, dashed] (9.5,7.25) -- (10.5,8.25);
+			\draw [->, >=Stealth, dashed] (7.5,7.25) -- (6.5,8.25);
+			\draw [short] (16.5,8.75) -- (16.75,8);
+			\draw [short] (15.25,8) -- (16.75,8);
+			\node [font=\normalsize] at (15.25,8.5) {};
+			\node [font=\normalsize] at (16,8.75) {$B_{AP}$};
+			\draw  (16,8.75) circle (0.5cm) node {\normalsize $B_{AP}$} ;
+			\draw [short] (15.25,8) -- (15.5,8.75);
+			\draw [short] (14.5,8.75) -- (15.5,8.75);
+			\draw  (16,11.25) circle (0.5cm) node {\normalsize C} ;
+			\draw [short] (16,10.75) -- (16,9.25);
+			\draw [short] (3.25,19.25) -- (5.75,19.25);
+			\draw [short] (3.25,19.25) -- (3.25,19);
+			\draw [short] (6,17.25) -- (7,17.75);
+			\draw [short] (6,17.25) -- (6,16.25);
+			\draw [short] (6,16.25) -- (7,15.75);
+			\draw [short] (7,15.75) -- (7,17.75);
+			\draw [short] (6.5,16) -- (6.5,14.75);
+			\draw [short] (6.5,14.75) -- (4.5,14.75);
+			\draw [short] (4.5,13) -- (7.75,13);
+			\draw [short] (7.75,13) -- (7.75,18.25);
+			\draw [short] (5.5,19.25) -- (6.25,19.25);
+			\draw [short] (6.5,19.25) -- (6.5,17.5);
+			\draw [short] (6,19.25) -- (6.5,19.25);
+			\node [font=\LARGE] at (8.5,16.75) {};
+			\draw [short] (8.5,17.25) -- (9.5,17.75);
+			\node [font=\LARGE] at (9.5,16.75) {};
+			\draw [short] (8.5,16.25) -- (9.5,15.75);
+			\draw [short] (8.5,17.25) -- (8.5,16.25);
+			\draw [short] (9.5,15.75) -- (9.5,17.75);
+			\draw [short] (7.75,18.25) -- (9,18.25);
+			\draw [short] (9,18.25) -- (9,17.5);
+			\draw [short] (9,16) -- (9,12.25);
+			\draw [short] (9,12.25) -- (4.5,12.25);
+			\draw [dashed] (7,17) -- (8.5,17);
+			\draw [dashed] (7,16.5) -- (8.5,16.5);
+			\draw [dashed] (9.5,17) -- (11,17);
+			\draw [dashed] (9.5,16.5) -- (11,16.5);
+			\node [font=\LARGE] at (11,16.75) {};
+			\draw [short] (11,16.25) -- (12,15.75);
+			\node [font=\LARGE] at (12,16.75) {};
+			\draw [short] (11,17.25) -- (12,17.75);
+			\draw [short] (11,17.25) -- (11,16.25);
+			\draw [short] (12,17.75) -- (12,15.75);
+			\draw [short] (11.5,16) -- (11.5,13.5);
+			\draw [short] (11.5,13.5) -- (16,13.5);
+			\draw [short] (16,13.5) -- (16,11.75);
+			\draw [short] (4.5,10.5) -- (10.25,10.5);
+			\draw [short] (10.25,10.5) -- (10.25,18.25);
+			\draw [short] (10.25,18.25) -- (11.5,18.25);
+			\draw [short] (11.5,18.25) -- (11.5,17.5);
+			\node [font=\normalsize] at (11.5,16.75) {BP};
+			\node [font=\normalsize] at (9,16.75) {MP};
+			\node [font=\normalsize] at (6.5,16.75) {AP};
+			\node [font=\normalsize] at (4.5,18) {Sobrecalentador};
+			\node [font=\normalsize] at (6.25,11.25) {Recalentador 2};
+			\node [font=\normalsize] at (3,12.75) {Caldera};
+			\node [font=\normalsize] at (6.25,13.75) {Recalentador 2};
+			\draw [short] (5.25,9) -- (5.25,8.5);
+			\draw [short] (5.25,19.5) -- (5.25,19);
+			\draw [short] (6.25,15.25) -- (6.75,15.25);
+			\draw [short] (7.5,15.25) -- (8,15.25);
+			\draw [short] (8.75,15.25) -- (9.25,15.25);
+			\draw [short] (10,15.25) -- (10.5,15.25);
+			\draw [short] (11.25,15.25) -- (11.75,15.25);
+			\draw [->, >=Stealth] (5.25,8.75) -- (4,8.75);
+			\draw [->, >=Stealth] (6.5,18.5) -- (6.5,17.5);
+			\draw [->, >=Stealth] (6.5,14.75) -- (5,14.75);
+			\draw [->, >=Stealth] (5,13) -- (6.5,13);
+			\draw [->, >=Stealth] (6.5,12.25) -- (5,12.25);
+			\draw [->, >=Stealth] (5,10.5) -- (6.5,10.5);
+			\draw [->, >=Stealth] (16,12.75) -- (16,11.75);
+			\draw [->, >=Stealth] (16,10) -- (16,9.25);
+			\draw [->, >=Stealth] (15.5,8.75) -- (14.5,8.75);
+			\draw [->, >=Stealth] (12,8.75) -- (11,8.75);
+			\draw [->, >=Stealth] (10,8.75) -- (9,8.75);
+			\draw [->, >=Stealth] (8,8.75) -- (7,8.75);
+			\node [font=\normalsize] at (5.25,19.75) {1};
+			\node [font=\normalsize] at (6,15.25) {1'};
+			\node [font=\normalsize] at (7.25,15.25) {2};
+			\node [font=\normalsize] at (8.5,15.25) {2'};
+			\node [font=\normalsize] at (9.75,15.25) {3};
+			\node [font=\normalsize] at (11,15.25) {3'};
+			\node [font=\normalsize] at (5.25,9.25) {6};
+			\draw [short] (15.75,10.25) -- (16.25,10.25);
+			\node [font=\normalsize] at (15.5,10.25) {5};
+		\end{circuitikz}
+	\label{fig:my_label}
+	\end{adjustbox}
+\end{figure}
+
+
+Por tanto, las ecuaciones teniendo en cuenta extracciones de caudal las expresiones anteriores quedan como:
+\[W_{TV}=\dot{m}(h_1-h'_1)+\left(\dot{m}-\dot{m}_e\right)(h'_1-h_2)\]
+Donde:
+\begin{itemize}
+	\item [-] $h'_1$. Entalpía del agua que es extraída de la turbina como agua de alimentación.  
+	\item [-] $\dot{m}_e$. Caudal másico extraído de la turbina para la alimentación.
+\end{itemize}
+\[W_B=\dot{m}_R\Delta h\]
+Donde: 
+\begin{itemize}
+	\item [-] $\dot{m}_R $. Caudal resultante que circula por la bomba.
+\end{itemize}
+
+
+
+\subsection{Desviaciones de los ciclos térmicos.}
+
+En los ciclos térmicos reales se producen desviaciones importantes con respecto al comportamiento ideal (denotado con el subíndice i) de
+los procesos de expansión en la turbina y de compresión en las bombas debido a que son irreversibles.
+
+\begin{figure}[H]
+	\centering
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw [->, >=Stealth] (3.5,10) -- (3.5,16.25);
+			\draw [->, >=Stealth] (3,10.5) -- (11,10.5);
+			\node [font=\normalsize] at (11.25,10.5) {S};
+			\node [font=\normalsize] at (3.5,16.5) {T};
+			\draw [short] (4.25,11) .. controls (5.25,13) and (5.75,15) .. (6.75,15);
+			\draw [short] (6.75,15) .. controls (7.75,14.75) and (8.25,13) .. (10,11.5);
+			\draw [->, >=Stealth, dashed] (5.25,13.25) -- (8.5,13.25);
+			\draw [ color={rgb,255:red,255; green,0; blue,221}, ->, >=Stealth, dashed] (9.25,14.5) -- (9.25,11.5);
+			\draw [->, >=Stealth, dashed] (10,11.5) -- (4.5,11.5);
+			\draw [ color={rgb,255:red,255; green,0; blue,221}, ->, >=Stealth, dashed] (4.5,11.5) -- (4.5,12.5);
+			\draw [->, >=Stealth, dashed] (4.5,12.5) -- (5.25,13.25);
+			\node [font=\normalsize] at (9.25,14.75) {1};
+			\node [font=\normalsize, color={rgb,255:red,255; green,0; blue,221}] at (9.25,11.25) {2i
+			};
+			\node [font=\normalsize] at (4.5,11) {3};
+			\node [font=\normalsize, color={rgb,255:red,255; green,0; blue,221}] at (4.25,12.75) {4i};
+			\draw [->, >=Stealth, dashed] (8.5,13.25) -- (9.25,14.5);
+			\draw [->, >=Stealth, dashed] (9.25,14.5) -- (9.75,11.5);
+			\node [font=\normalsize] at (9.75,11.25) {2
+			};
+			\draw [->, >=Stealth, dashed] (4.5,11.5) -- (4.75,12.75);
+			\node [font=\normalsize, color={rgb,255:red,54; green,54; blue,54}] at (4.75,13) {4};
+		\end{circuitikz}
+	\label{fig:my_label}
+\end{figure}
+\[\eta_{TV}=\frac{h_1-h_2}{h_1-h_{2s}}\]
+\[\eta_B=\frac{h_3-h_{4s}}{h_3-h_4}\]
+
+\subsection{Problema de aplicación.}
+Ejemplo 2: p 140
 \section{Caldera acuotubular.}
 Para hacer frente a presiones más elevadas, se emplean sistemas de circulación asistida y permiten mayor flexibilidad (periodos de variación de carga). En estos circuitos, se mantiene la circulación en el circuito por medio de bombas de agua instaladas en los tubos bajantes.
 \begin{figure}[H]
@@ -606,22 +979,6 @@ El vapor llega a la turbina a alta presión y temperatura (por encima de los 175
 
 
 
-La energía mecánica generada por unidad de masa:
-\[W=W^*\cdot \eta =(h_1-h_2)\cdot \eta\]
-\begin{itemize}
-	\item $W$: Trabajo útil por unidad de masa $\left[\frac{kJ}{kg}\right]$.
-	\item $W^*$: Trabajo isoentrópico por unidad de masa $\left[\frac{kJ}{kg}\right]$.
-	\item $\eta$: Rendimiento mecánico.
-	\item $h_1$: Entalpía a la entrada $\left[\frac{kJ}{kg}\right]$.
-	\item $h_2$: Entalpía a la salida $\left[\frac{kJ}{kg}\right]$.
-\end{itemize}
-
-
-La potencia:
-\[P_{mec}=W\cdot \dot{m}\]
-\begin{itemize}
-	\item $\dot{m}$: Caudal másico de vapor $\left[\frac{kg}{s}\right]$.
-\end{itemize}
 
 
 Si la turbina se compone de más cuerpos la potencia mecánica total es la suma de potencias y si se realizan extracciones l caudal se resta la porción de
@@ -750,8 +1107,8 @@ sistemas de agua de condensado (desde el pozo caliente del condensador hasta el
 desgasificador) y de agua de alimentación (desde el tanque del desgasificador hasta el
 economizador de caldera).
 \section{Desgasificador.}
-Se encarga de que el agua de alimentación  alcance la temperatura de ebullición correspondiente la presión de vapor de
-extracción de la turbina. Para ello, en el desgasificador se debe garantizar un calentamiento uniforme, la desgasificación y la extracción de incondensables.
+Se encarga de que el agua de alimentación  alcance la temperatura de ebullición correspondiente a la presión de vapor de
+extracción de la turbina. Para ello, en el desgasificador se debe garantizar un calentamiento uniforme, la desgasificación y la extracción de incondensables (burbujas en al agua).
 
 
 El calentamiento del agua de condensado con vapor de caldeo se efectúa en diferentes
@@ -798,7 +1155,7 @@ Las características geométricas de los cambiadores suelen ser las siguientes:
 \end{table}
 
 \section{Sistema de refrigeración.}
-El agua de circulación debe evacuar el calor latente de condensación y, por ello, son necesarios circuitos de refrigeración.
+El agua de circulación debe evacuar el calor latente de condensación y, por ello, son necesarios circuitos de refrigeración. Suele provocar que el agia refrigerante tenga una subida de aproximadamente 10\grado.
 
 
 El sistema de circulación tiene tres disposiciones básicas:

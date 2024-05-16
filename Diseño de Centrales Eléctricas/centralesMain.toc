@@ -345,22 +345,23 @@
 \contentsline {section}{\numberline {10.11}Chimenea.}{156}{section.10.11}%
 \contentsline {section}{\numberline {10.12}Circuito agua vapor.}{156}{section.10.12}%
 \contentsline {section}{\numberline {10.13}Ciclo de Rankine.}{157}{section.10.13}%
-\contentsline {subsection}{\numberline {10.13.1}Ejercicio resuelto.}{157}{subsection.10.13.1}%
-\contentsline {section}{\numberline {10.14}Caldera acuotubular.}{157}{section.10.14}%
-\contentsline {section}{\numberline {10.15}Calderín.}{158}{section.10.15}%
-\contentsline {section}{\numberline {10.16}Sobrecalentadores.}{158}{section.10.16}%
-\contentsline {section}{\numberline {10.17}Recalentadores.}{158}{section.10.17}%
-\contentsline {section}{\numberline {10.18}Economizador.}{159}{section.10.18}%
-\contentsline {section}{\numberline {10.19}Líneas de vapor.}{159}{section.10.19}%
-\contentsline {section}{\numberline {10.20}Turbinas de vapor.}{159}{section.10.20}%
-\contentsline {subsection}{\numberline {10.20.1}Clasificación de turbinas de vapor.}{160}{subsection.10.20.1}%
-\contentsline {subsection}{\numberline {10.20.2}Recorrido del vapor a través de la turbina.}{160}{subsection.10.20.2}%
-\contentsline {section}{\numberline {10.21}Condensadores.}{160}{section.10.21}%
-\contentsline {subsection}{\numberline {10.21.1}Condensadores de superficie.}{161}{subsection.10.21.1}%
-\contentsline {section}{\numberline {10.22}Sistema de alimentación.}{161}{section.10.22}%
-\contentsline {section}{\numberline {10.23}Desgasificador.}{161}{section.10.23}%
-\contentsline {section}{\numberline {10.24}Calentadores de agua de ciclo.}{162}{section.10.24}%
-\contentsline {section}{\numberline {10.25}Sistema de refrigeración.}{162}{section.10.25}%
-\contentsline {section}{\numberline {10.26}Tratamiento del agua de alimentación-circuito de refrigeración.}{163}{section.10.26}%
-\contentsline {section}{\numberline {10.27}Control de una central térmica.}{164}{section.10.27}%
-\contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{165}{chapter.11}%
+\contentsline {subsection}{\numberline {10.13.1}Desviaciones de los ciclos térmicos.}{160}{subsection.10.13.1}%
+\contentsline {subsection}{\numberline {10.13.2}Problema de aplicación.}{160}{subsection.10.13.2}%
+\contentsline {section}{\numberline {10.14}Caldera acuotubular.}{160}{section.10.14}%
+\contentsline {section}{\numberline {10.15}Calderín.}{161}{section.10.15}%
+\contentsline {section}{\numberline {10.16}Sobrecalentadores.}{161}{section.10.16}%
+\contentsline {section}{\numberline {10.17}Recalentadores.}{161}{section.10.17}%
+\contentsline {section}{\numberline {10.18}Economizador.}{162}{section.10.18}%
+\contentsline {section}{\numberline {10.19}Líneas de vapor.}{162}{section.10.19}%
+\contentsline {section}{\numberline {10.20}Turbinas de vapor.}{162}{section.10.20}%
+\contentsline {subsection}{\numberline {10.20.1}Clasificación de turbinas de vapor.}{162}{subsection.10.20.1}%
+\contentsline {subsection}{\numberline {10.20.2}Recorrido del vapor a través de la turbina.}{163}{subsection.10.20.2}%
+\contentsline {section}{\numberline {10.21}Condensadores.}{163}{section.10.21}%
+\contentsline {subsection}{\numberline {10.21.1}Condensadores de superficie.}{163}{subsection.10.21.1}%
+\contentsline {section}{\numberline {10.22}Sistema de alimentación.}{164}{section.10.22}%
+\contentsline {section}{\numberline {10.23}Desgasificador.}{164}{section.10.23}%
+\contentsline {section}{\numberline {10.24}Calentadores de agua de ciclo.}{165}{section.10.24}%
+\contentsline {section}{\numberline {10.25}Sistema de refrigeración.}{165}{section.10.25}%
+\contentsline {section}{\numberline {10.26}Tratamiento del agua de alimentación-circuito de refrigeración.}{166}{section.10.26}%
+\contentsline {section}{\numberline {10.27}Control de una central térmica.}{167}{section.10.27}%
+\contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{169}{chapter.11}%
