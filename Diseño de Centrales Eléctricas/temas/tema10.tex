@@ -682,14 +682,14 @@ En el siguiente ciclo, en rojo se marca el sobrecalentamiento y en morado el rec
 			\node [font=\normalsize] at (10,14.75) {2};
 			\node [font=\normalsize] at (10,13) {2'};
 			\node [font=\normalsize] at (11,14.75) {3};
-			\node [font=\normalsize] at (11,13) {3'};
+			\node [font=\normalsize] at (11,12) {3'};
 		\end{circuitikz}
 	\label{fig:my_label}
 \end{figure}
 
 Representando el esquema según sus bloques funcionales.
 \begin{figure}[H]
- \begin{adjustbox}{width=1\textwidth}
+ \begin{adjustbox}{width=0.9\textwidth}
 	\centering
 		\begin{circuitikz}
 			\tikzstyle{every node}=[font=\normalsize]
@@ -727,6 +727,7 @@ Representando el esquema según sus bloques funcionales.
 			\draw  (16,11.25) circle (0.5cm) node {\normalsize C} ;
 			\draw [short] (16,10.75) -- (16,9.25);
 			\draw [short] (3.25,19.25) -- (5.75,19.25);
+			\draw (3.25,19) to[R] (3.25,16.75);
 			\draw [short] (3.25,19.25) -- (3.25,19);
 			\draw [short] (6,17.25) -- (7,17.75);
 			\draw [short] (6,17.25) -- (6,16.25);
@@ -748,7 +749,9 @@ Representando el esquema según sus bloques funcionales.
 			\draw [short] (7.75,18.25) -- (9,18.25);
 			\draw [short] (9,18.25) -- (9,17.5);
 			\draw [short] (9,16) -- (9,12.25);
-			\draw [short] (9,12.25) -- (4.5,12.25);
+			\draw [short] (9,12.25) -- (4.5,12.25);		
+			\draw (4.5,13) to[R] (4.5,14.75);
+			\draw (4.5,10.5) to[R] (4.5,12.25);
 			\draw [dashed] (7,17) -- (8.5,17);
 			\draw [dashed] (7,16.5) -- (8.5,16.5);
 			\draw [dashed] (9.5,17) -- (11,17);
@@ -769,8 +772,8 @@ Representando el esquema según sus bloques funcionales.
 			\node [font=\normalsize] at (11.5,16.75) {BP};
 			\node [font=\normalsize] at (9,16.75) {MP};
 			\node [font=\normalsize] at (6.5,16.75) {AP};
-			\node [font=\normalsize] at (4.5,18) {Sobrecalentador};
-			\node [font=\normalsize] at (6.25,11.25) {Recalentador 2};
+			\node [font=\normalsize] at (5,18) {Sobrecalentador};
+			\node [font=\normalsize] at (6.25,11.25) {Recalentador 1};
 			\node [font=\normalsize] at (3,12.75) {Caldera};
 			\node [font=\normalsize] at (6.25,13.75) {Recalentador 2};
 			\draw [short] (5.25,9) -- (5.25,8.5);
@@ -814,7 +817,7 @@ Donde:
 	\item [-] $h'_1$. Entalpía del agua que es extraída de la turbina como agua de alimentación.  
 	\item [-] $\dot{m}_e$. Caudal másico extraído de la turbina para la alimentación.
 \end{itemize}
-\[W_B=\dot{m}_R\Delta h\]
+\[W_B=\frac{\dot{m}_R\Delta h}{\eta_{bomba}}\]
 Donde: 
 \begin{itemize}
 	\item [-] $\dot{m}_R $. Caudal resultante que circula por la bomba.
@@ -859,8 +862,225 @@ los procesos de expansión en la turbina y de compresión en las bombas debido a
 \[\eta_{TV}=\frac{h_1-h_2}{h_1-h_{2s}}\]
 \[\eta_B=\frac{h_3-h_{4s}}{h_3-h_4}\]
 
+
+\subsection{Rendimiento de la caldera.}
+Recordando expresiones de temas anteriores, se pueden expresar las magnitudes del ciclo de Rankine de la siguiente manera:
+\[\eta_{caldera}=\frac{P_{TV}}{P_{carbon}+P_{aire}}\approx\frac{P_{TV}}{P_{carbon}}=\frac{\dot{m}\Delta h}{\dot{m}_{carbon}PCI}\]
+\newpage
 \subsection{Problema de aplicación.}
-Ejemplo 2: p 140
+\begin{enumerate}
+	\item Sea una central que opera con ciclo de Rankine regenerativo con recalentamiento. Rendimiento de las bombas 80\%. Determinar:
+	\begin{figure}[h]
+		\centering
+			\begin{circuitikz}
+				\tikzstyle{every node}=[font=\LARGE]
+				\draw  (2.25,13.75) rectangle (5.75,9.5);
+				\draw [short] (3,9.5) -- (3,8.5);
+				\draw [short] (3,8.5) -- (2.25,8.5);
+				\draw [short] (2.25,8.5) -- (2.25,7);
+				\draw [short] (2.25,7) -- (3.25,7);
+				\draw  (3.25,6.75) rectangle  node {\normalsize Calderin} (5.25,7.25);
+				\draw  (8.25,6.75) rectangle  node {\normalsize Desgasificador} (10.75,7.25);
+				\draw  (11.75,6.75) rectangle  node {\normalsize Calentador baja presion} (15.75,7.25);
+				\draw  (16.75,8.5) circle (0.5cm) node {\normalsize $B_{AP}$} ;
+				\draw  (6.75,7) circle (0.5cm) node {\normalsize $B_{BP}$} ;
+				\draw  (16.75,10.5) circle (0.5cm) node {\normalsize $C$} ;
+				\draw  (14.25,12.75) circle (0.5cm) node {\normalsize $G$} ;
+				\draw [short] (11.25,13.75) -- (11.25,12.25);
+				\draw [short] (11.25,13.75) -- (12.5,13.25);
+				\draw [short] (12.5,13.25) -- (12.5,12.25);
+				\draw [short] (12.5,12.25) -- (11.25,11.75);
+				\draw [short] (11.25,11.75) -- (11.25,12.25);
+				\node [font=\normalsize] at (12,12.75) {$AP$};
+				\node [font=\normalsize] at (9.5,12.75) {$BP$};
+				\draw [short] (10.25,13.75) -- (10.25,11.75);
+				\draw [short] (10.25,11.75) -- (9,12.25);
+				\draw [short] (9,13.25) -- (10.25,13.75);
+				\draw [short] (9,13.25) -- (9,12.25);
+				\draw [short] (10.25,13) -- (11.25,13);
+				\draw [short] (10.25,12.5) -- (11.25,12.5);
+				\draw [short] (12.5,13) -- (13.75,13);
+				\draw [short] (12.5,12.5) -- (13.75,12.5);
+				\draw [short] (5.25,7) -- (6.25,7);
+				\draw [short] (7.25,7) -- (8.25,7);
+				\draw [short] (10.75,7) -- (11.75,7);
+				\draw [short] (15.75,7) -- (16.75,7);
+				\draw [short] (16.75,7) -- (16.75,8);
+				\draw [short] (16.75,9) -- (16.75,10);
+				\draw [short] (16.75,11) -- (16.75,11.5);
+				\draw [short] (16.75,11.5) -- (12,11.5);
+				\draw [short] (12,11.5) -- (12,12);
+				\draw [short] (4,13.75) -- (4,15.25);
+				\draw [short] (4,15.25) -- (9.5,15.25);
+				\draw [short] (9.5,15.25) -- (9.5,13.5);
+				\draw (5,11.75) to[R] (5,10);
+				\draw [](9.5,12) to[short] (9.5,11.75);
+				\draw[] (9.5,11.75) to[short] (7,11.75);
+				\draw[] (7,11.75) to[short] (5,11.75);
+				\draw [short] (5,10) -- (10.75,10);
+				\draw [short] (10.75,10) -- (10.75,11.25);
+				\draw [short] (10.75,14.75) -- (11.75,14.75);
+				\draw [short] (11.75,14.75) -- (12,14.75);
+				\draw [short] (12,14.75) -- (12,13.5);
+				\draw [dashed] (6.75,10.5) -- (6.75,9.5);
+				\draw [short] (6.75,10.5) -- (6.75,11.75);
+				\draw [short] (6.75,9.5) -- (6.75,8.5);
+				\draw [short] (6.75,8.5) -- (4.5,8.5);
+				\draw [short] (4.5,8.5) -- (4.25,8.5);
+				\draw [short] (4.25,8.5) -- (4.25,7.25);
+				\draw [dashed] (10.75,12) -- (10.75,13.5);
+				\draw [short] (10.75,12) -- (10.75,11.25);
+				\draw [short] (10.75,13.5) -- (10.75,14.75);
+				\draw [short] (11.75,12) -- (11.75,9.25);
+				\draw [short] (12,9.25) -- (14,9.25);
+				\draw [short] (14,9.25) -- (14,7.25);
+				\draw [short] (12,9.25) -- (9.25,9.25);
+				\draw [short] (9.25,9.25) -- (9.25,7.25);
+				\draw [->, >=Stealth] (3,8.5) -- (3,9.5);
+				\draw [->, >=Stealth] (6.25,7) -- (5.25,7);
+				\draw [->, >=Stealth] (4.25,8.5) -- (4.25,7.25);
+				\draw [->, >=Stealth] (8.25,7) -- (7.25,7);
+				\draw [->, >=Stealth] (11.75,7) -- (10.75,7);
+				\draw [->, >=Stealth] (16.75,7) -- (15.75,7);
+				\draw [->, >=Stealth] (16.75,10) -- (16.75,9);
+				\draw [->, >=Stealth] (16.75,11.5) -- (16.75,11);
+				\draw [->, >=Stealth] (14,8) -- (14,7.25);
+				\draw [->, >=Stealth] (9.25,8) -- (9.25,7.25);
+				\draw [->, >=Stealth] (9.5,14.25) -- (9.5,13.5);
+				\draw [->, >=Stealth] (12,14.25) -- (12,13.5);
+				\draw [->, >=Stealth] (9.5,11.75) -- (5,11.75);
+				\draw [->, >=Stealth] (9.25,10) -- (10.75,10);
+				\draw [short] (6.75,15.5) -- (6.75,15);
+				\draw [short] (8.25,12) -- (8.25,11.5);
+				\draw [short] (8.25,10.25) -- (8.25,9.75);
+				\draw [short] (5.5,8.75) -- (5.5,8.25);
+				\draw [short] (5.75,7.25) -- (5.75,6.75);
+				\draw [short] (7.75,7.25) -- (7.75,6.75);
+				\draw [short] (11.25,7.25) -- (11.25,6.75);
+				\draw [short] (9,8.25) -- (9.5,8.25);
+				\draw [short] (13.75,8.25) -- (14.25,8.25);
+				\draw [short] (16.25,7.25) -- (16.25,6.75);
+				\draw [short] (16.5,9.5) -- (17,9.5);
+				\draw [short] (16.25,11.25) -- (16.25,11.75);
+				\draw [short] (2,7.75) -- (2.5,7.75);
+				\node [font=\normalsize] at (6.75,15.75) {1};
+				\node [font=\normalsize] at (8.25,12.25) {2};
+				\node [font=\normalsize] at (8.25,10.5) {3};
+				\node [font=\normalsize] at (16.25,12) {4};
+				\node [font=\normalsize] at (16.25,9.5) {5};
+				\node [font=\normalsize] at (16.25,7.5) {6};
+				\node [font=\normalsize] at (11.25,7.5) {7};
+				\node [font=\normalsize] at (7.75,7.5) {8};
+				\node [font=\normalsize] at (5.75,7.5) {9};
+				\node [font=\normalsize] at (1.75,7.75) {10};
+				\node [font=\normalsize] at (5.5,9) {11};
+				\node [font=\normalsize] at (8.75,8.25) {12};
+				\node [font=\normalsize] at (13.5,8.25) {13};
+			\end{circuitikz}
+		\label{fig:my_label}
+	\end{figure}
+	
+	\begin{table}[H]
+		\centering
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{ccccc}
+			\hline
+			&P(bar)&T(\grado)&h($\frac{kJ}{kg}$)&Caudal($\frac{kg}{s}$)\\
+			\hline
+			1&180&540&3390&40\\
+			\hline
+			2&20&245&2900&40\\
+			\hline
+			3&20&550&3580&36\\
+			\hline
+			4&0,04&29&2500&31\\
+			\hline
+			6&2&¿?&¿?&¿?\\
+			\hline
+			11&20&245&2900&4\\
+			\hline
+			12&2&300&3075&1\\
+			\hline
+			13&0,9&225&2930&1\\
+			\hline
+		
+		\end{tabular}
+	\end{table}
+	
+	\begin{enumerate}
+		\item Los valores de P,T, h y caudal en todos los puntos.
+		\begin{itemize}
+			\item Punto 5 \newline
+			Los condensadores trabajan a presión constante. $P_5=P_4=0,04 bar$. Además, la temperatura también es la misma (cambio de estado). $T_5=T_4=29$\grado. Y el caudal también. $\dot{m}_5=31\frac{kg}{s}$. Para calcular la entalpía: $h_5=C_P\cdot T_5=4,18\cdot 29=121,41 \frac{kJ}{kg}$.
+			\item Punto 6 \newline
+			El caudal másico sigue siendo el mismo. $\dot{m}_6=31\frac{kg}{s}$. Para la entalpía, se emplea el trabajo en la bomba.
+			\[|W_{B_{BP}}|=\frac{P_6-P_5}{\rho}=h_6-h_5\rightarrow h_6=h_5+\frac{P_6-P_5}{\rho}=121,41+\frac{(2-0,04)\cdot 10^5}{1000}\cdot 10^{-3}=121,606 \frac{kJ}{kg}\]
+			
+			
+			Para calcular la temperatura:
+			\[\Delta h=C_P\cdot\Delta T\rightarrow \Delta T=\frac{\Delta h}{C_P}=\frac{121,606-121,41}{4,18}=0,05^\circ C\]
+			\[T_6=T_5+\Delta T=29,05^\circ C\]
+			\item Punto 7
+			\[\dot{m}_7= \dot{m}_6+\dot{m}_13=31+4=35\frac{kg}{s}\]
+			En los calentadores aumenta la temperatura a presión constante.
+			\[P_7=P_6=2bar\]
+			
+			
+			En los lugares de convergencia de flujo se cumple:
+			\[\sum\left(\dot{m}\cdot h\right)_{entrantes}=\sum\left(\dot{m}\cdot h\right)_{salientes}\rightarrow \dot{m}_7\cdot h_7=\dot{m}_6\cdot h_6+\dot{m}_{13}\cdot h_{13}\]
+			\[h_7=\frac{31\cdot121,606+4\cdot2930}{35}=442,57\frac{kJ}{kg}\]
+			
+			Para calcular la temperatura:
+			\[\Delta h=C_P\cdot \Delta T\rightarrow \Delta T=\frac{442,57-121,606}{4,18}=76,79^\circ C\]
+			\[T_7=T_6+\Delta T=29,05+76,79=105,83^\circ C\]
+			\item Punto 8 \newline
+			En la desgasificación se eleva la temperatura a presión constante.
+			\[\dot{m}_8=\dot{m}_7+\dot{m}_{12}=35+1=36\frac{kg}{s}\]
+			\[P_8=P_7=2bar\]
+			\[\dot{m}_8\cdot h_8=\dot{m}_7\cdot h_7+\dot{m}_{12}\cdot h_{12}\rightarrow h_8=\frac{35\cdot442,57+1\cdot3075}{36}=515,69\frac{kJ}{kg}\]
+			\[T_8=T_7+\frac{h_8-h_7}{C_P}^=105,83+\frac{515,69-442,57}{4,18}=123,32^\circ C\]
+			
+			\item Punto 9 \newline
+			La presión no varía en el calderín ni en la caldera.
+			\[\dot{m}_9=\dot{m}_8=36\frac{kg}{s}\]
+			\[P_9=P_1=180bar\]
+			\[|W_{B_{AP}}|=h_9-h_8=\frac{P_9-P_8}{\rho}\rightarrow h_9=515,69+\frac{(180-2)\cdot 10^5}{1000}\cdot 10^{-3}=533,49\frac{kJ}{kg}\]
+			\[T_9=T_8+\frac{h_9-h_8}{C_P}=132,22+\frac{483,49-515,69}{4,18}=127,48^\circ C\]
+			\item Punto 10 \newline
+			\[\dot{m}_{10}=\dot{m}_{9}+\dot{m}_{11}=36+4=40\frac{kg}{s}\]
+			\[P_{10}=P_1=180bar\]
+			\[\dot{m}_{10}\cdot h_{10}=\dot{m}_{9}\cdot h_{9}+\dot{m}_{11}\cdot h_{11}\rightarrow h_{10}=\frac{36\cdot533,49+4\cdot2900}{40}=770,14\frac{kJ}{kg}\]
+			\[T_{10}=T_9+\frac{h_{10}-h_9}{C_P}=127,48+\frac{770,14-533,48}{4,18}=184,09^\circ C\]
+			
+		\end{itemize}
+		\item La potencia en la turbina.
+		\[W_{AP}=\dot{m}_1(h_1-h_2)=40(3390-2900)=19,6MW\]
+		\[W_{BP}=\dot{m}_3(h_3-h_{12})+(\dot{m}_3-\dot{m}_{12})(h_{12}-h_{13})+
+		(\dot{m}_3-\dot{m}_{12}-\dot{m}_{13})(h_{13}-h_4)\]
+		\[W_{BP}=
+		36(3580-3075)+
+		35(3075-2930)+
+		31(2930-2500)=36,58MW\]
+		\[W_{TV}=W_{AP}+W_{BP}=56,16MW\]
+		\item La potencia consumida por las bombas.
+		\[W_{B_{BP}}=\frac{\dot{m}_5(h_5-h_6)}{\eta_B}=\frac{31(121,41-121,606)}{0,8}=-0,0076MW\]
+		\[W_{B_{AP}}=\frac{\dot{m}_8(h_8-h_9)}{\eta_B}=\frac{36(515,69-533,49)}{0,8}=-0,801MW\]
+		\[W_B=W_{B_{BP}}+W_{B_{AP}}=-0,8086MW\]
+		\item Potencia neta desarrollada por la turbina, la caldera y el condensador.
+		\[W_{neto}=W_{TV}-|W_B|=56,18-0,8086=55,3714MW\]
+		\[Q_{caldera}=\dot{m}_1(h_1-h_{10})+\dot{m}_3(h_3-h_2)=40(3390-770,14)+36(3580-2900)=129,27MW\]
+		\[Q_{condensador}=\dot{m}_4(h_4-h_5)=31(2500-121,41)=73,74MW\]
+		\item Rendimiento del ciclo.
+		\[\eta=\frac{W_{neto}}{Q_{caldera}}=\frac{55,3714}{129,27}=42,83\%\]
+		\[\eta=1-\frac{Q_{condensador}}{Q_{caldera}}=1-\frac{73,74}{129,27}=42,83\%\]
+		\item Potencia instalada en barras de la central y del generador si $\eta_{generador}=85\%$, $\eta_{trafo}=98\%$ y $\eta_{autoconsumo}=90\%$.
+		\[P_{bg}=W_{neto}\cdot\eta_{generador}=55,3713\cdot0,85=47,06MW\]
+		\[P_{bc}=P_{bg}\cdot\eta_{trafo} \cdot \eta_{autoconsumo}=47,06\cdot 0,98 \cdot0,9=41,41MW\]
+	\end{enumerate}
+\end{enumerate}
+
+
+\newpage
 \section{Caldera acuotubular.}
 Para hacer frente a presiones más elevadas, se emplean sistemas de circulación asistida y permiten mayor flexibilidad (periodos de variación de carga). En estos circuitos, se mantiene la circulación en el circuito por medio de bombas de agua instaladas en los tubos bajantes.
 \begin{figure}[H]
@@ -989,6 +1209,10 @@ Debido a la gran longitud que puede alcanzar el turbogrupo ( 20 a 40 m), se divi
 más partes , correspondientes a los cuerpos de la turbina ( alta, media y baja presión) y el alternador. La disposición más común es en eje tamdem-compound , en el que todos los rotores están
 alineados en un sólo eje.
 
+
+
+Cuantas más etapas tenga una turbina menor será la temperatura de la salida. Sigue la siguiente expresión:
+\[\frac{T_ {entrada}}{n_{etapas}}=T_{salida}\]
 \subsection{Clasificación de turbinas de vapor.}
 Según la dirección del flujo se habla de turbinas axiales o radiales.
 
