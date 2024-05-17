@@ -376,3 +376,4 @@
 \contentsline {section}{\numberline {10.26}Tratamiento del agua de alimentación-circuito de refrigeración.}{169}{section.10.26}%
 \contentsline {section}{\numberline {10.27}Control de una central térmica.}{170}{section.10.27}%
 \contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{171}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Centrales hidroeléctricas de bombeo.}{173}{chapter.12}%
