@@ -1373,3 +1373,208 @@
 					
 					\label{fig:my_label}
 				\end{figure}	
+			
+		
+	\section{Ejemplo de aplicación.}
+		Sea una turbina de gas según la siguiente figura:
+		\begin{figure}[H]
+			\centering
+				\begin{circuitikz}[scale = 0.85]
+					\tikzstyle{every node}=[font=\normalsize]
+					\draw [short] (-15.75,12) -- (-15.75,11);
+					\draw [short] (-15.75,11) -- (-16.75,10.5);
+					\draw [short] (-16.75,10.5) -- (-16.75,12.5);
+					\draw [short] (-16.75,12.5) -- (-15.75,12);
+					\draw [short] (-9,12) -- (-9,11);
+					\draw [short] (-9,11) -- (-8,10.5);
+					\draw [short] (-9,12) -- (-8,12.5);
+					\draw [short] (-8,12.5) -- (-8,10.5);
+					\draw [short] (-4.5,12) -- (-4.5,11);
+					\draw [short] (-4.5,11) -- (-3.5,10.5);
+					\draw [short] (-4.5,12) -- (-3.5,12.5);
+					\draw [short] (-3.5,12.5) -- (-3.5,10.5);
+					\draw  (-11.5,13.25) rectangle  node {\normalsize CC1} (-10,12.25);
+					\draw [->, >=Stealth] (-8.5,12.75) -- (-8.5,12.25);
+					\draw [short] (-8.5,12.75) -- (-10,12.75);
+					\draw [short] (-9.25,13) -- (-9.25,12.5)node[pos=0,above]{5};
+					\draw [short] (-11.5,12.75) -- (-13,12.75);
+					\draw [short] (-12.25,13) -- (-12.25,12.5)node[pos=0,above]{4};
+					\draw [->, >=Stealth] (-11.75,12.75) -- (-11.5,12.75);
+					\node [font=\normalsize] at (-16.25,11.5) {C};
+					\node [font=\normalsize] at (-8.5,11.5) {$T_{AP}$};
+					\node [font=\normalsize] at (-4,11.5) {$T_{BP}$};
+					\draw  (-15.25,14.25) rectangle  node {\normalsize Regen.} (-13,12.5);
+					\draw [->, >=Stealth] (-3,14) -- (-13,14);
+					\draw [->, >=Stealth] (-10.75,14.75) -- (-10.75,13.25)node[pos=0,above]{$F_1 = 0.06$};
+					\draw [short] (-4,10.75) -- (-4,10);
+					\draw [short] (-4,10) -- (-3,10);
+					\draw [short] (-3,10) -- (-3,14);
+					\draw [dashed] (-8,11.5) -- (-4.5,11.5);
+					\draw [dashed] (-3.5,11.5) -- (-2.5,11.5);
+					\draw  (-2,11.5) circle (0.5cm) node {\normalsize G} ;
+					\draw  (-6.5,13.25) rectangle  node {\normalsize CC2} (-5,12.25);
+					\draw [short] (-8.5,10.75) -- (-8.5,10);
+					\draw [short] (-8.5,10) -- (-7.5,10);
+					\draw [short] (-7.5,10) -- (-7.5,12.75);
+					\draw [->, >=Stealth] (-7.5,12.75) -- (-6.5,12.75);
+					\draw [short] (-7,13) -- (-7,12.5)node[pos=0,above]{6};
+					\draw [short] (-5,12.75) -- (-4,12.75);
+					\draw [->, >=Stealth] (-4,12.75) -- (-4,12.25);
+					\draw [short] (-4.5,13) -- (-4.5,12.5)node[pos=0,above]{7};
+					\draw [short] (-3.25,12.75) -- (-2.75,12.75)node[pos=1,right]{8};
+					\draw [->, >=Stealth] (-5.75,14.75) -- (-5.75,13.25)node[pos=0,above]{$F_2 = 0.05$};
+					\draw [->, >=Stealth] (-15.25,14) -- (-17.25,14);
+					\draw [->, >=Stealth] (-16.25,12.75) -- (-15.25,12.75);
+					\draw [short] (-16.25,12.75) -- (-16.25,12.25);
+					\draw  (-18,9.5) rectangle  node {\normalsize Filtro + Evap.} (-14.5,8.5);
+					\draw [->, >=Stealth] (-16.25,9.5) -- (-16.25,10.75);
+					\draw [->, >=Stealth] (-19,9) -- (-18,9);
+					\draw [short] (-18.5,9.25) -- (-18.5,8.75)node[pos=0,above]{1};
+					\draw [short] (-16.5,10) -- (-16,10)node[pos=1,right]{2};
+					\draw [short] (-15.75,13) -- (-15.75,12.5)node[pos=0,above]{3};
+					\draw [short] (-16.75,14.25) -- (-16.75,13.75)node[pos=0,above]{9};
+					\node [font=\normalsize] at (-11.75,9.5) {$PCI = 25\,\dfrac{MJ}{Nm^3}$};
+					\node [font=\normalsize] at (-11.5,8.5) {2500h de funcionamiento};
+					\draw [dashed] (-15.75,11.5) -- (-9,11.5);
+				\end{circuitikz}
+			
+			\label{fig:my_label}
+		\end{figure}
+		\newpage
+		Datos:
+		\begin{itemize}
+			\item $P_1 = 1\,bar \qquad T_1 = 20\,^\circ C \qquad \dot m_1 = 300\,kg/s$
+			\item $T_2 = 10\,^\circ C \qquad T_4 = 433.4\,^\circ C \qquad T_5 = 1000\,^\circ C \qquad T_7 = 900\,^\circ C$
+			\item $\rho = r_p = 8$
+			\item Presión intermedia = $p_a = 3\,bar$
+			\item $\eta_{ISO_C} = 85\% \qquad \eta_{mec_C} = 98\%$
+			\item $\eta_{cc1} = \eta_{cc2} = 95\%$
+			\item $\eta_{ISO_{BP}} = 98\% \qquad \eta_{ISO_{AP}} = 85\% \qquad \eta_{mec_{TG}} = 98\%$
+			\item $\eta_{reg} = 75\% \qquad \eta_{alt} = 85\%$
+			\item $c_{p,aire} = 1.0025\,\dfrac{kJ}{kg\cdot K}$
+			\item $c_{p,gases} = 1.128\,\dfrac{kJ}{kg\cdot K}$			
+		\end{itemize}	
+		
+		Se pide:
+		\begin{enumerate}
+			\item Valor de la presión y la temperatura en todos los puntos.
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [->, >=Stealth] (-14.75,9) -- (-14.75,14.5)node[pos=1,left]{T};
+							\draw [->, >=Stealth] (-14.75,9) -- (-8.25,9)node[pos=1,below]{S};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (-14,9.75) -- (-14,11.5);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (-10.25,12.75) -- (-10.25,11.75);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (-9,12.25) -- (-9,11.25);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (-14,11.5) .. controls (-12.75,11.75) and (-11.25,12) .. (-10.25,12.75);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (-10.25,11.75) .. controls (-9.75,11.9) and (-9.5,12) .. (-9,12.25);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (-14,9.75) .. controls (-12.25,10) and (-10.75,10.25) .. (-9,11.25);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (-14,9.75) -- (-13,11.75);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (-10.25,12.75) -- (-9.5,12);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (-9,12.25) -- (-8.5,11.5);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (-9,11.25) -- (-8.5,11.5);
+							
+							
+							\node at (-12.5,10) [circ, color={rgb,255:red,0; green,128; blue,255}] 		{};
+							\node at (-14,9.75) [circ, color={rgb,255:red,0; green,128; blue,255}] 		{};
+							\node at (-14,11.5) [circ, color={rgb,255:red,0; green,128; blue,255}] 		{};
+							\node at (-13.025,11.7) [circ, color={rgb,255:red,0; green,128; blue,255}] 	{};
+							\node at (-12,11.95) [circ, color={rgb,255:red,0; green,128; blue,255}] 	{};
+							\node at (-10.25,12.75) [circ, color={rgb,255:red,0; green,128; blue,255}] 	{};
+							\node at (-10.25,11.75) [circ, color={rgb,255:red,0; green,128; blue,255}] 	{};
+							\node at (-9.5,12.02) [circ, color={rgb,255:red,0; green,128; blue,255}] 	{};
+							\node at (-9,12.25) [circ, color={rgb,255:red,0; green,128; blue,255}] 		{};
+							\node at (-8.5,11.5) [circ, color={rgb,255:red,0; green,128; blue,255}] 	{};
+							\node at (-9,11.25) [circ, color={rgb,255:red,0; green,128; blue,255}] 		{};
+							\node at (-10,10.75) [circ, color={rgb,255:red,0; green,128; blue,255}] 	{};
+							
+							
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (-12.5,10.25) {1};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (-14,9.5) {2};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (-14,11.75) {3s};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (-13,12) {3};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (-12,12.25) {4};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (-10.25,13) {5};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (-10.25,11.5) {6s};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (-9.5,12.4) {6};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (-9,12.5) {7};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (-8.25,11.5) {8};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (-9,11) {8s};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (-10,10.5) {9};
+							
+						\end{circuitikz}
+					
+					\label{fig:my_label}
+				\end{figure}
+				
+				Punto 1:
+				\[T_1 = 20 + 273.15 = 293.15\,K \qquad P_1 = 1\,bar\]
+				
+				Punto 2:
+				\[T_2 = 10 + 273.15 = 283.15\,K \qquad P_2 = 1\,bar\]
+				
+				Punto 3:
+				\[P_3 = r_p \cdot P_2 = 8\cdot 1 = 8\,bar\]
+				\[\dfrac{T_{3s}}{T_2} = \left(\dfrac{P_3}{P_2}\right)^{\dfrac{\gamma - 1}{\gamma}} \Rightarrow T_{3s} = T_2\cdot \left(\dfrac{P_3}{P_2}\right)^{\dfrac{\gamma - 1}{\gamma}} = 512.91\,K\]
+				\[\eta_{ISO_C} = \dfrac{T_{3s} - T_2}{T_3 - T_2} \Rightarrow T_3 = T_2 + \dfrac{T_{3s} - T_2}{\eta_{ISO_C}} = 553.45\,K\]
+				
+				Punto 4:
+				\[T_4 = 433.4 + 273.15 = 706.55\,K \qquad P_4 = P_3 = 8\,bar\]
+				
+				Punto 5:
+				\[T_5 = 1000 + 273.15 = 1273.15\,K \qquad P_5 = P_3 = 8\,bar\]
+				\newpage
+				Punto 6:
+				\[P_6 = P_a = 3\,bar\]
+				\[\dfrac{T_5}{T_{6s}} = \left(\dfrac{P_5}{P_6}\right)^{\dfrac{\gamma - 1}{\gamma}} \Rightarrow T_{6s} = \dfrac{T_5}{\left(\dfrac{P_3}{P_2}\right)^{\dfrac{\gamma - 1}{\gamma}}} = 961.99\,K\]
+				\[\eta_{ISO_{AP}} = \dfrac{T_5 - T_6}{T_5 - T_{6s}} \Rightarrow T_6 = T_5 - \eta_{ISO_{AP}}(T_5 - T_{6s}) = 1008.67\,K\]
+				
+				Punto 7:
+				\[T_7 = 900 + 273.15 = 1173.15\,K \qquad P_7 = P_6 = 3\,bar\]
+				
+				Punto 8:
+				\[P_8 = P_1 = 1\,bar\]
+				\[\dfrac{T_7}{T_{8s}} = \left(\dfrac{P_7}{P_8}\right)^{\dfrac{\gamma - 1}{\gamma}} \Rightarrow T_{8s} = \dfrac{T_7}{\left(\dfrac{P_7}{P_8}\right)^{\dfrac{\gamma - 1}{\gamma}}} = 857.1\,K\]
+				\[\eta_{ISO_{BP}} = \dfrac{T_7 - T_8}{T_7 - T_{8s}} \Rightarrow T_8 = T_7 - \eta_{ISO_{BP}}(T_7 - T_{8s}) = 863.42\,K\]
+				
+				Punto 9:
+				\[P_9 = P_1 = 1\,bar\]
+				\[\eta_{reg} = \dfrac{T_4 - T_3}{T_8 - T_9} \Rightarrow T_9 = T_8 - \dfrac{T_4 - T_3}{\eta_{reg}} = 659.29\,K\]
+				
+			\item La potencia consumida por el compresor, desarrollada por la turbina y cedida en la cámara de combustión.
+			
+			
+				Compresor:
+				\[\dot W_C = h_3 - h_2 = c_{p,\,aire}(T_3 - T_2) = 270.98\,\dfrac{kJ}{kg}\]
+				\[W_C = \dot m_1 \cdot \dfrac{\dot W_C}{\eta_{mec_C}} = 300 \cdot \dfrac{270.98}{0.98} = 82.95\,MW\]
+				
+				Turbina:
+				\[\dot W_{TG,\,AP} = h_5 - h_6 = c_{p,\,gases}(T_5 - T_6) = 298.33\,\dfrac{kJ}{kg}\]
+				\[W_{TG,\,AP} = \dot m_{1}(1+F_1) \cdot \dot W_{TG,\,AP}\cdot \eta_{mec_{TG}} = 92.97\,MW\]
+				
+				\[\dot W_{TG,\,BP} = h_7 - h_8 = c_{p,\,gases}(T_7 - T_8) = 349.38\,\dfrac{kJ}{kg}\]
+				\[W_{TG,\,BP} = \dot m_{1}(1+F_1+F_2) \cdot \dot W_{TG,\,BP}\cdot \eta_{mec_{TG}} = 114.02\,MW\]
+				
+				\[W_{TG} = W_{TG,\,AP} + W_{TG,\,BP} = 206.99\,MW\]
+				
+				Cámaras de combustión:
+				\[\dot Q_{cc1} = h_5 - h_4 = c_{p,\,aire}(T_5 - T_4) = 568.02\,\dfrac{kJ}{kg}\]
+				\[Q_{cc1} = \dot m_1 (1+F_1)\cdot \dot Q_{cc1} \cdot \eta_{cc1} = 171.60\,MW\]
+				
+				\[\dot Q_{cc2} = h_7 - h_6 = c_{p,\,gases}(T_7 - T_6) = 185.53\,\dfrac{kJ}{kg}\]
+				\[Q_{cc2} = \dot m_1 (1+F_1+F_2)\cdot \dot Q_{cc2} \cdot \eta_{cc2} = 171.60\,MW\]
+				
+				\[Q_{cc} = Q_{cc1} + Q_{cc2} = 230.29\,MW\]
+				
+			\item El rendimiento del ciclo, el factor de potencia, el rendimiento eléctrico y la potencia instalada.
+				\[\eta_{ciclo} = \dfrac{W_{TG} - W_C}{Q_{cc}} = 53.86\%\]
+				\[\varphi_p = 1-\dfrac{W_C}{W_{TG}} = 59.92\%\]
+				\[P_{inst} = W_{neto} \cdot \eta_{alt} = (W_{TG} - W_C)\cdot \eta_{alt} = 105.43\,MW\]
+				\[\eta_{elec} = \dfrac{P_{inst}}{Q_{cc}} = 45.78\%\]
+				
+			\item El Heat Rate y el consumo de gas en $\dfrac{Nm^3}{\text{año}}$
+				\[HR = \dfrac{Q_{cc}\,\dfrac{kJ}{s}\cdot 3600\,\dfrac{s}{h}}{P_{inst}\,kW} = 7863.51\,\dfrac{kJ}{kWh}\]
+				\[Consumo = HR \dfrac{kJ}{kWh}\cdot \dfrac{1\,MJ}{10^3\,kJ}\cdot \dfrac{1\,Nm^3}{25\,MJ} \cdot P_{inst} \cdot Horas/\text{año} = 83.03\,\dfrac{MNm^3}{\text{año}} \]
+			
+		\end{enumerate}
