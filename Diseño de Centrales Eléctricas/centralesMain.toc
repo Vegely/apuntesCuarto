@@ -322,95 +322,112 @@
 \contentsline {subsection}{\numberline {9.5.1}Transformador de servicios auxiliares (TSA).}{148}{subsection.9.5.1}%
 \contentsline {subsection}{\numberline {9.5.2}Transformador de arranque (TA).}{148}{subsection.9.5.2}%
 \contentsline {section}{\numberline {9.6}Suministros de baja tensión y de emergencia.}{148}{section.9.6}%
-\contentsline {section}{\numberline {9.7}Suministro de reserva de los servicios auxiliares.}{149}{section.9.7}%
-\contentsline {subsection}{\numberline {9.7.1}Posibilidad A.}{149}{subsection.9.7.1}%
+\contentsline {section}{\numberline {9.7}Suministro de reserva de los servicios auxiliares.}{148}{section.9.7}%
+\contentsline {subsection}{\numberline {9.7.1}Posibilidad A.}{148}{subsection.9.7.1}%
 \contentsline {subsection}{\numberline {9.7.2}Posibilidad B.}{149}{subsection.9.7.2}%
 \contentsline {section}{\numberline {9.8}Esquema de protecciones.}{149}{section.9.8}%
-\contentsline {section}{\numberline {9.9}Parada de emergencia.}{149}{section.9.9}%
-\contentsline {section}{\numberline {9.10}Arranque en centrales de ciclo combinado.}{150}{section.9.10}%
-\contentsline {chapter}{\numberline {10}Centrales térmicas de carbón.}{151}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Esquema funcional de una central de carbón.}{151}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Circuito aire-combustible-gases-ceniza.}{151}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Almacenamiento y preparación del combustible.}{152}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Almacenamiento del combustible.}{152}{subsection.10.3.1}%
-\contentsline {subsection}{\numberline {10.3.2}Preparación del combustible}{152}{subsection.10.3.2}%
-\contentsline {section}{\numberline {10.4}Tipos de molinos.}{153}{section.10.4}%
-\contentsline {subsection}{\numberline {10.4.1}Molino de anillo de bolas.}{153}{subsection.10.4.1}%
-\contentsline {subsection}{\numberline {10.4.2}Molino tubular de bolas tipo Hardinge.}{153}{subsection.10.4.2}%
-\contentsline {subsection}{\numberline {10.4.3}Molino tubular de bolas Foster Wheeler.}{153}{subsection.10.4.3}%
-\contentsline {subsection}{\numberline {10.4.4}Molino de rodillos Babcock-Wilcox.}{154}{subsection.10.4.4}%
-\contentsline {subsection}{\numberline {10.4.5}Molino de rodillos de Raymond.}{154}{subsection.10.4.5}%
-\contentsline {subsection}{\numberline {10.4.6}Molino de batea móvil.}{154}{subsection.10.4.6}%
-\contentsline {subsection}{\numberline {10.4.7}Molinos de tipo impacto.}{155}{subsection.10.4.7}%
-\contentsline {section}{\numberline {10.5}Circuito aire-gases.}{155}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Quemadores.}{156}{section.10.6}%
-\contentsline {section}{\numberline {10.7}Hogar.}{156}{section.10.7}%
-\contentsline {subsection}{\numberline {10.7.1}Pantallas evaporadoras.}{156}{subsection.10.7.1}%
-\contentsline {section}{\numberline {10.8}Ventiladores.}{157}{section.10.8}%
-\contentsline {subsection}{\numberline {10.8.1}Ventiladores de tiro forzado.}{157}{subsection.10.8.1}%
-\contentsline {subsection}{\numberline {10.8.2}Ventiladores de tiro inducido.}{157}{subsection.10.8.2}%
-\contentsline {section}{\numberline {10.9}Precalentadores.}{157}{section.10.9}%
-\contentsline {section}{\numberline {10.10}Productos de desecho: Cenizas volantes y escoria.}{158}{section.10.10}%
-\contentsline {subsection}{\numberline {10.10.1}Ceniceros.}{158}{subsection.10.10.1}%
-\contentsline {subsection}{\numberline {10.10.2}Retención de cenizas volantes.}{159}{subsection.10.10.2}%
-\contentsline {subsubsection}{Filtros mecánicos.}{159}{subsubsection*.279}%
-\contentsline {subsubsection}{Filtros electrostáticos.}{159}{subsubsection*.282}%
-\contentsline {subsubsection}{Colectores mixtos.}{160}{subsubsection*.284}%
-\contentsline {section}{\numberline {10.11}Chimenea.}{160}{section.10.11}%
-\contentsline {section}{\numberline {10.12}Circuito agua vapor.}{160}{section.10.12}%
-\contentsline {section}{\numberline {10.13}Ciclo de Rankine.}{161}{section.10.13}%
-\contentsline {subsection}{\numberline {10.13.1}Desviaciones de los ciclos térmicos.}{164}{subsection.10.13.1}%
-\contentsline {subsection}{\numberline {10.13.2}Rendimiento de la caldera.}{164}{subsection.10.13.2}%
-\contentsline {subsection}{\numberline {10.13.3}Problema de aplicación.}{165}{subsection.10.13.3}%
-\contentsline {section}{\numberline {10.14}Caldera acuotubular.}{168}{section.10.14}%
-\contentsline {section}{\numberline {10.15}Calderín.}{168}{section.10.15}%
-\contentsline {section}{\numberline {10.16}Sobrecalentadores.}{169}{section.10.16}%
-\contentsline {section}{\numberline {10.17}Recalentadores.}{169}{section.10.17}%
-\contentsline {section}{\numberline {10.18}Economizador.}{169}{section.10.18}%
-\contentsline {section}{\numberline {10.19}Líneas de vapor.}{169}{section.10.19}%
-\contentsline {section}{\numberline {10.20}Turbinas de vapor.}{169}{section.10.20}%
-\contentsline {subsection}{\numberline {10.20.1}Clasificación de turbinas de vapor.}{170}{subsection.10.20.1}%
-\contentsline {subsection}{\numberline {10.20.2}Recorrido del vapor a través de la turbina.}{170}{subsection.10.20.2}%
-\contentsline {section}{\numberline {10.21}Condensadores.}{170}{section.10.21}%
-\contentsline {subsection}{\numberline {10.21.1}Condensadores de superficie.}{171}{subsection.10.21.1}%
-\contentsline {section}{\numberline {10.22}Sistema de alimentación.}{172}{section.10.22}%
-\contentsline {section}{\numberline {10.23}Desgasificador.}{172}{section.10.23}%
-\contentsline {section}{\numberline {10.24}Calentadores de agua de ciclo.}{172}{section.10.24}%
-\contentsline {section}{\numberline {10.25}Sistema de refrigeración.}{173}{section.10.25}%
-\contentsline {section}{\numberline {10.26}Tratamiento del agua de alimentación-circuito de refrigeración.}{173}{section.10.26}%
-\contentsline {section}{\numberline {10.27}Control de una central térmica.}{174}{section.10.27}%
-\contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{175}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Componentes de las centrales de ciclo combinado.}{175}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Ciclo combinado de gas natural.}{176}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Ciclos de gas.}{177}{section.11.3}%
-\contentsline {subsection}{\numberline {11.3.1}Ciclo de Brayton.}{177}{subsection.11.3.1}%
-\contentsline {subsection}{\numberline {11.3.2}Ciclo de Brayton regenerativo.}{178}{subsection.11.3.2}%
-\contentsline {subsection}{\numberline {11.3.3}Ciclo de Brayton con recalentamiento.}{179}{subsection.11.3.3}%
-\contentsline {subsection}{\numberline {11.3.4}Ciclo de Brayton con recalentamiento y refrigeración.}{179}{subsection.11.3.4}%
-\contentsline {subsection}{\numberline {11.3.5}Compresores.}{180}{subsection.11.3.5}%
-\contentsline {section}{\numberline {11.4}Turbinas de gas.}{180}{section.11.4}%
-\contentsline {subsection}{\numberline {11.4.1}Parámetros característicos.}{181}{subsection.11.4.1}%
-\contentsline {subsection}{\numberline {11.4.2}Distribución de la energía en la turbina de gas.}{181}{subsection.11.4.2}%
-\contentsline {subsection}{\numberline {11.4.3}Control de las emisiones de NOx.}{181}{subsection.11.4.3}%
-\contentsline {subsubsection}{Inyección de agua.}{181}{subsubsection*.321}%
-\contentsline {subsubsection}{Inyección de vapor sobrecalentado.}{182}{subsubsection*.323}%
-\contentsline {subsection}{\numberline {11.4.4}Degradación de la potencia con las horas de funcionamiento.}{182}{subsection.11.4.4}%
-\contentsline {subsubsection}{Lavado con solución detergente.}{182}{subsubsection*.325}%
-\contentsline {subsection}{\numberline {11.4.5}Admisión de aire.}{183}{subsection.11.4.5}%
-\contentsline {subsection}{\numberline {11.4.6}Sistema de filtrado de aire.}{183}{subsection.11.4.6}%
-\contentsline {subsection}{\numberline {11.4.7}Sistema de enfriamiento de aire. Enfriador evaporativo.}{183}{subsection.11.4.7}%
-\contentsline {subsection}{\numberline {11.4.8}Compresores.}{183}{subsection.11.4.8}%
-\contentsline {subsubsection}{Tipos de conversores dinámicos.}{184}{subsubsection*.328}%
-\contentsline {subsection}{\numberline {11.4.9}Cámara de combustión.}{184}{subsection.11.4.9}%
-\contentsline {subsection}{\numberline {11.4.10}Turbina de gas. Aspectos constructivos.}{184}{subsection.11.4.10}%
-\contentsline {subsubsection}{Álabes de la turbina de gas.}{184}{subsubsection*.330}%
-\contentsline {subsubsection}{Teoría de funcionamiento.}{184}{subsubsection*.331}%
-\contentsline {section}{\numberline {11.5}Topología de los ciclos combinados.}{185}{section.11.5}%
-\contentsline {subsection}{\numberline {11.5.1}Tipos de configuración.}{185}{subsection.11.5.1}%
-\contentsline {subsection}{\numberline {11.5.2}Distribución de energía en un ciclo combinado.}{186}{subsection.11.5.2}%
-\contentsline {section}{\numberline {11.6}Rendimiento del ciclo combinado.}{186}{section.11.6}%
-\contentsline {subsection}{\numberline {11.6.1}Diagramas de intercambio.}{186}{subsection.11.6.1}%
-\contentsline {subsubsection}{Ciclo combinado de un nivel de presión.}{187}{subsubsection*.337}%
-\contentsline {subsubsection}{Ciclo combinado con dos niveles de presión.}{187}{subsubsection*.339}%
-\contentsline {section}{\numberline {11.7}Ejemplo de aplicación.}{187}{section.11.7}%
-\contentsline {chapter}{\numberline {12}Centrales hidroeléctricas de bombeo.}{191}{chapter.12}%
+\contentsline {section}{\numberline {9.9}Parada de emergencia.}{150}{section.9.9}%
+\contentsline {section}{\numberline {9.10}Arranque en centrales de ciclo combinado.}{151}{section.9.10}%
+\contentsline {section}{\numberline {9.11}Esquema unifilar eléctrico de una central de ciclo combinado de 2 x 400 MW con transformador de arranque. Configuración monoeje.}{152}{section.9.11}%
+\contentsline {chapter}{\numberline {10}Centrales térmicas de carbón.}{153}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Esquema funcional de una central de carbón.}{153}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Circuito aire-combustible-gases-ceniza.}{153}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Almacenamiento y preparación del combustible.}{154}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Almacenamiento del combustible.}{154}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.3.2}Preparación del combustible}{154}{subsection.10.3.2}%
+\contentsline {section}{\numberline {10.4}Tipos de molinos.}{155}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}Molino de anillo de bolas.}{155}{subsection.10.4.1}%
+\contentsline {subsection}{\numberline {10.4.2}Molino tubular de bolas tipo Hardinge.}{155}{subsection.10.4.2}%
+\contentsline {subsection}{\numberline {10.4.3}Molino tubular de bolas Foster Wheeler.}{155}{subsection.10.4.3}%
+\contentsline {subsection}{\numberline {10.4.4}Molino de rodillos Babcock-Wilcox.}{156}{subsection.10.4.4}%
+\contentsline {subsection}{\numberline {10.4.5}Molino de rodillos de Raymond.}{156}{subsection.10.4.5}%
+\contentsline {subsection}{\numberline {10.4.6}Molino de batea móvil.}{156}{subsection.10.4.6}%
+\contentsline {subsection}{\numberline {10.4.7}Molinos de tipo impacto.}{157}{subsection.10.4.7}%
+\contentsline {section}{\numberline {10.5}Circuito aire-gases.}{157}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Quemadores.}{158}{section.10.6}%
+\contentsline {section}{\numberline {10.7}Hogar.}{158}{section.10.7}%
+\contentsline {subsection}{\numberline {10.7.1}Pantallas evaporadoras.}{158}{subsection.10.7.1}%
+\contentsline {section}{\numberline {10.8}Ventiladores.}{159}{section.10.8}%
+\contentsline {subsection}{\numberline {10.8.1}Ventiladores de tiro forzado.}{159}{subsection.10.8.1}%
+\contentsline {subsection}{\numberline {10.8.2}Ventiladores de tiro inducido.}{159}{subsection.10.8.2}%
+\contentsline {section}{\numberline {10.9}Precalentadores.}{159}{section.10.9}%
+\contentsline {section}{\numberline {10.10}Productos de desecho: Cenizas volantes y escoria.}{160}{section.10.10}%
+\contentsline {subsection}{\numberline {10.10.1}Ceniceros.}{160}{subsection.10.10.1}%
+\contentsline {subsection}{\numberline {10.10.2}Retención de cenizas volantes.}{161}{subsection.10.10.2}%
+\contentsline {subsubsection}{Filtros mecánicos.}{161}{subsubsection*.284}%
+\contentsline {subsubsection}{Filtros electrostáticos.}{161}{subsubsection*.287}%
+\contentsline {subsubsection}{Colectores mixtos.}{162}{subsubsection*.289}%
+\contentsline {section}{\numberline {10.11}Chimenea.}{162}{section.10.11}%
+\contentsline {section}{\numberline {10.12}Circuito agua vapor.}{162}{section.10.12}%
+\contentsline {section}{\numberline {10.13}Ciclo de Rankine.}{163}{section.10.13}%
+\contentsline {subsection}{\numberline {10.13.1}Desviaciones de los ciclos térmicos.}{166}{subsection.10.13.1}%
+\contentsline {subsection}{\numberline {10.13.2}Rendimiento de la caldera.}{166}{subsection.10.13.2}%
+\contentsline {subsection}{\numberline {10.13.3}Problema de aplicación.}{167}{subsection.10.13.3}%
+\contentsline {section}{\numberline {10.14}Caldera acuotubular.}{170}{section.10.14}%
+\contentsline {section}{\numberline {10.15}Calderín.}{170}{section.10.15}%
+\contentsline {section}{\numberline {10.16}Sobrecalentadores.}{171}{section.10.16}%
+\contentsline {section}{\numberline {10.17}Recalentadores.}{171}{section.10.17}%
+\contentsline {section}{\numberline {10.18}Economizador.}{171}{section.10.18}%
+\contentsline {section}{\numberline {10.19}Líneas de vapor.}{171}{section.10.19}%
+\contentsline {section}{\numberline {10.20}Turbinas de vapor.}{171}{section.10.20}%
+\contentsline {subsection}{\numberline {10.20.1}Clasificación de turbinas de vapor.}{172}{subsection.10.20.1}%
+\contentsline {subsection}{\numberline {10.20.2}Recorrido del vapor a través de la turbina.}{172}{subsection.10.20.2}%
+\contentsline {section}{\numberline {10.21}Condensadores.}{172}{section.10.21}%
+\contentsline {subsection}{\numberline {10.21.1}Condensadores de superficie.}{173}{subsection.10.21.1}%
+\contentsline {section}{\numberline {10.22}Sistema de alimentación.}{174}{section.10.22}%
+\contentsline {section}{\numberline {10.23}Desgasificador.}{174}{section.10.23}%
+\contentsline {section}{\numberline {10.24}Calentadores de agua de ciclo.}{174}{section.10.24}%
+\contentsline {section}{\numberline {10.25}Sistema de refrigeración.}{175}{section.10.25}%
+\contentsline {section}{\numberline {10.26}Tratamiento del agua de alimentación-circuito de refrigeración.}{175}{section.10.26}%
+\contentsline {section}{\numberline {10.27}Control de una central térmica.}{176}{section.10.27}%
+\contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{177}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Componentes de las centrales de ciclo combinado.}{177}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Ciclo combinado de gas natural.}{178}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Ciclos de gas.}{179}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Ciclo de Brayton.}{179}{subsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.3.2}Ciclo de Brayton regenerativo.}{180}{subsection.11.3.2}%
+\contentsline {subsection}{\numberline {11.3.3}Ciclo de Brayton con recalentamiento.}{181}{subsection.11.3.3}%
+\contentsline {subsection}{\numberline {11.3.4}Ciclo de Brayton con recalentamiento y refrigeración.}{181}{subsection.11.3.4}%
+\contentsline {subsection}{\numberline {11.3.5}Compresores.}{182}{subsection.11.3.5}%
+\contentsline {section}{\numberline {11.4}Turbinas de gas.}{182}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}Parámetros característicos.}{183}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}Distribución de la energía en la turbina de gas.}{183}{subsection.11.4.2}%
+\contentsline {subsection}{\numberline {11.4.3}Control de las emisiones de NOx.}{183}{subsection.11.4.3}%
+\contentsline {subsubsection}{Inyección de agua.}{183}{subsubsection*.326}%
+\contentsline {subsubsection}{Inyección de vapor sobrecalentado.}{184}{subsubsection*.328}%
+\contentsline {subsection}{\numberline {11.4.4}Degradación de la potencia con las horas de funcionamiento.}{184}{subsection.11.4.4}%
+\contentsline {subsubsection}{Lavado con solución detergente.}{184}{subsubsection*.330}%
+\contentsline {subsection}{\numberline {11.4.5}Admisión de aire.}{185}{subsection.11.4.5}%
+\contentsline {subsection}{\numberline {11.4.6}Sistema de filtrado de aire.}{185}{subsection.11.4.6}%
+\contentsline {subsection}{\numberline {11.4.7}Sistema de enfriamiento de aire. Enfriador evaporativo.}{185}{subsection.11.4.7}%
+\contentsline {subsection}{\numberline {11.4.8}Compresores.}{185}{subsection.11.4.8}%
+\contentsline {subsubsection}{Tipos de conversores dinámicos.}{186}{subsubsection*.333}%
+\contentsline {subsection}{\numberline {11.4.9}Cámara de combustión.}{186}{subsection.11.4.9}%
+\contentsline {subsection}{\numberline {11.4.10}Turbina de gas. Aspectos constructivos.}{186}{subsection.11.4.10}%
+\contentsline {subsubsection}{Álabes de la turbina de gas.}{186}{subsubsection*.335}%
+\contentsline {subsubsection}{Teoría de funcionamiento.}{186}{subsubsection*.336}%
+\contentsline {section}{\numberline {11.5}Topología de los ciclos combinados.}{187}{section.11.5}%
+\contentsline {subsection}{\numberline {11.5.1}Tipos de configuración.}{187}{subsection.11.5.1}%
+\contentsline {subsection}{\numberline {11.5.2}Distribución de energía en un ciclo combinado.}{188}{subsection.11.5.2}%
+\contentsline {section}{\numberline {11.6}Rendimiento del ciclo combinado.}{188}{section.11.6}%
+\contentsline {subsection}{\numberline {11.6.1}Diagramas de intercambio.}{188}{subsection.11.6.1}%
+\contentsline {subsubsection}{Ciclo combinado de un nivel de presión.}{189}{subsubsection*.342}%
+\contentsline {subsubsection}{Ciclo combinado con dos niveles de presión.}{189}{subsubsection*.344}%
+\contentsline {section}{\numberline {11.7}Ejemplo de aplicación.}{189}{section.11.7}%
+\contentsline {chapter}{\numberline {12}Centrales hidroeléctricas de bombeo.}{193}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Clasificación de las centrales de bombeo.}{193}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Ventajas y desventajas.}{193}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Estructura de costes.}{194}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Función tradicional de las centrales de bombeo.}{194}{section.12.4}%
+\contentsline {section}{\numberline {12.5}Costes de producción de una central de bombeo.}{194}{section.12.5}%
+\contentsline {subsection}{\numberline {12.5.1}Balance económico.}{195}{subsection.12.5.1}%
+\contentsline {section}{\numberline {12.6}Composición del equipo electromecánico.}{195}{section.12.6}%
+\contentsline {section}{\numberline {12.7}Arranque de la máquina síncrona como motor.}{195}{section.12.7}%
+\contentsline {subsection}{\numberline {12.7.1}Arranque asíncrono.}{196}{subsection.12.7.1}%
+\contentsline {subsubsection}{Arranque a plena tensión.}{196}{subsubsection*.352}%
+\contentsline {subsubsection}{Arranque por resistencias estatóricas.}{197}{subsubsection*.354}%
+\contentsline {subsubsection}{Arranque con transformador.}{198}{subsubsection*.356}%
+\contentsline {subsubsection}{Arranque con autotransformador.}{199}{subsubsection*.358}%
+\contentsline {subsection}{\numberline {12.7.2}Arranque con doble devanado estatórico.}{200}{subsection.12.7.2}%
+\contentsline {subsubsection}{Arranque con convertidor de frecuencia.}{200}{subsubsection*.361}%
+\contentsline {subsubsection}{Arranque por modificación del circuito hidráulico.}{200}{subsubsection*.362}%

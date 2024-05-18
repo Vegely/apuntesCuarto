@@ -1,1 +1,843 @@
 \chapter{Centrales hidroeléctricas de bombeo.}
+	La misión de estas centrales consiste en almacenar energía en las horas de menor consumo (horas valle) almacenando agua en un embalse situado en una cota superior, y devolver esta energía almacenada en las horas punta o de mayor consumo, en forma de energía eléctrica, a otro embalse situado en una cota inferior.
+	
+	
+	Las centrales reversibles existentes tienen una potencia instalada de entre $200$ y $1500\,MW$.
+	
+	
+	Aportan una alta flexibilidad operativa, ya que pueden arrancar y alcanzar la plena carga en cuestión de pocos minutos, así como cambiar de turbinación a bombeo. Aportan a la red la capacidad de regular frecuencia y tensión. Los nuevos diseños de velocidad variable permiten regular potencia en la bomba.
+	
+	\section{Clasificación de las centrales de bombeo.}
+		\begin{itemize}
+			\item Centrales de bombeo puras.
+			\item Centrales de bombeo mixtas.
+			\item Centrales de bombeo diferencial.
+		\end{itemize}
+		
+		Dentro de las centrales mixtas, existen instalaciones de bombeo no reversibles que funcionan elevando agua desde varios pequeños embalses hasta un lago superior, desde el que es turbinada.
+		
+	\section{Ventajas y desventajas.}
+		\begin{figure}[H]
+			\begin{minipage}[t]{0.5\textwidth}
+				\textbf{\textit{Ventajas:}}
+					\begin{itemize}
+						\item Alta eficiencia.
+						\item No genera residuos.
+						\item Alto tiempo de descarga (10h).
+						\item Amplio rango de generación (1-2000 MW).
+						\item Carga variable.
+						\item Larga vida útil (80-100 años).
+						\item Poca restricción de variación de carga.
+						\item Puesta en marcha inmediata.
+						\item Bajo coste de explotación.
+						\item Flexibilidad de operación.
+						\item Tecnología madura.
+					\end{itemize}
+			\end{minipage}
+			\begin{minipage}[t]{0.5\textwidth}
+				\textbf{\textit{Desventajas:}}
+					\begin{itemize}
+						\item Grandes espacios y necesidades de localización.
+						\item Contaminación por alteración del paisaje.
+						\item Largos tiempos de construcción.
+						\item Altos costes de inversión incial.
+						\item Tramitación administrativa compleja.
+						\item Recurso natural base escaso e interferencias con otros usos del agua
+						\item Irregularidad hidrológica.
+					\end{itemize}
+			\end{minipage}
+		\end{figure}
+		
+	\section{Estructura de costes.}
+		\begin{tikzpicture}
+			\pie[text=legend, color={red!70, purple!60, blue!50, green!40, teal!30}]{
+				65/Obra civil,
+				20/Equipo electromecánico,
+				7/Inversión inicial,
+				4/Líneas y subestaciones,
+				4/Otros
+			}
+		\end{tikzpicture}
+		
+		El PNIEC incluye la puesta en servicio de 0,9 GW en 2025 y 3,5 GW en 2030.
+		
+	\section{Función tradicional de las centrales de bombeo.}
+		Las centrales de bombeo son consumidores netos de energía eléctrica. Sin embargo es su misión en el conjunto de la red lo que justifica su existencia, dando lugar a ventajas de tipo económico y técnico. Tienen la función de:
+		\begin{itemize}
+			\item Cubrir las puntas de demanda.
+			\item Reserva hidráulica rápida.
+			\item Consumo nocturno de energía producida por centrales térmicas (nuclear, carbón).
+			\item Ingresos: arbitraje de producción en punta y bombeo en valle.
+			\item Servicios complementarios y de ajuste.
+			\item Pago por capacidad.
+		\end{itemize}
+	
+	\section{Costes de producción de una central de bombeo.}
+		Las variables que influyen en los costes de producción son:
+		\begin{itemize}
+			\item \textbf{\textit{Volumen de embalse superior:}} es la duración del tiempo de turbinado. En el caso de ciclo diario, el bombeo suele durar entre 4 y 6 horas. En el caso de ciclo semanal, la duración de bombeo suele ser de 35 horas y realizarse durante el fin de semana. La turbinación se realiza a lo largo de los cinco días laborables.
+			
+			
+			Los embalses suelen dimensionarse para ciclos semanales.
+			
+			\item \textbf{\textit{Altura del salto:}} la componente principal del coste de la instalación es el embalse superior. La manera de reducir su volumen es aumentar la altura del salto, luego las turbinas giran a más velocidad, resultando un generador más económico.
+			
+			
+			\item \textbf{\textit{Relación L/H:}} es el cociente entre la distancia horizontal entre los embalses superior e inferior y la diferencia de nivel entre ambos. Los valores económicos del cociente L/H suelen estar en torno a 4-6.
+			
+			
+			\item \textbf{\textit{Factores geográficos y geológicos:}} crucial, puesto que las centrales deben ser subterráneas a fin de mantener las longitudes de las tuberías cortas. Además, el nivel de éstas debe ser inferior al del embalse inferior para evitar cavitación en las bombas.
+			
+			
+			\item \textit{\textbf{Localización en el conjunto de la red:}} la efectividad de una central de bombeo aumenta si se encuentra cerca de una central de energía base (térmica, nuclear) y a un centro de consumo con grandes puntas de potencia. Así se minimizan los costes de transporte.
+		\end{itemize}
+		
+		\subsection{Balance económico.}
+			Una instalación de bombeo está justificada si el coste de la energía turbinada es superior al de la empleada en el bombeo:
+			\[W_t C_t > W_b C_b\]
+			Siendo $W_t$ la energía generada al turbinar, $C_t$ el coste de la energía en horas punta, $W_b$ la energía consumida al bombear y $C_b$ el coste de la energía en horas valle.
+			
+			\[W_t = \eta \cdot W_b \Rightarrow W_t\left(C_t\cdot \dfrac{C_b}{\eta}\right)>0\]
+			
+	\section{Composición del equipo electromecánico.}
+		Existen varios grupos según el número de máquinas:
+		\begin{itemize}
+			\item \textbf{\textit{Grupos cuaternios:}} constituidos por cuatro máquinas: alternador, turbina, motor y bomba. Es la opción más cara.
+			
+			\item \textbf{\textit{Grupos ternarios:}} constituidos por tres máquinas: alternador-motor, turbina y bomba. La máquina síncrona es única y funciona como motor y como alternador. Sin embargo, existen dos máquinas hidráulicas distintas.
+			
+			\begin{figure}[H]
+				\hspace{0.8cm}
+				\begin{minipage}[t]{0.4\textwidth}
+					\textbf{\textit{Ventajas:}}
+					\begin{itemize}
+						\item Elasticidad de funcionamiento.
+						\item Rapidez en el cambio turbina-bomba y viceversa.
+						\item Rotación en la misma dirección.
+					\end{itemize}
+				\end{minipage}
+				\hspace{0.5cm}
+				\begin{minipage}[t]{0.5\textwidth}
+					\textbf{\textit{Desventajas:}}
+					\begin{itemize}
+						\item Necesidad de embrague para evitar pérdidas por ventilación en la bomba al turbinar.
+					\end{itemize}
+				\end{minipage}
+			\end{figure}
+			
+			\item \textbf{\textit{Grupos binarios:}} constituidos por dos máquinas: alternador-motor y turbina-bomba. Suele ser de disposición vertical, con el alternador-motor en la parte superior. Es necesario invertir el sentido de giro de la máquina síncrona, utilizando seccionadores de inversión de la secuencia de fases. Las más modernas pueden variar la velocidad de giro para regular la potencia.
+			
+			
+			\begin{figure}[H]
+				\hspace{0.8cm}
+				\begin{minipage}[t]{0.4\textwidth}
+					\textbf{\textit{Ventajas:}}
+					\begin{itemize}
+						\item Menor coste.
+						\item Menor longitud.
+						\item Menor obra civil.
+					\end{itemize}
+				\end{minipage}
+				\hspace{0.5cm}
+				\begin{minipage}[t]{0.5\textwidth}
+					\textbf{\textit{Desventajas:}}
+					\begin{itemize}
+						\item Menor rendimiento ($\approx 4\%$ al turbinar).
+						\item Peligro de vibraciones.
+						\item Doble sentido de giro.
+						\item Mayor tiempo de maniobra.
+					\end{itemize}
+				\end{minipage}
+			\end{figure}
+			
+		\end{itemize}
+
+	\section{Arranque de la máquina síncrona como motor.}
+		La máquina síncrona presenta un par medio nulo tras conectarla a la red y estar su rotor estático, por lo que hay que realizar una maniobra de arranque. Existen varios métodos:
+		
+		\begin{figure}[H]
+			\begin{minipage}{0.5\textwidth}
+				\begin{itemize}
+					\item \textbf{\textit{Asíncrono:}}
+					\begin{itemize}
+						\item A plena tensión.
+						\item A tensión reducida:
+						\begin{itemize}
+							\item Con reactancias estatóricas.
+							\item Con transformador.
+							\item Con autotransformador.
+							\item Con doble devanado estatórico.
+						\end{itemize}
+					\end{itemize}
+					\item \textit{\textbf{Modificaciones en el circuito hidráulico.}}
+				\end{itemize}
+			\end{minipage}
+			\begin{minipage}{0.5\textwidth}
+				\begin{itemize}
+					\item \textbf{\textit{Con máquina auxiliar:}}
+					\begin{itemize}
+						\item Turbina hidráulica.
+						\item Motor asíncrono.
+						\item Motor de corriente continua.
+					\end{itemize}
+					
+					\item \textbf{\textit{A frecuencia variable:}}
+					\begin{itemize}
+						\item Arranque síncrono.
+						\item Arranque asíncrono-síncrono.
+						\item Con convertidor estático.
+					\end{itemize}
+				\end{itemize}
+			\end{minipage}
+		\end{figure}
+		
+		\subsection{Arranque asíncrono.}
+			El más sencillo. Hace uso de un devanado amortiguador, que entra en juego cuando la excitación está desconectada, aprovechando el par asíncrono.
+			
+			\subsubsection{Arranque a plena tensión.}
+				El más sencillo, pero tiene elevadas intensidades en el arranque y elevados esfuerzos electrodinámicos en los devanados del estátor.
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}
+							\ctikzset{resistor = european}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw  (-13,3.25) circle (1.75cm);
+							\draw [](-14.75,14) to[short] (-11.25,14);
+							\draw [](-14.75,13.5) to[short] (-11.25,13.5);
+							\draw [](-14.75,13) to[short] (-11.25,13);
+							\draw (-13.75,12.5) to[normal open switch] (-13.75,11.5);
+							\draw (-13,12.5) to[normal open switch] (-13,11.5);
+							\draw (-12.25,12.5) to[normal open switch] (-12.25,11.5);
+							\draw (-13.75,11.5) to[normal open switch] (-13.75,10.5);
+							\draw (-13,11.5) to[normal open switch] (-13,10.5);
+							\draw (-12.25,11.5) to[normal open switch] (-12.25,10.5);
+							\draw [, dashed] (-14.25,12.5) rectangle  (-11.75,10.5);
+							\draw [](-13.75,12.5) to[short] (-13.75,13);
+							\draw [](-13,12.5) to[short] (-13,13);
+							\draw [](-12.25,12.5) to[short] (-12.25,13);
+							\node at (-13.75,13) [circ] {};
+							\node at (-13,13.5) [circ] {};
+							\node at (-12.25,14) [circ] {};
+							\draw [](-13,13) to[short] (-13,13.5);
+							\draw [](-12.25,13) to[short] (-12.25,14);
+							\node [font=\normalsize] at (-11,14) {R};
+							\node [font=\normalsize] at (-11,13.5) {S};
+							\node [font=\normalsize] at (-11,13) {T};
+							\node [font=\normalsize] at (-10.75,12) {Seccionador};
+							\node [font=\normalsize] at (-10.75,11) {Interruptor};
+							\draw  (-13,9.25) circle (0.75cm);
+							\draw  (-13,8.5) circle (0.75cm);
+							\draw [short] (-13.75,10.5) -- (-13.75,10);
+							\draw [short] (-13.75,10) -- (-13.5,9.75);
+							\draw [short] (-12.25,10.5) -- (-12.25,10);
+							\draw [short] (-12.25,10) -- (-12.5,9.75);
+							\draw [short] (-13,10.5) -- (-13,10);
+							\draw [short] (-13,7.75) -- (-13,7.25);
+							\draw [short] (-13.5,8) -- (-13.75,7.75);
+							\draw [short] (-12.5,8) -- (-12.25,7.75);
+							\draw [short] (-13.75,7.75) -- (-13.75,7.25);
+							\draw [short] (-12.25,7.75) -- (-12.25,7.25);
+							\draw (-13,7.25) to[normal open switch] (-13,5.25);
+							\draw (-12.25,7.25) to[normal open switch] (-12.25,5.25);
+							\draw (-11.5,6.75) to[normal closed switch] (-11.5,5.75);
+							\draw (-10.75,6.75) to[normal closed switch] (-10.75,5.75);
+							\draw [short] (-13,7) -- (-11.5,7);
+							\draw [short] (-11.5,7) -- (-11.5,6.75);
+							\draw [short] (-12.25,7.25) -- (-10.75,7.25);
+							\draw [short] (-10.75,7.25) -- (-10.75,6.75);
+							\draw [short] (-11.5,5.75) -- (-11.5,5.5);
+							\draw [short] (-11.5,5.5) -- (-12.25,5.5);
+							\draw [short] (-10.75,5.75) -- (-10.75,5.25);
+							\draw [short] (-10.75,5.25) -- (-13,5.25);
+							\draw [short] (-12.25,5.25) -- (-12.25,4.5);
+							\draw [short] (-13,5.25) -- (-13,4.5);
+							\node at (-13,7) [circ] {};
+							\node at (-12.25,7.25) [circ] {};
+							\node at (-12.25,5.5) [circ] {};
+							\node at (-13,5.25) [circ] {};
+							\draw (-13,4.5) to[L ] (-13,3.25);
+							\draw (-12.25,4.5) to[L ] (-12.25,3.25);
+							\draw (-13.75,4.5) to[L ] (-13.75,3.25);
+							\draw[] (-12.25,3.25) to[short] (-15,3.25);
+							\draw (-15,3.25) to[R] (-15,1.75);
+							\draw (-15,1.70) to (-15,1.75) node[ground]{};
+							\draw [](-13.75,4.5) to[short] (-13.75,7.25);
+							\node at (-13.75,3.25) [circ] {};
+							\node at (-13,3.25) [circ] {};
+							\draw (-13.75,2.5) to[L ] (-12.25,2.5);
+							\draw [](-13.75,2.5) to[short] (-13.75,1);
+							\draw [](-12.25,2.5) to[short] (-12.25,1);
+							\draw (-13.75,1) to[american voltage source] (-12.25,1);
+							\node [font=\normalsize, rotate around={90:(0,0)}] at (-10.75,3.25) {Alternador-motor};
+							\draw [, dashed] (-14,7.4) rectangle  (-10.25,5.1);
+							\node [font=\normalsize, rotate around={90:(0,0)}] at (-14.25,6.25) {Inversor};
+						\end{circuitikz}
+					
+					\label{fig:my_label}
+				\end{figure}
+				
+			\newpage
+			\subsubsection{Arranque por resistencias estatóricas.}
+				Se limita la intensidad inicial a través de reostatos. A medida que el grupo se acelera la impedancia del motor va aumentando mientras que la reactancia adicional se mantiene constante, haciendo que la tensión aplicada al motor crezca progresivamente, y por tanto el par. Al finalizar el transitorio se cortocircuitan las reactancias, dando lugar a un pequeño pico de intensidad.
+				
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}
+							\ctikzset{resistor = european}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw  (-13,-1.5) circle (1.75cm);
+							\draw [](-14.75,14) to[short] (-11.25,14);
+							\draw [](-14.75,13.5) to[short] (-11.25,13.5);
+							\draw [](-14.75,13) to[short] (-11.25,13);
+							\draw (-13.75,12.5) to[normal open switch] (-13.75,11.5);
+							\draw (-13,12.5) to[normal open switch] (-13,11.5);
+							\draw (-12.25,12.5) to[normal open switch] (-12.25,11.5);
+							\draw (-13.75,11.5) to[normal open switch] (-13.75,10.5);
+							\draw (-13,11.5) to[normal open switch] (-13,10.5);
+							\draw (-12.25,11.5) to[normal open switch] (-12.25,10.5);
+							\draw [, dashed] (-14.25,12.5) rectangle  (-11.75,10.5);
+							\draw [](-13.75,12.5) to[short] (-13.75,13);
+							\draw [](-13,12.5) to[short] (-13,13);
+							\draw [](-12.25,12.5) to[short] (-12.25,13);
+							\node at (-13.75,13) [circ] {};
+							\node at (-13,13.5) [circ] {};
+							\node at (-12.25,14) [circ] {};
+							\draw [](-13,13) to[short] (-13,13.5);
+							\draw [](-12.25,13) to[short] (-12.25,14);
+							\node [font=\normalsize] at (-11,14) {R};
+							\node [font=\normalsize] at (-11,13.5) {S};
+							\node [font=\normalsize] at (-11,13) {T};
+							\node [font=\normalsize] at (-10.75,12) {Seccionador};
+							\node [font=\normalsize] at (-10.75,11) {Interruptor};
+							\draw  (-13,9.25) circle (0.75cm);
+							\draw  (-13,8.5) circle (0.75cm);
+							\draw [short] (-13.75,10.5) -- (-13.75,10);
+							\draw [short] (-13.75,10) -- (-13.5,9.75);
+							\draw [short] (-12.25,10.5) -- (-12.25,10);
+							\draw [short] (-12.25,10) -- (-12.5,9.75);
+							\draw [short] (-13,10.5) -- (-13,10);
+							\draw [short] (-13,7.75) -- (-13,7.25);
+							\draw [short] (-13.5,8) -- (-13.75,7.75);
+							\draw [short] (-12.5,8) -- (-12.25,7.75);
+							\draw [short] (-13.75,7.75) -- (-13.75,7.25);
+							\draw [short] (-12.25,7.75) -- (-12.25,7.25);
+							\draw (-13,7.25) to[normal open switch] (-13,5.25);
+							\draw (-12.25,7.25) to[normal open switch] (-12.25,5.25);
+							\draw (-11.5,6.75) to[normal closed switch] (-11.5,5.75);
+							\draw (-10.75,6.75) to[normal closed switch] (-10.75,5.75);
+							\draw [short] (-13,7) -- (-11.5,7);
+							\draw [short] (-11.5,7) -- (-11.5,6.75);
+							\draw [short] (-12.25,7.25) -- (-10.75,7.25);
+							\draw [short] (-10.75,7.25) -- (-10.75,6.75);
+							\draw [short] (-11.5,5.75) -- (-11.5,5.5);
+							\draw [short] (-11.5,5.5) -- (-12.25,5.5);
+							\draw [short] (-10.75,5.75) -- (-10.75,5.25);
+							\draw [short] (-10.75,5.25) -- (-13,5.25);
+							\draw [short] (-12.25,5.25) -- (-12.25,4.5);
+							\draw [short] (-13,5.25) -- (-13,4.5);
+							\node at (-13,7) [circ] {};
+							\node at (-12.25,7.25) [circ] {};
+							\node at (-12.25,5.5) [circ] {};
+							\node at (-13,5.25) [circ] {};
+							\draw (-13,-0.25) to[L ] (-13,-1.5);
+							\draw (-12.25,-0.25) to[L ] (-12.25,-1.5);
+							\draw (-13.75,-0.25) to[L ] (-13.75,-1.5);
+							\draw[] (-12.25,-1.5) to[short] (-15,-1.5);
+							\draw (-15,-1.5) to[R] (-15,-3);
+							\draw [](-13.75,4.5) to[short] (-13.75,7.25);
+							\node at (-13.75,-1.5) [circ] {};
+							\node at (-13,-1.5) [circ] {};
+							\draw (-13.75,-2.25) to[L ] (-12.25,-2.25);
+							\draw [](-13.75,-2.25) to[short] (-13.75,-3.75);
+							\draw [](-12.25,-2.25) to[short] (-12.25,-3.75);
+							\draw (-13.75,-3.75) to[american voltage source] (-12.25,-3.75);
+							\node [font=\normalsize, rotate around={90:(0,0)}] at (-10.75,-1.5) {Alternador-motor};
+							\draw [, dashed] (-14,7.5) rectangle  (-10.25,5);
+							\node [font=\normalsize, rotate around={90:(0,0)}] at (-14.25,6.25) {Inversor};
+							\draw (-13.75,4.5) to[normal open switch] (-13.75,0.75);
+							\draw (-13,4.5) to[normal open switch] (-13,0.75);
+							\draw (-12.25,4.5) to[normal open switch] (-12.25,0.75);
+							\draw [short] (-12.25,3.25) -- (-14.25,3.25);
+							\draw [short] (-13,3.75) -- (-14.25,3.75);
+							\draw [short] (-13.75,4.25) -- (-14.25,4.25);
+							\draw [short] (-12.25,2) -- (-14.25,2);
+							\draw [short] (-13,1.5) -- (-14.25,1.5);
+							\draw [short] (-13.75,0.75) -- (-13.75,-0.25);
+							\draw [short] (-13,0.75) -- (-13,-0.25);
+							\draw [short] (-12.25,0.75) -- (-12.25,-0.25);
+							\draw [short] (-13.75,1) -- (-14.25,1);
+							\draw (-15.25,4.25) to[normal open switch] (-14.25,4.25);
+							\draw (-15.25,3.75) to[normal open switch] (-14.25,3.75);
+							\draw (-15.25,3.25) to[normal open switch] (-14.25,3.25);
+							\draw (-15,-3) to (-15,-3.25) node[ground]{};
+							\draw (-15.25,2) to[normal open switch] (-14.25,2);
+							\draw (-15.25,1.5) to[normal open switch] (-14.25,1.5);
+							\draw (-15.25,1) to[normal open switch] (-14.25,1);
+							\draw (-15.75,3.25) to[L ] (-15.75,2);
+							\draw (-16.5,3.25) to[L ] (-16.5,2);
+							\draw (-17.25,3.25) to[L ] (-17.25,2);
+							\draw[] (-15.25,4.25) to[short] (-17.25,4.25);
+							\draw [](-17.25,4.25) to[short] (-17.25,3.25);
+							\draw [](-17.25,2) to[short] (-17.25,1);
+							\draw [](-17.25,1) to[short] (-15.25,1);
+							\draw[] (-15.25,1.5) to[short] (-16.5,1.5);
+							\draw [](-16.5,1.5) to[short] (-16.5,2);
+							\draw [](-16.5,3.25) to[short] (-16.5,3.75);
+							\draw [](-16.5,3.75) to[short] (-15.25,3.75);
+							\draw[] (-15.25,3.25) to[short] (-15.75,3.25);
+							\draw [](-15.75,2) to[short] (-15.25,2);
+							\node at (-13.75,1) [circ] {};
+							\node at (-13,1.5) [circ] {};
+							\node at (-12.25,2) [circ] {};
+							\node at (-12.25,3.25) [circ] {};
+							\node at (-13,3.75) [circ] {};
+							\node at (-13.75,4.25) [circ] {};
+							\draw  (-6.75,2.25) circle (1.75cm);
+							\draw [](-8.5,14) to[short] (-5,14);
+							\draw [](-8.5,13.5) to[short] (-5,13.5);
+							\draw [](-8.5,13) to[short] (-5,13);
+							\draw (-7.5,12.5) to[normal open switch] (-7.5,11.5);
+							\draw (-6.75,12.5) to[normal open switch] (-6.75,11.5);
+							\draw (-6,12.5) to[normal open switch] (-6,11.5);
+							\draw (-7.5,11.5) to[normal open switch] (-7.5,10.5);
+							\draw (-6.75,11.5) to[normal open switch] (-6.75,10.5);
+							\draw (-6,11.5) to[normal open switch] (-6,10.5);
+							\draw [, dashed] (-8,12.5) rectangle  (-5.5,10.5);
+							\draw [](-7.5,12.5) to[short] (-7.5,13);
+							\draw [](-6.75,12.5) to[short] (-6.75,13);
+							\draw [](-6,12.5) to[short] (-6,13);
+							\node at (-7.5,13) [circ] {};
+							\node at (-6.75,13.5) [circ] {};
+							\node at (-6,14) [circ] {};
+							\draw [](-6.75,13) to[short] (-6.75,13.5);
+							\draw [](-6,13) to[short] (-6,14);
+							\node [font=\normalsize] at (-4.75,14) {R};
+							\node [font=\normalsize] at (-4.75,13.5) {S};
+							\node [font=\normalsize] at (-4.75,13) {T};
+							\node [font=\normalsize] at (-4.5,12) {Seccionador};
+							\node [font=\normalsize] at (-4.5,11) {Interruptor};
+							\draw  (-6.75,9.25) circle (0.75cm);
+							\draw  (-6.75,8.5) circle (0.75cm);
+							\draw [short] (-7.5,10.5) -- (-7.5,10);
+							\draw [short] (-7.5,10) -- (-7.25,9.75);
+							\draw [short] (-6,10.5) -- (-6,10);
+							\draw [short] (-6,10) -- (-6.25,9.75);
+							\draw [short] (-6.75,10.5) -- (-6.75,10);
+							\draw [short] (-6.75,7.75) -- (-6.75,7.25);
+							\draw [short] (-7.25,8) -- (-7.5,7.75);
+							\draw [short] (-6.25,8) -- (-6,7.75);
+							\draw [short] (-7.5,7.75) -- (-7.5,7.25);
+							\draw [short] (-6,7.75) -- (-6,7.25);
+							\draw (-6.75,7.25) to[normal open switch] (-6.75,5.25);
+							\draw (-6,7.25) to[normal open switch] (-6,5.25);
+							\draw (-5.25,6.75) to[normal closed switch] (-5.25,5.75);
+							\draw (-4.5,6.75) to[normal closed switch] (-4.5,5.75);
+							\draw [short] (-6.75,7) -- (-5.25,7);
+							\draw [short] (-5.25,7) -- (-5.25,6.75);
+							\draw [short] (-6,7.25) -- (-4.5,7.25);
+							\draw [short] (-4.5,7.25) -- (-4.5,6.75);
+							\draw [short] (-5.25,5.75) -- (-5.25,5.5);
+							\draw [short] (-5.25,5.5) -- (-6,5.5);
+							\draw [short] (-4.5,5.75) -- (-4.5,5.25);
+							\draw [short] (-4.5,5.25) -- (-6.75,5.25);
+							\draw [short] (-6,5.25) -- (-6,4.5);
+							\draw [short] (-6.75,5.25) -- (-6.75,4.5);
+							\node at (-6.75,7) [circ] {};
+							\node at (-6,7.25) [circ] {};
+							\node at (-6,5.5) [circ] {};
+							\node at (-6.75,5.25) [circ] {};
+							\draw (-6.75,3.5) to[L ] (-6.75,2.25);
+							\draw (-6,3.5) to[L ] (-6,2.25);
+							\draw (-7.5,3.5) to[L ] (-7.5,2.25);
+							\draw (-4,0.25) to[R] (-4,-1.25);
+							\draw (-4,-1.25) to (-4,-1.5) node[ground]{};
+							\draw [](-7.5,4.5) to[short] (-7.5,7.25);
+							\draw (-7.5,1) to[L ] (-6,1);
+							\draw [](-7.5,1) to[short] (-7.5,0);
+							\draw (-7.5,0) to[american voltage source] (-6,0);
+							\node [font=\normalsize, rotate around={90:(0,0)}] at (-8.75,2.5) {Alternador-motor};
+							\draw [, dashed] (-7.75,7.5) rectangle  (-4,5);
+							\node [font=\normalsize, rotate around={90:(0,0)}] at (-8,6.25) {Inversor};
+							\draw [short] (-7.5,4.5) -- (-7.5,3.5);
+							\draw [short] (-6.75,4.5) -- (-6.75,3.5);
+							\draw [short] (-6,4.5) -- (-6,3.5);
+							\draw (-3.5,1.5) to[normal open switch] (-3.5,0.25);
+							\draw (-4,1.5) to[normal open switch] (-4,0.25);
+							\draw (-4.5,1.5) to[normal open switch] (-4.5,0.25);
+							\draw [](-4.5,0.25) to[short] (-3.5,0.25);
+							\node at (-4,0.25) [circ] {};
+							\draw [](-6,1) to[short] (-6,0);
+							\draw [](-7.5,1.5) to[short] (-3.25,1.5);
+							\draw [](-6.75,1.75) to[short] (-3.25,1.75);
+							\draw [](-6,2) to[short] (-3.25,2);
+							\draw [](-6,2.25) to[short] (-6,2);
+							\draw [](-6.75,2.25) to[short] (-6.75,1.75);
+							\draw [](-7.5,2.25) to[short] (-7.5,1.5);
+							\draw [](-4,1.5) to[short] (-4,1.75);
+							\draw [](-3.5,1.5) to[short] (-3.5,2);
+							\node at (-4,1.75) [circ] {};
+							\node at (-3.5,2) [circ] {};
+							\node at (-4.5,1.5) [circ] {};
+							\draw (-2.75,1.5) to[L ] (-2.75,0.25);
+							\draw (-2,1.5) to[L ] (-2,0.25);
+							\draw (-1.25,1.5) to[L ] (-1.25,0.25);
+							\draw [](-3,1.5) to[short] (-2.75,1.5);
+							\draw [](-3.25,1.5) to[short] (-3,1.5);
+							\draw [](-3.25,1.75) to[short] (-2,1.75);
+							\draw [](-2,1.75) to[short] (-2,1.5);
+							\draw [](-3.25,2) to[short] (-1.25,2);
+							\draw [](-1.25,2) to[short] (-1.25,1.5);
+							\draw [](-2.75,0.25) to[short] (-1.25,0.25);
+							\node at (-2,0.25) [circ] {};
+						\end{circuitikz}
+					
+					\label{fig:my_label}
+				\end{figure}
+		
+			\newpage
+			\subsubsection{Arranque con transformador.}
+				Cuando el transformador de salida dispone de una toma intermedia se puede utilizar la misma para alimentar a tensión reducida el motor síncrono. Si durante el arranque la intensidad de la corriente del transformador es $k$ veces menor que la que se tendría con arranque directo entonces el par disminuye en este factor. Por tanto se consigue un arranque con un par $k$ veces superior al arranque con resistencias estatóricas.
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}
+							\ctikzset{resistor = european}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [](-8.5,14) to[short] (-5,14);
+							\draw  (-6.75,2) circle (1.75cm);
+							\draw [](-8.5,13.5) to[short] (-5,13.5);
+							\draw [](-8.5,13) to[short] (-5,13);
+							\draw (-7.5,12.5) to[normal open switch] (-7.5,11.5);
+							\draw (-6.75,12.5) to[normal open switch] (-6.75,11.5);
+							\draw (-6,12.5) to[normal open switch] (-6,11.5);
+							\draw (-7.5,11.5) to[normal open switch] (-7.5,10.5);
+							\draw (-6.75,11.5) to[normal open switch] (-6.75,10.5);
+							\draw (-6,11.5) to[normal open switch] (-6,10.5);
+							\draw [, dashed] (-8,12.5) rectangle  (-5.5,10.5);
+							\draw [](-7.5,12.5) to[short] (-7.5,13);
+							\draw [](-6.75,12.5) to[short] (-6.75,13);
+							\draw [](-6,12.5) to[short] (-6,13);
+							\node at (-7.5,13) [circ] {};
+							\node at (-6.75,13.5) [circ] {};
+							\node at (-6,14) [circ] {};
+							\draw [](-6.75,13) to[short] (-6.75,13.5);
+							\draw [](-6,13) to[short] (-6,14);
+							\node [font=\normalsize] at (-4.75,14) {R};
+							\node [font=\normalsize] at (-4.75,13.5) {S};
+							\node [font=\normalsize] at (-4.75,13) {T};
+							\node [font=\normalsize] at (-4.5,12) {Seccionador};
+							\node [font=\normalsize] at (-4.5,11) {Interruptor};
+							\draw  (-6.75,9.25) circle (0.75cm);
+							\draw  (-6.75,8.25) circle (0.75cm);
+							\draw [short] (-7.5,10.5) -- (-7.5,10);
+							\draw [short] (-7.5,10) -- (-7.25,9.75);
+							\draw [short] (-6,10.5) -- (-6,10);
+							\draw [short] (-6,10) -- (-6.25,9.75);
+							\draw [short] (-6.75,10.5) -- (-6.75,10);
+							\draw [short] (-6.75,7.5) -- (-6.75,7);
+							\draw [short] (-7.25,7.75) -- (-7.5,7.5);
+							\draw [short] (-6.25,7.75) -- (-6,7.5);
+							\draw [short] (-7.5,7.5) -- (-7.5,7);
+							\draw [short] (-6,7.5) -- (-6,7);
+							\draw (-6.75,7) to[normal open switch] (-6.75,5);
+							\draw (-6,7) to[normal open switch] (-6,5);
+							\draw (-5.25,6.5) to[normal closed switch] (-5.25,5.5);
+							\draw (-4.5,6.5) to[normal closed switch] (-4.5,5.5);
+							\draw [short] (-6.75,6.75) -- (-5.25,6.75);
+							\draw [short] (-5.25,6.75) -- (-5.25,6.5);
+							\draw [short] (-6,7) -- (-4.5,7);
+							\draw [short] (-4.5,7) -- (-4.5,6.5);
+							\draw [short] (-5.25,5.5) -- (-5.25,5.25);
+							\draw [short] (-5.25,5.25) -- (-6,5.25);
+							\draw [short] (-4.5,5.5) -- (-4.5,5);
+							\draw [short] (-4.5,5) -- (-6.75,5);
+							\draw [short] (-6,5) -- (-6,4.25);
+							\draw [short] (-6.75,5) -- (-6.75,4.25);
+							\node at (-6.75,6.75) [circ] {};
+							\node at (-6,7) [circ] {};
+							\node at (-6,5.25) [circ] {};
+							\node at (-6.75,5) [circ] {};
+							\draw (-6.75,3.25) to[L ] (-6.75,2);
+							\draw (-6,3.25) to[L ] (-6,2);
+							\draw (-7.5,3.25) to[L ] (-7.5,2);
+							\draw (-9,1.75) to[R] (-9,0);
+							\draw (-9,0) to (-9,-0.25) node[ground]{};
+							\draw [](-7.5,4.25) to[short] (-7.5,7);
+							\draw (-7.5,0.75) to[L ] (-6,0.75);
+							\draw [](-7.5,0.75) to[short] (-7.5,-0.25);
+							\draw (-7.5,-0.25) to[american voltage source] (-6,-0.25);
+							\node [font=\normalsize, rotate around={90:(0,0)}] at (-4.75,2) {Alternador-motor};
+							\draw [, dashed] (-7.75,7.25) rectangle  (-4,4.75);
+							\node [font=\normalsize, rotate around={90:(0,0)}] at (-8,6) {Inversor};
+							\draw [short] (-7.5,4.25) -- (-7.5,3.25);
+							\draw [short] (-6.75,4.25) -- (-6.75,3.25);
+							\draw [short] (-6,4.25) -- (-6,3.25);
+							\draw [](-6,0.75) to[short] (-6,-0.25);
+							\draw [](-6,2) to[short] (-6,1.75);
+							\draw [](-6.75,2) to[short] (-6.75,1.75);
+							\draw [](-7.5,2) to[short] (-7.5,1.75);
+							\draw[] (-6,1.75) to[short] (-9,1.75);
+							\node at (-6.75,1.75) [circ] {};
+							\node at (-7.5,1.75) [circ] {};
+							\node [font=\normalsize] at (-4.75,7.5) {Conmutador};
+							\node [font=\LARGE] at (-6.75,9.5) {Y};
+							\node [font=\LARGE] at (-6.75,8) {$\Delta$};
+							\draw[] (-7.5,9.25) to[short] (-8,9.25);
+							\draw (-8,9.25) to (-8,8.75) node[ground]{};
+							\node [font=\normalsize] at (-4.25,9) {Transformador con};
+							\node [font=\normalsize] at (-4.25,8.5) {toma de medida};
+						\end{circuitikz}
+					
+					\label{fig:my_label}
+				\end{figure}
+				
+			\newpage
+			\subsubsection{Arranque con autotransformador.}
+				Se utiliza para reducir la tensión en el momento del arranque. Tiene lugar en 3 etapas, sin interrupción de la corriente de alimentación del motor.
+				
+				
+				En la primera etapa se aplica tensión reducida al motor con el autotransformador, y una vez llega a una velocidad concreta se abre el neutro del autotransformador para que pase más corriente al motor, y después de un cierto retardo se conecta directamente a plena tensión, quedando el autotransformador fuera de servicio.
+				
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}
+							\ctikzset{resistor = european}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [](-8.5,13) to[short] (-5,13);
+							\draw [, dashed] (-8,6.5) rectangle  (-5.5,3);
+							\draw  (-6.75,-2.75) circle (1.75cm);
+							\draw [](-8.5,12.5) to[short] (-5,12.5);
+							\draw [](-8.5,12) to[short] (-5,12);
+							\draw (-7.5,11.5) to[normal open switch] (-7.5,10.5);
+							\draw (-6.75,11.5) to[normal open switch] (-6.75,10.5);
+							\draw (-6,11.5) to[normal open switch] (-6,10.5);
+							\draw (-7.5,10.5) to[normal open switch] (-7.5,9.5);
+							\draw (-6.75,10.5) to[normal open switch] (-6.75,9.5);
+							\draw (-6,10.5) to[normal open switch] (-6,9.5);
+							\draw [, dashed] (-8,11.5) rectangle  (-5.5,9.5);
+							\draw [](-7.5,11.5) to[short] (-7.5,12);
+							\draw [](-6.75,11.5) to[short] (-6.75,12);
+							\draw [](-6,11.5) to[short] (-6,12);
+							\node at (-7.5,12) [circ] {};
+							\node at (-6.75,12.5) [circ] {};
+							\node at (-6,13) [circ] {};
+							\draw [](-6.75,12) to[short] (-6.75,12.5);
+							\draw [](-6,12) to[short] (-6,13);
+							\node [font=\normalsize] at (-4.75,13) {R};
+							\node [font=\normalsize] at (-4.75,12.5) {S};
+							\node [font=\normalsize] at (-4.75,12) {T};
+							\node [font=\normalsize] at (-4.5,11) {Seccionador};
+							\node [font=\normalsize] at (-4.5,10) {Interruptor};
+							\draw  (-6.75,8.25) circle (0.75cm);
+							\draw  (-6.75,7.5) circle (0.75cm);
+							\draw [short] (-7.5,9.5) -- (-7.5,9);
+							\draw [short] (-7.5,9) -- (-7.25,8.75);
+							\draw [short] (-6,9.5) -- (-6,9);
+							\draw [short] (-6,9) -- (-6.25,8.75);
+							\draw [short] (-6.75,9.5) -- (-6.75,9);
+							\draw [short] (-6.75,2.75) -- (-6.75,2.25);
+							\draw [short] (-7.25,7) -- (-7.5,6.75);
+							\draw [short] (-6.25,7) -- (-6,6.75);
+							\draw [short] (-7.5,2.75) -- (-7.5,2.25);
+							\draw [short] (-6,2.75) -- (-6,2.25);
+							\draw (-6.75,2.25) to[normal open switch] (-6.75,0.25);
+							\draw (-6,2.25) to[normal open switch] (-6,0.25);
+							\draw (-5.25,1.75) to[normal closed switch] (-5.25,0.75);
+							\draw (-4.5,1.75) to[normal closed switch] (-4.5,0.75);
+							\draw [short] (-6.75,2) -- (-5.25,2);
+							\draw [short] (-5.25,2) -- (-5.25,1.75);
+							\draw [short] (-6,2.25) -- (-4.5,2.25);
+							\draw [short] (-4.5,2.25) -- (-4.5,1.75);
+							\draw [short] (-5.25,0.75) -- (-5.25,0.5);
+							\draw [short] (-5.25,0.5) -- (-6,0.5);
+							\draw [short] (-4.5,0.75) -- (-4.5,0.25);
+							\draw [short] (-4.5,0.25) -- (-6.75,0.25);
+							\draw [short] (-6,0.25) -- (-6,-0.5);
+							\draw [short] (-6.75,0.25) -- (-6.75,-0.5);
+							\node at (-6.75,2) [circ] {};
+							\node at (-6,2.25) [circ] {};
+							\node at (-6,0.5) [circ] {};
+							\node at (-6.75,0.25) [circ] {};
+							\draw (-6.75,-1.5) to[L ] (-6.75,-2.75);
+							\draw (-6,-1.5) to[L ] (-6,-2.75);
+							\draw (-7.5,-1.5) to[L ] (-7.5,-2.75);
+							\draw (-9,-3) to[R] (-9,-4.75);
+							\draw (-9,-4.75) to (-9,-5) node[ground]{};
+							\draw [](-7.5,-0.5) to[short] (-7.5,2.25);
+							\draw (-7.5,-4) to[L ] (-6,-4);
+							\draw [](-7.5,-4) to[short] (-7.5,-5);
+							\draw (-7.5,-5) to[american voltage source] (-6,-5);
+							\node [font=\normalsize, rotate around={90:(0,0)}] at (-4.75,-2.75) {Alternador-motor};
+							\draw [, dashed] (-7.75,2.5) rectangle  (-4,0);
+							\node [font=\normalsize, rotate around={90:(0,0)}] at (-8,1.25) {Inversor};
+							\draw [short] (-7.5,-0.5) -- (-7.5,-1.5);
+							\draw [short] (-6.75,-0.5) -- (-6.75,-1.5);
+							\draw [short] (-6,-0.5) -- (-6,-1.5);
+							\draw [](-6,-4) to[short] (-6,-5);
+							\draw [](-6,-2.75) to[short] (-6,-3);
+							\draw [](-6.75,-2.75) to[short] (-6.75,-3);
+							\draw [](-7.5,-2.75) to[short] (-7.5,-3);
+							\draw[] (-6,-3) to[short] (-9,-3);
+							\node at (-6.75,-3) [circ] {};
+							\node at (-7.5,-3) [circ] {};
+							\draw (-7.5,4.5) to[L ] (-7.5,3);
+							\draw (-6.75,4.5) to[L ] (-6.75,3);
+							\draw (-6,4.5) to[L ] (-6,3);
+							\draw (-10,4) to[normal open switch] (-10,3);
+							\draw (-9.25,4) to[normal open switch] (-9.25,3);
+							\draw (-8.5,4) to[normal open switch] (-8.5,3);
+							\draw [](-10,3) to[short] (-8.5,3);
+							\draw (-9.25,3) to (-9.25,2.75) node[ground]{};
+							\node at (-9.25,3) [circ] {};
+							\draw (-7.5,6.5) to[L ] (-7.5,5);
+							\draw (-6.75,6.5) to[L ] (-6.75,5);
+							\draw (-6,6.5) to[L ] (-6,5);
+							\draw[] (-7.5,4.5) to[short] (-8,4.5);
+							\draw [](-6.75,4.5) to[short] (-6.75,4.75);
+							\draw[] (-6.75,4.75) to[short] (-9,4.75);
+							\draw [](-6,4.5) to[short] (-6,5);
+							\draw[] (-8,4.5) to[short] (-8.5,4.5);
+							\draw[] (-9,4.75) to[short] (-9.25,4.75);
+							\draw[] (-9.75,5) to[short] (-10,5);
+							\draw [](-10,5) to[short] (-10,4);
+							\draw [](-9.25,4.75) to[short] (-9.25,4);
+							\draw [](-8.5,4.5) to[short] (-8.5,4);
+							\draw [](-7.5,6.75) to[short] (-7.5,6.5);
+							\draw [](-6.75,6.75) to[short] (-6.75,6.5);
+							\draw [](-6,6.75) to[short] (-6,6.5);
+							\draw [](-9.75,5) to[short] (-6,5);
+							\draw [](-6.75,5) to[short] (-6.75,4.75);
+							\draw [](-7.5,5) to[short] (-7.5,4.5);
+							\node at (-7.5,4.5) [circ] {};
+							\node at (-6.75,4.75) [circ] {};
+							\node at (-6,5) [circ] {};
+							\node [font=\normalsize, rotate around={90:(0,0)}] at (-5.25,4.75) {Autotransformador};
+							\draw [](-7.5,3) to[short] (-7.5,2.75);
+							\draw [](-6.75,3) to[short] (-6.75,2.75);
+							\draw [](-6,3) to[short] (-6,2.75);
+						\end{circuitikz}
+					
+					\label{fig:my_label}
+				\end{figure}
+			
+			\newpage
+			\subsection{Arranque con doble devanado estatórico.}
+				Se aplica directamente la plena tensión de la red, modificando la impedancia aparente de la máquina durante el arranque, limitando su intensidad.
+				
+				\begin{figure}[!ht]
+					\centering
+						\begin{circuitikz}
+							\ctikzset{resistor = european}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [](-8.5,13) to[short] (-5,13);
+							\draw  (-6.75,-0.75) circle (2.25cm);
+							\draw [](-8.5,12.5) to[short] (-5,12.5);
+							\draw [](-8.5,12) to[short] (-5,12);
+							\draw (-7.5,11.5) to[normal open switch] (-7.5,10.5);
+							\draw (-6.75,11.5) to[normal open switch] (-6.75,10.5);
+							\draw (-6,11.5) to[normal open switch] (-6,10.5);
+							\draw (-7.5,10.5) to[normal open switch] (-7.5,9.5);
+							\draw (-6.75,10.5) to[normal open switch] (-6.75,9.5);
+							\draw (-6,10.5) to[normal open switch] (-6,9.5);
+							\draw [, dashed] (-8,11.5) rectangle  (-5.5,9.5);
+							\draw [](-7.5,11.5) to[short] (-7.5,12);
+							\draw [](-6.75,11.5) to[short] (-6.75,12);
+							\draw [](-6,11.5) to[short] (-6,12);
+							\node at (-7.5,12) [circ] {};
+							\node at (-6.75,12.5) [circ] {};
+							\node at (-6,13) [circ] {};
+							\draw [](-6.75,12) to[short] (-6.75,12.5);
+							\draw [](-6,12) to[short] (-6,13);
+							\node [font=\normalsize] at (-4.75,13) {R};
+							\node [font=\normalsize] at (-4.75,12.5) {S};
+							\node [font=\normalsize] at (-4.75,12) {T};
+							\node [font=\normalsize] at (-4.5,11) {Seccionador};
+							\node [font=\normalsize] at (-4.5,10) {Interruptor};
+							\draw  (-6.75,8.25) circle (0.75cm);
+							\draw  (-6.75,7.5) circle (0.75cm);
+							\draw [short] (-7.5,9.5) -- (-7.5,9);
+							\draw [short] (-7.5,9) -- (-7.25,8.75);
+							\draw [short] (-6,9.5) -- (-6,9);
+							\draw [short] (-6,9) -- (-6.25,8.75);
+							\draw [short] (-6.75,9.5) -- (-6.75,9);
+							\draw [short] (-6.75,6.75) -- (-6.75,6.25);
+							\draw [short] (-7.25,7) -- (-7.5,6.75);
+							\draw [short] (-6.25,7) -- (-6,6.75);
+							\draw [short] (-7.5,6.75) -- (-7.5,6.25);
+							\draw [short] (-6,6.75) -- (-6,6.25);
+							\draw (-6.75,6.25) to[normal open switch] (-6.75,4.25);
+							\draw (-6,6.25) to[normal open switch] (-6,4.25);
+							\draw (-5.25,5.75) to[normal closed switch] (-5.25,4.75);
+							\draw (-4.5,5.75) to[normal closed switch] (-4.5,4.75);
+							\draw [short] (-6.75,6) -- (-5.25,6);
+							\draw [short] (-5.25,6) -- (-5.25,5.75);
+							\draw [short] (-6,6.25) -- (-4.5,6.25);
+							\draw [short] (-4.5,6.25) -- (-4.5,5.75);
+							\draw [short] (-5.25,4.75) -- (-5.25,4.5);
+							\draw [short] (-5.25,4.5) -- (-6,4.5);
+							\draw [short] (-4.5,4.75) -- (-4.5,4.25);
+							\draw [short] (-4.5,4.25) -- (-6.75,4.25);
+							\draw [short] (-6,4.25) -- (-6,3.5);
+							\draw [short] (-6.75,4.25) -- (-6.75,3.5);
+							\node at (-6.75,6) [circ] {};
+							\node at (-6,6.25) [circ] {};
+							\node at (-6,4.5) [circ] {};
+							\node at (-6.75,4.25) [circ] {};
+							\draw (-7,0) to[L ] (-7,-1.25);
+							\draw (-6.5,0) to[L ] (-6.5,-1.25);
+							\draw (-8.5,0) to[L ] (-8.5,-1.25);
+							\draw (-9.5,-1.5) to[R] (-9.5,-3.25);
+							\draw (-9.5,-3.25) to (-9.5,-3.5) node[ground]{};
+							\draw [](-7.5,3.5) to[short] (-7.5,6.25);
+							\draw (-7.5,-2.5) to[L ] (-6,-2.5);
+							\draw [](-7.5,-2.5) to[short] (-7.5,-3.5);
+							\draw (-7.5,-3.5) to[american voltage source] (-6,-3.5);
+							\node [font=\normalsize, rotate around={90:(0,0)}] at (-4.25,-0.75) {Alternador-motor};
+							\draw [, dashed] (-7.75,6.5) rectangle  (-4,4);
+							\node [font=\normalsize, rotate around={90:(0,0)}] at (-8,5.25) {Inversor};
+							\draw [short] (-8,2.5) -- (-8,0);
+							\draw [short] (-6.5,2.5) -- (-6.5,0);
+							\draw [](-6,-2.5) to[short] (-6,-3.5);
+							\draw [](-6.5,-1.25) to[short] (-6.5,-1.5);
+							\draw [](-7,-1.25) to[short] (-7,-1.5);
+							\draw [](-8.5,-1.25) to[short] (-8.5,-1.5);
+							\draw[] (-5,-1.5) to[short] (-9.5,-1.5);
+							\node at (-7,-1.5) [circ] {};
+							\node at (-8,-1.5) [circ] {};
+							\draw (-8,0) to[L ] (-8,-1.25);
+							\draw (-5.5,0) to[L ] (-5.5,-1.25);
+							\draw [short] (-5,2.5) -- (-5,0);
+							\draw (-5,0) to[L ] (-5,-1.25);
+							\draw (-8.5,2.5) to[normal open switch] (-8.5,1.5);
+							\draw (-5.5,2.5) to[normal open switch] (-5.5,1.5);
+							\draw (-7,2.5) to[normal open switch] (-7,1.5);
+							\draw [short] (-5.5,-1.25) -- (-5.5,-1.5);
+							\draw [short] (-8,-1.25) -- (-8,-1.5);
+							\draw [short] (-5,-1.25) -- (-5,-1.5);
+							\node at (-8.5,-1.5) [circ] {};
+							\node at (-6.5,-1.5) [circ] {};
+							\node at (-5.5,-1.5) [circ] {};
+							\draw [](-8.5,2.5) to[short] (-8,2.5);
+							\draw [](-7,2.5) to[short] (-6.5,2.5);
+							\draw [](-5.5,2.5) to[short] (-5,2.5);
+							\draw [short] (-8.5,1.5) -- (-8.5,0);
+							\draw [short] (-7,1.5) -- (-7,0);
+							\draw [short] (-5.5,1.5) -- (-5.5,0);
+							\draw [short] (-8.25,2.5) -- (-8.25,3.25);
+							\draw [short] (-8.25,3.25) -- (-7.5,3.25);
+							\draw [short] (-7.5,3.25) -- (-7.5,3.5);
+							\draw [short] (-6.75,3.5) -- (-6.75,2.5);
+							\draw [short] (-6,3.5) -- (-6,3.25);
+							\draw [short] (-6,3.25) -- (-5.25,3.25);
+							\draw [short] (-5.25,3.25) -- (-5.25,2.5);
+							\node at (-8.25,2.5) [circ] {};
+							\node at (-6.75,2.5) [circ] {};
+							\node at (-5.25,2.5) [circ] {};
+						\end{circuitikz}
+					
+					\label{fig:my_label}
+				\end{figure}
+			\subsubsection{Arranque con convertidor de frecuencia.}
+				Se alimenta el estátor de la máquina con una fuente independiente de frecuencia variable que usa puentes de tiristores controlados.
+				
+			\subsubsection{Arranque por modificación del circuito hidráulico.}
+				Utiliza la energía potencial del agua acumulada en los embalses de la instalación para mover el eje de la turbina. Necesita de tuberías y válvulas especiales para esta maniobra.
