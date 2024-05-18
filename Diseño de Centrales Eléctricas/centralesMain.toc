@@ -355,3 +355,35 @@
 \contentsline {section}{\numberline {10.24}Sistema de refrigeración.}{154}{section.10.24}%
 \contentsline {section}{\numberline {10.25}Control.}{155}{section.10.25}%
 \contentsline {chapter}{\numberline {11}Centrales de ciclo combinado.}{157}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Componentes de las centrales de ciclo combinado.}{157}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Ciclo combinado de gas natural.}{158}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Ciclos de gas.}{159}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Ciclo de Brayton.}{159}{subsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.3.2}Ciclo de Brayton regenerativo.}{160}{subsection.11.3.2}%
+\contentsline {subsection}{\numberline {11.3.3}Ciclo de Brayton con recalentamiento.}{161}{subsection.11.3.3}%
+\contentsline {subsection}{\numberline {11.3.4}Ciclo de Brayton con recalentamiento y refrigeración.}{161}{subsection.11.3.4}%
+\contentsline {subsection}{\numberline {11.3.5}Compresores.}{162}{subsection.11.3.5}%
+\contentsline {section}{\numberline {11.4}Turbinas de gas.}{162}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}Parámetros característicos.}{163}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}Distribución de la energía en la turbina de gas.}{163}{subsection.11.4.2}%
+\contentsline {subsection}{\numberline {11.4.3}Control de las emisiones de NOx.}{163}{subsection.11.4.3}%
+\contentsline {subsubsection}{Inyección de agua.}{163}{subsubsection*.289}%
+\contentsline {subsubsection}{Inyección de vapor sobrecalentado.}{164}{subsubsection*.291}%
+\contentsline {subsection}{\numberline {11.4.4}Degradación de la potencia con las horas de funcionamiento.}{164}{subsection.11.4.4}%
+\contentsline {subsubsection}{Lavado con solución detergente.}{164}{subsubsection*.293}%
+\contentsline {subsection}{\numberline {11.4.5}Admisión de aire.}{165}{subsection.11.4.5}%
+\contentsline {subsection}{\numberline {11.4.6}Sistema de filtrado de aire.}{165}{subsection.11.4.6}%
+\contentsline {subsection}{\numberline {11.4.7}Sistema de enfriamiento de aire. Enfriador evaporativo.}{165}{subsection.11.4.7}%
+\contentsline {subsection}{\numberline {11.4.8}Compresores.}{165}{subsection.11.4.8}%
+\contentsline {subsubsection}{Tipos de conversores dinámicos.}{166}{subsubsection*.296}%
+\contentsline {subsection}{\numberline {11.4.9}Cámara de combustión.}{166}{subsection.11.4.9}%
+\contentsline {subsection}{\numberline {11.4.10}Turbina de gas. Aspectos constructivos.}{166}{subsection.11.4.10}%
+\contentsline {subsubsection}{Álabes de la turbina de gas.}{166}{subsubsection*.298}%
+\contentsline {subsubsection}{Teoría de funcionamiento.}{166}{subsubsection*.299}%
+\contentsline {section}{\numberline {11.5}Topología de los ciclos combinados.}{167}{section.11.5}%
+\contentsline {subsection}{\numberline {11.5.1}Tipos de configuración.}{167}{subsection.11.5.1}%
+\contentsline {subsection}{\numberline {11.5.2}Distribución de energía en un ciclo combinado.}{168}{subsection.11.5.2}%
+\contentsline {section}{\numberline {11.6}Rendimiento del ciclo combinado.}{168}{section.11.6}%
+\contentsline {subsection}{\numberline {11.6.1}Diagramas de intercambio.}{168}{subsection.11.6.1}%
+\contentsline {subsubsection}{Ciclo combinado de un nivel de presión.}{169}{subsubsection*.305}%
+\contentsline {subsubsection}{Ciclo combinado con dos niveles de presión.}{169}{subsubsection*.307}%
