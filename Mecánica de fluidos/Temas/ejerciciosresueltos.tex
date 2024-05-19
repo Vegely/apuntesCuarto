@@ -127,7 +127,7 @@
 		\[\textcolor{blue}{\ln \dfrac{y}{y_0}=\dfrac{-2sen(\omega t)}{\omega}}\]
 		\[\textcolor{blue}{\ln \dfrac{z}{z_0}=\dfrac{-2sen(\omega t)}{\omega}}\]
 		\[\textcolor{blue}{\dfrac{1}{2}\ln \dfrac{x}{x_0}=-\ln \dfrac{y}{y_0} \rightarrow xy^2=x_0y_0^2}\]
-		\[\textcolor{blue}{\ln \dfrac{y}{z_0}=\ln \dfrac{y}{y_0} \rightarrow yz_0=zy_0}\]
+		\[\textcolor{blue}{\ln \dfrac{z}{z_0}=\ln \dfrac{y}{y_0} \rightarrow yz_0=zy_0}\]
 		\item Las líneas de corriente en un instante t
 		\[\textcolor{blue}{\dfrac{dz}{v_z}=\dfrac{dy}{v_y}=\dfrac{dx}{v_x}}\]
 		\[\textcolor{blue}{\dfrac{dy}{-2cos(\omega t)y}=\dfrac{dz}{-2cos(\omega t)z}\rightarrow \dfrac{dy}{y}=\dfrac{dz}{z}\rightarrow \ln z = \ln y + C_0 \rightarrow z=C_{00}y}\]
@@ -1044,8 +1044,8 @@ Analizando el lazo de presiones:
 		P_3 = P_2(\rho_a \text{ es muy pequeña})\\
 		P_4 = P_3 (\text{interfase plana})\\
 		P_5 = P_4 + \rho_l g H(t)\\
-		P_6 = P_5
-		P_7 + \dfrac{1}{2} \rho_l v_s^2 = P_6\\
+		P_6 = 
+		P_7 + \dfrac{1}{2} \rho_l v_s^2 = P_5\\
 		P_7 = P_a
 	\end{matrix}
 \]
@@ -1054,7 +1054,7 @@ Donde $P_1$ es la presión antes del orificio 1 (por donde entra el gas), $P_2$ 
 
 
 Sabiendo que el término $\dfrac{1}{2}\rho_a v_{g,atm}^2$ es despreciable frente a $\dfrac{1}{2}\rho_a v_{g}^2$, tras sumar todas las presiones resulta:
-\[\dfrac{1}{2}\rho_a v_{g}^2 = \dfrac{1}{2}\rho_a v_{s}^2 + \rho g H(t)\]
+\[\dfrac{1}{2}\rho_a v_{g}^2 = \dfrac{1}{2}\rho_l v_{s}^2 + \rho g H(t)\]
 
 Conocemos las expresiones de las velocidades de entrada y salida:
 \[v_g = \dfrac{Q}{\dfrac{\pi D_1^2}{4}}; v_s = \dfrac{Q}{\dfrac{\pi D_0^2}{4}}; Q = Q_g = Q_s\]

@@ -94,6 +94,7 @@ En estas expresiones aparecen dos tipos de fuerzas:
 \section{Ecuaciones de Navier-Stokes.}
 Se parte del teorema del transporte de Reynolds:
 \begin{equation}
+	\label{NS1}
 \iiint_{V_f}\vec{f}_V\,dV
 +
 \oiint_{S_f}\vec{f}_s\,dS
@@ -104,6 +105,7 @@ Se parte del teorema del transporte de Reynolds:
 \end{equation}
 Desarrollando mediante el teorema de la divergencia de Gauss:
 \begin{equation}
+	\label{NS2}
 	\oiint_{S_f}\vec{f}_s\,dS
 	=
 	\oiint_{S_f}-P\vec{n}_s\,dS
@@ -116,12 +118,13 @@ Desarrollando mediante el teorema de la divergencia de Gauss:
 \end{equation}
 
 \begin{equation}
+	\label{NS3}
 \oiint_{S_f}\rho\vec{v}\left(\vec{v}\cdot\vec{n}\right)\,dS
 =
 \iiint_{V_f}\vec{\nabla}\cdot\left(\rho \vec{ v} \otimes \vec{v}\right)\,dV
 \end{equation}
 
-Juntando las ecuaciones (5), (6) y (7):
+Juntando las ecuaciones \eqref{NS1}, \eqref{NS2} y \eqref{NS3}:
 \[\iiint_{V_f}\vec{f}_V\,dV
 +
 \iiint_{V_f}-\vec{\nabla}P\,dV
