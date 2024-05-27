@@ -1243,7 +1243,7 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
 \item Calcular la altura, h, si la fuerza del fluido sobre el depósito con N agujeros es nula. La densidad $\rho$ es constante.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{imagenesEjercicios/fuerzaDepositoNagujeros}
+	\includegraphics[width=0.6\linewidth]{imagenesEjercicios/fuerzaDepositoNagujeros}
 	\caption{Esquema del depósito con N agujeros en su base.}
 	\label{fig:fuerzadepositonagujeros}
 \end{figure}
@@ -1253,7 +1253,7 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
  
  
  
- Como el volumen de control no varia (se pretende obtener el valor de la fuerza con el cual h no varía) y teniendo en cuenta desarrollos de ejercicios anteriores:
+ Como el volumen de control no varia (h constante), teniendo en cuenta desarrollos anteriores:
  \[\dfrac{d}{dt}\iiint_{V_c}\rho \,dV=0\rightarrow \oiint_{S_c}\rho\left(\vec{v}-\vec{v}_C\right)\cdot \vec{n} \,dS=0\rightarrow \rho v_e S_e=\rho v_i S_i \rightarrow Q= v_i N\pi\dfrac{D_i^2}{4} \rightarrow v_i=\dfrac{4Q}{\pi N D_i^2}\]
 
 
@@ -1351,31 +1351,99 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
 \black
 \section{Flujos de viscosidad dominante.}
 \begin{enumerate}
-	\item Hallar la velocidad mínima para arrastrar toda la película líquida hacia arriba. El fluido tiene $\mu$ y $\rho$ constantes.
+	\item Hallar la velocidad mínima para arrastrar toda la película líquida hacia arriba. $\mu$ y $\rho$ constantes.
 	\begin{figure}[H]
+		\begin{minipage}{0.45\textwidth}
 		\centering
-		\includegraphics[width=0.5\linewidth]{imagenesEjercicios/arrastreFluido}
+		\includegraphics[width=0.8\linewidth]{imagenesEjercicios/arrastreFluido}
 		\caption{Esquema de la placa arrastrando el fluido.}
 		\label{fig:arrastrefluido}
-	\end{figure}
+	\end{minipage}%
+	\begin{minipage}{0.55\textwidth}
+	\blue
+	Planteando las ecuaciones vistas en el tema para un flujo con fuerzas de viscosidad dominante unidireccional:
+	\[0=P_l+\mu\dfrac{\partial v_x^2}{\partial^2 y}\ \ ; \ \ P_l=-\dfrac{\partial }{\partial x}\left(P+\rho U \right)\]
 	
+	Las condiciones de contorno del problema son:
+	\[v_x(y=0)=-v_p \ \ ; \ \ P(y=h_0)=P_a\]
+	\[ \tau_{P_{l}}=\mu_{liq} \left. \dfrac{\partial v_x}{\partial y} \right|_{liq} =\mu_{gas} \left. \dfrac{\partial v_x}{\partial y} \right|_{gas} \approx 0\]
+	\[U=U_g=-\vec{g}\cdot \vec{r}=g\vec{j'}\cdot
+	\left(x\vec{i}+y\vec{j}\right)\]
+	\[U= g\left(-x sen(\alpha)+ycos(\alpha)\right)\]
+	\[P+\rho U=P+\rho g\left(-x sen(\alpha)+ycos(\alpha)\right)\]
+	\end{minipage}
+	\end{figure}
+	\blue
+	\[P_l=-\dfrac{\partial }{\partial x}\left(P+\rho U\right)=
+	-\dfrac{\partial }{\partial x}\left[P+\rho g\left(-x sen(\alpha)+ycos(\alpha)\right)\right]=\rho gsen(\alpha)\]	
+	\[0=P_l+\mu\dfrac{\partial v_x^2}{\partial^2 y}\rightarrow \dfrac{\partial v_x^2}{\partial^2 y}=-\dfrac{P_l}{\mu}\rightarrow v_x=-\dfrac{P_l}{2\mu}y^2+Ay+B\]
+	\[v_x(y=0)=-v_p\rightarrow B=-v_p \ \ ; \ \ \left. \dfrac{\partial v_x}{\partial y} \right|_{h_0}=0 \rightarrow A=\dfrac{P_l}{\mu}h_0\]
+	\[v_x=\dfrac{P_l y}{2\mu}\left(h_0-y\right)-v_p\]
+	
+	
+	Para que arrastre toda la película de líquido:
+	\[v_x=\dfrac{P_l y}{2\mu}\left(h_0-y\right)-v_p < 0 \ \forall \ y\]
+	\black
 	\item Hallar la dinámica del vaciado si el flujo es de viscosidad dominante. El fluido tiene $\mu$ y $\rho$ constantes.
 	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.5\linewidth]{imagenesEjercicios/flujoViscosidadDominante1}
-		\caption{Esquema del depósito vaciandose.}
-		\label{fig:flujoviscosidaddominante1}
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{imagenesEjercicios/flujoViscosidadDominante1}
+			\caption{Esquema del depósito vaciandose.}
+			\label{fig:flujoviscosidaddominante1}
+		\end{minipage}%
+		\begin{minipage}{0.55\textwidth}
+			\blue
+			Se parte de la expresión del flujo de Hagen-Poiseuille
+			\[Q=-A_d \dot{h}(t) \ \ ; \ \ Q_{H-P}=-\dfrac{\pi D^4}{128 \mu}\dfrac{\partial}{\partial z}\left(P+\rho U\right)\]
+			\[-\dfrac{\partial}{\partial z}\left(P+\rho U\right)=\dfrac{128 \mu Q}{\pi D^4}\rightarrow Q \ y \ D \ne f(z)\]
+			\[\dfrac{\left(P+\rho  U\right)_{z=0}-\left(P+\rho  U\right)_{z=L}}{L}=\dfrac{128 \mu Q}{\pi D^4}\]
+			\[\left(P+\rho  U\right)_{z=0}=\left(P+\rho  U\right)_{e}=P_e\]
+			\[\left(P+\rho  U\right)_{z=0}=\left(P+\rho  U\right)_{s}=P_s-\rho g L\]
+		
+			
+			Sustituyendo:
+			\[P_e-\left(P_s-\rho g L\right)=\dfrac{128 \mu QL}{\pi D^4}\rightarrow P_e+\rho g L=P_s+\dfrac{128 \mu QL}{\pi D^4}\]
+				\[P_e=P_a+\rho g h(t)\]
+			\[P_s=P_a\]
+			\[\rho g\left[L+h(t)\right]=\dfrac{128 \mu L}{\pi D^4}Q=-\dfrac{128 \mu L}{\pi D^4}A_d \dot{h}(t)\]
+		\end{minipage}
 	\end{figure}
+	\blue
+	Resolviendo la EDO:
+	\[\dfrac{dh}{L+h(t)}=-\dfrac{\rho g\pi D^4}{128 \mu L A_d }dt
+	\rightarrow
+	 ln\left[L+h(t)\right]=-\dfrac{\rho g\pi D^4}{128 \mu L A_d }t +C\]
+	\[h(t=0)=h_0 \rightarrow ln\left[L+h_0\right]=C\]
 	
-	\item Hallar la dinámica del sistema si el flujo de viscosidad dominante está inmerso en una tubería de diámetro descendente.
+	
+	Por tanto:
+	\[ ln\left[\dfrac{L+h(t)}{L+h_0}\right]=-\dfrac{\rho g\pi D^4}{128 \mu L A_d }t \rightarrow K= \dfrac{\rho g\pi D^4}{128 \mu L A_d } \rightarrow h(t)=L\left(e^{-Kt}-1\right) + h_0e^{-Kt}\]
+	\newpage
+	\black
+	\item Hallar la dinámica del sistema si el flujo de viscosidad dominante está inmerso en una tubería de diámetro descendente. $D=D_0\left(1-\alpha\dfrac{z}{L}\right)$
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\linewidth]{imagenesEjercicios/emboloDiametroDescendente}
+		\includegraphics[width=0.8\linewidth]{imagenesEjercicios/emboloDiametroDescendente}
 		\caption{Esquema del problema.}
 		\label{fig:embolodiametrodescendente}
 	\end{figure}
+	\blue
+	Sea $P(t)=At+B$. Planteando el lazo de presiones:
+	\[m_{emb}\ddot{s}=\left[P(t)-P_1\right]\dfrac{\pi D_{sgr}^2}{4} \rightarrow P(t)=P_1 -\dfrac{4m_{emb}}{\pi D_{sgr}^2}\ddot{s}\]
+	\[P_1=P_2=P_3\]
+	\[Q_{H-P}=-\dfrac{\pi D^4(z)}{128}\dfrac{\partial}{\partial z}\left(P+\rho U\right) \rightarrow P_3-P_4 =\dfrac{128\mu Q}{\pi}\int_0^L \dfrac{1}{D^4(z)}\,dz\]
+	\[P_3-P_4 =\dfrac{128\mu Q}{\pi}\int_0^L \dfrac{1}{\left(1-\alpha\dfrac{z}{L}\right)^4}\,dz=
+	\left.\dfrac{128\mu Q}{\pi} \dfrac{3\alpha}{\left(1-\alpha\dfrac{z}{L}\right)^3}  \right|_0^L
+	= \dfrac{384\mu Q \alpha}{\pi} \left[\dfrac{1}{\left(1-\alpha\right)^3 }- 1\right]
+	\]
 	
+	
+	Planteando las ecuaciones de conservación de la masa se obtiene:
+	\[Q=-\dot{s}\dfrac{\pi D_{sgr^2}}{4}\]
+	\black 
 \end{enumerate}
+\newpage
 \black
 \section{Conservación de la energía.}
 \begin{enumerate}
