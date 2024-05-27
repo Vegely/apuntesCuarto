@@ -36,7 +36,7 @@
 \contentsline {section}{\numberline {9.2}Cinemática de la partícula fluida.}{36}{}%
 \contentsline {section}{\numberline {9.3}Conservación de la masa.}{40}{}%
 \contentsline {section}{\numberline {9.4}Conservación de la cantidad de movimiento.}{47}{}%
-\contentsline {section}{\numberline {9.5}Flujos de viscosidad dominante.}{61}{}%
+\contentsline {section}{\numberline {9.5}Flujos de viscosidad dominante.}{62}{}%
 \contentsline {section}{\numberline {9.6}Conservación de la energía.}{63}{}%
-\contentsline {section}{\numberline {9.7}Fluidoestática.}{64}{}%
-\contentsline {section}{\numberline {9.8}Semejanza hidrodinámica.}{64}{}%
+\contentsline {section}{\numberline {9.7}Fluidoestática.}{65}{}%
+\contentsline {section}{\numberline {9.8}Semejanza hidrodinámica.}{65}{}%

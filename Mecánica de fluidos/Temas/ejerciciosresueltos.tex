@@ -1247,17 +1247,105 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
 	\caption{Esquema del depósito con N agujeros en su base.}
 	\label{fig:fuerzadepositonagujeros}
 \end{figure}
+\blue
+ Planteando la ecuación de conservación de la masa:
+ \[\dfrac{d}{dt}\iiint_{V_c}\rho \,dV+\oiint_{S_c}\rho\left(\vec{v}-\vec{v}_C\right)\cdot \vec{n} \,dS=0\]
+ 
+ 
+ 
+ Como el volumen de control no varia (se pretende obtener el valor de la fuerza con el cual h no varía) y teniendo en cuenta desarrollos de ejercicios anteriores:
+ \[\dfrac{d}{dt}\iiint_{V_c}\rho \,dV=0\rightarrow \oiint_{S_c}\rho\left(\vec{v}-\vec{v}_C\right)\cdot \vec{n} \,dS=0\rightarrow \rho v_e S_e=\rho v_i S_i \rightarrow Q= v_i N\pi\dfrac{D_i^2}{4} \rightarrow v_i=\dfrac{4Q}{\pi N D_i^2}\]
 
-\item Hallar la expresión de la presión a aplicar sobre la masa en función de las magnitudes del problema. Tomar que R$<<$H.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.4\linewidth]{imagenesEjercicios/masaMovilRadio}
-	\caption{Esquema del problema.}
-	\label{fig:masamovilradio}
-\end{figure}
 
 
+	Planteando la conservación del momento en la dirección del eje $\vec{j}$ (en el eje $\vec{i}$ por simetría se anula):
+	\[\left[\iiint_{V_c}\vec{f}_V\,dV
+	+
+	\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=
+	\iiint_{V_c}\dfrac{\partial \rho\vec{v}}{\partial t}\,dV
+	+ \oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\right]\cdot \vec{j}\]
+	El término de fuerzas volumétricas:
+	\[\iiint_{V_c}\vec{f}_V\,dV \cdot \vec{j}=-\rho g h A_d\]
+	El término de fuerzas superficiales:
+	\[\oiint_{S_c}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS=\]
+	\[
+	\iint_{S_e}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+	+
+	\iint_{S_{i}}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+	+
+	\iint_{S_n}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+	+
+	\iint_{S_p}\left(-P\overline{\overline{I}}+\overline{\overline{\tau}}\right)\cdot\vec{n}\,dS
+	\]
+	Aplicando el mismo razonamiento que en anteriores ejercicios se introduce la presión atmosférica $P_a$. Como el número de Reynolds es elevado, $\overline{\overline{\tau}} $ es despreciable. 
+	\begin{itemize}
+		\item En la entrada del chorro, por ser un perfil uniforme y la presión es la atmosférica:
+		\[\left\{\iint_{S_e}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS\right\}\cdot \vec{j}=0\]
+		\item En la salida del chorro, por ser un perfil uniforme y la presión es la atmosférica:
+		\[\left\{\iint_{S_{i}}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS\right\}\cdot \vec{j}=0\]
+		\item En interfase líquido-gas como la presión es la atmosférica:
+		\[\left\{\iint_{S_n}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS\right\}\cdot \vec{j}=0\]
+		\item En la pared:
+		\[\left\{\iint_{S_p}\left[-(P-P_a)\overline{\overline{I}}+\overline{\overline{\tau}}\right]\cdot\vec{n}\,dS\right\}\cdot \vec{j}=-F_{liq+atm\rightarrow placa}\]
+	\end{itemize}
+	El término local es nulo, pues h es constante:
+	\[\iiint_{V_c}\dfrac{\partial \rho\vec{v}}{\partial t}\,dV=0\]
+	El término superficial, teniendo en cuenta que salvo en la salida y en la entrada los términos son nulos:
+	\[\left[\oiint_{S_c}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS=
+	\iint_{S_e}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS
+	+
+	\iint_{S_i}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\right]\cdot\vec{j}\]
+	\begin{itemize}
+		\item En la entrada del chorro:
+		\[\left[\iint_{S_e}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\right]\cdot \vec{j}=
+		\left[\iint_{S_e}\rho v_e\vec{j}\left[v_e \vec{j}\cdot-\vec{j}\right]\,dS\right]\vec{j}=-\rho \dfrac{4Q^2}{\pi D_0^2}\]
+		\item En la salida del chorro:
+		\[\left[\iint_{S_i}\rho\vec{v}\left[\left(\vec{v}-\vec{v}_c\right)\cdot\vec{n}\right]\,dS\right]\cdot \vec{j}=
+		\left[\iint_{S_i}-\rho v_i\vec{j}\left[-v_i \vec{j}\cdot-\vec{j}\right]\,dS\right]\vec{j}=-\rho N v_i^2\dfrac{D_i^2\pi}{4}
+		 \]
+	\end{itemize}
+	Por tanto:
+	\[-\rho g h A_d-F_{jet+atm\rightarrow placa}=-\rho \dfrac{4Q^2}{\pi D_0^2}-\rho N v_i^2\dfrac{D_i^2\pi}{4}\]
+	\[F_{jet+atm\rightarrow placa}=\rho\left(\dfrac{4Q^2}{\pi D_0^2}+ N v_i^2\dfrac{D_i^2\pi}{4}- g h A_d\right)=0\]
+	\[\dfrac{4Q^2}{\pi D_0^2}+ N v_i^2\dfrac{D_i^2\pi}{4}- g h A_d=0\]
+	
+	
+	
+	Sustituyendo la expresión obtenida mediante conservación de la masa:
+	\[N^2v_i^2\dfrac{\pi  D_i^4}{4 D_0^2}+ N v_i^2\dfrac{\pi D_i^2}{4}- g h \dfrac{\pi D_0^2}{4}=0\rightarrow
+	 gh=v_i^2\left[\left(\dfrac{ \sqrt{N} D_i}{D_0}\right)^4+ \left(\dfrac{ \sqrt{N} D_i}{D_0}\right)^2\right]\]
+	 
+	 
+	 Mediante el lazo de presiones se puede obtener otra relación entre altura y velocidad:
+	 \[P_a=P_1\]
+	 \[P_1+\rho g h=P_2\]
+	 \[P_2=P_3+\dfrac{\rho v_i^2}{2}\]
+	 \[P_3=P_a\]
+	 \[g h=\dfrac{v_i^2}{2}\]
+	 
+	 
+	 Por tanto, para que la altura sea constante debe cumplirse que (tanto la ecuación por lazo de presiones como mediante conservación de la masa deben ser iguales):
+	 \[\dfrac{1}{2}=\left(\dfrac{ \sqrt{N} D_i}{D_0}\right)^4+ \left(\dfrac{ \sqrt{N} D_i}{D_0}\right)^2\]
+	 
+	 
+	 Cuya única solución real positiva es:
+	 \[\dfrac{ \sqrt{N} D_i}{D_0}=\sqrt{\dfrac{\sqrt{3}}{2}-\dfrac{1}{2}}\approx 0,605 \rightarrow \sqrt{N} D_i\approx0,605 D_0\]
+\black
+
+%Dibujo realizado, pero falta solución
+%\item Hallar la expresión de la presión a aplicar sobre la masa en función de las magnitudes del problema. Tomar que R$<<$H.
+%
+%	\begin{figure}[H]
+%	\begin{minipage}{0.6\textwidth}
+%		\centering
+%		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/masaMovilRadio}
+%		\caption{Esquema del problema.}
+%		\label{fig:masamovilradio}
+%	\end{minipage}%
+%	\begin{minipage}{0.4\textwidth}
+%	\blue	
+%	\end{minipage}
+%\end{figure}
 
 \end{enumerate}
 \black
@@ -1266,7 +1354,7 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
 	\item Hallar la velocidad mínima para arrastrar toda la película líquida hacia arriba. El fluido tiene $\mu$ y $\rho$ constantes.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/arrastreFluido}
+		\includegraphics[width=0.5\linewidth]{imagenesEjercicios/arrastreFluido}
 		\caption{Esquema de la placa arrastrando el fluido.}
 		\label{fig:arrastrefluido}
 	\end{figure}
@@ -1274,7 +1362,7 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
 	\item Hallar la dinámica del vaciado si el flujo es de viscosidad dominante. El fluido tiene $\mu$ y $\rho$ constantes.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/flujoViscosidadDominante1}
+		\includegraphics[width=0.5\linewidth]{imagenesEjercicios/flujoViscosidadDominante1}
 		\caption{Esquema del depósito vaciandose.}
 		\label{fig:flujoviscosidaddominante1}
 	\end{figure}
@@ -1282,7 +1370,7 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
 	\item Hallar la dinámica del sistema si el flujo de viscosidad dominante está inmerso en una tubería de diámetro descendente.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.7\linewidth]{imagenesEjercicios/emboloDiametroDescendente}
+		\includegraphics[width=0.5\linewidth]{imagenesEjercicios/emboloDiametroDescendente}
 		\caption{Esquema del problema.}
 		\label{fig:embolodiametrodescendente}
 	\end{figure}
@@ -1355,7 +1443,7 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
 	Weissbach, determínese el caudal de descarga.
 	
 	
-	\item Calcular la potencia de la bomba en función del radio.
+
 \end{enumerate}
 \black
 \section{Fluidoestática.}
