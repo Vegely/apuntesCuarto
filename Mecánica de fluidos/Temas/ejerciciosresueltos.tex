@@ -1454,25 +1454,73 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
 		\caption{Representación del sistema.}
 		\label{fig:ej1perdidas}
 	\end{figure}
+	\blue
+	Se consideran orificios ideales y fricción por los tubos despreciable. Por conservación de la masa el caudal es el mismo en todo el recorrido. Planteando el equilibrio de presiones:
+	\[P_1=P_a\]
+	\[P_2=P_1+\rho g h_1(t)\]
+	\[P_3+\rho \dfrac{v_3^2}{2}=P_2\]
+	\[P_4=P_3+\rho g L_1\]
+	\[K_{p1}\rho\dfrac{v_4^2}{2}+P_5+\rho \dfrac{v_5^2}{2}=P_4+\rho \dfrac{v_4^2}{2} \rightarrow K_{p1}\rho\dfrac{v_4^2}{2}+P_5=P_4\]
+	\[P_6=P_5\]
+	\[P_7+K_{p2}\rho \dfrac{v_6^2}{2}=P_6\]
+	\[P_8+\rho g L_3 =P_7\]
+	\[Q\left[\left(P_9+\rho \dfrac{v_9^2}{2}\right)-\left(P_8+\rho \dfrac{v_8^2}{2}\right)\right]=\dot{W}_B\]
+	\[P_9=P_{10}+\rho g L_4\]
 	
+	
+	Cuando se produce una descarga de conducto a depósito, localmente, la energía cinética se diluye y por tanto, la presión no varia.
+	\[P_{10}=P_{11}\]
+	\[P_{11}=P_{12}+\rho g h_2(t)\]
+	\[A_{d2}(P_{12}-P_{13})=m_p \ddot{h}_2(t)+m_p g=m_p g \rightarrow [\ddot{h}_2(t) = 0, \text{velocidad constante}]\]
+	\[P_{13}=P_a\]
+	
+	
+	Sumando todas las ecuaciones y sabiendo que mediante conservación de la masa:
+	\[v_3=v_4=v_5=v_6=v_7=v_8\]
+	\[v_9=v_{10}\]
+	\[Q=v_8\dfrac{\pi D_1^2}{4}=v_9\dfrac{\pi D_2^2}{4} \rightarrow v_8= v_9\dfrac{D_2^2}{D_1^2}\]
+	\[P_8+\rho\dfrac{v_8^2}{2}=P_a+\rho g \left[h_1(t)+L_1-L_3\right]-\rho\dfrac{v_8^2}{2}(K_{p1}+K_{p2})\]
+	\[P_9=P_a+\rho g \left[L_4+h_2(t)\right]+\dfrac{m_p g}{A_d}\]
+	
+	
+	Sustituyendo en la ecuación anteriormente obtenida para la bomba:
+	\[Q\left[\left(P_a+\rho g \left[L_4+h_2(t)\right]+\dfrac{m_p g}{A_d}+\rho \dfrac{v_9^2}{2}\right)
+	-\left(P_a+\rho g \left[h_1(t)+L_1-L_3\right]-\rho\dfrac{v_8^2}{2}(K_{p1}+K_{p2})\right)\right]=\dot{W}_B\]
+	
+	\[v_9\dfrac{\pi D_2^2}{4}\left[\left(P_a+\rho g \left[L_4+h_2(t)\right]+\dfrac{m_p g}{A_d}+\rho \dfrac{v_9^2}{2}\right)
+	-\left(P_a+\rho g \left[h_1(t)+L_1-L_3\right]-\rho\dfrac{v_9^2}{2}\dfrac{D_2^2}{D_1^2}(K_{p1}+K_{p2})\right)\right]=\dot{W}_B\]
+	
+	
+	Por último, también se cumple que:
+	\[Q=-A_{d1}\dot{h}_1=A_{d2} v_p = cte\rightarrow h_1(t)=h_{01}-QA_{d1}t \rightarrow h_2(t)=h_{02}+QA_{d2}t\]
+	\black
 	\item Hallar la relación de presiones en el siguiente sistema.
 		
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{imagenesEjercicios/Ej1Perdidas2}
+		\caption{Representación del sistema.}
+		\label{fig:ej1perdidas2}
+	\end{figure}
+	\blue
+	El problema está dividido en dos lazos de presión. En los puntos 1-7 se estudia el sistema de bombeo y en los puntos 8-15 el sistema de abastecimiento.
+	\[P_1=P_a\]
+	\[P_2=P_1+\rho g H_0\]
+	\[P_3+\rho \dfrac{v_3^2}{2}=P_2\]
+	\[K_{p1}\rho \dfrac{v_3^2}{2} + P_4=P_3+\rho g H_{BD}\]
+	\[Q(P_5-P_4)=\dot{W}_B\]
+	\[K_{P2}\rho \dfrac{v_5^2}{2}+P_6+\rho g(H_{Bd}+H_{bd})=P_5\]
+	\[P_6=P_7=P_8=P_9=P_a\]
+	\[P_{10}=P_9+\rho g h(t)\]
+	\[P_{11}+\rho\dfrac{v_{11}^2}{2}=P_{10}\]
+	\[ \left(P_{11}+\rho\dfrac{v_{11}^2}{2}+\rho g z_{11}\right)-\left(P_{12}+\rho\dfrac{v_{12}^2}{2}+\rho g z_{12} \right)=f
+	\dfrac{\rho v_{11}^2 L_1}{2D_2}\rightarrow v_{11}=v_{12} \rightarrow P_{11} +\rho g L_1=P_{12}+f
+	\dfrac{\rho v_{11}^2 L_1}{2D_2}\]
+	\[P_{13}=P_{12} \rightarrow \text{(Disipación turbulenta en viscosidad)}\]
+	\[\dfrac{128\mu L_2 Q_2}{\pi D^4}=P_{13}+\rho g L_2 - P_{14}\]
+	\[P_{14}=P_{15}=P_a\]
+	\black
 	
-	\item Doña Emilia quiere cambiar la vieja instalación de agua que abastece su pequeña cocina
-	desde un depósito elevado, donde el conducto tiene una longitud de 26 m y un diámetro
-	de 3 cm, por una más moderna. La nueva instalación incluye una bomba centrífuga, que
-	aspira desde un pozo a presión atmosférica que tiene la superficie libre a 6 m por debajo del
-	nivel del suelo. Sin embargo, como tiene alguna rareza que otra, ha decidido no cambiar su
-	vieja caldera (cilíndrica de diámetro 0,3 m y altura 0,4 m. Para más inri, quiere que tarde
-	en llenarse un tiempo de 15 s con el grifo medio cerrado (Esto conlleva una singularidad).  Datos: $\nu = 1, 1 \cdot 10^{-6}m^2/s)$ Se pide:
-	\begin{enumerate}
-		\item Si se reutilizan los conductos existentes de rugosidad 0,015 mm, pero con la mitad
-		de la longitud, y se mantiene el caudal requerido para el llenado de la caldera, ¿cuál
-		deberíaa ser la nueva K del grifo si la curva de la bomba atiende a la expresión $Hm = 50 - 8,5 \cdot 10^6Q^2$
-		
-		\item Si Doña Emilia insiste en no cambiar la K del grifo (Grifo medio cerrado) y el factor de fricción tampoco cambia ¿Cuál es el nuevo caudal circulante? ¿Cuánto tardaría
-		ahora en llenarse la caldera?
-	\end{enumerate}
 	
 	\item Un petrolero ha llegado a puerto con una carga de petróleo crudo de densidad relativa 0,86
 	y viscosidad cinemática de 5 $mm^2/s$. Esta carga se debe descargar el el depósito indicado
@@ -1487,10 +1535,63 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
 	Teniendo en cuenta que $h_1 = 1 m$, $h_2 = 30 m$, que la rugosidad absoluta es 0,26 mm
 	y considerando que la pérdida de carga unitaria viene dada por la expresión de Darcy-
 	Weissbach, determínese el caudal de descarga.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{imagenesEjercicios/Ej1Perdidas4}
+		\caption{Esquema del problema.}
+		\label{fig:ej1perdidas4}
+	\end{figure}
+	\blue
+	En este ejercicio, en lugar de darse el factor K de pérdidas se da una longitud equivalente de pérdidas. De esta manera, las pérdidas serán equivalentes a las que ocurrirían en un conducto de dicha longitud. Por tanto, aunque se podrían hacer las presiones en los distintos puntos intermedios, basta con obtener las presiones en s y 9.
+	\[P_e=P_a\]
+	\[Q\left[\left(P_s+\dfrac{\rho v_s^2}{2}+\rho g z_{s}\right)-\left(P_e+\dfrac{\rho v_e^2}{2}+\rho g z_{e}\right)\right]=\eta \dot{W}_B\rightarrow 
+	Q\left[P_s-P_e\right]=\eta \dot{W}_B \]
+	\[\left(P_s+\dfrac{\rho v_s^2}{2}+\rho g z_{s}\right)-\left(P_9+\dfrac{\rho v_9^2}{2}+\rho g z_{9}\right)=
+	\dfrac{\rho f v^2 L_v }{2D} \rightarrow v_s=v_9 \rightarrow
+	P_s=P_9+\rho g (h_1+h_2)+\dfrac{\rho f v^2 L_v }{2D}\]
 	
 	
+	En función del caudal, Q quedaría:
+	\[v=\dfrac{4Q }{\pi D^2}\rightarrow P_s=P_9+\rho g (h_1+h_2)+\dfrac{8\rho f Q^2 L_v }{\pi^2 D^5 }\]
+	\[P_9=P_{10}=P_a\]	
+	
+	
+	Despejando Q a partir de las ecuaciones:
+	\[Q\left[P_a+\rho g (h_1+h_2)+\dfrac{8\rho f Q^2 L_v }{\pi^2 D^5 }-P_a\right]=\eta \dot{W}_B\]
+	\[Q^3\cdot \dfrac{8\rho fL_v }{\pi^2 D^5 }+ Q\cdot \rho g (h_1+h_2) =\eta \dot{W}_B\]
+	
+	
+	
+	A continuación, se obtienen los valores numéricos:
+	\[\eta= 0.7\]
+	\[\dot{W}_B=20kW\]
+	\[\rho=0,86 \rho_{H_2O}=0,86\times 1000 \dfrac{kg}{m^3}=860 \dfrac{kg}{m^3}\]
+	\[g=9,81\dfrac{m}{s^2}\]
+	\[h_1=1m\]
+	\[h_2=30m\]
+	\[D=0,25 m\]
+	\[L_v=200+4\cdot4+24=240m\]
+	\[\epsilon=\]
+	
+	
+	Para obtener el valor de f, se emplea el ábaco de Moody. Para ello, se calcula la rugosidad relativa y se asume un Reynolds elevado (luego se comprueba).
+	\[\epsilon_R=\dfrac{\epsilon}{D}=\dfrac{0,26\times10^{-3}}{0,25}=0,00104 \rightarrow \text{Se corresponde con una f de 0,02}\]
+	
+	
+	Sustituyendo:
+	\[Q^3\times 110504 + Q\times 261268=14000\rightarrow Q=0,054 \dfrac{m^3}{s}\]
+	\[v=\dfrac{4Q }{\pi D^2}=\dfrac{4\times 0,054}{\pi \times 0,25^2}=1,1 \dfrac{m}{s}\]
+	
+	El número de Reynolds:
+	\[Re=\dfrac{\rho v_c L_c}{\mu} \rightarrow L_c = D \ \ y \ \ \mu= \rho \nu\]
+	\[L_c=0,25 m\]
+	\[\mu = 860\times (5\times 10^{-6})=0,0043 Pa \cdot s\]
+	\[Re=\dfrac{860 \times 1,1 \times 0,25}{0,0043}=55000\]
 
+
+	Comprobando con el diagrama de Moody, la aproximación inicial de suponer un Reynolds elevado es válida y, por tanto, no es necesario iterar.
 \end{enumerate}
 \black
+\newpage
 \section{Fluidoestática.}
 \section{Semejanza hidrodinámica.}

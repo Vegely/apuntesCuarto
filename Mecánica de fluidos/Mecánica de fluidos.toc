@@ -38,5 +38,5 @@
 \contentsline {section}{\numberline {9.4}Conservación de la cantidad de movimiento.}{47}{}%
 \contentsline {section}{\numberline {9.5}Flujos de viscosidad dominante.}{62}{}%
 \contentsline {section}{\numberline {9.6}Conservación de la energía.}{65}{}%
-\contentsline {section}{\numberline {9.7}Fluidoestática.}{66}{}%
-\contentsline {section}{\numberline {9.8}Semejanza hidrodinámica.}{66}{}%
+\contentsline {section}{\numberline {9.7}Fluidoestática.}{70}{}%
+\contentsline {section}{\numberline {9.8}Semejanza hidrodinámica.}{70}{}%
