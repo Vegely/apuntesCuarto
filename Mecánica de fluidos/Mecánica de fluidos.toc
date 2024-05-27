@@ -1,5 +1,4 @@
-\babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Índice general}{\es@scroman {ii}}{}%
+\contentsline {chapter}{Índice general}{ii}{}%
 \contentsline {chapter}{\numberline {1}Fundamentos y propiedades de los fluidos.}{1}{}%
 \contentsline {section}{\numberline {1.1}Hipótesis de medio continuo.}{1}{}%
 \contentsline {section}{\numberline {1.2}Ecuaciones equilibrio termodinámico local.}{3}{}%
@@ -23,11 +22,11 @@
 \contentsline {section}{\numberline {4.4}Teorema de Bernouilli.}{23}{}%
 \contentsline {chapter}{\numberline {5}Flujos de viscosidad dominante.}{25}{}%
 \contentsline {section}{\numberline {5.1}Introducción.}{25}{}%
-\contentsline {section}{\numberline {5.2}Fluidos unidireccionales.}{25}{}%
-\contentsline {section}{\numberline {5.3}Flujo de Covette.}{25}{}%
-\contentsline {section}{\numberline {5.4}Flujo de Poiseulle.}{25}{}%
-\contentsline {section}{\numberline {5.5}Flujo de Hagen-Poiseuille.}{25}{}%
-\contentsline {section}{\numberline {5.6}Espesor de capa límite.}{25}{}%
+\contentsline {section}{\numberline {5.2}Flujos unidireccionales.}{25}{}%
+\contentsline {section}{\numberline {5.3}Flujo de Covette.}{26}{}%
+\contentsline {section}{\numberline {5.4}Flujo de Poiseulle.}{26}{}%
+\contentsline {section}{\numberline {5.5}Flujo de Hagen-Poiseuille.}{26}{}%
+\contentsline {section}{\numberline {5.6}Espesor de capa límite.}{26}{}%
 \contentsline {chapter}{\numberline {6}Conservación de la energía.}{27}{}%
 \contentsline {chapter}{\numberline {7}Fluidoestática.}{29}{}%
 \contentsline {chapter}{\numberline {8}Semejanza hidrodinámica.}{31}{}%

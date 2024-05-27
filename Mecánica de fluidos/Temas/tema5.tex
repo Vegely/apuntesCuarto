@@ -22,7 +22,40 @@ Para conocer si el flujo es de viscosidad dominante se emplea el número de Reyn
 	\item Si $Re\downarrow\downarrow$ efectos viscosos dominantes.
 \end{itemize}
 
-\section{Fluidos unidireccionales.}
+\section{Flujos unidireccionales.}
+Se habla de flujo unidireccional cuando un flujo cuya expresión de la velocidad es de la forma:
+\[\vec{v}=v_x(x,y,z,t)\vec{i}+v_y(x,y,z,t)\vec{j}+v_z(x,y,z,t)\vec{k}  \leftrightarrow v_y=v_z=0\]
+
+
+Como además, ha de cumplirse la conservación de la masa:
+\[\vec{\nabla}\cdot\vec{v}=0=\dfrac{\partial v_x(x,y,z,t)}{\partial x} \rightarrow v_x \ne f(x)\]
+
+
+Por tanto, la expresión de la velocidad:
+\[\vec{v}=v_x(y,z,t)\vec{i}\]
+
+\begin{figure}[!ht]
+	\centering
+	\begin{circuitikz}
+		\tikzstyle{every node}=[font=\normalsize]
+		\draw [short] (2.25,13) -- (9.5,13);
+		\draw [short] (2.25,10) -- (9.5,10);
+		\draw [->, >=Stealth] (2.25,10.25) -- (2.75,10.25);
+		\draw [->, >=Stealth] (2.25,10.5) -- (3,10.5);
+		\draw [->, >=Stealth] (2.25,10.75) -- (3.25,10.75);
+		\draw [->, >=Stealth] (2.25,11) -- (3.5,11);
+		\draw [->, >=Stealth] (2.25,12.75) -- (2.75,12.75);
+		\draw [->, >=Stealth] (2.25,12.5) -- (3,12.5);
+		\draw [->, >=Stealth] (2.25,12.25) -- (3.25,12.25);
+		\draw [->, >=Stealth] (2.25,12) -- (3.5,12);
+		\draw [->, >=Stealth] (2.25,11.75) -- (3.75,11.75);
+		\draw [->, >=Stealth] (2.25,11.25) -- (3.75,11.25);
+		\draw [->, >=Stealth] (2.25,11.5) -- (4,11.5);
+		\node [font=\normalsize] at (4.75,11.5) {$\vec{v}$};
+	\end{circuitikz}
+	\label{fig:my_label}
+\end{figure}
+
 \section{Flujo de Covette.}
 \section{Flujo de Poiseulle.}
 \section{Flujo de Hagen-Poiseuille.}
