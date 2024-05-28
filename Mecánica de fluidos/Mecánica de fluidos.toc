@@ -36,13 +36,13 @@
 \contentsline {section}{\numberline {6.5}Factor de fricción (f).}{32}{}%
 \contentsline {section}{\numberline {6.6}Diagrama de Moody.}{33}{}%
 \contentsline {chapter}{\numberline {7}Fluidoestática.}{35}{}%
-\contentsline {chapter}{\numberline {8}Semejanza hidrodinámica.}{37}{}%
-\contentsline {chapter}{\numberline {9}Ejercicios resueltos.}{39}{}%
-\contentsline {section}{\numberline {9.1}Fundamentos y propiedades de los fluidos.}{39}{}%
-\contentsline {section}{\numberline {9.2}Cinemática de la partícula fluida.}{42}{}%
-\contentsline {section}{\numberline {9.3}Conservación de la masa.}{46}{}%
-\contentsline {section}{\numberline {9.4}Conservación de la cantidad de movimiento.}{53}{}%
-\contentsline {section}{\numberline {9.5}Flujos de viscosidad dominante.}{68}{}%
-\contentsline {section}{\numberline {9.6}Conservación de la energía.}{71}{}%
-\contentsline {section}{\numberline {9.7}Fluidoestática.}{76}{}%
-\contentsline {section}{\numberline {9.8}Semejanza hidrodinámica.}{76}{}%
+\contentsline {chapter}{\numberline {8}Semejanza hidrodinámica.}{41}{}%
+\contentsline {chapter}{\numberline {9}Ejercicios resueltos.}{43}{}%
+\contentsline {section}{\numberline {9.1}Fundamentos y propiedades de los fluidos.}{43}{}%
+\contentsline {section}{\numberline {9.2}Cinemática de la partícula fluida.}{46}{}%
+\contentsline {section}{\numberline {9.3}Conservación de la masa.}{50}{}%
+\contentsline {section}{\numberline {9.4}Conservación de la cantidad de movimiento.}{57}{}%
+\contentsline {section}{\numberline {9.5}Flujos de viscosidad dominante.}{72}{}%
+\contentsline {section}{\numberline {9.6}Conservación de la energía.}{75}{}%
+\contentsline {section}{\numberline {9.7}Fluidoestática.}{80}{}%
+\contentsline {section}{\numberline {9.8}Semejanza hidrodinámica.}{80}{}%
