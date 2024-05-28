@@ -23,19 +23,25 @@
 \contentsline {chapter}{\numberline {5}Flujos de viscosidad dominante.}{25}{}%
 \contentsline {section}{\numberline {5.1}Introducción.}{25}{}%
 \contentsline {section}{\numberline {5.2}Flujos unidireccionales.}{25}{}%
-\contentsline {section}{\numberline {5.3}Flujo de Covette.}{26}{}%
-\contentsline {section}{\numberline {5.4}Flujo de Poiseulle.}{26}{}%
-\contentsline {section}{\numberline {5.5}Flujo de Hagen-Poiseuille.}{26}{}%
-\contentsline {section}{\numberline {5.6}Espesor de capa límite.}{26}{}%
-\contentsline {chapter}{\numberline {6}Conservación de la energía.}{27}{}%
-\contentsline {chapter}{\numberline {7}Fluidoestática.}{29}{}%
-\contentsline {chapter}{\numberline {8}Semejanza hidrodinámica.}{31}{}%
-\contentsline {chapter}{\numberline {9}Ejercicios resueltos.}{33}{}%
-\contentsline {section}{\numberline {9.1}Fundamentos y propiedades de los fluidos.}{33}{}%
-\contentsline {section}{\numberline {9.2}Cinemática de la partícula fluida.}{36}{}%
-\contentsline {section}{\numberline {9.3}Conservación de la masa.}{40}{}%
-\contentsline {section}{\numberline {9.4}Conservación de la cantidad de movimiento.}{47}{}%
-\contentsline {section}{\numberline {9.5}Flujos de viscosidad dominante.}{62}{}%
-\contentsline {section}{\numberline {9.6}Conservación de la energía.}{65}{}%
-\contentsline {section}{\numberline {9.7}Fluidoestática.}{70}{}%
-\contentsline {section}{\numberline {9.8}Semejanza hidrodinámica.}{70}{}%
+\contentsline {section}{\numberline {5.3}Flujo de Covette.}{27}{}%
+\contentsline {section}{\numberline {5.4}Flujo de Poiseulle.}{27}{}%
+\contentsline {section}{\numberline {5.5}Flujo de Hagen-Poiseuille.}{28}{}%
+\contentsline {section}{\numberline {5.6}Espesor de capa límite.}{29}{}%
+\contentsline {chapter}{\numberline {6}Conservación de la energía.}{31}{}%
+\contentsline {section}{\numberline {6.1}Definiciones.}{31}{}%
+\contentsline {section}{\numberline {6.2}Conservación de la energía en forma integral.}{32}{}%
+\contentsline {section}{\numberline {6.3}Bombas y turbinas.}{32}{}%
+\contentsline {section}{\numberline {6.4}Pérdidas de carga.}{32}{}%
+\contentsline {section}{\numberline {6.5}Factor de fricción (f).}{32}{}%
+\contentsline {section}{\numberline {6.6}Diagrama de Moody.}{32}{}%
+\contentsline {chapter}{\numberline {7}Fluidoestática.}{33}{}%
+\contentsline {chapter}{\numberline {8}Semejanza hidrodinámica.}{35}{}%
+\contentsline {chapter}{\numberline {9}Ejercicios resueltos.}{37}{}%
+\contentsline {section}{\numberline {9.1}Fundamentos y propiedades de los fluidos.}{37}{}%
+\contentsline {section}{\numberline {9.2}Cinemática de la partícula fluida.}{40}{}%
+\contentsline {section}{\numberline {9.3}Conservación de la masa.}{44}{}%
+\contentsline {section}{\numberline {9.4}Conservación de la cantidad de movimiento.}{51}{}%
+\contentsline {section}{\numberline {9.5}Flujos de viscosidad dominante.}{66}{}%
+\contentsline {section}{\numberline {9.6}Conservación de la energía.}{69}{}%
+\contentsline {section}{\numberline {9.7}Fluidoestática.}{74}{}%
+\contentsline {section}{\numberline {9.8}Semejanza hidrodinámica.}{74}{}%

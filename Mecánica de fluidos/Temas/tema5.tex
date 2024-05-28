@@ -33,8 +33,8 @@ Como además, ha de cumplirse la conservación de la masa:
 
 Por tanto, la expresión de la velocidad:
 \[\vec{v}=v_x(y,z,t)\vec{i}\]
-
-\begin{figure}[!ht]
+\newpage
+\begin{figure}[H]
 	\centering
 	\begin{circuitikz}
 		\tikzstyle{every node}=[font=\normalsize]
@@ -53,10 +53,351 @@ Por tanto, la expresión de la velocidad:
 		\draw [->, >=Stealth] (2.25,11.5) -- (4,11.5);
 		\node [font=\normalsize] at (4.75,11.5) {$\vec{v}$};
 	\end{circuitikz}
+	\caption{Representación de un posible campo de velocidades.}
 	\label{fig:my_label}
 \end{figure}
 
+Una vez visto la expresión de la velocidad, desarrollando los términos de la ecuación de Navier-Stokes:
+\[\rho\dfrac{\partial \vec{v}}{\partial t}
++
+ \rho\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}
+=
+-
+\vec{\nabla}P
++
+ \mu\vec{\nabla}^2\vec{v} 
++
+\vec{f}_v\]
+
+
+\begin{itemize}
+	\item Como solo se estudiaran movimientos cuasiestacionarios, el término local es nulo:
+	\[\rho\dfrac{\partial \vec{v}}{\partial t}=0\]
+	\item Desarrollando el término de inercia local:
+	\[\rho\left(\vec{v}\cdot\vec{\nabla}\right)\vec{v}= \rho \left[v_x\vec{i}\cdot 
+	\left(\dfrac{\partial}{\partial x}\vec{i}+\dfrac{\partial}{\partial y}\vec{j}+\dfrac{\partial}{\partial z}\vec{k}\right)\right]v_x\vec{i}=
+	\rho v_x \dfrac{\partial}{\partial x} v_x \vec{i}=0\]
+	\item El término de presiones no cambia.
+	\item Desarrollando el término de viscosidad (v solo tiene componente en $\vec{i}$):
+	\[\mu\vec{\nabla}^2\vec{v}=\mu\left[\dfrac{\partial^2 v_x}{\partial y^2}+\dfrac{\partial^2 v_x}{\partial z^2}\right]\vec{i}\]	
+	\item El término de fuerzas volumétricas se relaciona con una función potencial:
+	\[\vec{f}_v=-\rho\vec{\nabla}U\]
+\end{itemize}
+
+
+Por tanto, la ecuación queda como:
+\[0=\mu\left[\dfrac{\partial^2 v_x}{\partial y^2}+\dfrac{\partial^2 v_x}{\partial z^2}\right]\vec{i}
+-
+\vec{\nabla}P
+-\rho\vec{\nabla}U= \mu\left[\dfrac{\partial^2 v_x}{\partial y^2}+\dfrac{\partial^2 v_x}{\partial z^2}\right]\vec{i} -\vec{\nabla}\left(P+\rho U\right)\]
+
+Particularizando por cada eje:
+\[0=\mu\left[\dfrac{\partial^2 v_x}{\partial y^2}+\dfrac{\partial^2 v_x}{\partial z^2}\right]-\dfrac{\partial}{\partial x}\left(P+\rho U\right) \rightarrow \text{Como $v_x$ no depende de x, $v_x\ne f(x)$}\rightarrow  \dfrac{\partial}{\partial x}\left(P+\rho U\right) \ne f(x)\]
+\[0=-\dfrac{\partial}{\partial y}\left(P+\rho U\right) \rightarrow P+\rho U \ne f(y)\]
+\[0=-\dfrac{\partial}{\partial z}\left(P+\rho U\right) \rightarrow P+\rho U \ne f(z)\]
+
+
+Por tanto, teniendo en cuenta los desarrollos anteriores:
+\[P+\rho U = Ax+B\]
+
+
+Se define como gradiente de presión reducida a la siguiente variable:
+\[P_l=-\dfrac{\partial}{\partial x}\left(P+\rho U\right) \]
 \section{Flujo de Covette.}
+Teniendo en cuenta el esquema de la figura \ref{fig:Covette} y desarrollando las ecuaciones anteriores en x e y:
+\[P_l=-\dfrac{\partial}{\partial x}\left(P+\rho U\right)=0 \leftarrow \text{En el eje x no se producen gradientes de presión ni de fuerzas volumétricas.} \]
+
+
+Por tanto:
+\[0=\mu\left[\dfrac{\partial^2 v_x}{\partial y^2}+\dfrac{\partial^2 v_x}{\partial z^2}\right]-\dfrac{\partial}{\partial x}\left(P+\rho U\right) =\mu \dfrac{\partial^2 v_x}{\partial y^2} \rightarrow v_x=Ay+B\]
+
+
+Como la velocidad del líquido es solidaria a la de los sólidos con los que está en contacto:
+\[v_x(y=0)=0\]
+\[v_x(y=h_0)=v_p\]
+
+
+Sustituyendo:
+\[v_x=\dfrac{v_p}{h_0}y\]
+\begin{figure}[H]
+	\centering
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\LARGE]
+			\draw [short] (4.25,9) -- (12.75,9);
+			\draw [short] (4.75,9) -- (4.5,8.25);
+			\draw [short] (5,8.25) -- (5.25,9);
+			\draw [short] (5.5,8.25) -- (5.75,9);
+			\draw [short] (6,8.25) -- (6.25,9);
+			\draw [short] (6.75,9) -- (6.5,8.25);
+			\draw [short] (7,8.25) -- (7.25,9);
+			\draw [short] (7.5,8.25) -- (7.75,9);
+			\draw [short] (8,8.25) -- (8.25,9);
+			\draw [short] (8.75,9) -- (8.5,8.25);
+			\draw [short] (9,8.25) -- (9.25,9);
+			\draw [short] (9.5,8.25) -- (9.75,9);
+			\draw [short] (10,8.25) -- (10.25,9);
+			\draw [short] (10.75,9) -- (10.5,8.25);
+			\draw [short] (11,8.25) -- (11.25,9);
+			\draw [short] (11.5,8.25) -- (11.75,9);
+			\draw [short] (12,8.25) -- (12.25,9);
+			\draw [dashed] (9,9) -- (10.5,10.5);
+			\draw [short] (11,10.5) -- (6.25,10.5);
+			\draw [short] (6.25,10.5) -- (6.25,11);
+			\draw [short] (6.25,11) -- (11.5,11);
+			\draw [short] (11.5,11) -- (11.5,10.5);
+			\draw [short] (11,10.5) -- (11.5,10.5);
+			\draw [->, >=Stealth] (11.5,10.75) -- (12.75,10.75);
+			\draw [<->, >=Stealth, dashed] (6.25,10.5) -- (6.25,9);
+			\node [font=\normalsize] at (5.75,9.75) {$h_0$};
+			\node [font=\normalsize] at (13,10.75) {$v_p$};
+			\draw [ color={rgb,255:red,187; green,0; blue,255}, ->, >=Stealth] (4.25,9) -- (4.75,9);
+			\draw [ color={rgb,255:red,187; green,0; blue,255}, ->, >=Stealth] (4.25,9) -- (4.25,9.5);
+			\node [font=\normalsize, color={rgb,255:red,187; green,0; blue,255}] at (4.75,9.25) {x};
+			\node [font=\normalsize, color={rgb,255:red,187; green,0; blue,255}] at (4.25,9.75) {y};
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (9,9.25) -- (9.25,9.25);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (9,9.5) -- (9.5,9.5);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (9,9.75) -- (9.75,9.75);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (9,10) -- (10,10);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (9,10.25) -- (10.25,10.25);
+			\node [font=\normalsize, color={rgb,255:red,1; green,137; blue,128}] at (8.5,9.75) {v};
+		\end{circuitikz}
+	\caption{Representación del flujo de Covette.}
+	\label{fig:Covette}
+\end{figure}
 \section{Flujo de Poiseulle.}
+Teniendo en cuenta el esquema de la figura \ref{fig:Poiseuille} y desarrollando las ecuaciones anteriores en x e y:
+\[0=P_l+\mu \dfrac{\partial^2 v_x}{\partial y^2} \leftrightarrow P_l \ne f(y) \rightarrow \dfrac{\partial^2 v_x}{\partial y^2} = -\dfrac{P_l}{\mu}\rightarrow v_x=-\dfrac{P_l}{2\mu}y^2+Ay+B\]
+
+
+Sean las condiciones de contorno:
+\[v_x(y=0)=0 \rightarrow B=0 \leftrightarrow v_x(y=h_0)=0\rightarrow A=\dfrac{P_l h_0}{2\mu} \rightarrow v_x=-\dfrac{P_l y}{2\mu}\left(y-h_0\right)\]
+
+Para casos cuasiunidireccionales se asume:
+\[P_l=-\dfrac{\Delta (P+\rho U)}{L}=\dfrac{(P+\rho U)_e-(P+\rho U)_s}{L}\]
+\newpage
+\begin{figure}[H]
+	\centering
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw [short] (4.25,9) -- (12.75,9);
+			\draw [short] (4.75,9) -- (4.5,8.25);
+			\draw [short] (5,8.25) -- (5.25,9);
+			\draw [short] (5.5,8.25) -- (5.75,9);
+			\draw [short] (6,8.25) -- (6.25,9);
+			\draw [short] (6.75,9) -- (6.5,8.25);
+			\draw [short] (7,8.25) -- (7.25,9);
+			\draw [short] (7.5,8.25) -- (7.75,9);
+			\draw [short] (8,8.25) -- (8.25,9);
+			\draw [short] (8.75,9) -- (8.5,8.25);
+			\draw [short] (9,8.25) -- (9.25,9);
+			\draw [short] (9.5,8.25) -- (9.75,9);
+			\draw [short] (10,8.25) -- (10.25,9);
+			\draw [short] (10.75,9) -- (10.5,8.25);
+			\draw [short] (11,8.25) -- (11.25,9);
+			\draw [short] (11.5,8.25) -- (11.75,9);
+			\draw [short] (12,8.25) -- (12.25,9);
+			\draw [ color={rgb,255:red,187; green,0; blue,255}, ->, >=Stealth] (4.25,9) -- (4.75,9);
+			\draw [ color={rgb,255:red,187; green,0; blue,255}, ->, >=Stealth] (4.25,9) -- (4.25,9.5);
+			\node [font=\normalsize, color={rgb,255:red,187; green,0; blue,255}] at (4.75,9.25) {x};
+			\node [font=\normalsize, color={rgb,255:red,187; green,0; blue,255}] at (4.25,9.75) {y};
+			\draw [short] (4.5,11.75) -- (12.75,11.75);
+			\draw [short] (5,12.5) -- (4.75,11.75);
+			\draw [short] (5.25,11.75) -- (5.5,12.5);
+			\draw [short] (5.75,11.75) -- (6,12.5);
+			\draw [short] (6.25,11.75) -- (6.5,12.5);
+			\draw [short] (7,12.5) -- (6.75,11.75);
+			\draw [short] (7.25,11.75) -- (7.5,12.5);
+			\draw [short] (7.75,11.75) -- (8,12.5);
+			\draw [short] (8.25,11.75) -- (8.5,12.5);
+			\draw [short] (9,12.5) -- (8.75,11.75);
+			\draw [short] (9.25,11.75) -- (9.5,12.5);
+			\draw [short] (9.75,11.75) -- (10,12.5);
+			\draw [short] (10.25,11.75) -- (10.5,12.5);
+			\draw [short] (11,12.5) -- (10.75,11.75);
+			\draw [short] (11.25,11.75) -- (11.5,12.5);
+			\draw [short] (11.75,11.75) -- (12,12.5);
+			\draw [short] (12.25,11.75) -- (12.5,12.5);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (5.5,11.5) -- (5.75,11.5);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (5.5,11.25) -- (6,11.25);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (5.5,11) -- (6.25,11);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (5.5,10.75) -- (6.5,10.75);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (5.5,10.5) -- (6.75,10.5);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (5.5,10) -- (6.5,10);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (5.5,9.75) -- (6.25,9.75);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (5.5,9.5) -- (6,9.5);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (5.5,9.25) -- (5.75,9.25);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (5.5,10.25) -- (6.75,10.25);
+			\draw [dashed] (5.5,9) .. controls (7.25,10.25) and (7.25,10.5) .. (5.5,11.75);
+			\draw [<->, >=Stealth, dashed] (4.5,7.75) -- (12.75,7.75);
+			\draw [<->, >=Stealth, dashed] (12.75,11.75) -- (12.75,9);
+			\node [font=\normalsize] at (13.25,10.25) {$ $};
+			\node [font=\normalsize] at (8.5,7.25) {L};
+		\end{circuitikz}
+	\caption{Representación del flujo de Poiseuille.}
+	\label{fig:Poiseuille}
+\end{figure}
 \section{Flujo de Hagen-Poiseuille.}
+Teniendo en cuenta el esquema de la figura \ref{fig:Hagen-Poiseuille} que, a diferencia del flujo de Poiseulle que era bidimensional, en este caso se analiza el flujo a través de una tubería cilíndrica. Se trabaja en coordenadas cilíndricas (r,z,$\theta$) debido a que hay simetría de revolución. En este caso, desarrollando quedaría:
+\[ \left\{
+\begin{matrix}
+	v_z\ne f(z) \\
+	P_l=-\dfrac{\partial}{\partial z} (P+\rho U)\\
+	0=P_l+\dfrac{\mu}{r}\left[\dfrac{\partial}{\partial r}\left(r\dfrac{\partial v_z}{\partial r}\right)\right]
+\end{matrix}
+\right.
+\]
+
+
+Integrando en estas coordenadas y teniendo en cuenta las condiciones de contorno de la tubería cilíndrica, la expresión del caudal de Hagen-Poiseuille queda:
+\[Q_{H-P}=-\dfrac{\pi D^4(z)}{128\mu}\dfrac{\partial}{\partial z}(P+\rho U)\]
+\begin{figure}[H]
+	\centering
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw [short] (3.5,9) -- (12.75,9);
+			\draw [short] (4.75,9) -- (4.5,8.25);
+			\draw [short] (5,8.25) -- (5.25,9);
+			\draw [short] (5.5,8.25) -- (5.75,9);
+			\draw [short] (6,8.25) -- (6.25,9);
+			\draw [short] (6.75,9) -- (6.5,8.25);
+			\draw [short] (7,8.25) -- (7.25,9);
+			\draw [short] (7.5,8.25) -- (7.75,9);
+			\draw [short] (8,8.25) -- (8.25,9);
+			\draw [short] (8.75,9) -- (8.5,8.25);
+			\draw [short] (9,8.25) -- (9.25,9);
+			\draw [short] (9.5,8.25) -- (9.75,9);
+			\draw [short] (10,8.25) -- (10.25,9);
+			\draw [short] (10.75,9) -- (10.5,8.25);
+			\draw [short] (11,8.25) -- (11.25,9);
+			\draw [short] (11.5,8.25) -- (11.75,9);
+			\draw [short] (12,8.25) -- (12.25,9);
+			\draw [short] (3.5,11.75) -- (12.75,11.75);
+			\draw [short] (5,12.5) -- (4.75,11.75);
+			\draw [short] (5.25,11.75) -- (5.5,12.5);
+			\draw [short] (5.75,11.75) -- (6,12.5);
+			\draw [short] (6.25,11.75) -- (6.5,12.5);
+			\draw [short] (7,12.5) -- (6.75,11.75);
+			\draw [short] (7.25,11.75) -- (7.5,12.5);
+			\draw [short] (7.75,11.75) -- (8,12.5);
+			\draw [short] (8.25,11.75) -- (8.5,12.5);
+			\draw [short] (9,12.5) -- (8.75,11.75);
+			\draw [short] (9.25,11.75) -- (9.5,12.5);
+			\draw [short] (9.75,11.75) -- (10,12.5);
+			\draw [short] (10.25,11.75) -- (10.5,12.5);
+			\draw [short] (11,12.5) -- (10.75,11.75);
+			\draw [short] (11.25,11.75) -- (11.5,12.5);
+			\draw [short] (11.75,11.75) -- (12,12.5);
+			\draw [short] (12.25,11.75) -- (12.5,12.5);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (6.25,11.5) -- (6.5,11.5);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (6.25,11.25) -- (6.75,11.25);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (6.25,11) -- (7,11);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (6.25,10.75) -- (7.25,10.75);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (6.25,10.5) -- (7.5,10.5);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (6.25,10) -- (7.25,10);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (6.25,9.75) -- (7,9.75);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (6.25,9.5) -- (6.75,9.5);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (6.25,9.25) -- (6.5,9.25);
+			\draw [ color={rgb,255:red,0; green,255; blue,238}, ->, >=Stealth, dashed] (6.25,10.25) -- (7.5,10.25);
+			\draw [dashed] (6.25,9) .. controls (8,10.25) and (8,10.5) .. (6.25,11.75);
+			\draw [<->, >=Stealth, dashed] (4.5,7.75) -- (12.75,7.75);
+			\draw [<->, >=Stealth, dashed] (10.75,11.75) -- (10.75,9);
+			\node [font=\normalsize] at (11.25,10.25) {D};
+			\node [font=\normalsize] at (8.5,7.25) {L};
+			\draw [->, >=Stealth] (1.5,10.25) -- (2.75,10.25);
+			\draw [->, >=Stealth] (1.5,10.5) -- (2.75,10.5);
+			\node [font=\LARGE] at (2,11) {Q};
+			\draw [ color={rgb,255:red,177; green,3; blue,240}, short] (4.25,10.75) -- (4.25,9.75);
+			\draw [ color={rgb,255:red,176; green,0; blue,240}, ->, >=Stealth] (4.25,10.25) -- (5.25,10.25);
+			\node [font=\normalsize, color={rgb,255:red,176; green,0; blue,240}] at (5.5,10.25) {z};
+			\draw [short] (12.75,11.75) .. controls (11.5,10.5) and (13.5,10) .. (12.75,9);
+			\draw [short] (12.75,11.75) .. controls (13.25,11) and (13.25,10.75) .. (12.75,10);
+			\node [font=\normalsize] at (13,9.75) {};
+			\draw [short] (4.25,9) -- (4,8.25);
+			\draw [short] (3.75,9) -- (3.5,8.25);
+			\draw [short] (4.25,11.75) -- (4.5,12.5);
+			\draw [short] (3.75,11.75) -- (4,12.5);
+			\draw [short] (3.5,9) .. controls (4.75,10.25) and (2.75,10.75) .. (3.5,11.75);
+			\draw [short] (3.5,10.75) .. controls (3,10) and (3,9.75) .. (3.5,9);
+		\end{circuitikz}
+	\caption{Representación del flujo de Hagen-Poiseuille.}
+	\label{fig:Hagen-Poiseuille}
+\end{figure}
+\newpage
 \section{Espesor de capa límite.}
+Cuando se transiciona entre distintos regímenes hay un espesor $\delta_g$ (Ver figura \ref{fig:capa límite.}) en el cual el fluido sigue comportándose como un fluido ideal que se puede cuantificar a través del número de Reynolds. 
+
+\[Re=\dfrac{\rho_c v^2_c/L_e}{\mu_c v_c/D^2_c} =1 \ \text{(Criterio región de transición.)}
+\rightarrow \dfrac{\rho_c v^2_c}{L_e} \approx \dfrac{\mu_c v_c}{D^2_c}\]
+\[Re=\dfrac{\rho_c v_c D}{\mu}\cdot\dfrac{D}{L_e}\approx 1 \rightarrow L_e \approx D\cdot Re_D\]
+
+
+
+Por otro lado, para que se pueda asumir viscosidad dominante en la mayoría del conducto debe cumplirse que:
+\[\dfrac{L_e}{L}\approx\dfrac{D}{L} Re_D << 1\]
+\begin{figure}[H]
+	\centering
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw [ color={rgb,255:red,245; green,0; blue,0} ] (10.75,9) circle (2.25cm);
+			\draw [short] (2,14.75) -- (2,12.25);
+			\draw [short] (2,12.25) -- (4,12.25);
+			\draw [short] (4,12.25) -- (4,7.5);
+			\draw [short] (5,12.25) -- (5,7.5);
+			\draw [short] (5,12.25) -- (7,12.25);
+			\draw [short] (7,12.25) -- (7,14.75);
+			\draw [ color={rgb,255:red,0; green,41; blue,245}, dashed] (2,14) -- (7,14);
+			\node [font=\normalsize, color={rgb,255:red,241; green,0; blue,245}] at (4.25,14.25) {$P_a$};
+			\node [font=\normalsize, color={rgb,255:red,241; green,0; blue,245}] at (4.25,13.75) {$P_1$};
+			\node [font=\normalsize, color={rgb,255:red,241; green,0; blue,245}] at (4.5,13) {$P_2$};
+			\node [font=\normalsize, color={rgb,255:red,241; green,0; blue,245}] at (4.5,11.5) {$P_3$};
+			\node at (4.5,12) [circ, color={rgb,255:red,241; green,0; blue,245}] {};
+			\node at (4.5,12.5) [circ, color={rgb,255:red,241; green,0; blue,245}] {};
+			\node at (4.5,13.75) [circ, color={rgb,255:red,241; green,0; blue,245}] {};
+			\node at (4.5,14.25) [circ, color={rgb,255:red,241; green,0; blue,245}] {};
+			\draw [ color={rgb,255:red,245; green,0; blue,0}, ->, >=Stealth, dashed] (4.5,12.25) -- (9,10.75);
+			\draw [ color={rgb,255:red,245; green,0; blue,0} ] (4.5,12.25) circle (0.5cm);
+			\node [font=\normalsize] at (11,11.5) {Región de transicion};
+			\draw [short] (8.75,10) -- (10,10);
+			\draw [short] (10,10) -- (10,7);
+			\draw [short] (11.5,7) -- (11.5,10);
+			\draw [short] (11.5,10) -- (12.75,10);
+			\draw [dashed] (10,8.5) .. controls (10.75,7.5) and (10.75,7.5) .. (11.5,8.5);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (10.25,8.5) -- (10.25,8.25);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (10.5,8.5) -- (10.5,8);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (11.25,8.5) -- (11.25,8.25);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (11,8.5) -- (11,8);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (10.75,8.5) -- (10.75,7.75);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (10.75,9.5) -- (10.75,9);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (10.5,10) -- (10.5,9.5);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (10.75,10) -- (10.75,9.5);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (11,10) -- (11,9.5);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (10,10.75) -- (10,10);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (10.25,10.75) -- (10.25,10);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (10.5,10.75) -- (10.5,10);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (10.75,10.75) -- (10.75,10);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (11,10.75) -- (11,10);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (11.25,10.75) -- (11.25,10);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (11.5,10.75) -- (11.5,10);
+			\draw [ color={rgb,255:red,255; green,0; blue,234}, short] (10,10) -- (11.5,10);
+			\draw [ color={rgb,255:red,255; green,0; blue,234}, short] (10.25,9.5) -- (11.25,9.5);
+			\draw [<->, >=Stealth, dashed] (3.5,12.25) -- (3.5,7.5);
+			\draw [<->, >=Stealth, dashed] (7.25,12.25) -- (7.25,14);
+			\draw [<->, >=Stealth, dashed] (2,13.25) -- (7,13.25);
+			\node [font=\normalsize] at (7.75,13) {h(t)};
+			\node [font=\normalsize] at (5.5,13.5) {$A_d$};
+			\node [font=\normalsize] at (3.25,10) {L};
+			\draw [<->, >=Stealth, dashed] (4,8.75) -- (5,8.75);
+			\node [font=\normalsize] at (4.5,9) {D};
+			\node [font=\normalsize] at (12,9.5) {$L_e$};
+			\draw [ color={rgb,255:red,255; green,0; blue,234}, ->, >=Stealth, dashed] (9.25,9) -- (10.25,9.5);
+			\node [font=\normalsize, color={rgb,255:red,255; green,0; blue,234}] at (9,9) {$\delta_g$};
+			\draw [dashed] (11.5,10) .. controls (10.75,8.25) and (10.75,8.25) .. (10,10);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (11.25,10) -- (11.25,9.5);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (10.25,10) -- (10.25,9.5);
+			\draw [<->, >=Stealth, dashed] (11.75,10) -- (11.75,8.75);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (11,9.5) -- (11,9);
+			\draw [ color={rgb,255:red,0; green,238; blue,255}, ->, >=Stealth, dashed] (10.5,9.5) -- (10.5,9);
+		\end{circuitikz}
+	\caption{Representación del espesor de capa límite.}
+\label{fig:capa límite.}
+\end{figure}
