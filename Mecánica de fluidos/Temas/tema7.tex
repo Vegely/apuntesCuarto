@@ -1,188 +1,314 @@
 \chapter{Fluidoestática.}
+\section{Introducción.}
+	\begin{figure}[H]
+		\begin{minipage}{0.5\textwidth}
+			\begin{figure}[H]
+				\centering
+				\begin{circuitikz}
+					\tikzstyle{every node}=[font=\normalsize]
+					\draw [->, >=Stealth] (7.25,12.75) -- (7.25,17.5)node[pos=1,left]{$\vec k$};
+					\draw [->, >=Stealth] (7.25,12.75) -- (12,12.75)node[pos=1,above]{$\vec j$};
+					\draw [->, >=Stealth] (7.25,12.75) -- (6.5,12)node[pos=1,left]{$\vec i$};
+					\draw  (8.75,16.25) rectangle (9.25,15.75);
+					\draw [short] (9.25,15.75) -- (9.5,16);
+					\draw [short] (9.5,16) -- (9.5,16.5)node[pos=0.5,right]{dV};
+					\draw [short] (9.5,16.5) -- (9,16.5);
+					\draw [short] (9,16.5) -- (8.75,16.25);
+					\draw [short] (9.25,16.25) -- (9.5,16.5);
+					\draw [dashed] (9,16.5) -- (9,16);
+					\draw [dashed] (9,16) -- (8.75,15.75);
+					\draw [dashed] (9,16) -- (9.5,16);
+					\draw [->, >=Stealth] (7.25,12.75) -- (9,16)node[pos=0.3,right]{$\vec r$};
+					\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (9,16) -- (8,17)node[pos=1,above]{$\vec k'$};
+					\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (9,16) -- (10,17)node[pos=1,right]{$\vec j'$};
+					\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (9,16) -- (9,14.75)node[pos=1,right]{$\vec i'$};
+					\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8.75,15.25) .. controls (9.25,15) and (9.5,15.25) .. (9.75,15.75) node[pos=0.8,right]{$\Omega \vec \omega$};
+					\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (9,16) -- (11.5,16)node[pos=1,above]{$\vec v$};
+					\draw [dashed] (9,17.25) .. controls (8.25,17) and (8.25,16.75) .. (8,16.25);
+					\draw [dashed] (8,16.25) .. controls (8,15.75) and (7.75,15.75) .. (8,14.75);
+					\draw [dashed] (8,14.75) .. controls (8.25,14.25) and (8.25,14.25) .. (9,14);
+					\draw [dashed] (9,14) .. controls (9.75,13.75) and (10,13.75) .. (10.25,14.5);
+					\draw [dashed] (10.25,14.5) .. controls (10.5,15.25) and (10.75,15.5) .. (10.25,16.5);
+					\draw [dashed] (10.25,16.5) .. controls (9.75,16.75) and (10,17.25) .. (9,17.25);
+				\end{circuitikz}
+				
+				\label{fig:my_label}
+			\end{figure}
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+			Cuando un fluido es estático, al menos respecto a algún sólido rígido:
+			\[\vec v \text{ y } \Omega \vec \omega = 0 \text{ en un cierto sólido rígido.}\]
+			
+			Fluido incompresible (sistema general):
+			\[			
+			\left\{
+			\begin{matrix}
+				\vec \nabla \cdot \vec v = 0\\
+				\rho \dfrac{\partial \vec v}{\partial t} + \rho (\vec v \cdot \vec \nabla)\cdot \vec v = - \vec \nabla P + \mu \vec \nabla^2 \vec v + \vec f_v
+			\end{matrix}
+			\right.
+			\]
+			Sistema de referencia tal que $\vec v = 0$:
+			\[0 = -\vec \nabla P + \vec f_v\]
+		\end{minipage}
+	\end{figure}
+
+	
+	
+	\[\vec f_v = \rho \vec g 
+	- \rho \left(
+	\red{\underbrace{\black \vec a_0 + \vec \Omega_{rot} \times (\vec \Omega_{rot} \times \vec r)}_{\text{Componente inercial}}} \black
+	+ 
+	\red{\underbrace{\black 2\,\vec \Omega_{rot}\times \vec v}_{\text{Fuerzas de coriolis (0)}}} \black
+	+ 
+	\red{\underbrace{\black \dfrac{d\vec \Omega_{rot}}{dt}\times \vec r)}_{\text{Fuerzas por ac. angular}}} \black \right)
+	\]
+	
+	
+	Donde $\vec \Omega_{rot}$ es la velocidad angular del sistema móvil, donde $\vec v = 0$. Se deduce entonces que:
+	\[\vec f_v = -\rho \vec \nabla U \Rightarrow \vec \nabla \times \vec f_v = 0\]
+	\[U = U_{\vec g} + U_{\vec a_0} + U_{\vec \Omega_{rot}} + U_{d\vec \Omega_{rot}/dt}\]
+	
+	Condiciones de existencia de las componentes del potencial $U$:
+	\[
+	\left.
+	\begin{matrix}
+		\exists \, U_{\vec a_0} \Longleftrightarrow \vec a_0 = cte \\
+		\exists \, U_{\vec \Omega_{rot}} \Longleftrightarrow \vec \Omega_{rot} = cte
+	\end{matrix}
+	\right\}
+	\nexists \, U_{d\vec \Omega_{rot}/dt} : \text{Cond. necesaria pero no suficiente para que haya fluidoestática.}
+	\]
+	\[U_{\vec g} = -\vec g \cdot \vec r \qquad U_{\vec a_0} = \vec a_0 \cdot \vec r \qquad -\dfrac{1}{2}\left|\vec \Omega_{rot}\times \vec r\right|^2\]
+	
+	
+	Por tanto
+	\[0 = -\vec \nabla P - \rho \vec \nabla U \Rightarrow (P + \rho U) = 0 \Rightarrow (P + \rho U) = cte\]
+	
+	
+	Esta constante puede depender paramétricamente del tiempo si la variación dinámica es suficientemente lenta:
+	
+	\[(P + \rho U) = c(t)\]
+	
+	Se distinguen, pues, varios casos según las componentes que forman el potencial $U$.
+	
+	\section{Estudio de casos prácticos según las componentes del potencial $U$}.
+		\subsection{Componente gravitatoria.}
+			\begin{figure}[H]
+				\begin{minipage}{0.3\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [short] (10.25,16.25) -- (10.25,14);
+							\draw [short] (10.25,14) -- (12,14);
+							\draw [short] (12,14) -- (12,16.25);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (10.25,15.75) -- (12,15.75);
+							\node at (11.25,16) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (11.25,16.25) {$P_a$};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (10.75,14) -- (10.75,14.75)node[pos=1,right]{$\vec k$};
+							\draw [<->, >=Stealth] (9.75,15.75) -- (9.75,14)node[pos=0.5,left]{$z_s$};
+							\draw [->, >=Stealth] (10.5,17) -- (10.5,16.5)node[pos=0.5,left]{$\vec g$};
+						\end{circuitikz}
+						
+						\label{fig:my_label}
+					\end{figure}
+				\end{minipage}
+				\begin{minipage}{0.7\textwidth}
+					Se desea hallar $P(z)$. Se conoce: \[\vec r = x\vec i + z \vec k\qquad\qquad(P + \rho U) = c(t)\] 
+					\[U = U_{\vec g} = -\vec g \cdot \vec r = -(-g\vec k) = gz\]
+					
+					
+					Si $z = z(s)$:
+					\[P(z = z_s) + \rho g z_s = c(t)\]
+				\end{minipage}
+			\end{figure}
+			
+			\begin{figure}[H]
+				\begin{minipage}{0.5\textwidth}
+					Pero $P(z = z_s) = P_a$, luego
+					\[P+\rho gz = P_a + \rho g z_s \Rightarrow P(z) = P_a + \rho g(z_s - z)\]
+				\end{minipage}
+				\begin{minipage}{0.5\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [->, >=Stealth] (11.5,14) -- (11.5,16.75)node[pos=1,left]{P};
+							\draw [->, >=Stealth] (11.5,14) -- (14.5,14)node[pos=1,below]{z};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (11.5,14) -- (14,16.25);
+							\draw [dashed] (14,16.25) -- (11.5,16.25)node[pos=1,left]{$P_a$};
+							\draw [dashed] (14,16.25) -- (14,14)node[pos=1,below]{$z_s$};
+						\end{circuitikz}
+						
+						\label{fig:my_label}
+					\end{figure}
+				\end{minipage}
+			\end{figure}
+		
+		
+		\subsection{Componente gravitatoria y aceleración constante.}
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw [short] (6.25,15.25) -- (8.75,15.25);
+						\draw [short] (8.75,16.5) -- (8.75,15.25);
+						\draw [short] (6.25,16.5) -- (6.25,15.25);
+						\draw [short] (6.25,16.5) -- (6.25,17.25);
+						\draw [short] (8.75,16.5) -- (8.75,17.25);
+						\draw [short] (8.75,15.25) -- (9.25,15.75);
+						\draw [short] (9.25,15.75) -- (9.25,17.75);
+						\draw [short] (9.25,17.75) -- (8.75,17.25);
+						\draw [short] (9.25,17.75) -- (6.75,17.75);
+						\draw [short] (6.75,17.75) -- (6.25,17.25);
+						\draw [short] (6.25,17.25) -- (8.75,17.25);
+						\draw [short] (6.75,15.25) .. controls (6.75,15) and (7.25,15) .. (7.25,15.25);
+						\draw [short] (8,15.25) .. controls (8,15) and (8.5,15) .. (8.5,15.25);
+						\draw [<->, >=Stealth] (8.75,16.75) -- (9.25,17.25)node[pos=1,right]{$L_t$};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (6.25,16.25) -- (8.75,16.25);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (8.75,16.25) -- (9.25,16.75);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (9.25,16.75) -- (6.75,16.75);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (6.75,16.75) -- (6.25,16.25);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (6,16.5) -- (6.5,16.5);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (9.5,16.5) -- (9,16.5)node[pos=0,right]{$L_d$};
+						\draw [short] (6.75,17.75) -- (6.75,17.25);
+						\draw [dashed] (6.75,17.25) -- (6.75,15.75);
+						\draw [dashed] (6.75,15.75) -- (6.25,15.25);
+						\draw [dashed] (6.75,15.75) -- (9.25,15.75);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (9,15.75) -- (10,15.75)node[pos=1,right]{$\vec a_0$};
+						\draw [<->, >=Stealth] (5.75,17.25) -- (5.75,15.25)node[pos=0.5,left]{$H_0$};
+						\node [font=\normalsize] at (7.75,18) {$P_a$};
+						\draw [->, >=Stealth] (6.25,18.25) -- (6.25,17.75)node[pos=0.5,left]{$\vec g$};
+						\draw [->, >=Stealth] (11.25,16.5) -- (12,16.5);
+						\draw [short] (13.25,15.25) -- (15.75,15.25);
+						\draw [short] (15.75,16.5) -- (15.75,15.25);
+						\draw [short] (13.25,16.5) -- (13.25,15.25);
+						\draw [short] (13.25,16.5) -- (13.25,17.25);
+						\draw [short] (15.75,16.5) -- (15.75,17.25);
+						\draw [short] (15.75,15.25) -- (16.25,15.75);
+						\draw [short] (16.25,15.75) -- (16.25,17.75);
+						\draw [short] (16.25,17.75) -- (15.75,17.25);
+						\draw [short] (16.25,17.75) -- (13.75,17.75);
+						\draw [short] (13.75,17.75) -- (13.25,17.25);
+						\draw [short] (13.25,17.25) -- (15.75,17.25);
+						\draw [short] (13.75,15.25) .. controls (13.75,15) and (14.25,15) .. (14.25,15.25);
+						\draw [short] (15,15.25) .. controls (15,15) and (15.5,15) .. (15.5,15.25);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13.25,16.75) .. controls (14.75,16.5) and (14.25,15.75) .. (15.75,15.75);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (15.75,15.75) -- (16.25,16.25);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13.75,17.25) -- (13.25,16.75);
+						\draw [short] (13.75,17.75) -- (13.75,17.25);
+						\draw [dashed] (13.75,17.25) -- (13.75,15.75);
+						\draw [dashed] (13.75,15.75) -- (13.25,15.25);
+						\draw [dashed] (13.75,15.75) -- (16.25,15.75);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (16,15.75) -- (17,15.75)node[pos=1,right]{$\vec a_0$};
+						\node [font=\normalsize] at (14.75,18) {$P_a$};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13.75,17.25) .. controls (15.25,17) and (14.75,16.25) .. (16.25,16.25);
+						\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (14.5,15.25) -- (14.5,16.25)node[pos=1,right]{z(x)};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.25,15.25) -- (13.25,16)node[pos=1,left]{z};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.25,15.25) -- (14,15.25)node[pos=1,above]{x};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.25,15.25) -- (12.85,14.85)node[pos=1,left]{y};
+					\end{circuitikz}
+				
+				\label{fig:my_label}
+			\end{figure}
+			
+			\[U = U_{\vec g} + U_{\vec a_0}\qquad U_{\vec g} = - \vec g \cdot \vec r = gz\qquad U_{\vec a_0} = \vec a_0 \cdot \vec r = a_0x\]			
+			
+			\begin{figure}[H]
+				\begin{minipage}{0.6\textwidth}
+					Por tanto se deduce que:
+					\[P + \rho U = c(t) \Rightarrow P + \rho (gz + a_0x) = c(t)\]
+					
+					
+					Si igualamos la presión en la interfase a la presión atmosférica:
+					\begin{equation} \label{eq:1}
+						\underbrace{P(z = z_s(x))}_{P_a} + \rho g z_s(x) + \rho a_0x = c(t)
+					\end{equation}
+					
+					
+					Si $z = z_s (x = 0)$:
+					\begin{equation} \label{eq:2}
+						\underbrace{P(z = z_s(x = 0))}_{P_a} + \rho g z_s(x = 0) + \rho a_0x = c(t)
+					\end{equation}
+				\end{minipage}
+				\begin{minipage}{0.4\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [short] (13.25,15.25) -- (15.75,15.25);
+							\draw [short] (15.75,16.5) -- (15.75,15.25);
+							\draw [short] (13.25,16.5) -- (13.25,15.25);
+							\draw [short] (13.25,16.5) -- (13.25,17.25);
+							\draw [short] (15.75,16.5) -- (15.75,17.25);
+							\draw [short] (15.75,15.25) -- (16.25,15.75);
+							\draw [short] (16.25,15.75) -- (16.25,17.75);
+							\draw [short] (16.25,17.75) -- (15.75,17.25);
+							\draw [short] (16.25,17.75) -- (13.75,17.75);
+							\draw [short] (13.75,17.75) -- (13.25,17.25);
+							\draw [short] (13.25,17.25) -- (15.75,17.25);
+							\draw [short] (13.75,15.25) .. controls (13.75,15) and (14.25,15) .. (14.25,15.25);
+							\draw [short] (15,15.25) .. controls (15,15) and (15.5,15) .. (15.5,15.25);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13.25,16.75) .. controls (13.75,16.5) and (15.25,15.75) .. (15.75,15.75);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (15.75,15.75) -- (16.25,16.25);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13.75,17.25) -- (13.25,16.75);
+							\draw [short] (13.75,17.75) -- (13.75,17.25);
+							\draw [dashed] (13.75,17.25) -- (13.75,15.75);
+							\draw [dashed] (13.75,15.75) -- (13.25,15.25);
+							\draw [dashed] (13.75,15.75) -- (16.25,15.75);
+							\node [font=\normalsize] at (14.75,18) {$P_a$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13.75,17.25) .. controls (14.25,17) and (15.75,16.25) .. (16.25,16.25);
+							\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (14,15.25) -- (14,16.4)node[pos=1.05,right]{$z(x)$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.25,15.25) -- (13.25,16)node[pos=1,left]{z};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.25,15.25) -- (14,15.25)node[pos=0.7,above]{x};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.25,15.25) -- (13,15)node[pos=0.5,left]{y};
+						\end{circuitikz}
+						
+						\label{fig:my_label}
+					\end{figure}
+				\end{minipage}
+			\end{figure}
+			
+			Restando \eqref{eq:1} - \eqref{eq:2}:
+			\[\rho g z_s(x) + \rho a_0x - \rho gz_s(x=0) = 0\]
+			\[z_s (x) = z_s(x=0) - \dfrac{a_0}{g}x\]
+			
+			El volumen se conserva, luego
+			\[\dfrac{v_0}{L_t} = H_0 L_d = \int_{\frac{-L_d}{2}}^{\frac{L_d}{2}} z_s(x)\,dx = \int_{\frac{-L_d}{2}}^{\frac{L_d}{2}} \left[z_s(x=0) - \dfrac{a_0}{g}x\right]dx =
+			z_s(x=0)\cdot L_d - \left. \dfrac{a_0}{2g}x^2\right|_{-\frac{L_d}{2}}^{\frac{L_d}{2}}\]
+			
+			
+			$\left. \dfrac{a_0}{2g}x^2\right|_{-\frac{L_d}{2}}^{\frac{L_d}{2}} = 0$, luego
+			\[H_0 L_d = z_s(x=0)\cdot L_d \Rightarrow z_s(x=0) = H_0\]
+			\[z_s(x) = H_0 - \dfrac{a_0}{g}x\]
+			
+			
 
 \begin{figure}[H]
 	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\normalsize]
-			\draw [->, >=Stealth] (7.25,12.75) -- (7.25,17.5)node[pos=1,left]{$\vec k$};
-			\draw [->, >=Stealth] (7.25,12.75) -- (12,12.75)node[pos=1,above]{$\vec j$};
-			\draw [->, >=Stealth] (7.25,12.75) -- (5.5,11)node[pos=1,left]{$\vec i$};
-			\draw  (8.75,16.25) rectangle (9.25,15.75);
-			\draw [short] (9.25,15.75) -- (9.5,16);
-			\draw [short] (9.5,16) -- (9.5,16.5)node[pos=0.5,right]{dV};
-			\draw [short] (9.5,16.5) -- (9,16.5);
-			\draw [short] (9,16.5) -- (8.75,16.25);
-			\draw [short] (9.25,16.25) -- (9.5,16.5);
-			\draw [dashed] (9,16.5) -- (9,16);
-			\draw [dashed] (9,16) -- (8.75,15.75);
-			\draw [dashed] (9,16) -- (9.5,16);
-			\draw [->, >=Stealth] (7.25,12.75) -- (9,16)node[pos=0.3,right]{$\vec r$};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (9,16) -- (8,17)node[pos=1,above]{$\vec k'$};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (9,16) -- (10,17)node[pos=1,right]{$\vec j'$};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (9,16) -- (9,14.75)node[pos=1,right]{$\vec i'$};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (8.75,15.25) .. controls (9.25,15) and (9.5,15.25) .. (9.75,15.75) node[pos=0.8,right]{$\Omega \vec \omega$};
-			\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (9,16) -- (11.5,16)node[pos=1,above]{$\vec v$};
-			\draw [dashed] (9,17.25) .. controls (8.25,17) and (8.25,16.75) .. (8,16.25);
-			\draw [dashed] (8,16.25) .. controls (8,15.75) and (7.75,15.75) .. (8,14.75);
-			\draw [dashed] (8,14.75) .. controls (8.25,14.25) and (8.25,14.25) .. (9,14);
-			\draw [dashed] (9,14) .. controls (9.75,13.75) and (10,13.75) .. (10.25,14.5);
-			\draw [dashed] (10.25,14.5) .. controls (10.5,15.25) and (10.75,15.5) .. (10.25,16.5);
-			\draw [dashed] (10.25,16.5) .. controls (9.75,16.75) and (10,17.25) .. (9,17.25);
-		\end{circuitikz}
+	\begin{circuitikz}
+		\tikzstyle{every node}=[font=\normalsize]
+		\draw [short] (12.25,16.25) -- (12.25,13.75);
+		\draw [short] (12.25,13.75) -- (14.25,13.75);
+		\draw [short] (14.25,13.75) -- (14.25,16.25);
+		\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (12.25,15.75) -- (14.25,15.75);
+		\node [font=\normalsize] at (13.25,16.25) {$P_a$};
+		\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (13.25,13.75) -- (13.25,14.75)node[pos=1,above]{$\vec \Omega_{rot}$};
+		\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (13.25,13.75) -- (13.75,13.75)node[pos=1,above]{$\vec e_r$};
+		\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (13.25,13.75) -- (13.25,14.25)node[pos=1,left]{$\vec k$};
+		\draw [<->, >=Stealth] (12,16.25) -- (12,13.75)node[pos=0.5,left]{$H_{dep}$};
+		\draw [ color={rgb,255:red,0; green,128; blue,255}, <->, >=Stealth] (14.5,15.75) -- (14.5,13.75)node[pos=0.5,right]{$H_0$};
+	\end{circuitikz}
 	
 	\label{fig:my_label}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\normalsize]
-			\draw [short] (6.25,15.25) -- (8.75,15.25);
-			\draw [short] (8.75,16.5) -- (8.75,15.25);
-			\draw [short] (6.25,16.5) -- (6.25,15.25);
-			\draw [short] (6.25,16.5) -- (6.25,17.25);
-			\draw [short] (8.75,16.5) -- (8.75,17.25);
-			\draw [short] (8.75,15.25) -- (9.25,15.75);
-			\draw [short] (9.25,15.75) -- (9.25,17.75);
-			\draw [short] (9.25,17.75) -- (8.75,17.25);
-			\draw [short] (9.25,17.75) -- (6.75,17.75);
-			\draw [short] (6.75,17.75) -- (6.25,17.25);
-			\draw [short] (6.25,17.25) -- (8.75,17.25);
-			\draw [short] (6.75,15.25) .. controls (6.75,15) and (7.25,15) .. (7.25,15.25);
-			\draw [short] (8,15.25) .. controls (8,15) and (8.5,15) .. (8.5,15.25);
-			\draw [<->, >=Stealth] (8.75,16.75) -- (9.25,17.25)node[pos=1,right]{$L_t$};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (6.25,16.25) -- (8.75,16.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (8.75,16.25) -- (9.25,16.75);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (9.25,16.75) -- (6.75,16.75);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (6.75,16.75) -- (6.25,16.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (6,16.5) -- (6.5,16.5);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (9.5,16.5) -- (9,16.5)node[pos=0,right]{$L_d$};
-			\draw [short] (6.75,17.75) -- (6.75,17.25);
-			\draw [dashed] (6.75,17.25) -- (6.75,15.75);
-			\draw [dashed] (6.75,15.75) -- (6.25,15.25);
-			\draw [dashed] (6.75,15.75) -- (9.25,15.75);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (9,15.75) -- (10,15.75)node[pos=1,right]{$\vec a_0$};
-			\draw [<->, >=Stealth] (5.75,17.25) -- (5.75,15.25)node[pos=0.5,left]{$H_0$};
-			\node [font=\normalsize] at (7.75,18) {$P_a$};
-			\draw [->, >=Stealth] (6.25,18.25) -- (6.25,17.75)node[pos=0.5,left]{$\vec g$};
-			\draw [->, >=Stealth] (11.25,16.5) -- (12,16.5);
-			\draw [short] (13.25,15.25) -- (15.75,15.25);
-			\draw [short] (15.75,16.5) -- (15.75,15.25);
-			\draw [short] (13.25,16.5) -- (13.25,15.25);
-			\draw [short] (13.25,16.5) -- (13.25,17.25);
-			\draw [short] (15.75,16.5) -- (15.75,17.25);
-			\draw [short] (15.75,15.25) -- (16.25,15.75);
-			\draw [short] (16.25,15.75) -- (16.25,17.75);
-			\draw [short] (16.25,17.75) -- (15.75,17.25);
-			\draw [short] (16.25,17.75) -- (13.75,17.75);
-			\draw [short] (13.75,17.75) -- (13.25,17.25);
-			\draw [short] (13.25,17.25) -- (15.75,17.25);
-			\draw [short] (13.75,15.25) .. controls (13.75,15) and (14.25,15) .. (14.25,15.25);
-			\draw [short] (15,15.25) .. controls (15,15) and (15.5,15) .. (15.5,15.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13.25,16.75) .. controls (14.75,16.5) and (14.25,15.75) .. (15.75,15.75);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (15.75,15.75) -- (16.25,16.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13.75,17.25) -- (13.25,16.75);
-			\draw [short] (13.75,17.75) -- (13.75,17.25);
-			\draw [dashed] (13.75,17.25) -- (13.75,15.75);
-			\draw [dashed] (13.75,15.75) -- (13.25,15.25);
-			\draw [dashed] (13.75,15.75) -- (16.25,15.75);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (16,15.75) -- (17,15.75)node[pos=1,right]{$\vec a_0$};
-			\node [font=\normalsize] at (14.75,18) {$P_a$};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13.75,17.25) .. controls (15.25,17) and (14.75,16.25) .. (16.25,16.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (14.5,15.25) -- (14.5,16.25)node[pos=1,right]{z(x)};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.25,15.25) -- (13.25,16)node[pos=1,left]{z};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.25,15.25) -- (14,15.25)node[pos=1,above]{x};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.25,15.25) -- (12.85,14.85)node[pos=1,left]{y};
-		\end{circuitikz}
-	
-	\label{fig:my_label}
-\end{figure}
 
-\begin{figure}[H]
-	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\normalsize]
-			\draw [->, >=Stealth] (11.5,14) -- (11.5,16.75)node[pos=1,left]{P};
-			\draw [->, >=Stealth] (11.5,14) -- (14.5,14)node[pos=1,below]{z};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (11.5,14) -- (14,16.25);
-			\draw [dashed] (14,16.25) -- (11.5,16.25)node[pos=1,left]{$P_a$};
-			\draw [dashed] (14,16.25) -- (14,14)node[pos=1,below]{$z_s$};
-		\end{circuitikz}
-	
-	\label{fig:my_label}
-\end{figure}
 
-\begin{figure}[H]
-	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\normalsize]
-			\draw [short] (10.25,16.25) -- (10.25,14);
-			\draw [short] (10.25,14) -- (12,14);
-			\draw [short] (12,14) -- (12,16.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (10.25,15.75) -- (12,15.75);
-			\node at (11.25,16) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
-			\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (11.25,16.25) {$P_a$};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (10.75,14) -- (10.75,14.75)node[pos=1,right]{$\vec k$};
-			\draw [<->, >=Stealth] (9.75,15.75) -- (9.75,14)node[pos=0.5,left]{$z_s$};
-			\draw [->, >=Stealth] (10.5,17) -- (10.5,16.5)node[pos=0.5,left]{$\vec g$};
-		\end{circuitikz}
-	
-	\label{fig:my_label}
-\end{figure}
 
-\begin{figure}[H]
-	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\normalsize]
-			\draw [short] (13.25,15.25) -- (15.75,15.25);
-			\draw [short] (15.75,16.5) -- (15.75,15.25);
-			\draw [short] (13.25,16.5) -- (13.25,15.25);
-			\draw [short] (13.25,16.5) -- (13.25,17.25);
-			\draw [short] (15.75,16.5) -- (15.75,17.25);
-			\draw [short] (15.75,15.25) -- (16.25,15.75);
-			\draw [short] (16.25,15.75) -- (16.25,17.75);
-			\draw [short] (16.25,17.75) -- (15.75,17.25);
-			\draw [short] (16.25,17.75) -- (13.75,17.75);
-			\draw [short] (13.75,17.75) -- (13.25,17.25);
-			\draw [short] (13.25,17.25) -- (15.75,17.25);
-			\draw [short] (13.75,15.25) .. controls (13.75,15) and (14.25,15) .. (14.25,15.25);
-			\draw [short] (15,15.25) .. controls (15,15) and (15.5,15) .. (15.5,15.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13.25,16.75) .. controls (13.75,16.5) and (15.25,15.75) .. (15.75,15.75);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (15.75,15.75) -- (16.25,16.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13.75,17.25) -- (13.25,16.75);
-			\draw [short] (13.75,17.75) -- (13.75,17.25);
-			\draw [dashed] (13.75,17.25) -- (13.75,15.75);
-			\draw [dashed] (13.75,15.75) -- (13.25,15.25);
-			\draw [dashed] (13.75,15.75) -- (16.25,15.75);
-			\node [font=\normalsize] at (14.75,18) {$P_a$};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (13.75,17.25) .. controls (14.25,17) and (15.75,16.25) .. (16.25,16.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (14,15.25) -- (14,16.4)node[pos=1.05,right]{$z(x)$};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.25,15.25) -- (13.25,16)node[pos=1,left]{z};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.25,15.25) -- (14,15.25)node[pos=0.7,above]{x};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.25,15.25) -- (13,15)node[pos=0.5,left]{y};
-		\end{circuitikz}
-	
-	\label{fig:my_label}
-\end{figure}
 
-\begin{figure}[H]
-	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\normalsize]
-			\draw [short] (12.25,16.25) -- (12.25,13.75);
-			\draw [short] (12.25,13.75) -- (14.25,13.75);
-			\draw [short] (14.25,13.75) -- (14.25,16.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (12.25,15.75) -- (14.25,15.75);
-			\node [font=\normalsize] at (13.25,16.25) {$P_a$};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (13.25,13.75) -- (13.25,14.75)node[pos=1,above]{$\vec \Omega_{rot}$};
-			\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (13.25,13.75) -- (13.75,13.75)node[pos=1,above]{$\vec e_r$};
-			\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (13.25,13.75) -- (13.25,14.25)node[pos=1,left]{$\vec k$};
-			\draw [<->, >=Stealth] (12,16.25) -- (12,13.75)node[pos=0.5,left]{$H_{dep}$};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, <->, >=Stealth] (14.5,15.75) -- (14.5,13.75)node[pos=0.5,right]{$H_0$};
-		\end{circuitikz}
-	
-	\label{fig:my_label}
-\end{figure}
+
 
 \begin{figure}[H]
 	\centering
