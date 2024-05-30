@@ -1,4 +1,5 @@
-\contentsline {chapter}{Índice general}{ii}{}%
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Índice general}{\es@scroman {ii}}{}%
 \contentsline {chapter}{\numberline {1}Fundamentos y propiedades de los fluidos.}{1}{}%
 \contentsline {section}{\numberline {1.1}Hipótesis de medio continuo.}{1}{}%
 \contentsline {section}{\numberline {1.2}Ecuaciones equilibrio termodinámico local.}{3}{}%
@@ -19,7 +20,7 @@
 \contentsline {section}{\numberline {4.1}Teorema del transporte de Reynolds para la cantidad de movimiento.}{21}{}%
 \contentsline {section}{\numberline {4.2}Ecuaciones de Navier-Stokes.}{22}{}%
 \contentsline {section}{\numberline {4.3}Número de Reynolds.}{23}{}%
-\contentsline {section}{\numberline {4.4}Teorema de Bernouilli.}{23}{}%
+\contentsline {section}{\numberline {4.4}Teorema de Bernoulli.}{23}{}%
 \contentsline {chapter}{\numberline {5}Flujos de viscosidad dominante.}{25}{}%
 \contentsline {section}{\numberline {5.1}Introducción.}{25}{}%
 \contentsline {section}{\numberline {5.2}Flujos unidireccionales.}{25}{}%
@@ -29,23 +30,25 @@
 \contentsline {section}{\numberline {5.6}Espesor de capa límite.}{29}{}%
 \contentsline {chapter}{\numberline {6}Conservación de la energía.}{31}{}%
 \contentsline {section}{\numberline {6.1}Definiciones.}{31}{}%
-\contentsline {section}{\numberline {6.2}Conservación de la energía en forma integral.}{32}{}%
-\contentsline {section}{\numberline {6.3}Bombas y turbinas.}{32}{}%
-\contentsline {section}{\numberline {6.4}Pérdidas de carga.}{32}{}%
-\contentsline {section}{\numberline {6.5}Factor de fricción (f).}{32}{}%
-\contentsline {section}{\numberline {6.6}Diagrama de Moody.}{32}{}%
-\contentsline {chapter}{\numberline {7}Fluidoestática.}{33}{}%
-\contentsline {section}{\numberline {7.1}Introducción.}{33}{}%
-\contentsline {section}{\numberline {7.2}Estudio de casos prácticos según las componentes del potencial $U$}{34}{}%
-\contentsline {subsection}{\numberline {7.2.1}Componente gravitatoria.}{34}{}%
-\contentsline {subsection}{\numberline {7.2.2}Componente gravitatoria y aceleración constante.}{34}{}%
-\contentsline {chapter}{\numberline {8}Semejanza hidrodinámica.}{39}{}%
-\contentsline {chapter}{\numberline {9}Ejercicios resueltos.}{41}{}%
-\contentsline {section}{\numberline {9.1}Fundamentos y propiedades de los fluidos.}{41}{}%
-\contentsline {section}{\numberline {9.2}Cinemática de la partícula fluida.}{44}{}%
-\contentsline {section}{\numberline {9.3}Conservación de la masa.}{48}{}%
-\contentsline {section}{\numberline {9.4}Conservación de la cantidad de movimiento.}{55}{}%
-\contentsline {section}{\numberline {9.5}Flujos de viscosidad dominante.}{70}{}%
-\contentsline {section}{\numberline {9.6}Conservación de la energía.}{73}{}%
-\contentsline {section}{\numberline {9.7}Fluidoestática.}{78}{}%
-\contentsline {section}{\numberline {9.8}Semejanza hidrodinámica.}{78}{}%
+\contentsline {section}{\numberline {6.2}Conservación de la energía en forma integral.}{31}{}%
+\contentsline {section}{\numberline {6.3}Bombas/compresores y turbinas.}{32}{}%
+\contentsline {section}{\numberline {6.4}Pérdidas de carga.}{33}{}%
+\contentsline {section}{\numberline {6.5}Factor de fricción (f).}{33}{}%
+\contentsline {subsection}{\numberline {6.5.1}Ecuación de Euler-Bernoulli}{34}{}%
+\contentsline {section}{\numberline {6.6}Ábaco de Moody.}{35}{}%
+\contentsline {chapter}{\numberline {7}Fluidoestática.}{37}{}%
+\contentsline {section}{\numberline {7.1}Introducción.}{37}{}%
+\contentsline {section}{\numberline {7.2}Estudio de casos prácticos según las componentes del potencial $U$}{38}{}%
+\contentsline {subsection}{\numberline {7.2.1}Componente gravitatoria.}{38}{}%
+\contentsline {subsection}{\numberline {7.2.2}Componente gravitatoria y aceleración constante.}{38}{}%
+\contentsline {subsection}{\numberline {7.2.3}Componente gravitatoria y rotativa.}{39}{}%
+\contentsline {chapter}{\numberline {8}Semejanza hidrodinámica.}{43}{}%
+\contentsline {chapter}{\numberline {9}Ejercicios resueltos.}{45}{}%
+\contentsline {section}{\numberline {9.1}Fundamentos y propiedades de los fluidos.}{45}{}%
+\contentsline {section}{\numberline {9.2}Cinemática de la partícula fluida.}{48}{}%
+\contentsline {section}{\numberline {9.3}Conservación de la masa.}{52}{}%
+\contentsline {section}{\numberline {9.4}Conservación de la cantidad de movimiento.}{59}{}%
+\contentsline {section}{\numberline {9.5}Flujos de viscosidad dominante.}{74}{}%
+\contentsline {section}{\numberline {9.6}Conservación de la energía.}{77}{}%
+\contentsline {section}{\numberline {9.7}Fluidoestática.}{82}{}%
+\contentsline {section}{\numberline {9.8}Semejanza hidrodinámica.}{82}{}%
