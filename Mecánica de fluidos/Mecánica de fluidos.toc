@@ -42,13 +42,16 @@
 \contentsline {subsection}{\numberline {7.2.1}Componente gravitatoria.}{38}{}%
 \contentsline {subsection}{\numberline {7.2.2}Componente gravitatoria y aceleración constante.}{38}{}%
 \contentsline {subsection}{\numberline {7.2.3}Componente gravitatoria y rotativa.}{39}{}%
-\contentsline {chapter}{\numberline {8}Semejanza hidrodinámica.}{43}{}%
-\contentsline {chapter}{\numberline {9}Ejercicios resueltos.}{45}{}%
-\contentsline {section}{\numberline {9.1}Fundamentos y propiedades de los fluidos.}{45}{}%
-\contentsline {section}{\numberline {9.2}Cinemática de la partícula fluida.}{48}{}%
-\contentsline {section}{\numberline {9.3}Conservación de la masa.}{52}{}%
-\contentsline {section}{\numberline {9.4}Conservación de la cantidad de movimiento.}{59}{}%
-\contentsline {section}{\numberline {9.5}Flujos de viscosidad dominante.}{74}{}%
-\contentsline {section}{\numberline {9.6}Conservación de la energía.}{77}{}%
-\contentsline {section}{\numberline {9.7}Fluidoestática.}{82}{}%
-\contentsline {section}{\numberline {9.8}Semejanza hidrodinámica.}{82}{}%
+\contentsline {section}{\numberline {7.3}Casos prácticos.}{41}{}%
+\contentsline {subsection}{\numberline {7.3.1}Compuerta en una tubería.}{41}{}%
+\contentsline {subsection}{\numberline {7.3.2}Compuerta circular.}{42}{}%
+\contentsline {chapter}{\numberline {8}Semejanza hidrodinámica.}{45}{}%
+\contentsline {chapter}{\numberline {9}Ejercicios resueltos.}{47}{}%
+\contentsline {section}{\numberline {9.1}Fundamentos y propiedades de los fluidos.}{47}{}%
+\contentsline {section}{\numberline {9.2}Cinemática de la partícula fluida.}{50}{}%
+\contentsline {section}{\numberline {9.3}Conservación de la masa.}{54}{}%
+\contentsline {section}{\numberline {9.4}Conservación de la cantidad de movimiento.}{61}{}%
+\contentsline {section}{\numberline {9.5}Flujos de viscosidad dominante.}{76}{}%
+\contentsline {section}{\numberline {9.6}Conservación de la energía.}{79}{}%
+\contentsline {section}{\numberline {9.7}Fluidoestática.}{84}{}%
+\contentsline {section}{\numberline {9.8}Semejanza hidrodinámica.}{84}{}%

@@ -436,237 +436,115 @@
 				\end{figure}
 			\end{enumerate}
 
+	\section{Casos prácticos.}
+		\subsection{Compuerta en una tubería.}
+			Sea el sistema de la figura. Hallar la presión en el centro de gravedad de la compuerta. $cg\equiv\text{centro de gravedad}$, $cp\equiv\text{centro de presiones}$.
 
-
-
-
-
-
-\begin{figure}[H]
-	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\normalsize]
-			\draw [short] (12,13.5) -- (17,13.5);
-			\draw [short] (17,13.5) -- (12,16);
-			\node at (13.5,15.25) [circ] {};
-			\node at (15.5,14.25) [circ] {};
+			\begin{figure}[H]
+				\begin{minipage}{0.5\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [short] (12,13.5) -- (17,13.5);
+							\draw [short] (17,13.5) -- (12,16);
+							\node at (13.5,15.25) [circ] {};
+							\node at (15.5,14.25) [circ] {};
+							
+							\draw [short] (12,16) -- (17,16);
+							\draw [short] (16,14) .. controls (16,14) and (15.75,13.85) .. (15.75,13.5)node[pos=0.5,left]{$\alpha$};
+							\draw [short] (12,16) .. controls (11.25,14.75) and (12.75,14.5) .. (12,13.5);
+							\draw [short] (12,14.75) .. controls (11.75,14.25) and (11.75,14) .. (12,13.5);
+							\draw [short] (17,16) .. controls (17.75,14.75) and (16.25,14.5) .. (17,13.5);
+							\draw [short] (17,14.75) .. controls (17.25,14.25) and (17.25,14) .. (17,13.5);
+							\draw [dashed] (12,14.75) .. controls (12.25,15.25) and (12.25,15.5) .. (12,16);
+							\draw [dashed] (17,16) .. controls (16.75,15.5) and (16.75,15.25) .. (17,14.75);
+							\draw [short] (15.5,14.25) -- (13.25,9.75);
+							\draw [short] (13.5,15.25) -- (11.25,10.75);
+							\draw [short] (11.75,11.75) -- (13.25,9.75);
+							\draw [short] (11.75,11.75) -- (14.25,11.75);
+							
+							\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (13.0625,11.125) -- (14.8125,14.625)node[pos=0,right]{$c_p$};
+							\node at (13.0625,11.125) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
+							
+							\node at (14.8125,14.625) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (12.75,11.25) -- (10.75,12.25)node[pos=1,left]{y};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (12.75,11.25) -- (13.5,12.75)node[pos=1,left]{x};
+							\node at (14.5,14.75) [circ, color={rgb,255:red,255; green,128; blue,0}] {};
+							\draw [ color={rgb,255:red,255; green,128; blue,0}, dashed] (14.5,14.75) -- (12.75,11.25);
+							\node at (12.75,11.25) [circ, color={rgb,255:red,255; green,128; blue,0}] {};
+							\node [font=\normalsize, color={rgb,255:red,255; green,128; blue,0}] at (12.75,11) {$c_g$};
+							\draw [ color={rgb,255:red,192; green,192; blue,192}, short] (13.25,9.75) -- (13.75,9.5);
+							\draw [ color={rgb,255:red,192; green,192; blue,192}, short] (14.25,11.75) -- (14.75,11.5);
+							\draw [ color={rgb,255:red,192; green,192; blue,192}, short] (13.75,10.75) -- (14.25,10.5);
+							\draw [ color={rgb,255:red,192; green,192; blue,192}, <->, >=Stealth] (13.75,9.5) -- (14.25,10.5)node[pos=0.5,right]{H/2};
+							\draw [ color={rgb,255:red,192; green,192; blue,192}, <->, >=Stealth] (14.25,10.5) -- (14.75,11.5)node[pos=0.5,right]{H/2};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,15.5) -- (14.8125,14.625)node[pos=0,right]{$\vec F$};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (14.8125,14.625) -- (15.3125,14.375)node[pos=0.5,below]{$\vec s$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, <->, >=Stealth] (17.5,16) -- (17.5,14.5)node[pos=0.5,right]{h};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (17.5,14.5) -- (14.8125,14.625);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (17.5,16) -- (17,16);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (16.5,15.75) -- (13.5,15.75);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (16.5,15.25) -- (14.5,15.25);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (16.5,14.75) -- (15.25,14.75);
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}
+				\begin{minipage}{0.5\textwidth}
+					\[s\cdot \sin \alpha = h = y_{cg} - y\]
+					\[M_{cg} = F\cdot d_{cp-cg} =
+					\oiint_A(P_a+\rho gh)y\,dA =\]
+					\[=\oiint_AP_ay\,dA (0\text{, no genera momento respecto de }cg) +\] \[+\oiint_A -\rho g \sin \alpha y^2\,dA =
+					-\rho g\sin \alpha I_{xx}^{cg}
+					\]
+					
+					\[F = \oiint_A P \,dA = \oiint_A P(y)\,dA = P(y_{cg})A\]
+					\[P(y_{cg}) = \dfrac{1}{A}\oiint_A P(y)\,dA\]
+				\end{minipage}
+			\end{figure}
 			
-			\draw [short] (12,16) -- (17,16);
-			\draw [short] (16,14) .. controls (16,14) and (15.75,13.85) .. (15.75,13.5)node[pos=0.5,left]{$\alpha$};
-			\draw [short] (12,16) .. controls (11.25,14.75) and (12.75,14.5) .. (12,13.5);
-			\draw [short] (12,14.75) .. controls (11.75,14.25) and (11.75,14) .. (12,13.5);
-			\draw [short] (17,16) .. controls (17.75,14.75) and (16.25,14.5) .. (17,13.5);
-			\draw [short] (17,14.75) .. controls (17.25,14.25) and (17.25,14) .. (17,13.5);
-			\draw [dashed] (12,14.75) .. controls (12.25,15.25) and (12.25,15.5) .. (12,16);
-			\draw [dashed] (17,16) .. controls (16.75,15.5) and (16.75,15.25) .. (17,14.75);
-			\draw [short] (15.5,14.25) -- (13.25,9.75);
-			\draw [short] (13.5,15.25) -- (11.25,10.75);
-			\draw [short] (11.75,11.75) -- (13.25,9.75);
-			\draw [short] (11.75,11.75) -- (14.25,11.75);
+			$I_{xx}^{cg}$ es el momento del área triangular de la distribución de presiones. Esta distribución tiene como centro de presiones el centro de gravedad el baricentro del triángulo, y el momento de su área es el producto del área por la distancia entre el punto a calcular y su centro de gravedad.
+
+		\subsection{Compuerta circular.}
+			\begin{figure}[H]
+				\begin{minipage}{0.3\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [short] (11.25,13) -- (11.25,16.25);
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (11.25,12.25) -- (12,12.25)node[pos=1,above]{x};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (11.25,12.25) -- (11.25,13)node[pos=1,right]{z};
+							\draw [short] (11.25,15.25) -- (14.5,15.25);
+							\draw [short] (14.5,15.25) -- (14.5,12.25)node[pos=0,right]{$S_2$};
+							\node at (14.5,15.25) [circ] {};
+							\draw [short] (11.25,16.25) -- (13.5,16.25)node[pos=1,above]{$S_1$};
+							\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (13.5,16.25) -- (13.5,15.25);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.75,12.25) -- (13.75,15.6)node[pos=0.5,left]{$h(z)$};
+							\draw [short] (12,12.25) -- (14.5,12.25);
+							\draw [color={rgb,255:red,0; green,128; blue,0}](14.5,15.25) arc (-90:-180:1);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth, dashed] (11.5,15.5) -- (13.6,15.5)node[pos=0.5,above]{Fluido};
+							
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth](13.75,15.6) -- (13.25,15.1)node[pos=1,left]{$\vec n$};
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}
+				\begin{minipage}{0.7\textwidth}
+					$\vec n$ no es constante.
+					\[\vec F = \oiint_A -P \bar{\bar I}\vec n\,dA \equiv \text{fuerza que ejerce el líquido sobre la compuerta}\]
+					
+					
+					Conservación de la cantidad de movimiento en forma integral ($\vec v = \vec 0$)
+					\[\dfrac{d}{dt}\iiint_{V_c} \rho \vec v\,dV + \oiint_{S_c} \rho \vec v (\vec v - \vec v_c)\vec n\,dS = \iiint_{V_c} \vec f_v\,dV + \oiint_{S_c}-P\bar{\bar I} + \bar{\bar \tau}_v\vec n\,dA\]
+				\end{minipage}
+			\end{figure}
+
+			$\bar{\bar \tau}_v = 0$ porque depende de $\vec v$, luego
+			\[0 = \iiint_{V_c} \vec f_v\,dV + \oiint_{S_c}-P\bar{\bar I}\vec n\,dS = \rho g V_{c,\,total} + \iint_{S_1} - P\bar{\bar I}\vec n\,dS + \iint_{S_2} - P\bar{\bar I}\vec n\,dS + \iint_{S_{comp}} - P\bar{\bar I}\vec n\,dS\]
+
+
+			Pero $$\iint_{S_{comp}} - P\bar{\bar I}\vec n\,dS = -\vec F_{liq\rightarrow comp}$$
 			
-			\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (13.0625,11.125) -- (14.8125,14.625)node[pos=0,right]{$c_p$};
-			\node at (13.0625,11.125) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
 			
-			\node at (14.8125,14.625) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (12.75,11.25) -- (10.75,12.25)node[pos=1,left]{y};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (12.75,11.25) -- (13.5,12.75)node[pos=1,left]{x};
-			\node at (14.5,14.75) [circ, color={rgb,255:red,255; green,128; blue,0}] {};
-			\draw [ color={rgb,255:red,255; green,128; blue,0}, dashed] (14.5,14.75) -- (12.75,11.25);
-			\node at (12.75,11.25) [circ, color={rgb,255:red,255; green,128; blue,0}] {};
-			\node [font=\normalsize, color={rgb,255:red,255; green,128; blue,0}] at (12.75,11) {$c_g$};
-			\draw [ color={rgb,255:red,192; green,192; blue,192}, short] (13.25,9.75) -- (13.75,9.5);
-			\draw [ color={rgb,255:red,192; green,192; blue,192}, short] (14.25,11.75) -- (14.75,11.5);
-			\draw [ color={rgb,255:red,192; green,192; blue,192}, short] (13.75,10.75) -- (14.25,10.5);
-			\draw [ color={rgb,255:red,192; green,192; blue,192}, <->, >=Stealth] (13.75,9.5) -- (14.25,10.5)node[pos=0.5,right]{H/2};
-			\draw [ color={rgb,255:red,192; green,192; blue,192}, <->, >=Stealth] (14.25,10.5) -- (14.75,11.5)node[pos=0.5,right]{H/2};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,15.5) -- (14.8125,14.625)node[pos=0,right]{$\vec F$};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (14.8125,14.625) -- (15.3125,14.375)node[pos=0.5,below]{$\vec s$};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, <->, >=Stealth] (17.5,16) -- (17.5,14.5)node[pos=0.5,right]{h};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (17.5,14.5) -- (14.8125,14.625);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (17.5,16) -- (17,16);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (16.5,15.75) -- (13.5,15.75);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (16.5,15.25) -- (14.5,15.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (16.5,14.75) -- (15.25,14.75);
-		\end{circuitikz}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\normalsize]
-			\draw [short] (11.25,13) -- (11.25,16.25);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (11.25,12.25) -- (12,12.25)node[pos=1,above]{x};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (11.25,12.25) -- (11.25,13)node[pos=1,right]{z};
-			\draw [short] (11.25,15.25) -- (14.5,15.25);
-			\draw [short] (14.5,15.25) -- (14.5,12.25);
-			\node at (14.5,15.25) [circ] {};
-			\draw [short] (11.25,16.25) -- (13.5,16.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,0}, short] (13.5,16.25) -- (13.5,15.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.75,12.25) -- (13.75,15.6)node[pos=0.5,left]{$h(z)$};
-			\draw [short] (12,12.25) -- (14.5,12.25);
-			\draw [color={rgb,255:red,0; green,128; blue,0}](14.5,15.25) arc (-90:-180:1);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth, dashed] (11.5,15.5) -- (13.6,15.5)node[pos=0.5,above]{Fluido};
-			
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth](13.75,15.6) -- (13.25,15.1)node[pos=1,left]{$\vec n$};
-		\end{circuitikz}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\normalsize]
-			\draw [short] (16.75,16) -- (16.75,12.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (16.5,15.75) .. controls (16.5,15) and (16.5,14.5) .. (15.25,14.5);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (16.5,12.5) .. controls (16.5,13.25) and (16.5,13.75) .. (15.25,13.75);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (15.25,14.5) -- (13,14.5);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (15.25,13.75) -- (13,13.75);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13,14.125) -- (13.75,14.125)node[pos=1,right]{$Q$};
-			\node [font=\normalsize] at (15.25,15.25) {$P_a$};
-			\draw [short] (16.75,15.5) -- (17,15.75);
-			\draw [short] (16.75,15.25) -- (17,15.5);
-			\draw [short] (16.75,15) -- (17,15.25);
-			\draw [short] (16.75,14.75) -- (17,15);
-			\draw [short] (16.75,14.5) -- (17,14.75);
-			\draw [short] (16.75,14.25) -- (17,14.5);
-			\draw [short] (16.75,14) -- (17,14.25);
-			\draw [short] (16.75,13.75) -- (17,14);
-			\draw [short] (16.75,13.25) -- (17,13.5);
-			\draw [short] (16.75,13) -- (17,13.25);
-			\draw [short] (16.75,12.75) -- (17,13);
-			\draw [short] (16.75,12.5) -- (17,12.75);
-			\draw [short] (16.75,13.5) -- (17,13.75);
-		\end{circuitikz}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\normalsize]
-			\draw [short] (10.75,15) -- (10.75,13.25);
-			\draw [short] (10.75,13.25) -- (14,13.25);
-			\draw [short] (14,13.25) -- (12.25,15);
-			\draw [short] (12.25,15) -- (10.75,15);
-			\draw  (11.25,13) circle (0.25cm);
-			\draw  (13.25,13) circle (0.25cm);
-			\draw [short] (10.5,12.75) -- (14.25,12.75);
-			\draw [short] (11,12.75) -- (10.75,12.5);
-			\draw [short] (11.25,12.75) -- (11,12.5);
-			\draw [short] (11.5,12.75) -- (11.25,12.5);
-			\draw [short] (11.75,12.75) -- (11.5,12.5);
-			\draw [short] (12,12.75) -- (11.75,12.5);
-			\draw [short] (12.25,12.75) -- (12,12.5);
-			\draw [short] (12.5,12.75) -- (12.25,12.5);
-			\draw [short] (12.75,12.75) -- (12.5,12.5);
-			\draw [short] (13,12.75) -- (12.75,12.5);
-			\draw [short] (13.25,12.75) -- (13,12.5);
-			\draw [short] (13.5,12.75) -- (13.25,12.5);
-			\draw [short] (13.75,12.75) -- (13.5,12.5);
-			\draw [short] (14,12.75) -- (13.75,12.5);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (14.5,13.5) .. controls (13,14) and (13,15) .. (12.5,15.5);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,15.5) .. controls (12,15.75) and (11.75,15.25) .. (10.75,15.25);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (14.5,13.75) .. controls (13.25,14.25) and (13.25,15.25) .. (12.5,15.75);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,15.75) .. controls (12,16) and (11.75,15.5) .. (10.75,15.5);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (14.5,14) .. controls (13.5,14.75) and (13.25,15.75) .. (12.5,16);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,16) .. controls (11.5,16) and (11.5,15.75) .. (10.75,15.75);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,16.25) .. controls (11.5,16.25) and (11.75,16) .. (10.75,16);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,16.25) .. controls (13.25,16) and (13.75,15.25) .. (14.5,14.25)node[pos=0.5,above,sloped]{$\rho_{\infty}, \, P_{\infty}$};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (15.25,16.25) -- (15.25,13.25)node[pos=0,above]{$v_{\infty}$};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,13.5) -- (14.75,13.5);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,14) -- (14.75,14);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,14.5) -- (14.75,14.5);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,15) -- (14.75,15);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,15.5) -- (14.75,15.5);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,16) -- (14.75,16);
-		\end{circuitikz}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\normalsize]
-			\draw [short] (10.75,15) -- (10.75,13.25);
-			\draw [short] (10.75,13.25) -- (14,13.25);
-			\draw [short] (14,13.25) -- (12.25,15);
-			\draw [short] (12.25,15) -- (10.75,15);
-			\draw  (11.25,13) circle (0.25cm);
-			\draw  (13.25,13) circle (0.25cm);
-			\draw [short] (10.5,12.75) -- (14.25,12.75);
-			\draw [short] (11,12.75) -- (10.75,12.5);
-			\draw [short] (11.25,12.75) -- (11,12.5);
-			\draw [short] (11.5,12.75) -- (11.25,12.5);
-			\draw [short] (11.75,12.75) -- (11.5,12.5);
-			\draw [short] (12,12.75) -- (11.75,12.5);
-			\draw [short] (12.25,12.75) -- (12,12.5);
-			\draw [short] (12.5,12.75) -- (12.25,12.5);
-			\draw [short] (12.75,12.75) -- (12.5,12.5);
-			\draw [short] (13,12.75) -- (12.75,12.5);
-			\draw [short] (13.25,12.75) -- (13,12.5);
-			\draw [short] (13.5,12.75) -- (13.25,12.5);
-			\draw [short] (13.75,12.75) -- (13.5,12.5);
-			\draw [short] (14,12.75) -- (13.75,12.5);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, <->, >=Stealth] (10.75,15.5) -- (14,15.5)node[pos=0.5,above]{$L_m$};
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, dashed] (14,15.5) -- (14,13.25);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, dashed] (10.75,15.5) -- (10.75,15);
-		\end{circuitikz}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\normalsize]
-			\draw [short] (11,17.5) -- (11,16.25);
-			\draw [short] (11,16.25) -- (12,16.25);
-			\draw [short] (12.5,16.25) -- (13.5,16.25);
-			\draw [short] (13.5,16.25) -- (13.5,17.5);
-			\draw [short] (12,16.25) -- (12,15.5);
-			\draw [short] (12.5,16.25) -- (12.5,15.5);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (12.25,16) -- (12.25,15.25)node[pos=1,below]{Q};
-			\draw [->, >=Stealth] (13,15.75) -- (12.5,15.75)node[pos=0,right]{$D_p$};
-			\draw [->, >=Stealth] (11.5,15.75) -- (12,15.75);
-			\draw [->, >=Stealth] (14,17.25) -- (13.5,17.25)node[pos=0,right]{$A_p$};
-			\draw [->, >=Stealth] (10.5,17.25) -- (11,17.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (11,17) -- (13.5,17);
-			\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,255}] at (12.25,16.75) {$\rho_p$};
-			\draw [->, >=Stealth] (11.5,17.75) -- (11.5,17.25)node[pos=0,right]{$\vec g$};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, <->, >=Stealth] (10.75,17) -- (10.75,16.25)node[pos=0.5,left]{$H_0$};
-		\end{circuitikz}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-		\begin{circuitikz}
-			\tikzstyle{every node}=[font=\normalsize]
-			\draw [ color={rgb,255:red,255; green,0; blue,0} ] (14.25,16.25) circle (1.75cm);
-			\draw [ color={rgb,255:red,255; green,0; blue,0} ] (9.75,15.5) circle (0.75cm);
-			\draw [short] (8.5,17) -- (8.5,15.25);
-			\draw [short] (9.25,17) -- (9.25,15.75);
-			\draw [short] (8.5,15.25) -- (11.5,15.25);
-			\draw [short] (9.25,15.75) -- (11.5,15.75);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, <->, >=Stealth] (9.25,16.5) -- (11.5,16.5)node[pos=0.5,above]{$L_t$};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, <->, >=Stealth] (9.25,16) -- (10.25,16)node[pos=1,right]{$L_e$};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (9.25,15.75) .. controls (9.5,15.5) and (9.5,15.5) .. (10.25,15.5);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (9.25,15.25) .. controls (9.5,15.5) and (9.5,15.5) .. (10.25,15.5);
-			\draw [short] (12.75,17) -- (15.75,17);
-			\draw [short] (12.75,15.5) -- (15.75,15.5);
-			\draw [short] (12.75,17) -- (12.75,15.5);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (14.75,17) -- (14.75,15.5);
-			\draw [->, >=Stealth] (14.75,16.75) -- (15,16.75);
-			\draw [->, >=Stealth] (14.75,16.5) -- (15.25,16.5);
-			\draw [->, >=Stealth] (14.75,16.25) -- (15.5,16.25);
-			\draw [->, >=Stealth] (14.75,16) -- (15.25,16);
-			\draw [->, >=Stealth] (14.75,15.75) -- (15,15.75);
-			\draw [->, >=Stealth] (12.75,16.75) -- (13,16.75);
-			\draw [->, >=Stealth] (12.75,16.5) -- (13,16.5);
-			\draw [->, >=Stealth] (12.75,16.25) -- (13,16.25);
-			\draw [->, >=Stealth] (12.75,16) -- (13,16);
-			\draw [->, >=Stealth] (12.75,15.75) -- (13,15.75);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.5,17) -- (13.5,16.5)node[pos=0.5,right]{$\delta$};
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13.5,15.5) -- (13.5,16)node[pos=0.5,right]{$\delta$};
-			
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (13,15.5) .. controls (13.25,16.25) and (14.75,16.25) .. (14.75,16.25);
-			
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (13,17) .. controls (13.25,16.25) and (14.75,16.25) .. (14.75,16.25);
-			\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (10.5,15.5) -- (12.5,16.25);
-			\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (15.75,16.25) -- (16.5,16.25)node[pos=1,right]{$Q_{H-P}$};
-		\end{circuitikz}
-\end{figure}
+			Luego
+			\[\vec F_{liq\rightarrow comp} = \rho g V_{c,\,total} + \iint_{S_1} - P\bar{\bar I}\vec n\,dS + \iint_{S_2} - P\bar{\bar I}\vec n\,dS\]
