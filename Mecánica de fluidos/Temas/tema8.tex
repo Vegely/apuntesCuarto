@@ -1,102 +1,183 @@
 \chapter{Semejanza hidrodinámica.}
-\begin{figure}[H]
-	\centering
-	\begin{circuitikz}
-		\tikzstyle{every node}=[font=\normalsize]
-		\draw [short] (16.75,16) -- (16.75,12.25);
-		\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (16.5,15.75) .. controls (16.5,15) and (16.5,14.5) .. (15.25,14.5);
-		\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (16.5,12.5) .. controls (16.5,13.25) and (16.5,13.75) .. (15.25,13.75);
-		\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (15.25,14.5) -- (13,14.5);
-		\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (15.25,13.75) -- (13,13.75);
-		\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13,14.125) -- (13.75,14.125)node[pos=1,right]{$Q$};
-		\node [font=\normalsize] at (15.25,15.25) {$P_a$};
-		\draw [short] (16.75,15.5) -- (17,15.75);
-		\draw [short] (16.75,15.25) -- (17,15.5);
-		\draw [short] (16.75,15) -- (17,15.25);
-		\draw [short] (16.75,14.75) -- (17,15);
-		\draw [short] (16.75,14.5) -- (17,14.75);
-		\draw [short] (16.75,14.25) -- (17,14.5);
-		\draw [short] (16.75,14) -- (17,14.25);
-		\draw [short] (16.75,13.75) -- (17,14);
-		\draw [short] (16.75,13.25) -- (17,13.5);
-		\draw [short] (16.75,13) -- (17,13.25);
-		\draw [short] (16.75,12.75) -- (17,13);
-		\draw [short] (16.75,12.5) -- (17,12.75);
-		\draw [short] (16.75,13.5) -- (17,13.75);
-	\end{circuitikz}
-\end{figure}
+	Comencemos con un ejemplo:
+	
+	\begin{figure}[H]
+		\begin{minipage}{0.5\textwidth}
+			\begin{figure}[H]
+				\centering
+				\begin{circuitikz}
+					\tikzstyle{every node}=[font=\normalsize]
+					\draw [short] (16.75,16) -- (16.75,12.25);
+					\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (16.5,15.75) .. controls (16.5,15) and (16.5,14.5) .. (15.25,14.5);
+					\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (16.5,12.5) .. controls (16.5,13.25) and (16.5,13.75) .. (15.25,13.75);
+					\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (15.25,14.5) -- (13,14.5);
+					\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (15.25,13.75) -- (13,13.75);
+					\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (13,14.125) -- (13.75,14.125)node[pos=1,right]{$Q$};
+					\node [font=\normalsize] at (15.25,15.25) {$P_a$};
+					\draw [short] (16.75,15.5) -- (17,15.75);
+					\draw [short] (16.75,15.25) -- (17,15.5);
+					\draw [short] (16.75,15) -- (17,15.25);
+					\draw [short] (16.75,14.75) -- (17,15);
+					\draw [short] (16.75,14.5) -- (17,14.75);
+					\draw [short] (16.75,14.25) -- (17,14.5);
+					\draw [short] (16.75,14) -- (17,14.25);
+					\draw [short] (16.75,13.75) -- (17,14);
+					\draw [short] (16.75,13.25) -- (17,13.5);
+					\draw [short] (16.75,13) -- (17,13.25);
+					\draw [short] (16.75,12.75) -- (17,13);
+					\draw [short] (16.75,12.5) -- (17,12.75);
+					\draw [short] (16.75,13.5) -- (17,13.75);
+				\end{circuitikz}
+			\end{figure}
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+			Se desea conocer la fuerza que ejerce el chorro sobre la placa.
+			\[[F] = [P]\cdot [A]\]
+			
+			
+			
+			Si definimos $P_0 \equiv P + \dfrac{1}{2}\rho v^2 = P + f(Q)$ y $A \approx D^2$:
+			\[[F] = \left[\dfrac{1}{2}\rho v^2\right][A] = [\rho v^2 D^2] \Rightarrow F \propto \rho v^2 D^2 \qquad v \sim \dfrac{Q}{D^2}\]
+		\end{minipage}
+	\end{figure}
+	
+	\[F \sim \rho \dfrac{Q^2}{D^2} \Rightarrow F \propto Q^2 \Rightarrow F = \chi \dfrac{\rho}{D^2}Q^2 \Rightarrow \log F \sim 2 \log Q\]
+	
+	
+	Donde $\chi$ es una variable o coeficiente a hallar experimentalmente.
+	
+	
+	El objetivo es hallar un sistema homólogo.
+	
+	\section{Números adimensionales.}
+		Partimos de las ecuaciones de Navier-Stokes para un líquido newtoniano, incompresible e isotermo:
+		\[\vec \nabla \cdot \vec v = 0 \qquad \rho \dfrac{\partial \vec v}{\partial t} + \rho (\vec v \cdot \vec \nabla)\cdot \vec v = - \vec \nabla P + \mu \vec \nabla^2 \vec v + \vec f_v\]
+		
+		
+		Definimos
+		\[\vec v = v_c \hat{\vec v}\]
+		
+		
+		Donde $v_c$ tiene dimensiones de velocidad y $\hat{\vec v}$ es adimensional. De forma análoga:
+		
+		\[t = t_c \hat t \qquad \vec \nabla = \dfrac{1}{L_c}\hat{\vec \nabla} \qquad P = P_c \hat P \qquad \vec f_v = \rho \vec g \Rightarrow \vec g = g_c \hat{\vec g}\]
+		
+		
+		Luego llegamos a la expresión:
+		\[
+			\rho \dfrac{v_c}{t_c}\dfrac{\partial \hat{\vec v}}{\partial \hat t} +
+			\rho \dfrac{v_c^2}{L_c}(\hat{\vec v}\cdot \hat{\vec \nabla})\cdot \hat{\vec v} = 
+			-\dfrac{P_c}{L_c}\hat{\vec \nabla}\hat P + \dfrac{\mu v_c}{L_c^2}\hat{\vec \nabla}^2\hat{\vec v} + \rho g_c\hat{\vec g}
+		\]
+		\newpage
+		Donde:
+		\begin{itemize}
+			\item $\dfrac{\partial \hat{\vec v}}{\partial \hat t} = (T)$
+			\item $(\hat{\vec v}\cdot \hat{\vec \nabla})\cdot \hat{\vec v} = (C)$
+			\item $\hat{\vec \nabla}\hat P = (P)$
+			\item $\hat{\vec g} = (G)$
+		\end{itemize}
+		
+		
+		y son todos adimensionales. Por lo tanto, se definen los siguientes números adimensionales:
+		\begin{itemize}
+			\item \textbf{\textit{Número de Reynolds:}} $Re \equiv \dfrac{(C)}{(V)} = \dfrac{\rho v_c L_c}{\mu}$
+			\item \textit{\textbf{Número de Strouhal:}} $St \equiv \dfrac{(T)}{(C)} = \dfrac{L_c}{t_c v_c}$
+			\item \textbf{\textit{Número de Froude:}} $Fr \equiv \left(\dfrac{(C)}{(G)}\right)^{1/2} = \dfrac{v_c}{(g_cL_c)^{1/2}}$
+			\item \textbf{\textit{Número de Euler:}} $Eu \equiv \dfrac{(P)}{\dfrac{1}{2}(C)} = \dfrac{P}{\dfrac{1}{2}\rho v_c^2}$
+		\end{itemize}
+		
+	\section{Modelos y prototipos.}
+		\begin{figure}[H]
+			\begin{minipage}{0.4\textwidth}
+				\begin{figure}[H]
+					\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw [short] (10.75,15) -- (10.75,13.25);
+						\draw [short] (10.75,13.25) -- (14,13.25);
+						\draw [short] (14,13.25) -- (12.25,15);
+						\draw [short] (12.25,15) -- (10.75,15);
+						\draw  (11.25,13) circle (0.25cm);
+						\draw  (13.25,13) circle (0.25cm);
+						\draw [short] (10.5,12.75) -- (14.25,12.75);
+						\draw [short] (11,12.75) -- (10.75,12.5);
+						\draw [short] (11.25,12.75) -- (11,12.5);
+						\draw [short] (11.5,12.75) -- (11.25,12.5);
+						\draw [short] (11.75,12.75) -- (11.5,12.5);
+						\draw [short] (12,12.75) -- (11.75,12.5);
+						\draw [short] (12.25,12.75) -- (12,12.5);
+						\draw [short] (12.5,12.75) -- (12.25,12.5);
+						\draw [short] (12.75,12.75) -- (12.5,12.5);
+						\draw [short] (13,12.75) -- (12.75,12.5);
+						\draw [short] (13.25,12.75) -- (13,12.5);
+						\draw [short] (13.5,12.75) -- (13.25,12.5);
+						\draw [short] (13.75,12.75) -- (13.5,12.5);
+						\draw [short] (14,12.75) -- (13.75,12.5);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (14.5,13.5) .. controls (13,14) and (13,15) .. (12.5,15.5);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,15.5) .. controls (12,15.75) and (11.75,15.25) .. (10.75,15.25);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (14.5,13.75) .. controls (13.25,14.25) and (13.25,15.25) .. (12.5,15.75);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,15.75) .. controls (12,16) and (11.75,15.5) .. (10.75,15.5);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (14.5,14) .. controls (13.5,14.75) and (13.25,15.75) .. (12.5,16);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,16) .. controls (11.5,16) and (11.5,15.75) .. (10.75,15.75);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,16.25) .. controls (11.5,16.25) and (11.75,16) .. (10.75,16);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,16.25) .. controls (13.25,16) and (13.75,15.25) .. (14.5,14.25)node[pos=0.5,above,sloped]{$\rho_{\infty}, \, P_{\infty}$};
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (15.25,16.25) -- (15.25,13.25)node[pos=0,above]{$v_{\infty}$};
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,13.5) -- (14.75,13.5);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,14) -- (14.75,14);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,14.5) -- (14.75,14.5);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,15) -- (14.75,15);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,15.5) -- (14.75,15.5);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,16) -- (14.75,16);
+					\end{circuitikz}
+				\end{figure}
+				
+				\begin{figure}[H]
+					\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw [short] (10.75,15) -- (10.75,13.25);
+						\draw [short] (10.75,13.25) -- (14,13.25);
+						\draw [short] (14,13.25) -- (12.25,15);
+						\draw [short] (12.25,15) -- (10.75,15);
+						\draw  (11.25,13) circle (0.25cm);
+						\draw  (13.25,13) circle (0.25cm);
+						\draw [short] (10.5,12.75) -- (14.25,12.75);
+						\draw [short] (11,12.75) -- (10.75,12.5);
+						\draw [short] (11.25,12.75) -- (11,12.5);
+						\draw [short] (11.5,12.75) -- (11.25,12.5);
+						\draw [short] (11.75,12.75) -- (11.5,12.5);
+						\draw [short] (12,12.75) -- (11.75,12.5);
+						\draw [short] (12.25,12.75) -- (12,12.5);
+						\draw [short] (12.5,12.75) -- (12.25,12.5);
+						\draw [short] (12.75,12.75) -- (12.5,12.5);
+						\draw [short] (13,12.75) -- (12.75,12.5);
+						\draw [short] (13.25,12.75) -- (13,12.5);
+						\draw [short] (13.5,12.75) -- (13.25,12.5);
+						\draw [short] (13.75,12.75) -- (13.5,12.5);
+						\draw [short] (14,12.75) -- (13.75,12.5);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, <->, >=Stealth] (10.75,15.5) -- (14,15.5)node[pos=0.5,above]{$L_m$};
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, dashed] (14,15.5) -- (14,13.25);
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, dashed] (10.75,15.5) -- (10.75,15);
+					\end{circuitikz}
+				\end{figure}
+			\end{minipage}
+			\begin{minipage}{0.6\textwidth}
+				La figura de arriba es un prototipo. La de abajo un modelo.
+				
+				
+				Se dice que hay \textbf{semejanza completa} cuando todos los números adimensionales de las ecuaciones del modelo coinciden tanto en el modelo como en el prototipo. Se dice que hay \textbf{semejanzas físicas parciales} en los siguientes casos:
+				\begin{itemize}
+					\item \textbf{\textit{Parcial de Reynolds:}} $Re_p = Re_m;\,Eu_p = Eu_m$. (G) se desprecia, no así (V).
+					\item \textbf{\textit{Parcial de Froude:}} $Fr_p = Fr_m;\,Eu_p = Eu_m$. (V) se desprecia, no así (G).
+					\item \textbf{\textit{Parcial geométrica:}} $Eu_p = Eu_m$. (G) y (V) dominantes.
+				\end{itemize}
+				
+				En ningún caso (P) se desprecia.
+			\end{minipage}
+		\end{figure}
 
-\begin{figure}[H]
-	\centering
-	\begin{circuitikz}
-		\tikzstyle{every node}=[font=\normalsize]
-		\draw [short] (10.75,15) -- (10.75,13.25);
-		\draw [short] (10.75,13.25) -- (14,13.25);
-		\draw [short] (14,13.25) -- (12.25,15);
-		\draw [short] (12.25,15) -- (10.75,15);
-		\draw  (11.25,13) circle (0.25cm);
-		\draw  (13.25,13) circle (0.25cm);
-		\draw [short] (10.5,12.75) -- (14.25,12.75);
-		\draw [short] (11,12.75) -- (10.75,12.5);
-		\draw [short] (11.25,12.75) -- (11,12.5);
-		\draw [short] (11.5,12.75) -- (11.25,12.5);
-		\draw [short] (11.75,12.75) -- (11.5,12.5);
-		\draw [short] (12,12.75) -- (11.75,12.5);
-		\draw [short] (12.25,12.75) -- (12,12.5);
-		\draw [short] (12.5,12.75) -- (12.25,12.5);
-		\draw [short] (12.75,12.75) -- (12.5,12.5);
-		\draw [short] (13,12.75) -- (12.75,12.5);
-		\draw [short] (13.25,12.75) -- (13,12.5);
-		\draw [short] (13.5,12.75) -- (13.25,12.5);
-		\draw [short] (13.75,12.75) -- (13.5,12.5);
-		\draw [short] (14,12.75) -- (13.75,12.5);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (14.5,13.5) .. controls (13,14) and (13,15) .. (12.5,15.5);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,15.5) .. controls (12,15.75) and (11.75,15.25) .. (10.75,15.25);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (14.5,13.75) .. controls (13.25,14.25) and (13.25,15.25) .. (12.5,15.75);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,15.75) .. controls (12,16) and (11.75,15.5) .. (10.75,15.5);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (14.5,14) .. controls (13.5,14.75) and (13.25,15.75) .. (12.5,16);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,16) .. controls (11.5,16) and (11.5,15.75) .. (10.75,15.75);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,16.25) .. controls (11.5,16.25) and (11.75,16) .. (10.75,16);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (12.5,16.25) .. controls (13.25,16) and (13.75,15.25) .. (14.5,14.25)node[pos=0.5,above,sloped]{$\rho_{\infty}, \, P_{\infty}$};
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (15.25,16.25) -- (15.25,13.25)node[pos=0,above]{$v_{\infty}$};
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,13.5) -- (14.75,13.5);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,14) -- (14.75,14);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,14.5) -- (14.75,14.5);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,15) -- (14.75,15);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,15.5) -- (14.75,15.5);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (15.25,16) -- (14.75,16);
-	\end{circuitikz}
-\end{figure}
 
-\begin{figure}[H]
-	\centering
-	\begin{circuitikz}
-		\tikzstyle{every node}=[font=\normalsize]
-		\draw [short] (10.75,15) -- (10.75,13.25);
-		\draw [short] (10.75,13.25) -- (14,13.25);
-		\draw [short] (14,13.25) -- (12.25,15);
-		\draw [short] (12.25,15) -- (10.75,15);
-		\draw  (11.25,13) circle (0.25cm);
-		\draw  (13.25,13) circle (0.25cm);
-		\draw [short] (10.5,12.75) -- (14.25,12.75);
-		\draw [short] (11,12.75) -- (10.75,12.5);
-		\draw [short] (11.25,12.75) -- (11,12.5);
-		\draw [short] (11.5,12.75) -- (11.25,12.5);
-		\draw [short] (11.75,12.75) -- (11.5,12.5);
-		\draw [short] (12,12.75) -- (11.75,12.5);
-		\draw [short] (12.25,12.75) -- (12,12.5);
-		\draw [short] (12.5,12.75) -- (12.25,12.5);
-		\draw [short] (12.75,12.75) -- (12.5,12.5);
-		\draw [short] (13,12.75) -- (12.75,12.5);
-		\draw [short] (13.25,12.75) -- (13,12.5);
-		\draw [short] (13.5,12.75) -- (13.25,12.5);
-		\draw [short] (13.75,12.75) -- (13.5,12.5);
-		\draw [short] (14,12.75) -- (13.75,12.5);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, <->, >=Stealth] (10.75,15.5) -- (14,15.5)node[pos=0.5,above]{$L_m$};
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, dashed] (14,15.5) -- (14,13.25);
-		\draw [ color={rgb,255:red,255; green,0; blue,0}, dashed] (10.75,15.5) -- (10.75,15);
-	\end{circuitikz}
-\end{figure}
 
 \begin{figure}[H]
 	\centering

@@ -45,7 +45,9 @@
 \contentsline {section}{\numberline {7.3}Casos prácticos.}{41}{}%
 \contentsline {subsection}{\numberline {7.3.1}Compuerta en una tubería.}{41}{}%
 \contentsline {subsection}{\numberline {7.3.2}Compuerta circular.}{42}{}%
-\contentsline {chapter}{\numberline {8}Semejanza hidrodinámica.}{45}{}%
+\contentsline {chapter}{\numberline {8}Semejanza hidrodinámica.}{43}{}%
+\contentsline {section}{\numberline {8.1}Números adimensionales.}{43}{}%
+\contentsline {section}{\numberline {8.2}Modelos y prototipos.}{44}{}%
 \contentsline {chapter}{\numberline {9}Ejercicios resueltos.}{47}{}%
 \contentsline {section}{\numberline {9.1}Fundamentos y propiedades de los fluidos.}{47}{}%
 \contentsline {section}{\numberline {9.2}Cinemática de la partícula fluida.}{50}{}%
