@@ -29,7 +29,7 @@
 	\item \underline{\textbf{Deriva}}: Variación lenta de una característica del instrumento por el paso del tiempo, mal uso o desgaste.
 	\item \underline{\textbf{Zona muerta}}: Máxima variación de la señal de entrada sin que se perciba respuesta en la salida.
 	\item \underline{\textbf{Sensibilidad}}: Variación de la salida ante un incremento de la entrada. No tienen porque ser siempre iguales.
-	\[ S(x) = \frac{dx}{dy}=\frac{\bigtriangleup x}{\bigtriangleup y} \]
+	\[ S(x) = \dfrac{dx}{dy}=\dfrac{\Delta x}{\Delta y} \]
 	\item \underline{\textbf{Resolución}}: Menor diferencia que puede apreciarse en un aparato de manera significativa.
 	\begin{itemize}
 	 \item En un aparato analógico suele tomarse como E/2 y como máximo E/4 donde E es una división de escala.
@@ -67,7 +67,7 @@
 		\begin{tikzpicture}[scale=0.7]
 			\begin{axis}[
 				xlabel=$Lectura$,
-				ylabel=$Error relativo (\%)$,
+				ylabel=$\varepsilon_r (\%)$,
 				xmin=0, xmax=10,
 				ymin=0, ymax=5,
 				axis lines=center,
@@ -78,7 +78,7 @@
 			\end{axis}
 			
 		\end{tikzpicture}
-		\caption{Gráfica del error del aparato a lo largo del campo de medida}
+		\caption{Error de un aparato a lo largo del campo de medida}
 		\label{fig:graph-1-over-x}
 	\end{figure}
 
@@ -105,8 +105,8 @@
 	
 	\[U(x) = k u(X) \]
 	\begin{itemize}
-		\item U(x) $\rightarrow$ Incertidumbre expandida
-		\item k $\rightarrow$ Factor de cobertura. Mide el nivel de confianza sobre el mensurando.
+		\item $U(x)$ $\rightarrow$ Incertidumbre expandida
+		\item $k$ $\rightarrow$ Factor de cobertura. Mide el nivel de confianza sobre el mensurando.
 		
 		\renewcommand{\arraystretch}{1.1} % Adjust the factor as needed
 		\begin{table}[htb]
@@ -120,20 +120,22 @@
 				
 				\hline
 			\end{tabular}
-			\caption{Tabla de intervalos cobretura}
+			\caption{Tabla de intervalos de cobertura}
 			\label{tab:your-table-label}
 		\end{table}
 		
-		\item u(X) $\rightarrow$ Incertidumbre sin expandir.
+		\item $u(x)$ $\rightarrow$ Incertidumbre sin expandir.
 	\end{itemize} 
 	
 	Normalmente la incertidumbre es el resultado de combinar diferentes componentes y se emplea para comparar la calidad de las medidas.
-	\item \underline{\textbf{Error de medida }}: Diferencia entre el resultado de una	medición y el valor real del mensurando.
-	\item \underline{\textbf{Error aleatorio}}:Diferencia entre el resultado de una medición y la media de infinitas medidas en condiciones de repetibilidad.
-	\\
+	\item \underline{\textbf{Error de medida}}: Diferencia entre el resultado de una	medición y el valor real del mensurando.
+	\item \underline{\textbf{Error aleatorio}}: Diferencia entre el resultado de una medición y la media de infinitas medidas en condiciones de repetibilidad.
+	
+	
 	Para minimizar este error se deben emplear múltiples medidas y utilizar la media aritmética como estimador de la medición.
 	\item \underline{\textbf{Error sistemático}}: Diferencia entre la media de infinitas medidas realizadas en condiciones de repetibilidad y el valor verdadero del mensurando.
-	\\
+	
+	
 	Si se conoce la causa del error puede eliminarse aplicando correcciones.
 	
 	\begin{figure} [H]
@@ -143,7 +145,7 @@
 		\label{fig:sample}
 	\end{figure}
 	\item \underline{\textbf{Tolerancia}}: Intervalo de valores dentro del cual debe situarse el valor real de una magnitud para que se acepte como válida. Es un indicador de un elemento.
-	Si el limite inferior $LSE$ y superior $LIE$ se encuentran equidistantes al valor nominal.
+	Si el limite superior $LSE$ e inferior $LIE$ se encuentran equidistantes al valor nominal:
 	
 	\[T=\pm \frac{LSE - LIE}{2}\]
 
@@ -178,8 +180,8 @@
 			\[y= \frac{x_1} {x_2}\]
 			\begin{itemize}
 				\item Sin correlación:
-				\[u_y^2=  \left({\frac{ u_1}{x_2}}\right)^2 +\left({\frac {x_1 u_2}{x_2^2}}\right)^2\]
-				Dividiendo por: $\left({\frac{ x_1}{x_2}}\right)^2$
+				\[u_y^2=  \left({\frac{u_1}{x_2}}\right)^2 +\left({\frac {x_1 u_2}{x_2^2}}\right)^2\]
+				Dividiendo por: $\left({\dfrac{x_1}{x_2}}\right)^2$
 				\[u_{y(pu)}^2=   u_{1(pu)}^2 +u_{2(pu)}^2\]
 				\item Con correlación:
 				\[u_{y(pu)}^2=   u_{1(pu)}^2 +u_{2(pu)}^2-2ru_{1(pu)}u_{2(pu)}\]
@@ -214,7 +216,7 @@
 \end{flushleft}
 		\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{imagenesTema1/tipob.png}  
+		\includegraphics[width=0.7\textwidth]{imagenesTema1/tipob.png}  
 		\caption{Incertidumbre según la distribución}
 		\label{fig:sample}
 	\end{figure}

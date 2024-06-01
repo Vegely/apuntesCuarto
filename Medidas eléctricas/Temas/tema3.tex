@@ -1,0 +1,966 @@
+\section{Tema 3. Adaptadores y convertidores de medida.}
+	\subsection{Divisores de tensión e intensidad.}
+	\textbf{Necesidad de adaptar las medidas:} los alcances de los aparatos de medida están limitados a determinados valores, unas veces por seguridad y otras por razones de diseño o constructivas. Cuando las magnitudes a medir superan los campos de los aparatos de medida hay que realizar una adaptación de las mismas.
+	
+		\subsubsection{Divisores de tensión resistivos.}
+			\begin{itemize}
+				\item[-] Ampliamente utilizados en todo tipo de circuitos eléctricos y electrónicos de B.T.
+				\item[-] Alcances de $<1\,kV$ y $<100\,A$.
+				\item[-] Utilizados para ampliar el C.M. de voltímetros y amperímetros, en c.c. y c.a.
+				\item[-] Buena respuesta en frecuencia. No se ven afectados por la forma de onda.
+				\item[-] Su error sistemático de inserción es el mismo que el de un aparato equivalente con igual resistencia interna.
+				\item[-] Una vez construidos deben contrastarse y reclasificar los equipos de acuerdo con las nuevas incertidumbres.
+			\end{itemize}
+			
+			Configuración básica:
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw (6.5,20) to[R] (6.5,18);
+						\draw (6.5,18) to[R] (6.5,16);
+						\draw (6.5,18) to[short, -*] (6.5,18);
+						\node [font=\large] at (7,19) {$R_S$};
+						\node [font=\large] at (7,17) {$R_P$};
+						\draw (9.5,18) to[R] (9.5,16);
+						\node [font=\large] at (10,17) {$R_V$};
+						\draw (6.5,18) to[short, -*] (8.25,18);
+						\draw (6.5,16) to[short, -*] (8.25,16);
+						\draw (6.5,16) to[short, -*] (6.5,16);
+						\draw (6.5,16) to[short, -*] (6.5,16);
+						\draw (6.5,16) to[short, -o] (5.25,16);
+						\draw (6.5,20) to[short, -o] (5.25,20);
+						\node [font=\large] at (8.6,17) {$U_2$};
+						\draw (8.25,18) to[short] (9.5,18);
+						\draw (8.25,16) to[short] (9.5,16);
+						\node [font=\large] at (4.9,18) {$U_1$};
+						\draw [-latex] (5.25,19.75) -- (5.25,16.25);
+						\draw [-latex] (8.25,17.75) -- (8.25,16.25);
+					\end{circuitikz}
+				\caption{Divisor de tensión resistivo.}
+			\end{figure}
+			
+			$R_V$ ha de ser $>100\cdot R_P$ para que el error de inserción $\varepsilon_I<1\%$.
+			Para reducir la disipación de potencia $R_S$ y $R_P$ tienen que ser de valor elevado.
+			
+			
+			Se suele utilizar en circuitos electrónicos con tensiones reducidas ($<100\,V$).
+			
+			\subsubsection*{Ampliación del campo de medida de un voltímetro.}
+			En el esquema se aplica tensión en alguna de las 3 bornas $V_1$, $V_2$ o $V_3$.
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw (2.75,16.75) to[R] (2.75,14.5);
+						\draw (4.5,16.75) to[R] (4.5,14.5);
+						\draw (6.25,16.75) to[R] (6.25,14.5);
+						\node [font=\large] at (2.25,15.6) {$R_3$};
+						\node [font=\large] at (4,15.6) {$R_2$};
+						\node [font=\large] at (5.75,15.6) {$R_1$};
+						\draw (7.5,16.75) to[R] (9.5,16.75);
+						\node [font=\large] at (8.5,17.25) {$R_m$};
+						\node [font=\large] at (8.5,16) {$V_m$};
+						\draw [-latex] (7.75,16.25) -- (9.25,16.25);
+						\draw (2.75,16.75) to[short] (7.5,16.75);
+						\draw (9.75,14.25) to[short, o-] (9.75,16.75);
+						\draw (6.25,14.25) to[short, o-] (6.25,14.5);
+						\draw (4.5,14.25) to[short, o-] (4.5,14.5);
+						\draw (2.75,14.25) to[short, o-] (2.75,14.5);
+						\node [font=\large] at (2.75,13.75) {$V_3$};
+						\node [font=\large] at (4.5,13.75) {$V_2$};
+						\node [font=\large] at (6.25,13.75) {$V_1$};
+						\node [font=\large] at (9.75,13.75) {(-)};
+						\draw  (8.5,16.75) circle (1cm);
+						\draw (9.5,16.75) to[short] (9.75,16.75);
+						\draw (6.25,16.75) to[short, -*] (6.25,16.75);
+						\draw (4.5,16.75) to[short, -*] (4.5,16.75);
+						\draw [-latex] (6.25,16.75) -- (7,16.75)node[pos=0.9,above]{I};
+					\end{circuitikz}
+				\caption{Ampliación del campo de medida de un voltímetro.}
+			\end{figure}
+			
+			Se define el \textit{"factor amplificador"} como:
+			\[n_i=\dfrac{V_i}{V_m} / i \in \mathbb{N}\]
+			\[R_i=R_m\cdot (n_i-1)\]
+			\[R_{V_i}=R_i+R_m\]
+			
+			
+			Normalmente $V_i >\!> V_m$, luego \[P_{R_i} \approx \dfrac{V_i^2}{R_i}\]
+			
+			
+			Se demuestra que el campo de medida del aparato aumenta conforme aumenta la resistencia en serie con éste, aplicando el debido factor amplificador.
+			
+		\subsubsection{Divisores de tensión inductivos.}
+			Sólo son válidos en corriente alterna, ya que están formados por dos bobinas acopladas en serie, en configuración, comunmente, de \textbf{autotransformador}. Comparados con los resistivos,
+			apenas disipan energía, siempre
+			que su $R$ sea pequeña.
+			
+			
+			Su impedancia aumenta con la
+			frecuencia, por lo que no son útiles
+			en circuitos de frecuencia variable. Se suelen utilizar a baja tensión y a frecuencia industrial.
+			
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw (5.25,19.5) to[L,l={ \large $R_SX_S$} ] (5.25,18);
+						\draw (5.25,18) to[L,l={ \large $R_PX_P$} ] (5.25,16.5);
+						\draw (5.25,19.75) to[short, -o] (4.5,19.75);
+						\draw (5.25,16.25) to[short, -o] (4.5,16.25);
+						\draw (5.25,19.75) to[short] (5.25,19.5);
+						\draw (5.25,16.5) to[short, -*] (5.25,16.25);
+						\draw (5.25,16.25) to[short, -*] (7.5,16.25);
+						\draw [-latex] (6.25,18) -- (5.25,18);
+						\draw (6.25,18) to[short, -*] (7.5,18);
+						\draw [-latex] (4.5,19.5) .. controls (4.5,17.75) and (4.5,18) .. (4.5,16.5) node[pos=0.4,left]{$U_1$};
+						\draw [-latex] (7.5,17.75) -- (7.5,16.5)node[pos=0.5,right]{$U_2$};
+						\draw [-] (9,18) -- (7.5,18);
+						\draw [-] (9,16.25) -- (7.5,16.25);
+						\draw (9,18) to[R,l={ \large $R_C$}] (9,16.25);
+					\end{circuitikz}
+				\caption{Divisor de tensión inductivo.}
+			\end{figure}
+		
+		\subsubsection{Divisores de tensión capacitivos.}
+			\begin{itemize}
+				\item[-] Se utilizan tanto en corriente continua como en alterna, principalmente para la \textbf{medida de altas tensiones}.
+				\item[-] En corriente continua los aparatos en paralelo con $C_P$ tienen que ser de tipo electrostático.
+				\item[-] Su consumo de energía es nulo a efectos prácticos.
+				\item[-] En c.a. se reduce su impedancia conforme aumenta la frecuencia, pudiendo llegar a comportarse como un cortocircuito.
+				\item[-] Se pueden usar en B.T. para \textbf{aplicaciones de bajo consumo}.
+			\end{itemize}
+			
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw (4.25,17.25) to[C,l={ \large $C_S$}] (4.25,15.75);
+						\draw (4.25,15.75) to[C,l={ \large $C_P$}] (4.25,14.25);
+						\draw  (7.5,15) circle (0.5cm) node {\large V} ;
+						\draw (4.25,15.75) to[short] (7.5,15.75);
+						\draw (7.5,15.75) to[short] (7.5,15.5);
+						\draw (4.25,14.25) to[short] (7.5,14.25);
+						\draw (7.5,14.25) to[short] (7.5,14.5);
+						\draw (4.25,15.75) to[short, -*] (4.25,15.75);
+						\draw (4.25,14.25) to[short, -*] (4.25,14.25);
+						\draw (4.25,14.25) to[short, -o] (3,14.25);
+						\draw (4.25,17.25) to[short, -o] (3,17.25);
+						\draw [-latex] (3,17) -- (3,14.5)node[pos=0.5,left]{$U_1$};
+						\draw (5.75,15.75) to[short, -*] (5.75,15.75);
+						\draw (5.75,14.25) to[short, -*] (5.75,14.25);
+						\draw [-latex] (5.75,15.5) -- (5.75,14.5)node[pos=0.5,right]{$U_2$};
+					\end{circuitikz}
+				\caption{Divisor de tensión inductivo.}
+			\end{figure}
+		
+		\subsubsection{Divisores de intensidad resistivos.}
+			Existen diversas alternativas a la hora de conectar un
+			microamperímetro a resistencias en paralelo para ampliar su
+			campo de medida y hacer que tenga varios alcances. No obstante, el montaje debe impedir siempre que por el elemento indicador circule la corriente principal (a medir) ya que ésta lo destruiría.
+			
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw (4.75,15.75) to[R,l={ \large $R_P$}] (6.75,15.75);
+						\draw (4.75,17.5) to[R,l={ \large $R_m$}] (6.75,17.5);
+						\draw  (5.75,17.5) circle (0.75cm);
+						\draw [-latex] (4.25,17.5) -- (4.75,17.5)node[pos=0.6,above]{$I_m$};
+						\draw (4.25,17.5) to[short] (4.25,15.75);
+						\draw [-latex] (3.25,15.75) -- (3.75,15.75)node[pos=0.75,above]{I};
+						\draw (3.75,15.75) to[short] (4.25,15.75);
+						\draw (4.25,15.75) to[short, -*] (4.25,15.75);
+						\draw (3.25,15.75) to[short, -o] (3,15.75);
+						\draw [-latex] (4.25,15.75) -- (4.75,15.75)node[pos=0.9,above]{$I_d$};
+						\draw (6.75,17.5) to[short] (7.25,17.5);
+						\draw (7.25,17.5) to[short] (7.25,15.75);
+						\draw (6.75,15.75) to[short] (8,15.75);
+						\draw (8,15.75) to[short, -o] (8.25,15.75);
+						\draw (7.25,15.75) to[short, -*] (7.25,15.75);
+					\end{circuitikz}
+				\caption{Divisor de intensidad resistivo.}
+			\end{figure}
+			
+		\subsubsection*{Shunt de Ayrton.}
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw [line width=0.2pt, short] (8.75,15.5) -- (8.75,15)node[pos=1.75,below]{(-)};
+						\draw [line width=0.2pt, short] (6.75,15.5) -- (6.75,15)node[pos=1.75,below]{$I_3$};
+						\draw [line width=0.2pt, short] (4.75,15.5) -- (4.75,15)node[pos=1.75,below]{$I_2$};
+						\draw [line width=0.2pt, short] (2.75,15.5) -- (2.75,15)node[pos=1.75,below]{$I_1$};
+						\draw (4.75,17.5) to[R,l={ \large $R_m$}] (6.75,17.5);
+						\draw  (5.75,17.5) circle (0.75cm);
+						\draw [-latex] (4.25,17.5) -- (4.75,17.5)node[pos=0.6,above]{$I_m$};
+						\draw (6.75,17.5) to[short] (7.25,17.5);
+						\draw (2.75,15.75) to[R,l={ \large $R_1$}] (4.75,15.75);
+						\draw (4.75,15.75) to[R,l={ \large $R_2$}] (6.75,15.75);
+						\draw (6.75,15.75) to[R,l={ \large $R_3$}] (8.75,15.75);
+						\draw (4.25,17.5) to[short] (2.75,17.5);
+						\draw (2.75,17.5) to[short] (2.75,15.75);
+						\draw (7.25,17.5) to[short] (8.75,17.5);
+						\draw (8.75,17.5) to[short] (8.75,15.75);
+						\draw (2.75,14.75) to[short, o-] (2.75,15.75);
+						\draw (4.75,14.75) to[short, o-] (4.75,15.75);
+						\draw (6.75,14.75) to[short, o-] (6.75,15.75);
+						\draw (8.75,14.75) to[short, o-] (8.75,15.75);
+						\draw (2.75,15.75) to[short, -*] (2.75,15.75);
+						\draw (4.75,15.75) to[short, -*] (4.75,15.75);
+						\draw (6.75,15.75) to[short, -*] (6.75,15.75);
+						\draw (8.75,15.75) to[short, -*] (8.75,15.75);
+					\end{circuitikz}
+				\caption{Shunt de Ayrton.}
+			\end{figure}
+			
+			Se inyecta corriente en alguno de los puntos $I_1, I_2$ ó $I_3$.
+			\[I_3>I_2>I_1\]
+			\[I_i=n_i\cdot I_m\ / i \in \mathbb{N}\]
+			Para el campo de $I_1$: paralelo de $R_1, R_2$ y $R_3$ con $R_m$.
+			\[(I_1-I_m)\cdot(R_1+R_2+R_3)=R_m\cdot I_m\Rightarrow R_P = R_1+R_2+R_3=\dfrac{R_m}{n_1-1}\]
+			Para el campo de $I_2$: paralelo de $R_2$ y $R_3$ con $R_m + R_1$.
+			Para el campo de $I_3$: paralelo de $R_3$ con $R_m + R_1 + R_2$.
+			Resulta:
+			\[R_2+R_3=\dfrac{R_P+R_m}{n_2}; R_3=\dfrac{R_P+R_m}{n_3}\]
+			Para las potencias, si $I_i>\!>I_m\Rightarrow P_{R_i} \approx R_i\cdot I_i^2$.
+			La $R$ interna del aparato es distinta para cada alcance.
+			
+		\subsubsection*{Otros acoplamientos de resistencias.}
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw (4.75,19.5) to[R,l={ \large $R_m$}] (6.75,19.5);
+						\draw  (5.75,19.5) circle (0.75cm);
+						\draw [-latex] (4.25,19.5) -- (4.75,19.5)node[pos=0.6,above]{$I_m$};
+						\draw (1.75,17) to[R,l={ \large $R_1$}] (3.75,17);
+						\draw (3.75,17) to[R,l={ \large $R_2$}] (5.75,17);
+						\draw (5.75,17) to[R,l={ \large $R_3$}] (7.75,17);
+						\draw (1.75,17) to[short, -*] (1.75,17);
+						\draw (3.75,17) to[short, -*] (3.75,17);
+						\draw (5.75,17) to[short, -*] (5.75,17);
+						\draw (7.75,17) to[short, -*] (7.75,17);
+						\draw (4.25,19.5) to[short] (3.75,19.5);
+						\draw (3.75,19) to[short, o-] (3.75,19.5);
+						\draw (2.75,18.25) to[short, -o] (3.25,18.25);
+						\draw (4.75,18.25) to[short, -o] (4.25,18.25);
+						\draw (3.75,17.75) to[short, -o] (3.75,18);
+						\draw [-latex] (3.75,19) -- (3.25,18.25);
+						\draw [-latex, dashed] (3.75,19) -- (3.75,18);
+						\draw [-latex, dashed] (3.75,19) -- (4.25,18.25);
+						\node [font=\small] at (3.25,18.5) {1};
+						\node [font=\small] at (4,17.75) {2};
+						\node [font=\small] at (4.5,18.5) {3};
+						\draw (3.75,17.75) to[short] (3.75,17);
+						\draw (4.75,18.25) to[short] (5.75,18.25);
+						\draw (5.75,18.25) to[short] (5.75,17);
+						\draw (6.75,19.5) to[short] (7.75,19.5);
+						\draw (7.75,19.5) to[short] (7.75,17);
+						\draw (2.75,18.25) to[short] (1.75,18.25);
+						\draw (1.75,18.25) to[short] (1.75,17);
+						\draw [-latex] (0.5,17) -- (1.25,17)node[pos=0.85,above]{$I$};
+						\draw (1.25,17) to[short] (1.75,17);
+						\draw (0.5,17) to[short, -o] (0.25,17);
+						\draw (7.75,17) to[short, -o] (8.5,17);
+						\node [font=\large] at (9,17) {(-)};
+						\node [font=\large] at (-0.25,17) {(+)};
+					\end{circuitikz}
+				\caption{Divisor de intensidad de resistencia global cuasiconstante.}
+			\end{figure}
+			
+			\[I_3>I_2>I_1\]
+			\[n_i=\dfrac{I_i}{I_m}\]
+			
+			Como $R_m>\!>R_i$, la $R$ interna global se mantiene prácticamente constante y con valor $R_1+R_2+R_3$.
+			
+	\subsection{Transformadores de medida.} 
+		\subsubsection{Utilidad de los trafos de medida.}
+			\begin{itemize}
+				\item[-] Reducen a valores seguros (bajos) las magnitudes a medir. También pueden ampliarlas (poco normal).
+				\item[-] Separan físicamente el equipo de medida del circuito a medir (aislamiento galvánico).
+				\item[-] Permiten alejar el aparato de medida del punto donde se toma la señal a medir.
+				\item[-] Los errores de inserción son más difíciles de evaluar.
+			\end{itemize}
+			
+			\begin{figure}[H]
+				\centering
+				\resizebox{1\textwidth}{!}{%
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw [ ](3,21.25) to[L ] (3,19.25);
+						\draw [ ](3.75,19.25) to[L ] (3.75,21.25);
+						\draw [,  ](3.3,20.75) to[short] (3.3,19.75);
+						\draw [,  ](3.45,20.75) to[short] (3.45,19.75);
+						\draw [,   ] (5,20.25) circle (0.5cm) node {\large V} ;
+						\draw [,  ](3.75,21.25) to[short] (5,21.25);
+						\draw [,  ](5,21.25) to[short] (5,20.75);
+						\draw [,  ](3.75,19.25) to[short] (5,19.25);
+						\draw [,  ](5,19.75) to[short] (5,19.25);
+						\draw [,  ](0.75,22.75) to[short] (0.75,18.5);
+						\draw [,  ](2,22.75) to[short] (2,18.5);
+						\draw[,  ] (3,21.25) to[short] (0.75,21.25);
+						\draw[,  ] (3,19.25) to[short] (2,19.25);
+						\draw (2,19.25) to[short, -*] (2,19.25);
+						\draw (0.75,21.25) to[short, -*] (0.75,21.25);
+						\node [font=\large] at (1.25,21.5) {A.T.};
+						\node [font=\large] at (4.25,21.5) {B.T.};
+						\draw [ ](5,19.25) to (5,19) node[ground]{};
+						\draw (5,19.25) to[short, -*] (5,19.25);
+						\ctikzset{resistor = european}
+						\draw [,  ](7.5,19.25) to[R,l={ \large $Z$}] (9.75,19.25);
+						\draw [,  ](7.5,19.25) to[short] (7.5,22.5);
+						\draw [,  ](9.75,21.25) to[short] (9.75,22.5);
+						\draw [ ](9.75,21.25) to[L ] (9.75,20.25);
+						\draw [,  ](10.5,21.75) to[short] (11.5,21.75);
+						\draw [,  ](10.5,19.75) to[short] (11.5,19.75);
+						\draw [,   ] (12.5,21.75) circle (0.5cm) node {\large A} ;
+						\draw [,  ](11.5,21.75) to[short] (12,21.75);
+						\draw [,  ](13,21.75) to[short] (13.5,21.75);
+						\draw [,  ](11.5,19.75) to[short] (13.5,19.75);
+						\draw [,  ](13.5,21.75) to[short] (13.5,19.75);
+						\draw [-latex] (9.75,22) -- (9.75,21.5)node[pos=0.5,left]{$I_1$};
+						\draw [-latex] (11.25,21.75) -- (11.5,21.75)node[pos=0.5,above]{$I_2$};
+						\draw [,  ](9.75,20.25) to[short] (9.75,19.25);
+						\draw [ ](10.5,20.25) to[L ] (10.5,21.25);
+						\draw [,  ](10.05,21.25) to[short] (10.05,20.25);
+						\draw [,  ](10.2,21.25) to[short] (10.2,20.25);
+						\draw [,  ](10.5,21.75) to[short] (10.5,21.25);
+						\draw [,  ](10.5,20.25) to[short] (10.5,19.75);
+					\end{circuitikz}
+				}%
+				\caption{Transformadores de medida.}
+				\label{fig:my_label}
+			\end{figure}
+		
+		\subsubsection{Transformadores de tensión.}
+		
+			Se basan en la relación que existe entre las tensiones del
+			primario y el secundario en vacío:
+			\[K_U=\dfrac{N_1}{N_2}\approx \dfrac{U_{1N}}{U_{2N}} \Rightarrow U_1=K_U\cdot U_2 \]
+			
+			
+			Trabajan prácticamente en vacío. Sus cargas deben ser de
+			muy bajo consumo (impedancias de voltímetros, bobinas
+			voltimétricas de vatímetros, contadores...).
+		
+			
+			Para mantener la linealidad hay que evitar en todo momento la saturación del núcleo (deben tenerse en cuenta los \textbf{valores máximos de la onda senoidal}).
+			
+			
+			No exigen otros requerimientos especiales, pudiendo
+			trabajar con el secundario abierto (sin carga).
+			
+			\subsubsection*{Tensiones nominales.}
+				Las del primario ($U_{1N}$) suelen ir desde $2.2\,kV$ hasta $400\,kV$ , la del secundario ($U_{2N}$) suele ser $110\,V$, según la UNE-21127.
+				
+			\subsubsection*{Potencia nominal o de precisión.}
+				Es la potencia aparente que, de forma permanente, pueden transferir al secundario, tanto a los aparatos como a los conductores de unión que tienen conectados, sin perder la \textbf{precisión} que le corresponde según su clase. Los valores preferentes suelen ser 10, 25, 50, 100, 200 y 500 $VA$.
+				
+			\subsubsection*{Impedancia de precisión.}
+				Es una impedancia que colocada como carga en el
+				secundario a la tensión nominal hace que el
+				secundario, a la tensión nominal, hace que el
+				transformador trabaje a su potencia nominal.
+				
+				
+				Si se conecta al trafo una impedancia inferior a la de
+				precisión se sobrepasa su potencia nominal de trabajo.
+				
+				Un transformador de tensión no debe trabajar nunca a
+				potencia superior a la nominal ya que la relación $\dfrac{U_1}{U_2}$ se aleja de la relación de transformación nominal $K_U$, y las sobrecargas pueden producirle alteraciones y daños.
+				
+			\subsubsection*{Errores sistemáticos.}
+				\begin{figure}[H]
+					\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw [-latex] (6.25,23.75) -- (5.25,25.25)node[pos=0.5,sloped,above]{$X_1·I_1$};
+						\draw [-latex, dashed] (4.25,17.75) -- (5.25,20)node[pos=1,above]{$-I'_2$};
+						\draw [-latex] (4.25,17.75) -- (7.75,17.75)node[pos=1,right]{$\Phi$};
+						\draw [-latex] (4.25,17.75) -- (5.25,18.25)node[pos=1,right]{$I_0$};
+						\draw [ color={rgb,255:red,0; green,0; blue,255}, -latex] (4.25,17.75) -- (6.25,20.5)node[pos=1,right]{$I_1$};
+						\draw [dashed] (5.25,18.25) -- (6.25,20.5);
+						\draw [dashed] (5.25,20) -- (6.25,20.5);
+						\draw [ color={rgb,255:red,128; green,0; blue,255}, -latex] (4.25,17.75) -- (5.25,25.25)node[pos=1,left]{$U_1$};
+						\draw [-latex, dashed] (4.25,17.75) -- (4.25,22.5)node[pos=1,left]{$E_1$};
+						\draw [-latex] (4.25,22.5) -- (6.25,23.75)node[pos=0.7,sloped,above]{$R_1·I_1$};
+						\draw [-latex, dashed] (4.25,17.75) -- (3,22.25)node[pos=1,left]{$-K_U·U_2$};
+						\draw [latex-latex] (3.25,21.25) .. controls (3.75,21.75) and (4.25,21.75) .. (4.75,21.5)node[pos=0.3,above]{$\delta_U$};
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (4.25,17.75) -- (5,15.5)node[pos=0.4,right]{$U_2$};
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (5,15.5) -- (3.5,13.75)node[pos=0.5,sloped,above]{$R_2·I_2$};
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (3.5,13.75) -- (4.25,13)node[pos=0.5,sloped,below]{$X_2·I_2$};
+						\draw [-latex] (4.25,17.75) -- (4.25,13)node[pos=1,right]{$E_2$};
+						\draw [ color={rgb,255:red,0; green,217; blue,0}, -latex] (4.25,17.75) -- (2,15.25)node[pos=1,left]{$I_2$};
+						\draw [latex-latex] (3.25,16.5) .. controls (3.5,16) and (4.25,16) .. (4.75,16.25)node[pos=0.2,below]{$\varphi_2$};
+					\end{circuitikz}
+				\end{figure}
+				
+				Si el transformador fuese ideal la relación entre los fasores $\dfrac{U_1}{U_2}$ debería ser igual a $\dfrac{N_1}{N_2}$. Como esto no ocurre, se toma $K_U=\dfrac{N_1}{N_2} \approx \dfrac{U_1}{U_2}$.
+				
+				
+				El alejamiento de la condición de idealidad se debe, principalmente, a las pérdidas en el hierro (magnéticas) y en el cobre (efecto Joule). Por ello, se consideran dos tipos de error: relación (\textbf{módulo}) y angular (\textbf{fase}).
+				
+				
+				\subsubsection*{Error de relación o de tensión ($\varepsilon_U$).}
+					Es la desviación de la tensión medida respecto al valor "real".
+					\[K_U=\dfrac{U_{1N}}{U_{2N}}\]
+					\[\Delta U = K_U\cdot U_2 - U_1\]
+					\[\varepsilon_U\,[p.u.] = \dfrac{\Delta U}{U_1} = \dfrac{K_U\cdot U_2 - U_1}{U_1}\]
+					
+				\subsubsection*{Error angular o de fase ($\delta_U$).}
+					Es la diferencia entre el ángulo de fase de $U_2$ y $U_1$ como consecuencia de la impedancia del transformador.
+					\[\delta_U\,[rad] = \theta_2 - \theta_1\]
+					
+				
+				La “clase de exactitud” depende de esos dos errores. Debido
+				a su diseño para limitar los errores estos transformadores no
+				son reversibles, ya que no mantienen la precisión.
+				
+				
+				\subsubsection*{Error relativo complejo o compuesto ($\vec{\varepsilon}_U$).}
+					\[\vec{\varepsilon}_U = \varepsilon_U + j\cdot \delta_U\]
+					
+					
+					Como $\delta_U$ es muy pequeño se aproxima el ángulo por el
+					valor de su seno:
+					\[\delta_U \approx sen(\delta_U)\]
+					
+				
+				\subsubsection*{Límites de error y aplicaciones según su clase.}
+				\begin{table}[H]
+					\begin{center}
+						\begin{tabular}{clll}
+							Clase & $\varepsilon_U\,[\%]$ & $\delta_U$ & Uso\\
+							\hline
+							0.1 & $\pm 0.1$ & $\pm 5'$ & Patrones\\
+							0.2 & $\pm 0.2$ & $\pm 10'$ & Pruebas de precisión en lab.\\
+							0.5 & $\pm 0.5$ & $\pm 30'$ & Pruebas ordinarias en lab.\\
+							1   & $\pm 1.0$ & $\pm 1^\circ$ & Medidas rutinarias fuera de lab.\\
+						\end{tabular}
+					\end{center}
+				\end{table}
+					
+			
+		\subsubsection{Transformadores de intensidad.}
+			Se basan en la relación que existe entre las intensidades
+			del primario y del secundario:
+			\[K_I=\dfrac{N_2}{N_1} \approx \dfrac{I_{1N}}{I_{2N}}\]
+			
+			
+			El primario se pone en serie con el circuito, línea o carga
+			cuya intensidad se quiere medir. Al secundario se conectan los circuitos amperimétricos
+			de los equipos de medida, por lo que a efecto prácticos puede considerarse que trabajan en cortocircuito.
+			
+			
+			Por cuestiones de precisión se les exige un buen
+			comportamiento lineal. 
+			
+			
+			Para evitar que los equipos resulten dañados por
+			sobrecorrientes reflejadas en el secundario, se diseñan
+			para que se saturen fácilmente.
+			
+			
+			La saturación limita la máxima corriente secundaria a
+			unas 5 veces la nominal (factor de seguridad).
+			
+			\subsubsection*{Intensidades nominales.}
+				Primario: múltiplos de 5A. Secundario: está normalizada
+				en 5A (excepcionalmente 1A).
+				
+			\subsubsection*{Potencia nominal o de precisión.}
+				Potencia aparente máxima con la que se puede carga el
+				secundario sin perder la precisión que indica su clase.
+				
+				
+				Los valores más normales son: 2.5, 5, 10, 15 y 30 $VA$.
+				
+			\subsubsection*{Otros parámetros.}
+				\begin{itemize}
+					\item[-] \textit{Intensidad límite térmica:} máxima corriente primaria
+					que pueden soportar durante un segundo, normalmente
+					\[I_{th} = 100 \cdot I_n\]
+					\item[-] \textit{Intensidad límite dinámica:} máxima corriente que
+					pueden soportar sin sufrir deformación mecánica, normalmente
+					\[I_{din}= 2.5 \cdot I_{th}\]
+					\item[-] \textit{Factor de seguridad:} múltiplo ($n$) de la intensidad
+					nominal del primario que provoca un error de relación
+					del 10\%, normalmente
+					\[n=5\]
+				\end{itemize}
+				
+			\subsubsection*{Consideraciones sobre el diseño.}
+				Para tener exactitud el flujo disperso debe ser muy bajo:
+				\[\Phi_1 - \Phi_2 = \Phi_d \approx 0 \Rightarrow N_1 \cdot I_1 \approx N_2 \cdot I_2 \Rightarrow \dfrac{N_2}{N_1} \approx \dfrac{I_1}{I_2} = K_I\]
+				
+				
+				Si el devanado secundario está abierto:
+				\[I_2 = 0 \Rightarrow \Phi_1 = \Phi_d\]
+				haciendo que toda la $I_1$ sea magnetizante, lo que hace crecer mucho el flujo que satura el núcleo y produce su calentamiento. Este aumento de flujo puede hacer que se induzcan tensiones muy elevadas en el secundario, por eso \textbf{nunca debe quedar abierto el secundario en un transformador de intensidad}.
+				
+			\subsubsection*{Errores sistemáticos.}
+				Sus principales causas son el flujo de dispersión y la impedancia de carga del secundario. La relación $\dfrac{I_1}{I_2}$ debería mantenerse constante e igual a $\dfrac{N_2}{N_1}$. Como esta condición no se da, se toma
+				\[K_I=\dfrac{N_2}{N_1} \approx \dfrac{I_1}{I_2}\]
+				
+				\begin{figure}[H]
+					\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw [, -latex, dashed] (4.25,17.75) -- (5.25,20)node[pos=1,sloped,above]{$-K_I \cdot I_2$};
+						
+						\draw [dashed] (4.25,17.75) -- (2,15.25);
+						\draw [ color={rgb,255:red,0; green,217; blue,0}, -latex] (4.25,17.75) -- (3,15)node[pos=1,left]{$I_2$};
+						
+						\draw [, -latex] (4.25,17.75) -- (7.75,17.75)node[pos=1,right]{$\Phi_1$};
+						\draw [, -latex] (4.25,17.75) -- (5.25,18.25)node[pos=1,right]{$I_0$};
+						\draw [ color={rgb,255:red,0; green,0; blue,255}, , -latex] (4.25,17.75) -- (6.25,20.5)node[pos=1,right]{$I_1$};
+						\draw [, dashed] (5.25,18.25) -- (6.25,20.5);
+						\draw [, dashed] (5.25,20) -- (6.25,20.5);
+						\draw [, -latex, dashed] (4.25,17.75) -- (4.25,21)node[pos=1,above]{$E_1$};
+						\draw [, -latex] (4.25,17.75) -- (4.25,13)node[pos=1,right]{$U_2$};
+						
+						\draw [, -latex] (2,16.5) -- (2.5,16);
+						\draw [, -latex] (4,15.25) -- (3.25,15.5);
+						\draw [] (2.5,16) -- (3.25,15.5)node[pos=0.4,below]{$\delta_i$};
+					\end{circuitikz}
+				\end{figure}
+				
+				
+				Se consideran los mismos tipos de error que para los trafos de tensión.
+				
+				
+			\subsubsection*{Errores de relación ($\varepsilon_I$) y angular ($\delta_I$).}
+				\[K_I=\dfrac{I_{1N}}{I_{2N}}\]
+				\[\varepsilon_I\,[p.u.] = \dfrac{\Delta I}{I_1} = \dfrac{K_I\cdot I_2 - I_1}{I_1}\]	
+				\[\delta_I\,[rad]= \theta_2 - \theta_1\]
+				
+			\subsubsection*{Error relativo complejo ($\vec{\varepsilon}_I$).}
+				\[\vec{\varepsilon}_I = \varepsilon_I + j \cdot \delta_I\]
+				
+				
+				Si la forma de onda es senoidal
+				el error complejo coincide con
+				el error compuesto.
+			
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\large]
+							\draw [, dashed] (3.25,6) -- (5.25,10.5)node[pos=0.5,sloped,below]{$\varepsilon_I$};
+							\draw [, -latex, color = red] (1.25,5) -- (3.25,9.5)node[pos=1.05, sloped, above]{$K_I\cdot I_2$};
+							\draw [-latex, color={rgb,255:red,0; green,0; blue,255}, , -] (1.25,5) -- (5.25,10.5)node[pos=1,right]{$I_1$};
+							\draw [, -latex] (1.25,5) -- (3.25,6)node[pos=1,right]{$I_0$};
+							\draw [, -latex] (1.25,5) -- (4.75,5);
+							\draw [, -latex, dashed] (1.25,5) -- (1.25,10.25)node[pos=1,above]{$E_1$};
+							\draw [, -latex, dashed] (3.25,9.5) -- (5.25,10.5)node[pos=0.5,above]{$\vec{\varepsilon_I}$};
+							\draw [, short] (2.5,7.75) -- (3,7.5)node[pos=0.9,above]{$\delta_I$};
+							\draw [, -latex] (2,8) -- (2.5,7.75);
+							\draw [, -latex] (3.5,7.25) -- (3,7.5);
+							\draw [, dashed] (3.25,9.5) -- (4.5,9);
+							\draw [, short] (3.75,9.5) -- (4.75,10);
+							\draw [, short] (4.75,10) -- (4.5,9.25);
+							\draw [, short] (3.75,9.5) -- (4.5,9.25);
+						\end{circuitikz}
+				\end{figure}
+				
+			\subsubsection*{Límites del error según la clase.}
+				Tienen las mismas clases que los trafos de tensión, pero cambian los límites de error admisibles. Los errores son en función del grado de carga.
+			
+				\begin{table}[H]
+					\centering
+					\begin{tabular}{|c|c|c|c|c||c|c|c|c|}
+						\hline
+						\multirow{2}{*}{Clase} & \multicolumn{4}{c||}{$\varepsilon_I$ (\%)} & \multicolumn{4}{c|}{$\delta_I$ (minutos)} \\
+						\cline{2-9}
+						& 5\% & 20\% & 100\% & 120\% & 5\% & 20\% & 100\% & 120\% \\
+						\hline
+						$0,1$ &$\pm0,4$ &$\pm0,2$ &$\pm0,1$ &$\pm0,1$ &$\pm15$ &$\pm8$ &$\pm5$ &$\pm5$ \\
+						$0,2$ &$\pm0,75$& $\pm0,35$& $\pm0,2$& $\pm0,2$& $+30$ & $+15$ & $+10$ & $+10$ \\ 
+						$0,5$ & $\pm1.5$ & $\pm.75$ & $\pm0.5$ & $\pm0.5$ & $\pm90$ & $\pm45$ & $\pm30$ & $\pm30$ \\ 
+						$1.0$ & $\pm3.0$ & $\pm1.5$ & $\pm1.0$ & $\pm1.0$ & $\pm180$ & $\pm90$ & $\pm60$ & $\pm60$ \\
+						\hline
+					\end{tabular}
+				\end{table}
+				
+			\subsubsection*{Vatímetro en conexión semidirecta.}
+				La corriente $I_2$ es $K_I$ veces menor que la $I_1$, por lo que la
+				potencia de $Z$ es $K_I$ veces la indicada por el vatímetro.
+			
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\large]
+							\draw [, line width=0.5pt ] (1.75,4.75) circle (0.5cm) node {\large W} ;
+							\draw [line width=0.5pt](1,3.25) to[L ] (2.5,3.25);
+							\draw [line width=0.5pt](1,2.5) to[L ] (2.5,2.5);
+							\draw [, line width=0.5pt](1.25,3) to[short] (2.25,3);
+							\draw [, line width=0.5pt](1.25,2.8) to[short] (2.25,2.8);
+							\draw [, line width=0.5pt](1.75,4.25) to[short] (1.75,3.75);
+							\draw [, line width=0.5pt](1.75,3.75) to[short] (2.75,3.75);
+							\draw [, line width=0.5pt](2.75,3.75) to[short] (2.75,3.25);
+							\draw [, line width=0.5pt](2.75,3.25) to[short] (2.75,2.5);
+							\draw [, line width=0.5pt](1.75,5.25) to[short] (1.75,5.75);
+							\draw[, line width=0.5pt] (1.75,5.75) to[short] (0,5.75);
+							\draw [, line width=0.5pt](0,5.75) to[short] (0,3.75);
+							\draw [, line width=0.5pt](2.75,2.75) to[short] (2.75,1);
+							\draw [, line width=0.5pt](-1,1) to[short] (3.5,1);
+							\draw (2.75,1) to[short, -*] (2.75,1);
+							\draw[, line width=0.5pt] (1.25,4.75) to[short] (0.5,4.75);
+							\draw [, line width=0.5pt](0.5,4.75) to[short] (0.5,3.25);
+							\draw [, line width=0.5pt](0.5,3.25) to[short] (1,3.25);
+							\draw [, line width=0.5pt](2.25,4.75) to[short] (3,4.75);
+							\draw [, line width=0.5pt](3,4.75) to[short] (3,3.25);
+							\draw [, line width=0.5pt](2.75,3.25) to[short] (3,3.25);
+							\draw [, line width=0.5pt](2.5,3.25) to[short] (2.75,3.25);
+							\draw [, line width=0.5pt](-1,2.5) to[short] (1,2.5);
+							\draw [, line width=0.5pt](2.5,2.5) to[short] (3.5,2.5);
+							\draw [, line width=0.5pt](0,3.75) to[short] (0,2.5);
+							\draw (0,2.5) to[short, -*] (0,2.5);
+							\ctikzset{resistor = european}
+							\draw [, line width=0.5pt](3.5,2.5) to[R,l={ \large $Z$}] (3.5,1);
+							\draw [line width=0.5pt, -latex] (0.5,3.5) -- (0.5,4.25)node[pos=0.9,right]{$I_2$};
+							\draw [line width=0.5pt, -latex] (-1,2.5) -- (-0.5,2.5)node[pos=0.9,above]{$I_1$};
+							\node [font=\large] at (1.55,5.35) {*};
+							\node [font=\large] at (1.1,4.9) {*};
+						\end{circuitikz}
+				\end{figure}
+				
+				\[P_Z=U_L\cdot I_1 \cdot \cos \varphi_1 \approx U_L\cdot K_I \cdot I_2 \cdot \cos \varphi_2 \approx K_I \cdot W\]
+			
+			\subsubsection*{Medida indirecta de corrientes.}
+				Cuando no hay neutro una corriente puede obtenerse
+				como “suma” de las otras dos, lo que no es posible
+				midiendo de forma directa.
+				\begin{figure}[H]
+					\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\large]
+							\draw  (15.5,15.25) circle (0.5cm) node {\large $I_A$} ;
+							\draw (16,13.5) to[L] (15,13.5);
+							\draw (15.07,13.5) to[short] (15.07,14.25);
+							\draw (15.93,13.5) to[short] (15.93,14.25);
+							\draw (15.07,14.25) to[short] (14.5,14.25);
+							\draw (14.5,14.25) to[short] (14.5,15.25);
+							\draw (14.5,15.25) to[short] (15,15.25);
+							\draw (16,15.25) to[short] (16.5,15.25);
+							\draw (16.5,15.25) to[short] (16.5,14.25);
+							\draw (16.5,14.25) to[short] (15.93,14.25);
+							\draw  (18,15.25) circle (0.5cm) node {\large $I_B$} ;
+							\draw (18.5,12.75) to[L] (17.5,12.75);
+							\draw (17.57,12.75) to[short] (17.57,14.25);
+							\draw (18.43,12.75) to[short] (18.43,14.25);
+							\draw (17.57,14.25) to[short] (17,14.25);
+							\draw (17,14.25) to[short] (17,15.25);
+							\draw (17,15.25) to[short] (17.5,15.25);
+							\draw (18.5,15.25) to[short] (19,15.25);
+							\draw (19,15.25) to[short] (19,14.25);
+							\draw (19,14.25) to[short] (18.43,14.25);
+							\draw  (20.5,15.25) circle (0.5cm) node {\large $I_C$} ;
+							\draw (21,12) to[L] (20,12);
+							\draw (20.07,12) to[short] (20.07,14.25);
+							\draw (20.93,12) to[short] (20.93,14.25);
+							\draw (20.07,14.25) to[short] (19.5,14.25);
+							\draw (19.5,14.25) to[short] (19.5,15.25);
+							\draw (19.5,15.25) to[short] (20,15.25);
+							\draw (21,15.25) to[short] (21.5,15.25);
+							\draw (21.5,15.25) to[short] (21.5,14.25);
+							\draw (21.5,14.25) to[short] (20.93,14.25);
+							\draw (14,13.5) to[short] (22,13.5);
+							\draw (14,12.75) to[short] (22,12.75);
+							\draw (14,12) to[short] (22,12);
+							\node [font=\large] at (13.75,13.5) {A};
+							\node [font=\large] at (13.75,12.75) {B};
+							\node [font=\large] at (13.75,12) {C};
+							\node [font=\large] at (13.75,11.25) {N};
+							\draw (14,11.25) to[short] (22,11.25);
+							\draw  (15.5,10) circle (0.5cm) node {\large $I_A$} ;
+							\draw (16,8.25) to[L] (15,8.25);
+							\draw (15.07,8.25) to[short] (15.07,9);
+							\draw (15.07,9) to[short] (14.5,9);
+							\draw (14.5,9) to[short] (14.5,10);
+							\draw (14.5,10) to[short] (15,10);
+							\draw (16,10) to[short] (16.5,10);
+							\draw (16.5,10) to[short] (16.5,9);
+							\draw  (18,10) circle (0.5cm) node {\large $I_B$} ;
+							\draw (17,9) to[short] (17,10);
+							\draw (17,10) to[short] (17.5,10);
+							\draw (18.5,10) to[short] (19,10);
+							\draw (19,10) to[short] (19,9);
+							\draw  (20.5,10) circle (0.5cm) node {\large $I_C$} ;
+							\draw (21,6.75) to[L] (20,6.75);
+							\draw (19.5,9) to[short] (19.5,10);
+							\draw (19.5,10) to[short] (20,10);
+							\draw (21,10) to[short] (21.5,10);
+							\draw (21.5,10) to[short] (21.5,9);
+							\draw (14,8.25) to[short] (22,8.25);
+							\draw (14,7.5) to[short] (22,7.5);
+							\draw (14,6.75) to[short] (22,6.75);
+							\node [font=\large] at (13.75,8.25) {A};
+							\node [font=\large] at (13.75,7.5) {B};
+							\node [font=\large] at (13.75,6.75) {C};
+							\node [font=\large] at (13.75,6) {N};
+							\draw (14,6) to[short] (22,6);
+							\draw (15.93,8.25) to[short] (15.93,8.75);
+							\draw (15.93,8.75) to[short] (20.93,8.75);
+							\draw (20.93,8.75) to[short] (20.93,6.75);
+							\draw (20.07,6.75) to[short] (20.07,9);
+							\draw (20.07,9) to[short] (19.5,9);
+							\draw (21.5,9) to[short] (21.5,8.5);
+							\draw (21.5,8.5) to[short] (16.5,8.5);
+							\draw (16.5,8.5) to[short] (16.5,9);
+							\draw (19,9) to[short] (19,8.5);
+							\draw (17,9) to[short] (17,8.75);
+							\draw (17,8.75) to[short, -*] (17,8.75);
+							\draw (19,8.5) to[short, -*] (19,8.5);
+							\node [font=\large] at (14.85,13.6) {*};
+							\node [font=\large] at (17.35,12.85) {*};
+							\node [font=\large] at (19.85,12.1) {*};
+							\node [font=\large] at (14.85,8.35) {*};
+							\node [font=\large] at (19.85,6.85) {*};
+						\end{circuitikz}
+				\end{figure}
+				
+				En el esquema de la derecha:
+				\[I_B = -(I_A + I_C)\]
+				
+				
+				Un esquema similar puede desarrollarse
+				para medir la $I_N$ en el circuito de la izquierda.
+			
+	\subsection{Sensores de efecto Hall.}
+		\subsubsection{Aplicaciones y fundamento.}
+			Si un conductor plano (sensor) por el que circula una
+			corriente se somete a un campo magnético perpendicular
+			a él las cargas se desvían debido a la fuerza que sobre
+			ellas origina el campo.
+			
+			
+			Pueden utilizarse indistintamente para adaptar tanto
+			señales de tensión como de intensidad.
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw [short] (8.75,12.25) -- (12.25,12.25);
+						\draw [short] (10.75,10) -- (14.5,10);
+						\draw [short] (8.75,12.25) -- (10.75,10);
+						\draw [short] (12.25,12.25) -- (14.5,10);
+						\draw [short] (8.75,12.25) -- (8.75,12);
+						\draw [short] (8.75,12) -- (10.75,9.75);
+						\draw [short] (10.75,10) -- (10.75,9.75);
+						\draw [short] (10.75,9.75) -- (14.5,9.75);
+						\draw [short] (14.5,10) -- (14.5,9.75);
+						\draw [short] (13.5,8.75) -- (17.5,8.75);
+						\draw [short] (17.5,8.75) -- (15.5,10.75);
+						\draw [short] (13.5,8.75) -- (12.5,9.75);
+						\draw [short] (10.5,12.25) -- (9.75,13);
+						\draw [short] (9.75,13) -- (13.25,13);
+						\draw [short] (13.25,13) -- (14.75,11.5);
+						\draw (14.75,11.5) to[short, -o] (14.75,12.75);
+						\draw (15.5,10.75) to[short, -o] (15.5,12.25);
+						\draw (9.75,11) to[short, -o] (9,11);
+						\draw (14.75,11) to (14.75,10.75) node[ground]{};
+						\draw (13.5,11) to[short] (14.75,11);
+						\draw [-latex] (9.5,11.75) -- (12.25,11.75);
+						\draw [-latex] (9.75,11.5) -- (12.5,11.5);
+						\draw [-latex] (10,11.25) -- (12.75,11.25);
+						\draw [-latex] (10.25,11) -- (13,11);
+						\draw [-latex] (10.5,10.75) -- (13.25,10.75);
+						\draw [-latex] (10.75,10.5) -- (13.5,10.5);
+						\draw [-latex] (11,10.25) -- (13.75,10.25);
+						\draw [-latex] (9.25,12) -- (12,12);
+						\node [font=\large] at (15.5,12.75) {$V=0$};
+						\node [font=\large] at (9.5,12.5) {$\vec{E}$};
+						\node [font=\large] at (8.75,11) {I};
+					\end{circuitikz}
+				\end{figure}
+				
+				\begin{figure}[H]
+					\centering
+					\begin{circuitikz}
+						\draw [short] (8.75,12.25) -- (12.25,12.25);
+						\draw [short] (10.75,10) -- (14.5,10);
+						\draw [short] (8.75,12.25) -- (10.75,10);
+						\draw [short] (12.25,12.25) -- (14.5,10);
+						\draw [short] (8.75,12.25) -- (8.75,12);
+						\draw [short] (8.75,12) -- (10.75,9.75);
+						\draw [short] (10.75,10) -- (10.75,9.75);
+						\draw [short] (10.75,9.75) -- (14.5,9.75);
+						\draw [short] (14.5,10) -- (14.5,9.75);
+						\draw [short] (13.5,8.75) -- (17.5,8.75);
+						\draw [short] (17.5,8.75) -- (15.5,10.75);
+						\draw [short] (13.5,8.75) -- (12.5,9.75);
+						\draw [short] (10.5,12.25) -- (9.75,13);
+						\draw [short] (9.75,13) -- (13.25,13);
+						\draw [short] (13.25,13) -- (14.75,11.5);
+						\draw (14.75,11.5) to[short, -o] (14.75,12.75);
+						\draw (15.5,10.75) to[short, -o] (15.5,12.25);
+						\draw (9.75,11) to[short, -o] (9,11);
+						\draw (14.75,11) to (14.75,10.75) node[ground]{};
+						\draw (13.5,11) to[short] (14.75,11);
+						\draw [-latex] (9.5,11.75) .. controls (10.25,12) and (10.75,12) .. (12.25,11.75) ;
+						\draw [-latex] (9.75,11.5) .. controls (10.75,11.75) and (11,11.75) .. (12.5,11.5) ;
+						\draw [-latex] (10.25,11) .. controls (11.5,10.75) and (12,10.75) .. (13,11) ;
+						\draw [-latex] (10.5,10.75) .. controls (11.75,10.5) and (12.25,10.5) .. (13.25,10.75) ;
+						\draw [-latex] (10.75,10.5) .. controls (11.75,10.25) and (12.5,10.25) .. (13.5,10.5) ;
+						\draw [-latex] (9.25,12) .. controls (10.5,12.25) and (10.5,12.25) .. (12,12) ;
+						\node [font=\large] at (15.75,12.5) {$V=V_{Hall}$};
+						\node [font=\large] at (9.5,12.5) {$(+)$};
+						\draw [-latex] (10.75,13.75) -- (10.75,11.75);
+						\draw [-latex] (11.25,13.25) -- (11.25,11.25);
+						\draw [-latex] (11.75,12.75) -- (11.75,10.75);
+						\draw [-latex] (10.75,9.75) -- (10.75,9.25);
+						\draw [-latex] (11.25,9.75) -- (11.25,8.75);
+						\draw [-latex] (11.75,9.75) -- (11.75,8.25);
+						\node [font=\large] at (12.25,9.5) {$(-)$};
+						\node [font=\large] at (10.5,14) {$\vec{B}$};
+						\node [font=\large] at (8.75,11) {I};
+					\end{circuitikz}
+				\end{figure}
+				
+				La distorsión causada sobre la corriente origina una
+				diferencia de potencial entre dos puntos perpendiculares
+				al sentido de dicha corriente.
+				
+				
+				Manteniendo constante la corriente por el sensor la
+				tensión “Hall” es proporcional al campo:
+				\[V_{Hall} = k \cdot I \cdot \beta \cdot \sen \theta\]
+				
+				
+				Si el campo magnético es variable en el tiempo, la
+				tensión Hall también lo será. Esto permite aprovechar este efecto para realizar medidas en corriente alterna y continua, o con cualquier forma de onda.
+				
+				
+				La tensión Hall es muy débil. Como ejemplo, un campo
+				de 1 Gauss ($10^{-4}\,T$) origina entre 20 y 30 $mV$. Sólo algunos materiales tienen interés para utilizarlos
+				como sensores (placa conductora).
+				
+				
+				Como todas las corrientes crean campos magnéticos, este
+				efecto permite medirlas indirectamente. Debido a que es un valor débil, es necesario un circuito electrónico para adaptar y
+				amplificar la tensión Hall.
+				
+				Haciendo que la corriente a través del sensor sea
+				proporcional a la tensión de un circuito puede utilizarse
+				este efecto para medir potencias.
+				
+		
+		\subsubsection{Vatímetro de efecto Hall.}
+			\begin{figure}[H]
+				\scalebox{0.8}[0.8]{
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw [short] (17.5,14) -- (19.75,14);
+						\draw [short] (19.75,14) -- (21,15);
+						\draw [short] (17.5,13) -- (19.75,13);
+						\draw [short] (19.75,13) -- (21,14);
+						\draw [short] (17.5,13) -- (18.75,14);
+						\draw [short] (19.75,14) -- (21,14);
+						\draw [short] (17.5,13) -- (17.5,12.75);
+						\draw [short] (17.5,12.75) -- (19.75,12.75);
+						\draw [short] (19.75,13) -- (19.75,12.75);
+						\draw [short] (19.75,12.75) -- (21,13.75);
+						\draw [short] (21,14) -- (21,13.75);
+						\draw [short] (17.5,12) -- (19.75,12);
+						\draw [short] (19.75,12) -- (21,13);
+						\draw [short] (21,13) -- (20,13);
+						\draw [short] (17.5,12) -- (18.5,12.75);
+						\draw [short] (19.75,14) -- (19.75,16);
+						\draw [short] (21,15) -- (21,17);
+						\draw [short] (17.5,14) -- (17.5,16);
+						\draw [short] (17.5,16) -- (15,16);
+						\draw [short] (19.75,16) -- (19.75,18);
+						\draw [short] (19.75,18) -- (15,18);
+						\draw [short] (21,17) -- (21,19);
+						\draw [short] (19.75,18) -- (21,19);
+						\draw [short] (21,19) -- (16,19);
+						\draw [short] (15,16) -- (15,10.25);
+						\draw [short] (17.5,12) -- (17.5,10.5);
+						\draw [short] (19.75,12) -- (19.75,10.25);
+						\draw [short] (17.5,10.5) -- (17.5,10.25);
+						\draw [short] (21,13) -- (21,11.25);
+						\draw [short] (17.5,10.25) -- (15,10.25);
+						\draw [short] (19.75,10.25) -- (19.75,8.75);
+						\draw [short] (15,18) -- (13,18);
+						\draw [short] (13,18) -- (13,8.5);
+						\draw [short] (13,8.5) -- (19.75,8.5);
+						\draw [short] (19.75,8.5) -- (19.75,8.75);
+						\draw [short] (21,11.25) -- (21,9.5);
+						\draw [short] (19.75,8.5) -- (21,9.5);
+						\draw [short] (13,18) -- (14.5,19);
+						\draw [short] (16,19) -- (14.5,19);
+						\draw [short] (15,10.25) -- (16.25,11.25);
+						\draw [short] (16.25,11.25) -- (16.25,16);
+						\draw [short] (16.25,11.25) -- (17.5,11.25);
+						\draw [short] (18.25,13.25) -- (18.25,14);
+						\draw [short] (19.5,13.25) -- (19.5,14);
+						\draw [short] (20.25,13.75) -- (20.25,14.4);
+						\draw [short] (19,13.75) -- (19,14);
+						\draw [-latex] (18.25,12.75) -- (18.25,12.25);
+						\draw [-latex] (19.5,12.75) -- (19.5,12.25);
+						\draw [-latex] (20.25,13.15) -- (20.25,12.75);
+						\node [font=\large] at (18.75,13.5) {$\Phi_m$};
+						\draw (20.25,13.25) to[short] (21.5,13.25);
+						\draw (17.75,13.25) to[short] (17.25,13.25);
+						\draw (17.75,13.25) to[short] (17.25,13.25);
+						\draw (17.75,13.25) to[short] (17.25,13.25);
+						\draw (17.75,13.25) to[short] (17.25,13.25);
+						\draw (10.25,10.25) to[R,l={ \large $R_C$}] (12.25,10.25);
+						\draw (10.25,8.75) to[L ] (10.25,10.25);
+						\draw (9.5,10.25) to[L ] (9.5,8.75);
+						\draw [short] (9.8,10) -- (9.8,9);
+						\draw [short] (9.95,10) -- (9.95,9);
+						\draw [short] (11,14.75) -- (15,14.75);
+						\draw [short] (15,14.25) -- (16.25,15);
+						\draw [short] (13,13.75) -- (15,13.75);
+						\draw [short] (15,13.75) -- (16.25,14.5);
+						\draw [short] (13,13.25) -- (15,13.25);
+						\draw [short] (15,13.25) -- (16.25,14);
+						\draw [short] (13,12.75) -- (15,12.75);
+						\draw [short] (15,12.75) -- (16.25,13.5);
+						\draw [short] (13,12.25) -- (15,12.25);
+						\draw [short] (15,12.25) -- (16.25,13);
+						\draw [short] (13,11.75) -- (11.25,11.75);
+						\draw [short] (15,14.25) -- (13,14.25);
+						\draw [short] (15,14.75) -- (16.25,15.5);
+						\draw (8.25,8.75) to[short] (8.25,14.75);
+						\draw (8.25,7.75) to[short, o-] (8.25,8.25);
+						\draw (9,7.75) to[short, o-] (9,8.25);
+						\draw (11.25,11.75) to[short] (10.25,11.75);
+						\draw [short] (17.25,13.25) -- (12.5,10.25);
+						\draw (12.25,10.25) to[short] (12.5,10.25);
+						\draw [short] (21.5,13.25) -- (16,8.75);
+						\draw [short] (16,8.75) -- (10.25,8.75);
+						\draw  (23.25,13.5) circle (0.5cm) node {\large W} ;
+						\draw [short] (20,14) -- (21,14.75);
+						\draw [short] (21,14.75) -- (23.25,14.75);
+						\draw [short] (23.25,14.75) -- (23.25,14);
+						\draw [short] (18.55,12.85) -- (17.75,12.25);
+						\draw [short] (17.75,12.25) -- (23.25,12.25);
+						\draw [short] (23.25,13) -- (23.25,12.25);
+						\draw [-latex] (11.25,14.75) -- (11.75,14.75)node[pos=0.8,above]{$I_L$};
+						\draw (8.75,14.75) to[R,l={ \large $R_L$}] (10.25,14.75);
+						\draw (10.25,11.75) to[short] (9,11.75);
+						\draw (9,11.75) to[short] (9,8.25);
+						\draw (9.5,10.25) to[short] (9,10.25);
+						\draw (9.5,8.75) to[short] (8.25,8.75);
+						\draw (8.25,8.25) to[short] (8.25,8.75);
+						\draw (8.25,8.75) to[short, -*] (8.25,8.75);
+						\draw (9,10.25) to[short, -*] (9,10.25);
+						\draw (8.25,14.75) to[short] (8.75,14.75);
+						\draw (10.25,14.75) to[short] (11,14.75);
+						\node [font=\large] at (8.6,7.25) {Línea};
+						\draw [-latex] (13.5,14.25) -- (14,14.25);
+						\draw [-latex] (13.5,13.75) -- (14,13.75);
+						\draw [-latex] (13.5,13.25) -- (14,13.25);
+						\draw [-latex] (13.5,12.75) -- (14,12.75);
+						\draw [-latex] (13.5,12.25) -- (14,12.25);
+						\draw [-latex] (11.75,11.75) -- (11.25,11.75);
+					\end{circuitikz}}
+			\end{figure}
+			
+			\[P_W = I_L \cdot V_L \cdot \cos{\phi}\]
