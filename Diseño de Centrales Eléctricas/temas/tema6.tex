@@ -1,0 +1,646 @@
+\chapter{Generador síncrono.}
+
+	\section{Generalidades.}
+		Los generadores síncronos o alternadores trifásicos autoexcitados en corriente continua que se usan en las centrales eléctricas se diferencian en función del número de vueltas de sus máquinas motrices.
+		
+		
+		Velocidad síncrona en régimen permanente:
+		
+		\[n = \dfrac{60\cdot f}{p}\,[rpm]\]
+		
+		Donde $f$ es la frecuencia industrial y $p$ el número de pares de polos.
+		
+		
+		\subsection{Aplicaciones de la máquina síncrona.}
+			\begin{itemize}
+				\item \textbf{Como generador:}
+					\begin{itemize}
+						\item Suministro de potencia a la red.
+						\item Suministro de emergencia (hospitales, centros comerciales...).
+						\item Instalaciones aisladas (redes rurales).
+					\end{itemize}
+					
+				\item \textbf{Como motor:}
+					\begin{itemize}
+						\item Aplicaciones con velocidad constante (bombeo en centrales hidráulicas reversibles).
+						\item Compensador síncrono en centrales (regulación del factor de potencia).
+					\end{itemize}
+			\end{itemize}
+			
+		\subsection{Aspectos constructivos.}
+			\begin{itemize}
+				\item \textbf{Inducido:}
+					\begin{itemize}
+						\item Se alimenta con corriente alterna trifásica.
+						\item Con expansiones polares y devanado concentrado.
+						\item Cilíndrico y con devanado concentrado o distribuido.
+						\item Generalmente conectado en Y, con el neutro puesto a tierra.
+					\end{itemize}
+				
+				\item \textbf{Inductor:}
+					\begin{itemize}
+						\item Se alimenta en corriente continua mediante anillos rozantes.
+						\item \textit{Polos salientes:} devanado concentrado con devanado amortiguador (barras de cobre cortocircuitadas) para reducir oscilaciones pendulares y facilitar el arranque.
+						\item \textit{Polos lisos o rotor cilíndrico:} devanado distribuido en ranuras.
+					\end{itemize}
+			\end{itemize}
+				
+			\begin{table}[H]
+				\centering
+				\renewcommand{\arraystretch}{1.1}
+				\begin{tabular}{c|ccc}
+					\textbf{Tamaño} & \textbf{Potencia} & \textbf{Inductor} & \textbf{Inducido} \\
+					\hline
+					Pequeñas & $<10\,kV\!A$ & Estátor, expansiones polares & Rotor, anillos rozantes \\
+					Grandes & De $10\,kV\!A$ hasta $1500\,MV\!A$ & Rotor, sin anillos rozantes & Estátor\\
+				\end{tabular}
+			\end{table}		
+			
+	\section{Particularidades según su emplazamiento.}
+		\subsection{Alternadores de centrales hidroeléctricas.}
+			\begin{itemize}
+				\item Tienen \textbf{diámetros} de entre 5 y 7 metros y \textbf{longitudes} de entre 1 y 2 metros.
+				\item \textbf{Potencias} en torno a $200\,MV\!A$.
+				\item En las grandes centrales hidráulicas su \textbf{velocidad de sincronismo} es de entre 60 y 125 $rpm$.
+				\item Son de \textbf{polos salientes}, con hasta \textbf{40 pares de polos}.
+				\item Suelen ser de \textbf{eje vertical}, situándose el \textbf{alternador encima de la turbina}.
+				\item Tienen un \textbf{devanado amortiguador}, que actúa de jaula de ardilla para poder arrancar como motor asíncrono.
+			\end{itemize}
+			    
+		\subsection{Alternadores de centrales térmicas.}
+			\begin{itemize}
+				\item Tienen \textbf{diámetros} de entre 1 y 2 metros y \textbf{longitudes} de entre 10 y 12 metros.
+				\item \textbf{Potencias} de hasta $1500\,MV\!A$.
+				\item \textbf{Tensión de generación} de 6 a 30 $kV$.
+					\begin{itemize}
+						\item A más tensión menor es la sección de los conductores.
+						\item Intervalo de regulación previsto del $\pm 5\%$.
+						\item En generaodres de baja tensión ($U_N = 400\,V$) la potencia está limitada a $2\,MV\!A$.
+					\end{itemize}	
+				\item Su \textbf{velocidad de sincronismo} es de 1500 ó 3000 $rpm$.
+				\item Son de \textbf{rotor cilíndrico} con bobinado de excitación distribuido.
+				\item Son de \textbf{eje horizontal}.
+				\item Limitaciones en la refrigeración, la resistencia de los materiales y el peso.
+			\end{itemize}
+			
+	\section{Refrigeración en los generadores síncronos.}
+		Los calentamientos habituales se deben a rozamientos mecánicos, pérdidas por efecto Joule en los devanados y pérdidas por histéresis magnética y corrientes de Foucault en los núcleos ferromagnéticos.
+		
+		
+		El aislamiento de los bobinados está hecho a base de resinas sintéticas termoelásticas sin disolventes (\textit{Thermolastic}). Se deterioran con un exceso de temperatura. Deben tener alta rigidez dieléctrica, aislamiento elástico con buena resistencia mecánica y resistencia a la humedad.
+		
+		
+		Una buena refrigeración permite aumentar la corriente del rotor, aumentando la eficiencia hasta un $\eta = 98.5\%$ a la potencia nominal. Se alcanzan densidades de corriente de hasta 250 $kA/m^2$ e inducciones de $1.2\,T$. Hoy en día se fabrican aislamientos del estator impregnados al vacío, que son más resistentes al envejecimiento y totalmente insensibles al aceite y agua.
+		
+		
+		Las bobinas se trasponen por el sistema ROEBEL, para aminorar las pérdidas debido a un reparto desigual
+		del flujo magnético.
+			
+		\subsection{Tipos de refrigeración en máquinas de gran potencia.}
+			\begin{itemize}
+				\item Refrigeración directa por aire hasta $40\,MV\!A$ (grupos turboalternadores industriales).
+				\item Refrigeración por hidrógeno seco (la humedad disminuye la conductividad) $>100\,MV\!A$.
+				\item Refrigeración directa por agua destilada.
+				\item Refrigeración mixta por hidrógeno y agua destilada.
+				\item Refrigeración con helio: gas inerte y no inflamable, pero volátil, más caro y escaso.
+			\end{itemize}
+			
+		\subsection{Sistemas de refrigeración de las bobinas rotóricas y estatóricas.}
+			Actualmente, se hace circular el fluido refrigerante en el mismo interior de los conductores, donde se produce el calor. De esta forma se mejora enormemente la transferencia de calor al fluido refrigerante, y disminuye el aumento de temperatura en el aislamiento de los conductores, prolongando su vida.
+			
+			
+			En casi todos los generadores para centrales hidráulicas se emplea refrigeración mixta: por
+			aire en el circuito del rotor y agua destilada en el circuito del estator.
+			
+			
+			Para los turbogeneradores las refrigeraciones más empleadas para el circuito del estator son refrigeración por hidrógeno a 6 $bar$ y refrigeración por agua destilada.
+			
+		\subsection{Aspectos constructivos del rotor cilíndrico.}
+			Se mecaniza a partir de una pieza única de acero forjado. Posee un agujero central por el que circulan las conexiones del arrollamiento inductor con el sistema de excitación (caja de diodos giratorios). Los extremos de las espiras se sujetan mediante anillos de retención de acero. Tienen que soportan las elevadas fuerzas centrífugas al girar a 1500 o 3000 $rpm$. 
+			
+			
+			El hidrógeno o aire circula axialmente por los agujeros de las bobinas en las cabezas, recorre el interior de los conductores y sale por el entrehierro hacia la zona central del rotor.
+			
+		\subsection{Refrigeración del estátor.}
+			El núcleo del estátor está formado por chapas magnéticas de grano orientado de bajas pérdidas y alta permeabilidad, con canales radiales para permitir el paso del hidrógeno o el agua destilada. Aprieto y sujeción
+			mediante el empleo de bulones aislados.
+			
+			
+			El devanado estatórico está conectado en estrella, cuyo neutro se pone a tierra a través de un transformador instalado en una celda blindada. 
+			
+			
+			Las salidas principales del generador se hacen a través de manguitos aisladores. Deben ser flexibles y permitir dilataciones sin pérdida de gas. Las salida están refrigeradas internamente por hidrógeno. En estos terminales se conectan los transformadores de intensidad para los relés de medida y protección.
+			
+			
+			En el secundario de este transformador se conecta un relé (64G) para detectar los posibles defectos de aislamiento.
+			
+		\subsection{Refrigeración mediante hidrógeno.}
+			El hidrógeno presenta una mayor conductividad térmica frente al aire, pero más baja con respecto al agua. La conductividad térmica aumenta con la presión hasta los $2.11$ $kg/cm^2$. Por encima no se logra prácticamente ningún aumento de la capacidad de refrigeración.
+			
+			
+			La mezcla aire e hidrógeno puede ser explosiva en las proporciones entre un 5 a un 70\% de hidrógeno en volumen. Por ello se utiliza $CO_2$ como gas intermedio cuando se realizan operaciones de mantenimiento, que es un gas más denso que el aire y el hidrógeno.
+			
+			
+			La utilización de hidrógeno requiere un sistema cerrado herméticamente para evitar fugas, lo que impide la entrada de aire, polvo y humedad. Los costes de mantenimiento son menores. 
+			
+	\section{Partes de un generador síncrono.}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.9\linewidth]{res/tema6/generador}
+			\label{fig:generador}
+		\end{figure}
+		
+		\subsection{Conductores de salida del estátor. Barras de fase aislada.}
+			Tienen una capacidad nominal de corriente desde 3 $kA$ hasta 50 $kA$. Se prolongan hasta el bloque interruptor automático + seccionador, bornes de baja tensión del transformador de potencia y el lado
+			de alta tensión del transformador de servicios auxiliares. Por su interior circula aire o hidrógeno mediante ventiladores centrífugos. Consta de las siguientes partes:
+			
+			\begin{itemize}
+				\item \textbf{Conductor:} tubo redondo de aluminio extruido de alta conductividad o barras de cobre.
+				\item \textbf{Aisladores:} de porcelana o de resina epoxy. Sujetos rígidamente a los tubos de aluminio. Puede haber de uno a cuatro aisladores.
+				\item \textbf{Tubo pantalla:} De aluminio. Su misión es doble: servir como conducto para la circulación del refrigerante (hidrógeno o aire) y como apantallamiento para el flujo creado por las altas intensidades. Se ponen a tierra por varios puntos.
+			\end{itemize}
+		
+	\section{Circuito equivalente de un generador síncrono.}
+		\subsection{Principio de funcionamiento.}
+			En una máquina síncrona las tensiones inducidas forman un sistema trifásico equilibrado y de secuencia directa. Estas tensiones inducidas, si no se consideran efectos de saturación, son proporcionales a la intensidad de excitación en corriente continua, dado que la velocidad de rotación tiene que ser constante para mantener la frecuencia de la red constante.
+			
+			
+			\begin{figure}[H]
+				\begin{minipage}{0.5\textwidth}
+					\begin{figure}[H]
+						\centering
+						\includegraphics[width=0.7\linewidth]{res/tema6/ejes_dq}
+						\label{fig:ejesdq}
+					\end{figure}
+				\end{minipage}
+				\begin{minipage}{0.5\textwidth}
+					Si el generador es de polos salientes la reluctancia en el entrehierro no es uniforme y aparecen dos reactancias:
+					\begin{itemize}
+						\item \textbf{Reactancia del eje directo:} $X_d$.
+						\item \textbf{Reactancia del eje transversal o en cuadratura:} $X_q$.
+					\end{itemize}
+					Si el generador es de rotor cilíndrico sólo se considera la \textbf{reactancia síncrona:} $X_s$.
+					
+					\[f = \dfrac{p\cdot n}{60} \qquad E = k\cdot \omega \cdot i_{ex}\]
+				\end{minipage}
+			\end{figure}
+			
+		\subsection{Circuito equivalente por fase.}
+			Considerando un generador de rotor cilíndrico o liso, al conectarla una carga y circular intensidad, estas corrientes crean un campo magnético, denominado \textbf{reacción de inducido}, que presenta una distribución senoidal y que gira a la misma velocidad y en el mismo sentido que el rotor. Esto provoca una caída de tensión en carga respecto de la tensión en vacío, y se representa mediante una reactancia de reacción de inducido, $X_{ri}$.
+			
+			\begin{figure}[H]
+				\begin{minipage}{0.5\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw (3.25,18) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={$\vec E_a$}] (3.25,14.75);
+							\draw (3.25,18) to[L,l={$jX_{ri}$} ] (5,18);
+							\draw (5,18) to[L,l={$jX_\sigma$} ] (6.75,18);
+							\draw (6.75,18) to[R,l={$R$}] (8.5,18);
+							\draw [](8.5,18) to[short, -o] (9,18) ;
+							\draw [](3.25,14.75) to[short, -o] (9,14.75);
+							\draw [->, >=Stealth] (9,17.5) -- (9,15.25)node[pos=0.5,right]{$\vec U_a$};
+							\draw [short] (3.5,19) -- (6.5,19)node[pos=0.5,above]{$jX_s$};
+							\draw [short] (3.5,19) -- (3.5,18.75);
+							\draw [short] (6.5,19) -- (6.5,18.75);
+							\draw [->, >=Stealth] (8.25,18) -- (8.75,18)node[pos=0.7,above]{$\vec I_a$};
+							\draw [->, >=Stealth] (5,17.5) -- (5,15.25)node[pos=0.5,right]{$\vec E_{ag}$};
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}
+				\begin{minipage}{0.5\textwidth}
+					No todo el flujo que crea el inductor es recogido por el inducido. Esta pérdida de flujo se representa mediante una reactancia de dispersión $X_\sigma$.
+					
+					\[\vec U_a = \vec E_a - \vec I_a(R + jX_{ri} + jX_{\sigma})\]
+					\[\Downarrow\]
+					\[\vec U_a = \vec E_a - \vec I_a(R + jX_s)\]
+					\[\vec U_a = U_a\phase{0^\circ} \qquad \vec E_a = E_a\phase{\delta}\]
+				\end{minipage}
+			\end{figure}
+			
+			\begin{figure}[H]
+				\begin{minipage}{0.3\textwidth}
+					Considerando $R\approx 0$:
+					\[P_G = \dfrac{E_a\cdot U_a}{X_S}\cdot \sin \delta\]
+					\[Q_G = \dfrac{E_a\cdot U_a \cdot \cos \delta - U_a^2}{X_S}\]
+				\end{minipage}
+				\begin{minipage}{0.7\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [ color={rgb,255:red,0; green,0; blue,255}, ->, >=Stealth] (5,14.75) -- (7.75,14.75)node[pos=1,above]{$\vec{U}$};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (7.75,14.75) -- (8.5,14)node[pos=1,below]{$R\vec{I}$};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (8.5,14) -- (10.5,16.25)node[pos=0.5,right]{$jX_\sigma\vec{I}$};
+							\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (5,14.75) -- (10.5,16.25)node[pos=0.9,above]{$\vec{E}_{ag}$};
+							\draw [ color={rgb,255:red,128; green,0; blue,255}, ->, >=Stealth] (5,14.75) -- (6.25,13.5)node[pos=1,below]{$\vec{I}$};
+							\draw [ color={rgb,255:red,210; green,105; blue,0}, ->, >=Stealth] (5,14.75) -- (4,17.75)node[pos=1,right]{$\Phi$};
+							\draw [ color={rgb,255:red,255; green,128; blue,0}, ->, >=Stealth] (5,14.75) -- (4.25,17)node[pos=1,right]{$\vec{F}_{r}$};
+							\draw [ color={rgb,255:red,255; green,0; blue,128}, ->, >=Stealth] (4.25,17) -- (3,18.25)node[pos=0.8,above]{$\,\,\,\,\vec{F}_i$};
+							\draw [ color={rgb,255:red,0; green,128; blue,128}, ->, >=Stealth] (5,14.75) -- (11.75,17.75)node[pos=0.9,above]{$\vec{E}_a$};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (10.5,16.25) -- (11.75,17.75)node[pos=0.5,right]{$jX_r\vec{I}$};
+							\draw [ color={rgb,255:red,128; green,128; blue,128}, ->, >=Stealth] (5,14.75) -- (2.57,19)node[pos=1,left]{$\Phi_0$};
+							\draw [->, >=Stealth] (5,14.75) -- (3,18.25)node[pos=0.9,left]{$\vec{F}_{ex}$};
+							\draw (6,14.75) arc [radius=1cm, start angle=0, end angle=-45]node[pos=0.6,right]{$\varphi$};
+							\draw (6.5,14.75) arc [radius=1.5cm, start angle=0, end angle=25]node[pos=0.4,right]{$\delta$};
+							\draw (7,15.275) arc [radius=2cm, start angle=10, end angle=19]node[pos=0.9,right]{$\delta_m$};
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}
+			\end{figure}
+			
+			\begin{figure}[H]
+				\begin{minipage}{0.65\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}[scale = 0.9]
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (10.25,12) -- (14.25,12)node[pos=0.6,below]{$\dfrac{3U_a^2}{X_S}$};
+							\draw [->, >=Stealth] (14.25,12) -- (14.25,16.25)node[pos=1,above]{$P\,[MW]$};
+							\draw [->, >=Stealth] (14.25,12) -- (17,12)node[pos=1,right]{$Q\,[MV\!A]$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (14.25,12) -- (15.5,14.5)node[pos=0.5,left]{S};
+							\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (10.25,12) -- (15.5,14.5)node[pos=0.5,above]{$\dfrac{3U_a}{X_S}\cdot E_a$};
+							\node [font=\normalsize] at (14.5,11.75) {O};
+							\node [font=\normalsize] at (10,11.75) {M};
+							\node [font=\normalsize] at (15.25,14.75) {B};
+							\node [font=\normalsize] at (15.75,12.25) {A};
+							\draw [dashed] (15.5,14.5) -- (15.5,12);
+							\draw [dashed] (15.5,14.5) -- (16,15.5);
+							\draw [<->, >=Stealth] (14.25,15.25) .. controls (15,15.5) and (15.4,15.25) .. (15.75,15)node[pos=0.5,above]{$\phi$};
+							\draw [<->, >=Stealth] (12.75,13.2) .. controls (13,12.75) and (13.1,12.5) .. (13,12)node[pos=0.5,right]{$\delta$};
+							\draw [<->, >=Stealth] (16.25,14.5) -- (16.25,12)node[pos=0.5,right]{$P$};
+							\draw [short] (15.5,14.5) -- (16.5,14.5);
+							\draw [<->, >=Stealth] (14.25,11.25) -- (15.5,11.25)node[pos=0.5,below]{$Q$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (14.25,12) -- (13.25,10.25);
+							\draw [ color={rgb,255:red,255; green,128; blue,0}, ->, >=Stealth] (10.25,12) -- (13.25,10.25)node[pos=0.5,below, sloped]{$\dfrac{U_a}{X_S}\cdot I_a$};
+							\draw [short] (14.25,11) -- (14.25,12);
+							\draw [short] (15.5,11) -- (15.5,12);
+							\node at (10.25,12) [circ] {};
+							\node at (14.25,12) [circ] {};
+							\node at (15.5,14.5) [circ] {};
+							\node at (15.5,12) [circ] {};
+						\end{circuitikz}
+						
+						\label{fig:my_label}
+					\end{figure}
+				\end{minipage}
+				\begin{minipage}{0.35\textwidth}
+					Se pueden obtener los valores de P y Q multiplicando escalarmente todos los vectores por $\dfrac{U_a}{X_S}$, si consideramos despreciable la $R$. Será útil a la hora de dibujar el diagrama de capacidad de la máquina.
+					\[P = 3\cdot U_a \cdot I_a \cdot \cos \phi\]
+					\[Q = 3\cdot U_a \cdot I_a \cdot \sin \phi\]
+				\end{minipage}
+			\end{figure}
+			
+		\subsection{Modelo fasorial para un generador de polos salientes.}
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (10.25,12) -- (16,12)node[pos=0.85,below]{$\vec U_a$};
+						\draw [ color={rgb,255:red,0; green,128; blue,0}, ->, >=Stealth] (10.25,12) -- (19.25,13.5)node[pos=0.5,above]{$\vec{E}_a$};
+						\node [font=\normalsize] at (10,12.25) {O};
+						\draw [<->, >=Stealth] (14.75,12.75) .. controls (14.85,12.5) and (14.85,12.25) .. (14.75,12)node[pos=0.5,right]{$\delta$};
+						\node at (10.25,12) [circ] {};
+						\draw [ color={rgb,255:red,255; green,128; blue,0}, ->, >=Stealth] (16,12) -- (16.75,11.5)node[pos=0.5,above, sloped]{$R\vec I_a$};
+						\draw [<->, >=Stealth] (12.75,12) .. controls (12.75,11.5) and (12.75,11.25) .. (12.5,10.75)node[pos=0.5,right]{$\varphi$};						
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (10.25,12) -- (10.75,9.75)node[pos=0.5,right]{$\vec I_{ad}$};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (10.25,12) -- (13,12.45)node[pos=0.5,above, sloped]{$\vec I_{aq}$};
+						\draw [dashed] (13,12.45) -- (13.5,10.25);
+						\draw [dashed] (10.75,9.75) -- (13.5,10.25);
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (19.5,12) -- (19.25,13.5)node[pos=0.5,right]{$jX_q \vec I_{aq}$};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (16.75,11.5) -- (19.5,12)node[pos=0.5,above, sloped]{$jX_d \vec I_{ad}$};
+						\draw [ color={rgb,255:red,255; green,128; blue,0}, ->, >=Stealth] (10.25,12) -- (13.5,10.25)node[pos=0.5,above]{$\vec I_a$};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (10.25,12) -- (9.75,14.25)node[pos=1,right]{d};
+						\draw [ color={rgb,255:red,0; green,128; blue,255}, dashed] (19.25,13.5) -- (20.75,13.75)node[pos=1,above]{q};
+					\end{circuitikz}
+				
+				\label{fig:my_label}
+			\end{figure}
+			
+			Recordar que $d \perp q$. Se suele considerar $X_S = \dfrac{X_d + X_q}{2}$
+			\[\vec U_a = \vec E_a - R\vec I_a - jX_d \vec I_{ad} - jX_q \vec I_{aq} \quad \Rightarrow \quad \vec U_a = \vec E_a - R\vec I_a - j(X_d - X_q)\vec I_{ad} - jX_q \vec I_a\]
+			
+			
+			El vector $j(X_d - X_q)\vec I_{ad}$ está en fase con $\vec E_a$.
+			
+			\[P_G = \dfrac{U_a E_a}{X_d} \sen \delta + \dfrac{U_a^2}{2}\left(\dfrac{1}{X_q} - \dfrac{1}{X_d}\right)\sin 2\delta\]
+			\[Q_G = \dfrac{U_a E_a}{X_d} \cos \delta - U_a^2\left(\dfrac{\sin^2 \delta}{X_q} + \dfrac{\cos^2 \delta}{X_d}\right)\]
+			
+		\subsection{Determinación de la reactancia síncrona saturada.}
+			Se obtiene a través de ensayos de vacío y cortocircuito, utilizando sus curvas características. La impedancia saturada da resultados más precisos que la no saturada.
+			\[Z_{s0} = f(E_0)\equiv f(I_e) \quad \because E_0 = f(I_e)\]
+			\[Z_{s0} = \dfrac{U_N}{I_{cc0}}\qquad X_S = \sqrt{Z_S^2 - R^2}\]
+			
+		\subsection{Estabilidad.}
+		\vspace{-1.5cm}
+			\begin{figure}[H]
+				\begin{minipage}{0.5\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}[scale = 1.1]
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [->, >=Stealth] (11,11.75) -- (15.75,11.75)node[pos=1,right]{$\delta$};
+							\draw [->, >=Stealth] (11,11.75) -- (11,16)node[pos=1,right]{P};
+							\draw [color={rgb,255:red,255; green,0; blue,0},short] (11,11.75) .. controls (12.75,17.25) and (13.5,17) .. (15.25,11.75);
+							\node [font=\normalsize] at (15.25,11.5) {$180^\circ$};
+							\draw [dashed] (11,14.75) -- (15.5,14.75)node[pos=0,left]{$P_m$};
+							\draw [dashed] (11,13.25) -- (15.5,13.25)node[pos=0,left]{$P_0$};
+							\draw [short] (11.5,13.25) -- (11.5,14.75);
+							\draw [short] (11.5,14.75) -- (12.75,14.75);
+							\draw [short] (12.75,14.75) -- (12.75,15.65);
+							\node [font=\normalsize] at (11.75,14.5) {A1};
+							\node [font=\normalsize] at (12.5,15) {A2};
+							\draw [dashed] (11.5,13.25) -- (11.5,11.75)node[pos=1,below]{$\delta_{0}$};
+							\draw [dashed] (12.75,14.75) -- (12.75,11.75)node[pos=1,below]{$\delta_{max}$};
+							\draw [dashed] (12.125,14.75) -- (12.125,11.75)node[pos=1,below]{$\delta_m$};
+						\end{circuitikz}
+						
+						\label{fig:my_label}
+					\end{figure}
+				\end{minipage}
+				\begin{minipage}{0.5\textwidth}
+					Límite de estabilidad: $\delta = 90^\circ$.
+					
+					
+					\textbf{Estabilidad transitoria:} Ante un cambio del ángulo del par provocado por un cambio brusco de potencia activa en la red, se produce un proceso oscilante de aceleración y deceleración, que se va amortiguando en un tiempo que depende de la inercia de las masas en rotación de la unidad de generación, turbina y generador. Durante este proceso, el generador pierde la sincronización con la red y aparecen sobreintensidades en las líneas.
+				\end{minipage}
+			\end{figure}
+			
+			Si las áreas formadas de aceleración (A1) y deceleración (A2) son iguales se consigue la estabilización en un nuevo valor de ángulo y P. En caso contrario, el sistema se vuelve inestable y hay que desacoplar el generador de la red.
+			
+		\subsection{Comportamiento conectado a la red eléctrica.}
+			\vspace{-0.5cm}
+			\begin{figure}[H]
+				\begin{minipage}{0.5\textwidth}
+					Se supone que la potencia nominal de la máquina es pequeña con relación al resto del sistema. A este nudo se le denomina nudo de potencia infinita. Se consideran $X_S$ de la máquina y $U_{red}$ constantes.
+				\end{minipage}
+				\begin{minipage}{0.5\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw (11.5,14) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $\vec U_p$}] (11.5,12);
+							\draw (11.5,14) to[L,l={ \normalsize $X_S$} ] (14.25,14);
+							\draw (14.25,14) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $\vec U_{red}$}] (14.25,12);
+							\draw (11.5,12) to (11.5,11.75) node[ground]{};
+							\draw (14.25,12) to (14.25,11.75) node[ground]{};
+							\draw [->, >=Stealth] (13.5,14) -- (14,14)node[pos=0.5,above]{$\vec I_p$};
+						\end{circuitikz}
+						
+						\label{fig:my_label}
+					\end{figure}
+				\end{minipage}
+			\end{figure}
+			
+	\section{Diagrama límite de capacidad de la máquina síncrona.} \label{sec:diagramaLimite}
+		El campo de funcionamiento posible de la máquina cuando está acoplada a una red de potencia infinita queda limitado por los siguientes límites:
+		\begin{itemize}
+			\item \textbf{Límite térmico del inducido:} $I_{max}$. La corriente máxima que el inducido puede dar teniendo en cuenta su calentamiento admisible. Si se considera la tensión en bornes constante el límite térmico se puede establecer como una $S_{max}$.
+			
+			\item \textbf{Límite de tensión interna máxima:} $E_{max}$. Definida por la intensidad máxima de excitación que puede recorrer el rotor y/o la máxima tensión de aislamiento. Suele ser $2.1 p.u.$
+			
+			\item \textbf{Límites de la potencia mecánica:} $P_{max},\,P_{min}$. Establecidas por las potencias máxima y mínima que puede dar/necesita la turbina.
+			
+			\item \textbf{Límite de estabilidad:} $\delta_{max}$. Se establece a partir del apartado anterior. El $\delta_{max}$ práctico suele estar en torno a $80^\circ$.
+		\end{itemize}
+			
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\linewidth]{res/tema6/diagramaCapacidad}
+			\label{fig:diagramacapacidad}
+		\end{figure}
+		
+	\section{Modos de funcionamiento de una máquina síncrona.}
+		\begin{table}[H]
+			\centering
+			\renewcommand{\arraystretch}{1.1}
+			\begin{tabular}{ccccl}
+				\textbf{Caso} & \textbf{Finalidad} & \textbf{Constantes} & \textbf{Variables} & \textbf{Consecuencias}\\
+				\hline
+				\multirow{3}{*}{1} & \multirow{3}{*}{Variar $P$}   & \multirow{3}{*}{$I_{ex}$}  & \multirow{3}{*}{$P_{mec}$}  & $\Phi = cte \Rightarrow E_0 = cte \Rightarrow n = cte$ \\
+				&              &           &            & $\updownarrow\delta\Rightarrow\updownarrow jX_S\vec{I}_a\Rightarrow\updownarrow P_a$ \\
+				&              &           &            & $\uparrow\delta \Rightarrow\uparrow P\text{ y }\downarrow Q$ \\\hline
+				\multirow{6}{*}{2} & \multirow{6}{*}{Variar $Q$}   & \multirow{6}{*}{$P_{mec}$} & \multirow{6}{*}{$I_{ex}$}   & $\updownarrow E_a$ \\
+				&              &           &            & $Proy_P(jX_s\vec{I}_a) = cte$ \\
+				&              &           &            & $Proy_Q(jX_s\vec{I}_a)$: \\
+				&              &           &            & $\quad\text{Sobreexcitada, inductivo}$ \\
+				&              &           &            & $\quad\text{Subexcitada, capacitivo}$ \\
+				&              &           &            & $\quad\cos{\varphi} = 1$ \\\hline
+				\multirow{3}{*}{3} & \multirow{3}{*}{Asincronismo} & \multirow{3}{*}{$P_{mec}$} & \multirow{3}{*}{$I_{ex}$}   & La red aporta la magnetización de la máquina $\Rightarrow$ \\
+				&              &           &            & sobreintensidades en el inducido. \\
+				&              &           &            & Aporta $P$, consume $Q$ \\\hline
+				\multirow{3}{*}{4} & \multirow{3}{*}{\parbox{2cm}{\centering Oscilaciones\\pendulares}} & \multirow{3}{*}{$I_{ex}$}  & \multirow{3}{*}{\parbox{2cm}{\centering C. bruscos\\$P_{mec}$}} & Pérdida de la sicronización con la red. \\
+				&              &           &   & Sobreintensidades en las líneas. \\
+				&              &           &            & \textuparrow Inercia \textrightarrow \textuparrow Tiempo de oscilación\\\hline
+				\multirow{2}{*}{5} & Compensador  & \multirow{2}{*}{$I_{ex}$}  & \multirow{2}{*}{$P_{mec}$}  & Consumo de $P_{mec}$ por pérdida de par en el eje. \\
+				& síncrono     & 			 & 			  & Consume activa, consume o aporta reactiva.\\\hline
+			\end{tabular}
+			\label{tab:modosFunc}
+		\end{table}
+		
+		\begin{figure}[H]
+			\begin{minipage}{0.5\textwidth}
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=1\linewidth]{res/tema6/modoFunc1}
+					\label{fig:modofunc1}
+				\end{figure}
+			\end{minipage}
+			\begin{minipage}{0.5\textwidth}
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=1\linewidth]{res/tema6/modoFunc2}
+					\label{fig:modofunc2}
+				\end{figure}
+			\end{minipage}
+		\end{figure}
+		
+		
+	\section{Ejercicio completo resuelto.}		
+		Un alternador de polos salientes de una central hidráulica tiene las siguientes características técnicas:
+		\begin{figure}[H]
+			\begin{minipage}{0.33\textwidth}
+				\begin{itemize}
+					\item $S_n = 300\,MV\!A$
+					\item $U_n = 22\,kV$
+					\item $\cos \varphi_n = 0.85\,ind$
+					\item $p = 20$
+				\end{itemize}
+			\end{minipage}
+			\begin{minipage}{0.33\textwidth}
+				\begin{itemize}
+					\item $\delta_{max} = 85^\circ$
+					\item $X_d = 2.45\,\varOmega/fase$
+					\item $X_q = 1.45\,\varOmega/fase$
+				\end{itemize}
+			\end{minipage}
+			\begin{minipage}{0.33\textwidth}
+				\begin{itemize}
+					\item $E_{\text{\textit{exc, máx}}} = 2.1\,p.u.$
+					\item $P_{max} = 255\,MW$
+					\item $P_{min} = 45\,MW$
+				\end{itemize}
+			\end{minipage}
+		\end{figure}
+		
+
+		Dibujar el diagrama de capacidad en valores $p.u.$ y calcular los valores de $P\,[MW]$, $Q\,[MV\!Ar]$, $S\,[MV\!A]$, $I\,[kA]$, $\cos \varphi$, $E\,[kV]$ y $\delta$ para cada punto de intersección entre valores límites. Considerar despresciable la caída de tensión en los devanados del inducido por la resistencia 
+		interna.
+		
+		
+		\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+		\vspace{-0.2cm}
+		
+		Los puntos A, B, C, D, E y F se corresponden con los de la figura del apartado \ref{sec:diagramaLimite}.
+		
+		\vspace{0.25cm}
+		$S_n = S_b = 1\,p.u.\qquad U_n = U_b = 1\,p.u. \qquad I_n = \dfrac{S_b}{\sqrt{3}U_b} = \dfrac{300\cdot 10^6}{\sqrt{3}\cdot 22\cdot 10^3} = 7.87\,kA = I_b$
+		
+		\vspace{0.1cm}
+		$Z_b = \dfrac{U_b^2}{S_b} = \dfrac{(22\cdot 10^3)^2}{300\cdot 10^6} = 1.61\,\varOmega$
+		
+		\vspace{0.1cm}
+		$X_s = \dfrac{X_d + X_q}{2} = \dfrac{2.45 + 1.45}{2} = 1.95\,\varOmega/fase\quad \Rightarrow \quad X_{s,\,p.u.} = \dfrac{X_s}{Z_b} = 1.21\,p.u.$
+		
+		\vspace{0.1cm}
+		Límite inductor $=\dfrac{E\cdot U_n}{X_{s,\,p.u.}} = \dfrac{2.1\cdot 1}{1.21} = 1.7355\,p.u.$
+		
+		\vspace{0.1cm}
+		$P_{max,\,p.u.} = \dfrac{255}{300} = 0.85\,p.u.\qquad P_{min,\,p.u.} = \dfrac{45}{300} = 0.15\,p.u.$
+		
+		\vspace{-0.1cm}
+		\subsubsection*{Punto A.}
+			Datos conocidos: $P_{min} = 0.15\,p.u.\quad E_{max} = 2.1\,p.u.\quad X_s = 1.21\,p.u.\quad U = 1\,p.u.$
+			
+			\vspace{0.1cm}
+			$P_A = \dfrac{E\cdot U}{X_s}\cdot \sin \delta = 0.15 \quad \Rightarrow \quad \delta = 4.95^\circ$
+			
+			\vspace{0.1cm}
+			$Q_A = \dfrac{E\cdot U}{X_s}\cdot \cos \delta - \dfrac{U^2}{X_s} = 0.9\,p.u.\cdot S_b = 271.08\,MV\!Ar$
+			
+			\vspace{0.1cm}
+			$S_A = \sqrt{P_A^2+Q_A^2} = 0.92\cdot S_b = 276\,MV\!A$
+			
+			\vspace{0.1cm}
+			$I_A = \dfrac{S_A}{\sqrt{3}\cdot U_A} = \dfrac{276\cdot 10^6}{\sqrt{3}\cdot 22\cdot 10^3} = 7.2\,kA$
+			
+			\vspace{0.1cm}
+			$\varphi_A = \arctan \left(\dfrac{Q_A}{P_A}\right) = 80.57^\circ \quad \Rightarrow \quad \cos \varphi_A = 0.16$
+		
+		\vspace{-0.1cm}
+		\subsubsection*{Punto B.}
+			Datos conocidos: $S_n = 1\,p.u.\quad U_n = 1\,p.u.\quad X_s = 1.21\,p.u.\quad E_{max} = 2.1\,p.u.$
+			
+			\vspace{0.1cm}
+			$
+			\left.
+			\begin{matrix}
+				P_B = \dfrac{E_0\cdot U}{X_s}\cdot \sin \delta\\
+				Q_B = \dfrac{E_0\cdot U}{X_s}\cdot \cos \delta - \dfrac{U^2}{X_s}\\\\
+				S^2 = P^2 + Q^2
+			\end{matrix}
+			\right\}
+			\left(\dfrac{E_0\cdot U}{X_s}\sin \delta\right)^2 + \left(\dfrac{E_0\cdot U}{X_s}\cos \delta - \dfrac{U^2}{X_s}\right)^2 = 1
+			$
+			
+			\vspace{0.1cm}
+			Resolviendo se obtiene $\cos \delta = 0.93 \quad \Rightarrow \quad \delta_B = 20^\circ$
+			
+			\vspace{0.1cm}
+			$P_B = \dfrac{2.1\cdot 1}{1.21}\sin 20^\circ = 0.59\,p.u. \cdot S_b = 177.45\,MW$
+			
+			\vspace{0.1cm}
+			$Q_B = \dfrac{2.1\cdot 1}{1.21}\cos 20^\circ - \dfrac{1^2}{1.21} = 0.81\,p.u.\cdot S_b = 241.89\,MV\!Ar$
+			
+			\vspace{0.1cm}
+			$\varphi_B = \arctan\left(\dfrac{Q_B}{P_D}\right) = 53.74^\circ \quad \Rightarrow \quad \cos \varphi_B = 0.59$
+			
+			\vspace{0.1cm}
+			$I_B = I_n = 7.87\,kA$
+			
+		\subsubsection*{Punto C.}
+			Datos conocidos: $P_{max} = 0.85\,p.u.\quad S_n = 1\,p.u.\quad I_n = 7.87\,kA$
+			
+			\vspace{0.1cm}
+			$Q_C = \sqrt{S^2 - P^2} = \sqrt{1^2 - 0.85^2} = 0.527\,p.u. = 158.03\,MV\!A$
+			
+			\vspace{0.1cm}
+			$\tan \varphi_C = \dfrac{Q_C}{P_C} = \dfrac{158.03}{255} = 0.619 \quad \Rightarrow \quad \varphi_C = 31.78^\circ \quad \Rightarrow \quad \cos \varphi_C = 0.85$
+			
+			\vspace{0.1cm}
+			$P_C = \dfrac{E_0\cdot U}{X_s}\sin \delta = 0.85\,p.u. \quad \Rightarrow \quad E_C = \dfrac{P_C \cdot X_S}{U\cdot \sin \delta}$
+			
+			\vspace{0.1cm}
+			Sustituyendo en $Q_C = \dfrac{E_0\cdot U}{X_s}\cdot \cos \delta - \dfrac{U^2}{X_s} = \dfrac{\dfrac{P_C\cdot X_s}{U\cdot \sin \delta}}{X_s}\cos \delta - \dfrac{U^2}{X_s} = \dfrac{P_C}{\sin \delta}\cos \delta - \dfrac{U^2}{X_s} = 0.527$
+			
+			\vspace{0.1cm}
+			$\dfrac{0.85}{\sin \delta}\cos \delta - \dfrac{1}{1.21} = 0.527 \quad \Rightarrow \quad \dfrac{0.85}{\tan \delta} = 1.350 \quad \Rightarrow \quad \tan \delta = 0.628 \quad \Rightarrow \quad \delta_C = 32.129^\circ$
+			
+			\vspace{0.1cm}
+			$E_C = \dfrac{0.85\cdot 1.21}{1\cdot \sin 32.12^\circ} = 1.933\,p.u. = 42.54\,kV$
+			
+		\subsubsection*{Punto D.}
+			Datos conocidos: $P_{max} = 0.85\,p.u.\quad S_n = 1\,p.u.\quad I_n = 7.87\,kA$
+			
+			\vspace{0.1cm}
+			$Q_D = \sqrt{S^2 - P^2} = -0.527 = -158.03\,MV\!Ar$
+			
+			\vspace{0.1cm}
+			$\tan \varphi_D = \dfrac{Q_D}{P_D} = \dfrac{-158.03\,MV\!Ar}{255\,MW} = -0.619 \quad \Rightarrow \quad \varphi_D = -31.78^\circ \quad \Rightarrow \quad \cos \varphi_D = 0.85$ (cap)
+			
+			\vspace{0.1cm}
+			$P_D = \dfrac{E_0\cdot U}{X_s}\sin \delta = 0.85\,p.u. \quad \Rightarrow \quad E_D = \dfrac{P_D \cdot X_s}{U\cdot \sin \delta}$
+			
+			\vspace{0.1cm}
+			Sustituyendo en $Q_D = \dfrac{E_0\cdot U}{X_s}\cdot \cos \delta - \dfrac{U^2}{X_s} = \dfrac{\dfrac{P_C\cdot X_s}{U\cdot \sin \delta}}{X_s}\cos \delta - \dfrac{U^2}{X_s} = \dfrac{P_D}{\sin \delta}\cos \delta - \dfrac{U^2}{X_s} = -0.527$
+			
+			\vspace{0.1cm}
+			Operando se obtiene $\tan \delta = 2.83 \quad \Rightarrow \quad \delta = 70.59^\circ$
+			
+			\vspace{0.1cm}
+			$E_D = \dfrac{0.85\cdot 1.21}{1\cdot \sin 70.59^\circ} = 1.09 = 23.99\,kV$
+		
+		\subsubsection*{Punto E.}
+			Datos conocidos: $S_n = 1\,p.u.\quad I_n = 7.87\,kA\quad \delta_{max} = 85^\circ$
+			
+			\vspace{0.1cm}
+			$
+			\left.
+			\begin{matrix}
+				P_E = \dfrac{E_0\cdot U}{X_s}\cdot \sin \delta\\
+				Q_E = \dfrac{E_0\cdot U}{X_s}\cdot \cos \delta - \dfrac{U^2}{X_s}\\\\
+				S^2 = P^2 + Q^2
+			\end{matrix}
+			\right\}
+			\left(\dfrac{E_0\cdot U}{X_s}\sin \delta\right)^2 + \left(\dfrac{E_0\cdot U}{X_s}\cos \delta - \dfrac{U^2}{X_s}\right)^2 = 1
+			$
+			
+			\vspace{0.1cm}
+			Resolviendo: $0.68E^2 - 0.119E - 0.318 = 0 \quad \Rightarrow \quad E_E = 0.77 = 16.98\,kV$
+			
+			\vspace{0.1cm}
+			$P_E = \dfrac{0.77\cdot 1}{1.21}\sin 85^\circ = 0.634 = 190.18\,MW$
+			
+			\vspace{0.1cm}
+			$Q_E = \dfrac{0.77\cdot 1}{1.21}\cos 85^\circ - \dfrac{1^2}{1.21} = -0.77 = -231.3\,MV\!Ar$
+			
+			\vspace{0.1cm}
+			$\tan \varphi = \dfrac{Q_E}{P_E} = 1.22 \quad \Rightarrow \quad \varphi_E = -50.57^\circ \quad \Rightarrow \quad \cos \varphi_E = 0.63$ (cap)
+		
+		\subsubsection*{Punto F.}
+			Datos conocidos: $P_{min} = 0.15\,p.u.\quad \delta_{max} = 85^\circ\quad X_s = 1.21\,p.u.$
+			
+			\vspace{0.1cm}
+			$P_F = \dfrac{E_0\cdot U}{X_s}\cdot \sin \delta = 0.15 \quad \Rightarrow \quad E_F = 0.182\,p.u. = 4.01\,kV$
+			
+			\vspace{0.1cm}
+			$Q_F = \dfrac{0.182\cdot 1}{1.21}\cos 85^\circ - \dfrac{1^2}{1.21} = -0.813 = -244.0\,MV\!Ar$
+			
+			\vspace{0.1cm}
+			$S_F = \sqrt{P_F^2 + Q_F^2} = 0.826\,p.u. = 248.02\,MV\!A \qquad I_F = \dfrac{S_F}{\sqrt{3}\cdot U_n} = 6.51\,kA$
+			
+			\vspace{0.1cm}
+			$\tan \varphi_F = \dfrac{Q_F}{P_F} = 5.422 \quad \Rightarrow \quad \varphi_F = -79.55^\circ \quad \Rightarrow \quad \cos \varphi_F = 0.181$ (cap)
+		
+			

@@ -1,0 +1,1415 @@
+\chapter{Servicios auxiliares de las centrales eléctricas.}
+\section{Objetivo de los servicios auxiliares de las centrales eléctricas.}
+
+Los servicios auxiliares son instalaciones eléctricas encargadas de la regulación, medida y control de los procesos en las centrales.
+
+
+
+En grandes centrales, los servicios auxiliares principales son:
+\begin{itemize}
+	\item [-] Instalaciones trifásicas de 6 y 10kV para el accionamiento de motores asíncronos entre 130kW y algunos MW.
+	\item [-] Instalaciones trifásicas de baja tensión para instalaciones de fuerza e iluminación.
+	\item Instalaciones de continua adicionales para dispositivos de regulación y control.
+\end{itemize}
+
+
+
+La potencia total de los motores instalados para los servicios auxiliares de un bloque térmico se
+componen de 80\% al 90\% de motores de media tensión y de un 10\% al 20\% de motores de baja
+tensión, siendo el número de motores de baja tensión muy superior al de los de media tensión.
+\section{Potencia total de los servicios auxiliares.}
+Depende del tipo de central eléctrica:
+\begin{itemize}
+	\item [-] Centrales térmicas entre 300 y 600 MW. La potencia de los servicios auxiliares oscila entre el 6 y 8\% de la nominal.
+	\item [-] Centrales nucleares. La potencia de los servicios auxiliares oscila entre el 6 y 8\% de la nominal.
+	\item [-] Centrales hidráulicas. La potencia de los servicios auxiliares oscila entre el 0,5 y 1,5\% de la nominal.
+\end{itemize}
+\section{Clasificación de los servicios auxiliares.}
+\begin{itemize}
+	\item [-] Esenciales: su falta deriva en daños importantes.
+	\item [-] Normales:
+	\begin{itemize}
+		\item Urgentes: su falta de alimentación provoca una reducción de potencia a la salida.
+		\item Eventuales: su falta no condiciona la producción ni la seguridad.
+	\end{itemize}
+\end{itemize}
+\section{Transformador principal.}
+Su potencia suele ser igual a la potencia de los generadores de la central. Tiene tomas de regulación en el lado de alta tensión para regular la relación de transformación.
+
+
+Suele estar conectado en conexión YNd5. Con el neutro conectado a tierra.
+
+
+Para potencias de hasta 1300MW el transformador se divide en dos unidades trifásicas.
+\section{Alimentación de los servicios auxiliares.}
+\subsection{Transformador de servicios auxiliares (TSA).}
+Los servicios auxiliares alimentan durante el funcionamiento de la central a través de uno o dos
+transformadores de servicios auxiliares (TSA) de tres devanados para proporcionar tensiones de 6 kV
+y 10 kV.
+
+En centrales de entre 600 y 1000MW se emplean dos TSA que alimentan a cuatro tramos de barras para reducir las potencias de cortocircuito y asegurar la continuidad del suministro.
+\subsection{Transformador de arranque (TA).}
+Durante la construcción de la central se suele utilizar una línea eléctrica auxiliar de menor tensión
+conectada a través de un transformador. Cuando la central se pone en funcionamiento, este
+transformador se sigue conservando llamándose transformador de arranque (TA) y la red auxiliar se
+denomina red de arranque.
+
+
+Para las centrales nucleares es obligatorio conservar este transformador.
+\section{Suministros de baja tensión y de emergencia.}
+Son tensiones que se obtienen a través de transformadores conectados a las barras de media tensión. Estos transformadores alimentan también a través de equipos rectificadores a baterías.
+
+
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{width=0.6\textwidth}	
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw  (9.75,11.25) rectangle (10.25,10.75);
+			\draw [short] (9.75,10.75) -- (10.25,11.25);
+			\draw [short] (10,10.75) -- (10.25,11);
+			\draw [short] (9.75,11) -- (10,11.25);
+			\draw [short] (9.75,11.25) -- (10.25,10.75);
+			\draw [short] (10,11.25) -- (10.25,11);
+			\draw [short] (9.75,11) -- (10,10.75);
+			\draw [short] (10,10.75) -- (10,10);
+		%	\draw (10,10.25) to[closing switch] (10,9.5);
+		%	\draw (10,10.25) to[closing switch] (10,10);
+			\draw (10,10.25) to[closing switch] (10,9.25);
+			\draw  (9.5,10.25) rectangle (10.5,9.25);
+			\draw [short] (10,9.25) -- (10,8.75);
+			\draw  (10,8.5) circle (0.25cm);
+			\draw  (10,8.25) circle (0.25cm);
+			\draw [short] (10,8) -- (10,7.5);
+			\draw [short] (9.5,7.5) -- (8.75,7.5);
+			\draw [short] (10,7.5) -- (10,7);
+			\draw  (10,6.5) circle (0.5cm) node {\normalsize G} ;
+			\node [font=\normalsize] at (10.75,8.25) {TB};
+			\node [font=\normalsize] at (10.75,9.75) {IR};
+			\node [font=\normalsize] at (10.75,11) {RI};
+			\draw [short] (8.75,7.5) -- (5.5,7.5);
+			\draw [short] (5.5,7.5) -- (5.5,6.75);
+			\draw  (5.5,6.5) circle (0.25cm);
+			\draw  (5.5,6.25) circle (0.25cm);
+			\node [font=\normalsize] at (4.75,6.25) {TSA};
+			\draw [short] (10.5,10.25) -- (10.5,9.5);
+		%	\draw (10.5,9.75) to[closing switch] (10.5,9);
+		%	\draw (10.5,9.75) to[closing switch] (10.5,9.5);
+			\draw (5.5,5.5) to[closing switch] (5.5,4.5);
+			\draw  (5,5.5) rectangle (6,4.5);
+			\draw [short] (5.5,6) -- (5.5,5.5);
+			\draw [short] (5.5,4.5) -- (5.5,4);
+			\draw (5.5,3.5) to[closing switch] (5.5,2.5);
+			\draw  (5,3.5) rectangle (6,2.5);
+			\draw [short] (5.5,4) -- (5.5,3.5);
+			\draw [short] (5.5,2.5) -- (5.5,2);
+			\draw [short] (5.5,4) -- (7,4);
+			\draw (7,3.5) to[closing switch] (7,2.5);
+			\draw  (6.5,3.5) rectangle (7.5,2.5);
+			\draw [short] (7,4) -- (7,3.5);
+			\draw [short] (7,2.5) -- (7,2);
+			\draw (8.5,3.5) to[closing switch] (8.5,2.5);
+			\draw  (8,3.5) rectangle (9,2.5);
+			\draw [short] (8.5,4) -- (8.5,3.5);
+			\draw [short] (8.5,2.5) -- (8.5,2);
+			\draw (4,3.5) to[closing switch] (4,2.5);
+			\draw  (3.5,3.5) rectangle (4.5,2.5);
+			\draw [short] (4,4) -- (4,3.5);
+			\draw [short] (4,2.5) -- (4,2);
+			\draw (2.5,3.5) to[closing switch] (2.5,2.5);
+			\draw  (2,3.5) rectangle (3,2.5);
+			\draw [short] (2.5,4) -- (2.5,3.5);
+			\draw [short] (2.5,2.5) -- (2.5,2);
+			\draw [short] (7,4) -- (8.5,4);
+			\draw [short] (5.5,4) -- (2.5,4);
+			\draw  (8.5,1.5) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (8.5,1.5) {M};
+			\draw  (7,1.5) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (7,1.5) {M};
+			\draw  (5.5,1.5) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (5.5,1.5) {M};
+			\draw  (4,1.5) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (4,1.5) {};
+			\draw  (2.5,1.5) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (2.5,1.5) {};
+			\draw [short] (8.5,4) -- (10,4);
+			\draw [short] (5.5,5.5) -- (5.5,5.75);
+			\draw [](9.5,7.5) to[short] (10,7.5);
+			\draw [](10,4) to[short] (10,3.5);
+			\draw  (9.5,3.5) rectangle (10.5,2.5);
+			\draw (10,3.5) to[closing switch] (10,2.5);
+			\draw [short] (10,2.5) -- (10,1.75);
+			\draw  (10,1.5) circle (0.25cm);
+			\draw  (10,1.25) circle (0.25cm);
+			\draw [short] (10,1) -- (10,0.25);
+			\draw  (9.5,0.25) rectangle (10.5,-0.75);
+			\draw (10,0.25) to[closing switch] (10,-0.75);
+			\draw [](10,-0.75) to[short] (10,-1.25);
+			\draw[] (10,-1.25) to[short] (2.25,-1.25);
+			\draw (5.25,-1.75) to[closing switch] (5.25,-2.75);
+			\draw  (5,-2.75) rectangle (5.5,-3.75);
+			\draw [short] (5.25,-1.25) -- (5.25,-1.75);
+			\draw [short] (5.25,-3.75) -- (5.25,-4.25);
+			\draw (6.75,-1.75) to[closing switch] (6.75,-2.75);
+			\draw  (6.5,-2.75) rectangle (7,-3.75);
+			\draw [short] (6.75,-1.25) -- (6.75,-1.75);
+			\draw [short] (6.75,-3.75) -- (6.75,-4.25);
+			\draw (8.25,-1.75) to[closing switch] (8.25,-2.75);
+			\draw  (8,-2.75) rectangle (8.5,-3.75);
+			\draw [short] (8.25,-1.25) -- (8.25,-1.75);
+			\draw [short] (8.25,-3.75) -- (8.25,-4.25);
+			\draw (3.75,-1.75) to[closing switch] (3.75,-2.75);
+			\draw  (3.5,-2.75) rectangle (4,-3.75);
+			\draw [short] (3.75,-1.25) -- (3.75,-1.75);
+			\draw [short] (3.75,-3.75) -- (3.75,-4.25);
+			\draw (2.25,-1.75) to[closing switch] (2.25,-2.75);
+			\draw  (2,-2.75) rectangle (2.5,-3.75);
+			\draw [short] (2.25,-1.25) -- (2.25,-1.75);
+			\draw [short] (2.25,-3.75) -- (2.25,-4.25);
+			\draw  (8.25,-4.75) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (8.25,-4.75) {M};
+			\draw  (6.75,-4.75) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (6.75,-4.75) {M};
+			\draw  (5.25,-4.75) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (5.25,-4.75) {M};
+			\draw  (3.75,-4.75) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (3.75,-4.75) {};
+			\draw  (2.25,-4.75) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (2.25,-4.75) {};
+			\draw [](2,-3.25) to[short] (2.5,-3.25);
+			\draw [](3.5,-3.25) to[short] (4,-3.25);
+			\draw [](5,-3.25) to[short] (5.5,-3.25);
+			\draw [](6.5,-3.25) to[short] (7,-3.25);
+			\draw [](8,-3.25) to[short] (8.5,-3.25);
+			\draw [dashed] (2.5,-2.25) -- (2.75,-2.25);
+			\draw [dashed] (2.75,-2.25) -- (2.75,-3.5);
+			\draw [dashed] (2.5,-3.5) -- (2.75,-3.5);
+			\draw [dashed] (2.5,-3) -- (2.75,-3);
+			\draw [dashed] (4,-2.25) -- (4.25,-2.25);
+			\draw [dashed] (4.25,-2.25) -- (4.25,-3.5);
+			\draw [dashed] (4,-3.5) -- (4.25,-3.5);
+			\draw [dashed] (4,-3) -- (4.25,-3);
+			\draw [dashed] (5.5,-2.25) -- (5.75,-2.25);
+			\draw [dashed] (5.75,-2.25) -- (5.75,-3.5);
+			\draw [dashed] (5.75,-3.5) -- (5.5,-3.5);
+			\draw [dashed] (5.5,-3) -- (5.75,-3);
+			\draw [dashed] (7,-3.5) -- (7.25,-3.5);
+			\draw [dashed] (7.25,-3.5) -- (7.25,-2.25);
+			\draw [dashed] (7.25,-2.25) -- (7,-2.25);
+			\draw [dashed] (7,-3) -- (7.25,-3);
+			\draw [dashed] (8.75,-3.5) -- (8.75,-2.25);
+			\draw [dashed] (8.5,-2.25) -- (8.75,-2.25);
+			\draw [dashed] (8.5,-3) -- (8.75,-3);
+			\draw [dashed] (8.5,-3.5) -- (8.75,-3.5);
+			\node [font=\normalsize] at (2.25,-3) {V};
+			\node [font=\normalsize] at (3.75,-3) {V};
+			\node [font=\normalsize] at (5.25,-3) {V};
+			\node [font=\normalsize] at (6.75,-3) {V};
+			\node [font=\normalsize] at (8.25,-3) {V};
+			\node [font=\normalsize] at (8.25,-3.5) {A};
+			\node [font=\normalsize] at (6.75,-3.5) {A};
+			\node [font=\normalsize] at (5.25,-3.5) {A};
+			\node [font=\normalsize] at (3.75,-3.5) {A};
+			\node [font=\normalsize] at (2.25,-3.5) {A};
+			\draw [short] (10,-1.25) -- (10,-2);
+			\draw  (9.25,-2) rectangle (10.75,-3.5);
+			\draw [short] (9.25,-3.5) -- (10.75,-2);
+			\node [font=\normalsize] at (9.75,-2.5) {CA};
+			\node [font=\normalsize] at (10.25,-3) {DC};
+			\node [font=\normalsize] at (10,-6) {};
+			\draw  (9.5,-4) rectangle (10.5,-5);
+			\draw (10,-4) to[closing switch] (10,-5);
+			\node [font=\normalsize] at (10,-4) {};
+			\node [font=\normalsize] at (10,-7.75) {};
+			\draw  (9.5,-6.5) rectangle (10.5,-7.5);
+			\draw (10,-6.5) to[closing switch] (10,-7.5);
+			\node [font=\normalsize] at (10,-6.5) {};
+			\draw [short] (10,-3.5) -- (10,-4);
+			\draw [short] (10,-5) -- (10,-6.5);
+			\draw [short] (10,-6) -- (11.75,-6);
+			\draw [dashed] (11.75,-6) -- (13.5,-6);
+			\draw [short] (11.5,-6) -- (11.5,-6.5);
+			\draw (11.5,-6.5) to[battery ] (11.5,-7.5);
+			\draw [short] (13.5,-6) -- (14,-6);
+			\draw (14,-6.5) to[battery ] (14,-7.5);
+			\draw [short] (14,-6.5) -- (14,-6);
+			\node [font=\normalsize] at (12.75,-7.75) {Baterías};
+			\draw  (9.25,-8.25) rectangle (10.75,-9.75);
+			\node [font=\normalsize] at (10.25,-9.25) {AC};
+			\draw [short] (9.25,-9.75) -- (10.75,-8.25);
+			\node [font=\normalsize] at (9.75,-8.75) {DC};
+			\node [font=\normalsize] at (10,-8) {};
+			\draw [short] (10,-7.5) -- (10,-8.25);
+			\draw [short] (11.5,-7.5) -- (11.75,-7.5);
+			\draw [short] (11.25,-7.5) -- (11.5,-7.5);
+			\draw [short] (13.75,-7.5) -- (14.25,-7.5);
+			\draw [short] (10,-6) -- (8.5,-6);
+			\draw [short] (6,-6) -- (6,-6.5);
+			\draw (6,-6.5) to[battery ] (6,-7.5);
+			\draw (8.5,-6.5) to[battery ] (8.5,-7.5);
+			\draw [short] (8.5,-6.5) -- (8.5,-6);
+			\node [font=\normalsize] at (7.25,-7.75) {Baterías};
+			\draw [short] (6,-7.5) -- (6.25,-7.5);
+			\draw [short] (5.75,-7.5) -- (6,-7.5);
+			\draw [short] (8.25,-7.5) -- (8.75,-7.5);
+			\draw [short] (8.5,-6) -- (8.25,-6);
+			\draw [short] (6,-6) -- (6.5,-6);
+			\draw [dashed] (6.5,-6) -- (8.25,-6);
+			\draw (10,-10.25) to[closing switch] (10,-11.25);
+			\draw  (9.5,-10.25) rectangle (10.5,-11.25);
+			\draw [short] (10,-9.75) -- (10,-10.25);
+			\draw [short] (10,-11.25) -- (10,-11.75);
+			\draw [short] (8.5,-11.75) -- (11.5,-11.75);
+			\draw [->, >=Stealth] (8.5,-11.75) -- (8.5,-12.75);
+			\draw [->, >=Stealth] (10,-11.75) -- (10,-12.75);
+			\draw [->, >=Stealth] (11.5,-11.75) -- (11.5,-12.75);
+			\node [font=\normalsize] at (8,-6.5) {};
+			\node [font=\normalsize] at (6.75,-6.5) {};
+			\node [font=\normalsize] at (9,-6.5) {};
+			\node [font=\normalsize] at (9.75,-6.5) {};
+			\node [font=\normalsize] at (8,-6.5) {};
+			\node [font=\normalsize] at (6.75,-6.5) {};
+			\node [font=\normalsize] at (9,-6.5) {};
+			\node [font=\normalsize] at (9.75,-6.5) {};
+			\draw [short] (6,-11.75) -- (6.5,-11.75);
+			\draw [dashed] (6.5,-11.75) -- (8.75,-11.75);
+			\draw [short] (14,-11.75) -- (13.5,-11.75);
+			\draw [dashed] (13.5,-11.75) -- (11.25,-11.75);
+			\draw [->, >=Stealth] (6,-11.75) -- (6,-12.75);
+			\draw [->, >=Stealth] (14,-11.75) -- (14,-12.75);
+			\draw [, dashed] (14.75,-13.75) rectangle  (5.25,-5.5);
+			\node [font=\normalsize] at (10,-13.25) {Suministro de emergencia.};
+			\node [font=\normalsize] at (8.25,-0.75) {380V};
+			\node [font=\normalsize] at (8.5,4.5) {10kV};
+			\node [font=\normalsize] at (3.75,-0.75) {Distribución principal de baja tensión.};
+			\node [font=\normalsize] at (2.5,4.75) {Servicios};
+			\node [font=\normalsize] at (2.5,4.25) {auxiliares.};
+			\draw [](19.5,-1.25) to[short] (19.5,-1.75);
+			\draw  (19,-1.75) rectangle (20,-2.75);
+			\draw (19.5,-1.75) to[closing switch] (19.5,-2.75);
+			\draw [short] (19.5,-2.75) -- (19.5,-4.25);
+			\draw [short] (19.5,-4.25) -- (19.5,-5);
+			\draw  (19,-5) rectangle (20,-6);
+			\draw (19.5,-5) to[closing switch] (19.5,-6);
+			\draw [](19.5,-6) to[short] (19.5,-6.5);
+			\draw[] (22.5,-6.5) to[short] (16.5,-6.5);
+			\draw (19.5,-7) to[closing switch] (19.5,-8);
+			\draw  (19.25,-8) rectangle (19.75,-9);
+			\draw [short] (19.5,-6.5) -- (19.5,-7);
+			\draw [short] (19.5,-9) -- (19.5,-9.5);
+			\draw (21,-7) to[closing switch] (21,-8);
+			\draw (22.5,-7) to[closing switch] (22.5,-8);
+			\draw  (20.75,-8) rectangle (21.25,-9);
+			\draw [short] (21,-6.5) -- (21,-7);
+			\draw [short] (21,-9) -- (21,-9.5);
+			\draw  (22.25,-8) rectangle (22.75,-9);
+			\draw [short] (22.5,-6.5) -- (22.5,-7);
+			\draw [short] (22.5,-9) -- (22.5,-9.5);
+			\draw (18,-7) to[closing switch] (18,-8);
+			\draw  (17.75,-8) rectangle (18.25,-9);
+			\draw [short] (18,-6.5) -- (18,-7);
+			\draw [short] (18,-9) -- (18,-9.5);
+			\draw (16.5,-7) to[closing switch] (16.5,-8);
+			\draw  (16.25,-8) rectangle (16.75,-9);
+			\draw [short] (16.5,-6.5) -- (16.5,-7);
+			\draw [short] (16.5,-9) -- (16.5,-9.5);
+			\draw  (22.5,-10) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (22.5,-10) {M};
+			\draw  (21,-10) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (21,-10) {M};
+			\draw  (19.5,-10) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (19.5,-10) {M};
+			\draw  (18,-10) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (18,-10) {};
+			\draw  (16.5,-10) circle (0.5cm) node {\normalsize M} ;
+			\node [font=\normalsize] at (16.5,-10) {};
+			\draw [](16.25,-8.5) to[short] (16.75,-8.5);
+			\draw [](17.75,-8.5) to[short] (18.25,-8.5);
+			\draw [](19.25,-8.5) to[short] (19.75,-8.5);
+			\draw [](20.75,-8.5) to[short] (21.25,-8.5);
+			\draw [](22.25,-8.5) to[short] (22.75,-8.5);
+			\draw [dashed] (16.75,-7.5) -- (17,-7.5);
+			\draw [dashed] (17,-7.5) -- (17,-8.75);
+			\draw [dashed] (16.75,-8.75) -- (17,-8.75);
+			\draw [dashed] (16.75,-8.25) -- (17,-8.25);
+			\draw [dashed] (18.25,-7.5) -- (18.5,-7.5);
+			\draw [dashed] (18.5,-7.5) -- (18.5,-8.75);
+			\draw [dashed] (18.25,-8.75) -- (18.5,-8.75);
+			\draw [dashed] (18.25,-8.25) -- (18.5,-8.25);
+			\draw [dashed] (19.75,-7.5) -- (20,-7.5);
+			\draw [dashed] (20,-7.5) -- (20,-8.75);
+			\draw [dashed] (20,-8.75) -- (19.75,-8.75);
+			\draw [dashed] (19.75,-8.25) -- (20,-8.25);
+			\draw [dashed] (21.25,-8.75) -- (21.5,-8.75);
+			\draw [dashed] (21.5,-8.75) -- (21.5,-7.5);
+			\draw [dashed] (21.5,-7.5) -- (21.25,-7.5);
+			\draw [dashed] (21.25,-8.25) -- (21.5,-8.25);
+			\draw [dashed] (23,-8.75) -- (23,-7.5);
+			\draw [dashed] (22.75,-7.5) -- (23,-7.5);
+			\draw [dashed] (22.75,-8.25) -- (23,-8.25);
+			\draw [dashed] (22.75,-8.75) -- (23,-8.75);
+			\node [font=\normalsize] at (16.5,-8.25) {V};
+			\node [font=\normalsize] at (18,-8.25) {V};
+			\node [font=\normalsize] at (19.5,-8.25) {V};
+			\node [font=\normalsize] at (21,-8.25) {V};
+			\node [font=\normalsize] at (22.5,-8.25) {V};
+			\node [font=\normalsize] at (22.5,-8.75) {A};
+			\node [font=\normalsize] at (21,-8.75) {A};
+			\node [font=\normalsize] at (19.5,-8.75) {A};
+			\node [font=\normalsize] at (18,-8.75) {A};
+			\node [font=\normalsize] at (16.5,-8.75) {A};
+			\node [font=\normalsize] at (23.25,-6) {Distribución secundaria de baja tensión.};
+			\draw [short] (10,-1.25) -- (19.5,-1.25);
+		\end{circuitikz}
+	\label{fig:my_label}
+\end{adjustbox}
+\end{figure}
+
+
+\section{Suministro de reserva de los servicios auxiliares.}
+\subsection{Posibilidad A.}
+Se dispone de un transformador (TA) de arranque o auxiliar en el caso de que falle el transformador
+(TSA) . Se puede utilizar uno u otro a través de una conmutación automática (CA). También se pueden conectar grupos electrógenos a la barra de 6 kV en caso de emergencia, si el TA es
+de poca potencia.
+
+
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{width=0.8\textwidth}	
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw  (7,11.75) rectangle (7.5,11.25);
+			\draw [short] (7,11.5) -- (7.25,11.75);
+			\draw [short] (7,11.25) -- (7.5,11.75);
+			\draw [short] (7.25,11.25) -- (7.5,11.5);
+			\draw [short] (7.5,11.25) -- (7,11.75);
+			\draw [short] (7,11.5) -- (7.25,11.25);
+			\draw [short] (7.25,11.75) -- (7.5,11.5);
+			\draw [short] (7.25,11.25) -- (7.25,10.25);
+			\draw [short] (7.25,10.75) -- (9.5,10.75);
+			\draw (7.25,10.25) to[closing switch] (7.25,9.25);
+			\draw  (7.25,8.75) circle (0.25cm);
+			\draw  (7.25,8.5) circle (0.25cm);
+			\draw [short] (7.25,8.25) -- (7.25,7.75);
+			\draw [short] (7.25,7.75) -- (7.25,7.5);
+			\draw [short] (7.25,7.75) -- (6.5,7.75);
+			\draw (7.25,7.5) to[closing switch] (7.25,6.5);
+			\draw [short] (7.25,9.25) -- (7.25,9);
+			\draw  (7.25,5.75) circle (0.5cm) node {\normalsize $G$} ;
+			\draw [short] (6.5,7.75) -- (5.75,7.75);
+			\draw [short] (5.75,7.75) -- (5,7.75);
+			\draw [short] (5,7.75) -- (5,7);
+			\draw  (5,6.75) circle (0.25cm);
+			\draw  (5,6.5) circle (0.25cm);
+			\draw [short] (5,6.25) -- (5,5.75);
+			\draw (5,5.75) to[closing switch] (5,4.75);
+			\draw [short] (7.25,6.75) -- (7.25,6.25);
+			\draw [short] (3.75,4.75) -- (5,4.75);
+			\draw [short] (5,4.75) -- (7.5,4.75);
+			\draw (5,4.75) to[closing switch] (5,3.75);
+			\node [font=\normalsize] at (5,3.75) {};
+			\node [font=\normalsize] at (5,3.75) {};
+			\draw  (5,3) circle (0.5cm) node {\normalsize $G$} ;
+			\node [font=\normalsize] at (7.75,6) {};
+			\node [font=\normalsize] at (7.75,6) {};
+			\draw [short] (5,3.5) -- (5,3.75);
+			\node [font=\normalsize] at (3.75,3.75) {};
+			\draw (3.75,4.75) to[closing switch] (3.75,3.75);
+			\draw [->, >=Stealth] (3.75,3.75) -- (3.75,3);
+			\draw [dashed] (3.75,4.75) -- (2.75,4.75);
+			\draw (2.25,4.75) to[closing switch] (2.25,3.75);
+			\node [font=\normalsize] at (2.75,3.5) {};
+			\draw [short] (2.25,4.75) -- (2.75,4.75);
+			\draw [->, >=Stealth] (2.25,3.75) -- (2.25,3);
+			\node [font=\normalsize] at (6.25,3.5) {};
+			\draw (6.25,4.75) to[closing switch] (6.25,3.75);
+			\draw (7.5,4.75) to[closing switch] (7.5,3.75);
+			\draw [->, >=Stealth] (6.25,3.75) -- (6.25,3);
+			\draw [->, >=Stealth] (7.5,3.75) -- (7.5,3);
+			\draw (8,4.75) to[closing switch] (9,4.75);
+			\draw [short] (7.5,4.75) -- (8,4.75);
+			\draw [short] (9.5,10.75) -- (9.5,10.25);
+			\draw (9.5,10.25) to[closing switch] (9.5,9.25);
+			\draw [short] (9.5,9.25) -- (9.5,9);
+			\draw  (9.5,8.75) circle (0.25cm);
+			\draw  (9.5,8.5) circle (0.25cm);
+			\draw (9.5,7.5) to[closing switch] (9.5,6.5);
+			\draw [short] (9.5,8.25) -- (9.5,7.5);
+			\draw [short] (9.5,6.5) -- (9.5,4.75);
+			\draw [short] (9.5,4.75) -- (9,4.75);
+			\draw (10,4.75) to[closing switch] (11,4.75);
+			\draw [short] (11.5,4.75) -- (11,4.75);
+			\node [font=\normalsize] at (10,4.75) {};
+			\draw [short] (9.5,4.75) -- (10,4.75);
+			\node [font=\normalsize] at (10,8.5) {TA};
+			\node [font=\normalsize] at (7.75,8.5) {TB};
+			
+			
+			\node [font=\normalsize] at (7.75,9.75) {IR};
+			\node [font=\normalsize] at (7.75,11.5) {RI};
+			\node [font=\normalsize] at (7.75,7) {IG};
+			\node [font=\normalsize] at (5.75,6.5) {TSA};
+			\node [font=\normalsize] at (5,2.25) {TG};
+			\node [font=\normalsize] at (6.25,5) {6kV};
+			\node [font=\normalsize] at (3,5.25) {Servicios auxiliares};
+			\node [font=\normalsize] at (14.5,4.75) {Al bloque 2 de la central.};
+			\draw [->, >=Stealth, dashed] (11.5,4.75) -- (12.5,4.75);
+		\end{circuitikz}
+	\label{fig:my_label}
+\end{adjustbox}
+\end{figure}
+\subsection{Posibilidad B.}
+La energía necesaria para el arranque y parada se recibe a través del transformador principal (TB) con
+el interruptor del generador (IG) abierto. Con esta disposición, ante caídas de tensión en la red (RI) por cortocircuitos, no es posible asegurar la
+continuidad de los servicios auxiliares . Por tanto, la única salida posible es la parada de emergencia
+de la central.
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{width=0.35\textwidth}
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw  (7,11.75) rectangle (7.5,11.25);
+			\draw [short] (7,11.5) -- (7.25,11.75);
+			\draw [short] (7,11.25) -- (7.5,11.75);
+			\draw [short] (7.25,11.25) -- (7.5,11.5);
+			\draw [short] (7.5,11.25) -- (7,11.75);
+			\draw [short] (7,11.5) -- (7.25,11.25);
+			\draw [short] (7.25,11.75) -- (7.5,11.5);
+			\draw [short] (7.25,11.25) -- (7.25,10.25);
+			\draw (7.25,10.25) to[closing switch] (7.25,9.25);
+			\draw  (7.25,8.75) circle (0.25cm);
+			\draw  (7.25,8.5) circle (0.25cm);
+			\draw [short] (7.25,8.25) -- (7.25,7.75);
+			\draw [short] (7.25,7.75) -- (7.25,7.5);
+			\draw [short] (7.25,7.75) -- (6.5,7.75);
+			\draw (7.25,7.5) to[closing switch] (7.25,6.5);
+			\draw [short] (7.25,9.25) -- (7.25,9);
+			\draw  (7.25,5.75) circle (0.5cm) node {\normalsize $G$} ;
+			\draw [short] (6.5,7.75) -- (5.75,7.75);
+			\draw [short] (5.75,7.75) -- (5,7.75);
+			\draw [short] (5,7.75) -- (5,7);
+			\draw  (5,6.75) circle (0.25cm);
+			\draw  (5,6.5) circle (0.25cm);
+			\draw [short] (5,6.25) -- (5,5.75);
+			\draw (5,5.75) to[closing switch] (5,4.75);
+			\draw [short] (7.25,6.75) -- (7.25,6.25);
+			\draw [short] (3.75,4.75) -- (5,4.75);
+			\draw [short] (5,4.75) -- (7.5,4.75);
+			\node [font=\normalsize] at (5,3.75) {};
+			\node [font=\normalsize] at (5,3.75) {};
+			\node [font=\normalsize] at (7.75,6) {};
+			\node [font=\normalsize] at (7.75,6) {};
+			\draw [short] (5,7.25) -- (5,7.5);
+			\node [font=\normalsize] at (3.75,3.75) {};
+			\draw (3.75,4.75) to[closing switch] (3.75,3.75);
+			\draw [->, >=Stealth] (3.75,3.75) -- (3.75,3);
+			\draw [dashed] (3.75,4.75) -- (2.75,4.75);
+			\draw (2.25,4.75) to[closing switch] (2.25,3.75);
+			\node [font=\normalsize] at (2.75,3.5) {};
+			\draw [short] (2.25,4.75) -- (2.75,4.75);
+			\draw [->, >=Stealth] (2.25,3.75) -- (2.25,3);
+			\node [font=\normalsize] at (6.25,3.5) {};
+			\draw (6.25,4.75) to[closing switch] (6.25,3.75);
+			\draw (7.5,4.75) to[closing switch] (7.5,3.75);
+			\draw [->, >=Stealth] (6.25,3.75) -- (6.25,3);
+			\draw [->, >=Stealth] (7.5,3.75) -- (7.5,3);
+			\draw [short] (7.25,8) -- (7.25,7.75);
+			\node [font=\normalsize] at (10,4.75) {};
+			\node [font=\normalsize] at (7.75,8.5) {TB};
+			
+			
+			\node [font=\normalsize] at (7.75,9.75) {IR};
+			\node [font=\normalsize] at (7.75,11.5) {RI};
+			\node [font=\normalsize] at (7.75,7) {IG};
+			\node [font=\normalsize] at (5.75,6.5) {TSA};
+			\node [font=\normalsize] at (6.25,5) {6kV};
+			\node [font=\normalsize] at (3,5.25) {Servicios auxiliares};
+		\end{circuitikz}
+	
+	\label{fig:my_label}
+\end{adjustbox}
+\end{figure}
+
+
+\section{Esquema de protecciones.}
+Las protecciones principales de una central son:
+\begin{itemize}
+	\item [-] Relé de sobreintensidad.
+	\item [-] Relé de sobretensión.
+	\item [-] Relé térmico.
+	\item [-] Relé de inversión de fases.
+	\item [-] Relé de protección a tierra.
+	\item [-] Relé diferencial.
+	\item [-] Relé de fallo intensidad
+	inductor.
+	\item [-] Relé de mínima tensión.
+\end{itemize}
+
+Dentro de las protecciones, hay que destacar el interruptor automático del generador (IG) utilizado para la maniobra de sincronización del generador con la red. Protege ante sobrecargas, cortocircuitos provocados por defectos internos del generador y corrientes
+de fallas provocadas por la una sincronización fuera de fase.
+
+
+Además, dispone de un seccionador de apertura en carga en serie para poder aislar el generador de la
+red en el caso de tener que realizar operaciones de mantenimiento del interruptor automático o del
+generador.
+
+\begin{figure}[H]
+	\centering
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw  (3.75,12.25) circle (0.5cm) node {\normalsize G} ;
+			\draw [short] (4.25,12.25) -- (4.75,12.25);
+			\draw  (6.5,12.25) circle (0.25cm);
+			\draw  (6.75,12.25) circle (0.25cm);
+			\draw [short] (5.75,12.25) -- (6.25,12.25);
+			\draw (4.75,12.25) to[opening switch] (5.75,12.25);
+			\draw [short] (8.5,12.25) -- (9,12.25);
+			\draw (7.5,12.25) to[opening switch] (8.5,12.25);
+			\draw [short] (7,12.25) -- (7.75,12.25);
+			\draw [short] (9,13) -- (9,11.5);
+			\node [font=\normalsize] at (9.75,12.25) {Red AT};
+			\draw [ color={rgb,255:red,241; green,9; blue,9}, ->, >=Stealth] (5,13) -- (5.75,13);
+			\draw [ color={rgb,255:red,241; green,9; blue,9}, ->, >=Stealth] (8.25,13) -- (7.5,13);
+			\node [font=\normalsize, color={rgb,255:red,241; green,9; blue,9}] at (5.25,13.25) {$I_g$};
+			\node [font=\normalsize, color={rgb,255:red,241; green,9; blue,9}] at (8,13.25) {$I_s$};
+			\draw [ color={rgb,255:red,249; green,1; blue,1}, short] (6.75,11.75) -- (6.25,11.25);
+			\draw [ color={rgb,255:red,241; green,9; blue,9}, short] (6.25,11.25) -- (6.75,11.25);
+			\draw [ color={rgb,255:red,241; green,9; blue,9}, short] (6.75,11.25) -- (6.25,10.75);
+			\draw [ color={rgb,255:red,249; green,1; blue,1}, short] (6.25,10.75) -- (6.25,11);
+			\draw [ color={rgb,255:red,241; green,9; blue,9}, short] (6.25,10.75) -- (6.5,10.75);
+			\node [font=\normalsize] at (7,14) {Con interruptor de generador.};
+			\draw  (11.5,12.25) circle (0.5cm) node {\normalsize G} ;
+			\draw [short] (12,12.25) -- (13.5,12.25);
+			\draw  (14.25,12.25) circle (0.25cm);
+			\draw  (14.5,12.25) circle (0.25cm);
+			\draw [short] (13.5,12.25) -- (14,12.25);
+			\draw [short] (16.25,12.25) -- (16.75,12.25);
+			\draw (15.25,12.25) to[opening switch] (16.25,12.25);
+			\draw [short] (14.75,12.25) -- (15.5,12.25);
+			\draw [short] (16.75,13) -- (16.75,11.5);
+			\node [font=\normalsize] at (17.5,12.25) {Red AT};
+			\draw [ color={rgb,255:red,241; green,9; blue,9}, ->, >=Stealth] (12.75,13) -- (13.5,13);
+			\draw [ color={rgb,255:red,241; green,9; blue,9}, ->, >=Stealth] (16,13) -- (15.25,13);
+			\node [font=\normalsize, color={rgb,255:red,241; green,9; blue,9}] at (13,13.25) {$I_g$};
+			\node [font=\normalsize, color={rgb,255:red,241; green,9; blue,9}] at (15.75,13.25) {$I_s$};
+			\draw [ color={rgb,255:red,249; green,1; blue,1}, short] (14.5,11.75) -- (14,11.25);
+			\draw [ color={rgb,255:red,241; green,9; blue,9}, short] (14,11.25) -- (14.5,11.25);
+			\draw [ color={rgb,255:red,241; green,9; blue,9}, short] (14.5,11.25) -- (14,10.75);
+			\draw [ color={rgb,255:red,249; green,1; blue,1}, short] (14,10.75) -- (14,11);
+			\draw [ color={rgb,255:red,241; green,9; blue,9}, short] (14,10.75) -- (14.25,10.75);
+			\node [font=\normalsize] at (14.75,14) {Sin interruptor de generador.};
+			\draw [->, >=Stealth] (3.75,8) -- (3.75,10.75);
+			\draw [->, >=Stealth] (3.25,8.5) -- (9,8.5);
+			\draw [->, >=Stealth] (11,8.5) -- (16.75,8.5);
+			\draw [->, >=Stealth] (11.5,8) -- (11.5,10.75);
+			\draw [ color={rgb,255:red,0; green,30; blue,255}, short] (3.75,10.25) -- (4.75,10.25);
+			\draw [ color={rgb,255:red,0; green,30; blue,255}, short] (11.5,10.25) -- (12.5,10.25);
+			\draw [ color={rgb,255:red,0; green,30; blue,255}, short] (12.5,10.25) -- (12.5,9.5);
+			\draw [ color={rgb,255:red,0; green,30; blue,255}, short] (12.5,9.5) -- (16.5,9);
+			\draw [ color={rgb,255:red,0; green,30; blue,255}, short] (4.75,10.25) -- (4.75,9.5);
+			\draw [ color={rgb,255:red,0; green,30; blue,255}, short] (4.75,9.5) -- (6,9.25);
+			\draw [ color={rgb,255:red,0; green,30; blue,255}, short] (6,9.25) -- (6,8.5);
+			\node [font=\normalsize] at (10.75,10.25) {$I_s+I_g$};
+			\node [font=\normalsize] at (3,10.25) {$I_s+I_g$};
+			\draw [dashed] (3.75,9.5) -- (4.75,9.5);
+			\draw [dashed] (4.75,9.5) -- (4.75,8.5);
+			\draw [dashed] (12.5,9.5) -- (11.5,9.5);
+			\draw [dashed] (12.5,9.5) -- (12.5,8.5);
+			\node [font=\normalsize] at (3.5,9.5) {$I_g$};
+			\node [font=\normalsize] at (11.25,9.5) {$I_g$};
+			\node [font=\normalsize] at (8,12) {$IA_{AT}$};
+			\node [font=\normalsize] at (15.75,12) {$IA_{AT}$};
+			\node [font=\normalsize] at (5.25,12) {$IA_{g}$};
+			\node [font=\normalsize] at (12.5,8.25) {$IA_{AT}$};
+			\node [font=\normalsize] at (4.75,8.25) {$IA_{AT}$};
+			\node [font=\normalsize] at (6,8.25) {$IA_{g}$};
+			\node [font=\normalsize] at (9.25,8.5) {$t$};
+			\node [font=\normalsize] at (17,8.5) {$t$};
+			\node [font=\normalsize] at (11.5,11) {$I$};
+			\node [font=\normalsize] at (3.75,11) {$I$};
+		\end{circuitikz}
+	\label{fig:my_label}
+\end{figure}
+
+Se define el grado de asimetría como:
+\[a=\frac{Offset}{\sqrt{2} I_{AC}}\]
+\begin{itemize}
+	\item [-] Si el cortocircuito se produce alimentado por la red de alta tensión por un fallo en bornes del generador:
+	\[a=64,5\%\]
+	\item [-]Si el cortocircuito se produce alimentado por el generador:
+	\[a=133,4\%\]
+\end{itemize}
+
+A mayor grado de asimetría más peligroso es el cortocircuito al desfasar más una de las fases.
+\section{Parada de emergencia.}
+Cuando fallan los suministros de los servicios auxiliares y la alimentación por el transformador principal en una central térmica se debe seguir suministrando tensión a los siguientes elementos:
+\begin{itemize}
+	\item [-] Bomba de aceite de los cojinetes.
+	\item [-] Bomba de aceite de juntas con generadores refrigerados con hidrógeno.
+	\item [-] Refrigeración.
+	\item [-] Alumbrado de emergencia.
+	\item [-] Actuadores de emergencia.
+\end{itemize}
+
+
+
+Estas cargas de alterna se alimentan directamente de baterías a través de ondulares o inversores. Por
+razones de seguridad, se suelen emplear dos grupos de baterías independientes. En las centrales nucleares las baterías y grupos electrógenos deben tener capacidad  para funcionar hasta 25h.
+
+
+\begin{figure}[H]
+	\centering
+		\textbf{Suministro de emergencia con grupos electrógenos en una central nuclear.}
+		 \begin{adjustbox}{width=0.7\textwidth}
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw  (3.75,14.25) rectangle (4.25,13.75);
+			\draw [short] (4,13.75) -- (4,12.5);
+			\draw  (4,12.25) circle (0.25cm);
+			\draw  (4,12) circle (0.25cm);
+			\draw [short] (4,11.75) -- (4,11.25);
+			\draw (4,10) to[closing switch] (4,11.25);
+			\draw  (4,9.5) circle (0.5cm);
+			\draw [short] (4,11.25) -- (16,11.25);
+			\draw [short] (9,11.25) -- (9,10.25);
+			\draw [short] (18.75,11.25) -- (18.75,10.25);
+			\draw  (9,10) circle (0.25cm);
+			\draw  (9.25,9.75) circle (0.25cm);
+			\draw  (8.75,9.75) circle (0.25cm);
+			\draw  (18.75,10) circle (0.25cm);
+			\draw  (19,9.75) circle (0.25cm);
+			\draw  (18.5,9.75) circle (0.25cm);
+			\draw [short] (8.5,9.75) -- (8.25,9.25);
+			\draw [short] (8.25,9.25) -- (8.25,9);
+			\draw [short] (9.5,9.75) -- (9.75,9.25);
+			\draw [short] (9.75,9.25) -- (9.75,9);
+			\draw [short] (18.25,9.75) -- (18,9.25);
+			\draw [short] (19.25,9.75) -- (19.5,9.25);
+			\draw [short] (19.5,9.25) -- (19.5,9);
+			\draw (8.25,8) to[closing switch] (8.25,9.25);
+			\draw (9.75,8) to[closing switch] (9.75,9.25);
+			\draw (19.5,8) to[closing switch] (19.5,9.25);
+			\draw (18,8) to[closing switch] (18,9.25);
+			\draw [short] (8.25,8) -- (8.25,7.75);
+			\draw [short] (8.25,7.75) -- (6,7.75);
+			\draw [short] (8.25,7.75) -- (8.25,7.5);
+			\draw (8.25,6.25) to[closing switch] (8.25,7.5);
+			\draw (6.75,6.25) to[closing switch] (6.75,7.5);
+			\draw [short] (6.75,7.5) -- (6.75,7.75);
+			\node [font=\LARGE] at (5.25,7.5) {};
+			\draw (5.25,6.25) to[closing switch] (5.25,7.5);
+			\node [font=\LARGE] at (6.75,7.5) {};
+			\draw [short] (5.25,7.5) -- (5.25,7.75);
+			\draw [short] (5.25,7.75) -- (6,7.75);
+			\draw [short] (9.75,8) -- (9.75,7.75);
+			\draw [short] (18,8) -- (18,7.75);
+			\draw [short] (19.5,8) -- (19.5,7.75);
+			\node [font=\LARGE] at (9.75,7.75) {};
+			\draw [short] (12.75,7.75) -- (10.5,7.75);
+			\draw [short] (9.75,7.75) -- (10.5,7.75);
+			\draw (9.75,6.25) to[closing switch] (9.75,7.5);
+			\node [font=\LARGE] at (11.25,7.5) {};
+			\node [font=\LARGE] at (11.25,7.5) {};
+			\draw (11.25,6.25) to[closing switch] (11.25,7.5);
+			\node [font=\LARGE] at (11.25,7.5) {};
+			\node [font=\LARGE] at (11.25,7.5) {};
+			\node [font=\LARGE] at (11.25,7.5) {};
+			\node [font=\LARGE] at (11.25,7.5) {};
+			\node [font=\LARGE] at (11.25,7.5) {};
+			\node [font=\LARGE] at (12.75,7.75) {};
+			\node [font=\LARGE] at (11.25,7.5) {};
+			\node [font=\LARGE] at (11.25,7.5) {};
+			\node [font=\LARGE] at (11.25,7.5) {};
+			\node [font=\LARGE] at (11.25,7.5) {};
+			\draw (12.75,6.25) to[closing switch] (12.75,7.5);
+			\draw [short] (9.75,7.75) -- (9.75,7.5);
+			\draw [short] (11.25,7.75) -- (11.25,7.5);
+			\draw [short] (18,8) -- (18,7.75);
+			\draw [short] (18,7.75) -- (15.75,7.75);
+			\draw [short] (18,7.75) -- (18,7.5);
+			\draw (18,6.25) to[closing switch] (18,7.5);
+			\draw (16.5,6.25) to[closing switch] (16.5,7.5);
+			\draw [short] (16.5,7.5) -- (16.5,7.75);
+			\node [font=\LARGE] at (15,7.5) {};
+			\draw (15,6.25) to[closing switch] (15,7.5);
+			\node [font=\LARGE] at (16.5,7.5) {};
+			\draw [short] (15,7.5) -- (15,7.75);
+			\draw [short] (15,7.75) -- (15.75,7.75);
+			\draw [short] (19.5,8) -- (19.5,7.75);
+			\node [font=\LARGE] at (19.5,7.75) {};
+			\draw [short] (22.5,7.75) -- (20.25,7.75);
+			\draw [short] (19.5,7.75) -- (20.25,7.75);
+			\draw (19.5,6.25) to[closing switch] (19.5,7.5);
+			\node [font=\LARGE] at (21,7.5) {};
+			\node [font=\LARGE] at (21,7.5) {};
+			\draw (21,6.25) to[closing switch] (21,7.5);
+			\node [font=\LARGE] at (21,7.5) {};
+			\node [font=\LARGE] at (21,7.5) {};
+			\node [font=\LARGE] at (21,7.5) {};
+			\node [font=\LARGE] at (21,7.5) {};
+			\node [font=\LARGE] at (21,7.5) {};
+			\node [font=\LARGE] at (22.5,7.75) {};
+			\node [font=\LARGE] at (21,7.5) {};
+			\node [font=\LARGE] at (21,7.5) {};
+			\node [font=\LARGE] at (21,7.5) {};
+			\node [font=\LARGE] at (21,7.5) {};
+			\draw (22.5,6.25) to[closing switch] (22.5,7.5);
+			\draw [short] (19.5,7.75) -- (19.5,7.5);
+			\draw [short] (21,7.75) -- (21,7.5);
+			\draw [short] (22.5,7.75) -- (22.5,7.5);
+			\draw [short] (12.75,7.5) -- (12.75,7.75);
+			\draw [short] (16,11.25) -- (18.75,11.25);
+			\draw [short] (5.25,6.25) -- (5.25,6);
+			\draw [short] (6.75,6.25) -- (6.75,6);
+			\draw [short] (8.25,6.25) -- (8.25,6);
+			\draw [short] (9.75,6.25) -- (9.75,6);
+			\draw [short] (11.25,6.25) -- (11.25,6);
+			\draw [short] (12.75,6.25) -- (12.75,6);
+			\draw [short] (15,6.25) -- (15,6);
+			\draw [short] (16.5,6.25) -- (16.5,6);
+			\draw [short] (18,6.25) -- (18,6);
+			\draw [short] (19.5,6.25) -- (19.5,6);
+			\draw [short] (21,6.25) -- (21,6);
+			\draw [short] (22.5,6.25) -- (22.5,6);
+			\draw  (5.25,5.75) circle (0.25cm);
+			\draw  (5.25,5.5) circle (0.25cm);
+			\draw  (11.25,5.75) circle (0.25cm);
+			\draw  (11.25,5.5) circle (0.25cm);
+			\draw  (15,5.75) circle (0.25cm);
+			\draw  (15,5.5) circle (0.25cm);
+			\draw  (21,5.75) circle (0.25cm);
+			\draw  (21,5.5) circle (0.25cm);
+			\draw  (6.75,5.5) circle (0.5cm);
+			\draw  (12.75,5.5) circle (0.5cm);
+			\draw  (16.5,5.5) circle (0.5cm);
+			\draw  (22.5,5.5) circle (0.5cm);
+			\draw [short] (9.75,6) -- (9.75,2);
+			\draw [short] (8.25,6) -- (8.25,2);
+			\draw (9.75,1) to[closing switch] (9.75,2.25);
+			\draw (8.25,1) to[closing switch] (8.25,2.25);
+			\draw [short] (8.25,1) -- (5.25,1);
+			\draw (5.25,1) to[closing switch] (5.25,2.25);
+			\draw [short] (19.5,6) -- (19.5,2);
+			\draw [short] (18,6) -- (18,2);
+			\draw (19.5,1) to[closing switch] (19.5,2.25);
+			\draw (18,1) to[closing switch] (18,2.25);
+			\draw [short] (18,1) -- (15,1);
+			\draw (15,1) to[closing switch] (15,2.25);
+			\draw  (5.25,2.5) circle (0.25cm);
+			\draw  (15,2.5) circle (0.25cm);
+			\draw [short] (5.5,2.5) -- (5.75,2.5);
+			\draw [short] (5.75,2.5) -- (5.75,3);
+			\draw [short] (5.75,3) -- (6,2.75);
+			\draw [short] (5.75,2.5) -- (5.75,2);
+			\draw [short] (5.75,2) -- (6,2.25);
+			\draw [short] (6,2.25) -- (6,2.75);
+			\draw [short] (15.25,2.5) -- (15.5,2.5);
+			\draw [short] (15.5,2.5) -- (15.5,3);
+			\draw [short] (15.5,3) -- (15.75,2.75);
+			\draw [short] (15.75,2.75) -- (15.75,2.25);
+			\draw [short] (15.75,2.25) -- (15.5,2);
+			\draw [short] (15.5,2) -- (15.5,2.5);
+			\draw (7.25,-0.25) to[closing switch] (7.25,1);
+			\draw (5.25,-0.25) to[closing switch] (5.25,1);
+			\draw  (7.25,-0.75) circle (0.5cm);
+			\draw [short] (12.75,1) -- (9.75,1);
+			\draw  (12.75,-0.75) circle (0.5cm);
+			\draw (10.75,-0.25) to[closing switch] (10.75,1);
+			\draw (12.75,-0.25) to[closing switch] (12.75,1);
+			\draw (15,-0.25) to[closing switch] (15,1);
+			\draw (17,-0.25) to[closing switch] (17,1);
+			\draw  (17,-0.75) circle (0.5cm);
+			\draw (10.75,1) to[closing switch] (10.75,2.25);
+			\draw  (10.75,2.5) circle (0.25cm);
+			\node [font=\LARGE] at (11.25,2.25) {};
+			\node [font=\LARGE] at (11,2.5) {};
+			\node [font=\LARGE] at (11.5,2.5) {};
+			\node [font=\LARGE] at (11.25,3) {};
+			\node [font=\LARGE] at (11.5,2.5) {};
+			\node [font=\LARGE] at (11.25,2.75) {};
+			\node [font=\LARGE] at (11.25,2.25) {};
+			\node [font=\LARGE] at (21.25,2.75) {};
+			\node [font=\LARGE] at (21.25,3) {};
+			\node [font=\LARGE] at (21.5,3) {};
+			\node [font=\LARGE] at (21.5,4) {};
+			\node [font=\LARGE] at (21.5,3) {};
+			\node [font=\LARGE] at (21.25,3.75) {};
+			\node [font=\LARGE] at (21.5,2.75) {};
+			\draw [short] (22.5,1) -- (19.5,1);
+			\draw  (22.5,-0.75) circle (0.5cm);
+			\draw (20.5,-0.25) to[closing switch] (20.5,1);
+			\draw (22.5,-0.25) to[closing switch] (22.5,1);
+			\draw (20.5,1) to[closing switch] (20.5,2.25);
+			\draw  (20.5,2.5) circle (0.25cm);
+			\node [font=\LARGE] at (21,2.25) {};
+			\node [font=\LARGE] at (20.75,2.5) {};
+			\node [font=\LARGE] at (21.25,2.5) {};
+			\node [font=\LARGE] at (21,3) {};
+			\node [font=\LARGE] at (21.25,2.5) {};
+			\node [font=\LARGE] at (21,2.75) {};
+			\node [font=\LARGE] at (21,2.25) {};
+			\draw [short] (11,2.5) -- (11.25,2.5);
+			\draw [short] (11.25,2.5) -- (11.25,3);
+			\draw [short] (11.25,3) -- (11.5,2.75);
+			\draw [short] (11.5,2.75) -- (11.5,2.25);
+			\draw [short] (11.5,2.25) -- (11.25,2);
+			\draw [short] (11.25,2) -- (11.25,2.5);
+			\draw [short] (21,2) -- (21,3);
+			\draw [short] (20.75,2.5) -- (21,2.5);
+			\draw [short] (21,2) -- (21.25,2.25);
+			\draw [short] (21.25,2.25) -- (21.25,2.75);
+			\draw [short] (21.25,2.75) -- (21,3);
+			\draw [short] (12.25,7) -- (12,7.5);
+			\draw  (5.25,-0.5) circle (0.25cm);
+			\draw  (5.25,-0.75) circle (0.25cm);
+			\draw  (10.75,-0.5) circle (0.25cm);
+			\draw  (10.75,-0.75) circle (0.25cm);
+			\draw  (15,-0.5) circle (0.25cm);
+			\draw  (15,-0.75) circle (0.25cm);
+			\draw  (20.5,-0.5) circle (0.25cm);
+			\draw  (20.5,-0.75) circle (0.25cm);
+			\draw (5.25,-2.25) to[closing switch] (5.25,-1);
+			\draw (10.75,-2.25) to[closing switch] (10.75,-1);
+			\draw (15,-2.25) to[closing switch] (15,-1);
+			\draw (20.5,-2.25) to[closing switch] (20.5,-1);
+			\draw (5.25,4) to[closing switch] (5.25,5.25);
+			\draw (11.25,4) to[closing switch] (11.25,5.25);
+			\draw (15,4) to[closing switch] (15,5.25);
+			\draw (21,4) to[closing switch] (21,5.25);
+			\draw [short] (5,4) -- (5.5,4);
+			\draw [short] (5,-2.25) -- (5.5,-2.25);
+			\draw [short] (10.5,-2.25) -- (11,-2.25);
+			\draw [short] (14.75,-2.25) -- (15.25,-2.25);
+			\draw [short] (20.25,-2.25) -- (20.75,-2.25);
+			\draw [, dashed] (4.5,3.25) rectangle  (13.75,-3);
+			\node [font=\normalsize] at (6,-2.25) {380V};
+			\node [font=\normalsize] at (11.5,-2.25) {380V};
+			\node [font=\normalsize] at (15.75,-2.25) {380V};
+			\node [font=\normalsize] at (21.25,-2.25) {380V};
+			\node [font=\normalsize] at (7.25,1.25) {10kV};
+			\node [font=\normalsize] at (12.75,1.25) {10kV};
+			\node [font=\normalsize] at (17,1.25) {10kV};
+			\node [font=\normalsize] at (22.5,1.25) {10kV};
+			\node [font=\normalsize] at (5.25,8) {10kV};
+			\node [font=\normalsize] at (12.75,8) {10kV};
+			\node [font=\normalsize] at (15,8) {10kV};
+			\node [font=\normalsize] at (22.5,8) {10kV};
+			\draw [](11,4) to[short] (11.5,4);
+			\draw [](14.75,4) to[short] (15.25,4);
+			\draw [](20.75,4) to[short] (21.25,4);
+			
+			
+			
+			
+			
+			\draw [short] (3.75,14) -- (4,14.25);
+			\draw [short] (3.75,13.75) -- (4.25,14.25);
+			\draw [short] (4,13.75) -- (4.25,14);
+			\draw [short] (3.75,14.25) -- (4.25,13.75);
+			\draw [short] (4,14.25) -- (4.25,14);
+			\draw [short] (3.75,14) -- (4,13.75);
+			\draw [, dashed] (14.25,3.25) rectangle  (23.5,-3);
+			\node [font=\normalsize] at (6.75,5.5) {M};
+			\node [font=\normalsize] at (12.75,5.5) {M};
+			\node [font=\normalsize] at (22.5,5.5) {M};
+			\node [font=\normalsize] at (16.5,5.5) {M};
+			\node [font=\normalsize] at (7.25,-0.75) {M};
+			\node [font=\normalsize] at (12.75,-0.75) {M};
+			\node [font=\normalsize] at (17,-0.75) {M};
+			\node [font=\normalsize] at (22.5,-0.75) {M};
+			\node [font=\normalsize] at (4,9.5) {G};
+			\node [font=\normalsize] at (12,4) {380V};
+			\node [font=\normalsize] at (6,4) {380V};
+			\node [font=\normalsize] at (21.75,4) {380V};
+			\node [font=\normalsize] at (15.75,4) {380V};
+			\node [font=\normalsize] at (8,-2.75) {Rama A de la instalación de emergencia.};
+			\node [font=\normalsize] at (18,-2.75) {Rama B de la instalación de emergencia.};
+			\draw [->, >=Stealth] (3.75,3.75) -- (5,2.75);
+			\node [font=\normalsize] at (3.25,4) {Grupo electrógeno.};
+		\end{circuitikz}
+	\label{fig:my_label}
+\end{adjustbox}
+\end{figure}
+\section{Arranque en centrales de ciclo combinado.}
+Para poder realizar la combustión del gas natural se necesita aire a presión superior a la atmosférica. Para ello, es necesario mover el compresor rotativo de la turbina y, para ello, se debe usar el generador como motor.
+
+
+Para este arranque, se utiliza un arrancador estático, SDD (static frecuency converter) mediante una maniobra que dura unos 12 minutos. No obstante, el SDD introduce armónicos en los equipos electrónicos. Por ello, se impone que tenga un THD <5\% hasta el armónico.
+
+
+Para alimentar el SDD se utiliza un transformador con un valor alto de reactancia y así impedir la circulación
+de corrientes armónicas hacia el transformador de servicios auxiliares. El SDD alimenta a la máquina a una tensión menor de la tensión nominal, por ejemplo, si la UN = 21 kV , el
+SDD lo alimenta para arrancar a 6 kV.
+\newline
+
+
+Una vez inyectado el combustible en la turbina de gas y alcanzado el par y la velocidad de sincronismo, se
+desconecta el arrancador estático abriendo el interruptor 41SFC y el seccionador 89SFC. A continuación se excita al generador a través del transformador de excitación Tex cerrando previamente el interruptor
+41G, quedando autoexcitado el generador.
+\begin{center}
+	[véase figura inferior]
+\end{center}
+
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{width=0.6\textwidth}
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw [short] (5.5,11.5) -- (5.5,11);
+			\draw  (5.5,10.75) circle (0.25cm);
+			\draw  (5.5,10.5) circle (0.25cm);
+			\draw [short] (5.5,10.25) -- (5.5,9.75);
+			\draw  (5.25,9.25) rectangle (5.75,8.75);
+			\draw [short] (5.5,9.25) -- (5.5,9.5);
+			\draw [short] (5.5,9.75) -- (5.5,9.5);
+			\draw [short] (5.5,9.75) -- (10.75,9.75);
+			\draw [short] (5.5,8.75) -- (5.5,8.25);
+			\draw [short] (5.5,8.25) -- (7.25,8.25);
+			\draw (7.25,7.75) to[closing switch] (7.25,6.75);
+			\draw [short] (7.25,7.75) -- (7.25,8.25);
+			\draw [short] (5.5,8.25) -- (5.5,5.75);
+			\draw  (5.5,5) circle (0.5cm) node {\normalsize G} ;
+			\draw  (5.5,5) circle (0.75cm);
+			\draw [short] (4.75,5) -- (3.75,5);
+			\draw [short] (3.75,5) -- (3.75,5.5);
+			\draw [short] (3.75,5) -- (3.75,4.5);
+			\draw  (3.5,4.5) rectangle (4,4);
+			\draw  (3.5,6) rectangle (4,5.5);
+			\draw (3.75,7.5) to[Ty] (3.75,6.5);
+			\draw [short] (3.75,6.5) -- (3.75,6);
+			\draw [short] (7.25,6.75) -- (7.25,5);
+			\draw [short] (7.25,3.5) -- (8.75,3.5);
+			\draw [short] (8.75,3.5) -- (8.75,4);
+			\draw (8.75,5) to[Ty] (8.75,4);
+			\draw [short] (8.75,5) -- (8.75,5.5);
+			\draw (8.75,6.5) to[Ty] (8.75,5.5);
+			\draw [short] (7.25,5) -- (7.25,4.5);
+			\draw [short] (8.75,6.5) -- (8.75,6.75);
+			\draw  (8.5,7.75) rectangle (9,7.25);
+			\draw [short] (3.75,7.5) -- (3.75,8);
+			\draw [short] (3.75,8) -- (2,8);
+			\draw [short] (8.75,7.25) -- (8.75,6.75);
+			\draw [short] (8.75,6.75) -- (9.5,6.75);
+			\draw [short] (7.25,4.5) -- (7.25,4);
+			\draw [short] (9.5,6.75) -- (10.25,6.75);
+			\draw [short] (10.25,6.75) -- (10.25,6.25);
+			\draw  (10.25,6) circle (0.25cm);
+			\draw  (10.25,5.75) circle (0.25cm);
+			\draw (10.25,5) to[Ty] (10.25,4);
+			\draw [short] (10.25,5.5) -- (10.25,5);
+			\draw [short] (10.25,4) -- (10.25,3.5);
+			\draw [short] (10.25,3.5) -- (10.25,3);
+			\draw [short] (3.75,4) -- (3.75,3.5);
+			\draw [short] (3.75,3) -- (10.25,3);
+			\draw [short] (3.75,3.5) -- (3.75,3);
+			\draw [short] (7.25,4) -- (7.25,3.5);
+			\draw [short] (8.75,7.75) -- (8.75,8.25);
+			\draw [short] (8.75,8.25) -- (10.25,8.25);
+			\draw [short] (10.25,8.25) -- (11,8.25);
+			\draw [short] (11,8.25) -- (11.75,8.25);
+			\draw [short] (11.75,8.25) -- (11.75,4.5);
+			\draw [short] (10.75,9.75) -- (11.75,9.75);
+			\draw [short] (11.75,9.75) -- (13.25,9.75);
+			\draw [short] (13.25,9.75) -- (13.25,9.25);
+			\draw  (13.25,8.75) circle (0.25cm);
+			\draw  (13,8.5) circle (0.25cm);
+			\draw  (13.5,8.5) circle (0.25cm);
+			\draw [dashed] (12.75,8.5) -- (3.75,8.5);
+			\draw [dashed] (3.75,8.5) -- (3.75,8);
+			\draw [short] (13.25,9.25) -- (13.25,9);
+			\draw [short] (13.5,8.25) -- (13.5,7.75);
+			\draw  (13.25,7.75) rectangle (13.75,7.25);
+			\draw [short] (13.5,7.25) -- (13.5,6.75);
+			\draw [short] (13.5,6.75) -- (14.25,6.75);
+			\draw [short] (14.25,6.75) -- (15,6.75);
+			\draw [short] (13.5,6.75) -- (13.5,6.25);
+			\draw [short] (15,6.75) -- (15,6.25);
+			\draw  (13.25,6.25) rectangle (13.75,5.75);
+			\draw  (14.75,6.25) rectangle (15.25,5.75);
+			\draw [short] (13.5,5.75) -- (13.5,5.25);
+			\draw [short] (15,5.75) -- (15,5.25);
+			\draw  (13.5,5) circle (0.25cm);
+			\draw  (13.5,4.75) circle (0.25cm);
+			\draw  (15,5) circle (0.25cm);
+			\draw  (15,4.75) circle (0.25cm);
+			\draw [short] (13.5,4.5) -- (13.5,4);
+			\draw [short] (13.5,4) -- (11.75,4);
+			\draw [short] (11.75,4) -- (11.75,4.5);
+			\draw [short] (15,4.5) -- (15,3);
+			\draw [short] (15,3) -- (15,2.5);
+			\draw [short] (15,2.5) -- (2,2.5);
+			\draw [short] (2,2.5) -- (2,8);
+			\node [font=\normalsize] at (3,5.75) {41G};
+			\node [font=\normalsize] at (3,4.25) {41SFC};
+			\draw [ color={rgb,255:red,0; green,8; blue,255} , dashed] (4.6,3.75) rectangle  (2.25,7.5);
+			\node [font=\normalsize] at (9.5,7.5) {52S-C};
+			\node [font=\normalsize] at (14.25,7.5) {52A};
+			\node [font=\normalsize] at (14.25,4.75) {TAR};
+			\node [font=\normalsize] at (15.75,4.75) {Tex};
+			\node [font=\normalsize] at (14.25,8.5) {TAG};
+			\node [font=\normalsize] at (6.25,9) {52G};
+			\node [font=\normalsize] at (6.25,10.5) {TP};
+			\draw [ color={rgb,255:red,0; green,8; blue,255} , dashed] (8.25,8) rectangle  (11.1,3.7);
+			\node [font=\normalsize, color={rgb,255:red,0; green,8; blue,255}] at (9.5,3.25) {SSD};
+			\node [font=\normalsize, color={rgb,255:red,0; green,8; blue,255}] at (3,3.5) {AVR};
+			\node [font=\normalsize] at (6.5,7.25) {89SFC};
+			\node [font=\normalsize] at (9.25,8.75) {(Texc alternativa)};
+		\end{circuitikz}
+
+	\label{fig:my_label}
+\end{adjustbox}
+\end{figure}
+
+
+
+
+El SDD también se emplea en centrales de bombeo.
+\newpage
+\begin{landscape}
+\section{Esquema unifilar eléctrico de una central de ciclo combinado de 2 x 400 MW con transformador de
+	arranque. Configuración monoeje.}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{width=1.5\textwidth}
+		\begin{circuitikz}
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw [short] (0.75,11.75) -- (0.75,11);
+			\draw  (0.75,10.75) circle (0.25cm);
+			\draw  (0.75,10.5) circle (0.25cm);
+			\draw [short] (0.75,10.25) -- (0.75,9.75);
+			\draw [short] (27.5,9.75) -- (27.75,9.75);
+			\draw [short] (0.75,9.75) -- (0.75,9.25);
+			\draw  (0.5,9.25) rectangle (1,8.75);
+			\draw [short] (0.75,8.75) -- (0.75,8.25);
+			\draw [short] (0.75,8.25) -- (1.5,8.25);
+			\draw (1.5,8.25) to[closing switch] (2.5,8.25);
+			\draw [short] (2.5,8.25) -- (3.25,8.25);
+			\draw [short] (3.25,8.25) -- (3.25,7.75);
+			\draw (3.25,7.75) to[closing switch] (3.25,6.75);
+			\draw [short] (3.25,6.75) -- (3.25,6);
+			\draw [short] (3.25,4) -- (4,4);
+			\draw  (4,4.25) rectangle (4.75,3.75);
+			\draw [short] (3.25,6) -- (3.25,5.25);
+			\draw [short] (3.25,5.25) -- (3.25,2.5);
+			\draw [short] (3.25,2.5) -- (4,2.5);
+			\draw (4,2.5) to[closing switch] (5,2.5);
+			\draw [->, >=Stealth, dashed] (5,2.5) -- (6.25,2.5);
+			\draw [short] (4.75,4) -- (5.5,4);
+			\draw [short] (5.5,4) -- (5.5,4.75);
+			\draw  (5.5,5) circle (0.25cm);
+			\draw  (5.5,5.25) circle (0.25cm);
+			\draw [short] (5.5,5.5) -- (5.5,6);
+			\draw [short] (5.5,6) -- (5.5,5.75);
+			\draw  (5.25,6.5) rectangle (5.75,6);
+			\draw [short] (5.5,6.5) -- (5.5,7);
+			\draw [short] (5.5,7) -- (6,7);
+			\draw [short] (5.5,7) -- (5.5,7.5);
+			\draw  (5.25,8) rectangle (5.75,7.5);
+			\draw [short] (5.5,8) -- (5.5,8.5);
+			\draw  (5.5,8.75) circle (0.25cm);
+			\draw  (5.5,9) circle (0.25cm);
+			\draw [short] (5.5,9.25) -- (5.5,9.75);
+			\draw [short] (27.75,9.75) -- (32.25,9.75);
+			\draw [short] (0.75,8.25) -- (0.75,3);
+			\draw [short] (0.75,3) -- (0.75,2);
+			\draw  (0.75,1.5) circle (0.5cm) node {\normalsize G} ;
+			\draw (2,1) to[L ] (2,2);
+			\draw [](0.75,1) to[short] (0.75,0);
+			\draw [](0.5,0.25) to[short] (0.5,0);
+			\draw [](0.5,0) to[short] (1,0);
+			\draw [](1,0) to[short] (1,0.25);
+			\draw [](0.75,0) to[short] (0.75,-0.5);
+			\draw (0.75,-0.5) to[L ] (0.75,-1.75);
+			\draw (2,-1.75) to[L ] (2,-0.5);
+			\draw [short] (2,-0.5) -- (2.75,-0.5);
+			\draw [short] (2,1) -- (3.25,1);
+			\draw  (3.25,1.25) rectangle (4,0.75);
+			\draw  (2.5,-0.75) rectangle (3,-1.5);
+			\draw [short] (2.75,-0.5) -- (2.75,-0.75);
+			\draw [short] (2,-1.75) -- (2.75,-1.75);
+			\draw [short] (2.75,-1.75) -- (2.75,-1.5);
+			\draw [short] (2.75,-1.75) -- (2.75,-2);
+			\draw [short] (0.75,-1.75) -- (0.75,-2);
+			\draw (2.75,-2) to (2.75,-2.25) node[ground]{};
+			\draw (0.75,-2) to (0.75,-2.25) node[ground]{};
+			\draw [](4,1) to[short] (7,1);
+			\draw [](7,3) to[short] (7,1);
+			\draw [](7,3) to[short] (7,4);
+			\draw [](7,4) to[short] (7,4.75);
+			\draw [](7,5.5) to[short] (7,6);
+			\draw [](7,6.5) to[short] (7,7);
+			\draw[] (7,7) to[short] (6,7);
+			\draw [](7,7) to[short] (7.75,7);
+			\draw [](7.75,7) to[short] (8.5,7);
+			\draw [](8.5,7) to[short] (8.5,6.5);
+			\draw [](8.5,7) to[short] (10,7);
+			\draw [](10,7) to[short] (10,6.5);
+			\draw [](8.5,6) to[short] (8.5,5.5);
+			\draw [](10,6) to[short] (10,5.5);
+			\draw  (6.75,6.5) rectangle (7.25,6);
+			\draw  (8.25,6.5) rectangle (8.75,6);
+			\draw  (9.75,6.5) rectangle (10.25,6);
+			\draw  (10.5,7.25) rectangle (11,6.75);
+			\draw [short] (10,7) -- (10.5,7);
+			\draw [short] (11,7) -- (11.5,7);
+			\draw [short] (11.5,7) -- (11.5,6.5);
+			\draw [short] (11.5,7) -- (13,7);
+			\draw [short] (13,7) -- (13,6.5);
+			\draw [short] (13,7) -- (13.5,7);
+			\draw  (11.25,6.5) rectangle (11.75,6);
+			\draw  (12.75,6.5) rectangle (13.25,6);
+			\draw  (13.5,7.25) rectangle (14,6.75);
+			\draw [short] (14,7) -- (14.5,7);
+			\draw [dashed] (14.5,12.75) -- (14.5,-3.75);
+			\draw [short] (11.5,6) -- (11.5,5.5);
+			\draw [short] (13,6) -- (13,5.5);
+			\draw  (7,5.25) circle (0.25cm);
+			\draw  (7,5) circle (0.25cm);
+			\draw  (8.5,5.25) circle (0.25cm);
+			\draw  (8.5,5) circle (0.25cm);
+			\draw  (10,5.25) circle (0.25cm);
+			\draw  (10,5) circle (0.25cm);
+			\draw  (11.5,5.25) circle (0.25cm);
+			\draw  (11.5,5) circle (0.25cm);
+			\draw  (13,5.25) circle (0.25cm);
+			\draw  (13,5) circle (0.25cm);
+			\draw [short] (8.5,-2.5) -- (10.5,-2.5);
+			\draw [short] (8.5,-2.5) -- (8.5,-2);
+			\draw  (8.25,-2) rectangle (8.75,-1.5);
+			\draw  (10.5,-2.25) rectangle (11,-2.75);
+			\draw [short] (14.5,-2.5) -- (14,-2.5);
+			\draw [short] (13.5,-2.5) -- (11,-2.5);
+			\draw  (13.5,-2.25) rectangle (14,-2.75);
+			\draw [short] (13,-2.5) -- (13,-2);
+			\draw  (12.75,-2) rectangle (13.25,-1.5);
+			\draw [short] (8.5,4.75) -- (8.5,-1.5);
+			\draw [short] (13,4.75) -- (13,-1.5);
+			\draw [short] (10,1) -- (10.5,1);
+			\draw  (10.5,1.25) rectangle (11,0.75);
+			\draw [short] (10,1) -- (10,1.5);
+			\draw [short] (11.5,1) -- (11.5,1.5);
+			\draw  (9.75,2) rectangle (10.25,1.5);
+			\draw  (11.25,2) rectangle (11.75,1.5);
+			\draw [short] (10,4.75) -- (10,2);
+			\draw [short] (11.5,4.75) -- (11.5,2);
+			\draw [short] (11,1) -- (11.5,1);
+			\draw [short] (8.5,-2.5) -- (8.25,-2.5);
+			\draw [short] (10,1) -- (9.75,1);
+			\draw [short] (5.5,7) -- (5.25,7);
+			\draw [short] (11.5,1) -- (12,1);
+			\draw  (12,2) rectangle (12.5,1.5);
+			\draw [short] (12.5,1) -- (12.75,1);
+			\draw [short] (12.25,2) -- (12.25,2.5);
+			\draw [short] (12.25,2.5) -- (14.5,2.5);
+			\draw [short] (14.5,7) -- (15,7);
+			\draw  (15,7.25) rectangle (15.5,6.75);
+			\draw [short] (15.5,7) -- (16,7);
+			\draw [short] (16,7) -- (16,6.5);
+			\draw [short] (16,7) -- (16.5,7);
+			\draw [short] (16.5,7) -- (17,7);
+			\draw [short] (16.5,7) -- (16.5,7.5);
+			\draw [short] (16.5,9.25) -- (16.5,11.75);
+			\draw  (15.75,6.5) rectangle (16.25,6);
+			\draw [short] (17,7) -- (17,6.5);
+			\draw [short] (17,7) -- (17.5,7);
+			\draw [short] (18,7) -- (18.5,7);
+			\draw  (17.5,7.25) rectangle (18,6.75);
+			\draw  (16.75,6.5) rectangle (17.25,6);
+			\draw [dashed] (18.5,12.75) -- (18.5,-3.75);
+			\draw [short] (16,6) -- (16,5.5);
+			\draw [short] (17,6) -- (17,5.5);
+			\draw  (16,5.25) circle (0.25cm);
+			\draw  (16,5) circle (0.25cm);
+			\draw  (17,5.25) circle (0.25cm);
+			\draw  (17,5) circle (0.25cm);
+			\draw [short] (12,1) -- (12.5,1);
+			\draw [short] (12.25,1.5) -- (12.25,1);
+			\draw  (15.75,2) rectangle (16.25,1.5);
+			\draw  (16.75,2) rectangle (17.25,1.5);
+			\draw [short] (16,4.75) -- (16,2);
+			\draw [short] (17,4.75) -- (17,2);
+			\draw [short] (16,1.5) -- (16,1);
+			\draw [short] (17,1.5) -- (17,1);
+			\draw [short] (15.75,1) -- (17.25,1);
+			\draw [short] (17,1) -- (17,0.5);
+			\draw [short] (16,1) -- (16,0.5);
+			\draw  (15.75,0.5) rectangle (16.25,0);
+			\draw  (16.75,0.5) rectangle (17.25,0);
+			\draw [short] (16,0) -- (16,-2.5);
+			\draw [short] (16,-2.5) -- (14.5,-2.5);
+			\draw [short] (17,0) -- (17,-2.5);
+			\draw [short] (17,-2.5) -- (18.5,-2.5);
+			\draw [short] (14.5,2.5) -- (18.5,2.5);
+			\draw [short] (18.5,-2.5) -- (19,-2.5);
+			\draw [short] (20,2.5) -- (20.75,2.5);
+			\draw [short] (18.5,7) -- (19,7);
+			\draw  (19,7.25) rectangle (19.5,6.75);
+			\draw  (19,-2.25) rectangle (19.5,-2.75);
+			\draw [short] (20.75,2.5) -- (20.75,2);
+			\draw  (20.5,2) rectangle (21,1.5);
+			\draw  (21.25,2) rectangle (21.75,1.5);
+			\draw  (22.75,2) rectangle (23.25,1.5);
+			\draw [short] (20.75,1.5) -- (20.75,1);
+			\draw [short] (20.75,1) -- (20.5,1);
+			\draw [short] (20.75,1) -- (22,1);
+			\draw [short] (23,1.5) -- (23,1);
+			\draw [short] (21.5,1.5) -- (21.5,1);
+			\draw  (22,1.25) rectangle (22.5,0.75);
+			\draw [short] (22.5,1) -- (23.25,1);
+			\draw [short] (21.5,2) -- (21.5,4.75);
+			\draw [short] (23,2) -- (23,4.75);
+			\draw [short] (19.5,-2.5) -- (20.5,-2.5);
+			\draw  (21.5,5) circle (0.25cm);
+			\draw  (21.5,5.25) circle (0.25cm);
+			\draw  (23,5) circle (0.25cm);
+			\draw  (23,5.25) circle (0.25cm);
+			\draw [short] (21.5,5.5) -- (21.5,6);
+			\draw [short] (23,5.5) -- (23,6);
+			\draw  (21.25,6.5) rectangle (21.75,6);
+			\draw  (22.75,6.5) rectangle (23.25,6);
+			\draw [short] (21.5,6.5) -- (21.5,7);
+			\draw [short] (23,7) -- (23,6.5);
+			\draw [short] (24.5,7) -- (24.5,6.5);
+			\draw  (24.25,6.5) rectangle (24.75,6);
+			\draw [short] (24.5,6) -- (24.5,5.5);
+			\draw [short] (20,-2.5) -- (20,-2);
+			\draw  (19.75,-2) rectangle (20.25,-1.5);
+			\draw [short] (20,7) -- (20,6.5);
+			\draw  (19.75,6.5) rectangle (20.25,6);
+			\draw [short] (20,6) -- (20,5.5);
+			\draw  (20,5.25) circle (0.25cm);
+			\draw  (20,5) circle (0.25cm);
+			\draw [short] (20,4.75) -- (20,-1.5);
+			\draw [short] (18.5,2.5) -- (20,2.5);
+			\draw [short] (19.5,7) -- (20,7);
+			\draw [short] (20,7) -- (23,7);
+			\draw [short] (23,7) -- (24.5,7);
+			\draw  (24.5,5.25) circle (0.25cm);
+			\draw  (24.5,5) circle (0.25cm);
+			\draw [short] (24.5,4.75) -- (24.5,-1.5);
+			\draw  (24.25,-1.5) rectangle (24.75,-2);
+			\draw  (22,-2.25) rectangle (22.5,-2.75);
+			\draw [short] (20.5,-2.5) -- (22,-2.5);
+			\draw [short] (22.25,0.75) -- (22.25,-2.25);
+			\draw [short] (22.5,-2.5) -- (24.75,-2.5);
+			\draw [short] (24.5,-2) -- (24.5,-2.5);
+			\draw [short] (24.5,7) -- (26,7);
+			\draw [short] (26,7) -- (26,6.5);
+			\draw [short] (26,7) -- (27.5,7);
+			\draw [short] (27.5,7) -- (27.5,6.5);
+			\draw [short] (27.5,7) -- (27.75,7);
+			\draw [short] (27.5,7) -- (27.5,7.5);
+			\draw  (25.75,6.5) rectangle (26.25,6);
+			\draw  (27.25,6.5) rectangle (27.75,6);
+			\draw  (27.25,8) rectangle (27.75,7.5);
+			\draw [short] (27.5,8) -- (27.5,8.5);
+			\draw [short] (26,6) -- (26,5.5);
+			\draw [short] (27.5,6) -- (27.5,5.5);
+			\draw  (26,5.25) circle (0.25cm);
+			\draw  (26,5) circle (0.25cm);
+			\draw  (27.5,5.25) circle (0.25cm);
+			\draw  (27.5,5) circle (0.25cm);
+			\draw  (27.5,8.75) circle (0.25cm);
+			\draw  (27.5,9) circle (0.25cm);
+			\draw [short] (27.5,9.25) -- (27.5,9.75);
+			\draw [short] (5.5,9.75) -- (0.75,9.75);
+			\draw [short] (32.25,9.75) -- (32.25,10.25);
+			\draw  (32.25,10.5) circle (0.25cm);
+			\draw  (32.25,10.75) circle (0.25cm);
+			\draw [short] (32.25,11) -- (32.25,11.75);
+			\draw [short] (32.25,9.75) -- (32.25,9.25);
+			\draw  (32,9.25) rectangle (32.5,8.75);
+			\draw [short] (32.25,8.75) -- (32.25,8.25);
+			\draw [short] (32.25,8.25) -- (31.5,8.25);
+			\draw (30.25,8.25) to[closing switch] (31.5,8.25);
+			\draw [short] (30.5,8.25) -- (29.75,8.25);
+			\draw [short] (29.75,8.25) -- (29.75,7.5);
+			\draw (29.75,7.75) to[closing switch] (29.75,6.75);
+			\draw [short] (27.5,4.75) -- (27.5,4);
+			\draw [short] (27.5,4) -- (28.25,4);
+			\draw  (28.25,4.25) rectangle (29,3.75);
+			\draw [short] (29.75,6.75) -- (29.75,4);
+			\draw [short] (29.75,4) -- (29,4);
+			\draw [short] (29.75,4) -- (29.75,2.5);
+			\draw [->, >=Stealth, dashed] (28,2.5) -- (26.75,2.5);
+			\draw (28,2.5) to[closing switch] (29,2.5);
+			\draw [short] (29,2.5) -- (29.75,2.5);
+			\draw  (32.25,1.5) circle (0.5cm) node {\normalsize G} ;
+			\draw [short] (32.25,8.25) -- (32.25,2);
+			\draw [short] (26,4.75) -- (26,1);
+			\draw  (29.75,0.75) rectangle (29,1.25);
+			\draw [short] (26,1) -- (29,1);
+			\draw [short] (31,1) -- (29.75,1);
+			\draw (31,2) to[L ] (31,1);
+			\draw [short] (32.25,0.25) -- (32.25,1);
+			\draw [short] (32.25,0.25) -- (32.25,0);
+			\draw [short] (32,0) -- (32.5,0);
+			\draw [short] (32.5,0) -- (32.5,0.25);
+			\draw [short] (32,0) -- (32,0.25);
+			\draw [short] (32.25,0) -- (32.25,-0.5);
+			\draw (32.25,-1.75) to[L ] (32.25,-0.5);
+			\draw (31,-0.5) to[L ] (31,-1.75);
+			\draw [short] (32.25,-2) -- (32.25,-1.75);
+			\draw [short] (31,-2) -- (31,-1.75);
+			\draw [short] (31,-0.5) -- (30.25,-0.5);
+			\draw [short] (30.25,-0.5) -- (30.25,-0.75);
+			\draw  (30,-0.75) rectangle (30.5,-1.5);
+			\draw [short] (30.25,-1.5) -- (30.25,-1.75);
+			\draw [short] (30.25,-1.75) -- (31,-1.75);
+			\draw (31,-2) to (31,-2.5) node[ground]{};
+			\draw (32.25,-2) to (32.25,-2.5) node[ground]{};
+			\node [font=\normalsize] at (1.5,10.5) {TP.1};
+			\node [font=\normalsize] at (1.5,9) {52G.1};
+			\node [font=\normalsize] at (6.25,9.25) {TAG.1};
+			\node [font=\normalsize] at (6.25,8.75) {100\%};
+			\node [font=\normalsize] at (4.25,7.25) {TAR.1};
+			\node [font=\normalsize] at (4.5,3.5) {SSD};
+			\node [font=\normalsize] at (5.75,2) {Grupo 2};
+			\node [font=\normalsize] at (3.75,0.25) {Excitatriz};
+			\node [font=\normalsize] at (1.5,2.25) {GR.1};
+			\node [font=\normalsize] at (7.75,4.5) {TEX.1};
+			\node [font=\normalsize] at (9.25,4.5) {TAB3.1};
+			\node [font=\normalsize] at (10.75,4.5) {TAB1.1};
+			\node [font=\normalsize] at (12.25,4.5) {TAB2.1};
+			\node [font=\normalsize] at (13.75,4.5) {TAB4.1};
+			\node [font=\normalsize] at (15.25,4.5) {TAB5};
+			\node [font=\normalsize] at (17.75,4.5) {TAB6};
+			\node [font=\normalsize] at (19.25,4.5) {TAB4.2};
+			\node [font=\normalsize] at (20.75,4.5) {TAB2.2};
+			\node [font=\normalsize] at (22.25,4.5) {TAB1.2};
+			\node [font=\normalsize] at (23.75,4.5) {TAB3.2};
+			\node [font=\normalsize] at (25,4.5) {TEX.2};
+			\node [font=\normalsize] at (26.5,9.25) {TAG.2};
+			\node [font=\normalsize] at (26.5,8.75) {100\%};
+			\node [font=\normalsize] at (31.5,9) {52G.2};
+			\node [font=\normalsize] at (29,7.25) {TAR.2};
+			\node [font=\normalsize] at (31.5,10.5) {TP.2};
+			\node [font=\normalsize] at (31.5,2.25) {GR.2};
+			\node [font=\normalsize] at (28.75,3.5) {SSD};
+			\node [font=\normalsize] at (27.25,2) {Grupo 1};
+			\node [font=\normalsize] at (29.5,0.25) {Excitatriz};
+			\draw  (16.25,7.5) rectangle (16.75,8);
+			\draw [short] (16.5,8) -- (16.5,8.5);
+			\draw  (16.5,8.75) circle (0.25cm);
+			\draw  (16.5,9) circle (0.25cm);
+			\node [font=\normalsize] at (17.25,9.25) {TA};
+			\node [font=\normalsize] at (17.25,8.75) {100\%};
+			\node [font=\normalsize] at (16.75,12.5) {Subestacion};
+			\node [font=\normalsize] at (16.75,12) {66 o 30 kV};
+			\node [font=\normalsize] at (1,12.5) {Subestacion};
+			\node [font=\normalsize] at (32.5,12.5) {Subestacion};
+			\node [font=\normalsize] at (32.5,12) {220 o 440 kV};
+			\node [font=\normalsize] at (1,12) {220 o 400 kV};
+			\node [font=\normalsize] at (12.5,-3.5) {Grupo 1};
+			\node [font=\normalsize] at (20.5,-3.5) {Grupo 2};
+			\node [font=\normalsize] at (16.5,-3.5) {Comunes};
+		\end{circuitikz}
+	\label{fig:my_label}
+\end{adjustbox}
+\end{figure}
+
+\end{landscape}
