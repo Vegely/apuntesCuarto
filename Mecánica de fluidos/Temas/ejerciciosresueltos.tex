@@ -1597,63 +1597,126 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
 	\begin{enumerate}
 		\item Determinar $H_{min}$ en el instante inicial.
 			\begin{figure}[H]
-				\centering
-					\begin{circuitikz}
-						\tikzstyle{every node}=[font=\normalsize]
-						\draw [short] (10,15.5) -- (10,12.75);
-						\draw [short] (10,12.75) -- (11.5,12.75);
-						\draw [short] (12.5,12.75) -- (14,12.75);
-						\draw [short] (14,12.75) -- (14,15.5);
-						\draw [short] (11.5,12.75) -- (11.5,10);
-						\draw [short] (12.5,12.75) -- (12.5,10);
-						\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (10,14.75) .. controls (11.5,13.75) and (12.5,13.75) .. (14,14.75);
-						\draw [ color={rgb,255:red,0; green,128; blue,255}, <->, >=Stealth] (12,14) -- (12,12.75)node[pos=0.5,right]{$H_{min}$};
-						\draw [ color={rgb,255:red,0; green,128; blue,255}, <->, >=Stealth] (14.5,14.75) -- (14.5,12.75)node[pos=0.5,right]{$H_{max}$};
-						\draw [<->, >=Stealth] (13.25,12.75) -- (13.25,10)node[pos=0.5,right]{L};
-						\draw [->, >=Stealth] (11,12) -- (11.5,12)node[pos=0,left]{D};
-						\draw [->, >=Stealth] (13,12) -- (12.5,12);
-						\node [font=\normalsize] at (10.75,15) {$P_a$};
-						\node at (11.75,14.25) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
-						\node at (11.75,13.75) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
-						\node at (11.75,13) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
-						\node at (11.75,12.5) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
-						\node at (11.75,10.25) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
-						\node at (11.75,9.75) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
-						\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (11.5,14.5) {1};
-						\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (11.5,13.75) {2};
-						\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (11.5,13) {3};
-						\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (12,12.5) {4};
-						\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (12,10.25) {5};
-						\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (12,9.75) {6};
-						\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (12,12) -- (12,11.25)node[pos=1,below]{$Q_{H-P}$};
-						\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (12,14.75) -- (12,15.5)node[pos=0.5,right]{$\vec \Omega$};
-					\end{circuitikz}
-				
-				\label{fig:my_label}
+				\begin{minipage}{0.4\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [short] (10,15.5) -- (10,12.75);
+							\draw [short] (10,12.75) -- (11.5,12.75);
+							\draw [short] (12.5,12.75) -- (14,12.75);
+							\draw [short] (14,12.75) -- (14,15.5);
+							\draw [short] (11.5,12.75) -- (11.5,10);
+							\draw [short] (12.5,12.75) -- (12.5,10);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (10,14.75) .. controls (11.5,13.75) and (12.5,13.75) .. (14,14.75);
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, <->, >=Stealth] (12,14) -- (12,12.75)node[pos=0.5,right]{$H_{min}$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, <->, >=Stealth] (14.5,14.75) -- (14.5,12.75)node[pos=0.5,right]{$H_{max}$};
+							\draw [<->, >=Stealth] (13.25,12.75) -- (13.25,10)node[pos=0.5,right]{L};
+							\draw [->, >=Stealth] (11,12) -- (11.5,12)node[pos=0,left]{D};
+							\draw [->, >=Stealth] (13,12) -- (12.5,12);
+							\node [font=\normalsize] at (10.75,15) {$P_a$};
+							\node at (11.75,14.25) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
+							\node at (11.75,13.75) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
+							\node at (11.75,13) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
+							\node at (11.75,12.5) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
+							\node at (11.75,10.25) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
+							\node at (11.75,9.75) [circ, color={rgb,255:red,0; green,128; blue,0}] {};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (11.5,14.5) {1};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (11.5,13.75) {2};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (11.5,13) {3};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (12,12.5) {4};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (12,10.25) {5};
+							\node [font=\normalsize, color={rgb,255:red,0; green,128; blue,0}] at (12,9.75) {6};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, ->, >=Stealth] (12,12) -- (12,11.25)node[pos=1,below]{$Q_{H-P}$};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, ->, >=Stealth] (12,14.75) -- (12,15.5)node[pos=0.5,right]{$\vec \Omega$};
+						\end{circuitikz}
+						
+						\label{fig:my_label}
+					\end{figure}
+				\end{minipage}
+				\begin{minipage}{0.6\textwidth}
+					\blue
+					\[P_1 = P_a\]
+					\[P_2 = P_1 \text{ (radio de curvatura}>\!>L_c)\]
+					\[P_3 = P_2 + \rho g H_{min}\]
+					\[P_4 = P_3\,(\text{viscosidad dominante sin término cinético})\]
+					\[Q_{H-P} = -\dfrac{\pi D^4}{128\mu}\dfrac{\partial}{\partial x}(P_4 + \rho g x)\]
+					
+					\[(P_4 + \rho gx_4) - (P_5 + \rho g x_5) = \dfrac{128\mu QL}{\pi D^4} \Rightarrow\]
+					\[\Rightarrow P_5 = P_4 - \dfrac{128\mu QL}{\pi D^4}+\rho g L\]
+					\[P_6 = P_5 = P_a\]
+				\end{minipage}
 			\end{figure}
+			\blue
+			Aplicando en principio de conservación de la masa:
+			\[-\dfrac{dV_{liq}}{dt} = Q \qquad V_{liq} = \int_0^R z_s(r)\cdot 2\pi r\,dr \qquad V_{liq}(t=0) = V_0\]
+			
+			\[V_{liq} = H_{min}\pi R^2 + \dfrac{\pi \Omega_{rot}^2 R^4}{4g} \Rightarrow Q=-\dfrac{d}{dt}\left(H_{min}\pi R^2 + \dfrac{\pi \Omega_{rot}^2 R^4}{4g} \right)\]
+			
+			\[\dfrac{\pi \Omega_{rot}^2 R^4}{4g} = 0\because \Omega_{rot}=cte\quad\therefore H_{min}(t=0)=\dfrac{V_0}{\pi R^2}-\dfrac{1}{4g}\Omega_{rot}^2R^2\]
 		
-		\item En la figura se esquematiza un tubo con $45^\circ$ de inclinación por el que fluye agua. La caída de presiones entre las secciones $A$ y $B$, $P_A - P_B$, separadas una longitud $L$ es debida en parte al efecto de la gravedad y en parte al de la fricción. El manómetro de mercurio indica una diferencia de alturas de $15.24\,cm$. ¿Cuál es la caída total de presiones? ¿Cuál es la caída de presión debida a la fricción? ¿Corresponde la lectura del manómetro únicamente al efecto de la fricción? ¿Por qué?
 		
+		\black
+		\item En la figura se esquematiza un tubo con $45^\circ$ de inclinación por el que fluye agua. La caída de presiones entre las secciones $A$ y $B$, $P_A - P_B$, separadas una longitud $L$ es debida en parte al efecto de la gravedad y en parte al de la fricción. El manómetro de mercurio indica una diferencia de alturas de $15.24\,cm$. ¿Cuál es la caída total de presiones? ¿Cuál es la caída de presión debida a la fricción?
+		\blue
 		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.4\linewidth]{imagenesEjercicios/tuberiaMercurio}
+			\begin{minipage}{0.4\textwidth}
+				\centering
+				\includegraphics[width=0.9\linewidth]{imagenesEjercicios/tuberiaMercurio}
+			\end{minipage}
+			\begin{minipage}{0.6\textwidth}
+				\begin{figure}[H]
+					\begin{minipage}{0.5\textwidth}
+						\blue
+						\[P_A = P_1\]
+						\[P_1 + \rho_{H_2O}gh_{12} = P_2\]
+						\[P_2 = P_3\]
+						\[P_3 = P_4\]
+					\end{minipage}
+					\begin{minipage}{0.5\textwidth}
+						\blue
+						\[P_4 = P_5 + \rho_{Hg}gh\]
+						\[P_5 = P_6\]
+						\[P_6 = P_7 + \rho_{H_2O} gh\]
+						\[P_7 = P_B\]
+					\end{minipage}
+				\end{figure}
+				\blue
+				\[\therefore P_A + \rho_{H_2O}gh_{12}= \rho_{Hg}gh + \rho_{H_2O}gh_A+P_B\]
+				\[P_A-P_B = \rho_{H_2O}g(h_{67}-h_{12}) + \rho_{Hg}gh\]
+				\[h_{12}=L\sin\alpha+h_{67}+h\]
+				\[h_{67}-h_{12} = -L\sin \alpha -h\]
+			\end{minipage}
 		\end{figure}
 		
-		
+		\black
 		\item La compuerta de la figura tiene una altura de $1.44\,m$ y mide $2\,m$ en la dirección perpendicular al papel. Dicha compuerta está articulada en A y detenida en B por un tope. Calcular la fuerza en el tope cuando la profundidad del agua es $3.6\,m$. Asimismo, calcular la reacción en A.
 		
 		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.7\linewidth]{imagenesEjercicios/compuerta1}
+			\begin{minipage}{0.55\textwidth}
+				\centering
+				\includegraphics[width=0.8\linewidth]{imagenesEjercicios/compuerta1}
+			\end{minipage}
+			\begin{minipage}{0.45\textwidth}
+				\vspace{1.5cm}
+				\includegraphics[width=0.8\linewidth]{imagenesEjercicios/compuerta2}
+			\end{minipage}
 		\end{figure}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.7\linewidth]{imagenesEjercicios/compuerta2}
-		\end{figure}
+		\blue
+		\[P_A = P_a + \rho g (H_0-L) \qquad P_B = P_a + \rho g H_0 \qquad P_z = P_a + \rho g (H_0 - z)\]
+		\[F_{\text{\textit{fluido}}\rightarrow\text{\textit{compuerta}}} = \left[\int_0^L P(z)\,dz\right]\cdot L_t = \left[P_aL+\rho g H_0L-\rho g \left.\dfrac{z^2}{2}\right|_0^L\right]\cdot L_t = \]
 		
+		\[=\left[P_aL+\rho g H_0L-\rho g \dfrac{L^2}{2}\right]\cdot L_t = 
+		\left[P_a+\rho g \left(H_0 - \dfrac{L^2}{2}\right) \right]\cdot L_t\]
+		
+		\[\dfrac{F_\square}{L_t} = P_a L\,; \quad \dfrac{F_\triangle}{L_t} = \dfrac{P_B - P_a}{2} \Rightarrow z_{cp} = \dfrac{F_\square \cdot z_\square + F_\triangle \cdot z_\triangle}{F_\square + F_\triangle}\]
+		
+		
+		Donde $F_\square + F_\triangle = F_{\text{\textit{fluido}}\rightarrow\text{\textit{compuerta}}}$. Además:
+		\[F+R_{Ah}+R_{Bh} = 0\,; \quad R_{Bv} = R_{Av}\Rightarrow F\cdot (L-z_{cp} + R_{Bh}\cdot L = 0)\]
 	\end{enumerate}
 
-
+\black
 \section{Semejanza hidrodinámica.}
 	\begin{enumerate}
 		\item Semejanza parcial de Reynolds:
@@ -1693,7 +1756,8 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
 					\[Eu_p = Eu_m \Rightarrow \dfrac{\Delta P_{e-s}^{(p)}}{\dfrac{1}{2}\rho_p v_p^2} = \dfrac{\Delta P_{e-s}^{(m)}}{\dfrac{1}{2}\rho_m v_m^2}\]
 				\end{minipage}
 			\end{figure}
-			
+		
+		\newpage
 		\item Semejanza parcial de Froude:
 			\begin{figure}[H]
 				\begin{minipage}{0.4\textwidth}
@@ -1798,6 +1862,7 @@ $\vec{v} = (z^2 - x^2) \vec{i} + 2xz\vec{k}$. Dicho flujo se encuentra sometido 
 					\[\Theta(|\rho (\vec v \cdot \vec \nabla) \cdot \vec v|) \sim \Theta(|\mu \vec \nabla^2 \vec v|) \Rightarrow\]
 					\[\Rightarrow \dfrac{\rho v_c^2}{L_e} \sim \mu\dfrac{1}{D^2}v_c\Rightarrow\]
 					\[\Rightarrow L_e = D\cdot Re_D \Rightarrow \dfrac{L_e}{L_t} = Re_D \dfrac{D}{L_t} <\!< 1\]
+					\[(\Theta \equiv \text{Orden})\]
 				\end{minipage}
 			\end{figure}
 	\end{enumerate}
