@@ -1,0 +1,55 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Tema 1: Introducción y generalidades sobre metrología}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Definiciones}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Ley propagación de incertidumbres}{7}{}%
+\contentsline {subsection}{\numberline {1.3}Estimación de la incertidumbre}{9}{}%
+\contentsline {subsection}{\numberline {1.4}Relación tolerancia incertidumbre}{10}{}%
+\contentsline {subsection}{\numberline {1.5}Resumen magnitudes estudiadas en el bloque}{11}{}%
+\contentsline {subsection}{\numberline {1.6}Reglas redondeo}{11}{}%
+\contentsline {section}{\numberline {2}Tema 2: Verificación de equipos de medida eléctricos}{12}{}%
+\contentsline {subsection}{\numberline {2.1}Definiciones}{12}{}%
+\contentsline {subsection}{\numberline {2.2}Cualidades de los aparatos de medida patrones}{12}{}%
+\contentsline {subsection}{\numberline {2.3}Verificación de un aparato de medida}{15}{}%
+\contentsline {subsection}{\numberline {2.4}Criterio de rechazo de Chauvenet}{16}{}%
+\contentsline {subsection}{\numberline {2.5}Resultados de una verificación}{16}{}%
+\contentsline {subsection}{\numberline {2.6}Incertidumbre de contraste}{17}{}%
+\contentsline {subsection}{\numberline {2.7}Clase de un aparato verificado}{18}{}%
+\contentsline {subsection}{\numberline {2.8}Incertidumbre de la medida}{18}{}%
+\contentsline {section}{\numberline {3}Tema 3. Adaptadores y convertidores de medida.}{19}{}%
+\contentsline {subsection}{\numberline {3.1}Divisores de tensión e intensidad.}{19}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}Divisores de tensión resistivos.}{19}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Divisores de tensión inductivos.}{20}{}%
+\contentsline {subsubsection}{\numberline {3.1.3}Divisores de tensión capacitivos.}{21}{}%
+\contentsline {subsubsection}{\numberline {3.1.4}Divisores de intensidad resistivos.}{21}{}%
+\contentsline {subsection}{\numberline {3.2}Transformadores de medida.}{23}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Utilidad de los trafos de medida.}{23}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Transformadores de tensión.}{24}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}Transformadores de intensidad.}{26}{}%
+\contentsline {subsection}{\numberline {3.3}Sensores de efecto Hall.}{31}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Aplicaciones y fundamento.}{31}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Vatímetro de efecto Hall.}{32}{}%
+\contentsline {section}{\numberline {4}Tema 4. Medidas de tensiones, intensidades y resistencias.}{33}{}%
+\contentsline {subsection}{\numberline {4.1}Métodos industriales frente a métodos de laboratorio.}{33}{}%
+\contentsline {subsection}{\numberline {4.2}Métodos industriales para medir tensión e intensidad.}{33}{}%
+\contentsline {subsection}{\numberline {4.3}Error de inserción.}{33}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}Medida de tensión en circuitos de alta impedancia.}{34}{}%
+\contentsline {subsection}{\numberline {4.4}Medida de resistencia con óhmetros.}{34}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Digitales.}{34}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}Analógicos.}{35}{}%
+\contentsline {subsection}{\numberline {4.5}Medida de resistencia con voltímetro y amperímetro.}{35}{}%
+\contentsline {subsection}{\numberline {4.6}Medida de R con una $R_p$.}{36}{}%
+\contentsline {subsubsection}{\numberline {4.6.1}Por comparación de corrientes.}{36}{}%
+\contentsline {subsubsection}{\numberline {4.6.2}Por comparación de tensiones.}{36}{}%
+\contentsline {subsection}{\numberline {4.7}Métodos de laboratorio para medir tensión e intensidad.}{37}{}%
+\contentsline {subsection}{\numberline {4.8}Métodos de medida de f.e.m.}{37}{}%
+\contentsline {subsubsection}{\numberline {4.8.1}Método de sustitución.}{37}{}%
+\contentsline {subsubsection}{\numberline {4.8.2}Método de compensación.}{38}{}%
+\contentsline {subsection}{\numberline {4.9}Puente de Wheatstone para medida de resistencia.}{39}{}%
+\contentsline {subsubsection}{\numberline {4.9.1}Causas de incertidumbre.}{40}{}%
+\contentsline {subsubsection}{\numberline {4.9.2}Método de sustitución.}{40}{}%
+\contentsline {subsubsection}{\numberline {4.9.3}Método del falso cero.}{40}{}%
+\contentsline {subsubsection}{\numberline {4.9.4}Puente límite.}{41}{}%
+\contentsline {subsubsection}{\numberline {4.9.5}Análisis de sensibilidad.}{41}{}%
+\contentsline {subsection}{\numberline {4.10}Puente de Kelvin-Thomson.}{44}{}%
+\contentsline {section}{\numberline {5}Tema 5. Medidas de impedancia, capacidad y autoinducción en corriente alterna.}{46}{}%
+\contentsline {section}{\numberline {6}Tema 6. Medida de potencia y energía.}{47}{}%
