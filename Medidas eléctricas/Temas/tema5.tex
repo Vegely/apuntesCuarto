@@ -1,1 +1,1089 @@
-\section{Tema 5. Medidas de impedancia, capacidad y autoinducción en corriente alterna.}\textbf{}
+\section{Tema 5. Medidas de impedancia, capacidad y autoinducción en corriente alterna.}
+	\subsection{Modelado de elementos pasivos.}
+		\subsubsection{Modelo de un condensador real.}
+			Un condensador real se puede modelar con un \textbf{condensador ideal en serie o en paralelo} con una \textbf{resistencia representativa de las pérdidas} en los terminales y en el dieléctrico.
+			\begin{itemize}
+				\item En el modelo serie $R_S$ es muy pequeña.
+				\item En el modelo paralelo $R_P$ es muy grande.
+			\end{itemize}
+			
+			Al ensayar un condensador se busca determinar estas dos magnitudes.
+			
+			\begin{figure}[H]
+				\begin{minipage}{0.5\textwidth}
+					\subsubsubsection{Modelo en paralelo:}
+						En régimen senoidal, debido a $R_P$, el ángulo de desfase $\varphi_C$ es $<90^\circ$. Se llama \textbf{ángulo de pérdidas} a
+						\[\delta = 90^\circ - \varphi_C\]
+						
+						
+						A mayor $R_P$ menor $\delta$, y por lo tanto menores pérdidas. Se denomina \textbf{factor de pérdidas} a 
+						\[\tan \delta = \dfrac{I_R}{I_C} = \dfrac{G_P}{\omega \cdot C} = \dfrac{1}{R_P\cdot \omega \cdot C}\]
+				\end{minipage}%
+				\begin{minipage}{0.1\textwidth}
+					\textbf{ }
+				\end{minipage}%
+				\begin{minipage}{0.2\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw (5.25,18.5) to[C,l={ \normalsize $C$}] (5.25,16.25);
+							\draw (6.5,18.5) to[R,l={ \normalsize $R_P$}] (6.5,16.25);
+							\draw[] (6.5,16.25) to[short] (5.25,16.25);
+							\draw[] (6.5,18.5) to[short] (5.25,18.5);
+							\draw [](5.25,18.5) to[short, -o] (5.25,19.25) ;
+							\draw [](5.25,15.75) to[short, o-] (5.25,16.25) ;
+							\node at (5.25,18.5) [circ] {};
+							\node at (5.25,16.25) [circ] {};
+							\draw [-latex] (5.25,19) -- (5.25,18.75)node[pos=0.5,left]{$I$};
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}%
+				\begin{minipage}{0.2\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\begin{scope}[xscale = 1, yscale = 1]
+								\draw [-latex] (5.25,12.25) -- (5.25,14.75)node[pos=0.5,left]{$I_C$};
+								\draw [-latex] (5.25,12.25) -- (6.25,14.75)node[pos=0.85,left]{$I$};
+								\draw [-latex] (5.25,12.25) -- (6.25,12.25)node[pos=1,right]{$I_R$};
+								
+								\draw [latex-latex] (5.75,12.25) arc (0:70:0.5)node[pos=0.5,right]{$\varphi_C$};
+								\draw [latex-latex] (5.75,13.5) arc (70:90:1.5)node[pos=0.5,above]{$\delta$};
+							\end{scope}
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}
+			\end{figure}
+					
+			\begin{figure}[H]
+				\begin{minipage}{0.2\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw (5.25,17) to[C,l={ \normalsize C}] (5.25,15.5);
+							\draw (5.25,18.5) to[R,l={ \normalsize $R_P$}] (5.25,17);
+							\draw [](5.25,18.5) to[short, -o] (5.25,19.25) ;
+							\draw [](5.25,15.25) to[short, o-] (5.25,15.5) ;
+							\draw [-latex] (5.25,19) -- (5.25,18.75)node[pos=0.5,left]{$I$};						
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}%
+				\begin{minipage}{0.2\textwidth}
+					\begin{figure}[H]
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\begin{scope}[xscale = 1, yscale = -1]
+								\draw [-latex] (5.25,12.25) -- (5.25,14.75)node[pos=0.5,left]{$U_C$};
+								\draw [-latex] (5.25,12.25) -- (6.25,14.75)node[pos=0.85,left]{$U$};
+								\draw [-latex] (5.25,12.25) -- (6.25,12.25)node[pos=1,right]{$U_R$};
+								\draw [latex-latex] (5.75,12.25) arc (0:70:0.5)node[pos=0.5,right]{$\varphi_C$};
+								\draw [latex-latex] (5.75,13.5) arc (70:90:1.5)node[pos=0.5,above]{$\delta$};
+							\end{scope}
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}%
+				\begin{minipage}{0.1\textwidth}
+					\textbf{ }
+				\end{minipage}%
+				\begin{minipage}{0.5\textwidth}
+					\subsubsubsection{Modelo en serie:}
+						A veces interesa conocer $R_S$ para luego obtener $R_P$. Esto se hace mediante el ángulo de pérdidas:
+						\[R_S \approx X_C \cdot \tan \delta = \dfrac{X_C^2}{R_P}\]
+						\[\tan \delta = \dfrac{1}{\omega \cdot C \cdot R_P} \approx \omega \cdot C \cdot R_S\]
+						
+						
+						Estas aproximaciones requieren que $R_P$ sea muy elevada.
+				\end{minipage}
+			\end{figure}
+
+			\newpage
+			\subsubsubsection{Limitaciones de los modelos:}
+				En \textbf{baja frecuencia} el modelo paralelo suele ser más adecuado: al tomar $X_C$ valores elevados es más fácil evaluar si el efecto de $R_P$ es importante.
+				
+				
+				En \textbf{alta frecuencia} el modelo serie puede ser más conveniente: como $X_C$ aumenta con la frecuencia, el efecto de $R_S$ puede observarse mejor.
+				
+				
+				Aunque la \textbf{autoinducción} sea baja, en \textbf{alta frecuencia} sus efectos pueden ser importantes.
+				
+		\subsubsection{Modelo de una bobina real.}
+			Todas las bobinas reales llevan asociados fenómenos disipativos de potencia. Las principales causas son:
+			\begin{itemize}
+				\item $R_\varOmega$: resistencia óhmica de los arrollamientos.
+				\item $R_H$: histéresis en los núcleos magnéticos sometidos a magnetizaciones variables.
+				\item $R_F$: corrientes parásitas de Foucault inducidas en las partes metálicas.
+				\item $R_C$: pérdidas dieléctricas debidas a las capacidades parásitas que forman espiras contiguas.
+			\end{itemize}
+			
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw (3,15.75) to[R,l={ \normalsize $R_\varOmega$}] (4.5,15.75);
+						\draw (4.5,15.75) to[R,l={ \normalsize $R_H$}] (6,15.75);
+						\draw (6,15.75) to[R,l={ \normalsize $R_F$}] (7.5,15.75);
+						\draw (7.5,15.75) to[R,l={ \normalsize $R_C$}] (9,15.75);
+						\draw (9,15.75) to[L,l={ \normalsize $L$} ] (10.5,15.75);
+						\draw (10.5,15) to[C,l={ \normalsize $C$}] (9,15);
+						\node at (10.5,15.75) [circ] {};
+						\node at (9,15.75) [circ] {};
+						\draw [](9,15.75) to[short] (9,15);
+						\draw [](10.5,15.75) to[short] (10.5,15);
+						\draw [](10.5,15.75) to[short, -o] (11,15.75) ;
+						\draw [](3,15.75) to[short, -o] (2.5,15.75) ;
+					\end{circuitikz}
+			\end{figure}
+			
+			$R_C$ y $C$ son despreciables en baja frecuencia, y $R_H + R_F = R_{Fe}$, denominada \textbf{resistencia de pérdidas en el hierro}. 
+			
+			
+			Ninguna de las resistencias es lineal, dependen de la tensión y la frecuencia. Además, en alta frecuencia hay que tener en cuenta el \textbf{efecto skin}.
+			
+			
+			\begin{figure}[H]
+				\begin{minipage}{0.75\textwidth}
+					\subsubsubsection{Ensayo de una bobina real.}
+						Ensayar una bobina supone determinar los parámetros ideales que la componen:
+						\[\tan \delta = \dfrac{U_R}{U_L} = \dfrac{R_{ef}}{\omega \cdot L}\]
+						
+						
+						Donde $R_{ef}$ es la resistencia equivalente de todos los fenómenos disipativos, que generan un ángulo de pérdidas $\delta$.
+				\end{minipage}%
+				\begin{minipage}{0.25\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\begin{scope}[xscale = 1, yscale = 1]
+								\draw [-latex] (5.25,12.25) -- (5.25,14.75)node[pos=0.5,left]{$U_L$};
+								\draw [-latex] (5.25,12.25) -- (6.25,14.75)node[pos=0.85,left]{$U$};
+								\draw [-latex] (5.25,12.25) -- (6.25,12.25)node[pos=1,right]{$U_{R_{ef}}$};
+								
+								\draw [latex-latex] (5.75,12.25) arc (0:70:0.5)node[pos=0.5,right]{$\varphi_C$};
+								\draw [latex-latex] (5.75,13.5) arc (70:90:1.5)node[pos=0.5,above]{$\delta$};
+							\end{scope}
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}
+			\end{figure}
+		
+	\subsection{Medida industrial de capacidades y autoinducciones.}
+		\subsubsection{Con voltímetro y amperímetro.}
+			\begin{figure}[H]
+				\begin{minipage}{0.6\textwidth}
+					\begin{figure}[H]
+						\scalebox{.9}{
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [, dashed] (12.75,16) circle (0.5cm) node {\large Hz} ;
+							\draw  (14.25,17.5) circle (0.5cm) node {\large A} ;
+							\draw  (15.75,16) circle (0.5cm) node {\large V} ;
+							\draw (17.25,17.5) to[C,l={ \normalsize $C_X$}] (17.25,14.5);
+							\draw[] (12.75,14.5) to[short] (11,14.5);
+							\draw[] (15.75,14.5) to[short] (17.25,14.5);
+							\draw[] (17.25,17.5) to[short] (14.75,17.5);
+							\draw[] (13.75,17.5) to[short] (11,17.5);
+							\draw [dashed] (12.75,16.5) -- (12.75,17.5);
+							\draw [dashed] (12.75,15.5) -- (12.75,14.5);
+							\draw (11,14.5) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (11,17.5);
+							\draw [](15.75,17.5) to[short] (15.75,16.5);
+							\draw [](15.75,15.5) to[short] (15.75,14.5);
+							\draw (12.75,17.5) to[short, -*] (12.75,17.5);
+							\draw (12.75,14.5) to[short, -*] (12.75,14.5);
+							\draw (12.75,14.5) to[R, l=$R_{lim}$] (15.75,14.5);
+							\draw (15.75,17.5) to[short, -*] (15.75,17.5);
+							\draw (15.75,14.5) to[short, -*] (15.75,14.5);
+						\end{circuitikz}
+					}
+					\end{figure}
+				\end{minipage}%
+				\begin{minipage}{0.1\textwidth}
+					\[\,\]
+				\end{minipage}%
+				\begin{minipage}{0.3\textwidth}
+					No se consideran pérdidas en el condensador. Es útil para determinar capacidades del orden de $>pF$.
+					
+					
+					Se aplica una corriente alterna de \textbf{frecuencia conocida} y se mide la tensión e intensidad:
+					\[C_X = \dfrac{I_A}{2\pi f\cdot V_V}\]
+				\end{minipage}
+			\end{figure}
+			
+			En función de $R_V$ (resistencia del voltímetro), para valores bajos de capacidad ($X_C \approx R_V$) puede ser más conveniente un montaje largo.
+			
+			
+		\subsubsection{Por comparación de parámetros.}
+			
+			\begin{figure}[H]
+				\begin{minipage}{0.6\textwidth}
+					\subsubsubsection{Comparación de tensiones o corrientes.}
+						Necesita voltímetro, amperímetro y un condensador patrón, pero \textbf{no hace falta conocer la frecuencia.} Las pérdidas son despreciables.
+						
+						
+						\[V_P\approx \dfrac{I_P}{\omega C_P};\quad V_X\approx\dfrac{I_X}{\omega C_X}\]
+				\end{minipage}
+				\begin{minipage}{0.4\textwidth}
+					\begin{figure}[H]
+						\scalebox{.9}{
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw (3,12) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (3,14.5);
+							\draw (3,14.5) to[rmeter, t=A] (5.25,14.5);
+							\draw (5.25,14.5) to[rmeter, t=V] (5.25,12);
+							\draw (3,12) to[R] (5.25,12);
+							\draw [-latex] (3.75,11.5) -- (4.5,12.5);
+							\draw [](5.25,14.5) to[short] (7,14.5);
+							\draw (6.5,12) to[C,l={ \normalsize $C_P$}] (6.5,13.25);
+							\draw (7.5,13.25) to[C,l={ \normalsize $C_X$}] (7.5,12);
+							\draw[] (7.5,12) to[short] (5.25,12);
+							\node at (6.5,12) [circ] {};
+							\node at (5.25,12) [circ] {};
+							\draw [](6.5,13.25) to[short, -o] (6.5,13.5) ;
+							\draw [](7.5,13.25) to[short, -o] (7.5,13.5) ;
+							\draw [](7,14.25) to[short, o-] (7,14.5) ;
+							\draw [-latex] (7,14.25) -- (7.5,13.5);
+							\node [font=\normalsize] at (7.75,13.5) {X};
+							\node [font=\normalsize] at (6.15,13.5) {P};
+							\node at (5.25,14.5) [circ] {};
+						\end{circuitikz}
+					}
+					\end{figure}
+				\end{minipage}
+			\end{figure}
+			
+			Operando se llega a:
+			\[C_X\approx \dfrac{I_X\cdot V_P}{I_P\cdot V_X}\cdot C_P\]
+			
+			
+			Si $I_P\approx I_X \Rightarrow C_X\approx \dfrac{V_P}{V_X}\cdot C_P$. Si $V_P \approx V_X \Rightarrow C_X\approx \dfrac{I_X}{I_P}\cdot C_P$
+			
+			
+			Si se ajusta $C_P = C_X$ se evita el error sistemático y sólo 3 términos introducen incertidumbre.
+				
+			\newpage
+			\subsubsubsection{Comparación de tensiones.}
+				Es necesario determinar o medir la frecuencia. Tampoco se consideran las pérdidas.
+				
+				
+				Si la frecuencia es conocida basta con un voltímetro y una resistencia patrón.
+				
+				\begin{figure}[H]
+					\begin{minipage}{0.5\textwidth}
+						\[Z_C \approx X_C = \dfrac{1}{2\pi f \cdot C_X}\]
+						\[\dfrac{V_C}{V_R}\approx\dfrac{X_C}{R_P} = \dfrac{1}{2\pi f \cdot C_X \cdot R_P}\]
+						\[C_X \approx \dfrac{1}{2\pi f \cdot R_P}\cdot \dfrac{V_R}{V_C}\]
+					\end{minipage}
+					\begin{minipage}{0.5\textwidth}
+						\begin{figure}[H]
+							\centering
+							\begin{circuitikz}
+								\tikzstyle{every node}=[font=\normalsize]
+								\draw (4,19.25) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (4,15.25);
+								\draw [, dashed] (6,17.25) circle (0.5cm) node {\normalsize Hz} ;
+								\draw [dashed] (6,17.75) -- (6,19.25);
+								\draw [dashed] (6,16.75) -- (6,15.25);
+								\draw (6,19.25) to[R] (8.25,19.25);
+								\draw [-latex] (6.75,18.75) -- (7.5,19.75);
+								\draw  (8.25,18.25) circle (0.5cm) node {\normalsize $V_R$} ;
+								\draw  (8.25,16.25) circle (0.5cm) node {\normalsize $V_C$} ;
+								\draw [](8.25,17.75) to[short] (8.25,17.25);
+								\draw [](8.25,18.75) to[short] (8.25,19.25);
+								\draw (9.5,19.25) to[R,l={ \normalsize $R_P$}] (9.5,17.25);
+								\draw (9.5,17.25) to[C,l={ \normalsize $C_X$}] (9.5,15.25);
+								\draw [](8.25,15.75) to[short] (8.25,15.25);
+								\draw [](8.25,17.25) to[short] (9.5,17.25);
+								\draw[] (9.5,19.25) to[short] (8.25,19.25);
+								\draw[] (9.5,15.25) to[short] (4,15.25);
+								\draw[] (6,19.25) to[short] (4,19.25);
+								\node at (6,19.25) [circ] {};
+								\node at (6,15.25) [circ] {};
+								\node at (8.25,15.25) [circ] {};
+								\node at (8.25,17.25) [circ] {};
+								\node at (9.5,17.25) [circ] {};
+								\node at (8.25,19.25) [circ] {};
+								\draw [](8.25,17.25) to[short] (8.25,16.75);
+							\end{circuitikz}
+						\end{figure}
+					\end{minipage}
+				\end{figure}
+				
+				Hay 4 términos que introducen incertidumbre. En este caso $V_R = V_C$ \textbf{no evita el error sistemático.}
+				
+				
+				Sustituyendo $R_P$ por un $C_P$ no es necesario medir la frecuencia.				
+			
+		\subsubsection{Método de las tres tensiones.}
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw (4,19.25) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (4,15.25);
+						\draw  (8.25,18.25) circle (0.5cm) node {\normalsize $V_R$} ;
+						\draw  (8.25,16.25) circle (0.5cm) node {\normalsize $V_Z$} ;
+						\draw [](8.25,17.75) to[short] (8.25,17.25);
+						\draw [](8.25,18.75) to[short] (8.25,19.25);
+						\draw (9.5,19.25) to[R,l={ \normalsize $R_P$}] (9.5,17.25);
+						\draw [](8.25,15.75) to[short] (8.25,15.25);
+						\draw [](8.25,17.25) to[short] (9.5,17.25);
+						\draw[] (9.5,19.25) to[short] (8.25,19.25);
+						\draw[] (9.5,15.25) to[short] (4,15.25);
+						\node at (8.25,15.25) [circ] {};
+						\node at (8.25,17.25) [circ] {};
+						\node at (9.5,17.25) [circ] {};
+						\node at (8.25,19.25) [circ] {};
+						\draw [](8.25,17.25) to[short] (8.25,16.75);
+						\ctikzset{resistor = european}
+						\draw (9.5,17.25) to[R,l={ \normalsize $Z_X$}] (9.5,15.25);
+						\draw [, dashed] (5.25,19.25) circle (0.5cm) node {\normalsize A} ;
+						\draw  (6.75,17.25) circle (0.5cm) node {\normalsize $V_T$} ;
+						\draw [](6.75,17.75) to[short] (6.75,19.25);
+						\draw [](5.75,19.25) to[short] (8.25,19.25);
+						\draw [](4,19.25) to[short] (4.75,19.25);
+						\draw [](6.75,16.75) to[short] (6.75,15.25);
+						\node at (6.75,15.25) [circ] {};
+						\node at (6.75,19.25) [circ] {};
+					\end{circuitikz}
+			\end{figure}
+			
+			Sirve para cualquier tipo de impedancia. Se necesita una resistencia patrón $R_P$ en serie o bien medir la intensidad.
+			
+			
+			Hay que medir las tensiones en la $R_P$, $Z_X$ y la total, correspondientes a los voltímetros $V_R$, $V_Z$ y $V_T$, respectivamente.
+			
+			
+			El diagrama fasorial permite deducir el valor de $L$ ó $C$ y la $R$ serie efectiva en c.a.
+			
+			
+			En la práctica sus resultados son poco fiables si las medidas no son de alta calidad (baja incertidumbre de los aparatos.)
+			
+			
+			\subsubsubsection{Caso de $\mathbf{Z_X}\,$inductiva.}
+				Del triángulo de tensiones deducimos:
+				\[V_T^2 = (V_R + V_{R_Z})^2 + V_{X_Z}^2 = V_R^2 + V_Z^2 + 2V_RV_Z\cos \varphi\]
+				
+				
+				Esta ecuación permite obtener el factor de potencia:
+				\[\cos \varphi = \dfrac{V_T^2 - V_R^2 - V_Z^2}{2V_RV_Z}\]
+				
+				\begin{figure}[H]
+					\begin{minipage}{0.6\textwidth}
+						\begin{figure}[H]
+							\centering
+							\begin{circuitikz}
+								\tikzstyle{every node}=[font=\normalsize]
+								\draw [-latex] (1.5,13) -- (5.25,13)node[pos=0.5,below]{$V_R = I\cdot R_P$};
+								\draw [-latex] (5.25,13) -- (7.5,13)node[pos=0.5,below]{$V_{R_Z}=I\cdot R_Z$};
+								\draw [-latex] (7.5,13) -- (7.5,16.25)node[pos=0.5,below,sloped]{$V_{X_Z}=X_L\cdot I$};
+								\draw [-latex] (1.5,13) -- (7.5,16.25)node[pos=0.5,above]{$V_T$};
+								\draw [-latex] (5.25,13) -- (7.5,16.25)node[pos=0.5,left]{$V_Z$};
+								\draw (5.75, 13) arc (0:55:0.5)node[pos=0.5,right]{$\varphi$};
+								\draw (7.5,15.75) arc (270:235:0.5)node[pos=0.5,below]{$\delta$};
+							\end{circuitikz}
+						\end{figure}
+					\end{minipage}
+					\begin{minipage}{0.4\textwidth}
+						\[
+						\left.
+						\begin{matrix}
+							Z = \dfrac{V_Z}{I}\\
+							\,\\
+							I = \dfrac{V_R}{R_P}
+						\end{matrix}
+						\right\} \Rightarrow
+						Z = \dfrac{R_P\cdot V_Z}{V_R}
+						\]
+						\[R_Z = Z\cdot \cosphi\]
+						\[X_L = \sqrt{Z_X^2 - R_Z^2};\quad L=\dfrac{X_L}{2\pi f}\]
+					\end{minipage}
+				\end{figure}
+				
+		\subsubsection{Método de las tres intensidades.}
+			Es dual al método de las tres tensiones.
+			
+			
+			\subsubsubsection{Caso de $\mathbf{Z_X}\,$inductiva.}
+			\begin{figure}[H]
+				\begin{minipage}{0.6\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}[scale=0.7]
+							\tikzstyle{every node}=[font=\normalsize]
+							\begin{scope}[xscale = 1, yscale = -1]
+								\draw [-latex] (1.5,13) -- (5.25,13)node[pos=0.5,above]{$I_R$};
+								\draw [dashed] (5.25,13) -- (7.5,13);
+								\draw [dashed] (7.5,13) -- (7.5,16.25);
+								\draw [-latex] (1.5,13) -- (7.5,16.25)node[pos=0.5,below]{$I_T$};
+								\draw [-latex] (5.25,13) -- (7.5,16.25)node[pos=0.4,right]{$I_Z$};
+								\draw (5.75, 13) arc (0:55:0.5)node[pos=0.75,right]{$\varphi$};
+								\draw (7.5,15.75) arc (270:235:0.5)node[pos=0.75,above]{$\delta$};
+							\end{scope}
+						\end{circuitikz}
+						\vspace{0.25cm}
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw (4,19.25) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (4,15.25);
+							\draw  (8.5,18) circle (0.5cm) node {\normalsize $A_R$} ;
+							\draw  (10,18) circle (0.5cm) node {\normalsize $A_Z$} ;
+							\draw (8.5,17.5) to[R,l={ \normalsize $R_P$}] (8.5,15.25);
+							\draw[] (10,15.25) to[short] (4,15.25);
+							\ctikzset{resistor=european}
+							\draw (10,17.5) to[R,l={ \normalsize $Z_X$}] (10,15.25);
+							\draw  (6,17.25) circle (0.5cm) node {\normalsize V} ;
+							\draw [](6,17.75) to[short] (6,19.25);
+							\draw [](4,19.25) to[short] (6.75,19.25);
+							\draw [](6,16.75) to[short] (6,15.25);
+							\draw  (7.25,19.25) circle (0.5cm) node {\normalsize A} ;
+							\draw [](7.75,19.25) to[short] (10,19.25);
+							\draw [](10,19.25) to[short] (10,18.5);
+							\draw [](8.5,19.25) to[short] (8.5,18.5);
+							\node at (6,19.25) [circ] {};
+							\node at (8.5,19.25) [circ] {};
+							\node at (6,15.25) [circ] {};
+							\node at (8.5,15.25) [circ] {};
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}
+				\begin{minipage}{0.4\textwidth}
+					Del triángulo de intensidades obtenemos:
+					\[I_T^2 = I_R^2+I_Z^2+2I_RI_Z\cosphi\]
+					\[\cosphi = \dfrac{I_T^2-I_R^2-I_Z^2}{2I_RI_Z}\]
+				\end{minipage}
+			\end{figure}
+		
+		\subsubsection{Método de Joubert.}
+			Supone que la $R_{ef}$ de c.a. es igual a la de c.c. ($R_{ef} \approx R_{cc}$), simplificación válida para \textbf{bobinas sin núcleo o trabajando a muy baja frecuencia.}
+			
+			
+			Hay que medir en c.a. la $Z_X$ y en c.c. la $R_{cc}$.
+			\[R_{cc} = \dfrac{V_{cc}}{I_{cc}};\quad Z_X = \dfrac{V_{ca}}{I_{ca}} = \sqrt{R_{cc}^2 + L_X^2\omega^2}\]
+			
+			\[L_X = \dfrac{1}{2\pi f}\sqrt{\dfrac{V_{ca}^2}{I_{ca}^2} - \dfrac{V_{cc}^2}{I_{cc}^2}}\]
+			
+			\begin{figure}[H]
+				\centering
+				\begin{circuitikz}
+					\tikzstyle{every node}=[font=\large]
+					\draw [, dashed] (12.75,16) circle (0.5cm) node {\large Hz} ;
+					\draw  (14.25,17.5) circle (0.5cm) node {\large A} ;
+					\draw  (15.75,16) circle (0.5cm) node {\large V} ;
+					\ctikzset{resistor = european}
+					\draw (17.25,17.5) to[R,l={ \large $Z_X$}] (17.25,14.5);
+					\draw[] (17.25,14.5) to[short] (11,14.5);
+					\draw[] (17.25,17.5) to[short] (14.75,17.5);
+					\draw[] (13.75,17.5) to[short] (11,17.5);
+					\draw [dashed] (12.75,16.5) -- (12.75,17.5);
+					\draw [dashed] (12.75,15.5) -- (12.75,14.5);
+					\draw (11,14.5) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{cc/ca}$}] (11,17.5);
+					\draw [](15.75,17.5) to[short] (15.75,16.5);
+					\draw [](15.75,15.5) to[short] (15.75,14.5);
+					\draw (12.75,17.5) to[short, -*] (12.75,17.5);
+					\draw (12.75,14.5) to[short, -*] (12.75,14.5);
+					\draw (15.75,17.5) to[short, -*] (15.75,17.5);
+					\draw (15.75,14.5) to[short, -*] (15.75,14.5);
+				\end{circuitikz}
+			\end{figure}
+		
+		\subsubsection{Con voltímetro, amperímetro y vatímetro.}
+			Adecuado para bobinas con núcleo de hierro trabajando a tensión y frecuencia constante (resultados válidos sólo para la $U$ y $f$ del ensayo). Se basa en suponer que toda la potencia es disipada por la resistencia efectiva en c.a. de la bobina, por lo que \textbf{la resistencia que se obtiene está sobreestimada}.
+			
+			
+			Los aparatos deben conectarse minimizando sus errores de inserción (montaje largo o corto). Es muy importante que el campo de medida del vatímetro sea muy próximo al valor de la medida.
+			
+			
+			Se suele utilizar para determinar los parámetros de máquinas eléctricas.
+			
+			\subsubsubsection{$\mathbf{Z_X}$ y $\mathbf{R_X}$ altas.}
+				\[\vec U_Z = \vec U_X + \vec I_A \cdot R_A\]
+				
+				
+				Si $R_A <\!< Z_X \Rightarrow U_Z \approx V_X$
+				
+				\begin{figure}[H]
+					\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw [, dashed] (12.75,16) circle (0.5cm) node {\large Hz} ;
+						\draw  (17.75,17.5) circle (0.5cm) node {\large A} ;
+						\draw  (16.25,16) circle (0.5cm) node {\large V} ;
+						\ctikzset{resistor = european}
+						\draw (19.25,17.5) to[R,l={ \large $Z_X$}] (19.25,14.5);
+						\draw[] (19.25,14.5) to[short] (11,14.5);
+						\draw[] (17.25,17.5) to[short] (16.25,17.5);
+						\draw[] (13.75,17.5) to[short] (11,17.5);
+						\draw [dashed] (12.75,16.5) -- (12.75,17.5);
+						\draw [dashed] (12.75,15.5) -- (12.75,14.5);
+						\draw (11,14.5) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (11,17.5);
+						\draw [](16.25,17.5) to[short] (16.25,16.5);
+						\draw [](16.25,15.5) to[short] (16.25,14.5);
+						\draw (12.75,17.5) to[short, -*] (12.75,17.5);
+						\draw (12.75,14.5) to[short, -*] (12.75,14.5);
+						\draw (16.25,17.5) to[short, -*] (16.25,17.5);
+						\draw (16.25,14.5) to[short, -*] (16.25,14.5);
+						\draw  (14.25,17.5) circle (0.5cm) node {\large W} ;
+						\draw [](14.75,17.5) to[short] (16.25,17.5);
+						\draw [](14.25,18) to[short] (14.25,18.25);
+						\draw [](13.5,18.25) to[short] (14.25,18.25);
+						\draw [](13.5,18.25) to[short] (13.5,17.5);
+						\draw [](14.25,17) to[short] (14.25,14.5);
+						\draw (13.5,17.5) to[short, -*] (13.5,17.5);
+						\draw (14.25,14.5) to[short, -*] (14.25,14.5);
+						\draw [-latex] (19,17.5) -- (19.1,17.5)node[pos=0.5,above]{$I_A=I_X$};
+						\draw [](18.25,17.5) to[short] (19.25,17.5);
+						\draw [-latex] (15.5,16.5) -- (15.5,15.5)node[pos=0.5,left]{$U$};
+						\draw [-latex] (18.75,16.5) -- (18.75,15.5)node[pos=0.5,left]{$U_X$};
+					\end{circuitikz}
+				\end{figure}
+				
+			\subsubsubsection{$\mathbf{Z_X}$ y $\mathbf{R_X}$ bajas.}
+				\[\vec I_A = \vec I_X + \vec U_A \cdot R_V\]
+				
+				
+				Si $R_V >\!> Z_X \Rightarrow I_A \approx I_X$
+				
+				\begin{figure}[H]
+					\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\large]
+						\draw [, dashed] (12.75,16) circle (0.5cm) node {\large Hz} ;
+						\draw  (16.25,17.5) circle (0.5cm) node {\large A} ;
+						\draw  (17.75,16) circle (0.5cm) node {\large V} ;
+						\ctikzset{resistor = european}
+						\draw (19.5,17.5) to[R,l={ \large $Z_X$}] (19.5,14.5);
+						\draw[] (19.5,14.5) to[short] (11,14.5);
+						\draw[] (19.5,17.5) to[short] (16.75,17.5);
+						\draw[] (13.75,17.5) to[short] (11,17.5);
+						\draw [dashed] (12.75,16.5) -- (12.75,17.5);
+						\draw [dashed] (12.75,15.5) -- (12.75,14.5);
+						\draw (11,14.5) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (11,17.5);
+						\draw [](17.75,17.5) to[short] (17.75,16.5);
+						\draw [](17.75,15.5) to[short] (17.75,14.5);
+						\draw (12.75,17.5) to[short, -*] (12.75,17.5);
+						\draw (12.75,14.5) to[short, -*] (12.75,14.5);
+						\draw (17.75,17.5) to[short, -*] (17.75,17.5);
+						\draw (17.75,14.5) to[short, -*] (17.75,14.5);
+						\draw  (14.25,17.5) circle (0.5cm) node {\large W} ;
+						\draw [](14.75,17.5) to[short] (15.75,17.5);
+						\draw [](14.25,18) to[short] (14.25,18.25);
+						\draw [](14.25,18.25) to[short] (15,18.25);
+						\draw [](15,18.25) to[short] (15,17.5);
+						\draw [](14.25,17) to[short] (14.25,14.5);
+						\draw (15,17.5) to[short, -*] (15,17.5);
+						\draw (14.25,14.5) to[short, -*] (14.25,14.5);
+						\draw [-latex] (17.25,17.5) -- (17.3,17.5)node[pos=0.5,above]{$I_A$};
+						\draw [-latex] (17.75,15.25) -- (17.75,15)node[pos=0.5,left]{$I_V$};
+						\draw [-latex] (18.5,17.5) -- (18.75,17.5)node[pos=0.5,above]{$I_X$};
+					\end{circuitikz}
+				\end{figure}
+				
+			\[Z_X \approx \dfrac{V_V}{I_A};\quad P_Z \approx P_W \approx I_A^2 \cdot R_X\]
+			\[R_X \approx \dfrac{P_W}{I_A^2}; \quad X_X = \sqrt{Z_X^2 - R_X^2}\]
+		
+	\subsection{Métodos de laboratorio para la medida de L y C.}
+		\subsubsection{Puentes de corriente alterna.}
+			Al estar formados por impedancias su equilibrado es mucho más difícil que el de Wheatstone.
+			\[\vec Z_i = R_i + jX_i\]
+			
+			
+			En el equilibrio, $V_V = 0$:
+			\[\vec I_A\cdot \vec Z_A = \vec I_B\cdot \vec Z_B; \qquad
+			\vec I_A\cdot \vec Z_C = \vec I_B\cdot \vec Z_D \]
+			
+			Estas ecuaciones implican que deben cumplirse simultáneamente:
+			\[\dfrac{\vec Z_A}{\vec Z_C} = \dfrac{\vec Z_B}{\vec Z_D} \Rightarrow Z_A\cdot Z_D = Z_B \cdot Z_C\]
+			\[\varphi_A + \varphi_D = \varphi_B + \varphi_C\]
+			
+			\begin{figure}[H]
+				\begin{minipage}{0.6\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\ctikzset{resistor=european}
+							\draw (2.5,19.75) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (2.5,14);
+							\draw (4.75,19.75) to[R,l={ \normalsize $Z_A$}] (4.75,17);
+							\draw (4.75,17) to[R,l={ \normalsize $Z_C$}] (4.75,14);
+							\draw (7,19.75) to[R,l={ \normalsize $Z_B$}] (7,17);
+							\draw (7,17) to[R,l={ \normalsize $Z_X$}] (7,14);
+							\draw (4.75,17) to[rmeter, t=V] (7,17);
+							\node at (4.75,17) [circ] {};
+							\node at (7,17) [circ] {};
+							\node at (4.75,19.75) [circ] {};
+							\node at (4.75,14) [circ] {};
+							\draw[] (7,14) to[short] (2.5,14);
+							\draw [](2.5,19.75) to[short] (7,19.75);
+							\draw [-latex] (4.25,18) -- (5.25,19);
+							\draw [-latex] (6.5,18) -- (7.5,19);
+							\draw [-latex] (4.25,15) -- (5.25,16);
+							\draw [-latex] (6.5,15) -- (7.5,16);
+							\node [font=\normalsize] at (4.75,20) {1};
+							\node [font=\normalsize] at (4.75,13.75) {2};
+							\node [font=\normalsize] at (4.5,17) {3};
+							\node [font=\normalsize] at (7.25,17) {4};
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}
+				\begin{minipage}{0.4\textwidth}
+					Equilibrar este puente puede requerir el ajuste de hasta 6 variables, haciéndolo complejo. Para facilitar esta tarea se suelen eliminar variables, haciendo que algunas impedancias sólo tengan parte real o parte imaginaria (sólo $R$ o sólo $L/C$), o sean del mismo tipo (inductivas o capacitivas).
+					
+					
+					Como detectores de cero se emplean instrumentos de alta resolución e impedancia, como osciloscopios.
+				\end{minipage}
+			\end{figure}
+		
+		\subsubsection{Puente de Maxwell.}
+			\begin{figure}[H]
+				\begin{minipage}{0.6\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw (10,20) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (10,13);
+							\draw (12,20) to[R] (12,16.5);
+							\draw (12,16.5) to[R] (12,13);
+							\draw (14.5,20) to[L ] (14.5,18.25);
+							\draw (14.5,18.25) to[R] (14.5,16.5);
+							\draw (14.5,16.5) to[R] (14.5,14.75);
+							\draw (14.5,14.75) to[L ] (14.5,13);
+							\draw (12,16.5) to[rmeter, t=V] (14.5,16.5);
+							\draw (14.5,13) to[R] (12,13);
+							\draw (12,20) to[R] (14.5,20);
+							\draw [](10,20) to[short] (12,20);
+							\draw [](10,13) to[short] (12,13);
+							\node at (12,13) [circ] {};
+							\node at (12,16.5) [circ] {};
+							\node at (12,20) [circ] {};
+							\node at (14.5,16.5) [circ] {};
+							\draw [, dashed] (12.5,20.75) rectangle  (15,18.25);
+							\draw [, dashed] (12.5,14.75) rectangle  (15,12.5);
+							\draw [-latex] (11.5,17.75) -- (12.5,18.75);
+							\draw [-latex] (11.5,14.25) -- (12.5,15.25);
+							\draw [-latex] (14,15) -- (15,16.25);
+							\draw [-latex] (14,16.75) -- (15,18);
+							\node [font=\normalsize] at (11.5,18.25) {$R_A$};
+							\node [font=\normalsize] at (11.5,14.75) {$R_C$};
+							\node [font=\normalsize] at (13.25,19.5) {$R_P$};
+							\node [font=\normalsize] at (14,19) {$L_P$};
+							\node [font=\normalsize] at (15.25,17.5) {$\Delta R_P$};
+							\node [font=\normalsize] at (15.25,15.5) {$\Delta R_X$};
+							\node [font=\normalsize] at (14,14) {$L_X$};
+							\node [font=\normalsize] at (13.25,13.5) {$R_X$};
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}
+				\begin{minipage}{0.4\textwidth}
+					En teoría permite medir inductancias de bobinas con cualquier factor de calidad:
+					\[Q = \dfrac{X_L}{R}\]
+					
+					
+					En el equilibrio, $V_V = 0$, luego
+					\begin{equation}\label{eq:1}
+						\vec I_A\cdot R_A = \vec I_B \cdot (R'_P + j\omega L_P)
+					\end{equation}
+					\begin{equation}\label{eq:2}
+						\vec I_A\cdot R_C = \vec I_B \cdot (R'_X + j\omega L_X)
+					\end{equation}
+					\[R'_P = R_P + \Delta R_P\]
+					\[R'_X = R_X + \Delta R_X\]
+					
+					
+					Dividiendo \eqref{eq:1} entre \eqref{eq:2}:
+					\[R'_X = \dfrac{R_C}{R_A}\cdot R'_P; \quad L_X = \dfrac{R_C}{R_A}\cdot L_P\]
+					
+					
+					Se observa que los resultados no dependen de la frecuencia. El ajuste es lento e iterativo.
+				\end{minipage}
+			\end{figure}
+
+		\newpage	
+		\subsubsubsection{Proceso de ajuste.}
+			\begin{enumerate}
+				\item Se reduce $R_C$ o aumenta $R_A$ hasta minimizar $V_V$.
+				\item Se aumenta $\Delta R_P$ hasta minimizar de nuevo $V_V$, y así hasta conseguir que $\varphi_{P1} < \varphi_P$ y que $\varphi_{P1}\rightarrow\varphi_X$.
+				\item Se vuelve a reducir $R_C$ hasta minimizar de nuevo $V_V$.
+				\item Se aumenta de nuevo $\Delta R_P$ hasta minimizar $V_V$ y hacer que $\varphi_{P2} < \varphi_{P1}$ y que $\varphi_{P2}\rightarrow\varphi_X$
+			\end{enumerate}
+			
+			Se repite el proceso de ajuste hasta que $V_V = 0$.	
+			
+			
+			\begin{figure}[H]
+				\begin{minipage}{0.4\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (1.25,11.5) -- (3.5,11.5)node[pos=1,right]{$\vec U$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (1.25,11.5) -- (3.5,12.5)node[pos=0.6,above, sloped]{$I_X \cdot Z_X$};
+							\draw [-latex] (1.25,11.5) -- (2.5,13.5)node[pos=0.5,above, sloped]{$I_C \cdot R_C$};
+							\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (2.5,13.5) -- (4.75,17)node[pos=0.5,above, sloped]{$I_A \cdot R_A$};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (3.5,12.5) -- (4.75,12.5)node[pos=1,right]{$\vec U$};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (4.75,12.5) -- (4.75,17);
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (3.5,12.5) -- (4.75,17)node[pos=0.5,above,sloped]{$I_P \cdot Z_P$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (3.5,11.5) -- (3.5,12.5);
+							\draw [ color={rgb,255:red,128; green,0; blue,255}, latex-latex] (3.5,12.5) -- (2.5,13.5)node[pos=0.5,above,sloped]{$V_V$};
+							
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}%
+				\begin{minipage}{0.1\textwidth}
+					\centering \[\Rightarrow\]
+				\end{minipage}%
+				\begin{minipage}{0.4\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (1.25,11.5) -- (3.5,11.5)node[pos=1,right]{$\vec U$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (1.25,11.5) -- (3.5,12.5)node[pos=0.6,below, sloped]{$I_X \cdot Z_X$};
+							\draw [-latex] (1.25,11.5) -- (3,13)node[pos=0.5,above, sloped]{$I_C \cdot R_C$};
+							\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (3,13) -- (6,15.75)node[pos=0.5,above, sloped]{$I_A \cdot R_A$};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (3.5,12.5) -- (6,12.5)node[pos=1,right]{$\vec U$};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (6,12.5) -- (6,15.75);
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (3.5,12.5) -- (6,15.75)node[pos=0.2,above,sloped]{$I_P \cdot Z_P$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (3.5,11.5) -- (3.5,12.5);
+							\draw [ color={rgb,255:red,128; green,0; blue,255}, latex-latex] (3.5,12.5) -- (3,13)node[pos=0.5,below,sloped]{$V_V$};
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}%
+				\begin{minipage}{0.1\textwidth}
+					\centering \[\Rightarrow\]
+				\end{minipage}%
+			\end{figure}
+			
+			\begin{figure}[H]
+				\centering
+				\begin{minipage}{0.2\textwidth}
+				\centering \[\Rightarrow\]
+				\end{minipage}%
+				\begin{minipage}{0.4\textwidth}
+					\begin{figure}[H]
+						\centering
+						\begin{circuitikz}
+							\tikzstyle{every node}=[font=\normalsize]
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (1.25,11.5) -- (3.5,11.5)node[pos=1,right]{$\vec U$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, -latex] (1.25,11.5) -- (3.5,12.5)node[pos=0.6,below, sloped]{$I_X \cdot Z_X$};
+							\draw [-latex] (1.25,11.5) -- (3.25,13)node[pos=0.5,above, sloped]{$I_C \cdot R_C$};
+							\draw [ color={rgb,255:red,0; green,128; blue,0}, -latex] (3.25,13) -- (6,14.25)node[pos=0.5,above, sloped]{$I_A \cdot R_A$};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (3.5,12.5) -- (6,12.5)node[pos=1,right]{$\vec U$};
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, short] (6,12.5) -- (6,14.25);
+							\draw [ color={rgb,255:red,255; green,0; blue,0}, -latex] (3.5,12.5) -- (6,14.25)node[pos=0.5,below,sloped]{$I_P \cdot Z_P$};
+							\draw [ color={rgb,255:red,0; green,128; blue,255}, short] (3.5,11.5) -- (3.5,12.5);
+							\draw [ color={rgb,255:red,128; green,0; blue,255}, latex-latex] (3.5,12.5) -- (3.25,13)node[pos=0.5,above,sloped]{$V_V$};
+						\end{circuitikz}
+					\end{figure}
+				\end{minipage}
+			\end{figure}
+		
+		\newpage
+		\subsubsection{Puente de Wien.}
+			Aunque permite hallar capacidades desconocidas, su uso principal es \textbf{determinar frecuencias}. También se utiliza como \textbf{filtro paso banda}, al separar fácilmente las frecuencias dadas por el ajuste de sus parámetros.
+			
+			
+			Para facilitar los ajustes las resistencias $R_A$ y $R_C$ se eligen de forma que su relación sea un número entero, generalmente 2. En el caso de emplearse para obtener capacidades desconocidas el condensador y la resistencia patrón, deben ser $C_D$ y $R_D$.
+			
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw (2.5,19.75) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (2.5,14);
+						\draw (4.75,19.75) to[R,l={ \normalsize $R_A$}] (4.75,17);
+						\draw (4.75,17) to[R,l={ \normalsize $R_C$}] (4.75,14);
+						\draw (7,19.75) to[R,l={ \normalsize $R_B$}] (7,18.25);
+						\draw (8,17) to[R,l={ \normalsize $R_D$}] (8,14);
+						\draw (4.75,17) to[rmeter, t=V] (7,17);
+						\node at (4.75,17) [circ] {};
+						\node at (7,17) [circ] {};
+						\node at (4.75,19.75) [circ] {};
+						\node at (4.75,14) [circ] {};
+						\draw[] (7,14) to[short] (2.5,14);
+						\draw [](2.5,19.75) to[short] (7,19.75);
+						\draw [-latex] (4.25,18) -- (5.25,19);
+						\draw [-latex] (6.5,18.5) -- (7.5,19.5);
+						\draw [-latex] (4.25,15) -- (5.25,16);
+						\draw [-latex] (7.5,15) -- (8.5,16);
+						\node [font=\normalsize] at (4.75,20) {1};
+						\node [font=\normalsize] at (4.75,13.75) {2};
+						\node [font=\normalsize] at (4.5,17) {3};
+						\node [font=\normalsize] at (7.25,16.75) {4};
+						\draw (7,18.25) to[C,l={ \normalsize $C_B$}] (7,17);
+						\draw (7,14) to[C,l={ \normalsize $C_D$}] (7,17);
+						\draw[] (8,17) to[short] (7,17);
+						\draw[] (8,14) to[short] (7,14);
+						\node at (7,14) [circ] {};
+					\end{circuitikz}
+			\end{figure}
+			
+			\[\vec I_A\cdot R_A = \vec I_B \cdot \left(R_B + \dfrac{1}{j\omega C_B}\right) = \dfrac{\vec I_B\cdot (1 + j\omega R_BC_B)}{j\omega C_B}\]
+			
+			\[\vec I_A\cdot R_C = \dfrac{\vec I_B}{\dfrac{1}{R_B} + \dfrac{1}{j\omega C_D}} = \dfrac{\vec I_B\cdot R_D)}{1+j\omega R_D C_D}\]
+			
+			
+			Operando se llega a:
+			\[\dfrac{R_A}{R_C} = \dfrac{R_B}{R_D} + \dfrac{C_D}{C_B}\]
+			\[\omega R_B C_D = \dfrac{1}{\omega R_D C_B} \Rightarrow f = \dfrac{1}{2\pi \sqrt{R_BC_BR_DC_D}}\]
+		
+		\newpage
+		\subsubsection{Puente de Maxwell-Wien.}
+			Se emplea para \textbf{medir inductancias.} Se sustituye la inductancia patrón por una capacidad patrón de bajas pérdidas. La resistencia ajustable en paralelo con el condensador patrón limita su uso, pues para $Q$ muy altos debe ser muy elevada.
+			
+			
+			En la práctica ofrece buen resultado para bobinas con $1 < Q < 10$. Para frecuencias bajas sus parámetros pueden considerarse independientes de esa variable.
+			
+			
+			Una ventaja de estos dos puentes es que los ajustes son independientes de la frecuencia.
+			
+			\begin{figure}[H]
+				\centering
+				\begin{circuitikz}
+					\tikzstyle{every node}=[font=\LARGE]
+					\draw (10,20) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (10,13);
+					\draw (12,20) to[R] (12,16.5);
+					\draw (12.5,16) to[R] (12.5,13.5);
+					\draw (14.5,18.25) to[L ] (14.5,16.5);
+					\draw (12,16.5) to[rmeter, t=V] (14.5,16.5);
+					\draw [](10,20) to[short] (12,20);
+					\draw [](10,13) to[short] (12,13);
+					\node at (12,13) [circ] {};
+					\node at (12,16.5) [circ] {};
+					\node at (12,20) [circ] {};
+					\node at (14.5,16.5) [circ] {};
+					\draw [, dashed] (13.75,20.25) rectangle  (15.25,16.75);
+					\draw [-latex] (11.5,17.75) -- (12.5,18.75);
+					\draw [-latex] (12,14.25) -- (13,15.25);
+					\node [font=\normalsize] at (11.5,18.25) {$R_A$};
+					\node [font=\normalsize] at (13,14.75) {$R_P$};
+					\node [font=\normalsize] at (14,19.25) {$R_X$};
+					\node [font=\normalsize] at (14,17.25) {$L_X$};
+					\draw [-latex] (14,14.25) -- (15,15.25);
+					\draw (14.5,16.5) to[R] (14.5,13);
+					\node [font=\normalsize] at (14,14.75) {$R_D$};
+					\draw (11.5,16) to[C] (11.5,13.5);
+					\draw [-latex] (11,14.25) -- (12,15.25);
+					\node [font=\normalsize] at (10.75,14.75) {$C_P$};
+					\draw [](11.5,16) to[short] (12.5,16);
+					\draw [](11.5,13.5) to[short] (12.5,13.5);
+					\draw [](12,13) to[short] (12,13.5);
+					\draw [](12,16.5) to[short] (12,16);
+					\draw [](12,13) to[short] (14.5,13);
+					\node at (12,16) [circ] {};
+					\node at (12,13.5) [circ] {};
+					\draw (14.5,18.25) to[R] (14.5,20);
+					\draw[] (14.5,20) to[short] (12,20);
+				\end{circuitikz}
+			\end{figure}
+			
+			\[\vec I_A\cdot R_A = \vec I_B\cdot (R_X + j\omega L_X)\]
+			\[\vec I_A\cdot (R_P || \vec X_P) = \vec I_B\cdot R_D \Rightarrow \vec I_A \cdot \dfrac{R_P}{1 + j\omega R_P C_P} = \vec I_B \cdot R_D\]
+			
+			\[R_X + j\omega L_X = \dfrac{R_AR_D}{\dfrac{R_P}{1 + j\omega R_P C_P}}\]
+			\[R_X + j\omega L_X = \dfrac{R_AR_D(1 + j\omega R_P C_P)}{R_P}\]
+			
+			\[R_X = \dfrac{R_AR_D}{R_P} \qquad L_X = R_AR_DC_P\]
+		
+		\subsubsection{Puente de Hay.}
+			Se utlilza para \textbf{medir inductancias.} El condensador patrón se considera ideal, por lo que debe ser de bajas pérdidas. En serie con él se coloca una resistencia ajustable $R_A$.
+			
+			
+			Ofrece buenas características para la medida de bobinas con altos factores de calidad ($Q > 10$). El ajuste se simplifica si se deja fija alguna de las resistencias de los brazos. Su inconveniente es que los resultados dependen de la frecuencia, por lo que hay que conocerla.
+			
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw (2.5,20) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (2.5,14);
+						\draw (4.75,20) to[R,l={ \normalsize $R_A$}] (4.75,17);
+						\draw (4.75,15.75) to[R,l={ \normalsize $R_P$}] (4.75,14);
+						\draw (7,20) to[R,l={ \normalsize $R_X$}] (7,18.5);
+						\draw (7,17) to[R,l={ \normalsize $R_D$}] (7,14);
+						\draw (4.75,17) to[rmeter, t=V] (7,17);
+						\node at (4.75,17) [circ] {};
+						\node at (7,17) [circ] {};
+						\node at (4.75,20) [circ] {};
+						\node at (4.75,14) [circ] {};
+						\draw[] (7,14) to[short] (2.5,14);
+						\draw [](2.5,20) to[short] (7,20);
+						\draw [-latex] (4.25,18) -- (5.25,19);
+						\draw [-latex] (6.5,18.75) -- (7.5,19.75);
+						\draw [-latex] (4.25,14.25) -- (5.25,15.25);
+						\draw [-latex] (6.5,15) -- (7.5,16);
+						\node [font=\normalsize] at (4.75,20.25) {1};
+						\node [font=\normalsize] at (4.75,13.75) {2};
+						\node [font=\normalsize] at (4.5,17) {3};
+						\node [font=\normalsize] at (7.25,16.75) {4};
+						\draw (7,18.5) to[L,l={ \normalsize $L_X$} ] (7,17);
+						\draw (4.75,17) to[C,l={ \normalsize $C_P$}] (4.75,15.75);
+						\draw  (1.25,17) circle (0.5cm) node {\normalsize Hz} ;
+						\draw [](1.25,17.5) to[short] (1.25,20);
+						\draw [](1.25,20) to[short] (2.5,20);
+						\draw [](1.25,16.5) to[short] (1.25,14);
+						\draw [](1.25,14) to[short] (2.5,14);
+						\node at (2.5,14) [circ] {};
+						\node at (2.5,20) [circ] {};
+					\end{circuitikz}
+			\end{figure}
+			
+			En el equilibrio:
+			
+			\[\vec I_A \cdot R_A = \vec I_B \cdot (R_X + j\omega L_X)\]
+			\[\vec I_A \cdot (R_P + \dfrac{1}{j\omega C_P}) = \vec I_B \cdot R_D\]
+			
+			
+			Luego:
+			\[\dfrac{R_A}{R_P + \dfrac{1}{j\omega C_P}} = \dfrac{R_X + j\omega L_X}{R_D}\]
+			\[L_X = \dfrac{C_PR_AR_D}{1+(\omega C_PR_P)^2} \qquad R_X = \dfrac{C_P^2\omega^2R_PR_AR_D}{1+(\omega C_PR_P)^2} = \omega^2 L_X C_P R_P\]
+		
+		\newpage
+		\subsubsection{Puente de Sauty.}
+			Se utiliza para \textbf{determinar capacidades de muy alto valor} ($nF\sim \mu F$). Es fundamental que las pérdidas sean muy reducidas para considerarse despreciables. Como impedancia de referencia se un condensador patrón.
+			
+			
+			Sus resultados no son demasiado buenos, pero tiene la ventaja de que el ajuste es sencillo y rápido. 
+			
+			\begin{figure}[H]
+				\centering
+				\begin{circuitikz}
+					\tikzstyle{every node}=[font=\normalsize]
+					\draw (3.5,19.75) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (3.5,15.75);
+					\draw (5.5,19.75) to[R,l={ \normalsize $R_A$}] (5.5,17.75);
+					\draw (7.5,19.75) to[R,l={ \normalsize $R_B$}] (7.5,17.75);
+					\draw (5.5,17.75) to[C,l={ \normalsize $C_P$}] (5.5,15.75);
+					\draw (7.5,17.75) to[C,l={ \normalsize $C_X$}] (7.5,15.75);
+					\draw (5.5,17.5) to[rmeter, t=V] (7.5,17.5);
+					\node at (5.5,17.5) [circ] {};
+					\node at (7.5,17.5) [circ] {};
+					\node at (5.5,19.75) [circ] {};
+					\node at (5.5,15.75) [circ] {};
+					\draw[] (7.5,19.75) to[short] (3.5,19.75);
+					\draw[] (7.5,15.75) to[short] (3.5,15.75);
+					\draw [-latex] (5,18.25) -- (6,19.25);
+					\draw [-latex] (7,18.25) -- (8,19.25);
+				\end{circuitikz}
+			\end{figure}
+			
+			\[\vec I_A\cdot R_A = \vec I_B\cdot R_B\]
+			\[\dfrac{\vec I_A}{j\omega C_P} = \dfrac{\vec I_B}{j\omega C_X}\]
+			\[\dfrac{R_A}{j\omega C_P} = \dfrac{R_B}{j\omega C_X}\]
+			\[C_X = C_P\cdot \dfrac{R_A}{R_B}\]
+
+		\newpage
+		\subsubsection{Puente de Sauty-Wien.}
+			Es el equivalente al puente de Maxwell para capacidades. Supone que la capacidad incógnita está formada por un condensador ideal $C_X$ en serie con una resistencia de pérdidas $R_X$. El condensador patrón debe modelarse también con resistencia de pérdidas en serie.
+			
+			
+			Al tener en cuenta las resistencias de pérdidas el ajuste que se consigue permite obterner resultados mejores que los del puente de Sauty.
+			
+			
+			Si se quiere determinar la tangente de pérdidas es necesario conocer la frecuencia.
+			
+			
+			El ajuste sólo es posible si $\tan\delta_{C_P} < \tan\delta_{C_X}$
+			
+			\[\vec I_A \cdot R_A = \vec I_B\cdot \left(R_B + R_P + \dfrac{1}{j\omega C_P}\right)\]
+			\[\vec I_A \cdot R_C = \vec I_B\cdot \left(R_X + R_P + \dfrac{1}{j\omega C_X}\right)\]
+			
+			Operando se obtiene:
+			\[R_X = \dfrac{R_C}{R_A}(R_B+R_P) \qquad C_X = \dfrac{R_A}{R_C}C_P\]
+			\[\tan \delta = \omega R_XC_X\]
+			\[\tan \delta = \omega (R_B + R_P)C_X\]
+		
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}[scale=1.1]
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw (2.5,21) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (2.5,14);
+						\draw (4.75,21) to[R,l={ \normalsize $R_A$}] (4.75,17);
+						\draw (4.75,17) to[R,l={ \normalsize $R_C$}] (4.75,14);
+						\draw (7,18.5) to[R,l={ \normalsize $R_P$}] (7,17);
+						\draw (7,15.75) to[R,l={ \normalsize $R_X$}] (7,14);
+						\draw (4.75,17) to[rmeter, t=V] (7,17);
+						\node at (4.75,17) [circ] {};
+						\node at (7,17) [circ] {};
+						\node at (4.75,21) [circ] {};
+						\node at (4.75,14) [circ] {};
+						\draw[] (7,14) to[short] (2.5,14);
+						\draw [](2.5,21) to[short] (7,21);
+						\draw [-latex] (4.25,18.5) -- (5.25,19.5);
+						\draw [-latex] (6.5,19.75) -- (7.5,20.75);
+						\draw [-latex] (6.5,14.25) -- (7.5,15.25);
+						\draw [-latex] (4.25,15) -- (5.25,16);
+						\node [font=\normalsize] at (4.75,21.25) {1};
+						\node [font=\normalsize] at (4.75,13.75) {2};
+						\node [font=\normalsize] at (4.5,17) {3};
+						\node [font=\normalsize] at (7.25,17) {4};
+						\draw (7,17) to[C,l={ \normalsize $C_X$}] (7,15.75);
+						\draw  (1.25,17.5) circle (0.5cm) node {\normalsize Hz} ;
+						\draw [](1.25,18) to[short] (1.25,21);
+						\draw [](1.25,21) to[short] (2.5,21);
+						\draw [](1.25,17) to[short] (1.25,14);
+						\draw [](1.25,14) to[short] (2.5,14);
+						\node at (2.5,14) [circ] {};
+						\node at (2.5,21) [circ] {};
+						\draw (7,19.5) to[C,l={ \normalsize $C_P$}] (7,18.5);
+						\draw (7,21) to[R,l={ \normalsize $R_B$}] (7,19.5);
+						\draw [, dashed] (6.5,19.5) rectangle  (8.25,17.125);
+						\draw [, dashed] (6.5,16.75) rectangle  (8.25,14.125);
+					\end{circuitikz}
+			\end{figure}
+		
+		\newpage
+		\subsubsection{Puente de Schering.}
+			Se utiliza para medir la \textbf{capacidad entre conductores y pantallas de cables de a.t.}, por lo que se alimenta con tensiones muy elevadas. Incorpora un transformador que eleva la tensión de la fuente de alimentación.
+			
+			
+			El condensador patrón $C_A$ debe estar diseñado para trabajar a las altas tensiones de los cables.
+			
+			
+			Las ramas se configuran para que la tensión del condensador patrón ajustable sea muy reducida, con el fin de evitar accidentes al operador.
+			
+			\[\vec I_A\cdot \left(\dfrac{1}{j\omega C_A}\right) = \vec I_B\cdot \left(R_X + \dfrac{1}{j\omega C_X}\right)\]
+			\[\vec I_A\cdot \left(\dfrac{R_P}{1+j\omega C_PR_P}\right) = \vec I_B\cdot R_D\]
+			\[\left(R_X + \dfrac{1}{j\omega C_X}\right)\left(\dfrac{R_P}{1+j\omega C_PR_P}\right) = R_D\cdot \dfrac{1}{j\omega C_A}\]
+			\[R_X = \dfrac{C_P}{C_A}\cdot R_D \qquad C_X = \dfrac{R_P}{R_D}\cdot C_A\]
+			
+			\begin{figure}[H]
+				\centering
+					\begin{circuitikz}
+						\tikzstyle{every node}=[font=\normalsize]
+						\draw (1.25,16.75) to[sinusoidal voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_{sin}$}] (1.25,18.25);
+						\draw (2.25,18.25) to[L ] (2.25,16.75);
+						\draw (3.25,16.75) to[L ] (3.25,18.25);
+						\draw [short] (2.625,18) -- (2.625,17);
+						\draw [short] (2.825,18) -- (2.825,17);
+						\draw [](1.25,18.25) to[short] (2.25,18.25);
+						\draw [](1.25,16.75) to[short] (2.25,16.75);
+						\draw (4.75,17.5) to[rmeter, t=V] (8,17.5);
+						\draw (4.75,17.5) to[C,l={ \normalsize $C_A$}] (4.75,21);
+						\draw (8,21) to[C,l={ \normalsize $C_X$}] (8,19.25);
+						\draw (8,19.25) to[R,l={ \normalsize $R_X$}] (8,17.5);
+						\draw (8,17.5) to[R,l={ \normalsize $R_D$}] (8,15);
+						\draw [-latex] (7.5,15.75) -- (8.5,16.75);
+						\draw (4.25,15.5) to[C,l={ \normalsize $C_P$}] (4.25,17);
+						\draw (5.25,17) to[R,l={ \normalsize $R_P$}] (5.25,15.5);
+						\draw[] (5.25,17) to[short] (4.5,17);
+						\draw[] (4.5,17) to[short] (4.25,17);
+						\draw [](4.75,17.5) to[short] (4.75,17);
+						\draw [](4.25,15.5) to[short] (5.25,15.5);
+						\draw [](4.75,15.5) to[short] (4.75,15);
+						\draw [](4.75,15) to[short] (8,15);
+						\draw [-latex] (4,16) -- (4.5,16.5);
+						\draw [-latex] (4.75,15.75) -- (5.75,16.75);
+						\draw [](4.75,21) to[short] (8,21);
+						\draw [](3.25,18.25) to[short] (3.25,21);
+						\draw [](3.5,21) to[short] (4.75,21);
+						\draw[] (3.5,21) to[short] (3.25,21);
+						\draw [](3.25,16.75) to[short] (3.25,15);
+						\draw [](3.25,15) to[short] (4.75,15);
+						\node at (4.75,15) [circ] {};
+						\node at (4.75,15.5) [circ] {};
+						\node at (4.75,17) [circ] {};
+						\node at (4.75,17.5) [circ] {};
+						\node at (8,17.5) [circ] {};
+						\node at (4.75,21) [circ] {};
+						\draw (4.75,15) to (4.75,14.75) node[ground]{};
+						\draw [, dashed] (7.5,20.75) rectangle  (9.25,17.75);
+					\end{circuitikz}
+			\end{figure}

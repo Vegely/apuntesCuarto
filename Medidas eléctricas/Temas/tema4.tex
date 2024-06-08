@@ -44,20 +44,26 @@ Debido a la resistencia interna de los aparatos un voltímetro indica una tensi�
 
 
 \begin{figure}[H]
-	\begin{minipage}{0.5\textwidth}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.7\linewidth]{ImagenesTema4/1}
-			\label{fig:1}
-		\end{figure}
-	\end{minipage}
-	\begin{minipage}{0.5\textwidth}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.7\linewidth]{ImagenesTema4/2}
-			\label{fig:2}
-		\end{figure}
-	\end{minipage}
+	\centering
+	\begin{circuitikz}
+		\tikzstyle{every node}=[font=\normalsize]
+		\draw (5.75,13) to[R,l={ \normalsize R}] (5.75,16.25);
+		\draw (7.25,14.5) to[rmeter, t=V] (7.25,13);
+		\draw (7.25,16.25) to[R,l={ \normalsize $R_v$}] (7.25,14.5);
+		\draw [](5.75,16.25) to[short] (7.25,16.25);
+		\draw [](5.75,13) to[short] (7.25,13);
+		\node at (6.5,16.25) [circ] {};
+		\node at (6.5,13) [circ] {};
+		\draw [](6.5,16.25) to[short, -o] (6.5,16.75) ;
+		\draw [](6.5,12.5) to[short, o-] (6.5,13) ;
+		\draw (10,17.25) to[R,l={ \normalsize $R_A$}] (10,15.25);
+		\draw (10,15.25) to[rmeter, t=A] (10,14);
+		\draw (10,14) to[R,l={ \normalsize $R$}] (10,12);
+		\draw [](10,17.25) to[short, -o] (10,17.5) ;
+		\draw [](10,11.75) to[short, o-] (10,12) ;
+	\end{circuitikz}
+	
+	\label{fig:2}
 \end{figure}
 
 \subsubsection{Medida de tensión en circuitos de alta impedancia.}
@@ -97,8 +103,30 @@ Cabe destacar como la mayor sensibilidad se obtiene cuando la resistencia es nul
 Se mide la corriente y tensión de una carga para obtener la resistencia mediante la ley de Ohm.
 \begin{figure}[H]
 	\centering
-	\label{fig:4}
-	\includegraphics[width=0.7\linewidth]{ImagenesTema4/4}
+		\begin{circuitikz}[scale = 1.1]
+			\tikzstyle{every node}=[font=\normalsize]
+			\draw (8,11.5) to[american voltage source] (11.5,11.5);
+			\draw (8,12.5) to[rmeter, t=A,l={ \normalsize $R_A$}] (9.75,12.5);
+			\draw (11.5,12.5) to[R,l={ \normalsize $R$}] (9.75,12.5);
+			\draw (9.75,13.75) to[rmeter, t=V, l={ \normalsize $R_V$}] (11.5,13.75);
+			\draw [-latex] (11.5,13.75) -- (11.5,12.5);
+			\draw [-latex] (8,13.75) -- (8,12.5);
+			\draw [-latex, dashed] (9.75,13.75) -- (9.75,12.5);
+			\draw[] (9.75,13.75) to[short] (8,13.75);
+			\node at (9.75,12.5) [circ] {};
+			\node at (8,12.5) [circ] {};
+			\node at (11.5,12.5) [circ] {};
+			
+			\draw [](8,12.5) to[short] (8,11.5);
+			\draw [](11.5,12.5) to[short] (11.5,11.5);
+			\node [font=\normalsize] at (8.25,12.75) {A};
+			\node [font=\normalsize] at (9.5,12.75) {B};
+			\node [font=\normalsize] at (11.75,12.5) {C};
+			\node [font=\normalsize] at (7.5,12.5) {$Ml$};
+			\node [font=\normalsize] at (9.75,12.25) {$Mc$};
+		\end{circuitikz}
+	
+	\label{fig:my_label}
 \end{figure}
 
 En el montaje largo:
@@ -119,8 +147,30 @@ Se mantiene constante $U_0$ y se compara la corriente que circula por la resiste
 	\begin{minipage}{0.5\textwidth}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.7\linewidth]{ImagenesTema4/5}
-			\label{fig:5}
+				\begin{circuitikz}
+					\tikzstyle{every node}=[font=\normalsize]
+					\draw (10.25,16) to[rmeter, t=A,l={ \normalsize $R_A$}] (12.75,16);
+					\draw (10.25,16) to[american voltage source,l={ \normalsize $U_0$}] (10.25,13);
+					\draw (12,15) to[R,l={ \normalsize $R_P$}] (12,13);
+					\draw (13.5,15) to[R,l={ \normalsize $R_X$}] (13.5,13);
+					\draw [](12.75,15.5) to[short, o-] (12.75,16) ;
+					\draw [](12,15) to[short, -o] (12.25,15) ;
+					\draw [](13.5,15) to[short, -o] (13.25,15) ;
+					\draw [-latex] (12.75,15.5) -- (13.25,15);
+					\draw[] (13.5,13) to[short] (10.25,13);
+					\node at (12,13) [circ] {};
+					\draw [-latex] (13.5,15) -- (13.5,14.75)node[pos=0.5,right]{$I_X$};
+					\draw [-latex] (12,15) -- (12,14.75)node[pos=0.5,left]{$I_P$};
+					\draw [-latex] (9.75,14) -- (10.75,15);
+					\draw [-latex] (11.5,13.5) -- (12.5,14.5);
+					\node [font=\normalsize] at (12.75,12.5) {$10^2 < R_X < 10^8$};
+					\node at (10.75,16) [circ] {};
+					\node at (10.75,13) [circ] {};
+					\node [font=\normalsize] at (10.75,16.25) {$A$};
+					\node [font=\normalsize] at (10.75,12.75) {$B$};
+				\end{circuitikz}
+			
+			\label{fig:my_label}
 		\end{figure}
 	\end{minipage}
 	\begin{minipage}{0.5\textwidth}
@@ -136,15 +186,51 @@ Se mantiene constante $U_0$ y se compara la corriente que circula por la resiste
 \subsubsection{Por comparación de tensiones.}
 Se mantiene constante $I$ y se compara la tensión que circula por la resistencia desconocida y la resistencia patrón.
 \begin{figure}[H]
-	\begin{minipage}{0.5\textwidth}
+	\begin{minipage}{0.6\textwidth}
 		\begin{figure}[H]
 			\centering
-			\label{fig:6}
-			\includegraphics[width=0.7\linewidth]{ImagenesTema4/6}
+				\begin{circuitikz}
+					\tikzstyle{every node}=[font=\normalsize]
+					\draw (9.5,15.25) to[R,l={ \normalsize $R_{Aj}$}] (11,15.25);
+					\draw (11,15.25) to[rmeter, t=A] (12.5,15.25);
+					\draw (12.5,15.25) to[R,l={ \normalsize $R_X$}] (12.5,13.25);
+					\draw (12.5,13.25) to[R,l={ \normalsize $R_P$}] (12.5,11.25);
+					\draw [](12.5,13.25) to[short] (13.5,13.25);
+					\draw [](12.5,15.25) to[short] (13.5,15.25);
+					\draw [](13.5,14.75) to[short, o-] (13.5,15.25) ;
+					\draw [](13.5,13.25) to[short, -o] (13.5,13.75) ;
+					\draw [](14.25,14.25) to[short, -o] (14,14.25) ;
+					\draw [](13.5,12.75) to[short, o-] (13.5,13.25) ;
+					\draw [](13.5,11.25) to[short, -o] (13.5,11.75) ;
+					\node at (12.5,13.25) [circ] {};
+					\node at (12.5,15.25) [circ] {};
+					\node at (13.5,13.25) [circ] {};
+					\draw [](14.25,12.25) to[short, -o] (14,12.25) ;
+					\draw [](14.25,14.25) to[short] (14.5,14.25);
+					\draw [](14.25,12.25) to[short] (14.5,12.25);
+					\draw (14.5,14.25) to[rmeter, t=V] (14.5,12.25);
+					\draw[] (13.5,11.25) to[short] (9.5,11.25);
+					\draw [](9.5,15.25) to[short, -o] (9.25,15.25) ;
+					\draw [](9.5,11.25) to[short, -o] (9.25,11.25) ;
+					\draw [-latex] (14,14.25) -- (13.5,14.75);
+					\draw [-latex] (14,12.25) -- (13.5,12.75);
+					\draw [-latex] (12,11.75) -- (13,12.75);
+					\node at (12.5,11.25) [circ] {};
+					\draw [-latex] (9.25,14.75) -- (9.25,11.75)node[pos=0.5,right]{$U_0$};
+					\draw [-latex] (11.75,14.75) -- (11.75,13.75)node[pos=0.5,left]{$U_X$};
+					\draw [-latex] (11.75,12.75) -- (11.75,11.75)node[pos=0.5,left]{$U_P$};
+					\node [font=\normalsize] at (15.25,13.25) {$R_V$};
+					\node [font=\normalsize] at (13,11) {$R_V>100R_X$};
+					\draw [-latex] (9.75,14.75) -- (10.75,15.75);
+				\end{circuitikz}
+			
+			\label{fig:my_label}
 		\end{figure}
 	\end{minipage}
-	\begin{minipage}{0.5\textwidth}
-		\[U_x=I_x(R_x||R_V); U_P=I_P(R_P||R_b)\rightarrow \frac{U_x}{U_P}=\frac{R_x||R_V}{R_P||R_V}=\frac{R'_x}{R'_P}\]
+	\begin{minipage}{0.4\textwidth}
+		\[U_x=I_x(R_x||R_V)\]
+		\[U_P=I_P(R_P||R_b)\Rightarrow \]
+		\[\Rightarrow\frac{U_x}{U_P}=\frac{R_x||R_V}{R_P||R_V}=\frac{R'_x}{R'_P}\]
 		\[R'_x=R'_P\frac{U_x}{U_P}\]
 		Si $R_V >>R_x$ y $R_P$:
 		\[R_x\approx R_P\frac{V_x}{V_P}\]
