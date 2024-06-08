@@ -73,20 +73,21 @@
 \contentsline {subsubsection}{\numberline {5.3.8}Puente de Schering.}{61}{}%
 \contentsline {section}{\numberline {6}Tema 6. Medida de potencia y energía.}{62}{}%
 \contentsline {subsection}{\numberline {6.1}Generalidades.}{62}{}%
-\contentsline {subsubsection}{\numberline {6.1.1}Necesidad de medir la potencia reactiva.}{62}{}%
+\contentsline {subsubsection}{\numberline {6.1.1}Necesidad de medir la potencia activa.}{62}{}%
 \contentsline {subsubsection}{\numberline {6.1.2}Formas de medir la potencia.}{62}{}%
 \contentsline {subsubsection}{\numberline {6.1.3}Vatímetros.}{63}{}%
-\contentsline {subsubsection}{\numberline {6.1.4}Conexiones básicas de vatímetros.}{63}{}%
-\contentsline {subsection}{\numberline {6.2}Medida de potencia activa en c.a. trifásica.}{63}{}%
-\contentsline {subsubsection}{\numberline {6.2.1}Interés por la medida de P en c.a. III.}{63}{}%
-\contentsline {subsubsection}{\numberline {6.2.2}Medida de P en todo tipo de sistemas III.}{63}{}%
-\contentsline {subsubsection}{\numberline {6.2.3}Medida de P en sistemas III sin neutro.}{65}{}%
-\contentsline {subsection}{\numberline {6.3}Medida de la potencia reactiva en c.a. trifásica.}{66}{}%
-\contentsline {subsubsection}{\numberline {6.3.1}Medida de la potencia reactiva.}{66}{}%
-\contentsline {subsubsection}{\numberline {6.3.2}Medida de Q en sistemas III.}{66}{}%
-\contentsline {subsubsection}{\numberline {6.3.3}Medida de Q en sistemas III equilibrados.}{66}{}%
-\contentsline {subsubsection}{\numberline {6.3.4}Medida de Q en todo tipo de sistemas III.}{66}{}%
-\contentsline {subsubsection}{\numberline {6.3.5}Medida de Q en todo tipo de sistemas III.}{67}{}%
-\contentsline {subsection}{\numberline {6.4}Medida de la energía.}{67}{}%
-\contentsline {subsubsection}{\numberline {6.4.1}Objetivo de la medida de la energía.}{67}{}%
-\contentsline {subsubsection}{\numberline {6.4.2}Equipos para la medida de la energía.}{67}{}%
+\contentsline {subsubsection}{\numberline {6.1.4}Conexiones básicas de vatímetros.}{64}{}%
+\contentsline {subsection}{\numberline {6.2}Medida de potencia activa en c.a. trifásica.}{64}{}%
+\contentsline {subsubsection}{\numberline {6.2.1}Interés por la medida de P en c.a. III.}{64}{}%
+\contentsline {subsubsection}{\numberline {6.2.2}Medida de P en todo tipo de sistemas III.}{65}{}%
+\contentsline {subsubsection}{\numberline {6.2.3}Medida de P en sistemas III sin neutro.}{67}{}%
+\contentsline {subsubsection}{\numberline {6.2.4}Medida de P en sistemas III equilibrados con neutro.}{68}{}%
+\contentsline {subsection}{\numberline {6.3}Medida de la potencia reactiva en c.a. trifásica.}{68}{}%
+\contentsline {subsubsection}{\numberline {6.3.1}Medida de la potencia reactiva.}{68}{}%
+\contentsline {subsubsection}{\numberline {6.3.2}Medida de Q en sistemas III.}{68}{}%
+\contentsline {subsubsection}{\numberline {6.3.3}Medida de Q en sistemas III equilibrados.}{68}{}%
+\contentsline {subsubsection}{\numberline {6.3.4}Medida de Q en todo tipo de sistemas III.}{69}{}%
+\contentsline {subsubsection}{\numberline {6.3.5}Medida de Q en sistemas III sin neutro.}{71}{}%
+\contentsline {subsection}{\numberline {6.4}Medida de la energía.}{72}{}%
+\contentsline {subsubsection}{\numberline {6.4.1}Objetivo de la medida de la energía.}{72}{}%
+\contentsline {subsubsection}{\numberline {6.4.2}Equipos para la medida de la energía.}{72}{}%
