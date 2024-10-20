@@ -72,4 +72,11 @@
 \contentsline {subsection}{\numberline {4.3.3}Poder de corte último y de servicio}{30}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}Umbral de disparo instantáneo}{30}{subsection.4.3.4}%
 \contentsline {chapter}{\numberline {5}Selectividad interruptores automáticos de baja tensión}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Selectividad Total}{31}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Selectividad Parcial}{31}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Selectividad frente a sobrecargas}{31}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Selectividad frente a cortocircuitos}{31}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Selectividad frente a cortocircuitos moderados}{31}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Coordinación entre interruptores automáticos}{31}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Selectividad lógica}{31}{section.5.7}%
 \contentsline {chapter}{\numberline {6}Aplicaciones}{33}{chapter.6}%

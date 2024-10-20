@@ -131,5 +131,46 @@ Se tienen en cuenta los siguientes criterios:
 	\item Intensidad de corta duración admisible: $I_{cw}$ media-elevada ACB ó de vacío, $I_{cw}$ baja ACB ó MCCB, $I_{cw}$ no indicada MCCB
 \end{itemize}
 \subsection{Intensidad asignada y regulada}
+Se debe seleccionar la intensidad de tal manera que la intensidad asignada sea mayor que la previsión de cargas:
+\begin{equation}
+	I_L\le I_{nq}
+\end{equation}
+Y que la regulada sea mayor que la intensidad asignada pero menor que la admisible del cable
+\begin{equation}
+	I_L \le I_{rq} \le I_z
+\end{equation}
+
+Para ello, se ha de cumplir que :
+\begin{equation}
+	\dfrac{I_L}{I_{nQ}}\le \dfrac{I_{rQ}}{I_{nQ}}  \le \dfrac{I_z}{I_{nQ}}
+\end{equation}
+
+Por último se comprueba que:
+\begin{equation}
+	I_L< 1,05 \times I_{rQ}
+\end{equation}
+\begin{itemize}
+	\item Para magnetotérmicos:
+	\begin{equation}
+		 1,3 \times I_{rQ} < 1,45 \times I_z
+	\end{equation}
+	\item Para electrónicos:
+	\begin{equation}
+		1,2 \times I_{rQ} < 1,45 \times I_z
+	\end{equation}
+\end{itemize}
 \subsection{Poder de corte último y de servicio}
+Se debe cumplir que el poder de corte último sea mayor a la corriente de cortocircuito máxima:
+\begin{equation}
+	I_{kmax} < I_{cu}
+\end{equation}
+
+En instalaciones con alta probabilidad de defectos o críticas se considera la condición de que el poder de corte en servicio sea mayor que la corriente de cortocircuito máxima:
+\begin{equation}
+	I_{kmax} < I_{cs}
+\end{equation}
 \subsection{Umbral de disparo instantáneo}
+Se debe cumplir que no dispare con las corrientes de arranque pero que si dispare con la corriente de cortocircuito mínima (tolerancia de $\pm20\%$):
+\begin{equation}
+	\dfrac{I_{arranque}}{0.8\cdot I_r} < n < \dfrac{I_{kmin}}{1.2\cdot I_r}
+\end{equation}
