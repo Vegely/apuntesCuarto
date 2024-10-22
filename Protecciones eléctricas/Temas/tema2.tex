@@ -62,6 +62,14 @@ Se considera la contribución del motor como 8 veces su intensidad nominal y si 
 \newline
 
 Se considera la aportación de los motores al cuadro principal siempre, pero si están en ramas diferentes del esquema unifilar se considera que un motor no aporta, es decir, si los motores están en diferentes cuadros secundarios no aportan corriente al cortocircuito (están demasiado alejados como para ver el 0 de tensión).
+\section{Cortocircuito en bornes de un trafo}
+Se calcula la intensidad nominal y a partir de ella su corriente de cortocircuito
+\begin{equation}
+	I_n=\dfrac{S}{\sqrt{3}U}
+\end{equation}
+\begin{equation}
+	I_K=c	\dfrac{I_n}{U_{cc}(\%)}
+\end{equation}
 \section{Métodos de cálculo simplificados}
 Son métodos que se pueden utilizar cuando no se conocen los valores de R y X de la instalación. Suele ser suficientemente exacto hasta los 800kVA y se basa en asumir el mismo factor de potencia desde el origen del circuito hasta el defecto.
 \newline
