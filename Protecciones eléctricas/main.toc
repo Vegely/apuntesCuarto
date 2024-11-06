@@ -91,3 +91,45 @@
 \contentsline {subsection}{\numberline {6.3.2}SAI en estado de emergencia y sobreintensidad}{38}{subsection.6.3.2}%
 \contentsline {section}{\numberline {6.4}Protección de condensadores}{38}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Alimentación por varios transformadores en paralelo}{38}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Protección frente a contactos directos e indirectos}{39}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Riesgos de la utilización de la electricidad}{39}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Efectos biológicos de la corriente eléctrica}{39}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Intensidad de la corriente}{39}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Tiempo de contacto}{40}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Trayectoria por el cuerpo humano}{41}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.3}Métodos de protección frente a contactos directos}{41}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Métodos de protección frente a contactos indirectos}{42}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Esquema TT. Protección diferencial}{43}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Análisis del esquema TT}{43}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Circuito equivalente simplificado en caso de fallo}{44}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}Condiciones de protección}{45}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Interruptor diferencial}{45}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Selección de interruptores diferenciales}{45}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Selectividad entre interruptores diferenciales}{45}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Protección contra incendios}{45}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Ejemplo de cálculo de esquema TT}{45}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Datos de partida}{45}{subsection.8.7.1}%
+\contentsline {subsection}{\numberline {8.7.2}Esquema eléctrico multifilar}{45}{subsection.8.7.2}%
+\contentsline {subsection}{\numberline {8.7.3}Bucle de defecto}{45}{subsection.8.7.3}%
+\contentsline {subsection}{\numberline {8.7.4}Circuito equivalente}{45}{subsection.8.7.4}%
+\contentsline {subsection}{\numberline {8.7.5}Circuito equivalente simplificado}{45}{subsection.8.7.5}%
+\contentsline {subsection}{\numberline {8.7.6}Cálculo de impedancia serie, corriente de defecto y tensión de contacto}{45}{subsection.8.7.6}%
+\contentsline {subsection}{\numberline {8.7.7}Sensibilidad del interruptor diferencial}{45}{subsection.8.7.7}%
+\contentsline {subsection}{\numberline {8.7.8}Comprobación del REBT esquema TT}{45}{subsection.8.7.8}%
+\contentsline {subsection}{\numberline {8.7.9}Curvas de seguridad de tensión}{45}{subsection.8.7.9}%
+\contentsline {subsection}{\numberline {8.7.10}Comprobar que se cumplen las curvas de seguridad de tiempo-intensidad}{45}{subsection.8.7.10}%
+\contentsline {chapter}{\numberline {9}Esquema TN}{47}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Esquema TN – S}{47}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Esquema TN – C}{47}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Condiciones de protección}{47}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Longitud máxima protegida}{47}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Ejemplo de Esquema TN – C}{47}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Ejemplo de Esquema TN – S}{47}{section.9.6}%
+\contentsline {chapter}{\numberline {10}Esquema IT}{49}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Análisis del esquema IT}{49}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Cálculo de la intensidad de defecto}{49}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Condiciones de protección primer defecto}{49}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Condiciones de protección doble defecto en distinta fase}{49}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Ejemplo de cálculo de red IT con tierra única}{49}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Ejemplo de cálculo de red IT con tierras independientes}{49}{section.10.6}%
+\contentsline {section}{\numberline {10.7}Comparación y selección de esquemas de neutro}{49}{section.10.7}%
