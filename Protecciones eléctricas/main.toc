@@ -1,139 +1,211 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{\numberline {1}Interruptores automáticos de baja tensión}{5}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Intensidad Nominal}{5}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Sobreintensidad de sobrecarga}{5}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Intensidad de cortocircuito}{5}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Funciones de un interruptor automático en baja tensión}{5}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Apertura de un circuito}{6}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Solicitación térmica}{7}{subsection.1.5.1}%
-\contentsline {section}{\numberline {1.6}Aspectos constructivos}{8}{section.1.6}%
-\contentsline {subsection}{\numberline {1.6.1}Contacto}{8}{subsection.1.6.1}%
-\contentsline {subsection}{\numberline {1.6.2}Cámara de ruptura}{8}{subsection.1.6.2}%
-\contentsline {subsection}{\numberline {1.6.3}Precámara}{8}{subsection.1.6.3}%
-\contentsline {subsubsection}{Tobera}{9}{subsubsection*.5}%
-\contentsline {subsection}{\numberline {1.6.4}Cámara de ruptura}{9}{subsection.1.6.4}%
-\contentsline {subsection}{\numberline {1.6.5}Relé}{9}{subsection.1.6.5}%
-\contentsline {subsection}{\numberline {1.6.6}Relé térmico mecánico}{10}{subsection.1.6.6}%
-\contentsline {subsection}{\numberline {1.6.7}Relé instantáneo magnético}{10}{subsection.1.6.7}%
-\contentsline {subsection}{\numberline {1.6.8}Curvas de actuación de un relé de sobreintensidad electrónico}{11}{subsection.1.6.8}%
-\contentsline {section}{\numberline {1.7}Tipos constructivos de interruptores}{11}{section.1.7}%
-\contentsline {subsection}{\numberline {1.7.1}Pequeños interruptores automáticos}{11}{subsection.1.7.1}%
-\contentsline {subsection}{\numberline {1.7.2}Caja moldeada}{12}{subsection.1.7.2}%
-\contentsline {subsection}{\numberline {1.7.3}Bastidor abierto}{12}{subsection.1.7.3}%
-\contentsline {section}{\numberline {1.8}Normativa}{12}{section.1.8}%
-\contentsline {subsection}{\numberline {1.8.1}UNE ENE 60898-1}{12}{subsection.1.8.1}%
-\contentsline {subsection}{\numberline {1.8.2}UNE EN 60947-2}{12}{subsection.1.8.2}%
-\contentsline {section}{\numberline {1.9}Mandos}{12}{section.1.9}%
-\contentsline {section}{\numberline {1.10}Envolvente}{12}{section.1.10}%
-\contentsline {section}{\numberline {1.11}Elementos de seguridad}{13}{section.1.11}%
-\contentsline {section}{\numberline {1.12}Interruptores automáticos inteligentes}{13}{section.1.12}%
-\contentsline {section}{\numberline {1.13}Comparativa fusible contra interruptor automático}{13}{section.1.13}%
-\contentsline {chapter}{\numberline {2}Cortocircuitos}{15}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Tipos de cortocircuito}{15}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Parámetros de la corriente de cortocircuito}{15}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Validez de cálculo}{15}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Factor de tensión}{16}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Hipótesis del cálculo}{16}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Condiciones de corriente de cortocircuito máxima}{16}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Condiciones de corriente de cortocircuito mínima}{16}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Aportación de motores}{16}{section.2.8}%
-\contentsline {section}{\numberline {2.9}Cortocircuito en bornes de un trafo}{17}{section.2.9}%
-\contentsline {section}{\numberline {2.10}Métodos de cálculo simplificados}{17}{section.2.10}%
-\contentsline {chapter}{\numberline {3}Pequeños interruptores automáticos}{19}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Características básicas}{19}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Capacidad o poder de corte}{20}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Poder de corte de servicio en cortocircuito}{20}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Curvas de disparo}{21}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Corriente de cortocircuito limitada}{22}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Clases de limitación de la energía}{22}{subsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.1.6}Panel frontal}{22}{subsection.3.1.6}%
-\contentsline {subsection}{\numberline {3.1.7}Número de polos}{22}{subsection.3.1.7}%
-\contentsline {section}{\numberline {3.2}Selección de pequeños interruptores automáticos}{23}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Normativa y cuestiones generales}{23}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Partes protegidas de una instalación}{23}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Tensión asignada}{24}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Número de polos}{24}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Intensidad asignada}{24}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}Poder de corte asignado}{25}{subsection.3.2.6}%
-\contentsline {subsection}{\numberline {3.2.7}Umbral de disparo magnético}{25}{subsection.3.2.7}%
-\contentsline {chapter}{\numberline {4}Interruptores automáticos industriales}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Características básicas}{27}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Tipos de interruptores automáticos industriales}{27}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Poderes de corte}{27}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Poder asignado de corte de servicio en cortocircuito}{27}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Clasificación}{28}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}corriente de corta duración admisible}{28}{subsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.1.6}Poder asignado de cierre en cortocircuito}{28}{subsection.4.1.6}%
-\contentsline {subsection}{\numberline {4.1.7}Curvas de disparo}{28}{subsection.4.1.7}%
-\contentsline {subsection}{\numberline {4.1.8}Cuestiones de instalación}{29}{subsection.4.1.8}%
-\contentsline {section}{\numberline {4.2}Comparación entre interruptores automáticos domésticos e industriales}{29}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Selección de interruptores automáticos industriales}{30}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Criterios de selección}{30}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Intensidad asignada y regulada}{30}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Poder de corte último y de servicio}{30}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Umbral de disparo instantáneo}{30}{subsection.4.3.4}%
-\contentsline {chapter}{\numberline {5}Selectividad interruptores automáticos de baja tensión}{31}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Selectividad Total}{31}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Selectividad Parcial}{31}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Selectividad frente a sobrecargas}{31}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Selectividad frente a cortocircuitos}{32}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Selectividad frente a cortocircuitos moderados}{32}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Coordinación entre interruptores automáticos}{33}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Selectividad lógica}{33}{section.5.7}%
-\contentsline {chapter}{\numberline {6}Aplicaciones}{35}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Maniobra y protección de motores}{35}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Arrancador}{35}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Coordinación en un arrancador}{36}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Tipo de interruptor automático en función de la potencia}{36}{subsection.6.1.3}%
-\contentsline {section}{\numberline {6.2}Protección de generadores}{36}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Sistemas de alimentación ininterrumpida SAI}{37}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Modos funcionamiento SAI}{38}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}SAI en estado de emergencia y sobreintensidad}{38}{subsection.6.3.2}%
-\contentsline {section}{\numberline {6.4}Protección de condensadores}{38}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Alimentación por varios transformadores en paralelo}{38}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Protección frente a contactos directos e indirectos}{39}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Riesgos de la utilización de la electricidad}{39}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Efectos biológicos de la corriente eléctrica}{39}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Intensidad de la corriente}{39}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Tiempo de contacto}{40}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Trayectoria por el cuerpo humano}{41}{subsection.7.2.3}%
-\contentsline {section}{\numberline {7.3}Métodos de protección frente a contactos directos}{41}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Métodos de protección frente a contactos indirectos}{42}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Esquema TT. Protección diferencial}{43}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Análisis del esquema TT}{43}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Circuito equivalente simplificado en caso de fallo}{44}{subsection.8.1.1}%
-\contentsline {section}{\numberline {8.2}Condiciones de protección}{44}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Interruptor diferencial}{45}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Sensibilidad}{45}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Clase de dispositivos diferenciales según la corriente a detectar}{45}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Tiempo de funcionamiento}{46}{subsection.8.3.3}%
-\contentsline {section}{\numberline {8.4}Selección de interruptores diferenciales}{46}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}Intensidad asignada}{46}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Sensibilidad para protección}{46}{subsection.8.4.2}%
-\contentsline {subsection}{\numberline {8.4.3}Sensibilidad para evitar disparos intempestivos}{47}{subsection.8.4.3}%
-\contentsline {subsection}{\numberline {8.4.4}Tiempo de funcionamiento}{47}{subsection.8.4.4}%
-\contentsline {section}{\numberline {8.5}Selectividad entre interruptores diferenciales}{47}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Protección contra incendios}{47}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Peligro no detección}{47}{section.8.7}%
-\contentsline {chapter}{\numberline {9}Esquema TN}{49}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Esquema TN – S}{49}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Esquema TN – C}{50}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Condiciones de protección}{50}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Requisitos adicionales}{51}{subsection.9.3.1}%
-\contentsline {section}{\numberline {9.4}Consideraciones importantes}{51}{section.9.4}%
-\contentsline {section}{\numberline {9.5}Longitud máxima protegida}{52}{section.9.5}%
-\contentsline {section}{\numberline {9.6}Casos con impedancia del bucle muy elevada}{52}{section.9.6}%
-\contentsline {chapter}{\numberline {10}Esquema IT}{53}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Análisis del esquema IT}{53}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Condiciones de protección primer defecto}{54}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Funcionamiento CPI}{54}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}Tipos de vigilantes de aislamiento según el principio de funcionamiento}{55}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}Conexiones CPIs activos en distintos tipos de redes}{55}{subsection.10.2.3}%
-\contentsline {section}{\numberline {10.3}Condiciones de protección doble defecto en distinta fase}{56}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Masas puestas a tierra por grupos o individualmente}{56}{subsection.10.3.1}%
-\contentsline {subsection}{\numberline {10.3.2}Masas interconectadas entre sí y a tierra y neutro no distribuido}{56}{subsection.10.3.2}%
-\contentsline {subsection}{\numberline {10.3.3}Masas interconectadas entre sí y a tierra y neutro distribuido}{56}{subsection.10.3.3}%
-\contentsline {subsection}{\numberline {10.3.4}Resumen de condiciones de protección para doble fallo}{57}{subsection.10.3.4}%
-\contentsline {section}{\numberline {10.4}Comparación y selección de esquemas de neutro}{57}{section.10.4}%
-\contentsline {subsection}{\numberline {10.4.1}Selección del esquema de neutro}{57}{subsection.10.4.1}%
-\contentsline {subsection}{\numberline {10.4.2}Varios esquemas en una misma instalación}{58}{subsection.10.4.2}%
+\contentsline {chapter}{\numberline {1}Interruptores automáticos de baja tensión}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Intensidad Nominal}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Sobreintensidad de sobrecarga}{7}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Intensidad de cortocircuito}{7}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Funciones de un interruptor automático en baja tensión}{7}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Apertura de un circuito}{8}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Solicitación térmica}{9}{subsection.1.5.1}%
+\contentsline {section}{\numberline {1.6}Aspectos constructivos}{10}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Contacto}{10}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Cámara de ruptura}{10}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Precámara}{10}{subsection.1.6.3}%
+\contentsline {subsubsection}{Tobera}{11}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {1.6.4}Cámara de ruptura}{11}{subsection.1.6.4}%
+\contentsline {subsection}{\numberline {1.6.5}Relé}{11}{subsection.1.6.5}%
+\contentsline {subsection}{\numberline {1.6.6}Relé térmico mecánico}{12}{subsection.1.6.6}%
+\contentsline {subsection}{\numberline {1.6.7}Relé instantáneo magnético}{12}{subsection.1.6.7}%
+\contentsline {subsection}{\numberline {1.6.8}Curvas de actuación de un relé de sobreintensidad electrónico}{13}{subsection.1.6.8}%
+\contentsline {section}{\numberline {1.7}Tipos constructivos de interruptores}{13}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Pequeños interruptores automáticos}{13}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}Caja moldeada}{14}{subsection.1.7.2}%
+\contentsline {subsection}{\numberline {1.7.3}Bastidor abierto}{14}{subsection.1.7.3}%
+\contentsline {section}{\numberline {1.8}Normativa}{14}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}UNE ENE 60898-1}{14}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}UNE EN 60947-2}{14}{subsection.1.8.2}%
+\contentsline {section}{\numberline {1.9}Mandos}{14}{section.1.9}%
+\contentsline {section}{\numberline {1.10}Envolvente}{14}{section.1.10}%
+\contentsline {section}{\numberline {1.11}Elementos de seguridad}{15}{section.1.11}%
+\contentsline {section}{\numberline {1.12}Interruptores automáticos inteligentes}{15}{section.1.12}%
+\contentsline {section}{\numberline {1.13}Comparativa fusible contra interruptor automático}{15}{section.1.13}%
+\contentsline {chapter}{\numberline {2}Cortocircuitos}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Tipos de cortocircuito}{17}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Parámetros de la corriente de cortocircuito}{17}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Validez de cálculo}{17}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Factor de tensión}{18}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Hipótesis del cálculo}{18}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Condiciones de corriente de cortocircuito máxima}{18}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Condiciones de corriente de cortocircuito mínima}{18}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Aportación de motores}{18}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Cortocircuito en bornes de un trafo}{19}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Métodos de cálculo simplificados}{19}{section.2.10}%
+\contentsline {chapter}{\numberline {3}Pequeños interruptores automáticos}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Características básicas}{21}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Capacidad o poder de corte}{22}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Poder de corte de servicio en cortocircuito}{22}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Curvas de disparo}{23}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Corriente de cortocircuito limitada}{24}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Clases de limitación de la energía}{24}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Panel frontal}{24}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Número de polos}{24}{subsection.3.1.7}%
+\contentsline {section}{\numberline {3.2}Selección de pequeños interruptores automáticos}{25}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Normativa y cuestiones generales}{25}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Partes protegidas de una instalación}{25}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Tensión asignada}{26}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Número de polos}{26}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Intensidad asignada}{26}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Poder de corte asignado}{27}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Umbral de disparo magnético}{27}{subsection.3.2.7}%
+\contentsline {chapter}{\numberline {4}Interruptores automáticos industriales}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Características básicas}{29}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Tipos de interruptores automáticos industriales}{29}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Poderes de corte}{29}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Poder asignado de corte de servicio en cortocircuito}{29}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Clasificación}{30}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}corriente de corta duración admisible}{30}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Poder asignado de cierre en cortocircuito}{30}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}Curvas de disparo}{30}{subsection.4.1.7}%
+\contentsline {subsection}{\numberline {4.1.8}Cuestiones de instalación}{31}{subsection.4.1.8}%
+\contentsline {section}{\numberline {4.2}Comparación entre interruptores automáticos domésticos e industriales}{31}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Selección de interruptores automáticos industriales}{32}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Criterios de selección}{32}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Intensidad asignada y regulada}{32}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Poder de corte último y de servicio}{32}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Umbral de disparo instantáneo}{32}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {5}Selectividad interruptores automáticos de baja tensión}{33}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Selectividad Total}{33}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Selectividad Parcial}{33}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Selectividad frente a sobrecargas}{33}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Selectividad frente a cortocircuitos}{34}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Selectividad frente a cortocircuitos moderados}{34}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Coordinación entre interruptores automáticos}{35}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Selectividad lógica}{35}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Aplicaciones}{37}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Maniobra y protección de motores}{37}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Arrancador}{37}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Coordinación en un arrancador}{38}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Tipo de interruptor automático en función de la potencia}{38}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}Protección de generadores}{38}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Sistemas de alimentación ininterrumpida SAI}{39}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Modos funcionamiento SAI}{40}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}SAI en estado de emergencia y sobreintensidad}{40}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}Protección de condensadores}{40}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Alimentación por varios transformadores en paralelo}{40}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Protección frente a contactos directos e indirectos}{41}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Riesgos de la utilización de la electricidad}{41}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Efectos biológicos de la corriente eléctrica}{41}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Intensidad de la corriente}{41}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Tiempo de contacto}{42}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Trayectoria por el cuerpo humano}{43}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.3}Métodos de protección frente a contactos directos}{43}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Métodos de protección frente a contactos indirectos}{44}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Esquema TT. Protección diferencial}{45}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Análisis del esquema TT}{45}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Circuito equivalente simplificado en caso de fallo}{46}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}Condiciones de protección}{46}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Interruptor diferencial}{47}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Sensibilidad}{47}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Clase de dispositivos diferenciales según la corriente a detectar}{47}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Tiempo de funcionamiento}{48}{subsection.8.3.3}%
+\contentsline {section}{\numberline {8.4}Selección de interruptores diferenciales}{48}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Intensidad asignada}{48}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Sensibilidad para protección}{48}{subsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.4.3}Sensibilidad para evitar disparos intempestivos}{49}{subsection.8.4.3}%
+\contentsline {subsection}{\numberline {8.4.4}Tiempo de funcionamiento}{49}{subsection.8.4.4}%
+\contentsline {section}{\numberline {8.5}Selectividad entre interruptores diferenciales}{49}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Protección contra incendios}{49}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Peligro no detección}{49}{section.8.7}%
+\contentsline {chapter}{\numberline {9}Esquema TN}{51}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Esquema TN – S}{51}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Esquema TN – C}{52}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Condiciones de protección}{52}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Requisitos adicionales}{53}{subsection.9.3.1}%
+\contentsline {section}{\numberline {9.4}Consideraciones importantes}{53}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Longitud máxima protegida}{54}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Casos con impedancia del bucle muy elevada}{54}{section.9.6}%
+\contentsline {chapter}{\numberline {10}Esquema IT}{55}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Análisis del esquema IT}{55}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Condiciones de protección primer defecto}{56}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Funcionamiento CPI}{56}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Tipos de vigilantes de aislamiento según el principio de funcionamiento}{57}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}Conexiones CPIs activos en distintos tipos de redes}{57}{subsection.10.2.3}%
+\contentsline {section}{\numberline {10.3}Condiciones de protección doble defecto en distinta fase}{58}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Masas puestas a tierra por grupos o individualmente}{58}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.3.2}Masas interconectadas entre sí y a tierra y neutro no distribuido}{58}{subsection.10.3.2}%
+\contentsline {subsection}{\numberline {10.3.3}Masas interconectadas entre sí y a tierra y neutro distribuido}{58}{subsection.10.3.3}%
+\contentsline {subsection}{\numberline {10.3.4}Resumen de condiciones de protección para doble fallo}{59}{subsection.10.3.4}%
+\contentsline {section}{\numberline {10.4}Comparación y selección de esquemas de neutro}{59}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}Selección del esquema de neutro}{59}{subsection.10.4.1}%
+\contentsline {subsection}{\numberline {10.4.2}Varios esquemas en una misma instalación}{60}{subsection.10.4.2}%
+\contentsline {chapter}{\numberline {11}Introducción a los sistemas de protección}{61}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Defectos eléctricos}{61}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Sistema de protección básico}{61}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Parámetros principales}{62}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}Función interruptores automáticos de alta tensión}{62}{subsection.11.2.2}%
+\contentsline {section}{\numberline {11.3}Componentes y esquemas de Alta Tensión}{62}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Zonas de protección}{63}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}Respaldo remoto}{63}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}Respaldo local}{64}{subsection.11.4.2}%
+\contentsline {section}{\numberline {11.5}Identificación de dispositivos de corte y protección}{64}{section.11.5}%
+\contentsline {chapter}{\numberline {12}Transformadores de protección}{65}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Transformadores de medida y protección}{65}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Funciones básicas}{65}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}Características generales}{65}{subsection.12.1.2}%
+\contentsline {subsection}{\numberline {12.1.3}Tipos}{65}{subsection.12.1.3}%
+\contentsline {section}{\numberline {12.2}Trasformadores de Intensidad TIs}{66}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}Características funcionales y constructivas}{66}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}Comparación transformadores de potencia y de intensidad}{66}{subsection.12.2.2}%
+\contentsline {subsection}{\numberline {12.2.3}Cuestiones básicas de operación}{66}{subsection.12.2.3}%
+\contentsline {subsection}{\numberline {12.2.4}Características técnicas}{66}{subsection.12.2.4}%
+\contentsline {subsubsection}{Tensión inducida en el secundario}{68}{subsubsection*.70}%
+\contentsline {subsubsection}{Clases de protección de transformadores de intensidad}{68}{subsubsection*.72}%
+\contentsline {subsection}{\numberline {12.2.5}Clases TP: respuesta en régimen transitorio}{68}{subsection.12.2.5}%
+\contentsline {subsection}{\numberline {12.2.6}Esquemas de conexión}{69}{subsection.12.2.6}%
+\contentsline {subsection}{\numberline {12.2.7}Ejemplo de selección}{69}{subsection.12.2.7}%
+\contentsline {section}{\numberline {12.3}Transformadores de tensión TTs}{70}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}Características funcionales y constructivas}{70}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}Características técnicas}{70}{subsection.12.3.2}%
+\contentsline {subsection}{\numberline {12.3.3}Esquemas de conexión}{72}{subsection.12.3.3}%
+\contentsline {section}{\numberline {12.4}Transformadores de mínima potencia}{72}{section.12.4}%
+\contentsline {subsection}{\numberline {12.4.1}Principio de funcionamiento}{72}{subsection.12.4.1}%
+\contentsline {subsection}{\numberline {12.4.2}Ventajas}{72}{subsection.12.4.2}%
+\contentsline {chapter}{\numberline {13}Análisis de faltas a tierra en AT}{73}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Componentes simétricas}{73}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Diagramas fasoriales para faltas monofásicas}{74}{section.13.2}%
+\contentsline {section}{\numberline {13.3}Neutro rígido a tierra}{74}{section.13.3}%
+\contentsline {section}{\numberline {13.4}Neutro impedante por resistencia}{75}{section.13.4}%
+\contentsline {subsection}{\numberline {13.4.1}Soluciones para conseguir un tamaño viable para la resistencia}{75}{subsection.13.4.1}%
+\contentsline {subsection}{\numberline {13.4.2}Diagramas fasoriales}{76}{subsection.13.4.2}%
+\contentsline {section}{\numberline {13.5}Neutro impedante por reactancia}{76}{section.13.5}%
+\contentsline {subsection}{\numberline {13.5.1}Neutro con impedancia Zig-Zag}{76}{subsection.13.5.1}%
+\contentsline {subsubsection}{Neutro impedante por reactancia zig-zag y resistencia}{77}{subsubsection*.86}%
+\contentsline {subsection}{\numberline {13.5.2}Esquema de red}{77}{subsection.13.5.2}%
+\contentsline {section}{\numberline {13.6}Neutro aislado}{77}{section.13.6}%
+\contentsline {chapter}{\numberline {14}Protección de sobreintensidadesde líneas de AT}{79}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Protección contra sobreintensidades}{79}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Protección de sobreintensidad de tiempo inverso}{79}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}Curvas características}{80}{subsection.14.2.1}%
+\contentsline {section}{\numberline {14.3}Protección de sobreintensidad de tiempo fijo}{81}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}Relés de sobreintensidad de neutro 50N/51N}{81}{subsection.14.3.1}%
+\contentsline {section}{\numberline {14.4}Protección de sobreintensidad direccional}{81}{section.14.4}%
+\contentsline {chapter}{\numberline {15}Protección de transformadores de distribución}{83}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Protecciones de transformadores}{83}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}Protección contra sobrecargas}{83}{subsection.15.1.1}%
+\contentsline {subsection}{\numberline {15.1.2}Protección contra cortocircuitos}{83}{subsection.15.1.2}%
+\contentsline {subsection}{\numberline {15.1.3}Protecciones contra sobretensiones}{83}{subsection.15.1.3}%
+\contentsline {subsection}{\numberline {15.1.4}Transformadores y autotransformadores de potencia de AT/AT}{83}{subsection.15.1.4}%
+\contentsline {subsection}{\numberline {15.1.5}Elementos de protección}{83}{subsection.15.1.5}%
+\contentsline {subsection}{\numberline {15.1.6}Protecciones de transformadores}{83}{subsection.15.1.6}%
+\contentsline {subsection}{\numberline {15.1.7}Comparación entre fusibles y relés de protección}{83}{subsection.15.1.7}%
+\contentsline {section}{\numberline {15.2}Funcionamiento de un transformador en régimen de sobrecarga}{83}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Protección de transformadores frente a sobrecargas}{83}{section.15.3}%
+\contentsline {section}{\numberline {15.4}Protección de transformadores frente a cortocircuitos}{83}{section.15.4}%
+\contentsline {section}{\numberline {15.5}Ejemplo de protección de transformador en aceite}{83}{section.15.5}%
+\contentsline {chapter}{\numberline {16}Otras protecciones eléctricas de AT}{85}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Protección direccional de sobreintensidad de neutro 67N}{85}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Protección diferencial}{85}{section.16.2}%
+\contentsline {subsection}{\numberline {16.2.1}Ejemplo para conexión Ydn}{87}{subsection.16.2.1}%
+\contentsline {section}{\numberline {16.3}Protección de distancia 21}{87}{section.16.3}%
+\contentsline {subsection}{\numberline {16.3.1}Alcance para disparo sin retardo: 80 – 90 \% de la longitud total de la línea}{87}{subsection.16.3.1}%
+\contentsline {subsection}{\numberline {16.3.2}Protección por escalones}{87}{subsection.16.3.2}%
+\contentsline {section}{\numberline {16.4}Esquemas de protecciones de subestación de distribución}{88}{section.16.4}%
