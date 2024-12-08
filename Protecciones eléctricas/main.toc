@@ -194,18 +194,24 @@
 \contentsline {subsection}{\numberline {15.1.2}Protección contra cortocircuitos}{83}{subsection.15.1.2}%
 \contentsline {subsection}{\numberline {15.1.3}Protecciones contra sobretensiones}{83}{subsection.15.1.3}%
 \contentsline {subsection}{\numberline {15.1.4}Transformadores y autotransformadores de potencia de AT/AT}{83}{subsection.15.1.4}%
-\contentsline {subsection}{\numberline {15.1.5}Elementos de protección}{83}{subsection.15.1.5}%
-\contentsline {subsection}{\numberline {15.1.6}Protecciones de transformadores}{83}{subsection.15.1.6}%
-\contentsline {subsection}{\numberline {15.1.7}Comparación entre fusibles y relés de protección}{83}{subsection.15.1.7}%
-\contentsline {section}{\numberline {15.2}Funcionamiento de un transformador en régimen de sobrecarga}{83}{section.15.2}%
-\contentsline {section}{\numberline {15.3}Protección de transformadores frente a sobrecargas}{83}{section.15.3}%
-\contentsline {section}{\numberline {15.4}Protección de transformadores frente a cortocircuitos}{83}{section.15.4}%
-\contentsline {section}{\numberline {15.5}Ejemplo de protección de transformador en aceite}{83}{section.15.5}%
-\contentsline {chapter}{\numberline {16}Otras protecciones eléctricas de AT}{85}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Protección direccional de sobreintensidad de neutro 67N}{85}{section.16.1}%
-\contentsline {section}{\numberline {16.2}Protección diferencial}{85}{section.16.2}%
-\contentsline {subsection}{\numberline {16.2.1}Ejemplo para conexión Ydn}{87}{subsection.16.2.1}%
-\contentsline {section}{\numberline {16.3}Protección de distancia 21}{87}{section.16.3}%
-\contentsline {subsection}{\numberline {16.3.1}Alcance para disparo sin retardo: 80 – 90 \% de la longitud total de la línea}{87}{subsection.16.3.1}%
-\contentsline {subsection}{\numberline {16.3.2}Protección por escalones}{87}{subsection.16.3.2}%
-\contentsline {section}{\numberline {16.4}Esquemas de protecciones de subestación de distribución}{88}{section.16.4}%
+\contentsline {subsection}{\numberline {15.1.5}Elementos de protección contra sobreintensidades}{84}{subsection.15.1.5}%
+\contentsline {subsection}{\numberline {15.1.6}Protecciones de transformadores}{84}{subsection.15.1.6}%
+\contentsline {subsection}{\numberline {15.1.7}Comparación entre fusibles y relés de protección}{84}{subsection.15.1.7}%
+\contentsline {section}{\numberline {15.2}Funcionamiento de un transformador en régimen de sobrecarga}{85}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Protección de transformadores frente a sobrecargas}{85}{section.15.3}%
+\contentsline {subsection}{\numberline {15.3.1}Protección mediante relés de imagen térmica}{86}{subsection.15.3.1}%
+\contentsline {section}{\numberline {15.4}Protección de transformadores frente a cortocircuitos}{86}{section.15.4}%
+\contentsline {subsection}{\numberline {15.4.1}Tipos de categorías de transformadores trifásicos según potencia}{86}{subsection.15.4.1}%
+\contentsline {subsection}{\numberline {15.4.2}Cálculo de la corriente de cortocircuito}{86}{subsection.15.4.2}%
+\contentsline {subsection}{\numberline {15.4.3}Valores mínimos reconocidos de la impedancia de cortocircuito para los transformadores de dos arrollamientos separados.}{87}{subsection.15.4.3}%
+\contentsline {subsection}{\numberline {15.4.4}Efectos térmicos}{87}{subsection.15.4.4}%
+\contentsline {subsection}{\numberline {15.4.5}Ajustes de la curva de disparo}{87}{subsection.15.4.5}%
+\contentsline {subsection}{\numberline {15.4.6}Efectos electrodinámicos}{88}{subsection.15.4.6}%
+\contentsline {chapter}{\numberline {16}Otras protecciones eléctricas de AT}{89}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Protección direccional de sobreintensidad de neutro 67N}{89}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Protección diferencial}{89}{section.16.2}%
+\contentsline {subsection}{\numberline {16.2.1}Ejemplo para conexión Ydn}{91}{subsection.16.2.1}%
+\contentsline {section}{\numberline {16.3}Protección de distancia 21}{91}{section.16.3}%
+\contentsline {subsection}{\numberline {16.3.1}Alcance para disparo sin retardo: 80 – 90 \% de la longitud total de la línea}{91}{subsection.16.3.1}%
+\contentsline {subsection}{\numberline {16.3.2}Protección por escalones}{91}{subsection.16.3.2}%
+\contentsline {section}{\numberline {16.4}Esquemas de protecciones de subestación de distribución}{92}{section.16.4}%
