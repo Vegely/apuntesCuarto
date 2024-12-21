@@ -29,13 +29,21 @@
 - Transimisión del Calor
 - Electrónica
 - Tecnologías de Fabricación
+- Máquinas eléctricas
+- Medio Ambiente
+- Teoría de circuitos II
 
 5 Cuatri (2022/23):
 ---------------------------
+
 6 Cuatri (2022/23):
 ---------------------------
+- Automatización Industrial
+
 7 Cuatri (2023/24):
 ---------------------------
+- Sistemas Electrónicos Digitales
+- Sistemas Informáticos Industriales
 8 Cuatri (2023/24):
 ---------------------------
 9 Cuatri (2024/25):
