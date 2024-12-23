@@ -43,7 +43,7 @@
 ---------------------------
 - Automatización Industrial
 - Electrónica de Potencia (WIP)
-- Instrumentación Electrónica (WIP)
+- Instrumentación Electrónica 
 
 7 Cuatri (2023/24):
 ---------------------------
