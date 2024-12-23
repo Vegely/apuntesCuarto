@@ -36,6 +36,7 @@
 5 Cuatri (2022/23):
 ---------------------------
 - Electrónica Analógica
+- Electrónica Digital (sin microprocesadores)
 
 6 Cuatri (2022/23):
 ---------------------------
