@@ -49,14 +49,14 @@
 ---------------------------
 - Sistemas Electrónicos Digitales
 - Sistemas Informáticos Industriales
-- Ingeniería de Control (WIP)
+- Ingeniería de Control 
 
 8 Cuatri (2023/24):
 ---------------------------
 - Diseño de Centrales Eléctricas
 - Mecánica de Fluidos
 - Medidas Eléctricas
-- Robótica (WIP)
+- Robótica 
 
 9 Cuatri (2024/25):
 ---------------------------
