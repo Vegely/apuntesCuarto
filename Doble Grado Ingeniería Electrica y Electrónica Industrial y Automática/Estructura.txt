@@ -26,7 +26,7 @@
 4 Cuatri (2021/22):
 ---------------------------
 - Automática
-- Transimisión del Calor
+- Transmisión del Calor
 - Electrónica
 - Tecnologías de Fabricación
 - Máquinas eléctricas
@@ -35,6 +35,7 @@
 
 5 Cuatri (2022/23):
 ---------------------------
+- Electrónica Analógica
 
 6 Cuatri (2022/23):
 ---------------------------
