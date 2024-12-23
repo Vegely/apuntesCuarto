@@ -42,7 +42,7 @@
 6 Cuatri (2022/23):
 ---------------------------
 - Automatización Industrial
-- Electrónica de Potencia (WIP)
+- Electrónica de Potencia 
 - Instrumentación Electrónica 
 
 7 Cuatri (2023/24):
@@ -50,7 +50,6 @@
 - Sistemas Electrónicos Digitales
 - Sistemas Informáticos Industriales
 - Ingeniería de Control (WIP)
-- Oficina Técnica (WIP)
 
 8 Cuatri (2023/24):
 ---------------------------
